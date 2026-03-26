@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class LSO_PlayerMovement : MonoBehaviour
 {
     protected Rigidbody2D playerRigid;
     [SerializeField]protected float speed = 10f;
