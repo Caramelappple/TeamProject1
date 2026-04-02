@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace KSY.Enemy
@@ -13,23 +12,24 @@ namespace KSY.Enemy
 
             if (collision.gameObject.TryGetComponent<KSY_Health>(out health))
             {
-                //플레이어에게 데미지를 1 줘보세요
-                // <<
-                health.OnHit = Test1;
-                health.OnDamage = Test2;
-                int asd = health.GetDamage(_damage);
-                int cv = health.GetValue();
+                health.OnDamage += Test1;
+                health.OnHit += Test2;
 
-                // 상속의 가장 큰 특징 2가지
-                // 1. 부모의 메서드, 변수를 사용할 수 있다.
-                // 2. 부모로 형변환을 할 수 있다.
+                health.GetDamage(_damage, gameObject);
+                Debug.Log(gameObject.name);
+
+                health.OnDamage -= Test1;
+                health.OnHit -= Test2;
             }
         }
-        public void Test1(int damage)
+        public void Test1(DamageEventArgs args)
         {
-            Debug.Log($"{damage}만큼 맞았어요");
+            int damage = args.damage;
+            int currentHealth = args.currentHealth;
+
+            Debug.Log($"{damage}만큼 맞았어요 현재 체력 : {currentHealth}");
         }
-        public void Test2(int damage)
+        public void Test2(int damage, GameObject giver)
         {
             Debug.Log("나 피가 달았어요!");
         }
