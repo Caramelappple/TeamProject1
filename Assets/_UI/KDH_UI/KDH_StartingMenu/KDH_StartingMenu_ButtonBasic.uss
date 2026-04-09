@@ -1,10 +1,13 @@
 .Button_Basic {
+    -unity-font-definition: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=69283b93eea267f468e2463e59cf5ddb&type=3#NotInter-Regular");
 }
 
 .Button_Basic:hover {
     scale: 1.1 1.1;
+    -unity-font-definition: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=69283b93eea267f468e2463e59cf5ddb&type=3#NotInter-Regular");
 }
 
 .Button_Basic:active {
     color: rgba(27, 27, 27, 0.71);
+    -unity-font-definition: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=69283b93eea267f468e2463e59cf5ddb&type=3#NotInter-Regular");
 }
