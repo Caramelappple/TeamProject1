@@ -1,0 +1,10 @@
+.Button_Basic {
+}
+
+.Button_Basic:hover {
+    scale: 1.1 1.1;
+}
+
+.Button_Basic:active {
+    color: rgba(27, 27, 27, 0.71);
+}

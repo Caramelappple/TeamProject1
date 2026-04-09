@@ -1,0 +1,9 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_UI/KDH_UI/KDH_SettingUI/Button_UI.uss?fileID=7433441132597879392&amp;guid=add556ef49f39924eb8b000f1c296d23&amp;type=3#Button_UI"/>
+    <ui:VisualElement name="SettingUI" style="flex-grow: 1; background-image: none; background-size: 100% 100%; align-items: center; width: 100%; height: 100%; align-self: auto; justify-content: center;">
+        <ui:VisualElement name="SettingScreen" style="flex-grow: 1; background-size: 100% 100%; width: 75%; height: 75%; background-color: rgb(33, 31, 38); align-content: flex-start; position: absolute; top: auto; left: auto; background-image: none; display: flex; -unity-text-align: upper-left; white-space: normal; text-overflow: clip; align-items: flex-end;">
+            <ui:Button text="X" name="CloseButton" class="Button_UI" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; width: 125px; height: 125px; background-color: rgb(255, 255, 255); justify-content: flex-start; align-items: stretch; align-self: auto; align-content: flex-start;"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:Button text="설정" name="SettingButton" class="Button_UI" style="transition-duration: 0s; top: 4px; left: auto; position: absolute; right: 0;"/>
+</ui:UXML>
