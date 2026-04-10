@@ -46,7 +46,6 @@ public abstract class KSY_DamageableResource : MonoBehaviour
     {
         return _value;
     }
-
     public virtual int GetDamage(int damageValue, GameObject giver)
     {
         OnHit?.Invoke();

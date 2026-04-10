@@ -1,6 +1,4 @@
 using System;
-using System.Diagnostics.Tracing;
-
 public class KSY_Health : KSY_DamageableResource, KSY_IRecoverableResource
 {
     public event Action<KSY_RecoverEventArgs> OnRecover;
