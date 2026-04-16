@@ -3,10 +3,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
     [SerializeField] private float _speed = 3;
-    private Vector2 _MoveDir;
+    protected Vector2 _moveDir;
+    protected Vector2 _lastDir = Vector2.down;
+    protected Vector2 _firstDir;
     private Rigidbody2D _rigid;
 
     private void Awake()
@@ -15,11 +15,13 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        _rigid.linearVelocity = _MoveDir * _speed;
+        _rigid.linearVelocity = _moveDir * _speed;
     }
     private void OnMove(InputValue value)
     {
-        _MoveDir = value.Get<Vector2>();
+        _moveDir = value.Get<Vector2>();
+        if (_moveDir != Vector2.zero)
+            _lastDir = _moveDir;
     }
 
 }
