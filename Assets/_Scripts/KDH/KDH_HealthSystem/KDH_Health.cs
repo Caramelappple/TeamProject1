@@ -1,9 +1,9 @@
-using KDH.Player;
-using KDH_HealthSystem;
+using KSY_HealthSystem;
 using NUnit.Framework.Internal;
 using System;
 using UnityEngine;
-using static KDH_HealthSystem.KDH_RecoverData;
+using UnityEngine.UI;
+using static KSY_HealthSystem.KDH_RecoverData;
 using static UnityEngine.Rendering.DebugUI;
 
 public class KDH_Health : KDH_DamageAbleResorce, KDH_IRecoverableResource
@@ -19,7 +19,7 @@ public class KDH_Health : KDH_DamageAbleResorce, KDH_IRecoverableResource
         if (_isDestroyed) return;
 
         int recoverValue = data.recoverValue;
-        Entity giver = data.giver;
+        KDH_Entity giver = data.giver;
 
         int lastValue = Value;
         //

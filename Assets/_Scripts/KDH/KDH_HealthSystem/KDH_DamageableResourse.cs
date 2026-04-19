@@ -28,18 +28,7 @@ public abstract class KDH_DamageAbleResorce : MonoBehaviour
             return _value <= MinValue;
         }
     }
-    //private bool _isDestroy;
-    //public bool GetIsDestroy ()
-    //{
-    //    return _isDestroy;
-    //}   
 
-    //public void SetIsDestroyed (bool value)
-    //{
-    //    _isDestroy = value;
-    //}
-
-    //protected bool isDestory //protected 자식만 사용할 수 있다.
     private int _value;
 
     public bool IsDamageable { get; private set; }
@@ -51,10 +40,6 @@ public abstract class KDH_DamageAbleResorce : MonoBehaviour
     {
         IsDamageable = value;
     }
-
-    // 시그니처 -> 메서드들의 형식을 구분하는 특징( 중요한점: 메서드들의 형식이고 메서드를 구분하는 게 아니다.)
-    // 1. 반환값
-    // 2. 매개변수야
 
     private void OnValidate()
     {
@@ -72,10 +57,11 @@ public abstract class KDH_DamageAbleResorce : MonoBehaviour
         return _value;
     }
 
-    public virtual void GetDamage(int damageValue, Entity giver)
+    public virtual void GetDamage(int damageValue, KDH_Entity giver)
     {
+
         KDH_DamageData data = KDH_DamageData.Create(giver, damageValue);
-        OnHit?.Invoke(data); //'?'는 Nullable이다 Nullable은 Null값을 담을 수 있도록 허용한다.
+        OnHit?.Invoke(data);
 
         if (_isDestroyed || IsDamageable) return;
 
