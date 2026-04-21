@@ -10,6 +10,7 @@ namespace LSO.Enemy
         private void OnTriggerEnter2D(Collider2D collision)
         {
             LSO_Health health;
+            Destroy(gameObject);
 
             if (collision.gameObject.TryGetComponent<LSO_Health>(out health))
             {

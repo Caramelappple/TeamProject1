@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class LSO_PlayerAttack : PlayerMovement
 {
-    [SerializeField] private GameObject _swordAxis;
-    [SerializeField] private GameObject _sword;
+    [SerializeField] protected GameObject _swordAxis;
+    [SerializeField] protected GameObject _sword;
     private bool _attackable = true;
-    private float _cooldown = 0.4f;
-    private float _attackime = 0.2f;
+    private float _cooldown = 0.2f;
+    private float _attackime = 0.3f;
 
     private void Start()
     {
@@ -25,20 +25,22 @@ public class LSO_PlayerAttack : PlayerMovement
     IEnumerator Attack()
     {
         _attackable = false;
-        _sword.SetActive(true);
         SetRotation(_swordAxis, _lastDir);
+        _animator.SetTrigger("Attack");
+        yield return new WaitForSeconds(0.1f);
+        _sword.SetActive(true);
+
         yield return new WaitForSeconds(_attackime);
         _sword.SetActive(false);
+
         yield return new WaitForSeconds(_cooldown);
         _attackable = true;
     }
-
-    private void SetRotation(GameObject hitbox, Vector2 dir1)
+    public void SetRotation(GameObject hitbox, Vector2 dir1)
     {
         float angle = Mathf.Atan2(dir1.y, dir1.x) * Mathf.Rad2Deg;
-        //if (Math.Abs(angle) % 90 != 0)
-        //    angle += 45 * Mathf.Sign(angle);
         hitbox.transform.rotation = Quaternion.Euler(0f, 0f, angle - 90);
         Debug.Log(angle);
     }
+
 }
