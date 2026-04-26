@@ -11,7 +11,7 @@ public static class KeySetting
 public class KDH_KeySettingsUI : MonoBehaviour
 {
     public KDH_KeySettingName uiText;
-    KeyCode[] defaultKeys = new KeyCode[] { KeyCode.LeftControl, KeyCode.LeftShift, KeyCode.Q, KeyCode.E };
+    public KeyCode[] defaultKeys = new KeyCode[] { KeyCode.LeftControl, KeyCode.LeftShift, KeyCode.Q, KeyCode.E };
     int keyIndex = -1;
 
     private void Awake()

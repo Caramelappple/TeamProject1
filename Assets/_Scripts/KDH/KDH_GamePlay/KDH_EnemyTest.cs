@@ -1,10 +1,12 @@
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class KDH_EnemyTest : MonoBehaviour
 {
     private KDH_Entity _entity;
     private int _damageAmount = 10;
     private KDH_Health _myHealth;
+
 
     private void Awake()
     {
@@ -29,6 +31,11 @@ public class KDH_EnemyTest : MonoBehaviour
             {
                 playerHealth.GetDamage(_damageAmount, _entity);
                 Debug.Log($"남은 플레이어의 체력{playerHealth.Value}");
+
+                if (KDH_CurrentHPText.Instance != null)
+                {
+                    KDH_CurrentHPText.Instance.UpdateHPText(playerHealth.Value);
+                }
             }
         }
     }

@@ -12,7 +12,7 @@ public class KDH_HealthBarUI : MonoBehaviour
     public float shakeDuration = 0.2f;
     public float shakeAmount = 5f;
 
-    private float _previousHealth;
+    public float _previousHealth;
     private RectTransform _rectTransform;
     private Vector2 _originalPosition;
     private Coroutine _shakeCoroutine;

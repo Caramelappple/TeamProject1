@@ -1,4 +1,4 @@
-using KSY_HealthSystem;
+using KDH_HealthSystem;
 using UnityEngine;
 
 //이벤트 발생 시 전달되는 매개변수(데이터)를 담는 객체

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace KSY_HealthSystem
+namespace KDH_HealthSystem
 {
     public readonly struct KDH_RecoverData
     {

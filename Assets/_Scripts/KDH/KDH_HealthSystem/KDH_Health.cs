@@ -1,15 +1,17 @@
-using KSY_HealthSystem;
+using KDH_HealthSystem;
 using NUnit.Framework.Internal;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-using static KSY_HealthSystem.KDH_RecoverData;
+using static KDH_HealthSystem.KDH_RecoverData;
 using static UnityEngine.Rendering.DebugUI;
 
 public class KDH_Health : KDH_DamageAbleResorce, KDH_IRecoverableResource
 {
     public event Action<KDH_RecoverResultData> OnRecover;
     public KDH_DamageData eventArgs = new KDH_DamageData();
+
+    private KDH_CurrentHPText text;
 
     // <회복 구현> Health에서
     // - 회복되었을 때 회복 이벤트 호출
