@@ -4,53 +4,71 @@ using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 namespace NKY_Enemy
 {
-    public class NKY_Enemy : PatternCoroutine
+    public class NKY_Enemy : BaseBoss
     {
-        private List<System.Func<IEnumerator>> patterns;
-        [SerializeField] private Collider2D[] hitboxes;
-        //[SerializeField] private int damege = 1;
+        [Header("보스 장착 스킬")]
+        [SerializeField] private BossSkill[] _skills;
+        public NKY_Player playerReference;
 
-        public NKY_Player target;
+        private NKY_Health _myHealth;
 
-        private bool isMove = true;
-        Vector3 moveDir;
-        float moveSpeed = 3;
-        private void Awake()
+        protected override void OnAwake()
         {
-            _hitBoxController = GetComponent<HitBoxController>();
-            _anim = GetComponent<Animator>();
-            _target = target;
+            _target = playerReference.gameObject;
 
-            patterns = new List<System.Func<IEnumerator>>()
+            if (_skills != null)
             {
-                Skill1
-            };
+                foreach (var skill in _skills)
+                {
+                    skill.Init(this);
+                }
+            }
         }
+
         private void Start()
         {
-            var hp = target.GetComponent<NKY_DamageableResources>();
-
-            if (hp != null)
+            _myHealth = gameObject.GetComponent<NKY_Health>();
+            if (_myHealth != null)
             {
-                hp.OnHit += IsHit;
-                hp.OnDamage += SetDamage;
+                _myHealth.OnHit += IsHit;
+                _myHealth.OnDamage += SetDamage;
             }
-            StartCoroutine(MainRoutine());
-        }
-        //private void Update()
-        //{
-        //    EnemyMove();
-        //}
 
-        private IEnumerator MainRoutine()
+            StartCoroutine(BossMainRoutine());
+        }
+
+        protected override IEnumerator BossMainRoutine()
         {
-            yield return StartCoroutine(Skill1()); 
+            while (!_isDead)
+            {
+                yield return ExecutePattern(CentorMove());
+
+                if(_isDead) yield break;
+
+                yield return new WaitUntil(() => ShouldInterruptIdle());
+
+                if (_isDead) yield break;
+
+                IEnumerator nextSkill = PickNextSkill();
+                yield return ExecutePattern(nextSkill);
+
+                _lastSkillTime = Time.time;
+            }
         }
 
+        protected override IEnumerator PickNextSkill()
+        {
+            float roll = Random.Range(0f, 100f);
+
+            BossSkill selectedSkill = _skills[0];
+
+            return selectedSkill.Execute(transform, _target.transform);
+        }
 
         //공격시 발동시킬 이벤트
         public void IsHit(NKY_DamageData data) //Enemy의 공격이 맞았을때
@@ -59,56 +77,39 @@ namespace NKY_Enemy
         }
         public void SetDamage(NKY_DamageResultData args) //Enemy의 공격으로 인해 체력이 닳았을때
         {
+            if (_isDead) return;
+
             int damage = args.damage;
             int currentHealth = args.currentHealth;
             Debug.Log($"{damage}정도 피달았고 {currentHealth}만큼 피 남음");
+
+            if (_myHealth.IsDestroyed)
+            {
+                Die();
+            }
         }
 
-        //이동 메서드
-        //private void EnemyMove()
-        //{
-        //    if (!isMove)
-        //        return;
-        //    moveDir.x = (target.transform.position.x - transform.position.x);
-        //    moveDir.Normalize();
-        //    if (moveDir.x < 0)
-        //        transform.rotation = Quaternion.Euler(0, 180, 0);
-        //    else
-        //        transform.rotation = Quaternion.Euler(0, 0, 0);
-        //    transform.position += moveDir * moveSpeed * Time.deltaTime;
-        //}
-
-        protected IEnumerator Teleport(Transform from, Transform to)
+        private void Die()
         {
-            _anim.SetTrigger("Vanish");
-            yield return StartCoroutine(WaitAnim("Vanish", 1));
-            from.position = new Vector2(to.position.x, from.position.y);
-            _anim.SetTrigger("Appear");
-            yield return StartCoroutine(WaitAnim("Appear", 1));
-            yield break;
-        }
-        //스킬 코루틴
-        protected override IEnumerator Skill1()
-        {
-            return PlaySequence(
-                Teleport(transform, target.transform),
-                Move(transform, Vector2.up, 0.5f, 0.2f),
-                WaitUntilOrTime(() => false, 0.3f),
-                Move(transform, Vector2.down, 5.5f, 0.2f),
-                AttackWithAnim(hitboxes[0], 4, "StationaryAttack"),
-                WaitUntilOrTime(() => false, 1.3f),
-                CentorMove()
-                );
-        }
+            Debug.Log("보스 사망!!");
+            _isDead = true;
 
-        //protected override IEnumerator Skill2()
-        //{
+            // 1. 진행 중이던 모든 스킬 코루틴과 메인 루틴 강제 정지
+            StopAllCoroutines();
+            StopPattern(); // PatternCoroutine에 만들어둔 안전 정지 메서드
 
-        //}
+            // 2. 사망 애니메이션 재생 (Animator에 "Die" 파라미터나 상태가 있다고 가정)
+            if (_anim != null)
+            {
+                _anim.SetTrigger("Die");
+                // 만약 트리거가 없고 특정 애니메이션을 직접 튼다면 _anim.Play("DieAnimName");
+            }
 
-        private IEnumerator CentorMove()
-        {
-            yield return StartCoroutine(MoveTo(transform, new Vector2(0, 0), 1));
+            // 3. 충돌체(Collider) 끄기 - 죽은 시체에 플레이어가 막히거나 계속 때리는 것 방지
+            Collider2D col = GetComponent<Collider2D>();
+            if (col != null) col.enabled = false;
+
+            // 4. (옵션) 그림자 끄기 등 필요한 사후 처리 추가
         }
     }
 }

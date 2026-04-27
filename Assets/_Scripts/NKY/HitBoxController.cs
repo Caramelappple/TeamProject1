@@ -33,7 +33,7 @@ public class HitBoxController : MonoBehaviour
         ContactFilter2D tempFilter = filter;
         tempFilter.SetLayerMask(layer);
 
-        //
+
         int count = hitBox.Overlap(tempFilter, results);
 
         for (int i = 0; i < count; i++)
@@ -47,5 +47,32 @@ public class HitBoxController : MonoBehaviour
 
             results[i] = null;
         }
+    }
+
+    public void Cast(Collider2D hitBox, Vector2 position, System.Action<Collider2D> onHit)
+    {
+        if (hitBox == null) return;
+
+        Vector3 originalPos = hitBox.transform.position;
+
+        hitBox.transform.position = position;
+
+        Physics2D.SyncTransforms();
+
+        int count = hitBox.Overlap(filter, results);
+
+        for (int i = 0; i < count; i++)
+        {
+            var target = results[i];
+            if (!target || hitTargets.Contains(target)) continue;
+
+            hitTargets.Add(target);
+            onHit?.Invoke(target);
+            results[i] = null;
+        }
+
+        hitBox.transform.position = originalPos;
+
+        Physics2D.SyncTransforms();
     }
 }

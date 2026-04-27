@@ -60,6 +60,28 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "Down",
+                    "id": "6c7ef4d9-fa2d-437f-9afa-52c2b964ad82",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Up",
+                    "id": "9e72a537-731d-4c64-945c-6422ed8c075b",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "1cde3e40-a71c-4693-86b6-e0c54a29b9aa",
                     "path": "<Keyboard>/space",

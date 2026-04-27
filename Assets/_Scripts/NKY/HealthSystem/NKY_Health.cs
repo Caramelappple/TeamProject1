@@ -38,8 +38,6 @@ public class NKY_Health : NKY_DamageableResources, NKY_IRecoverable
     private void Start()
     {
         SetDamageable(true);
-        OnHit += Hit;
-        OnDamage += TakeDamage;
     }
 
     private void Hit(NKY_DamageData data)

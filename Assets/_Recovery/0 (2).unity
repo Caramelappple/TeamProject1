@@ -180,7 +180,6 @@ GameObject:
   - component: {fileID: 102294122}
   - component: {fileID: 102294123}
   - component: {fileID: 102294124}
-  - component: {fileID: 102294126}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -263,7 +262,6 @@ Transform:
   - {fileID: 1860349572}
   - {fileID: 133830273}
   - {fileID: 2126849747}
-  - {fileID: 511466691}
   m_Father: {fileID: 1982702667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &102294120
@@ -364,11 +362,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd3981f39acbed4fb3a0457661e5a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NKY_Enemy.NKY_Enemy
-  _target: {fileID: 0}
-  _skillCooldown: 3
-  _skills:
-  - {fileID: 102294126}
-  playerReference: {fileID: 467756591}
+  shadow: {fileID: 511466693}
+  hitboxes:
+  - {fileID: 1860349573}
+  - {fileID: 133830272}
+  - {fileID: 2126849746}
+  target: {fileID: 467756591}
+  skillCooldown: 3
 --- !u!114 &102294124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,22 +384,6 @@ MonoBehaviour:
   defaultLayer:
     serializedVersion: 2
     m_Bits: 8
---- !u!114 &102294126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 102294116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d204e01ccefd8bf4eb02e2d966007e00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TakeDown
-  _slamHitbox:
-  - {fileID: 1860349573}
-  - {fileID: 133830272}
-  _damage: 4
 --- !u!1 &133830271
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,7 +702,7 @@ Transform:
   m_LocalScale: {x: 4.913081, y: 4.913081, z: 4.913081}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 102294119}
+  m_Father: {fileID: 1982702667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &511466692
 SpriteRenderer:
@@ -1027,6 +1011,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 511466691}
   - {fileID: 102294119}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
