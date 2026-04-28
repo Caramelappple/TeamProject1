@@ -1,0 +1,4538 @@
+fileFormatVersion: 2
+guid: f2d0c1d6d50edd243b5d83e5dc343c6a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1946830108608433841
+    second: The Heart Hoarder 1-spritesheet_0
+  - first:
+      213: 6466506639353934222
+    second: The Heart Hoarder 1-spritesheet_1
+  - first:
+      213: -2331611758903835950
+    second: The Heart Hoarder 1-spritesheet_2
+  - first:
+      213: -5669403293241335709
+    second: The Heart Hoarder 1-spritesheet_3
+  - first:
+      213: 5229839107718596734
+    second: The Heart Hoarder 1-spritesheet_4
+  - first:
+      213: -9084641178961035576
+    second: The Heart Hoarder 1-spritesheet_5
+  - first:
+      213: 821633297061379392
+    second: The Heart Hoarder 1-spritesheet_6
+  - first:
+      213: 8909809213808663513
+    second: The Heart Hoarder 1-spritesheet_7
+  - first:
+      213: 6373175379368236510
+    second: The Heart Hoarder 1-spritesheet_8
+  - first:
+      213: -6494631072081546793
+    second: The Heart Hoarder 1-spritesheet_9
+  - first:
+      213: -5216653389914531065
+    second: The Heart Hoarder 1-spritesheet_10
+  - first:
+      213: 8959745776389832354
+    second: The Heart Hoarder 1-spritesheet_11
+  - first:
+      213: -5536489436736805195
+    second: The Heart Hoarder 1-spritesheet_12
+  - first:
+      213: -4004231201539383948
+    second: The Heart Hoarder 1-spritesheet_13
+  - first:
+      213: -4339786943485285081
+    second: The Heart Hoarder 1-spritesheet_14
+  - first:
+      213: 1464837994693188340
+    second: The Heart Hoarder 1-spritesheet_15
+  - first:
+      213: -44259791485136636
+    second: The Heart Hoarder 1-spritesheet_16
+  - first:
+      213: 6029801863854716150
+    second: The Heart Hoarder 1-spritesheet_17
+  - first:
+      213: 1870831854178895046
+    second: The Heart Hoarder 1-spritesheet_18
+  - first:
+      213: -4653511329045653334
+    second: The Heart Hoarder 1-spritesheet_19
+  - first:
+      213: -6147117494557052038
+    second: The Heart Hoarder 1-spritesheet_20
+  - first:
+      213: 2603797882891782942
+    second: The Heart Hoarder 1-spritesheet_21
+  - first:
+      213: -4027772096267152319
+    second: The Heart Hoarder 1-spritesheet_22
+  - first:
+      213: -8764980776469880309
+    second: The Heart Hoarder 1-spritesheet_23
+  - first:
+      213: -1947182029588349354
+    second: The Heart Hoarder 1-spritesheet_24
+  - first:
+      213: -256224732991212498
+    second: The Heart Hoarder 1-spritesheet_25
+  - first:
+      213: 442380617995628626
+    second: The Heart Hoarder 1-spritesheet_26
+  - first:
+      213: -6436277004488299422
+    second: The Heart Hoarder 1-spritesheet_27
+  - first:
+      213: -2514811020276424167
+    second: The Heart Hoarder 1-spritesheet_28
+  - first:
+      213: -7907155249269210538
+    second: The Heart Hoarder 1-spritesheet_29
+  - first:
+      213: 4848583038801199563
+    second: The Heart Hoarder 1-spritesheet_30
+  - first:
+      213: -6846076867910460941
+    second: The Heart Hoarder 1-spritesheet_31
+  - first:
+      213: 7610423581017206396
+    second: The Heart Hoarder 1-spritesheet_32
+  - first:
+      213: 8673398612289473115
+    second: The Heart Hoarder 1-spritesheet_33
+  - first:
+      213: -6496093960335625939
+    second: The Heart Hoarder 1-spritesheet_34
+  - first:
+      213: 3232396168738713091
+    second: The Heart Hoarder 1-spritesheet_35
+  - first:
+      213: -720608580936247941
+    second: The Heart Hoarder 1-spritesheet_36
+  - first:
+      213: -5882153395202863803
+    second: The Heart Hoarder 1-spritesheet_37
+  - first:
+      213: 2073282374338498883
+    second: The Heart Hoarder 1-spritesheet_38
+  - first:
+      213: -7851997945670657559
+    second: The Heart Hoarder 1-spritesheet_39
+  - first:
+      213: -4473595298873113750
+    second: The Heart Hoarder 1-spritesheet_40
+  - first:
+      213: 7760214505382827572
+    second: The Heart Hoarder 1-spritesheet_41
+  - first:
+      213: -4581759502194524410
+    second: The Heart Hoarder 1-spritesheet_42
+  - first:
+      213: -4032877682955016321
+    second: The Heart Hoarder 1-spritesheet_43
+  - first:
+      213: 4746280430959475850
+    second: The Heart Hoarder 1-spritesheet_44
+  - first:
+      213: 7643992507522131193
+    second: The Heart Hoarder 1-spritesheet_45
+  - first:
+      213: 5986967327822874915
+    second: The Heart Hoarder 1-spritesheet_46
+  - first:
+      213: 5231187414207883904
+    second: The Heart Hoarder 1-spritesheet_47
+  - first:
+      213: -2520018955465410904
+    second: The Heart Hoarder 1-spritesheet_48
+  - first:
+      213: 1401840707120030325
+    second: The Heart Hoarder 1-spritesheet_49
+  - first:
+      213: -7613822740829774107
+    second: The Heart Hoarder 1-spritesheet_50
+  - first:
+      213: -4540391564836617298
+    second: The Heart Hoarder 1-spritesheet_51
+  - first:
+      213: 8231909110357889513
+    second: The Heart Hoarder 1-spritesheet_52
+  - first:
+      213: 2973100309713447041
+    second: The Heart Hoarder 1-spritesheet_53
+  - first:
+      213: -8686241985516015848
+    second: The Heart Hoarder 1-spritesheet_54
+  - first:
+      213: 1981753599199027230
+    second: The Heart Hoarder 1-spritesheet_55
+  - first:
+      213: -907369717120729127
+    second: The Heart Hoarder 1-spritesheet_56
+  - first:
+      213: -8827311359852923266
+    second: The Heart Hoarder 1-spritesheet_57
+  - first:
+      213: -4890664501964221182
+    second: The Heart Hoarder 1-spritesheet_58
+  - first:
+      213: 2704525835363485735
+    second: The Heart Hoarder 1-spritesheet_59
+  - first:
+      213: 54389941746989952
+    second: The Heart Hoarder 1-spritesheet_60
+  - first:
+      213: 1673963566305154520
+    second: The Heart Hoarder 1-spritesheet_61
+  - first:
+      213: -7407488497922368168
+    second: The Heart Hoarder 1-spritesheet_62
+  - first:
+      213: -3113228780240927118
+    second: The Heart Hoarder 1-spritesheet_63
+  - first:
+      213: -7109138086910265264
+    second: The Heart Hoarder 1-spritesheet_64
+  - first:
+      213: -6223940117729861599
+    second: The Heart Hoarder 1-spritesheet_65
+  - first:
+      213: 1442264267480706798
+    second: The Heart Hoarder 1-spritesheet_66
+  - first:
+      213: -5680157355847054515
+    second: The Heart Hoarder 1-spritesheet_67
+  - first:
+      213: -514112932586708779
+    second: The Heart Hoarder 1-spritesheet_68
+  - first:
+      213: 8068788500971713216
+    second: The Heart Hoarder 1-spritesheet_69
+  - first:
+      213: -3596213776606620391
+    second: The Heart Hoarder 1-spritesheet_70
+  - first:
+      213: 8969516271265256094
+    second: The Heart Hoarder 1-spritesheet_71
+  - first:
+      213: 9022216238960277787
+    second: The Heart Hoarder 1-spritesheet_72
+  - first:
+      213: 5009709247546476698
+    second: The Heart Hoarder 1-spritesheet_73
+  - first:
+      213: -4761369331735252971
+    second: The Heart Hoarder 1-spritesheet_74
+  - first:
+      213: -6509201068050285098
+    second: The Heart Hoarder 1-spritesheet_75
+  - first:
+      213: -3468326948778662942
+    second: The Heart Hoarder 1-spritesheet_76
+  - first:
+      213: -4633355638553031076
+    second: The Heart Hoarder 1-spritesheet_77
+  - first:
+      213: 5822010772648044915
+    second: The Heart Hoarder 1-spritesheet_78
+  - first:
+      213: 9021466594430043464
+    second: The Heart Hoarder 1-spritesheet_79
+  - first:
+      213: 190681611458858345
+    second: The Heart Hoarder 1-spritesheet_80
+  - first:
+      213: 6622280019244634938
+    second: The Heart Hoarder 1-spritesheet_81
+  - first:
+      213: 5023030907306587073
+    second: The Heart Hoarder 1-spritesheet_82
+  - first:
+      213: 5270968186560831694
+    second: The Heart Hoarder 1-spritesheet_83
+  - first:
+      213: -5492969683386866569
+    second: The Heart Hoarder 1-spritesheet_84
+  - first:
+      213: 1611639019452485524
+    second: The Heart Hoarder 1-spritesheet_85
+  - first:
+      213: 1428697662493602165
+    second: The Heart Hoarder 1-spritesheet_86
+  - first:
+      213: -8195093122315785734
+    second: The Heart Hoarder 1-spritesheet_87
+  - first:
+      213: -172355128766095655
+    second: The Heart Hoarder 1-spritesheet_88
+  - first:
+      213: -4949562397399728118
+    second: The Heart Hoarder 1-spritesheet_89
+  - first:
+      213: -9034518664389709100
+    second: The Heart Hoarder 1-spritesheet_90
+  - first:
+      213: -5171405450562925456
+    second: The Heart Hoarder 1-spritesheet_91
+  - first:
+      213: 7514444983961563984
+    second: The Heart Hoarder 1-spritesheet_92
+  - first:
+      213: -8953051815259234674
+    second: The Heart Hoarder 1-spritesheet_93
+  - first:
+      213: -7400133119674322943
+    second: The Heart Hoarder 1-spritesheet_94
+  - first:
+      213: 6797287463232155679
+    second: The Heart Hoarder 1-spritesheet_95
+  - first:
+      213: 1789491420287832611
+    second: The Heart Hoarder 1-spritesheet_96
+  - first:
+      213: 6598820854778321344
+    second: The Heart Hoarder 1-spritesheet_97
+  - first:
+      213: -7270404673787403137
+    second: The Heart Hoarder 1-spritesheet_98
+  - first:
+      213: 4059717517941226659
+    second: The Heart Hoarder 1-spritesheet_99
+  - first:
+      213: 8924305506656083050
+    second: The Heart Hoarder 1-spritesheet_100
+  - first:
+      213: 2608912940948356325
+    second: The Heart Hoarder 1-spritesheet_101
+  - first:
+      213: 8648090476954569702
+    second: The Heart Hoarder 1-spritesheet_102
+  - first:
+      213: -6811280898013546835
+    second: The Heart Hoarder 1-spritesheet_103
+  - first:
+      213: 5387697005170142931
+    second: The Heart Hoarder 1-spritesheet_104
+  - first:
+      213: 6881846589234678330
+    second: The Heart Hoarder 1-spritesheet_105
+  - first:
+      213: -6307385448611768921
+    second: The Heart Hoarder 1-spritesheet_106
+  - first:
+      213: -6302878689971267305
+    second: The Heart Hoarder 1-spritesheet_107
+  - first:
+      213: 8161779423573149086
+    second: The Heart Hoarder 1-spritesheet_108
+  - first:
+      213: 9036688076758474790
+    second: The Heart Hoarder 1-spritesheet_109
+  - first:
+      213: 3115166621844445568
+    second: The Heart Hoarder 1-spritesheet_110
+  - first:
+      213: -4389521113687349518
+    second: The Heart Hoarder 1-spritesheet_111
+  - first:
+      213: -2873476482706895867
+    second: The Heart Hoarder 1-spritesheet_112
+  - first:
+      213: -1874796181545447534
+    second: The Heart Hoarder 1-spritesheet_113
+  - first:
+      213: 2223822036991975861
+    second: The Heart Hoarder 1-spritesheet_114
+  - first:
+      213: -6758312344556336349
+    second: The Heart Hoarder 1-spritesheet_115
+  - first:
+      213: -8420414409768272735
+    second: The Heart Hoarder 1-spritesheet_116
+  - first:
+      213: 4842991253871091887
+    second: The Heart Hoarder 1-spritesheet_117
+  - first:
+      213: -4381078831301967857
+    second: The Heart Hoarder 1-spritesheet_118
+  - first:
+      213: 135881252730863273
+    second: The Heart Hoarder 1-spritesheet_119
+  - first:
+      213: -5690822900378727625
+    second: The Heart Hoarder 1-spritesheet_120
+  - first:
+      213: 3568505566176935053
+    second: The Heart Hoarder 1-spritesheet_121
+  - first:
+      213: 4457649085198699864
+    second: The Heart Hoarder 1-spritesheet_122
+  - first:
+      213: 3946685524140426061
+    second: The Heart Hoarder 1-spritesheet_123
+  - first:
+      213: 1800196815466701633
+    second: The Heart Hoarder 1-spritesheet_124
+  - first:
+      213: 3414962139233589063
+    second: The Heart Hoarder 1-spritesheet_125
+  - first:
+      213: 2522452769113886102
+    second: The Heart Hoarder 1-spritesheet_126
+  - first:
+      213: 8217487869005583322
+    second: The Heart Hoarder 1-spritesheet_127
+  - first:
+      213: 7264985768926794125
+    second: The Heart Hoarder 1-spritesheet_128
+  - first:
+      213: 7211764252118310524
+    second: The Heart Hoarder 1-spritesheet_129
+  - first:
+      213: -7205623233163703781
+    second: The Heart Hoarder 1-spritesheet_130
+  - first:
+      213: 7872580235933461631
+    second: The Heart Hoarder 1-spritesheet_131
+  - first:
+      213: -1368427966026917527
+    second: The Heart Hoarder 1-spritesheet_132
+  - first:
+      213: -1670840426766785665
+    second: The Heart Hoarder 1-spritesheet_133
+  - first:
+      213: -2231352538673065453
+    second: The Heart Hoarder 1-spritesheet_134
+  - first:
+      213: -5171179105223106022
+    second: The Heart Hoarder 1-spritesheet_135
+  - first:
+      213: 553810405041073812
+    second: The Heart Hoarder 1-spritesheet_136
+  - first:
+      213: -8842454460737118699
+    second: The Heart Hoarder 1-spritesheet_137
+  - first:
+      213: 9151958334080415968
+    second: The Heart Hoarder 1-spritesheet_138
+  - first:
+      213: 6586245702486441178
+    second: The Heart Hoarder 1-spritesheet_139
+  - first:
+      213: -1025505314326367586
+    second: The Heart Hoarder 1-spritesheet_140
+  - first:
+      213: -8252237644214237231
+    second: The Heart Hoarder 1-spritesheet_141
+  - first:
+      213: -5332079062016369188
+    second: The Heart Hoarder 1-spritesheet_142
+  - first:
+      213: -2110367914198010043
+    second: The Heart Hoarder 1-spritesheet_143
+  - first:
+      213: 1791051237280867928
+    second: The Heart Hoarder 1-spritesheet_144
+  - first:
+      213: -2912094660888499213
+    second: The Heart Hoarder 1-spritesheet_145
+  - first:
+      213: 9033646170968574709
+    second: The Heart Hoarder 1-spritesheet_146
+  - first:
+      213: 4570204016798047592
+    second: The Heart Hoarder 1-spritesheet_147
+  - first:
+      213: 6143768187742424955
+    second: The Heart Hoarder 1-spritesheet_148
+  - first:
+      213: 7337506800968517331
+    second: The Heart Hoarder 1-spritesheet_149
+  - first:
+      213: -7097027140495524374
+    second: The Heart Hoarder 1-spritesheet_150
+  - first:
+      213: 7973689194913543547
+    second: The Heart Hoarder 1-spritesheet_151
+  - first:
+      213: 7184129718584718897
+    second: The Heart Hoarder 1-spritesheet_152
+  - first:
+      213: -3362964878768849644
+    second: The Heart Hoarder 1-spritesheet_153
+  - first:
+      213: 1295789584380841351
+    second: The Heart Hoarder 1-spritesheet_154
+  - first:
+      213: -3953103101530400030
+    second: The Heart Hoarder 1-spritesheet_155
+  - first:
+      213: -7871950967737527317
+    second: The Heart Hoarder 1-spritesheet_156
+  - first:
+      213: 3026196893726550071
+    second: The Heart Hoarder 1-spritesheet_157
+  - first:
+      213: -363668265665689070
+    second: The Heart Hoarder 1-spritesheet_158
+  - first:
+      213: 4019944898856513615
+    second: The Heart Hoarder 1-spritesheet_159
+  - first:
+      213: -4934547506217360036
+    second: The Heart Hoarder 1-spritesheet_160
+  - first:
+      213: -2754522113758704867
+    second: The Heart Hoarder 1-spritesheet_161
+  - first:
+      213: -6348338957436957406
+    second: The Heart Hoarder 1-spritesheet_162
+  - first:
+      213: -5435868399334078478
+    second: The Heart Hoarder 1-spritesheet_163
+  - first:
+      213: 8898150770293868177
+    second: The Heart Hoarder 1-spritesheet_164
+  - first:
+      213: 8137551553560313455
+    second: The Heart Hoarder 1-spritesheet_165
+  - first:
+      213: 8023311255811244219
+    second: The Heart Hoarder 1-spritesheet_166
+  - first:
+      213: 8145971495207042693
+    second: The Heart Hoarder 1-spritesheet_167
+  - first:
+      213: -715140427628369161
+    second: The Heart Hoarder 1-spritesheet_168
+  - first:
+      213: 4002467736208914828
+    second: The Heart Hoarder 1-spritesheet_169
+  - first:
+      213: -4760690899751425174
+    second: The Heart Hoarder 1-spritesheet_170
+  - first:
+      213: -1342137833314548092
+    second: The Heart Hoarder 1-spritesheet_171
+  - first:
+      213: -4003755712805609859
+    second: The Heart Hoarder 1-spritesheet_172
+  - first:
+      213: 8845755474390118179
+    second: The Heart Hoarder 1-spritesheet_173
+  - first:
+      213: -7440398865610049480
+    second: The Heart Hoarder 1-spritesheet_174
+  - first:
+      213: 8336173417707264437
+    second: The Heart Hoarder 1-spritesheet_175
+  - first:
+      213: -2130631297832532875
+    second: The Heart Hoarder 1-spritesheet_176
+  - first:
+      213: 3213050640080826234
+    second: The Heart Hoarder 1-spritesheet_177
+  - first:
+      213: 4893971748103826530
+    second: The Heart Hoarder 1-spritesheet_178
+  - first:
+      213: 8635373688463266884
+    second: The Heart Hoarder 1-spritesheet_179
+  - first:
+      213: -3021524613064125304
+    second: The Heart Hoarder 1-spritesheet_180
+  - first:
+      213: 6276224892495745996
+    second: The Heart Hoarder 1-spritesheet_181
+  - first:
+      213: -8615132689413998077
+    second: The Heart Hoarder 1-spritesheet_182
+  - first:
+      213: -3197926867078044048
+    second: The Heart Hoarder 1-spritesheet_183
+  - first:
+      213: -2001088161241686103
+    second: The Heart Hoarder 1-spritesheet_184
+  - first:
+      213: 9053440897718017166
+    second: The Heart Hoarder 1-spritesheet_185
+  - first:
+      213: -4983604486541180583
+    second: The Heart Hoarder 1-spritesheet_186
+  - first:
+      213: 5511089259505849323
+    second: The Heart Hoarder 1-spritesheet_187
+  - first:
+      213: -291894280933009197
+    second: The Heart Hoarder 1-spritesheet_188
+  - first:
+      213: -8782511422348781909
+    second: The Heart Hoarder 1-spritesheet_189
+  - first:
+      213: -5202138213758527194
+    second: The Heart Hoarder 1-spritesheet_190
+  - first:
+      213: -594949570591991736
+    second: The Heart Hoarder 1-spritesheet_191
+  - first:
+      213: -9110433617870551454
+    second: The Heart Hoarder 1-spritesheet_192
+  - first:
+      213: -4637419767643710855
+    second: The Heart Hoarder 1-spritesheet_193
+  - first:
+      213: -4944000024195657685
+    second: The Heart Hoarder 1-spritesheet_194
+  - first:
+      213: 6996779457853287381
+    second: The Heart Hoarder 1-spritesheet_195
+  - first:
+      213: 8182765920295969277
+    second: The Heart Hoarder 1-spritesheet_196
+  - first:
+      213: 6508809739516899772
+    second: The Heart Hoarder 1-spritesheet_197
+  - first:
+      213: 1132446431351009330
+    second: The Heart Hoarder 1-spritesheet_198
+  - first:
+      213: 3941721687915642482
+    second: The Heart Hoarder 1-spritesheet_199
+  - first:
+      213: 2078603040735618291
+    second: The Heart Hoarder 1-spritesheet_200
+  - first:
+      213: 7338964561516014603
+    second: The Heart Hoarder 1-spritesheet_201
+  - first:
+      213: -1411101754707424063
+    second: The Heart Hoarder 1-spritesheet_202
+  - first:
+      213: 682106732383599274
+    second: The Heart Hoarder 1-spritesheet_203
+  - first:
+      213: -1236609125000234234
+    second: The Heart Hoarder 1-spritesheet_204
+  - first:
+      213: -9118056122894873702
+    second: The Heart Hoarder 1-spritesheet_205
+  - first:
+      213: 5311949582231589440
+    second: The Heart Hoarder 1-spritesheet_206
+  - first:
+      213: 4498585489818077062
+    second: The Heart Hoarder 1-spritesheet_207
+  - first:
+      213: -9162459224240162241
+    second: The Heart Hoarder 1-spritesheet_208
+  - first:
+      213: -5751280731628610888
+    second: The Heart Hoarder 1-spritesheet_209
+  - first:
+      213: 3291905533999443996
+    second: The Heart Hoarder 1-spritesheet_210
+  - first:
+      213: -176356404774885827
+    second: The Heart Hoarder 1-spritesheet_211
+  - first:
+      213: -3890753341788255203
+    second: The Heart Hoarder 1-spritesheet_212
+  - first:
+      213: -7830691169369402475
+    second: The Heart Hoarder 1-spritesheet_213
+  - first:
+      213: 1104448130717624774
+    second: The Heart Hoarder 1-spritesheet_214
+  - first:
+      213: 8289135763315103471
+    second: The Heart Hoarder 1-spritesheet_215
+  - first:
+      213: 1928080022528997883
+    second: The Heart Hoarder 1-spritesheet_216
+  - first:
+      213: 3444899056157868935
+    second: The Heart Hoarder 1-spritesheet_217
+  - first:
+      213: 8932540635610016433
+    second: The Heart Hoarder 1-spritesheet_218
+  - first:
+      213: 977672038000433336
+    second: The Heart Hoarder 1-spritesheet_219
+  - first:
+      213: -1454900090718313871
+    second: The Heart Hoarder 1-spritesheet_220
+  - first:
+      213: 2194120648696374887
+    second: The Heart Hoarder 1-spritesheet_221
+  - first:
+      213: 8379147772696580494
+    second: The Heart Hoarder 1-spritesheet_222
+  - first:
+      213: -709638709562562777
+    second: The Heart Hoarder 1-spritesheet_223
+  - first:
+      213: -7640310062585653954
+    second: The Heart Hoarder 1-spritesheet_224
+  - first:
+      213: -8143298254751312968
+    second: The Heart Hoarder 1-spritesheet_225
+  - first:
+      213: -8045437197485205505
+    second: The Heart Hoarder 1-spritesheet_226
+  - first:
+      213: -277711708661473022
+    second: The Heart Hoarder 1-spritesheet_227
+  - first:
+      213: -3694281282351633127
+    second: The Heart Hoarder 1-spritesheet_228
+  - first:
+      213: -4150516863204992960
+    second: The Heart Hoarder 1-spritesheet_229
+  - first:
+      213: 731183612385956819
+    second: The Heart Hoarder 1-spritesheet_230
+  - first:
+      213: 9016734353628455213
+    second: The Heart Hoarder 1-spritesheet_231
+  - first:
+      213: -3568794038819466563
+    second: The Heart Hoarder 1-spritesheet_232
+  - first:
+      213: 5456694223159125371
+    second: The Heart Hoarder 1-spritesheet_233
+  - first:
+      213: -1121288859684600245
+    second: The Heart Hoarder 1-spritesheet_234
+  - first:
+      213: -53229091068241094
+    second: The Heart Hoarder 1-spritesheet_235
+  - first:
+      213: -3576495994866785666
+    second: The Heart Hoarder 1-spritesheet_236
+  - first:
+      213: 6316702738495963996
+    second: The Heart Hoarder 1-spritesheet_237
+  - first:
+      213: -8569140001785025020
+    second: The Heart Hoarder 1-spritesheet_238
+  - first:
+      213: 6703284842762256684
+    second: The Heart Hoarder 1-spritesheet_239
+  - first:
+      213: 2596597387904131573
+    second: The Heart Hoarder 1-spritesheet_240
+  - first:
+      213: 846560179732966088
+    second: The Heart Hoarder 1-spritesheet_241
+  - first:
+      213: 6809461988650100107
+    second: The Heart Hoarder 1-spritesheet_242
+  - first:
+      213: 5270571805640377426
+    second: The Heart Hoarder 1-spritesheet_243
+  - first:
+      213: 3976070750457353365
+    second: The Heart Hoarder 1-spritesheet_244
+  - first:
+      213: -5395976998550504348
+    second: The Heart Hoarder 1-spritesheet_245
+  - first:
+      213: 1840094912573782340
+    second: The Heart Hoarder 1-spritesheet_246
+  - first:
+      213: -2452682306822500406
+    second: The Heart Hoarder 1-spritesheet_247
+  - first:
+      213: -7679040558336340136
+    second: The Heart Hoarder 1-spritesheet_248
+  - first:
+      213: 258531223676983472
+    second: The Heart Hoarder 1-spritesheet_249
+  - first:
+      213: -3590757194548160805
+    second: The Heart Hoarder 1-spritesheet_250
+  - first:
+      213: -7281490776434849942
+    second: The Heart Hoarder 1-spritesheet_251
+  - first:
+      213: -7173478292007004388
+    second: The Heart Hoarder 1-spritesheet_252
+  - first:
+      213: 316330034549544200
+    second: The Heart Hoarder 1-spritesheet_253
+  - first:
+      213: 3019390301325135728
+    second: The Heart Hoarder 1-spritesheet_254
+  - first:
+      213: 7063785861413582003
+    second: The Heart Hoarder 1-spritesheet_255
+  - first:
+      213: 6750526975496882979
+    second: The Heart Hoarder 1-spritesheet_256
+  - first:
+      213: 411371779896693206
+    second: The Heart Hoarder 1-spritesheet_257
+  - first:
+      213: -4511999928261399350
+    second: The Heart Hoarder 1-spritesheet_258
+  - first:
+      213: 3908928015251814909
+    second: The Heart Hoarder 1-spritesheet_259
+  - first:
+      213: 12960004943263721
+    second: The Heart Hoarder 1-spritesheet_260
+  - first:
+      213: 1922641266092049003
+    second: The Heart Hoarder 1-spritesheet_261
+  - first:
+      213: 6824631307656340061
+    second: The Heart Hoarder 1-spritesheet_262
+  - first:
+      213: -8055184438257933179
+    second: The Heart Hoarder 1-spritesheet_263
+  - first:
+      213: -4346190579704389513
+    second: The Heart Hoarder 1-spritesheet_264
+  - first:
+      213: 5795941757570552118
+    second: The Heart Hoarder 1-spritesheet_265
+  - first:
+      213: 5197669312783083412
+    second: The Heart Hoarder 1-spritesheet_266
+  - first:
+      213: -1085360818574700109
+    second: The Heart Hoarder 1-spritesheet_267
+  - first:
+      213: 942605431022227608
+    second: The Heart Hoarder 1-spritesheet_268
+  - first:
+      213: -8783668149235945969
+    second: The Heart Hoarder 1-spritesheet_269
+  - first:
+      213: -6000043620681307960
+    second: The Heart Hoarder 1-spritesheet_270
+  - first:
+      213: 7333316850996652866
+    second: The Heart Hoarder 1-spritesheet_271
+  - first:
+      213: -5027696582774234007
+    second: The Heart Hoarder 1-spritesheet_272
+  - first:
+      213: -4045584785618652829
+    second: The Heart Hoarder 1-spritesheet_273
+  - first:
+      213: -823526550581714999
+    second: The Heart Hoarder 1-spritesheet_274
+  - first:
+      213: -2177569317000644738
+    second: The Heart Hoarder 1-spritesheet_275
+  - first:
+      213: 859577254900941359
+    second: The Heart Hoarder 1-spritesheet_276
+  - first:
+      213: -2576160165962322751
+    second: The Heart Hoarder 1-spritesheet_277
+  - first:
+      213: 1522273631210446686
+    second: The Heart Hoarder 1-spritesheet_278
+  - first:
+      213: 1843704851626418489
+    second: The Heart Hoarder 1-spritesheet_279
+  - first:
+      213: -1573694771162874008
+    second: The Heart Hoarder 1-spritesheet_280
+  - first:
+      213: 3137891295419896757
+    second: The Heart Hoarder 1-spritesheet_281
+  - first:
+      213: 7220148608778047469
+    second: The Heart Hoarder 1-spritesheet_282
+  - first:
+      213: 7653437935643830100
+    second: The Heart Hoarder 1-spritesheet_283
+  - first:
+      213: -3192074713370781893
+    second: The Heart Hoarder 1-spritesheet_284
+  - first:
+      213: -7051372296766077504
+    second: The Heart Hoarder 1-spritesheet_285
+  - first:
+      213: -5129381183483115557
+    second: The Heart Hoarder 1-spritesheet_286
+  - first:
+      213: 747158313713407934
+    second: The Heart Hoarder 1-spritesheet_287
+  - first:
+      213: 8736654682958090318
+    second: The Heart Hoarder 1-spritesheet_288
+  - first:
+      213: -9073547696682095006
+    second: The Heart Hoarder 1-spritesheet_289
+  - first:
+      213: 7567467598316807128
+    second: The Heart Hoarder 1-spritesheet_290
+  - first:
+      213: -5645176952819909726
+    second: The Heart Hoarder 1-spritesheet_291
+  - first:
+      213: 2220648117538149814
+    second: The Heart Hoarder 1-spritesheet_292
+  - first:
+      213: -7329538469370079050
+    second: The Heart Hoarder 1-spritesheet_293
+  - first:
+      213: -3938310169168881329
+    second: The Heart Hoarder 1-spritesheet_294
+  - first:
+      213: 279079189076142604
+    second: The Heart Hoarder 1-spritesheet_295
+  - first:
+      213: 1456305929246868867
+    second: The Heart Hoarder 1-spritesheet_296
+  - first:
+      213: 1052684954460579466
+    second: The Heart Hoarder 1-spritesheet_297
+  - first:
+      213: -2775245277518811775
+    second: The Heart Hoarder 1-spritesheet_298
+  - first:
+      213: -6560627371022639988
+    second: The Heart Hoarder 1-spritesheet_299
+  - first:
+      213: 5825670784036011022
+    second: The Heart Hoarder 1-spritesheet_300
+  - first:
+      213: -5548355842501771480
+    second: The Heart Hoarder 1-spritesheet_301
+  - first:
+      213: -7926839301863286963
+    second: The Heart Hoarder 1-spritesheet_302
+  - first:
+      213: -3867118469191410767
+    second: The Heart Hoarder 1-spritesheet_303
+  - first:
+      213: -5986291595379402136
+    second: The Heart Hoarder 1-spritesheet_304
+  - first:
+      213: -3860980578580366931
+    second: The Heart Hoarder 1-spritesheet_305
+  - first:
+      213: 5250707110218953435
+    second: The Heart Hoarder 1-spritesheet_306
+  - first:
+      213: 601468618366545609
+    second: The Heart Hoarder 1-spritesheet_307
+  - first:
+      213: -5459733283293626668
+    second: The Heart Hoarder 1-spritesheet_308
+  - first:
+      213: 479303773571715021
+    second: The Heart Hoarder 1-spritesheet_309
+  - first:
+      213: 13972450758665333
+    second: The Heart Hoarder 1-spritesheet_310
+  - first:
+      213: 2850726153932617855
+    second: The Heart Hoarder 1-spritesheet_311
+  - first:
+      213: 1970412886274267463
+    second: The Heart Hoarder 1-spritesheet_312
+  - first:
+      213: -2432092812457408375
+    second: The Heart Hoarder 1-spritesheet_313
+  - first:
+      213: 3873368599819440340
+    second: The Heart Hoarder 1-spritesheet_314
+  - first:
+      213: 5789226395403398580
+    second: The Heart Hoarder 1-spritesheet_315
+  - first:
+      213: -7617434109666641085
+    second: The Heart Hoarder 1-spritesheet_316
+  - first:
+      213: 3207891587005015099
+    second: The Heart Hoarder 1-spritesheet_317
+  - first:
+      213: 2453284626766953217
+    second: The Heart Hoarder 1-spritesheet_318
+  - first:
+      213: 4564279944646022167
+    second: The Heart Hoarder 1-spritesheet_319
+  - first:
+      213: 5285728525030302421
+    second: The Heart Hoarder 1-spritesheet_320
+  - first:
+      213: 1416544425068246683
+    second: The Heart Hoarder 1-spritesheet_321
+  - first:
+      213: -9083115262570225639
+    second: The Heart Hoarder 1-spritesheet_322
+  - first:
+      213: 2431643546159174595
+    second: The Heart Hoarder 1-spritesheet_323
+  - first:
+      213: -6756107294150220902
+    second: The Heart Hoarder 1-spritesheet_324
+  - first:
+      213: -2421688695815141714
+    second: The Heart Hoarder 1-spritesheet_325
+  - first:
+      213: -3849377864627165500
+    second: The Heart Hoarder 1-spritesheet_326
+  - first:
+      213: -8778641930918615593
+    second: The Heart Hoarder 1-spritesheet_327
+  - first:
+      213: -1444505104750708809
+    second: The Heart Hoarder 1-spritesheet_328
+  - first:
+      213: 5659728451985041259
+    second: The Heart Hoarder 1-spritesheet_329
+  - first:
+      213: -7271883231781358352
+    second: The Heart Hoarder 1-spritesheet_330
+  - first:
+      213: 707098955626373885
+    second: The Heart Hoarder 1-spritesheet_331
+  - first:
+      213: -3870526989141753047
+    second: The Heart Hoarder 1-spritesheet_332
+  - first:
+      213: 1577163773077967695
+    second: The Heart Hoarder 1-spritesheet_333
+  - first:
+      213: -2512359784942062443
+    second: The Heart Hoarder 1-spritesheet_334
+  - first:
+      213: 5357036602530148434
+    second: The Heart Hoarder 1-spritesheet_335
+  - first:
+      213: 8980074479881423800
+    second: The Heart Hoarder 1-spritesheet_336
+  - first:
+      213: 3222006536973208574
+    second: The Heart Hoarder 1-spritesheet_337
+  - first:
+      213: 5070691995508578606
+    second: The Heart Hoarder 1-spritesheet_338
+  - first:
+      213: 5381880658087514679
+    second: The Heart Hoarder 1-spritesheet_339
+  - first:
+      213: 6792225064544596082
+    second: The Heart Hoarder 1-spritesheet_340
+  - first:
+      213: -2283799383647618161
+    second: The Heart Hoarder 1-spritesheet_341
+  - first:
+      213: 5083580018314056788
+    second: The Heart Hoarder 1-spritesheet_342
+  - first:
+      213: -1739649505015390372
+    second: The Heart Hoarder 1-spritesheet_343
+  - first:
+      213: -6417767240370350704
+    second: The Heart Hoarder 1-spritesheet_344
+  - first:
+      213: -2966971997565168259
+    second: The Heart Hoarder 1-spritesheet_345
+  - first:
+      213: -192975844003067655
+    second: The Heart Hoarder 1-spritesheet_346
+  - first:
+      213: -8866211834854129660
+    second: The Heart Hoarder 1-spritesheet_347
+  - first:
+      213: -8589783220354588576
+    second: The Heart Hoarder 1-spritesheet_348
+  - first:
+      213: -2016850025845874739
+    second: The Heart Hoarder 1-spritesheet_349
+  - first:
+      213: -1513284865704726524
+    second: The Heart Hoarder 1-spritesheet_350
+  - first:
+      213: 8795392071927583804
+    second: The Heart Hoarder 1-spritesheet_351
+  - first:
+      213: -772976916844856812
+    second: The Heart Hoarder 1-spritesheet_352
+  - first:
+      213: -7234958641343389512
+    second: The Heart Hoarder 1-spritesheet_353
+  - first:
+      213: 9103370123273045369
+    second: The Heart Hoarder 1-spritesheet_354
+  - first:
+      213: 1415271304862959242
+    second: The Heart Hoarder 1-spritesheet_355
+  - first:
+      213: 3604502093801553425
+    second: The Heart Hoarder 1-spritesheet_356
+  - first:
+      213: -5689128208047877463
+    second: The Heart Hoarder 1-spritesheet_357
+  - first:
+      213: 3571909406238030038
+    second: The Heart Hoarder 1-spritesheet_358
+  - first:
+      213: 8844005360689898385
+    second: The Heart Hoarder 1-spritesheet_359
+  - first:
+      213: -8751307967248623125
+    second: The Heart Hoarder 1-spritesheet_360
+  - first:
+      213: 1505604456849712887
+    second: The Heart Hoarder 1-spritesheet_361
+  - first:
+      213: 832628803963703209
+    second: The Heart Hoarder 1-spritesheet_362
+  - first:
+      213: 6677994319951341414
+    second: The Heart Hoarder 1-spritesheet_363
+  - first:
+      213: -8388209277189213135
+    second: The Heart Hoarder 1-spritesheet_364
+  - first:
+      213: 4592101158169414907
+    second: The Heart Hoarder 1-spritesheet_365
+  - first:
+      213: 5977950667071232748
+    second: The Heart Hoarder 1-spritesheet_366
+  - first:
+      213: 8473475027728237175
+    second: The Heart Hoarder 1-spritesheet_367
+  - first:
+      213: 7971786120550500710
+    second: The Heart Hoarder 1-spritesheet_368
+  - first:
+      213: 8085456707922200562
+    second: The Heart Hoarder 1-spritesheet_369
+  - first:
+      213: 6888000698182443220
+    second: The Heart Hoarder 1-spritesheet_370
+  - first:
+      213: -6243399253271595228
+    second: The Heart Hoarder 1-spritesheet_371
+  - first:
+      213: -6522175221754282308
+    second: The Heart Hoarder 1-spritesheet_372
+  - first:
+      213: -5685063890229425209
+    second: The Heart Hoarder 1-spritesheet_373
+  - first:
+      213: 7601183868780352462
+    second: The Heart Hoarder 1-spritesheet_374
+  - first:
+      213: 1795944266619920861
+    second: The Heart Hoarder 1-spritesheet_375
+  - first:
+      213: 5071590561883243103
+    second: The Heart Hoarder 1-spritesheet_376
+  - first:
+      213: -6862944162954521162
+    second: The Heart Hoarder 1-spritesheet_377
+  - first:
+      213: 1624201974983411064
+    second: The Heart Hoarder 1-spritesheet_378
+  - first:
+      213: -3157864337311351841
+    second: The Heart Hoarder 1-spritesheet_379
+  - first:
+      213: -4863642244476105039
+    second: The Heart Hoarder 1-spritesheet_380
+  - first:
+      213: 160791852674078200
+    second: The Heart Hoarder 1-spritesheet_381
+  - first:
+      213: -3047922380784441234
+    second: The Heart Hoarder 1-spritesheet_382
+  - first:
+      213: 6381732729516812881
+    second: The Heart Hoarder 1-spritesheet_383
+  - first:
+      213: 8732892889647211534
+    second: The Heart Hoarder 1-spritesheet_384
+  - first:
+      213: -6868644564122608630
+    second: The Heart Hoarder 1-spritesheet_385
+  - first:
+      213: 3285203615060133446
+    second: The Heart Hoarder 1-spritesheet_386
+  - first:
+      213: 3127270667583211372
+    second: The Heart Hoarder 1-spritesheet_387
+  - first:
+      213: 3238040976704436632
+    second: The Heart Hoarder 1-spritesheet_388
+  - first:
+      213: 4665829901644572377
+    second: The Heart Hoarder 1-spritesheet_389
+  - first:
+      213: -4222223953028736466
+    second: The Heart Hoarder 1-spritesheet_390
+  - first:
+      213: 4664357898378529826
+    second: The Heart Hoarder 1-spritesheet_391
+  - first:
+      213: -4331934385714641348
+    second: The Heart Hoarder 1-spritesheet_392
+  - first:
+      213: 5644912664962930272
+    second: The Heart Hoarder 1-spritesheet_393
+  - first:
+      213: 4438575867254399526
+    second: The Heart Hoarder 1-spritesheet_394
+  - first:
+      213: 6384190593035024573
+    second: The Heart Hoarder 1-spritesheet_395
+  - first:
+      213: -8481769758216747543
+    second: The Heart Hoarder 1-spritesheet_396
+  - first:
+      213: 2809406513464171925
+    second: The Heart Hoarder 1-spritesheet_397
+  - first:
+      213: 4702929100086987235
+    second: The Heart Hoarder 1-spritesheet_398
+  - first:
+      213: -5429269404260543829
+    second: The Heart Hoarder 1-spritesheet_399
+  - first:
+      213: -2252870780450604442
+    second: The Heart Hoarder 1-spritesheet_400
+  - first:
+      213: 3782554477426876253
+    second: The Heart Hoarder 1-spritesheet_401
+  - first:
+      213: 6086285188543467730
+    second: The Heart Hoarder 1-spritesheet_402
+  - first:
+      213: -7656041128461399939
+    second: The Heart Hoarder 1-spritesheet_403
+  - first:
+      213: 361007745851034188
+    second: The Heart Hoarder 1-spritesheet_404
+  - first:
+      213: 3846310666728305098
+    second: The Heart Hoarder 1-spritesheet_405
+  - first:
+      213: -548850942051513773
+    second: The Heart Hoarder 1-spritesheet_406
+  - first:
+      213: 8565217850855304025
+    second: The Heart Hoarder 1-spritesheet_407
+  - first:
+      213: 7776106028872089844
+    second: The Heart Hoarder 1-spritesheet_408
+  - first:
+      213: -5340105088705666388
+    second: The Heart Hoarder 1-spritesheet_409
+  - first:
+      213: -2153177858320814540
+    second: The Heart Hoarder 1-spritesheet_410
+  - first:
+      213: -7312835870871267872
+    second: The Heart Hoarder 1-spritesheet_411
+  - first:
+      213: -8616572701739655376
+    second: The Heart Hoarder 1-spritesheet_412
+  - first:
+      213: -9004281429893503628
+    second: The Heart Hoarder 1-spritesheet_413
+  - first:
+      213: 6413091765482959804
+    second: The Heart Hoarder 1-spritesheet_414
+  - first:
+      213: -5272968852066740509
+    second: The Heart Hoarder 1-spritesheet_415
+  - first:
+      213: -4703967514361551596
+    second: The Heart Hoarder 1-spritesheet_416
+  - first:
+      213: -6661012493306881503
+    second: The Heart Hoarder 1-spritesheet_417
+  - first:
+      213: 4912398877733750523
+    second: The Heart Hoarder 1-spritesheet_418
+  - first:
+      213: 582939949202055092
+    second: The Heart Hoarder 1-spritesheet_419
+  - first:
+      213: 8735911306818006752
+    second: The Heart Hoarder 1-spritesheet_420
+  - first:
+      213: -518384406685544382
+    second: The Heart Hoarder 1-spritesheet_421
+  - first:
+      213: -1483793111393935375
+    second: The Heart Hoarder 1-spritesheet_422
+  - first:
+      213: 3815610945110440025
+    second: The Heart Hoarder 1-spritesheet_423
+  - first:
+      213: -9173324062210580302
+    second: The Heart Hoarder 1-spritesheet_424
+  - first:
+      213: -1040389988482378048
+    second: The Heart Hoarder 1-spritesheet_425
+  - first:
+      213: 6373085370804066708
+    second: The Heart Hoarder 1-spritesheet_426
+  - first:
+      213: 5503898855512831474
+    second: The Heart Hoarder 1-spritesheet_427
+  - first:
+      213: 6630602769745374330
+    second: The Heart Hoarder 1-spritesheet_428
+  - first:
+      213: -1889155275077130750
+    second: The Heart Hoarder 1-spritesheet_429
+  - first:
+      213: 7021370917587417589
+    second: The Heart Hoarder 1-spritesheet_430
+  - first:
+      213: 5507962574006594324
+    second: The Heart Hoarder 1-spritesheet_431
+  - first:
+      213: -7797685092508410126
+    second: The Heart Hoarder 1-spritesheet_432
+  - first:
+      213: -2335894182875174980
+    second: The Heart Hoarder 1-spritesheet_433
+  - first:
+      213: -5343566510941509573
+    second: The Heart Hoarder 1-spritesheet_434
+  - first:
+      213: 8975349776524691035
+    second: The Heart Hoarder 1-spritesheet_435
+  - first:
+      213: 5161936642185347154
+    second: The Heart Hoarder 1-spritesheet_436
+  - first:
+      213: 1388365948878707426
+    second: The Heart Hoarder 1-spritesheet_437
+  - first:
+      213: -3704247100304300826
+    second: The Heart Hoarder 1-spritesheet_438
+  - first:
+      213: -5678528463237805011
+    second: The Heart Hoarder 1-spritesheet_439
+  - first:
+      213: -1612860610749011585
+    second: The Heart Hoarder 1-spritesheet_440
+  - first:
+      213: -6293982469397292323
+    second: The Heart Hoarder 1-spritesheet_441
+  - first:
+      213: 6794590489254104279
+    second: The Heart Hoarder 1-spritesheet_442
+  - first:
+      213: 3212642294331685730
+    second: The Heart Hoarder 1-spritesheet_443
+  - first:
+      213: 8933104729094523014
+    second: The Heart Hoarder 1-spritesheet_444
+  - first:
+      213: 7648393133479574599
+    second: The Heart Hoarder 1-spritesheet_445
+  - first:
+      213: 3292165987054867646
+    second: The Heart Hoarder 1-spritesheet_446
+  - first:
+      213: 233702933969388123
+    second: The Heart Hoarder 1-spritesheet_447
+  - first:
+      213: -140776150093703223
+    second: The Heart Hoarder 1-spritesheet_448
+  - first:
+      213: 4270106950927918927
+    second: The Heart Hoarder 1-spritesheet_449
+  - first:
+      213: 1507041414241539413
+    second: The Heart Hoarder 1-spritesheet_450
+  - first:
+      213: -5307396029085793567
+    second: The Heart Hoarder 1-spritesheet_451
+  - first:
+      213: -6865309069350592491
+    second: The Heart Hoarder 1-spritesheet_452
+  - first:
+      213: -1867543275162194951
+    second: The Heart Hoarder 1-spritesheet_453
+  - first:
+      213: 829433080777965501
+    second: The Heart Hoarder 1-spritesheet_454
+  - first:
+      213: -2891016334247532895
+    second: The Heart Hoarder 1-spritesheet_455
+  - first:
+      213: 652114542763619469
+    second: The Heart Hoarder 1-spritesheet_456
+  - first:
+      213: -8808751945945608384
+    second: The Heart Hoarder 1-spritesheet_457
+  - first:
+      213: 5594862186665625538
+    second: The Heart Hoarder 1-spritesheet_458
+  - first:
+      213: -5242651350558447674
+    second: The Heart Hoarder 1-spritesheet_459
+  - first:
+      213: -1745827017784252504
+    second: The Heart Hoarder 1-spritesheet_460
+  - first:
+      213: -5531381636667739143
+    second: The Heart Hoarder 1-spritesheet_461
+  - first:
+      213: -5914053665711324094
+    second: The Heart Hoarder 1-spritesheet_462
+  - first:
+      213: 6239576112265960650
+    second: The Heart Hoarder 1-spritesheet_463
+  - first:
+      213: -1878449652015182162
+    second: The Heart Hoarder 1-spritesheet_464
+  - first:
+      213: 4939012193442003395
+    second: The Heart Hoarder 1-spritesheet_465
+  - first:
+      213: 4212973862070658364
+    second: The Heart Hoarder 1-spritesheet_466
+  - first:
+      213: 4714462768947738754
+    second: The Heart Hoarder 1-spritesheet_467
+  - first:
+      213: -2047365686504123669
+    second: The Heart Hoarder 1-spritesheet_468
+  - first:
+      213: -4153102850364255168
+    second: The Heart Hoarder 1-spritesheet_469
+  - first:
+      213: -8938474669661251753
+    second: The Heart Hoarder 1-spritesheet_470
+  - first:
+      213: -5649425950174609838
+    second: The Heart Hoarder 1-spritesheet_471
+  - first:
+      213: -3883042748894597597
+    second: The Heart Hoarder 1-spritesheet_472
+  - first:
+      213: 4497547375437222558
+    second: The Heart Hoarder 1-spritesheet_473
+  - first:
+      213: 777606670621326579
+    second: The Heart Hoarder 1-spritesheet_474
+  - first:
+      213: 3109039848159656179
+    second: The Heart Hoarder 1-spritesheet_475
+  - first:
+      213: -4978126047597386691
+    second: The Heart Hoarder 1-spritesheet_476
+  - first:
+      213: 100713832494364343
+    second: The Heart Hoarder 1-spritesheet_477
+  - first:
+      213: -8140393340669232056
+    second: The Heart Hoarder 1-spritesheet_478
+  - first:
+      213: -3164935792296312828
+    second: The Heart Hoarder 1-spritesheet_479
+  - first:
+      213: 3077207286882033458
+    second: The Heart Hoarder 1-spritesheet_480
+  - first:
+      213: -4597365697523219122
+    second: The Heart Hoarder 1-spritesheet_481
+  - first:
+      213: 2711542330269757054
+    second: The Heart Hoarder 1-spritesheet_482
+  - first:
+      213: -1360050204603076377
+    second: The Heart Hoarder 1-spritesheet_483
+  - first:
+      213: -4696191012319674950
+    second: The Heart Hoarder 1-spritesheet_484
+  - first:
+      213: 501576927908735185
+    second: The Heart Hoarder 1-spritesheet_485
+  - first:
+      213: 5050765733534223581
+    second: The Heart Hoarder 1-spritesheet_486
+  - first:
+      213: 4877713502747240727
+    second: The Heart Hoarder 1-spritesheet_487
+  - first:
+      213: 8957365229027253533
+    second: The Heart Hoarder 1-spritesheet_488
+  - first:
+      213: -5248781766750369364
+    second: The Heart Hoarder 1-spritesheet_489
+  - first:
+      213: -1243252155963913347
+    second: The Heart Hoarder 1-spritesheet_490
+  - first:
+      213: -2535699270285124780
+    second: The Heart Hoarder 1-spritesheet_491
+  - first:
+      213: 5590979607660360226
+    second: The Heart Hoarder 1-spritesheet_492
+  - first:
+      213: 8128708069706377584
+    second: The Heart Hoarder 1-spritesheet_493
+  - first:
+      213: 7571131500917027801
+    second: The Heart Hoarder 1-spritesheet_494
+  - first:
+      213: -6161437975520844498
+    second: The Heart Hoarder 1-spritesheet_495
+  - first:
+      213: 3850696278231618236
+    second: The Heart Hoarder 1-spritesheet_496
+  - first:
+      213: 9080250704524150877
+    second: The Heart Hoarder 1-spritesheet_497
+  - first:
+      213: -8621562779705593868
+    second: The Heart Hoarder 1-spritesheet_498
+  - first:
+      213: -2485298153923258458
+    second: The Heart Hoarder 1-spritesheet_499
+  - first:
+      213: 5584050493892694489
+    second: The Heart Hoarder 1-spritesheet_500
+  - first:
+      213: -1846392509849643655
+    second: The Heart Hoarder 1-spritesheet_501
+  - first:
+      213: -7732528671151838768
+    second: The Heart Hoarder 1-spritesheet_502
+  - first:
+      213: -5346321131992738059
+    second: The Heart Hoarder 1-spritesheet_503
+  - first:
+      213: 6775805101646726611
+    second: The Heart Hoarder 1-spritesheet_504
+  - first:
+      213: -1619623425856113664
+    second: The Heart Hoarder 1-spritesheet_505
+  - first:
+      213: 4071940604877782366
+    second: The Heart Hoarder 1-spritesheet_506
+  - first:
+      213: -1351661605047740639
+    second: The Heart Hoarder 1-spritesheet_507
+  - first:
+      213: 6105311642147284101
+    second: The Heart Hoarder 1-spritesheet_508
+  - first:
+      213: 8678863597997875546
+    second: The Heart Hoarder 1-spritesheet_509
+  - first:
+      213: 6197498439235737287
+    second: The Heart Hoarder 1-spritesheet_510
+  - first:
+      213: 4582773001789811042
+    second: The Heart Hoarder 1-spritesheet_511
+  - first:
+      213: 6758694588493537386
+    second: The Heart Hoarder 1-spritesheet_512
+  - first:
+      213: -2799410117543825837
+    second: The Heart Hoarder 1-spritesheet_513
+  - first:
+      213: -2668409449053890387
+    second: The Heart Hoarder 1-spritesheet_514
+  - first:
+      213: 2694472684806752368
+    second: The Heart Hoarder 1-spritesheet_515
+  - first:
+      213: 8357915918245137308
+    second: The Heart Hoarder 1-spritesheet_516
+  - first:
+      213: -8172596155628508133
+    second: The Heart Hoarder 1-spritesheet_517
+  - first:
+      213: -1454508636939752786
+    second: The Heart Hoarder 1-spritesheet_518
+  - first:
+      213: -734347394315826826
+    second: The Heart Hoarder 1-spritesheet_519
+  - first:
+      213: -2261158326943152938
+    second: The Heart Hoarder 1-spritesheet_520
+  - first:
+      213: -9003691268537534332
+    second: The Heart Hoarder 1-spritesheet_521
+  - first:
+      213: -5084038902842414245
+    second: The Heart Hoarder 1-spritesheet_522
+  - first:
+      213: 7754351529384375862
+    second: The Heart Hoarder 1-spritesheet_523
+  - first:
+      213: 2538242484831414007
+    second: The Heart Hoarder 1-spritesheet_524
+  - first:
+      213: -2419141569975679558
+    second: The Heart Hoarder 1-spritesheet_525
+  - first:
+      213: 7877394424278966687
+    second: The Heart Hoarder 1-spritesheet_526
+  - first:
+      213: 3015917671225673112
+    second: The Heart Hoarder 1-spritesheet_527
+  - first:
+      213: 1723265292997143464
+    second: The Heart Hoarder 1-spritesheet_528
+  - first:
+      213: -1732244987456117679
+    second: The Heart Hoarder 1-spritesheet_529
+  - first:
+      213: 4778283633190585843
+    second: The Heart Hoarder 1-spritesheet_530
+  - first:
+      213: -8817125501776044360
+    second: The Heart Hoarder 1-spritesheet_531
+  - first:
+      213: 3851421791267062284
+    second: The Heart Hoarder 1-spritesheet_532
+  - first:
+      213: -1284635306667018749
+    second: The Heart Hoarder 1-spritesheet_533
+  - first:
+      213: -7225791536081404342
+    second: The Heart Hoarder 1-spritesheet_534
+  - first:
+      213: 1150572401332680899
+    second: The Heart Hoarder 1-spritesheet_535
+  - first:
+      213: 3838465558175708318
+    second: The Heart Hoarder 1-spritesheet_536
+  - first:
+      213: 8386699845855311918
+    second: The Heart Hoarder 1-spritesheet_537
+  - first:
+      213: -1977734560443276838
+    second: The Heart Hoarder 1-spritesheet_538
+  - first:
+      213: -5008394475682556580
+    second: The Heart Hoarder 1-spritesheet_539
+  - first:
+      213: -2484043786142556388
+    second: The Heart Hoarder 1-spritesheet_540
+  - first:
+      213: 6261551623577369971
+    second: The Heart Hoarder 1-spritesheet_541
+  - first:
+      213: 1941185807670122900
+    second: The Heart Hoarder 1-spritesheet_542
+  - first:
+      213: -1999752887720189612
+    second: The Heart Hoarder 1-spritesheet_543
+  - first:
+      213: -5354177762861590504
+    second: The Heart Hoarder 1-spritesheet_544
+  - first:
+      213: -82210992908840764
+    second: The Heart Hoarder 1-spritesheet_545
+  - first:
+      213: 7297019860378339332
+    second: The Heart Hoarder 1-spritesheet_546
+  - first:
+      213: -7424388034985016376
+    second: The Heart Hoarder 1-spritesheet_547
+  - first:
+      213: -1693229206755859257
+    second: The Heart Hoarder 1-spritesheet_548
+  - first:
+      213: -1306069994076302279
+    second: The Heart Hoarder 1-spritesheet_549
+  - first:
+      213: 8376665208247256492
+    second: The Heart Hoarder 1-spritesheet_550
+  - first:
+      213: 3017443503199444222
+    second: The Heart Hoarder 1-spritesheet_551
+  - first:
+      213: 4557738109340018965
+    second: The Heart Hoarder 1-spritesheet_552
+  - first:
+      213: -2458487873715630005
+    second: The Heart Hoarder 1-spritesheet_553
+  - first:
+      213: -2411637863544299567
+    second: The Heart Hoarder 1-spritesheet_554
+  - first:
+      213: 7310933847428938281
+    second: The Heart Hoarder 1-spritesheet_555
+  - first:
+      213: 4678301039839755965
+    second: The Heart Hoarder 1-spritesheet_556
+  - first:
+      213: -913753687441911105
+    second: The Heart Hoarder 1-spritesheet_557
+  - first:
+      213: -1871773824420750644
+    second: The Heart Hoarder 1-spritesheet_558
+  - first:
+      213: -6949046953273475315
+    second: The Heart Hoarder 1-spritesheet_559
+  - first:
+      213: -3883409689410132211
+    second: The Heart Hoarder 1-spritesheet_560
+  - first:
+      213: 6392219670224298585
+    second: The Heart Hoarder 1-spritesheet_561
+  - first:
+      213: 3532968406363407117
+    second: The Heart Hoarder 1-spritesheet_562
+  - first:
+      213: 3324096068901789871
+    second: The Heart Hoarder 1-spritesheet_563
+  - first:
+      213: 714366371432088981
+    second: The Heart Hoarder 1-spritesheet_564
+  - first:
+      213: 4278916257790788405
+    second: The Heart Hoarder 1-spritesheet_565
+  - first:
+      213: 3491271745039690040
+    second: The Heart Hoarder 1-spritesheet_566
+  - first:
+      213: -5592250811942575736
+    second: The Heart Hoarder 1-spritesheet_567
+  - first:
+      213: -6283267641856289661
+    second: The Heart Hoarder 1-spritesheet_568
+  - first:
+      213: 266572150903328860
+    second: The Heart Hoarder 1-spritesheet_569
+  - first:
+      213: -5515033323800823957
+    second: The Heart Hoarder 1-spritesheet_570
+  - first:
+      213: 5204125698751516903
+    second: The Heart Hoarder 1-spritesheet_571
+  - first:
+      213: -868599656169835575
+    second: The Heart Hoarder 1-spritesheet_572
+  - first:
+      213: -2624181389233733667
+    second: The Heart Hoarder 1-spritesheet_573
+  - first:
+      213: -554938818153751232
+    second: The Heart Hoarder 1-spritesheet_574
+  - first:
+      213: -8568909052848017175
+    second: The Heart Hoarder 1-spritesheet_575
+  - first:
+      213: -8554492624487176303
+    second: The Heart Hoarder 1-spritesheet_576
+  - first:
+      213: -7113627869106865313
+    second: The Heart Hoarder 1-spritesheet_577
+  - first:
+      213: 5944968570146226223
+    second: The Heart Hoarder 1-spritesheet_578
+  - first:
+      213: -5803114477462606066
+    second: The Heart Hoarder 1-spritesheet_579
+  - first:
+      213: -6683566475459552938
+    second: The Heart Hoarder 1-spritesheet_580
+  - first:
+      213: 8855286170238351886
+    second: The Heart Hoarder 1-spritesheet_581
+  - first:
+      213: -1473020571314468604
+    second: The Heart Hoarder 1-spritesheet_582
+  - first:
+      213: -5726757481998809478
+    second: The Heart Hoarder 1-spritesheet_583
+  - first:
+      213: 3076041313489583045
+    second: The Heart Hoarder 1-spritesheet_584
+  - first:
+      213: -622232284514288544
+    second: The Heart Hoarder 1-spritesheet_585
+  - first:
+      213: -3577327778601288187
+    second: The Heart Hoarder 1-spritesheet_586
+  - first:
+      213: 5034374695036934012
+    second: The Heart Hoarder 1-spritesheet_587
+  - first:
+      213: 3142430962061191292
+    second: The Heart Hoarder 1-spritesheet_588
+  - first:
+      213: -4978963179593684327
+    second: The Heart Hoarder 1-spritesheet_589
+  - first:
+      213: -6210260033423035372
+    second: The Heart Hoarder 1-spritesheet_590
+  - first:
+      213: -503876010253250719
+    second: The Heart Hoarder 1-spritesheet_591
+  - first:
+      213: 3957087565714730287
+    second: The Heart Hoarder 1-spritesheet_592
+  - first:
+      213: 2658066607516073101
+    second: The Heart Hoarder 1-spritesheet_593
+  - first:
+      213: -4951494053429200403
+    second: The Heart Hoarder 1-spritesheet_594
+  - first:
+      213: -354082094481079765
+    second: The Heart Hoarder 1-spritesheet_595
+  - first:
+      213: -4239599801954502047
+    second: The Heart Hoarder 1-spritesheet_596
+  - first:
+      213: -4965424193421364158
+    second: The Heart Hoarder 1-spritesheet_597
+  - first:
+      213: 8167815941419993004
+    second: The Heart Hoarder 1-spritesheet_598
+  - first:
+      213: 309974935228220350
+    second: The Heart Hoarder 1-spritesheet_599
+  - first:
+      213: 109757915325946783
+    second: The Heart Hoarder 1-spritesheet_600
+  - first:
+      213: -8419801402676182518
+    second: The Heart Hoarder 1-spritesheet_601
+  - first:
+      213: -582291198003316701
+    second: The Heart Hoarder 1-spritesheet_602
+  - first:
+      213: -2458716427343833579
+    second: The Heart Hoarder 1-spritesheet_603
+  - first:
+      213: -6623659588708773154
+    second: The Heart Hoarder 1-spritesheet_604
+  - first:
+      213: 5818596739155477192
+    second: The Heart Hoarder 1-spritesheet_605
+  - first:
+      213: -3305119133717606242
+    second: The Heart Hoarder 1-spritesheet_606
+  - first:
+      213: 7050665992588187794
+    second: The Heart Hoarder 1-spritesheet_607
+  - first:
+      213: -1865718108360714513
+    second: The Heart Hoarder 1-spritesheet_608
+  - first:
+      213: -6640985990806461907
+    second: The Heart Hoarder 1-spritesheet_609
+  - first:
+      213: 3640785245085410792
+    second: The Heart Hoarder 1-spritesheet_610
+  - first:
+      213: 1850718657184496593
+    second: The Heart Hoarder 1-spritesheet_611
+  - first:
+      213: 3790798161553704760
+    second: The Heart Hoarder 1-spritesheet_612
+  - first:
+      213: 993275695130276641
+    second: The Heart Hoarder 1-spritesheet_613
+  - first:
+      213: -5750591865122510138
+    second: The Heart Hoarder 1-spritesheet_614
+  - first:
+      213: -6157605265714315811
+    second: The Heart Hoarder 1-spritesheet_615
+  - first:
+      213: 2255824977647036880
+    second: The Heart Hoarder 1-spritesheet_616
+  - first:
+      213: -1178249798466721121
+    second: The Heart Hoarder 1-spritesheet_617
+  - first:
+      213: 3176417276349355383
+    second: The Heart Hoarder 1-spritesheet_618
+  - first:
+      213: 5081347553148281803
+    second: The Heart Hoarder 1-spritesheet_619
+  - first:
+      213: -2203412446800891916
+    second: The Heart Hoarder 1-spritesheet_620
+  - first:
+      213: 5247136847391487206
+    second: The Heart Hoarder 1-spritesheet_621
+  - first:
+      213: 3128174910496978952
+    second: The Heart Hoarder 1-spritesheet_622
+  - first:
+      213: 837586672677468047
+    second: The Heart Hoarder 1-spritesheet_623
+  - first:
+      213: 2176430441433639489
+    second: The Heart Hoarder 1-spritesheet_624
+  - first:
+      213: 2655030641672272444
+    second: The Heart Hoarder 1-spritesheet_625
+  - first:
+      213: 1670751605107072761
+    second: The Heart Hoarder 1-spritesheet_626
+  - first:
+      213: -3330175863206608624
+    second: The Heart Hoarder 1-spritesheet_627
+  - first:
+      213: 4428003013148459814
+    second: The Heart Hoarder 1-spritesheet_628
+  - first:
+      213: 6343260711881320848
+    second: The Heart Hoarder 1-spritesheet_629
+  - first:
+      213: 1933717040472521221
+    second: The Heart Hoarder 1-spritesheet_630
+  - first:
+      213: -1773487077632559909
+    second: The Heart Hoarder 1-spritesheet_631
+  - first:
+      213: 4654930376595799516
+    second: The Heart Hoarder 1-spritesheet_632
+  - first:
+      213: 39210210441740810
+    second: The Heart Hoarder 1-spritesheet_633
+  - first:
+      213: 7016800126819244678
+    second: The Heart Hoarder 1-spritesheet_634
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 18
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: StationaryAttackEnd_1
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1904
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa85af10a186b6fb0800000000000000
+      internalID: -4653511329045653334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StationaryAttackEnd_2
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 1904
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a737650253d01baa0800000000000000
+      internalID: -6147117494557052038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StationaryAttackEnd_3
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1904
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1bcda4016c822420800000000000000
+      internalID: 2603797882891782942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StationaryAttackEnd_4
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1904
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14414c55e9a7a18c0800000000000000
+      internalID: -4027772096267152319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StationaryAttackEnd_5
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1904
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b02a2633c688c5680800000000000000
+      internalID: -8764980776469880309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StationaryAttackEnd_6
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 1904
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65ebc5db2483af4e0800000000000000
+      internalID: -1947182029588349354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StationaryAttackEnd_7
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 1904
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e24b36f76f4b17cf0800000000000000
+      internalID: -256224732991212498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2142
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a0df4e8453d23146a832a00d0bfeb0c
+      internalID: -2069960119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_2
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 2142
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b1685a4ce72b94da0c039f79f92962
+      internalID: 246983924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_3
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 2142
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c33908f73a0c11429c248b87fce2b26
+      internalID: 498080434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_4
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 2142
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 232a273ea31fdf1458686d7021965e16
+      internalID: 1300558947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_5
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 2142
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e969904af6fdf94fa176e26e95a96f1
+      internalID: 1126921713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_6
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 2142
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609f00632df7b324a8e1f2e152cd6d2f
+      internalID: 1449996811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_7
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 2142
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef4dfa76bfa60842a38b3d429c6a76a
+      internalID: -170612853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_8
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 2142
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 188a020b78f8bf1429fc9d551432d454
+      internalID: 1082732049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_9
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 2142
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b17310cefe44e44a19e3fe5014902b
+      internalID: 1474730875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2023
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa92724a2c8aef94e85a4026c6432cd5
+      internalID: -556232149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StationaryAttack_1
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 2023
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b29ef7592ae240f45aa7fbc6db9a71ec
+      internalID: -948524639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StationaryAttack_2
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 2023
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ce7ff710a5b734588ae57692144a2a
+      internalID: 782814043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StationaryAttack_3
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 2023
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41742fcde8d1e9a419b4daa90ef6d3e8
+      internalID: -540386793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StationaryAttack_4
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 2023
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548644b8edd095346a44c5401fb6f6cb
+      internalID: -1592074368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StationaryAttack_5
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 2023
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e0a744fcea32cf4cb84f50fb284f50c
+      internalID: -1953140591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StationaryAttack_6
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 2023
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31bfd11b6b64ce0429512bf99d2bfbca
+      internalID: 91230986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StationaryAttack_7
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 2023
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469a3c57c6f0284438fd737c22c1746d
+      internalID: -1856149891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StationaryAttack_8
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 2023
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9088f41305ac1c4b9755f75b45f1fcf
+      internalID: -1782933666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StationaryAttack_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1904
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d328eca799b6b9d4cb5ee33601530a1f
+      internalID: -625854308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveStart_1
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1785
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea3696841077174ebd20d1cf2c836cc
+      internalID: 1863611581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveStart_2
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 1785
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e1bb83015b6d446888bf232bca0f0b
+      internalID: -30210572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_1
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1784
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46bed449f998144792df62d142d76e6
+      internalID: -563481719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_2
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1785
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a861ff7da604cb489f5c86f54dd1eac
+      internalID: -566811003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_3
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1785
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a939bbc866f67439aa33e244a126d6
+      internalID: -1228997028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_4
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 1785
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd1fffb14d3a22b42947ffcab4a8e221
+      internalID: -94699906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_5
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 1785
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 073fa1dde9a57e54186a1bf7dfa697be
+      internalID: 131962518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_6
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 1785
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd95ef0cdaf0364eaa19201c35c2c09
+      internalID: 853443995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1666
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c7858da4fc1454dbb1617931958900
+      internalID: -1825924951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_8
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1666
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c94ae60fc15603e429ccc61b4d454ef6
+      internalID: -1266440210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveAttackStart_1
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1666
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d3cf170dcbe5e84d83ed1e5453d2fa3
+      internalID: 1327804888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveAttackStart_2
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1666
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5392c61de7e5be3458303ba2c3bc8169
+      internalID: -1436385678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveAttackStart_3
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 1666
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a2c9f803f90274ea4809eb506dd751
+      internalID: 1737895258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveAttackStart_4
+      rect:
+        serializedVersion: 2
+        x: 1553
+        y: 1666
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 840187bfc4de9cf4fafd1e027cd23d43
+      internalID: -1061408072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveAttackStart_5
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 1666
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1aadeeadcb5994a87e7d3d3dc52f79
+      internalID: -1070758031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveAttackStart_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1547
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bde37e4e7e96d847af588ec21f893d4
+      internalID: 1477348746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveAttack_1
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1547
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef749c75c92857f4287ea1b3ead79a99
+      internalID: -1627811490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveAttack_2
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 1547
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42e5b8a9aaaee1409011ca76354a01a
+      internalID: 16533585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveAttack_3
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1547
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14983bdd5bd0d7045bb1796c8ef82263
+      internalID: 586097313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveAttack_4
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1547
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ff12242ea5d664a8751a5568808125
+      internalID: 2123985027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveAttack_5
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1547
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab33f7febd2606459b054c7f9905544
+      internalID: 373864503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveAttack_6
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 1547
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1eccfb8c1186e8469ffa95b6e0f9d10
+      internalID: -1040829349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveAttack_7
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 1547
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d840ce07ec3331549a97f73b7d19c061
+      internalID: 494434621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveAttackEnd_1
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 1190
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f92bc325fdce2b4ebaf2919f70e4cf3
+      internalID: -1410485663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveAttackEnd_2
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 1190
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fabe6d3e7fb8e7c4fb617d9bb9bd4117
+      internalID: 961069284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveAttackEnd_3
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 1190
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3465ec743eccd454ba609f34ec2d79d4
+      internalID: -435905187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveAttackEnd_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1071
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b216bd523c13a34b8410d8ba569e870
+      internalID: -60856889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveStop_1
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1071
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6807db8fbdd1147aaa64596042b22b
+      internalID: -183120272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveStop_2
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 1071
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7761398eb30ae0a4092fb72524af4f5f
+      internalID: 1397463714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveStop_3
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1071
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f0bec2143db71e42923603e8a7c68e1
+      internalID: 864711135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveStop_4
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1071
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd86c721acce5784598ba152dfe68a43
+      internalID: -828585591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveStop_5
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1071
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d09783158fa73fe46b891e349b83ae5b
+      internalID: 1972115606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vanish_1
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 1071
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20cb3840b7899bd4b9c1db0bbcd1bf2d
+      internalID: -656102475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vanish_2
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 1071
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060eed24ac3a72a418e34e0e603ef2a4
+      internalID: -373946943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vanish_3
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 1071
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd7a4dc48893034c90c4249756eaebb
+      internalID: 391605269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vanish_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 952
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac13145e19229d147adecc9da7e395e6
+      internalID: 721974058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vanish_5
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 952
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c720f277d0e6bf74e80a96d138dfa103
+      internalID: 788107876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vanish_6
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 952
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc95e872bab4c174880fff7d0f176222
+      internalID: 918816090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appear_1
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 952
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d10198cbc43dc74d8cf73dc773fe02d
+      internalID: 417954596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appear_2
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 952
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439aeffd3be90264682e9271d7d6eeda
+      internalID: -402609996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appear_3
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 952
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c2e26aab866e4a459af5e21036b61fd
+      internalID: 1886069538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appear_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 833
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64fb88ad6cafa94eb6ebe3a41c624ed
+      internalID: -1539526218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appear_5
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 833
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d130c826351bb46a3e1229bd896031
+      internalID: -165299540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Appear_6
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 833
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c11c6fcd50f702449b8ab2f940ecac56
+      internalID: 515061368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_1
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 476
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab011e5b49e8c74eb4016d486049176
+      internalID: 1248056563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 357
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac18bce6929816045a524b93552f06ac
+      internalID: -2115638889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_3
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 357
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029638d874d408747b87fd0bdbd659f7
+      internalID: 613658529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_4
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 357
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6823701cccc44564f86c28b0d364d7a9
+      internalID: 21124908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_5
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 357
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88fd51c7d208f4e4197ab769d6998b9b
+      internalID: 184275133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_6
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 357
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4823242be6b1d45982237e2e5ad3c7
+      internalID: 95871608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_7
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 357
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f87d88ffdb46d4642a37626dd35bfed8
+      internalID: -2116747575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_8
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 357
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f509a6b77f595954cb745ff541f7ecc0
+      internalID: 2123831772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_9
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 357
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37be724a0f042a4f88b6163bee55487
+      internalID: 45050278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_10
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 357
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d3d7a18cb231f419b10f4e55639695
+      internalID: -808868408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 238
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 918a8ec3c108d964a8f69cb33dd11681
+      internalID: 1225970064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_12
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 238
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4bab9a749025964896cf217c988fa84
+      internalID: 1778621835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_13
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 238
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1326fa5967a1b364aa244a1be77d2de6
+      internalID: -1492953569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_14
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 238
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4c1e535da0bc64fbb6f8194d0b21b6
+      internalID: 557317146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_15
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 238
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af5f2fb31f71f64a8767baed5846623
+      internalID: 649070414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_16
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 238
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ef8c3cb35718c41b5b1a11cc1ee455
+      internalID: 1226859471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_17
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 238
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f49f503e5e83e44c980093d2c5d1618
+      internalID: -694355392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_18
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 238
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb87242d8901f88478907ad59361f574
+      internalID: 1821601822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_19
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 238
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d83ca4d945d3314d86dcc70614d6660
+      internalID: 1061491367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 119
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03bb5ddea9bff0e4ca14be94a2d0d617
+      internalID: -1724275492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_21
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 119
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2e4411c31b8e574896aad1892346067
+      internalID: -255392106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_22
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 119
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde6f999787b30749886bf837242b56f
+      internalID: -1059742135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_23
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 119
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279a9992964fe8b45a7ed8b48f526ced
+      internalID: -1817626622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_24
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 119
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c006b81712921d419f703f4083956d8
+      internalID: 320988474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_25
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 119
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265952e291409ec488ec38ab3902c3d3
+      internalID: 2047125328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_26
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 119
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27b67b1929ffa04785cfec497707536
+      internalID: 1332491933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_27
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 119
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb5287eb2269df4898925bc7eb9efa0
+      internalID: -1820029589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_28
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 119
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5941e674c90d8a04eae6495743eeae6d
+      internalID: -599213073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00fbfdbe3525f1044b4aa46cca769e59
+      internalID: 1740135947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_30
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 0
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f91fb047d4891449a54f1eb407156c0
+      internalID: -1781452527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_31
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 0
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a63b543bf873b04dadfeb2dc2b8455c
+      internalID: -1898748315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_32
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 0
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1711c4687caba043b795828dd7438d0
+      internalID: -549818858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_33
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 0
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2486a8d1731ac244aa3d2d80d660f635
+      internalID: 1940236714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_34
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 0
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7708e45d0d588354381496dcbfa31c23
+      internalID: 1500190231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_35
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 0
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc564f0d233fce48befb09e43a7c030
+      internalID: -302490691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead_36
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 0
+        width: 222
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc2d379460738e24e93ba3641fac6bf0
+      internalID: 1801654632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: fadaa0c81a6582e4b9805623ae5d1f9d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":9.0,"y":19.0},"gridSpriteSize":{"x":222.0,"y":119.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      - key: SpriteEditor.SliceOnImport
+        value: False
+    nameFileIdTable:
+      Appear_1: 417954596
+      Appear_2: -402609996
+      Appear_3: 1886069538
+      Appear_4: -1539526218
+      Appear_5: -165299540
+      Appear_6: 515061368
+      Dead_1: 1248056563
+      Dead_10: -808868408
+      Dead_11: 1225970064
+      Dead_12: 1778621835
+      Dead_13: -1492953569
+      Dead_14: 557317146
+      Dead_15: 649070414
+      Dead_16: 1226859471
+      Dead_17: -694355392
+      Dead_18: 1821601822
+      Dead_19: 1061491367
+      Dead_2: -2115638889
+      Dead_20: -1724275492
+      Dead_21: -255392106
+      Dead_22: -1059742135
+      Dead_23: -1817626622
+      Dead_24: 320988474
+      Dead_25: 2047125328
+      Dead_26: 1332491933
+      Dead_27: -1820029589
+      Dead_28: -599213073
+      Dead_29: 1740135947
+      Dead_3: 613658529
+      Dead_30: -1781452527
+      Dead_31: -1898748315
+      Dead_32: -549818858
+      Dead_33: 1940236714
+      Dead_34: 1500190231
+      Dead_35: -302490691
+      Dead_36: 1801654632
+      Dead_4: 21124908
+      Dead_5: 184275133
+      Dead_6: 95871608
+      Dead_7: -2116747575
+      Dead_8: 2123831772
+      Dead_9: 45050278
+      Idle_1: -2069960119
+      Idle_10: -556232149
+      Idle_2: 246983924
+      Idle_3: 498080434
+      Idle_4: 1300558947
+      Idle_5: 1126921713
+      Idle_6: 1449996811
+      Idle_7: -170612853
+      Idle_8: 1082732049
+      Idle_9: 1474730875
+      MoveAttackEnd_1: -1410485663
+      MoveAttackEnd_2: 961069284
+      MoveAttackEnd_3: -435905187
+      MoveAttackEnd_4: -60856889
+      MoveAttackStart_1: 1327804888
+      MoveAttackStart_2: -1436385678
+      MoveAttackStart_3: 1737895258
+      MoveAttackStart_4: -1061408072
+      MoveAttackStart_5: -1070758031
+      MoveAttackStart_6: 1477348746
+      MoveAttack_1: -1627811490
+      MoveAttack_2: 16533585
+      MoveAttack_3: 586097313
+      MoveAttack_4: 2123985027
+      MoveAttack_5: 373864503
+      MoveAttack_6: -1040829349
+      MoveAttack_7: 494434621
+      MoveStart_1: 1863611581
+      MoveStart_2: -30210572
+      MoveStop_1: -183120272
+      MoveStop_2: 1397463714
+      MoveStop_3: 864711135
+      MoveStop_4: -828585591
+      MoveStop_5: 1972115606
+      Move_1: -563481719
+      Move_2: -566811003
+      Move_3: -1228997028
+      Move_4: -94699906
+      Move_5: 131962518
+      Move_6: 853443995
+      Move_7: -1825924951
+      Move_8: -1266440210
+      StationaryAttackEnd_1: -4653511329045653334
+      StationaryAttackEnd_2: -6147117494557052038
+      StationaryAttackEnd_3: 2603797882891782942
+      StationaryAttackEnd_4: -4027772096267152319
+      StationaryAttackEnd_5: -8764980776469880309
+      StationaryAttackEnd_6: -1947182029588349354
+      StationaryAttackEnd_7: -256224732991212498
+      StationaryAttack_1: -948524639
+      StationaryAttack_2: 782814043
+      StationaryAttack_3: -540386793
+      StationaryAttack_4: -1592074368
+      StationaryAttack_5: -1953140591
+      StationaryAttack_6: 91230986
+      StationaryAttack_7: -1856149891
+      StationaryAttack_8: -1782933666
+      StationaryAttack_9: -625854308
+      The Heart Hoarder 1-spritesheet_100: 1016484088
+      The Heart Hoarder 1-spritesheet_101: 2608912940948356325
+      The Heart Hoarder 1-spritesheet_102: 8648090476954569702
+      The Heart Hoarder 1-spritesheet_103: -6811280898013546835
+      The Heart Hoarder 1-spritesheet_104: 5387697005170142931
+      The Heart Hoarder 1-spritesheet_105: 6881846589234678330
+      The Heart Hoarder 1-spritesheet_106: -6307385448611768921
+      The Heart Hoarder 1-spritesheet_107: -6302878689971267305
+      The Heart Hoarder 1-spritesheet_108: 8161779423573149086
+      The Heart Hoarder 1-spritesheet_109: 9036688076758474790
+      The Heart Hoarder 1-spritesheet_110: 3115166621844445568
+      The Heart Hoarder 1-spritesheet_111: -4389521113687349518
+      The Heart Hoarder 1-spritesheet_112: -2873476482706895867
+      The Heart Hoarder 1-spritesheet_113: -1874796181545447534
+      The Heart Hoarder 1-spritesheet_114: 2223822036991975861
+      The Heart Hoarder 1-spritesheet_115: -6758312344556336349
+      The Heart Hoarder 1-spritesheet_116: -8420414409768272735
+      The Heart Hoarder 1-spritesheet_117: 4842991253871091887
+      The Heart Hoarder 1-spritesheet_118: -4381078831301967857
+      The Heart Hoarder 1-spritesheet_119: 135881252730863273
+      The Heart Hoarder 1-spritesheet_120: -5690822900378727625
+      The Heart Hoarder 1-spritesheet_121: 3568505566176935053
+      The Heart Hoarder 1-spritesheet_122: 4457649085198699864
+      The Heart Hoarder 1-spritesheet_123: 3946685524140426061
+      The Heart Hoarder 1-spritesheet_124: 1800196815466701633
+      The Heart Hoarder 1-spritesheet_125: 3414962139233589063
+      The Heart Hoarder 1-spritesheet_126: 2522452769113886102
+      The Heart Hoarder 1-spritesheet_127: 8217487869005583322
+      The Heart Hoarder 1-spritesheet_128: 7264985768926794125
+      The Heart Hoarder 1-spritesheet_129: 7211764252118310524
+      The Heart Hoarder 1-spritesheet_130: -7205623233163703781
+      The Heart Hoarder 1-spritesheet_26: 442380617995628626
+      The Heart Hoarder 1-spritesheet_27: -6436277004488299422
+      The Heart Hoarder 1-spritesheet_38: 720179722
+      The Heart Hoarder 1-spritesheet_39: 1147433600
+      The Heart Hoarder 1-spritesheet_53: 2973100309713447041
+      The Heart Hoarder 1-spritesheet_54: -8686241985516015848
+      The Heart Hoarder 1-spritesheet_55: 1981753599199027230
+      The Heart Hoarder 1-spritesheet_56: -907369717120729127
+      The Heart Hoarder 1-spritesheet_57: -8827311359852923266
+      The Heart Hoarder 1-spritesheet_58: -4890664501964221182
+      The Heart Hoarder 1-spritesheet_59: 2704525835363485735
+      The Heart Hoarder 1-spritesheet_60: 54389941746989952
+      The Heart Hoarder 1-spritesheet_61: 1673963566305154520
+      The Heart Hoarder 1-spritesheet_62: -7407488497922368168
+      The Heart Hoarder 1-spritesheet_63: -3113228780240927118
+      The Heart Hoarder 1-spritesheet_64: -7109138086910265264
+      The Heart Hoarder 1-spritesheet_65: -6223940117729861599
+      The Heart Hoarder 1-spritesheet_66: 1442264267480706798
+      The Heart Hoarder 1-spritesheet_67: -5680157355847054515
+      The Heart Hoarder 1-spritesheet_68: -514112932586708779
+      The Heart Hoarder 1-spritesheet_69: 8068788500971713216
+      The Heart Hoarder 1-spritesheet_70: -3596213776606620391
+      The Heart Hoarder 1-spritesheet_71: 8969516271265256094
+      The Heart Hoarder 1-spritesheet_72: 9022216238960277787
+      The Heart Hoarder 1-spritesheet_73: 5009709247546476698
+      The Heart Hoarder 1-spritesheet_74: -4761369331735252971
+      The Heart Hoarder 1-spritesheet_75: -6509201068050285098
+      The Heart Hoarder 1-spritesheet_76: -3468326948778662942
+      The Heart Hoarder 1-spritesheet_77: -4633355638553031076
+      The Heart Hoarder 1-spritesheet_99: 4059717517941226659
+      Vanish_1: -656102475
+      Vanish_2: -373946943
+      Vanish_3: 391605269
+      Vanish_4: 721974058
+      Vanish_5: 788107876
+      Vanish_6: 918816090
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
