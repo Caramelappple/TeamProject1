@@ -25,22 +25,15 @@ public class LSO_PlayerAttack : PlayerMovement
     IEnumerator Attack()
     {
         _attackable = false;
-        SetRotation(_swordAxis, _lastDir);
-        _animator.SetTrigger("Attack");
+        _sword.transform.position = transform.position+(Vector3)_lastDir;//공격 히트박스 이동
+        _animator.SetTrigger("Attack");//애니메이션 재생
         yield return new WaitForSeconds(0.1f);
         _sword.SetActive(true);
 
-        yield return new WaitForSeconds(_attackime);
+        yield return new WaitForSeconds(_attackime);//공격 유지 시간 대기
         _sword.SetActive(false);
 
-        yield return new WaitForSeconds(_cooldown);
+        yield return new WaitForSeconds(_cooldown);//쿨타임 대기
         _attackable = true;
     }
-    public void SetRotation(GameObject hitbox, Vector2 dir1)
-    {
-        float angle = Mathf.Atan2(dir1.y, dir1.x) * Mathf.Rad2Deg;
-        hitbox.transform.rotation = Quaternion.Euler(0f, 0f, angle - 90);
-        Debug.Log(angle);
-    }
-
 }

@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace KSY.HealthSystem
 {
-    //이벤트 발생 시 전달되는 매개변수(데이터)를 담는 객체
     public readonly struct KSY_DamageData
     {
         public readonly KSY_Entity giver;
