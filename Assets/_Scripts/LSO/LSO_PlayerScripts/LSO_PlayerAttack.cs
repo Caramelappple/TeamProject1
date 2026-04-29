@@ -25,8 +25,8 @@ public class LSO_PlayerAttack : PlayerMovement
     IEnumerator Attack()
     {
         _attackable = false;
-        _sword.transform.position = transform.position+(Vector3)_lastDir;//공격 히트박스 이동
-        _animator.SetTrigger("Attack");//애니메이션 재생
+        _sword.transform.position = transform.position+(Vector3)LastDir;//공격 히트박스 이동
+        Animator.SetTrigger("Attack");//애니메이션 재생
         yield return new WaitForSeconds(0.1f);
         _sword.SetActive(true);
 
