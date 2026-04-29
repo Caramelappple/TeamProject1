@@ -8,40 +8,40 @@ namespace _Scripts.NKY.Manager
     {
         public static IndicatorManager Instance { get; private set; }
 
-        [SerializeField] private GameObject _indicatorPrefab;
-        [SerializeField] private int _poolSize = 10;
+        [SerializeField] private GameObject[] _indicatorPrefab;
+        [SerializeField] private int _poolSize = 5;
 
-        private Queue<GameObject> _pool = new Queue<GameObject>();
+        private Dictionary<string, Queue<GameObject>> _pool = new Dictionary<string, Queue<GameObject>>();
+        //private Queue<GameObject>[] _pool = new Queue<GameObject>();
 
         private void Awake()
         {
             Instance = this;
-            for (int i = 0; i < _poolSize; i++)
+            foreach (var Prefab in _indicatorPrefab)
             {
-                GameObject obj = Instantiate(_indicatorPrefab, transform);
-                obj.SetActive(false);
+                string prefabName = Prefab.name;
+                if (!_pool.ContainsKey(prefabName))
+                {
+                    _pool[prefabName] = new Queue<GameObject>();
+                }
+                for (int i = 0; i < _poolSize; i++)
+                {
+                    GameObject obj = Instantiate(Prefab, transform);
+                    obj.SetActive(false);
 
-                _pool.Enqueue(obj);
+                    _pool[prefabName].Enqueue(obj);
+                }
             }
         }
 
         public void ShowIndicator(Collider2D col, float duration)
         {
-            ShowIndicator(col, col.bounds.center, duration);
+            Vector2 exactPos = col.transform.TransformPoint(col.offset);
+            ShowIndicator(col, exactPos, duration);
         }
-
-        //public IEnumerator ShowIndicatorCoroutine()
-        //{
-
-        //}
-
-        //public void ShowIndicator(Collider2D col, Vector3 position, float duration)
-        //{
-            
-        //}
         public void ShowIndicator(Collider2D col, Vector2 position , float duration)
         {
-            Quaternion rotate = col.transform.rotation;
+            /*Quaternion rotate = col.transform.rotation;
             Vector2 size = col.bounds.size;
             if (_pool.Count == 0) return;
 
@@ -53,14 +53,54 @@ namespace _Scripts.NKY.Manager
             obj.transform.localScale = size;
             obj.SetActive(true);
 
-            StartCoroutine(HideIndicator(obj, duration));
+            StartCoroutine(HideIndicator(obj, duration));*/
+
+            Quaternion rotate = col.transform.rotation;
+            
+            Vector2 realSize = Vector2.one;
+
+            string targetPrefabName = _indicatorPrefab[0].name;
+            
+            if (col is BoxCollider2D box)
+            {
+                realSize = box.size;
+                targetPrefabName = _indicatorPrefab[0].name;
+            }
+            else if (col is CircleCollider2D circle)
+            {
+                float diameter = circle.radius * 2f;
+                realSize = new Vector2(diameter, diameter);
+                targetPrefabName = _indicatorPrefab[1].name;
+            }
+            else if(col is CapsuleCollider2D capsule)
+            {
+                realSize = capsule.size;
+                targetPrefabName = _indicatorPrefab[2].name;
+            }
+            
+            if (string.IsNullOrEmpty(targetPrefabName) || !_pool.ContainsKey(targetPrefabName) || _pool[targetPrefabName].Count == 0) 
+                return;
+
+            realSize.x *= col.transform.lossyScale.x;
+            realSize.y *= col.transform.lossyScale.y;
+            
+            GameObject obj = _pool[targetPrefabName].Dequeue();
+
+            obj.transform.rotation = rotate;
+            obj.transform.position = position;
+            
+            obj.transform.localScale = new Vector3(realSize.x, realSize.y, 1f);
+    
+            obj.SetActive(true);
+
+            StartCoroutine(HideIndicator(obj, duration, targetPrefabName));
         }
 
-        private IEnumerator HideIndicator(GameObject obj, float delay)
+        private IEnumerator HideIndicator(GameObject obj, float delay, string name)
         {
             yield return new WaitForSeconds(delay);
             obj.SetActive(false);
-            _pool.Enqueue(obj);
+            _pool[name].Enqueue(obj);
         }
     }
 }
