@@ -3,5 +3,6 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Assets/_Scripts/KSY/HealthSystem/EventData/KSY_DamageData.cs" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/Assets/_Scripts/KSY/HealthSystem/KSY_DamageableResource.cs" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/Assets/_Scripts/KSY/HealthSystem/KSY_Health.cs" charset="EUC-KR" />
   </component>
 </project>

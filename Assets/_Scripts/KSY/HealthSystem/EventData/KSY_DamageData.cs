@@ -1,5 +1,4 @@
 using Assets._Scripts.KSY;
-using UnityEngine;
 
 namespace KSY.HealthSystem
 {
