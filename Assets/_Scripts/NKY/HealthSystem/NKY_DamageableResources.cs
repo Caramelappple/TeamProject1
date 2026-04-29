@@ -1,4 +1,3 @@
-using Assets._Scripts.NKY;
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -60,7 +59,7 @@ public class NKY_DamageableResources : MonoBehaviour
 
         if(IsDestroyed || !IsDamageable) return;
         int listValue = Value;
-        Value -= data.damage;
+        Value -= damage;
         int calcValue = Value;
         bool hasDamage = listValue > calcValue;
 
