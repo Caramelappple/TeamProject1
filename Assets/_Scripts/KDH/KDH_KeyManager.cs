@@ -4,15 +4,15 @@ using UnityEngine.InputSystem;
 
 public class KDH_KeyManager : MonoBehaviour
 {
-    [SerializeField] private GameObject _settingMenuUI; // 세팅메뉴
-    private InputAction _onSettingMenuAction; // 세팅메뉴 
-    private bool isMenuOpen; // 세팅메뉴를 킬 수 있는지 없는지
+    [SerializeField] private GameObject _settingMenuUI;
+    private InputAction _onSettingMenuAction;
+    private bool isMenuOpen;
 
     private void Start()
     {
-        isMenuOpen = false; // 시작하면 끔
+        isMenuOpen = false;
 
-        _onSettingMenuAction = new InputAction(binding: "<Keyboard>/escape"); // ESC키를 누르는 값
+        _onSettingMenuAction = new InputAction(binding: "<Keyboard>/escape");
         _onSettingMenuAction.performed += OnMainMenu;
         _onSettingMenuAction.Enable();
     }
@@ -44,7 +44,7 @@ public class KDH_KeyManager : MonoBehaviour
 
     private IEnumerator PauseAfterDelay(float delay)
     {
-        yield return new WaitForSecondsRealtime(delay); //소리를 내기 위해 만든 코루틴
+        yield return new WaitForSecondsRealtime(delay);
         Time.timeScale = 0;
         Debug.Log("일시정지 완료");
     }

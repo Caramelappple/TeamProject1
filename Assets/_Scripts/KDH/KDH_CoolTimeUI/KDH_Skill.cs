@@ -21,25 +21,24 @@ public class KDH_Skill : MonoBehaviour
 
     private void Awake()
     {
-        SetCooldownIs(false); // 시작전 쿨타임 상태를 끔
+        SetCooldownIs(false);
     }
 
     /// <summary>
     /// 외부에서 스킬을 사용할 때 호출하는 메소드
     /// </summary>
-    
     public void UseSkill()
     {
         // 이미 스킬을 사용해서 재사용 대기 시간이 남아있으면 종료
-        if (isCooldown == true) // 쿨다운이 가능하다면?
+        if (isCooldown == true)
         {
-            textSkillData.text = $"[{skillName}] Cooldown Time : {currentCooldownTime:F1}"; // 쿨타임 남은 값을 UI 텍스처로 나타냄
+            textSkillData.text = $"[{skillName}] Cooldown Time : {currentCooldownTime:F1}";
             return;
         }
 
-        textSkillData.text = $"Use Skill : {skillName}"; // 사용한 스킬의 이름을 표시
+        textSkillData.text = $"Use Skill : {skillName}";
 
-        StartCoroutine(nameof(OnCooldownTime), maxCooldownTime); // OnCooldownTime을 문자열형태로 가져와서 코루틴 실행. (nameof의 장점은 오타 방지를 막아서 오류를 잡아줌)
+        StartCoroutine(nameof(OnCooldownTime), maxCooldownTime);
     }
 
     /// <summary>
@@ -60,16 +59,16 @@ public class KDH_Skill : MonoBehaviour
             // Text UI에 쿨다운 시간 표시
             textCooldownTime.text = currentCooldownTime.ToString("F1");
 
-            yield return null; //다음 프레임이 될 때까지 기다림.
+            yield return null;
         }
 
-        SetCooldownIs(false); //끝나면 쿨다운 상태를 false로 함
+        SetCooldownIs(false);
     }
 
     private void SetCooldownIs(bool boolean)
     {
-        isCooldown = boolean; // 쿨다운이 가능한가?
-        textCooldownTime.enabled = boolean; // text의 쿨타임이 가능한가?
-        imageCooldownTime.enabled = boolean; // 이미지의 쿨타임이 가능한가?
+        isCooldown = boolean;
+        textCooldownTime.enabled = boolean;
+        imageCooldownTime.enabled = boolean;
     }
 }
