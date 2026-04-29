@@ -1,4 +1,3 @@
-using Assets._Scripts.NKY;
 using UnityEngine;
 
 public readonly struct NKY_DamageData

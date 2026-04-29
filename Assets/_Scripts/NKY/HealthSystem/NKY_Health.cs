@@ -1,4 +1,3 @@
-using Assets._Scripts.NKY;
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -18,7 +17,7 @@ public class NKY_Health : NKY_DamageableResources, NKY_IRecoverable
         if(IsDestroyed) return;
 
         int recoverValue = data.recoverValue;
-        Entity giver = data.giver;
+        NKY_Health giver = data.giver;
 
         int lastValue = Value;
         Value += recoverValue;
