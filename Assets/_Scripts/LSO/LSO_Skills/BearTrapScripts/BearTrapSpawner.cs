@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class BearTrapSpawner : MonoBehaviour
+public class BearTrapSpawner : MonoBehaviour,ISkill
 {
     public static BearTrapSpawner instance;
     private float coolTime = 1f;
@@ -22,13 +22,11 @@ public class BearTrapSpawner : MonoBehaviour
         CreateTrap(trapCount);
     }
 
-    private void FixedUpdate() 
+    public void UseSkill()
     {
-        if (Keyboard.current.spaceKey.isPressed && canSpawn)
-        {
-            SpawnTrap();
-        }
+        SpawnTrap();
     }
+    
     private void CreateTrap(int count)
     {
         for (int i = 0; i < count; i++)

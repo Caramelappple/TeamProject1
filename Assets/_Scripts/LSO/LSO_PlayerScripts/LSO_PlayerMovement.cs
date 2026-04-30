@@ -11,10 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer _sprite;
     private Vector2 _moveDir;
     protected Vector2 LastDir = Vector2.down;
-    protected Vector2 FirstDir;
     private Rigidbody2D _rigid;
-    
-    private bool _canSkill = true;
     
     public event Action OnSkillEvent;
 
@@ -29,11 +26,17 @@ public class PlayerMovement : MonoBehaviour
         _rigid.linearVelocity = _moveDir * speed;
         Animator.SetBool(MoveX, _moveDir.x != 0);
 
-        if (Keyboard.current.spaceKey.isPressed && _canSkill)
+        
+    }
+
+    private void Update()
+    {
+        if (Keyboard.current.spaceKey.isPressed)
         {
             OnSkillEvent?.Invoke();
         }
     }
+
     private void OnMove(InputValue value)
     {
         _moveDir = value.Get<Vector2>();
