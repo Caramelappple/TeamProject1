@@ -22,7 +22,7 @@ public class KSY_Health : KSY_DamageableResource, KSY_IRecoverable
 
         //지역 변수 초기화.
         int recoverValue = data.recoverValue;
-        KSY_Entity giver = data.giver;
+        Assets._Scripts.KSY.KSY_Entity giver = data.giver;
 
         //회복이 되었는지 확인하는 로직
         int lastValue = Value;

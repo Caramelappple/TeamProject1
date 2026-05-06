@@ -30,8 +30,8 @@ public class KSY_DamageableResource : MonoBehaviour
 
     public bool IsDamageable { get; private set; } = true;
 
-    public event Action<KSY_DamageResultData> OnDamage;
-    public event Action<KSY_DamageData> OnHit;
+    public event Action<KDH_DamageResultData> OnDamage;
+    public event Action<KDH_DamageData> OnHit;
 
     [SerializeField] private int _value;
 
@@ -54,10 +54,10 @@ public class KSY_DamageableResource : MonoBehaviour
     {
         IsDamageable = value;
     }
-    public void GetDamage(KSY_DamageData data)
+    public void GetDamage(KDH_DamageData data)
     {
         int damage = data.damage;
-        KSY_Entity giver = data.giver;
+        KDH_Entity giver = data.giver;
 
         OnHit?.Invoke(data);
 
@@ -65,16 +65,16 @@ public class KSY_DamageableResource : MonoBehaviour
 
         _value -= damage;
 
-        KSY_DamageResultData resultData = KSY_DamageResultData.Create(giver, damage, Value);
+        KDH_DamageResultData resultData = KDH_DamageResultData.Create(giver, damage, Value);
         OnDamage?.Invoke(resultData);
     }
 
     [ContextMenu("Damage")]
     public void GetDamage()
     {
-        KSY_DamageData data = KSY_DamageData.Create(null, 1);
+        KDH_DamageData data = KDH_DamageData.Create(null, 1);
         int damage = data.damage;
-        KSY_Entity giver = data.giver;
+        KDH_Entity giver = data.giver;
 
         OnHit?.Invoke(data);
 
@@ -82,7 +82,7 @@ public class KSY_DamageableResource : MonoBehaviour
 
         _value -= damage;
 
-        KSY_DamageResultData resultData = KSY_DamageResultData.Create(giver, damage, Value);
+        KDH_DamageResultData resultData = KDH_DamageResultData.Create(giver, damage, Value);
         OnDamage?.Invoke(resultData);
     }
 }
