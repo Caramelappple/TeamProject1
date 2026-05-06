@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace _Scripts.NKY._EnemyScript
 {
-    public abstract class BaseBoss : NKY_PatternCoroutine
+    public abstract class NKY_BaseBoss : NKY_PatternCoroutine
     {
         protected GameObject _target;
 

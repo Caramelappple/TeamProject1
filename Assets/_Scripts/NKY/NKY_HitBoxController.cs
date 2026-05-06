@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HitBoxController : MonoBehaviour
+public class NKY_HitBoxController : MonoBehaviour
 {
     [SerializeField] private LayerMask defaultLayer;
 
