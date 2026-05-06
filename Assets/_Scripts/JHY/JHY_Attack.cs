@@ -42,7 +42,7 @@ public class JHY_Attack : MonoBehaviour
         bossMove = GetComponent<JHY_BossMove>();
 
         bossBaseScale = transform.localScale;
-        
+
 
     }
 
@@ -97,7 +97,7 @@ public class JHY_Attack : MonoBehaviour
         {
             sr.flipX = false;
         }
-        
+
 
     }
 
