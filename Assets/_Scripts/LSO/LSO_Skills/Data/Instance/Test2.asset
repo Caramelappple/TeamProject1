@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06120155515bb614abefb3c920fe08ff, type: 3}
-  m_Name: Dash
-  m_EditorClassIdentifier: Assembly-CSharp::SkillDataSo
-  skillName: 
-  skillDescription: 
-  skillIcon: {fileID: 0}
-  skillPrefab: {fileID: 0}
+  m_Name: Test2
+  m_EditorClassIdentifier: Assembly-CSharp::LSO.SkillSystem.SkillResourceSO
+  skillName: Test2
+  skillDescription: For Test2
+  skillIcon: {fileID: 21300000, guid: 90bc70d5a34a54ba28642a6c4d72b0ab, type: 3}
+  skillPrefab: {fileID: 12177192316389774, guid: 758c88251982e394ea34c3aa47a18b3a, type: 3}

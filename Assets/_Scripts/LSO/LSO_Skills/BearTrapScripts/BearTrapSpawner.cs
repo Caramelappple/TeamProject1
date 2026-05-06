@@ -22,13 +22,16 @@ public class BearTrapSpawner : MonoBehaviour
         CreateTrap(trapCount);
     }
 
-    private void FixedUpdate() 
+    public void UseSkill()
     {
-        if (Keyboard.current.spaceKey.isPressed && canSpawn)
-        {
-            SpawnTrap();
-        }
+        SpawnTrap();
     }
+
+    public IEnumerator CoolTime(float time)
+    {
+        throw new System.NotImplementedException();
+    }
+
     private void CreateTrap(int count)
     {
         for (int i = 0; i < count; i++)

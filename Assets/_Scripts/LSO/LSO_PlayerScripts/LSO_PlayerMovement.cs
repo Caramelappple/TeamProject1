@@ -9,13 +9,13 @@ public class LSO_PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 3;
     protected Animator Animator;
     private SpriteRenderer _sprite;
+    
     private Vector2 _moveDir;
     protected Vector2 LastDir = Vector2.down;
-    protected Vector2 FirstDir;
     private Rigidbody2D _rigid;
     
-    private bool _canSkill = true;
-    
+    SkillItem _skillItem;
+    private ISkill _skill;
     public event Action OnSkillEvent;
 
     private void Awake()
@@ -28,12 +28,28 @@ public class LSO_PlayerMovement : MonoBehaviour
     {
         _rigid.linearVelocity = _moveDir * speed;
         Animator.SetBool(MoveX, _moveDir.x != 0);
+    }
 
-        if (Keyboard.current.spaceKey.isPressed && _canSkill)
+    private void Update()
+    {
+        if (Keyboard.current.fKey.isPressed)
         {
             OnSkillEvent?.Invoke();
         }
+
+        if (Keyboard.current.eKey.isPressed && _skillItem != null)
+        {
+            _skill = _skillItem._skill;
+            SkillSlot.instance.AddSkill(_skill, 0);
+        }
+
+        if (Keyboard.current.rKey.isPressed && _skillItem != null)
+        {
+            _skill = _skillItem._skill;
+            SkillSlot.instance.AddSkill(_skill, 1);
+        }
     }
+
     private void OnMove(InputValue value)
     {
         _moveDir = value.Get<Vector2>();
@@ -45,6 +61,13 @@ public class LSO_PlayerMovement : MonoBehaviour
         }
         Animator.SetFloat(MoveY, _moveDir.y);
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent<SkillItem>(out SkillItem touchedSkill))
+        {
+            _skillItem = touchedSkill;
+        }
+    }
 }
 
