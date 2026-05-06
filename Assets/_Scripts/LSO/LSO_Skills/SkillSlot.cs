@@ -10,11 +10,11 @@ public class SkillSlot : MonoBehaviour
     
     public static SkillSlot instance;
     
-    private PlayerMovement _playerMovement;
+    private KHG_PlayerMovement _playerMovement;
     private void Awake()
     {
         instance = this;
-        _playerMovement = GetComponent<PlayerMovement>();
+        _playerMovement = GetComponent<KHG_PlayerMovement>();
     }
 
     public void AddSkill(ISkill skill,int index)

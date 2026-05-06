@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class KHG_PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
     private bool isDashing = false;

@@ -3,7 +3,7 @@ using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class LSO_PlayerAttack : PlayerMovement
+public class LSO_PlayerAttack : KHG_PlayerMovement
 {
     [SerializeField] protected GameObject _swordAxis;
     [SerializeField] protected GameObject _sword;
