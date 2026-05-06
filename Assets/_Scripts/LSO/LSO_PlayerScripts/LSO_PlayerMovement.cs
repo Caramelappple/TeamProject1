@@ -15,8 +15,8 @@ public class LSO_PlayerMovement : MonoBehaviour
     private Rigidbody2D _rigid;
     private bool isDashing;
     
-    SkillItem _skillItem;
-    private ISkill _skill;
+    LSO_SkillItem _skillItem;
+    private LSO_ISkill _skill;
     public event Action OnSkillEvent1;
     public event Action OnSkillEvent2;
 
@@ -47,13 +47,13 @@ public class LSO_PlayerMovement : MonoBehaviour
         if (Keyboard.current.fKey.isPressed && _skillItem != null)
         {
             _skill = _skillItem._skill;
-            SkillSlot.instance.AddSkill(_skill, 0);
+            LSO_SkillSlot.instance.AddSkill(_skill, 0);
         }
 
         if (Keyboard.current.rKey.isPressed && _skillItem != null)
         {
             _skill = _skillItem._skill;
-            SkillSlot.instance.AddSkill(_skill, 1);
+            LSO_SkillSlot.instance.AddSkill(_skill, 1);
         }
     }
 
@@ -71,7 +71,7 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<SkillItem>(out SkillItem touchedSkill))
+        if (collision.TryGetComponent<LSO_SkillItem>(out LSO_SkillItem touchedSkill))
         {
             _skillItem = touchedSkill;
         }

@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class SkillSlot : MonoBehaviour
+public class LSO_SkillSlot : MonoBehaviour
 {
     private GameObject _skillPrefab;
     
-    private ISkill _skill;
+    private LSO_ISkill _skill;
 
-    private ISkill[] _skillSlot = new ISkill[2];
+    private LSO_ISkill[] _skillSlot = new LSO_ISkill[2];
     
-    public static SkillSlot instance;
+    public static LSO_SkillSlot instance;
     
     private LSO_PlayerMovement _playerMovement;
     private void Awake()
@@ -17,15 +17,15 @@ public class SkillSlot : MonoBehaviour
         _playerMovement = GetComponent<LSO_PlayerMovement>();
     }
 
-    public void AddSkill(ISkill skill,int index)
+    public void AddSkill(LSO_ISkill skill,int index)
     {
         if (skill == null)
         {
             Debug.Log("AddSkill Skill Null");
             return;
         }
-        ISkill oldSkill = RemoveSkill(index);  // 기존 스킬 꺼내기
-        ISkill newSkill = skill;
+        LSO_ISkill oldSkill = RemoveSkill(index);  // 기존 스킬 꺼내기
+        LSO_ISkill newSkill = skill;
         if (index == 0)
         {
             if (oldSkill != null)
@@ -45,9 +45,9 @@ public class SkillSlot : MonoBehaviour
         }
     }
     
-    public ISkill RemoveSkill(int index)
+    public LSO_ISkill RemoveSkill(int index)
     {
-        ISkill temp = _skillSlot[index];
+        LSO_ISkill temp = _skillSlot[index];
         _skillSlot[index] = null;
         return temp;
     }

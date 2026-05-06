@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BearTrap : MonoBehaviour
+public class LSO_BearTrap : MonoBehaviour
 {
     private Animator _animator;
 
@@ -21,8 +21,8 @@ public class BearTrap : MonoBehaviour
         if (_stateInfo.IsName("BearTrapExplode") && _stateInfo.normalizedTime >= 0.95f)//애니메이션이 끝나면 트랩 비활성화
         {
             gameObject.SetActive(false);
-            BearTrapSpawner.instance.activeTraps.RemoveLast();
-            BearTrapSpawner.instance.trapPool.Push(gameObject);
+            LSO_BearTrapSpawner.instance.activeTraps.RemoveLast();
+            LSO_BearTrapSpawner.instance.trapPool.Push(gameObject);
         }
     }
 }

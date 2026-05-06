@@ -4,7 +4,7 @@ using UnityEngine;
 namespace LSO.SkillSystem
 {
     [CreateAssetMenu(fileName = "SkillDataSo", menuName = "SO/SkillDataSo", order = 0)]
-    public class SkillResourceSO : ScriptableObject
+    public class LSO_SkillResourceSO : ScriptableObject
     {
         public string skillName;
         public string skillDescription;

@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Test : MonoBehaviour,ISkill
+public class Test : MonoBehaviour,LSO_ISkill
 {
     private float coolTime = 5f;
     private bool canUseSkill = true;

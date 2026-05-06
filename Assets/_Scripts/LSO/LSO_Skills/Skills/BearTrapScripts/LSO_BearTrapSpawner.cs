@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class BearTrapSpawner : MonoBehaviour
+public class LSO_BearTrapSpawner : MonoBehaviour
 {
-    public static BearTrapSpawner instance;
+    public static LSO_BearTrapSpawner instance;
     private float coolTime = 1f;
     private bool canSpawn = true;
     private int trapCount = 5;
