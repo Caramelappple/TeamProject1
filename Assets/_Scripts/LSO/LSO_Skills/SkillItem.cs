@@ -16,7 +16,7 @@ public class SkillItem : MonoBehaviour
 
     private void Start()
     {
-         GameObject skillObj = Instantiate(_prefab, transform);
+         GameObject skillObj = Instantiate(skillData.skillPrefab, transform);
         _skill = skillObj.GetComponent<ISkill>();
         _sprite.sprite = skillData.skillIcon;
         gameObject.name = skillData.skillName;

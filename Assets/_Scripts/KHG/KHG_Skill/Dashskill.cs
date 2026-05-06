@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
@@ -13,14 +14,14 @@ public class Dashskill : MonoBehaviour
     [SerializeField] private Rigidbody2D rigid;
     [SerializeField] private TrailRenderer tr;
 
-    private KHG_PlayerMovement playerMovement; 
+    private LSO_PlayerMovement playerMovement; 
     private bool isDashing = false;
     private bool canDash = true;
 
     private void Awake()
     {
         if (rigid == null) rigid = GetComponent<Rigidbody2D>();
-        playerMovement = GetComponent<KHG_PlayerMovement>();
+        playerMovement = GetComponent<LSO_PlayerMovement>();
     }
 
     private void Update()
@@ -41,10 +42,7 @@ public class Dashskill : MonoBehaviour
         isDashing = true;
 
         playerMovement.SetDashing(true);
-
-        float originalGravity = rigid.gravityScale;
-        rigid.gravityScale = 0f;
-
+        
         rigid.linearVelocity = dir.normalized * dashSpeed;
 
         if (tr != null) tr.emitting = true;
@@ -52,8 +50,7 @@ public class Dashskill : MonoBehaviour
         yield return new WaitForSeconds(dashDuration);
 
         if (tr != null) tr.emitting = false;
-        rigid.gravityScale = originalGravity;
-
+       
         isDashing = false;
         playerMovement.SetDashing(false);
 
@@ -63,5 +60,6 @@ public class Dashskill : MonoBehaviour
 
     public bool IsDashing => isDashing; 
 }
+
 
 
