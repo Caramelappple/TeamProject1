@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dba71410ce302c34193bd8de66f62911, type: 3}
   m_Name: HealthData_Player
   m_EditorClassIdentifier: Assembly-CSharp::KSY.HealthSystem.HealthSO
-  <MaxValue>k__BackingField: 10
+  <MaxValue>k__BackingField: 100
   <MinValue>k__BackingField: 0
-  <StartValue>k__BackingField: 5
+  <StartValue>k__BackingField: 100
