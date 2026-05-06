@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 615946069}
   - component: {fileID: 615946074}
   - component: {fileID: 615946075}
+  - component: {fileID: 615946076}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -315,9 +316,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a75e6a306940c4fa9144185defc573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KHG_poisonfield
-  damage: 5
-  duration: 5
-  tickInterval: 0.5
+  poison: {fileID: 3134492447149638931, guid: a164a93ebd1d7554eb05ee6846b32b31, type: 3}
+--- !u!114 &615946076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615946068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 383f97fe9ce22de42b7ffd2dda346e95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KHG_PoisonDamage
+  damage: 10
+  interval: 1
 --- !u!1 &637197256
 GameObject:
   m_ObjectHideFlags: 0
