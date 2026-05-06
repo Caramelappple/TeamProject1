@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
 
-public class PlayerMovement : MonoBehaviour
+public class LSO_PlayerMovement : MonoBehaviour
 {
     private static readonly int MoveX = Animator.StringToHash("MoveX");
     private static readonly int MoveY = Animator.StringToHash("MoveY");
