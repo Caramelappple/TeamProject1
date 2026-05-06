@@ -8,4 +8,5 @@ public class KDH_SkillData : ScriptableObject
     public Sprite skillIcon;
     public float maxCooldownTime;
     public GameObject skillPrefab;
+    public GameObject skillIConPrefabs;
 }

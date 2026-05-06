@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba7067c87e9e283418fd4da067c38591, type: 3}
-  m_Name: KDH_TestSkill
+  m_Name: KDH_TestSkill 4
   m_EditorClassIdentifier: Assembly-CSharp::KDH_SkillData
-  skillName: TestSkill 1
-  skillDescription: "\uC774\uAC74 \uD14C\uC2A4\uD2B8\uC6A9 \uC2A4\uD0AC\uC785\uB2C8\uB2E4.
-    \uD55C\uACB0\uC774 \uC6B4\uB3D9 \uB9CE\uC774 \uB41C\uB2E4."
-  skillIcon: {fileID: 5634105631834451044, guid: fb851e1de46604b469182f44371a0935,
+  skillName: TestSkill 4
+  skillDescription: "\uD14C\uC2A4\uD2B8 \uC2A4\uD0AC 4"
+  skillIcon: {fileID: 2984019934279584216, guid: b8d65213f483b2a42ab72f1286ae6018,
     type: 3}
-  maxCooldownTime: 3
-  skillPrefab: {fileID: 4214988787288321583, guid: 72c7c9aeb1c26c945a41736b61aaf51c,
+  maxCooldownTime: 6
+  skillPrefab: {fileID: 2423020309032652691, guid: 00782a4090696e145aaba32e9e2f0d47,
+    type: 3}
+  skillIConPrefabs: {fileID: 4590441206724951262, guid: c57aee3f42fa0864d96c93da70f3f653,
     type: 3}
