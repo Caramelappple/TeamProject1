@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using _Scripts.NKY._EnemyScript.BossPattern;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
-
-namespace _Scripts.NKY._EnemyScript.Skills
+namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 {
     public class NKY_SwordStorm : NKY_BossSkill
     {
@@ -18,12 +16,12 @@ namespace _Scripts.NKY._EnemyScript.Skills
         [SerializeField] private float swordDistance = 35;
         [SerializeField] private float swordDuration = 0.5f;
 
-        protected override void OnAwake()
+        protected void Start()
         {
             GameObject sword;
             for (int i = 0; i < swordCount; i++)
             {
-                sword = Instantiate(swordPrefab);
+                sword = Instantiate(swordPrefab, transform);
                 sword.SetActive(false);
                 swordQueue.Enqueue(sword);
             }
@@ -33,11 +31,14 @@ namespace _Scripts.NKY._EnemyScript.Skills
         {
             GameObject sword = null;
             Vector3 moveDir;
+            int spawnRange;
                 
-            /*for (int i = 0; i < 8; i++)
+            for (int i = 1; i < swordCount; i++)
             {
+                spawnRange = Random.Range(0, spawnPoints.Length);
                 sword = swordQueue.Dequeue();
-                sword.transform.position = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
+                sword.transform.parent = spawnPoints[spawnRange];
+                sword.transform.position = spawnPoints[spawnRange].position;
                 moveDir = (target.transform.position - sword.transform.position).normalized;
                 sword.transform.up = moveDir;
                 sword.SetActive(true);
@@ -45,16 +46,16 @@ namespace _Scripts.NKY._EnemyScript.Skills
                 BoxCollider2D col = sword.GetComponentInChildren<BoxCollider2D>();
                 Vector2 offset = col.size * 0.5f;
                 //yield return StartCoroutine(ShowWarn(col, 0.6f, () => sword.transform.position + (moveDir * offset.y)));
-                PlaySequence(
-                    ShowWarn(col, 0.6f, () => sword.transform.position + (moveDir * offset.y)),
+                StartCoroutine(PlaySequence(
+                    ShowWarn(col, 0.3f, () => sword.transform.position + (moveDir * offset.y)),
                     WaitUntilOrTime(() => false, 0.6f),
                     Move(sword.transform, sword.transform.up, swordDistance, swordDuration),
                     WaitUntilOrTime(() => false, 1),
                     EnQueues(sword)
-                );
+                ));
 
                 yield return new WaitForSeconds(spawnInterval);
-            }*/
+            }
             yield break;
         }
 

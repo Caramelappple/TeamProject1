@@ -13,25 +13,25 @@ public class Dashskill : MonoBehaviour
     [SerializeField] private Rigidbody2D rigid;
     [SerializeField] private TrailRenderer tr;
 
-    private PlayerMovement playerMovement; 
+    //private PlayerMovement playerMovement; 
     private bool isDashing = false;
     private bool canDash = true;
 
     private void Awake()
     {
         if (rigid == null) rigid = GetComponent<Rigidbody2D>();
-        playerMovement = GetComponent<PlayerMovement>();
+        //playerMovement = GetComponent<PlayerMovement>();
     }
 
     private void Update()
     {
         if (Keyboard.current.fKey.wasPressedThisFrame && canDash)
         {
-            Vector2 dashDir = playerMovement.GetLastDir();
-            if (dashDir != Vector2.zero)
-            {
-                StartCoroutine(DashRoutine(dashDir));
-            }
+            //Vector2 dashDir = playerMovement.GetLastDir();
+            //if (dashDir != Vector2.zero)
+            //{
+                //StartCoroutine(DashRoutine(dashDir));
+            //}
         }
     }
 
@@ -40,7 +40,7 @@ public class Dashskill : MonoBehaviour
         canDash = false;
         isDashing = true;
 
-        playerMovement.SetDashing(true);
+        //playerMovement.SetDashing(true);
 
         float originalGravity = rigid.gravityScale;
         rigid.gravityScale = 0f;
@@ -55,7 +55,7 @@ public class Dashskill : MonoBehaviour
         rigid.gravityScale = originalGravity;
 
         isDashing = false;
-        playerMovement.SetDashing(false);
+        //playerMovement.SetDashing(false);
 
         yield return new WaitForSeconds(dashCooltime);
         canDash = true;

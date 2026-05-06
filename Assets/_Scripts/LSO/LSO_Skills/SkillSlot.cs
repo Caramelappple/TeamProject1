@@ -10,11 +10,11 @@ public class SkillSlot : MonoBehaviour
     
     public static SkillSlot instance;
     
-    private PlayerMovement _playerMovement;
+    //private PlayerMovement _playerMovement;
     private void Awake()
     {
         instance = this;
-        _playerMovement = GetComponent<PlayerMovement>();
+        //_playerMovement = GetComponent<PlayerMovement>();
     }
 
     public void AddSkill(ISkill skill,int index)
@@ -27,10 +27,10 @@ public class SkillSlot : MonoBehaviour
         ISkill oldSkill = RemoveSkill(index);  // 기존 스킬 꺼내기
         ISkill newSkill = skill;
         if (oldSkill != null)
-            _playerMovement.OnSkillEvent -= oldSkill.UseSkill;  // 기존 스킬 해제
+            //_playerMovement.OnSkillEvent -= oldSkill.UseSkill;  // 기존 스킬 해제
 
         _skillSlot[index] = newSkill;
-        _playerMovement.OnSkillEvent += newSkill.UseSkill;  // 구독
+        //_playerMovement.OnSkillEvent += newSkill.UseSkill;  // 구독
     }
     
     public ISkill RemoveSkill(int index)

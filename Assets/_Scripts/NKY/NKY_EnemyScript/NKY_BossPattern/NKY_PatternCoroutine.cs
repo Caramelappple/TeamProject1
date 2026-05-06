@@ -8,6 +8,9 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
     public abstract class NKY_PatternCoroutine : MonoBehaviour
     {
         private static readonly int Vanish = Animator.StringToHash("Vanish");
+        private static readonly int Appear = Animator.StringToHash("Appear");
+
+        //private static readonly int Vanish = Animator.StringToHash("Vanish");
         protected NKY_HitBoxController nkyHitBoxController;
         protected Animator _anim;
         protected NKY_ShadowController _shadow;
@@ -16,10 +19,6 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
         private Queue<System.Action> _attackEventQueue = new Queue<System.Action>();
         protected void Awake()
         {
-            nkyHitBoxController = GetComponent<NKY_HitBoxController>();
-            _anim = GetComponent<Animator>();
-            _shadow = GetComponentInChildren<NKY_ShadowController>();
-
             OnAwake();
         }
 
@@ -102,7 +101,7 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
             _anim.SetTrigger(Vanish);
             yield return StartCoroutine(WaitAnim("Vanish", 1f));
             from.position = to;
-            _anim.SetTrigger("Appear");
+            _anim.SetTrigger(Appear);
             yield return StartCoroutine(WaitAnim("Appear", 0.6f));
         }
 

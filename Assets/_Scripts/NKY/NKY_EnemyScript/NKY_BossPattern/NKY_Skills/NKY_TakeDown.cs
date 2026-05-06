@@ -2,7 +2,7 @@
 using _Scripts.NKY._EnemyScript.BossPattern;
 using UnityEngine;
 
-namespace _Scripts.NKY._EnemyScript.Skills
+namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 {
     public class NKY_TakeDown : NKY_BossSkill
     {
