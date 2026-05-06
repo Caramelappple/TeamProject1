@@ -9,10 +9,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 3;
     protected Animator Animator;
     private SpriteRenderer _sprite;
+    
     private Vector2 _moveDir;
     protected Vector2 LastDir = Vector2.down;
     private Rigidbody2D _rigid;
     
+    SkillItem _skillItem;
+    private ISkill _skill;
     public event Action OnSkillEvent;
 
     private void Awake()
@@ -25,15 +28,25 @@ public class PlayerMovement : MonoBehaviour
     {
         _rigid.linearVelocity = _moveDir * speed;
         Animator.SetBool(MoveX, _moveDir.x != 0);
-
-        
     }
 
     private void Update()
     {
-        if (Keyboard.current.spaceKey.isPressed)
+        if (Keyboard.current.fKey.isPressed)
         {
             OnSkillEvent?.Invoke();
+        }
+
+        if (Keyboard.current.eKey.isPressed && _skillItem != null)
+        {
+            _skill = _skillItem._skill;
+            SkillSlot.instance.AddSkill(_skill, 0);
+        }
+
+        if (Keyboard.current.rKey.isPressed && _skillItem != null)
+        {
+            _skill = _skillItem._skill;
+            SkillSlot.instance.AddSkill(_skill, 1);
         }
     }
 
@@ -48,6 +61,13 @@ public class PlayerMovement : MonoBehaviour
         }
         Animator.SetFloat(MoveY, _moveDir.y);
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent<SkillItem>(out SkillItem touchedSkill))
+        {
+            _skillItem = touchedSkill;
+        }
+    }
 }
 

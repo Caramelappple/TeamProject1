@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class BearTrapSpawner : MonoBehaviour,ISkill
+public class BearTrapSpawner : MonoBehaviour
 {
     public static BearTrapSpawner instance;
     private float coolTime = 1f;
@@ -26,7 +26,12 @@ public class BearTrapSpawner : MonoBehaviour,ISkill
     {
         SpawnTrap();
     }
-    
+
+    public IEnumerator CoolTime(float time)
+    {
+        throw new System.NotImplementedException();
+    }
+
     private void CreateTrap(int count)
     {
         for (int i = 0; i < count; i++)

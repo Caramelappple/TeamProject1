@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class SkillSlot : MonoBehaviour
@@ -7,7 +6,7 @@ public class SkillSlot : MonoBehaviour
     
     private ISkill _skill;
 
-    private ISkill[]  _skillSlot = new ISkill[2];
+    private ISkill[] _skillSlot = new ISkill[2];
     
     public static SkillSlot instance;
     
@@ -20,6 +19,11 @@ public class SkillSlot : MonoBehaviour
 
     public void AddSkill(ISkill skill,int index)
     {
+        if (skill == null)
+        {
+            Debug.Log("AddSkill Skill Null");
+            return;
+        }
         ISkill oldSkill = RemoveSkill(index);  // 기존 스킬 꺼내기
         ISkill newSkill = skill;
         if (oldSkill != null)
@@ -27,11 +31,6 @@ public class SkillSlot : MonoBehaviour
 
         _skillSlot[index] = newSkill;
         _playerMovement.OnSkillEvent += newSkill.UseSkill;  // 구독
-    }
-
-    public void GetSkill(ISkill skill, int index)
-    {
-        _skill = skill;
     }
     
     public ISkill RemoveSkill(int index)
