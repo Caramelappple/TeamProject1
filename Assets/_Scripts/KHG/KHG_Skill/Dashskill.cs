@@ -1,3 +1,4 @@
+/*
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
@@ -63,5 +64,6 @@ public class Dashskill : MonoBehaviour
 
     public bool IsDashing => isDashing; 
 }
+*/
 
 
