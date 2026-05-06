@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 566629616}
   - component: {fileID: 566629617}
   - component: {fileID: 566629618}
+  - component: {fileID: 566629619}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -378,6 +379,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ff430f4d914b394dbff5887fb0d89df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossHit
+--- !u!114 &566629619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566629605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 345b1924dd7420f4eabaee526fa9c4a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JHY_Dead
+  health: 15
+  disableScripts:
+  - {fileID: 566629618}
+  - {fileID: 566629616}
+  - {fileID: 566629615}
+  disableColliders:
+  - {fileID: 566629613}
+  rb: {fileID: 566629611}
 --- !u!1 &590586418
 GameObject:
   m_ObjectHideFlags: 0
