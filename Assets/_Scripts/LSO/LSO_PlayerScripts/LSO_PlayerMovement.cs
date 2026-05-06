@@ -17,7 +17,8 @@ public class LSO_PlayerMovement : MonoBehaviour
     
     SkillItem _skillItem;
     private ISkill _skill;
-    public event Action OnSkillEvent;
+    public event Action OnSkillEvent1;
+    public event Action OnSkillEvent2;
 
     private void Awake()
     {
@@ -33,12 +34,17 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current.fKey.isPressed)
+        if (Keyboard.current.qKey.isPressed)
         {
-            OnSkillEvent?.Invoke();
+            OnSkillEvent1?.Invoke();
         }
 
-        if (Keyboard.current.eKey.isPressed && _skillItem != null)
+        if (Keyboard.current.eKey.isPressed)
+        {
+            OnSkillEvent2?.Invoke();
+        }
+
+        if (Keyboard.current.fKey.isPressed && _skillItem != null)
         {
             _skill = _skillItem._skill;
             SkillSlot.instance.AddSkill(_skill, 0);

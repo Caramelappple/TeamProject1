@@ -9,8 +9,8 @@ public class Test : MonoBehaviour,ISkill
     public void UseSkill()
     {
         if (!canUseSkill) return;
-        Debug.Log("Skill used");
-        StartCoroutine(CoolTime(coolTime));
+        Debug.Log("Skill1 used");
+        //StartCoroutine(CoolTime(coolTime));
     }
     
     public IEnumerator CoolTime(float time)

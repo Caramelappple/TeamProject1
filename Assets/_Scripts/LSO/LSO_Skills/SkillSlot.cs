@@ -26,11 +26,23 @@ public class SkillSlot : MonoBehaviour
         }
         ISkill oldSkill = RemoveSkill(index);  // 기존 스킬 꺼내기
         ISkill newSkill = skill;
-        if (oldSkill != null)
-            _playerMovement.OnSkillEvent -= oldSkill.UseSkill;  // 기존 스킬 해제
+        if (index == 0)
+        {
+            if (oldSkill != null)
+                _playerMovement.OnSkillEvent1 -= oldSkill.UseSkill; // 기존 스킬 해제
 
-        _skillSlot[index] = newSkill;
-        _playerMovement.OnSkillEvent += newSkill.UseSkill;  // 구독
+            _skillSlot[index] = newSkill;
+            _playerMovement.OnSkillEvent1 += newSkill.UseSkill; // 구독
+        }
+
+        if (index == 1)
+        {
+            if (oldSkill != null)
+                _playerMovement.OnSkillEvent2 -= oldSkill.UseSkill; // 기존 스킬 해제
+
+            _skillSlot[index] = newSkill;
+            _playerMovement.OnSkillEvent2 += newSkill.UseSkill; // 구독
+        }
     }
     
     public ISkill RemoveSkill(int index)
