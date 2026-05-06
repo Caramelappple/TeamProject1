@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 3861321164872177995}
   - component: {fileID: 2719085284589024013}
   - component: {fileID: 2015234126569774870}
-  m_Layer: 0
+  - component: {fileID: 2752312111904947043}
+  m_Layer: 7
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,13 +124,29 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0.01231721, y: 1.75}
   m_Size: {x: 0.61454767, y: 3.5}
   m_Direction: 0
+--- !u!114 &2752312111904947043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3338311052345153939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d2239326248cc4787195076dc1deec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrashDamage
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  damage: 5
 --- !u!1 &4566328915040356744
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3737785624823999523}
   - component: {fileID: 7394548836931733908}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CrashCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

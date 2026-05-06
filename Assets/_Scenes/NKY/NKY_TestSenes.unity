@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 102294124}
   - component: {fileID: 102294126}
   - component: {fileID: 102294128}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,9 +267,11 @@ Transform:
   m_Children:
   - {fileID: 1860349572}
   - {fileID: 133830273}
+  - {fileID: 2084043402}
   - {fileID: 2126849747}
   - {fileID: 511466691}
   - {fileID: 400489558}
+  - {fileID: 997046104}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &102294120
@@ -370,10 +372,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd3981f39acbed4fb3a0457661e5a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NKY_Enemy.NKY_Enemy
-  _skillCooldown: 1.5
+  _skillCooldown: 3
   _skills:
   - {fileID: 102294128}
-  - {fileID: 102294128}
+  - {fileID: 102294126}
   playerReference: {fileID: 467756591}
 --- !u!114 &102294124
 MonoBehaviour:
@@ -405,6 +407,7 @@ MonoBehaviour:
   _slamHitbox:
   - {fileID: 1860349573}
   - {fileID: 133830272}
+  - {fileID: 2084043401}
   _damage: 4
 --- !u!114 &102294127
 MonoBehaviour:
@@ -442,6 +445,8 @@ MonoBehaviour:
   swordPrefab: {fileID: 3338311052345153939, guid: f29f9c68cde12ee40b3ece26d597e163, type: 3}
   spawnInterval: 0.3
   swordCount: 8
+  swordDistance: 35
+  swordDuration: 0.5
 --- !u!1 &133830271
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,6 +937,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400489558}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &997046103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 997046104}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &997046104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997046103}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 102294119}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1166214330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,6 +1236,74 @@ CapsuleCollider2D:
   m_Offset: {x: -0.00000009030145, y: -0.75750357}
   m_Size: {x: 10.84, y: 0.76509356}
   m_Direction: 1
+--- !u!1 &2084043400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2084043402}
+  - component: {fileID: 2084043401}
+  m_Layer: 0
+  m_Name: StationaryAttack3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!58 &2084043401
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084043400}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.36}
+  m_Radius: 2
+--- !u!4 &2084043402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084043400}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 102294119}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2126849745
 GameObject:
   m_ObjectHideFlags: 0
