@@ -14,14 +14,14 @@ public class Dashskill : MonoBehaviour
     [SerializeField] private Rigidbody2D rigid;
     [SerializeField] private TrailRenderer tr;
 
-    private LSO_PlayerMovement playerMovement; 
+    private KHG_PlayerMovement playerMovement; 
     private bool isDashing = false;
     private bool canDash = true;
 
     private void Awake()
     {
         if (rigid == null) rigid = GetComponent<Rigidbody2D>();
-        playerMovement = GetComponent<LSO_PlayerMovement>();
+        playerMovement = GetComponent<KHG_PlayerMovement>();
     }
 
     private void Update()

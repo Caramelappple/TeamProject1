@@ -70,14 +70,5 @@ public class LSO_PlayerMovement : MonoBehaviour
             _skillItem = touchedSkill;
         }
     }
-
-    public Vector2 GetLastDir() => LastDir;
-
-    public void SetDashing(bool state) => isDashing = state;
-
-    internal void ApplySpeedBoost(float boostMultiplier, float boostDuration)
-    {
-        throw new NotImplementedException();
-    }
 }
 
