@@ -316,11 +316,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd3981f39acbed4fb3a0457661e5a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NKY_Enemy.NKY_Enemy
-  hitboxes:
-  - {fileID: 1860349573}
-  - {fileID: 133830272}
-  - {fileID: 2126849746}
-  target: {fileID: 467756591}
+  _skillCooldown: 3
+  _skills: []
+  playerReference: {fileID: 0}
 --- !u!114 &102294124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -711,7 +709,7 @@ MonoBehaviour:
   _data: {fileID: 11400000, guid: eb8402ebdecb8394a80ad40c2b8843ff, type: 2}
   <MaxValue>k__BackingField: 10
   <MinValue>k__BackingField: 0
-  _value: 5
+  _value: 10
 --- !u!58 &467756590
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -760,6 +758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71bf32dd532f0a4fb88091768aea195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NKY.Player.NKY_Player
+  target: {fileID: 0}
   speed: 5
 --- !u!1 &1166214330
 GameObject:

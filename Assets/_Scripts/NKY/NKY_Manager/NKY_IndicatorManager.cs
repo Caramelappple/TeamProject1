@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace _Scripts.NKY.Manager
 {
-    public class IndicatorManager : MonoBehaviour
+    public class NKY_IndicatorManager : MonoBehaviour
     {
-        public static IndicatorManager Instance { get; private set; }
+        public static NKY_IndicatorManager Instance { get; private set; }
 
         [SerializeField] private GameObject[] _indicatorPrefab;
         [SerializeField] private int _poolSize = 5;

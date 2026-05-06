@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class CrashDamage : MonoBehaviour
+public class NKY_CrashDamage : MonoBehaviour
 {
     [SerializeField] LayerMask layerMask;
     private Collider2D col;

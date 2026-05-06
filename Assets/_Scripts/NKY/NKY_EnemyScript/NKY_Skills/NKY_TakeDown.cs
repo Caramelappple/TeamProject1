@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace _Scripts.NKY._EnemyScript.Skills
 {
-    public class TakeDown : BossSkill
+    public class NKY_TakeDown : NKY_BossSkill
     {
         private static readonly int Vanish1 = Animator.StringToHash("Vanish");
         private static readonly int Appear = Animator.StringToHash("Appear");
@@ -39,10 +39,10 @@ namespace _Scripts.NKY._EnemyScript.Skills
                     ComboAttack("StationaryAttack",
                         () =>
                         {
-                            _hitBoxController.Cast(_slamHitbox[0], (target) => HitToDamage(target, (int)_damage));
-                            _hitBoxController.Cast(_slamHitbox[2], (target) => HitToDamage(target, (int)_damage));
+                            nkyHitBoxController.Cast(_slamHitbox[0], (target) => HitToDamage(target, (int)_damage));
+                            nkyHitBoxController.Cast(_slamHitbox[2], (target) => HitToDamage(target, (int)_damage));
                         },
-                        () => _hitBoxController.Cast(_slamHitbox[1], (target) => HitToDamage(target, (int)_damage))
+                        () => nkyHitBoxController.Cast(_slamHitbox[1], (target) => HitToDamage(target, (int)_damage))
                     ),
                     ShadowLock(false),
                     WaitUntilOrTime(() => false, 0.8f)

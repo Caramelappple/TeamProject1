@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 namespace _Scripts.NKY._EnemyScript.Skills
 {
-    public class SwordStorm : BossSkill
+    public class NKY_SwordStorm : NKY_BossSkill
     {
         [SerializeField] private Transform[] spawnPoints;
         public GameObject swordPrefab;
@@ -33,8 +33,8 @@ namespace _Scripts.NKY._EnemyScript.Skills
         {
             GameObject sword = null;
             Vector3 moveDir;
-            
-            for (int i = 0; i < swordCount - 1; i++)
+                
+            /*for (int i = 0; i < 8; i++)
             {
                 sword = swordQueue.Dequeue();
                 sword.transform.position = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
@@ -53,9 +53,9 @@ namespace _Scripts.NKY._EnemyScript.Skills
                     EnQueues(sword)
                 );
 
-                // 다음 칼을 생성하기 전까지 일정 시간(spawnInterval) 대기합니다.
                 yield return new WaitForSeconds(spawnInterval);
-            }
+            }*/
+            yield break;
         }
 
 

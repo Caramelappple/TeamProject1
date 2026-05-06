@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace _Scripts.NKY._EnemyScript
 {
-    public class NKY_Enemy : BaseBoss
+    public class NKY_Enemy : NKY_BaseBoss
     {
         [Header("???? ???? ???")]
-        [SerializeField] private BossSkill[] _skills;
+        [SerializeField] private NKY_BossSkill[] _skills;
         public NKY_Player playerReference;
 
         private NKY_Health _myHealth;
@@ -58,7 +58,7 @@ namespace _Scripts.NKY._EnemyScript
 
         protected override IEnumerator PickNextSkill()
         {
-            BossSkill selectedSkill = _skills[0];
+            NKY_BossSkill selectedSkill = _skills[0];
             float randomSkill = Random.Range(0f, 100f);
             if(randomSkill < 50)
                 selectedSkill = _skills[0];

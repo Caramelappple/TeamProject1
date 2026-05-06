@@ -8,7 +8,7 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
     public abstract class NKY_PatternCoroutine : MonoBehaviour
     {
         private static readonly int Vanish = Animator.StringToHash("Vanish");
-        protected HitBoxController _hitBoxController;
+        protected NKY_HitBoxController nkyHitBoxController;
         protected Animator _anim;
         protected NKY_ShadowController _shadow;
 
@@ -16,7 +16,7 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
         private Queue<System.Action> _attackEventQueue = new Queue<System.Action>();
         protected void Awake()
         {
-            _hitBoxController = GetComponent<HitBoxController>();
+            nkyHitBoxController = GetComponent<NKY_HitBoxController>();
             _anim = GetComponent<Animator>();
             _shadow = GetComponentInChildren<NKY_ShadowController>();
 
@@ -54,7 +54,7 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
         // --- ??????? ?? ???? ?????? ---
         public void OnAttackEvent()
         {
-            _hitBoxController?.ResetHit();
+            nkyHitBoxController?.ResetHit();
             if (_attackEventQueue.Count > 0)
             {
                 _attackEventQueue.Dequeue()?.Invoke();
@@ -64,7 +64,7 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
         protected IEnumerator ComboAttack(string animName, params System.Action[] attackLogics)
         {
             _attackEventQueue.Clear();
-            _hitBoxController?.ResetHit();
+            nkyHitBoxController?.ResetHit();
             foreach (var logic in attackLogics) _attackEventQueue.Enqueue(logic);
             _anim.Play(animName);
             yield return StartCoroutine(WaitAnim(animName, 1.0f));
@@ -150,7 +150,7 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
 
         protected IEnumerator ShowWarn(Collider2D hitBox, float duration, System.Func<Vector2> positionGetter)
         {
-            IndicatorManager.Instance.ShowIndicator(hitBox, positionGetter(), duration);
+            NKY_IndicatorManager.Instance.ShowIndicator(hitBox, positionGetter(), duration);
             yield break;
         }
 
