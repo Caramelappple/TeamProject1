@@ -13,6 +13,7 @@ public class LSO_PlayerMovement : MonoBehaviour
     private Vector2 _moveDir;
     protected Vector2 LastDir = Vector2.down;
     private Rigidbody2D _rigid;
+    private bool isDashing;
     
     SkillItem _skillItem;
     private ISkill _skill;
@@ -68,6 +69,15 @@ public class LSO_PlayerMovement : MonoBehaviour
         {
             _skillItem = touchedSkill;
         }
+    }
+
+    public Vector2 GetLastDir() => LastDir;
+
+    public void SetDashing(bool state) => isDashing = state;
+
+    internal void ApplySpeedBoost(float boostMultiplier, float boostDuration)
+    {
+        throw new NotImplementedException();
     }
 }
 
