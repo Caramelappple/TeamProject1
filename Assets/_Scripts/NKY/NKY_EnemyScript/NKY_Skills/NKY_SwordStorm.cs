@@ -7,18 +7,21 @@ using Random = UnityEngine.Random;
 
 namespace _Scripts.NKY._EnemyScript.Skills
 {
-    public class SwordStorm : BossSkill
+    public class NKY_SwordStorm : NKY_BossSkill
     {
         [SerializeField] private Transform[] spawnPoints;
         public GameObject swordPrefab;
         private Queue<GameObject> swordQueue = new Queue<GameObject>();
         
         [SerializeField] private float spawnInterval = 0.3f;
+        [SerializeField] private int swordCount = 8;
+        [SerializeField] private float swordDistance = 35;
+        [SerializeField] private float swordDuration = 0.5f;
 
         protected override void OnAwake()
         {
             GameObject sword;
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < swordCount; i++)
             {
                 sword = Instantiate(swordPrefab);
                 sword.SetActive(false);
@@ -28,9 +31,10 @@ namespace _Scripts.NKY._EnemyScript.Skills
 
         public override IEnumerator Execute(Transform boss, Transform target)
         {
-            GameObject sword;
+            GameObject sword = null;
             Vector3 moveDir;
-            for (int i = 0; i < 8; i++)
+                
+            /*for (int i = 0; i < 8; i++)
             {
                 sword = swordQueue.Dequeue();
                 sword.transform.position = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
@@ -38,26 +42,22 @@ namespace _Scripts.NKY._EnemyScript.Skills
                 sword.transform.up = moveDir;
                 sword.SetActive(true);
 
+                BoxCollider2D col = sword.GetComponentInChildren<BoxCollider2D>();
+                Vector2 offset = col.size * 0.5f;
+                //yield return StartCoroutine(ShowWarn(col, 0.6f, () => sword.transform.position + (moveDir * offset.y)));
+                PlaySequence(
+                    ShowWarn(col, 0.6f, () => sword.transform.position + (moveDir * offset.y)),
+                    WaitUntilOrTime(() => false, 0.6f),
+                    Move(sword.transform, sword.transform.up, swordDistance, swordDuration),
+                    WaitUntilOrTime(() => false, 1),
+                    EnQueues(sword)
+                );
 
-                StartCoroutine(SwordActionRoutine(sword));
-
-                // 다음 칼을 생성하기 전까지 일정 시간(spawnInterval) 대기합니다.
                 yield return new WaitForSeconds(spawnInterval);
-            }
-
+            }*/
             yield break;
         }
-        private IEnumerator SwordActionRoutine(GameObject sword)
-        {
-            // PlaySequence가 끝날 때까지 이 코루틴 안에서만 대기합니다.
-            // 메인 Execute 코루틴의 for문에는 영향을 주지 않습니다.
-            yield return PlaySequence(
-                ShowWarn(sword.GetComponent<Collider2D>(), 0.6f, () => sword.transform.position),
-                WaitUntilOrTime(() => false, 0.6f),
-                Move(sword.transform, sword.transform.up, 40, 1),
-                EnQueues(sword)
-            );
-        }
+
 
         private IEnumerator EnQueues(GameObject obj)
         {

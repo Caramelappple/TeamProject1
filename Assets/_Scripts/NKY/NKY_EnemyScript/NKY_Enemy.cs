@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace _Scripts.NKY._EnemyScript
 {
-    public class NKY_Enemy : BaseBoss
+    public class NKY_Enemy : NKY_BaseBoss
     {
         [Header("???? ???? ???")]
-        [SerializeField] private BossSkill[] _skills;
+        [SerializeField] private NKY_BossSkill[] _skills;
         public NKY_Player playerReference;
 
         private NKY_Health _myHealth;
@@ -58,12 +58,11 @@ namespace _Scripts.NKY._EnemyScript
 
         protected override IEnumerator PickNextSkill()
         {
-            BossSkill selectedSkill = _skills[1];
+            NKY_BossSkill selectedSkill = _skills[0];
             float randomSkill = Random.Range(0f, 100f);
-            Debug.Log(randomSkill);
-            if(randomSkill > 50)
+            if(randomSkill < 50)
                 selectedSkill = _skills[0];
-            else if(randomSkill <= 50)
+            else if(randomSkill >= 50)
                 selectedSkill = _skills[1];
 
             return selectedSkill.Execute(transform, _target.transform);
@@ -77,7 +76,7 @@ namespace _Scripts.NKY._EnemyScript
         private void SetDamage(NKY_DamageResultData args) //Enemy?? ???????? ???? ????? ???????
         {
             if (_isDead) return;
-            
+            Debug.Log($"{args.damage}만큼 맞았음. {args.giver}의 현재채력 : {args.currentHealth}");
 
             if (_myHealth.IsDestroyed)
             {
