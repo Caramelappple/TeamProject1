@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class KDH_SkillSystem : MonoBehaviour
 {
@@ -38,7 +38,10 @@ public class KDH_SkillSystem : MonoBehaviour
             // 그 단축키가 방금 눌렸다면
             if (Input.GetKeyDown(mappedKey))
             {
-                skills[i].UseSkill(); // i번째 배열에 있는 스킬 발동
+                if (skills[i] != null)
+                {
+                    skills[i].UseSkill(); // i번째 배열에 있는 스킬 발동
+                }
             }
         }
 
@@ -58,5 +61,23 @@ public class KDH_SkillSystem : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void AddSkill (KDH_Skill skill)
+    {
+        for(int i = 0; i <= (int)KeyAction.KEYCOUNT; i++)
+        {
+            if (skills[i] == null) //스킬을 넣을 자리가 있으면 
+            {
+                skills[i] = skill;
+                Debug.Log("스킬을 장착합니다");
+                // 스킬 아이콘이 업데이트 되는 코드
+
+
+                return; // 스킬이 추가가 되면 함수 탈출
+            }
+        }
+
+        Debug.Log("스킬 넣을 자리가 없음"); // 스킬 추가가 안 되면 디버깅
     }
 }
