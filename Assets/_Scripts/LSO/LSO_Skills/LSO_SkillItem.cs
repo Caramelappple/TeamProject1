@@ -24,4 +24,9 @@ public class LSO_SkillItem : MonoBehaviour
         gameObject.name = skillData.skillName;
         _prefab = skillData.skillPrefab;
     }
+    
+    public void DestroyGroup()
+    {
+        Destroy(transform.parent.gameObject);
+    }
 }

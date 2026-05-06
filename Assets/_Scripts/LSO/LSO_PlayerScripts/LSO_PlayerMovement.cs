@@ -48,12 +48,18 @@ public class LSO_PlayerMovement : MonoBehaviour
         {
             _skill = _skillItem._skill;
             LSO_SkillSlot.instance.AddSkill(_skill, 0);
+            
+            _skillItem.DestroyGroup(); // 그룹 전체 삭제
+            _skillItem = null;
         }
 
         if (Keyboard.current.rKey.isPressed && _skillItem != null)
         {
             _skill = _skillItem._skill;
             LSO_SkillSlot.instance.AddSkill(_skill, 1);
+            
+            _skillItem.DestroyGroup(); // 그룹 전체 삭제
+            _skillItem = null;
         }
     }
 
