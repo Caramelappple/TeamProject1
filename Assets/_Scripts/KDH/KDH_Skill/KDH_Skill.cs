@@ -10,11 +10,13 @@ public class KDH_Skill : MonoBehaviour
     [SerializeField]
     private float maxCooldownTime;      // 해당 스킬 재사용 대기 시간
     [SerializeField]
-    private TextMeshProUGUI textSkillData;          // 스킬 시전 정보 출력
+    private TextMeshProUGUI textSkillData; // 해당 스킬 데이터를 UI로 출력
     [SerializeField]
     private TextMeshProUGUI textCooldownTime;       // 재사용 대기 시간을 텍스트로 출력하는 Text UI
     [SerializeField]
     private Image imageCooldownTime;        // 재사용 대기 시간을 이미지로 출력하는 Image UI
+
+    public GameObject skills;               // 실제로 사용될 스킬들
 
     private float currentCooldownTime;  // 현재 재사용 대기 시간
     private bool isCooldown;             // 현재 쿨타임이 적용중인지 체크
@@ -29,16 +31,39 @@ public class KDH_Skill : MonoBehaviour
     /// </summary>
     public void UseSkill()
     {
-        // 이미 스킬을 사용해서 재사용 대기 시간이 남아있으면 종료
+        if (textSkillData == null) return;
+
         if (isCooldown == true)
         {
             textSkillData.text = $"[{skillName}] Cooldown Time : {currentCooldownTime:F1}";
             return;
         }
 
-        textSkillData.text = $"Use Skill : {skillName}";
+        GameObject player = GameObject.FindWithTag("Player");
 
+        Vector3 spawnPos = transform.position;
+        Quaternion spawnRot = transform.rotation;
+
+        if (player != null)
+        {
+            // 플레이어가 있다면 플레이어 위치로 설정
+            spawnPos = player.transform.position;
+            spawnRot = player.transform.rotation;
+        }
+
+        // 설정된 위치에 스킬 소환
+        if (skills != null)
+        {
+            Instantiate(skills, spawnPos, spawnRot);
+            Debug.Log($"{skillName} 소환");
+        }
+
+        textSkillData.text = $"Use Skill : {skillName}";
         StartCoroutine(nameof(OnCooldownTime), maxCooldownTime);
+    }
+    public void SetTextReference(TextMeshProUGUI sceneText)
+    {
+        textSkillData = sceneText;
     }
 
     /// <summary>

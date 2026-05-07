@@ -7,8 +7,9 @@ public class KDH_SkillSystem : MonoBehaviour
 {
     [SerializeField]
     private GraphicRaycaster graphicRaycaster;
+    [Header ("스킬의 개수가 배열의 크기보다 더 크면 배열의 크기를 늘리면 되")]
     [SerializeField]
-    private KDH_Skill[] skills; //스킬 장착창(슬롯) <- 여기서 얻은 스킬을 설정하여 사용하면 되
+    public KDH_Skill[] skills; //스킬 장착창(슬롯) <- 여기서 얻은 스킬을 설정하여 사용하면 되
 
     private List<RaycastResult> raycastResults;
     private PointerEventData pointerEventData;
@@ -62,22 +63,29 @@ public class KDH_SkillSystem : MonoBehaviour
             }
         }
     }
-
-    private void AddSkill (KDH_Skill skill)
+    // 외부에서 스킬 프리팹 정보를 넘겨받는 메서드
+    public void AddSkill(KDH_Skill newSkill)
     {
-        for(int i = 0; i <= (int)KeyAction.KEYCOUNT; i++)
+        bool isAdded = false;
+
+        // KeyAction.KEYCOUNT (4개) 만큼 루프
+        for (int i = 0; i < (int)KeyAction.KEYCOUNT; i++)
         {
-            if (skills[i] == null) //스킬을 넣을 자리가 있으면 
+            // 빈 자리가 있다면
+            if (skills[i] == null)
             {
-                skills[i] = skill;
-                Debug.Log("스킬을 장착합니다");
-                // 스킬 아이콘이 업데이트 되는 코드
-
-
-                return; // 스킬이 추가가 되면 함수 탈출
+                skills[i] = newSkill;
+                Debug.Log($"{i}번 슬롯에 {newSkill.name} 장착 완료!");
+                isAdded = true;
+                break;
             }
         }
 
-        Debug.Log("스킬 넣을 자리가 없음"); // 스킬 추가가 안 되면 디버깅
+        if (!isAdded)
+        {
+            Debug.Log("더 이상 스킬을 장착할 공간이 없습니다.");
+            // 자리가 없으면 생성된 프리팹을 다시 삭제
+            Destroy(newSkill.gameObject);
+        }
     }
 }

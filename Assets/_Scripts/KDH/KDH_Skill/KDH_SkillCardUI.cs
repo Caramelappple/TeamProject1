@@ -5,26 +5,32 @@ using TMPro;
 public class KDH_SkillCardUI : MonoBehaviour
 {
     public KDH_SkillData mySkillData;
+    public Image iconImage;           // Icon Image 칸
+    public TextMeshProUGUI nameText;  // Name Text 칸
+    public TextMeshProUGUI descText;  // Desc Text 칸
+    public GameObject skillPrefab;
 
-    public Image iconImage;
-    public TextMeshProUGUI nameText;
-    // 설명 텍스트를 연결할 변수를 추가합니다!
-    public TextMeshProUGUI descText;
+    private KDH_SkillUpdate manager;
 
-    private void Start()
+    public void SetUp(KDH_SkillData data, KDH_SkillUpdate mgr)
     {
-        UpdateUI();
+        mySkillData = data;
+        manager = mgr;
+
+        if (data != null)
+        {
+            if (mySkillData != null) skillPrefab = data.skillPrefab; // 스킬 선택창에서 바뀌는 부분 (스킬 Prefab) 
+            if (iconImage != null) iconImage.sprite = data.skillIcon; // 스킬 선택창에서 바뀌는 부분 (스킬 아이콘)
+            if (nameText != null) nameText.text = data.skillName; // 스킬 선택창에서 바뀌는 부분 (스킬의 이름)
+            if (descText != null) descText.text = data.skillDescription; // 스킬 선택창에서 바뀌는 부분 (스킬의 설명)
+        }
     }
 
-    public void UpdateUI()
+    public void OnClickCard()
     {
-        if (mySkillData != null)
+        if (manager != null && mySkillData != null)
         {
-            iconImage.sprite = mySkillData.skillIcon;
-            nameText.text = mySkillData.skillName;
-
-            //  데이터의 설명을 UI 텍스트에 넣는 코드를 추가합니다!
-            descText.text = mySkillData.skillDescription;
+            manager.SelectSkill(mySkillData);
         }
     }
 }
