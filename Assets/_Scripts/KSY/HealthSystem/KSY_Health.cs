@@ -38,7 +38,8 @@ public class KSY_Health : KSY_DamageableResource, KSY_IRecoverable
             OnRecover?.Invoke(resultData);
         }
     }
-
+    
+    //»Æ¿Œ ≥°
     [ContextMenu("Recover")]
     public void Recover()
     {

@@ -13,10 +13,13 @@ public class LSO_PlayerMovement : MonoBehaviour
     private Vector2 _moveDir;
     protected Vector2 LastDir = Vector2.down;
     private Rigidbody2D _rigid;
+    private bool isDashing;
     
-    SkillItem _skillItem;
-    private ISkill _skill;
-    public event Action OnSkillEvent;
+    LSO_SkillItem _skillItem;
+    private LSO_ISkill _skill;
+    public event Action<GameObject> OnSkillEvent1;
+    public event Action<GameObject> OnSkillEvent2;
+    
 
     private void Awake()
     {
@@ -25,28 +28,39 @@ public class LSO_PlayerMovement : MonoBehaviour
         _sprite = GetComponent<SpriteRenderer>();
     }
     private void FixedUpdate()
-    {
+    { 
         _rigid.linearVelocity = _moveDir * speed;
         Animator.SetBool(MoveX, _moveDir.x != 0);
     }
 
     private void Update()
     {
-        if (Keyboard.current.fKey.isPressed)
+        if (Keyboard.current.qKey.isPressed)
         {
-            OnSkillEvent?.Invoke();
+            OnSkillEvent1?.Invoke(gameObject);
         }
 
-        if (Keyboard.current.eKey.isPressed && _skillItem != null)
+        if (Keyboard.current.eKey.isPressed)
+        {
+            OnSkillEvent2?.Invoke(gameObject);
+        }
+
+        if (Keyboard.current.fKey.isPressed && _skillItem != null)
         {
             _skill = _skillItem._skill;
-            SkillSlot.instance.AddSkill(_skill, 0);
+            LSO_SkillSlot.instance.AddSkill(_skill, 0);
+            
+            _skillItem.DestroyGroup(); // 그룹 전체 삭제
+            _skillItem = null;
         }
 
         if (Keyboard.current.rKey.isPressed && _skillItem != null)
         {
             _skill = _skillItem._skill;
-            SkillSlot.instance.AddSkill(_skill, 1);
+            LSO_SkillSlot.instance.AddSkill(_skill, 1);
+            
+            _skillItem.DestroyGroup(); // 그룹 전체 삭제
+            _skillItem = null;
         }
     }
 
@@ -64,7 +78,7 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<SkillItem>(out SkillItem touchedSkill))
+        if (collision.TryGetComponent<LSO_SkillItem>(out LSO_SkillItem touchedSkill))
         {
             _skillItem = touchedSkill;
         }

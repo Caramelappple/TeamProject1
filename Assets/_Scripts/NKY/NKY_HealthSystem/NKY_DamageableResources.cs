@@ -1,3 +1,4 @@
+//이거 사용
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -5,18 +6,9 @@ using UnityEngine;
 public class NKY_DamageableResources : MonoBehaviour
 {
     [SerializeField] private NKY_DamageableResourceSO _data;
-
-    public bool IsDestroyed
-    {
-        get
-        {
-            return _value <= MinValue;
-        }
-    }
-    public bool IsDamageable { get; private set; }
     [field : SerializeField] public int MaxValue { get; private set; }
     [field: SerializeField]  public int MinValue { get; private set; }
-    protected int Value
+    public int Value
     {
         get
         {
@@ -27,10 +19,34 @@ public class NKY_DamageableResources : MonoBehaviour
             _value = Mathf.Clamp(value, MinValue, MaxValue);
         }
     }
+    public bool IsDestroyed
+    {
+        get
+        {
+            return _value <= MinValue;
+        }
+    }
+
+    public bool IsDamageable { get; private set; } = true;
+    
     public event Action<NKY_DamageResultData> OnDamage;
     public event Action<NKY_DamageData> OnHit;
 
     [SerializeField] private int _value;
+    
+    protected virtual void Awake()
+    {
+        Initialize();
+        OnDamage += (data) => Debug.Log($"<color=red>{data.giver}로부터 {data.damage}만큼 대미지를 받았습니다!</color>");
+    }
+    
+    public void Initialize()
+    {
+        MaxValue = _data.maxValue;
+        MinValue = _data.minValue;
+        _value = _data.startValue;
+    }
+    
     public int GetValue()
     {
         return _value;
@@ -40,16 +56,8 @@ public class NKY_DamageableResources : MonoBehaviour
     {
         IsDamageable = value;
     }
-    private void OnValidate()
-    {
-        Initialized();
-    }
-    public void Initialized()
-    {
-        this.MaxValue = _data.maxValue;
-        this.MinValue = _data.minValue;
-        this._value = _data.startValue;
-    }
+    
+    
     public virtual void GetDamage(NKY_DamageData data)
     {
         NKY_DamageData damagedata = data;

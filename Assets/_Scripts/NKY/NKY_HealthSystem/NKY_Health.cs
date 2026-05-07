@@ -1,17 +1,12 @@
 using System;
+using _Scripts.HealthSystem;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class NKY_Health : NKY_DamageableResources, NKY_IRecoverable
 {
-    public event Action<NKY_RecoverResultData> OnRecovery;
+    public event Action<NKY_RecoverResultData> OnRecover;
 
-    [ContextMenu("Recover")]
-    public void Recover()
-    {
-        NKY_RecoverData data = NKY_RecoverData.Create(null, 1);
-        Recover(data);
-    }
     public void Recover(NKY_RecoverData data)
     {
         if(IsDestroyed) return;
@@ -26,25 +21,33 @@ public class NKY_Health : NKY_DamageableResources, NKY_IRecoverable
 
         if(hasRecover)
         {
-            Debug.Log($"{recoverValue}만큼 힐을 받았습니다. 현재채력 : {calcValue}");
+            Debug.Log($"{recoverValue}??? ???? ???????. ??????? : {calcValue}");
             NKY_RecoverResultData resultData = NKY_RecoverResultData.Create(giver, recoverValue, Value);
-            OnRecovery?.Invoke(resultData);
+            OnRecover?.Invoke(resultData);
         }
 
 
     }
-
-    private void Start()
+    
+    //??? ??
+    [ContextMenu("Recover")]
+    public void Recover()
     {
-        SetDamageable(true);
-    }
+        NKY_RecoverData data = NKY_RecoverData.Create(null, 1);
+        if (IsDestroyed) return;
 
-    private void Hit(NKY_DamageData data)
-    {
-        
-    }
-    private void TakeDamage(NKY_DamageResultData data)
-    {
+        int recoverValue = data.recoverValue;
 
+        int lastValue = Value;
+        Value += recoverValue;
+        int calcValue = Value;
+        bool hasRecover = lastValue < calcValue;
+
+        if (hasRecover)
+        {
+            NKY_RecoverResultData resultData = NKY_RecoverResultData.Create(data.giver, recoverValue, calcValue);
+            OnRecover?.Invoke(resultData);
+        }
     }
+    
 }

@@ -1,3 +1,4 @@
+//이거 사용
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
 
