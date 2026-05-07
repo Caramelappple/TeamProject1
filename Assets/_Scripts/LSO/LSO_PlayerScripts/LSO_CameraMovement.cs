@@ -54,4 +54,6 @@ public class LSO_CameraMovement : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, target.position, speed * Time.deltaTime);
         transform.position = new Vector3(transform.position.x, transform.position.y, -10f);
     }
+    
+    CameraShake cameraShake;
 }

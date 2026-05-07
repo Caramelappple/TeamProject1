@@ -3,20 +3,20 @@ using UnityEngine;
 
 public class Test : MonoBehaviour,LSO_ISkill
 {
-    private float coolTime = 5f;
-    private bool canUseSkill = true;
+    private float _coolTime = 5f;
+    private bool _canUseSkill = true;
    
     public void UseSkill(GameObject player)
     {
-        if (!canUseSkill) return;
-        Debug.Log("Skill1 used");
-        //StartCoroutine(CoolTime(coolTime));
+        if (!_canUseSkill) return;
+        Debug.Log(player.gameObject.name);
+        StartCoroutine(CoolTime(_coolTime));
     }
     
     public IEnumerator CoolTime(float time)
     {
-        canUseSkill = true;
+        _canUseSkill = true;
         yield return new WaitForSeconds(time);
-        canUseSkill = false;
+        _canUseSkill = false;
     }
 }

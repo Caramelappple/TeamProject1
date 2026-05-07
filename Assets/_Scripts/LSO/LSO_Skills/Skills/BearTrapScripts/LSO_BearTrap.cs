@@ -3,6 +3,7 @@ using UnityEngine;
 public class LSO_BearTrap : MonoBehaviour
 {
     private Animator _animator;
+    
 
     private void Awake()
     {

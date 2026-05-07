@@ -18,8 +18,8 @@ public class LSO_PlayerMovement : MonoBehaviour
     
     LSO_SkillItem _skillItem;
     private LSO_ISkill _skill;
-    public event Action OnSkillEvent1;
-    public event Action OnSkillEvent2;
+    public event Action<GameObject> OnSkillEvent1;
+    public event Action<GameObject> OnSkillEvent2;
     
 
     private void Awake()
@@ -39,12 +39,12 @@ public class LSO_PlayerMovement : MonoBehaviour
     {
         if (Keyboard.current.qKey.isPressed)
         {
-            OnSkillEvent1?.Invoke();
+            OnSkillEvent1?.Invoke(gameObject);
         }
 
         if (Keyboard.current.eKey.isPressed)
         {
-            OnSkillEvent2?.Invoke();
+            OnSkillEvent2?.Invoke(gameObject);
         }
 
         if (Keyboard.current.fKey.isPressed && _skillItem != null)
