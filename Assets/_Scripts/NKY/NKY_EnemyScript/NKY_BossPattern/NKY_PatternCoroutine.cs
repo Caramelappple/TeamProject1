@@ -53,10 +53,11 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
         // --- ??????? ?? ???? ?????? ---
         public void OnAttackEvent()
         {
+            NKY_BossSkill bossSkill = GetComponentInChildren<NKY_BossSkill>();
             _HitBoxController?.ResetHit();
-            if (_attackEventQueue.Count > 0)
+            if (bossSkill._attackEventQueue.Count > 0)
             {
-                _attackEventQueue.Dequeue()?.Invoke();
+                bossSkill._attackEventQueue.Dequeue()?.Invoke();
             }
         }
 
@@ -64,7 +65,8 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
         {
             _attackEventQueue.Clear();
             _HitBoxController?.ResetHit();
-            foreach (var logic in attackLogics) _attackEventQueue.Enqueue(logic);
+            foreach (var logic in attackLogics) 
+                _attackEventQueue.Enqueue(logic);
             _anim.Play(animName);
             yield return StartCoroutine(WaitAnim(animName, 1.0f));
         }
@@ -74,6 +76,7 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
             _attackEventQueue.Clear();
             _HitBoxController?.ResetHit();
             _attackEventQueue.Enqueue(Logic);
+            OnAttackEvent();
             yield break;
         }
         
@@ -185,9 +188,10 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
 
         protected void HitToDamage(Collider2D target, int damage)
         {
-            if (target.TryGetComponent<NKY_Health>(out var health))
+            DamageData data = DamageData.Create(this.GetComponentInParent<Health>(), damage);
+            if (target.TryGetComponent<Health>(out var health))
             {
-                health.GetDamage(NKY_DamageData.Create(health, damage));
+                health.GetDamage(data);
             }
         }
     }

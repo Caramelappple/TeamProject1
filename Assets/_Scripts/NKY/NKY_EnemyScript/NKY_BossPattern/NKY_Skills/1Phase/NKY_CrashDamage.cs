@@ -6,7 +6,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
     {
         [SerializeField] LayerMask layerMask;
         private Collider2D col;
-        [SerializeField] private int damage;
+        public int damage;
     
         private ContactFilter2D filter;
 
@@ -21,9 +21,9 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.TryGetComponent<NKY_Health>(out NKY_Health health))
+            if (collision.TryGetComponent<Health>(out Health health))
             {
-                NKY_DamageData damageData = NKY_DamageData.Create(health, damage);
+                DamageData damageData = DamageData.Create(health, damage);
                 health.GetDamage(damageData);
             }
         }

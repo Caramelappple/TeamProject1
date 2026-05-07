@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using _Scripts.NKY._EnemyScript;
 using _Scripts.NKY._EnemyScript.BossPattern;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -14,7 +15,9 @@ public class NKY_ChargeSlash : NKY_BossSkill
     [SerializeField] private GameObject slashEffect;
     
     [Header("스킬 설정")]
-    [SerializeField] private int _damage;
+    [field: SerializeField] public override float damageScale { get; protected set; } = 3f;
+    
+    private int _damage;
 
     private void Start()
     {
@@ -24,6 +27,7 @@ public class NKY_ChargeSlash : NKY_BossSkill
         {
             particle.Stop();
         }
+        _damage = (int)damageScale * _bossBrain.GetComponent<NKY_Enemy>().damage;
     }
 
     public override IEnumerator Execute(Transform boss, Transform target)
@@ -36,7 +40,7 @@ public class NKY_ChargeSlash : NKY_BossSkill
                 ChargeEffect(swordEffect, attackSword, 1.5f),
                 ShowWarn(hitBox, 0.6f, () => hitBox.transform.position),
                 WaitUntilOrTime(() => false, 0.5f),
-                RotateSword(attackSword, swordPoint.transform.eulerAngles.z + 90f, swordPoint.transform.eulerAngles.z - 90f, -5f),
+                RotateSword(attackSword, swordPoint.transform.eulerAngles.z + 90f, swordPoint.transform.eulerAngles.z - 90f, -10f),
                 Attack(() => _HitBoxController.Cast(hitBox, (target) => HitToDamage(target, _damage))),
                 Effect(slashEffect, swordPoint)
             );
@@ -62,7 +66,7 @@ public class NKY_ChargeSlash : NKY_BossSkill
         float duration = currentDur;
         while (duration <= fromDuration)
         {
-            duration += Math.Abs(addDuration * 2);
+            duration += addDuration * -1;
             obj.transform.rotation = Quaternion.Euler(0f, 0f, duration);
             yield return  null;
         }

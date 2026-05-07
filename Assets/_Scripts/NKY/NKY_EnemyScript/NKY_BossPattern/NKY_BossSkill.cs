@@ -7,6 +7,8 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
     {
         protected NKY_BaseBoss _bossBrain;
         
+        public abstract float damageScale { get; protected set; }
+        
         public virtual void Init(NKY_BaseBoss boss)
         {
             _bossBrain = boss;
