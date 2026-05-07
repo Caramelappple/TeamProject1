@@ -4311,28 +4311,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: The Tarnished Widow 188x90 1_0
-      rect:
-        serializedVersion: 2
-        x: 2199
-        y: 176
-        width: 81
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 23fcd1c5eeb91c742bf0373390c5d0c2
-      internalID: 1184890471
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -4347,7 +4325,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      The Tarnished Widow 188x90 1_0: 1184890471
       The Tarnished Widow 188x90_0: 4864561353251435282
       The Tarnished Widow 188x90_1: 6130646480905901875
       The Tarnished Widow 188x90_10: 5137088950587118977

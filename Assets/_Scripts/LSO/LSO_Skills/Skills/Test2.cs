@@ -7,7 +7,7 @@ public class Test2 : MonoBehaviour,LSO_ISkill
     private float coolTime = 3f;
     private bool canUseSkill = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public void UseSkill()
+    public void UseSkill(GameObject player)
     {
         if (!canUseSkill) return;
         Debug.Log("Skill2 used");

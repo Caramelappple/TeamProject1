@@ -4,6 +4,7 @@ using System;
 
 public class LSO_PlayerMovement : MonoBehaviour
 {
+    private GameObject player;
     private static readonly int MoveX = Animator.StringToHash("MoveX");
     private static readonly int MoveY = Animator.StringToHash("MoveY");
     [SerializeField] private float speed = 3;
@@ -19,12 +20,14 @@ public class LSO_PlayerMovement : MonoBehaviour
     private LSO_ISkill _skill;
     public event Action OnSkillEvent1;
     public event Action OnSkillEvent2;
+    
 
     private void Awake()
     {
         _rigid = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         _sprite = GetComponent<SpriteRenderer>();
+        player = gameObject;
     }
     private void FixedUpdate()
     {
@@ -81,6 +84,11 @@ public class LSO_PlayerMovement : MonoBehaviour
         {
             _skillItem = touchedSkill;
         }
+    }
+    
+    public GameObject GetPlayer()
+    {
+        return player;
     }
 }
 

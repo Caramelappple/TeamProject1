@@ -6,7 +6,7 @@ public class Test : MonoBehaviour,LSO_ISkill
     private float coolTime = 5f;
     private bool canUseSkill = true;
    
-    public void UseSkill()
+    public void UseSkill(GameObject player)
     {
         if (!canUseSkill) return;
         Debug.Log("Skill1 used");

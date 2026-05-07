@@ -9,7 +9,7 @@ public class LSO_CameraMovement : MonoBehaviour
     private Transform originTarget;
     [SerializeField]private Transform[] bossTargets;
     
-    [SerializeField]private float speed = 1f;
+    [SerializeField]private float speed = 1.2f;
     private float originSpeed;
 
     [SerializeField]private bool test;
@@ -49,4 +49,9 @@ public class LSO_CameraMovement : MonoBehaviour
         isReturning = false;
     }
 
+    private void LateUpdate()
+    {
+        transform.position = Vector3.Lerp(transform.position, target.position, speed * Time.deltaTime);
+        transform.position = new Vector3(transform.position.x, transform.position.y, -10f);
+    }
 }
