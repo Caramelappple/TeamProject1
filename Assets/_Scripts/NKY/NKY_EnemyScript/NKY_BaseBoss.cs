@@ -8,6 +8,9 @@ namespace _Scripts.NKY._EnemyScript
     {
         protected GameObject _target;
 
+        protected int bossPhase = 1;
+        
+
         [Header("AI Settings")]
         [SerializeField] protected float _skillCooldown = 3.0f;
         protected float _lastSkillTime = -99f;
