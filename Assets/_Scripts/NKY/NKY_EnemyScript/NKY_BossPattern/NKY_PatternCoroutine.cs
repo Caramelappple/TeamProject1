@@ -11,7 +11,7 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
         private static readonly int Appear = Animator.StringToHash("Appear");
 
         //private static readonly int Vanish = Animator.StringToHash("Vanish");
-        protected NKY_HitBoxController nkyHitBoxController;
+        protected NKY_HitBoxController _HitBoxController;
         protected Animator _anim;
         protected NKY_ShadowController _shadow;
 
@@ -53,7 +53,7 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
         // --- ??????? ?? ???? ?????? ---
         public void OnAttackEvent()
         {
-            nkyHitBoxController?.ResetHit();
+            _HitBoxController?.ResetHit();
             if (_attackEventQueue.Count > 0)
             {
                 _attackEventQueue.Dequeue()?.Invoke();
@@ -63,10 +63,40 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
         protected IEnumerator ComboAttack(string animName, params System.Action[] attackLogics)
         {
             _attackEventQueue.Clear();
-            nkyHitBoxController?.ResetHit();
+            _HitBoxController?.ResetHit();
             foreach (var logic in attackLogics) _attackEventQueue.Enqueue(logic);
             _anim.Play(animName);
             yield return StartCoroutine(WaitAnim(animName, 1.0f));
+        }
+
+        protected IEnumerator Attack(System.Action Logic)
+        {
+            _attackEventQueue.Clear();
+            _HitBoxController?.ResetHit();
+            _attackEventQueue.Enqueue(Logic);
+            yield break;
+        }
+        
+        public IEnumerator DoShake(GameObject target, float duration, float power)
+        {
+            Vector3 originPos;
+            
+            originPos = target.transform.localPosition;
+
+            float timer = 0;
+
+            while (timer < duration)
+            {
+                Vector3 randomPos = Random.insideUnitSphere * power;
+
+                target.transform.localPosition = originPos + randomPos;
+
+                timer += Time.deltaTime;
+
+                yield return new WaitForSeconds(Time.deltaTime);
+            }
+
+            target.transform.localPosition = originPos;
         }
 
         // --- ??? ?? ???? ?????? ---

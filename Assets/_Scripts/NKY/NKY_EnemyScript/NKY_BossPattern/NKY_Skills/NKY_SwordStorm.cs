@@ -8,7 +8,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
     public class NKY_SwordStorm : NKY_BossSkill
     {
         [SerializeField] private Transform[] spawnPoints;
-        public GameObject swordPrefab;
+        [SerializeField] private GameObject swordPrefab;
         private Queue<GameObject> swordQueue = new Queue<GameObject>();
         
         [SerializeField] private float spawnInterval = 0.3f;

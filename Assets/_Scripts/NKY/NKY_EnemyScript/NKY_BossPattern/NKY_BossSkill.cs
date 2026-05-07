@@ -12,7 +12,7 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
             _bossBrain = boss;
             _anim = boss.GetComponent<Animator>();
             _shadow = boss.GetComponentInChildren<NKY_ShadowController>();
-            nkyHitBoxController = boss.GetComponent<NKY_HitBoxController>();
+            _HitBoxController = boss.GetComponent<NKY_HitBoxController>();
         }
         public abstract IEnumerator Execute(Transform boss, Transform target);
     }

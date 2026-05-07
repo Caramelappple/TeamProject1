@@ -41,25 +41,12 @@ namespace _Scripts.NKY.Manager
         }
         public void ShowIndicator(Collider2D col, Vector2 position , float duration)
         {
-            /*Quaternion rotate = col.transform.rotation;
-            Vector2 size = col.bounds.size;
-            if (_pool.Count == 0) return;
-
-            GameObject obj = _pool.Dequeue();
-
-            // 위치와 크기 설정
-            obj.transform.rotation = rotate;
-            obj.transform.position = position;
-            obj.transform.localScale = size;
-            obj.SetActive(true);
-
-            StartCoroutine(HideIndicator(obj, duration));*/
-
             Quaternion rotate = col.transform.rotation;
             
             Vector2 realSize = Vector2.one;
+            
 
-            string targetPrefabName = _indicatorPrefab[0].name;
+            string targetPrefabName;
             
             if (col is BoxCollider2D box)
             {
@@ -77,6 +64,10 @@ namespace _Scripts.NKY.Manager
                 realSize = capsule.size;
                 targetPrefabName = _indicatorPrefab[2].name;
             }
+            else
+            {
+                targetPrefabName = _indicatorPrefab[3].name;
+            }
             
             if (string.IsNullOrEmpty(targetPrefabName) || !_pool.ContainsKey(targetPrefabName) || _pool[targetPrefabName].Count == 0) 
                 return;
@@ -86,11 +77,21 @@ namespace _Scripts.NKY.Manager
             
             GameObject obj = _pool[targetPrefabName].Dequeue();
 
-            obj.transform.rotation = rotate;
-            obj.transform.position = position;
+            if (targetPrefabName.Equals(_indicatorPrefab[3].name))
+            {
+                MeshFilter meshFilter = obj.GetComponent<MeshFilter>();
+                
+                Mesh mesh = col.CreateMesh(true, true);
+                
+                meshFilter.mesh = mesh;
+            }
+            else
+            {
+                obj.transform.rotation = rotate;
+                obj.transform.localScale = new Vector3(realSize.x, realSize.y, 1f);
+            }
             
-            obj.transform.localScale = new Vector3(realSize.x, realSize.y, 1f);
-    
+            obj.transform.position = position;
             obj.SetActive(true);
 
             StartCoroutine(HideIndicator(obj, duration, targetPrefabName));

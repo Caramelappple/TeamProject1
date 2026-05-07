@@ -14,6 +14,9 @@ namespace _Scripts.NKY._EnemyScript
 
         protected override void OnAwake()
         {
+            _HitBoxController = GetComponent<NKY_HitBoxController>();
+            _anim = GetComponent<Animator>();
+            _shadow = GetComponent<NKY_ShadowController>();
             _target = playerReference.gameObject;
 
             if (_skills != null)
@@ -59,11 +62,13 @@ namespace _Scripts.NKY._EnemyScript
         protected override IEnumerator PickNextSkill()
         {
             NKY_BossSkill selectedSkill = _skills[0];
-            float randomSkill = Random.Range(0f, 100f);
+            /*float randomSkill = Random.Range(0f, 100f);
             if(randomSkill < 50)
                 selectedSkill = _skills[0];
             else if(randomSkill >= 50)
-                selectedSkill = _skills[1];
+                selectedSkill = _skills[1];*/
+            
+            selectedSkill = _skills[Random.Range(0, _skills.Length)];
 
             return selectedSkill.Execute(transform, _target.transform);
         }

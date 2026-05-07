@@ -39,10 +39,10 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
                     ComboAttack("StationaryAttack",
                         () =>
                         {
-                            nkyHitBoxController.Cast(_slamHitbox[0], (target) => HitToDamage(target, (int)_damage));
-                            nkyHitBoxController.Cast(_slamHitbox[2], (target) => HitToDamage(target, (int)_damage));
+                            _HitBoxController.Cast(_slamHitbox[0], (target) => HitToDamage(target, (int)_damage));
+                            _HitBoxController.Cast(_slamHitbox[2], (target) => HitToDamage(target, (int)_damage));
                         },
-                        () => nkyHitBoxController.Cast(_slamHitbox[1], (target) => HitToDamage(target, (int)_damage))
+                        () => _HitBoxController.Cast(_slamHitbox[1], (target) => HitToDamage(target, (int)_damage))
                     ),
                     ShadowLock(false),
                     WaitUntilOrTime(() => false, 0.8f)
