@@ -1,11 +1,13 @@
-using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
+using UnityEngine;
 
 public class KDH_SkillUpdate : MonoBehaviour
 {
     public List<KDH_SkillData> allSkills;      // AllSkills 칸
     public List<KDH_SkillData> hadSkillData;   // HadSkillData 칸
+    public KDH_SkillSystem skillSystem;
 
     public KDH_SkillCardUI skillCardUI1;       // SkillCard UI1 칸
     public KDH_SkillCardUI skillCardUI2;       // SkillCard UI2 칸
@@ -32,18 +34,53 @@ public class KDH_SkillUpdate : MonoBehaviour
         selectionPanel.SetActive(true);
         Time.timeScale = 0f;
     }
+    public TextMeshProUGUI globalSkillInfoText; // 인스펙터에서 '스킬데이터 툴' 드래그
 
     public void SelectSkill(KDH_SkillData selected)
     {
-        hadSkillData.Add(selected);
+        if (selected == null) return;
 
-        // 스킬바에 프리펩 생성
-        if (selected.skillIConPrefabs != null)
+        // 1. 배운 스킬 리스트에 추가
+        if (!hadSkillData.Contains(selected))
         {
-            Instantiate(selected.skillIConPrefabs, skillBarParent);
+            hadSkillData.Add(selected);
         }
 
-        // 패널 끄고 게임 재개
+        // 2. [생성 및 연결] 스킬바에 아이콘 프리팹 생성
+        if (selected.skillIConPrefabs != null)
+        {
+            // 아이콘 생성
+            GameObject iconObj = Instantiate(selected.skillIConPrefabs, skillBarParent);
+
+            // 생성된 아이콘 스크립트 가져오기
+            KDH_Skill skillScript = iconObj.GetComponent<KDH_Skill>();
+
+            if (skillScript != null)
+            {
+                // 생성된 아이콘에게 씬에 있는 텍스트 주소를 알려줌
+                skillScript.SetTextReference(globalSkillInfoText);
+
+                // SkillSystem의 빈 슬롯에 생성된 이 스크립트를 연결
+                if (skillSystem != null && skillSystem.skills != null)
+                {
+                    for (int i = 0; i < skillSystem.skills.Length; i++)
+                    {   
+                        if (skillSystem.skills[i] == null)
+                        {
+                            // 방금 만든 스크립트를 슬롯에 직접 등록
+                            skillSystem.skills[i] = skillScript;
+
+                            // 실제 스킬 로직 프리팹도 함께 넣어줌
+                            skillScript.skills = selected.skillPrefab;
+
+                            Debug.Log($"{i}번 슬롯에 {selected.skillName} 자동 등록 완료!");
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
         selectionPanel.SetActive(false);
         Time.timeScale = 1f;
     }

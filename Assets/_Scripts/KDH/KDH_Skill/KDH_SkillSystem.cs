@@ -7,8 +7,9 @@ public class KDH_SkillSystem : MonoBehaviour
 {
     [SerializeField]
     private GraphicRaycaster graphicRaycaster;
+    [Header ("스킬의 개수가 배열의 크기보다 더 크면 배열의 크기를 늘리면 되")]
     [SerializeField]
-    private KDH_Skill[] skills; //스킬 장착창(슬롯) <- 여기서 얻은 스킬을 설정하여 사용하면 되
+    public KDH_Skill[] skills; //스킬 장착창(슬롯) <- 여기서 얻은 스킬을 설정하여 사용하면 되
 
     private List<RaycastResult> raycastResults;
     private PointerEventData pointerEventData;
@@ -76,14 +77,14 @@ public class KDH_SkillSystem : MonoBehaviour
                 skills[i] = newSkill;
                 Debug.Log($"{i}번 슬롯에 {newSkill.name} 장착 완료!");
                 isAdded = true;
-                break; // 등록했으니 루프 탈출
+                break;
             }
         }
 
         if (!isAdded)
         {
             Debug.Log("더 이상 스킬을 장착할 공간이 없습니다.");
-            // 자리가 없으면 생성된 프리팹을 다시 삭제 (선택 사항)
+            // 자리가 없으면 생성된 프리팹을 다시 삭제
             Destroy(newSkill.gameObject);
         }
     }

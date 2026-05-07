@@ -8,6 +8,7 @@ public class KDH_SkillCardUI : MonoBehaviour
     public Image iconImage;           // Icon Image 칸
     public TextMeshProUGUI nameText;  // Name Text 칸
     public TextMeshProUGUI descText;  // Desc Text 칸
+    public GameObject skillPrefab;
 
     private KDH_SkillUpdate manager;
 
@@ -18,9 +19,10 @@ public class KDH_SkillCardUI : MonoBehaviour
 
         if (data != null)
         {
-            if (iconImage != null) iconImage.sprite = data.skillIcon; // 스킬 선택창에서 바뀌는 부분
-            if (nameText != null) nameText.text = data.skillName; // 스킬 선택창에서 바뀌는 부분
-            if (descText != null) descText.text = data.skillDescription; // 스킬 선택창에서 바뀌는 부분
+            if (mySkillData != null) skillPrefab = data.skillPrefab; // 스킬 선택창에서 바뀌는 부분 (스킬 Prefab) 
+            if (iconImage != null) iconImage.sprite = data.skillIcon; // 스킬 선택창에서 바뀌는 부분 (스킬 아이콘)
+            if (nameText != null) nameText.text = data.skillName; // 스킬 선택창에서 바뀌는 부분 (스킬의 이름)
+            if (descText != null) descText.text = data.skillDescription; // 스킬 선택창에서 바뀌는 부분 (스킬의 설명)
         }
     }
 

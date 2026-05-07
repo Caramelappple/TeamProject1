@@ -57,6 +57,7 @@ MonoBehaviour:
   textSkillData: {fileID: 0}
   textCooldownTime: {fileID: 6132417542341670738}
   imageCooldownTime: {fileID: 9107017392033584555}
+  skills: {fileID: 5789124702854420030, guid: 668769141a5e5484d89dd70479f7655a, type: 3}
 --- !u!222 &4289221372412163841
 CanvasRenderer:
   m_ObjectHideFlags: 0
