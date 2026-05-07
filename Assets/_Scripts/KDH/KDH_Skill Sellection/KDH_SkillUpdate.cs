@@ -1,76 +1,50 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 public class KDH_SkillUpdate : MonoBehaviour
 {
-    [SerializeField] private KDH_SkillData[] skills = new KDH_SkillData[4];
-    [SerializeField] private KDH_SkillCardUI skillCardUI;
-    [SerializeField] private KDH_SkillCardUI skillCardUIanother;
-    [SerializeField] private int randomSkill;
+    public List<KDH_SkillData> allSkills;      // AllSkills 칸
+    public List<KDH_SkillData> hadSkillData;   // HadSkillData 칸
 
-    // 이미 선택된 스킬의 인덱스를 저장하는 리스트
-    [SerializeField] private List<int> selectedIndexes = new List<int>();
+    public KDH_SkillCardUI skillCardUI1;       // SkillCard UI1 칸
+    public KDH_SkillCardUI skillCardUI2;       // SkillCard UI2 칸
+    public GameObject selectionPanel;          // Selection Panel 칸
 
-    private void OnEnable()
+    public Transform skillBarParent;           // SkillBar Parent 칸
+
+    // 노란 오브젝트 충돌 시 이 함수를 호출
+    public void ShowSkillSelection()
     {
-        RollSkill();
+        // 이미 배운 스킬 제외하고 리스트 만들기
+        List<KDH_SkillData> availableSkills = allSkills.Except(hadSkillData).ToList();
+
+        if (availableSkills.Count < 2) return;
+
+        // 랜덤으로 2개 뽑기
+        List<KDH_SkillData> chosen = availableSkills.OrderBy(x => Random.value).Take(2).ToList();
+
+        // UI 셋업
+        skillCardUI1.SetUp(chosen[0], this);
+        skillCardUI2.SetUp(chosen[1], this);
+
+        // 패널 켜기 및 시간 정지
+        selectionPanel.SetActive(true);
+        Time.timeScale = 0f;
     }
 
-    private void OnDisable()
+    public void SelectSkill(KDH_SkillData selected)
     {
-        skillCardUI.mySkillData = null;
-    }
+        hadSkillData.Add(selected);
 
-    public void RollSkill()
-    {
-        // 모든 스킬을 다 뽑았다면 초기화
-        if (selectedIndexes.Count >= skills.Length)
+        // 스킬바에 프리펩 생성
+        if (selected.skillIConPrefabs != null)
         {
-            selectedIndexes.Clear();
+            Instantiate(selected.skillIConPrefabs, skillBarParent);
         }
 
-        int safetyNet = 0; // 무한 루프 방지용
-        while (safetyNet < 100)
-        {
-            randomSkill = Random.Range(0, skills.Length);
-            KDH_SkillData selectedData = skills[randomSkill];
-
-            // 이전에 이미 선택해서 리스트에 들어있는가? (이전 판 중복 방지)
-            // 현재 옆에 있는 카드(skillCardUIanother)에 이미 들어있는 데이터인가? (현재 화면 중복 방지)
-            bool isAlreadySelected = selectedIndexes.Contains(randomSkill);
-            bool isShowingInOtherCard = (skillCardUIanother.mySkillData == selectedData);
-
-            if (!isAlreadySelected && !isShowingInOtherCard)
-            {
-                selectedIndexes.Add(randomSkill);
-                break;
-            }
-            safetyNet++;
-        }
-
-        ApplySkillToUI();
-    }
-
-    private void ApplySkillToUI()
-    {
-        if (skillCardUI != null && skills.Length > 0)
-        {
-            KDH_SkillData data = skills[randomSkill];
-
-            skillCardUI.mySkillData = data;
-            skillCardUI.descText.text = data.skillDescription;
-
-            // 이미지 업데이트
-            if (skillCardUI.iconImage != null)
-            {
-                skillCardUI.iconImage.sprite = data.skillIcon;
-            }
-        }
-    }
-
-    // 게임을 새로 시작하거나 초기화하고 싶을 때
-    public void ResetSelection()
-    {
-        selectedIndexes.Clear();
+        // 패널 끄고 게임 재개
+        selectionPanel.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
