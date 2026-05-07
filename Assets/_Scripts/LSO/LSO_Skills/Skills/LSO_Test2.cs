@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Test2 : MonoBehaviour,LSO_ISkill
+public class LSO_Test2 : MonoBehaviour,LSO_ISkill
 {
     private float coolTime = 3f;
     private bool canUseSkill = true;

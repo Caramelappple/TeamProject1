@@ -25,8 +25,17 @@ public class LSO_SkillItem : MonoBehaviour
         _prefab = skillData.skillPrefab;
     }
     
+    // LSO_SkillItem.cs
     public void DestroyGroup()
     {
-        Destroy(transform.parent.gameObject);
+        // 스킬 오브젝트를 부모에서 분리해서 살려둠
+        if (_skill != null)
+        {
+            GameObject skillObj = (_skill as MonoBehaviour).gameObject;
+            skillObj.transform.parent = null;
+            skillObj.SetActive(false); // 안보이게만 해둠
+        }
+    
+        Destroy(transform.parent.gameObject); // 나머지 그룹만 삭제
     }
 }

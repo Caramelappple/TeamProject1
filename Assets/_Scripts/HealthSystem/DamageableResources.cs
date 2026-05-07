@@ -1,11 +1,11 @@
 //이거 사용
 using System;
-using Unity.VisualScripting;
+using _Scripts.HealthSystem;
 using UnityEngine;
 
-public class NKY_DamageableResources : MonoBehaviour
+public class DamageableResources : MonoBehaviour
 {
-    [SerializeField] private NKY_DamageableResourceSO _data;
+    [SerializeField] private DamageableResourceSO _data;
     [field : SerializeField] public int MaxValue { get; private set; }
     [field: SerializeField]  public int MinValue { get; private set; }
     public int Value
@@ -29,8 +29,8 @@ public class NKY_DamageableResources : MonoBehaviour
 
     public bool IsDamageable { get; private set; } = true;
     
-    public event Action<NKY_DamageResultData> OnDamage;
-    public event Action<NKY_DamageData> OnHit;
+    public event Action<DamageResultData> OnDamage;
+    public event Action<DamageData> OnHit;
 
     [SerializeField] private int _value;
     
@@ -58,12 +58,12 @@ public class NKY_DamageableResources : MonoBehaviour
     }
     
     
-    public virtual void GetDamage(NKY_DamageData data)
+    public virtual void GetDamage(DamageData data)
     {
-        NKY_DamageData damagedata = data;
+        DamageData damagedata = data;
         OnHit?.Invoke(damagedata);
         int damage = data.damage;
-        NKY_Health giver = data.giver;
+        Health giver = data.giver;
 
         if(IsDestroyed || !IsDamageable) return;
         int listValue = Value;
@@ -73,7 +73,7 @@ public class NKY_DamageableResources : MonoBehaviour
 
         if (hasDamage)
         {
-            NKY_DamageResultData resultData = NKY_DamageResultData.Create(giver, damage, Value);
+            DamageResultData resultData = DamageResultData.Create(giver, damage, Value);
             OnDamage?.Invoke(resultData);
         }
     }

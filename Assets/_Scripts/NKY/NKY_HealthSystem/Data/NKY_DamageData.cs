@@ -1,3 +1,4 @@
+//이거 사용
 using UnityEngine;
 
 public readonly struct NKY_DamageData

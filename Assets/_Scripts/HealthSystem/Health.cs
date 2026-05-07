@@ -3,16 +3,16 @@ using _Scripts.HealthSystem;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class NKY_Health : NKY_DamageableResources, NKY_IRecoverable
+public class Health : DamageableResources, IRecoverable
 {
-    public event Action<NKY_RecoverResultData> OnRecover;
+    public event Action<RecoverResultData> OnRecover;
 
-    public void Recover(NKY_RecoverData data)
+    public void Recover(RecoverData data)
     {
         if(IsDestroyed) return;
 
         int recoverValue = data.recoverValue;
-        NKY_Health giver = data.giver;
+        Health giver = data.giver;
 
         int lastValue = Value;
         Value += recoverValue;
@@ -22,7 +22,7 @@ public class NKY_Health : NKY_DamageableResources, NKY_IRecoverable
         if(hasRecover)
         {
             Debug.Log($"{recoverValue}??? ???? ???????. ??????? : {calcValue}");
-            NKY_RecoverResultData resultData = NKY_RecoverResultData.Create(giver, recoverValue, Value);
+            RecoverResultData resultData = RecoverResultData.Create(giver, recoverValue, Value);
             OnRecover?.Invoke(resultData);
         }
 
@@ -33,7 +33,7 @@ public class NKY_Health : NKY_DamageableResources, NKY_IRecoverable
     [ContextMenu("Recover")]
     public void Recover()
     {
-        NKY_RecoverData data = NKY_RecoverData.Create(null, 1);
+        RecoverData data = RecoverData.Create(null, 1);
         if (IsDestroyed) return;
 
         int recoverValue = data.recoverValue;
@@ -45,7 +45,7 @@ public class NKY_Health : NKY_DamageableResources, NKY_IRecoverable
 
         if (hasRecover)
         {
-            NKY_RecoverResultData resultData = NKY_RecoverResultData.Create(data.giver, recoverValue, calcValue);
+            RecoverResultData resultData = RecoverResultData.Create(data.giver, recoverValue, calcValue);
             OnRecover?.Invoke(resultData);
         }
     }

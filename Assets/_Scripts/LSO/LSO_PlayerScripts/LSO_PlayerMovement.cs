@@ -4,7 +4,6 @@ using System;
 
 public class LSO_PlayerMovement : MonoBehaviour
 {
-    private GameObject player;
     private static readonly int MoveX = Animator.StringToHash("MoveX");
     private static readonly int MoveY = Animator.StringToHash("MoveY");
     [SerializeField] private float speed = 3;
@@ -27,10 +26,9 @@ public class LSO_PlayerMovement : MonoBehaviour
         _rigid = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         _sprite = GetComponent<SpriteRenderer>();
-        player = gameObject;
     }
     private void FixedUpdate()
-    {
+    { 
         _rigid.linearVelocity = _moveDir * speed;
         Animator.SetBool(MoveX, _moveDir.x != 0);
     }
@@ -84,11 +82,6 @@ public class LSO_PlayerMovement : MonoBehaviour
         {
             _skillItem = touchedSkill;
         }
-    }
-    
-    public GameObject GetPlayer()
-    {
-        return player;
     }
 }
 
