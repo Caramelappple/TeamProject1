@@ -1,25 +1,27 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
 public class LSO_Bombing : MonoBehaviour,LSO_ISkill
 {
+    private static readonly int Explode = Animator.StringToHash("Explode");
     private LSO_PlayerMovement _playerMovement;
     [SerializeField] private GameObject effect;
-    private GameObject _effectInstance;
-    private bool _canUse = true;
-    private float _coolTime = 10f;
-    private GameObject _player;
     
+    private bool _canUse = true;
+    private readonly float _waitTime = 0.6f;
+    [SerializeField]private float coolTime = 5f;
+    
+    private GameObject _effectInstance;
     private Animator _animator;
-
+    
+    [SerializeField]private int selfDamage = 30;
+    [SerializeField]private int damage = 80;
+    
     public void UseSkill(GameObject player)
     {
-        _player = player;
-        
         if (!_canUse) return;
-        
-        if (!_effectInstance)
+
+        if (!_effectInstance || !_animator)
         {
             _effectInstance = Instantiate(effect, player.transform.position, transform.rotation);
             _animator = _effectInstance.GetComponent<Animator>();
@@ -30,35 +32,35 @@ public class LSO_Bombing : MonoBehaviour,LSO_ISkill
             _effectInstance.SetActive(true);
         }
 
-        _animator.SetTrigger("Explode");
-        player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
-    }
-
-    private void FixedUpdate()
-    {
-        if (!_animator || !_effectInstance) return;
-
-        AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
-        if (stateInfo.IsName("Bombing") && stateInfo.normalizedTime >= 0.95f)
+        // 자기 자신 데미지
+        if (player.TryGetComponent<Health>(out Health health))
         {
-            _effectInstance.SetActive(false);
+            DamageData data = DamageData.Create(health, selfDamage);
+            health.GetDamage(data);
         }
+
+        _animator.SetTrigger(Explode);
+        player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(coolTime));
     }
 
-    private void Update()
-    {
-        if (!_player || _canUse || _effectInstance) return;
-        Collider2D[] collider2Ds = Physics2D.OverlapCircleAll(_effectInstance.transform.position,10, 0);
-        foreach (Collider2D collision in collider2Ds)
-        {
-                Debug.Log(collision.name);
-        }
-    }
-
-    public IEnumerator CoolTime(float time)
+    public IEnumerator CoolTime(float coolTime)
     {
         _canUse = false;
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(_waitTime); // 애니메이션 끝날 때까지 대기
+
+        // 폭발 위치 기준으로 범위 데미지
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(_effectInstance.transform.position, 4);
+        foreach (Collider2D collision in colliders)
+        {
+            if (collision.CompareTag("Enemy") && collision.TryGetComponent<Health>(out Health enemyHealth))
+            {
+                DamageData data = DamageData.Create(enemyHealth, damage);
+                enemyHealth.GetDamage(data);
+            }
+        }
+
+        _effectInstance.SetActive(false);
+        yield return new WaitForSeconds(coolTime);//쿨타임 대기
         _canUse = true;
     }
 }

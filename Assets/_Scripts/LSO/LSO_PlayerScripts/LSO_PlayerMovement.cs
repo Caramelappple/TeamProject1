@@ -13,20 +13,24 @@ public class LSO_PlayerMovement : MonoBehaviour
     private Vector2 _moveDir;
     protected Vector2 LastDir = Vector2.down;
     private Rigidbody2D _rigid;
-    private bool isDashing;
     
     LSO_SkillItem _skillItem;
     private LSO_ISkill _skill;
-    public event Action<GameObject> OnSkillEvent1;
-    public event Action<GameObject> OnSkillEvent2;
+    public Action<GameObject>[] OnSkillEvent;
     
-
     private void Awake()
     {
         _rigid = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         _sprite = GetComponent<SpriteRenderer>();
+        //OnSkillEvent = new Action<GameObject>[LSO_SkillSlot.instance.slotIndex];
     }
+
+    private void Start()
+    {
+        OnSkillEvent = new Action<GameObject>[LSO_SkillSlot.instance.slotIndex];
+    }
+
     private void FixedUpdate()
     { 
         _rigid.linearVelocity = _moveDir * speed;
@@ -35,32 +39,26 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (OnSkillEvent == null) return;
+        
         if (Keyboard.current.qKey.isPressed)
         {
-            OnSkillEvent1?.Invoke(gameObject);
+            OnSkillEvent[0]?.Invoke(gameObject);
         }
 
         if (Keyboard.current.eKey.isPressed)
         {
-            OnSkillEvent2?.Invoke(gameObject);
+            OnSkillEvent[1]?.Invoke(gameObject);
         }
 
-        if (Keyboard.current.fKey.isPressed && _skillItem != null)
+        if (Keyboard.current.fKey.isPressed && _skillItem)
         {
-            _skill = _skillItem._skill;
-            LSO_SkillSlot.instance.AddSkill(_skill, 0);
-            
-            _skillItem.DestroyGroup(); // 그룹 전체 삭제
-            _skillItem = null;
+            LSO_SkillSlot.instance.AddSkill(_skillItem, 0);
         }
 
-        if (Keyboard.current.rKey.isPressed && _skillItem != null)
+        if (Keyboard.current.rKey.isPressed && _skillItem)
         {
-            _skill = _skillItem._skill;
-            LSO_SkillSlot.instance.AddSkill(_skill, 1);
-            
-            _skillItem.DestroyGroup(); // 그룹 전체 삭제
-            _skillItem = null;
+            LSO_SkillSlot.instance.AddSkill(_skillItem, 1);
         }
     }
 

@@ -10,7 +10,7 @@ public class LSO_Test : MonoBehaviour,LSO_ISkill
     {
         if (!_canUseSkill) return;
         Debug.Log(player.gameObject.name);
-        StartCoroutine(CoolTime(_coolTime));
+        player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
     }
     
     public IEnumerator CoolTime(float time)
