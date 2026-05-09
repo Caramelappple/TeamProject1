@@ -8,7 +8,10 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
     public abstract class NKY_PatternCoroutine : MonoBehaviour
     {
         private static readonly int Vanish = Animator.StringToHash("Vanish");
-        protected NKY_HitBoxController nkyHitBoxController;
+        private static readonly int Appear = Animator.StringToHash("Appear");
+
+        //private static readonly int Vanish = Animator.StringToHash("Vanish");
+        protected NKY_HitBoxController _HitBoxController;
         protected Animator _anim;
         protected NKY_ShadowController _shadow;
 
@@ -16,10 +19,6 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
         private Queue<System.Action> _attackEventQueue = new Queue<System.Action>();
         protected void Awake()
         {
-            nkyHitBoxController = GetComponent<NKY_HitBoxController>();
-            _anim = GetComponent<Animator>();
-            _shadow = GetComponentInChildren<NKY_ShadowController>();
-
             OnAwake();
         }
 
@@ -54,20 +53,53 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
         // --- ??????? ?? ???? ?????? ---
         public void OnAttackEvent()
         {
-            nkyHitBoxController?.ResetHit();
-            if (_attackEventQueue.Count > 0)
+            NKY_BossSkill bossSkill = GetComponentInChildren<NKY_BossSkill>();
+            _HitBoxController?.ResetHit();
+            if (bossSkill._attackEventQueue.Count > 0)
             {
-                _attackEventQueue.Dequeue()?.Invoke();
+                bossSkill._attackEventQueue.Dequeue()?.Invoke();
             }
         }
 
         protected IEnumerator ComboAttack(string animName, params System.Action[] attackLogics)
         {
             _attackEventQueue.Clear();
-            nkyHitBoxController?.ResetHit();
-            foreach (var logic in attackLogics) _attackEventQueue.Enqueue(logic);
+            _HitBoxController?.ResetHit();
+            foreach (var logic in attackLogics) 
+                _attackEventQueue.Enqueue(logic);
             _anim.Play(animName);
             yield return StartCoroutine(WaitAnim(animName, 1.0f));
+        }
+
+        protected IEnumerator Attack(System.Action Logic)
+        {
+            _attackEventQueue.Clear();
+            _HitBoxController?.ResetHit();
+            _attackEventQueue.Enqueue(Logic);
+            OnAttackEvent();
+            yield break;
+        }
+        
+        public IEnumerator DoShake(GameObject target, float duration, float power)
+        {
+            Vector3 originPos;
+            
+            originPos = target.transform.localPosition;
+
+            float timer = 0;
+
+            while (timer < duration)
+            {
+                Vector3 randomPos = Random.insideUnitSphere * power;
+
+                target.transform.localPosition = originPos + randomPos;
+
+                timer += Time.deltaTime;
+
+                yield return new WaitForSeconds(Time.deltaTime);
+            }
+
+            target.transform.localPosition = originPos;
         }
 
         // --- ??? ?? ???? ?????? ---
@@ -102,7 +134,7 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
             _anim.SetTrigger(Vanish);
             yield return StartCoroutine(WaitAnim("Vanish", 1f));
             from.position = to;
-            _anim.SetTrigger("Appear");
+            _anim.SetTrigger(Appear);
             yield return StartCoroutine(WaitAnim("Appear", 0.6f));
         }
 
@@ -156,9 +188,10 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
 
         protected void HitToDamage(Collider2D target, int damage)
         {
-            if (target.TryGetComponent<NKY_Health>(out var health))
+            DamageData data = DamageData.Create(this.GetComponentInParent<Health>(), damage);
+            if (target.TryGetComponent<Health>(out var health))
             {
-                health.GetDamage(NKY_DamageData.Create(health, damage));
+                health.GetDamage(data);
             }
         }
     }
