@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8773f318bcad4b0494a1f3014b8d7342, type: 3}
-  m_Name: pls
+  m_Name: Enemyhelah
   m_EditorClassIdentifier: Assembly-CSharp::DamageableResourceSO
   <maxValue>k__BackingField: 100
   <minValue>k__BackingField: 0

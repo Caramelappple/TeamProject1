@@ -4,15 +4,15 @@ using UnityEngine;
 public class LSO_Bombing : MonoBehaviour,LSO_ISkill
 {
     private static readonly int Explode = Animator.StringToHash("Explode");
+    private Animator _animator;
     private LSO_PlayerMovement _playerMovement;
-    [SerializeField] private GameObject effect;
-    
     private bool _canUse = true;
+    
+    [SerializeField] private GameObject effect;
+    private GameObject _effectInstance;
+    
     private readonly float _waitTime = 0.6f;
     [SerializeField]private float coolTime = 5f;
-    
-    private GameObject _effectInstance;
-    private Animator _animator;
     
     [SerializeField]private int selfDamage = 30;
     [SerializeField]private int damage = 80;

@@ -11,7 +11,7 @@ public class LSO_PlayerMovement : MonoBehaviour
     private SpriteRenderer _sprite;
     
     private Vector2 _moveDir;
-    protected Vector2 LastDir = Vector2.down;
+    public Vector2 lastDir = Vector2.down;
     private Rigidbody2D _rigid;
     
     LSO_SkillItem _skillItem;
@@ -34,7 +34,6 @@ public class LSO_PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     { 
         _rigid.linearVelocity = _moveDir * speed;
-        Animator.SetBool(MoveX, _moveDir.x != 0);
     }
 
     private void Update()
@@ -65,13 +64,27 @@ public class LSO_PlayerMovement : MonoBehaviour
     private void OnMove(InputValue value)
     {
         _moveDir = value.Get<Vector2>();
-        if (_moveDir != Vector2.zero)
-            LastDir = _moveDir;
+        if (_moveDir != Vector2.zero)//움직였을때
+            lastDir = _moveDir;
+        
         if (_moveDir.x != 0)
         {
             _sprite.flipX = _moveDir.x < 0;
         }
-        Animator.SetFloat(MoveY, _moveDir.y);
+        
+        if (lastDir.x != 0 && lastDir.y != 0) //대각선으로 움직였을때
+        {
+            lastDir = new Vector2(Mathf.Sign(lastDir.x), 0);
+            Debug.Log(lastDir);
+            
+            Animator.SetFloat(MoveY, 0);
+            Animator.SetBool(MoveX, _moveDir.x != 0);
+        }
+        else
+        {
+            Animator.SetFloat(MoveY, _moveDir.y);
+            Animator.SetBool(MoveX, _moveDir.x != 0);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
