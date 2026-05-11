@@ -20,7 +20,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 
         private void Start()
         {
-            _damage = (int)damageScale * _bossBrain.GetComponent<NKY_Enemy>().damage;
+            _damage = (int)(damageScale * _bossBrain.GetComponent<NKY_Enemy>().damage);
         }
 
         public override IEnumerator Execute(Transform boss, Transform target)
@@ -47,9 +47,9 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
                     WaitUntilOrTime(() => false, 0.15f),
                     MoveTo(boss, targetPos, 0.2f),
                     ComboAttack("StationaryAttack",
-                        () => _HitBoxController.Cast(slamHitbox[2], (target) => HitToDamage(target, (int)_damage)),
-                        () => _HitBoxController.Cast(slamHitbox[0], (target) => HitToDamage(target, (int)_damage)),
-                        () => _HitBoxController.Cast(slamHitbox[1], (target) => HitToDamage(target, (int)_damage))
+                        () => _HitBoxController.Cast(slamHitbox[2], (hitTarget) => HitToDamage(hitTarget, _damage)),
+                        () => _HitBoxController.Cast(slamHitbox[0], (hitTarget) => HitToDamage(hitTarget, _damage)),
+                        () => _HitBoxController.Cast(slamHitbox[1], (hitTarget) => HitToDamage(hitTarget, _damage))
                     ),
                     ShadowLock(false),
                     WaitUntilOrTime(() => false, 0.8f)

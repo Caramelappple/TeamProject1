@@ -64,7 +64,7 @@ public class DamageableResources : MonoBehaviour
         OnHit?.Invoke(damagedata);
         int damage = data.damage;
         Health giver = data.giver;
-
+        
         if(IsDestroyed || !IsDamageable) return;
         int listValue = Value;
         Value -= damage;

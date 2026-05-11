@@ -41,7 +41,7 @@ public class NKY_ChargeSlash : NKY_BossSkill
                 ShowWarn(hitBox, 0.6f, () => hitBox.transform.position),
                 WaitUntilOrTime(() => false, 0.5f),
                 RotateSword(attackSword, swordPoint.transform.eulerAngles.z + 90f, swordPoint.transform.eulerAngles.z - 90f, -10f),
-                Attack(() => _HitBoxController.Cast(hitBox, (target) => HitToDamage(target, _damage))),
+                Attack(() => _HitBoxController.Cast(hitBox, (hitTarget) => HitToDamage(hitTarget, _damage))),
                 Effect(slashEffect, swordPoint)
             );
             Init(swordPoint);

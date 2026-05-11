@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using _Scripts.NKY._EnemyScript.BossPattern;
 using UnityEngine;
 
@@ -6,8 +7,9 @@ namespace _Scripts.NKY._EnemyScript
 {
     public class NKY_Enemy : NKY_BaseBoss
     {
+        
         [Header("보스의 스킬 패턴 세팅")]
-        [SerializeField] private NKY_BossSkill[] _skills;
+        [SerializeField] private  NKY_BossSkill[] _skills;
         public NKY_Player playerReference;
         
         [Header("보스 스텟 세팅")]
@@ -65,7 +67,6 @@ namespace _Scripts.NKY._EnemyScript
         protected override IEnumerator PickNextSkill()
         {
             NKY_BossSkill selectedSkill = _skills[0];
-            Debug.Log(bossPhase);
             switch (bossPhase)
             {
                 case 1:
@@ -77,6 +78,16 @@ namespace _Scripts.NKY._EnemyScript
             }
 
             return selectedSkill.Execute(transform, _target.transform);
+        }
+        
+        
+        public void ReceiveAnimationAttackEvent()
+        {
+            _HitBoxController?.ResetHit();
+            if (_attackEventQueue.Count > 0)
+            {
+                _attackEventQueue.Dequeue()?.Invoke();
+            }
         }
 
         private IEnumerator PlayPhase2()
