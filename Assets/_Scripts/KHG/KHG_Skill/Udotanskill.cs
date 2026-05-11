@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Udotanskill : MonoBehaviour
+public class KHG_Udotanskill : MonoBehaviour,LSO_ISkill
 {
     public GameObject bulletPrefab; 
     public float skillCooldown = 3f; 
@@ -27,5 +27,15 @@ public class Udotanskill : MonoBehaviour
         yield return new WaitForSeconds(skillCooldown);
 
         isSkillReady = true; 
+    }
+
+    public void UseSkill(GameObject player)
+    {
+        StartCoroutine(CircleBulletSkill());
+    }
+
+    public IEnumerator CoolTime(float time)
+    {
+        throw new System.NotImplementedException();
     }
 }
