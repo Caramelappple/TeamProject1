@@ -12,10 +12,40 @@ public class KHG_CircleBullet : MonoBehaviour,LSO_ISkill
 
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        FindTarget();
+    }
+    void FindTarget()
+    {
+        GameObject enemyObj = GameObject.FindWithTag(enemyTag);
+        if (enemyObj != null)
+        {
+            target = enemyObj.transform;
+        }
+    }
+    void FixedUpdate()
+    {
+        if (target == null)
+        {
+            FindTarget();
+
+            if (target == null)
+            {
+                return;
+            }
+        }
+
+        Vector2 direction = (target.position - transform.position).normalized;
+        rb.linearVelocity = direction * speed;
+
+        if (rb.linearVelocity.x != 0)
+        {
+            spriteRenderer.flipX = (rb.linearVelocity.x < 0f);
+        }
     }
 
-    
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -27,39 +57,7 @@ public class KHG_CircleBullet : MonoBehaviour,LSO_ISkill
 
     public void UseSkill(GameObject player)
     {
-        rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        FindTarget();
 
-        void FindTarget()
-        {
-            GameObject enemyObj = GameObject.FindWithTag(enemyTag);
-            if (enemyObj != null)
-            {
-                target = enemyObj.transform;
-            }
-        }
-
-        void FixedUpdate()
-        {
-            if (target == null)
-            {
-                FindTarget();
-
-                if (target == null)
-                {
-                    return;
-                }
-            }
-
-            Vector2 direction = (target.position - transform.position).normalized;
-            rb.linearVelocity = direction * speed;
-
-            if (rb.linearVelocity.x != 0)
-            {
-                spriteRenderer.flipX = (rb.linearVelocity.x < 0f);
-            }
-        }
     }
 
     public IEnumerator CoolTime(float time)

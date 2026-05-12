@@ -60,7 +60,11 @@ public class Dashskill : MonoBehaviour,LSO_ISkill
 
     public void UseSkill(GameObject player)
     {
-        throw new System.NotImplementedException();
+        Vector2 dashDir = playerMovement.GetLastDir();
+        if (dashDir != Vector2.zero)
+        {
+            StartCoroutine(DashRoutine(dashDir));
+        }
     }
 
     public IEnumerator CoolTime(float time)

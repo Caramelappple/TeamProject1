@@ -9,7 +9,6 @@ public class KHG_Udotanskill : MonoBehaviour,LSO_ISkill
 
     void Update()
     {
-        
         if (Input.GetKeyDown(KeyCode.E) && isSkillReady)
         {
             StartCoroutine(CircleBulletSkill());
@@ -31,11 +30,16 @@ public class KHG_Udotanskill : MonoBehaviour,LSO_ISkill
 
     public void UseSkill(GameObject player)
     {
-        StartCoroutine(CircleBulletSkill());
+        
     }
 
     public IEnumerator CoolTime(float time)
     {
-        throw new System.NotImplementedException();
+            isSkillReady = false;
+            Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+
+            yield return new WaitForSeconds(skillCooldown);
+
+            isSkillReady = true;
     }
 }
