@@ -2,7 +2,7 @@
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
 
-[CreateAssetMenu(fileName = "Damageable Resource", menuName = "SO/Damageable Resource")]
+[CreateAssetMenu(fileName = "DamageableResourceSO", menuName = "SO/DamageableResourceSO")]
 public class DamageableResourceSO : ScriptableObject
 {
     [field: SerializeField] public int maxValue { get; private set; }

@@ -10,8 +10,6 @@ namespace LSO.SkillSystem
         public string skillDescription;
         public Sprite skillIcon;
         public GameObject skillPrefab;
-        
-        
     }
 }
 

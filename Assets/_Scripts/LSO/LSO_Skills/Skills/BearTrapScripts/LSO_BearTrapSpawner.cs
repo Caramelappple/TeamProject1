@@ -1,71 +1,88 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class LSO_BearTrapSpawner : MonoBehaviour
+public class LSO_BearTrapSpawner : MonoBehaviour,LSO_ISkill
 {
     public static LSO_BearTrapSpawner instance;
-    private float coolTime = 1f;
-    private bool canSpawn = true;
-    private int trapCount = 5;
-    public Stack<GameObject> trapPool = new Stack<GameObject>();
+    [SerializeField]private float coolTime = 1f;
+    private bool _canSpawn = true;
+    private int _trapCount = 5;
+    public readonly Stack<GameObject> trapPool = new Stack<GameObject>();
     public LinkedList<GameObject> activeTraps = new LinkedList<GameObject>();
     [SerializeField] private GameObject trapPrefab;
-
     private void Awake()
     {
         instance = this;
     }
-    void Start()
-    {
-        CreateTrap(trapCount);
-    }
 
-    public void UseSkill()
+    private void Start()
     {
-        SpawnTrap();
+        CreateTrap();
     }
-
-    public IEnumerator CoolTime(float time)
+    
+    private void OnDestroy()
     {
-        throw new System.NotImplementedException();
+        trapPool.Clear();
+        activeTraps.Clear();
     }
-
-    private void CreateTrap(int count)
+    public void CreateTrap()
     {
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < _trapCount; i++)
         {
-            GameObject trap = Instantiate(trapPrefab);
+            GameObject trap = Instantiate(trapPrefab,transform);
             trap.SetActive(false);  
             trapPool.Push(trap);
         }
     }
 
-    private void SpawnTrap()
+    private void SpawnTrap(GameObject player)
     {
+        if (!_canSpawn) return;
+
         GameObject trap;
+
         if (trapPool.Count > 0)
         {
             trap = trapPool.Pop();
+            if (trap == null) return;
+
             trap.SetActive(true);
-            activeTraps.AddLast(trap);
+            // 노드를 저장해서 트랩 컴포넌트에 전달
+            var node = activeTraps.AddLast(trap);
+            trap.GetComponent<LSO_BearTrap>().node = node;
         }
-        else//트랩이 모두 사용 중일 때, 가장 오래된 트랩을 재배치
+        else
         {
-            trap = activeTraps.First.Value;
-            activeTraps.RemoveFirst();//마지막으로 설치한 트랩 제거
-            activeTraps.AddLast(trap);
+            if (activeTraps.Count == 0) return;
+
+            var firstNode = activeTraps.First;
+            trap = firstNode.Value;
+
+            if (trap == null)
+            {
+                activeTraps.RemoveFirst();
+                return;
+            }
+
+            activeTraps.Remove(firstNode);
+            var node = activeTraps.AddLast(trap);
+            trap.GetComponent<LSO_BearTrap>().node = node;
         }
 
-        trap.transform.position = transform.position;
-
-        StartCoroutine(ReloadCoroutine());
+        trap.transform.position = player.transform.position;
+        player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(coolTime));
     }
-    private IEnumerator ReloadCoroutine()
+    public void UseSkill(GameObject player)
     {
-        canSpawn = false;
+        SpawnTrap(player);
+    }
+    
+    public IEnumerator CoolTime(float time)
+    {
+        _canSpawn = false;
         yield return new WaitForSeconds(coolTime);
-        canSpawn = true;
+        _canSpawn = true;
     }
 }
