@@ -22,17 +22,14 @@ public class LSO_Blood : MonoBehaviour,LSO_ISkill
 
     public void UseSkill(GameObject player)
     {
-        _player = player;
-        
         if (!_canUse) return;
         
-        //처음 사용할때 변수 초기화 해주기
-        if (!_playerMovement)
-        {
-            _playerMovement = player.GetComponent<LSO_PlayerMovement>();
-        }
+        
+        _player = player;
+        _playerMovement = player.GetComponent<LSO_PlayerMovement>();
+        
     
-        //이펙트 정해주기
+        //이펙트 가로 세로 정해주기
         if (_playerMovement.lastDir.x != 0)
         {
             _effectInstance = Instantiate(hEffect, player.transform.position, Quaternion.identity);
@@ -43,7 +40,8 @@ public class LSO_Blood : MonoBehaviour,LSO_ISkill
             _effectInstance = Instantiate(vEffect, player.transform.position, Quaternion.identity);
             Debug.Log("Vertical");
         }
-
+        
+        //보는 방향 맞춰서 뒤집어 주기
         if (_effectInstance != null)
         {
             _spriteRenderer = _effectInstance.GetComponent<SpriteRenderer>();
@@ -57,7 +55,8 @@ public class LSO_Blood : MonoBehaviour,LSO_ISkill
             {
                 _spriteRenderer.flipY = _playerMovement.lastDir.y < 0;
             }
-
+            
+            //보는 방향으로 히트박스 이동해주기
             _effectInstance.transform.position += (Vector3)_playerMovement.lastDir * 1.2f;
             
             if (!_animator)
@@ -95,5 +94,4 @@ public class LSO_Blood : MonoBehaviour,LSO_ISkill
         yield return new WaitForSeconds(time);
         _canUse = true;
     }
-    
 }
