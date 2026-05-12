@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06120155515bb614abefb3c920fe08ff, type: 3}
+  m_Name: BloodSkillSO
+  m_EditorClassIdentifier: Assembly-CSharp::LSO.SkillSystem.LSO_SkillResourceSO
+  skillName: Blood
+  skillDescription: "\uD761\uD608\uD568"
+  skillIcon: {fileID: 21300000, guid: e437a0ab9375608449efc5300df2e8ba, type: 3}
+  skillPrefab: {fileID: 5597526705496126092, guid: 5aa35f01fe705a842be2f053e14c10cb,
+    type: 3}

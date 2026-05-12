@@ -4,16 +4,23 @@ using UnityEngine;
 
 namespace _Scripts.NKY._EnemyScript
 {
-    public class NKY_Enemy : NKY_BaseBoss
+    public class NKY_Enemy: NKY_BaseBoss
     {
-        [Header("???? ???? ???")]
+        [Header("보스의 스킬 패턴 세팅")]
         [SerializeField] private NKY_BossSkill[] _skills;
         public NKY_Player playerReference;
 
-        private NKY_Health _myHealth;
+        [Header("보스 스텟 세팅")]
+        [field: SerializeField] public int damage { get; private set; }
+
+        private Health _myHealth;
 
         protected override void OnAwake()
         {
+            _HitBoxController = GetComponent<NKY_HitBoxController>();
+            _anim = GetComponent<Animator>();
+            _shadow = GetComponent<NKY_ShadowController>();
+            _myHealth = gameObject.GetComponent<Health>();
             _target = playerReference.gameObject;
 
             if (_skills != null)
@@ -27,7 +34,6 @@ namespace _Scripts.NKY._EnemyScript
 
         private void Start()
         {
-            _myHealth = gameObject.GetComponent<NKY_Health>();
             if (_myHealth != null)
             {
                 _myHealth.OnHit += IsHit;
@@ -43,7 +49,7 @@ namespace _Scripts.NKY._EnemyScript
             {
                 yield return ExecutePattern(CentorMove());
 
-                if(_isDead) yield break;
+                if (_isDead) yield break;
 
                 yield return new WaitUntil(ShouldInterruptIdle);
 
@@ -59,24 +65,49 @@ namespace _Scripts.NKY._EnemyScript
         protected override IEnumerator PickNextSkill()
         {
             NKY_BossSkill selectedSkill = _skills[0];
-            float randomSkill = Random.Range(0f, 100f);
-            if(randomSkill < 50)
-                selectedSkill = _skills[0];
-            else if(randomSkill >= 50)
-                selectedSkill = _skills[1];
+            Debug.Log(bossPhase);
+            switch (bossPhase)
+            {
+                case 1:
+                    selectedSkill = _skills[Random.Range(0, _skills.Length / 2)];
+                    break;
+                case 2:
+                    selectedSkill = _skills[Random.Range(_skills.Length / 2, _skills.Length)];
+                    break;
+            }
 
             return selectedSkill.Execute(transform, _target.transform);
         }
 
+        private IEnumerator PlayPhase2()
+        {
+            Debug.Log("페이즈 2");
+            bossPhase = 2;
+            _skillCooldown = _skillCooldown * 0.6f;
+            damage = (int)(damage * 2f);
+            yield return ExecutePattern(CentorMove());
+            yield return PhaseEffect();
+        }
+
+        private IEnumerator PhaseEffect()
+        {
+            yield break;
+        }
+
         //????? ?????? ????
-        private void IsHit(NKY_DamageData data) //Enemy?? ?????? ?¾?????
+        private void IsHit(DamageData data) //Enemy?? ?????? ?¾?????
         {
             Debug.Log($"hit to {data.giver.gameObject}");
         }
-        private void SetDamage(NKY_DamageResultData args) //Enemy?? ???????? ???? ????? ???????
+        private void SetDamage(DamageResultData args) //Enemy?? ???????? ???? ????? ???????
         {
             if (_isDead) return;
-            Debug.Log($"{args.damage}만큼 맞았음. {args.giver}의 현재채력 : {args.currentHealth}");
+
+            //2페이즈 세팅
+            if (args.currentHealth < _myHealth.MaxValue / 2)
+            {
+                StartCoroutine(PlayPhase2());
+            }
 
             if (_myHealth.IsDestroyed)
             {
@@ -91,8 +122,7 @@ namespace _Scripts.NKY._EnemyScript
 
             StopAllCoroutines();
             StopPattern();
-            Destroy(_shadow.gameObject);
-            
+
             if (_anim) _anim.Play("Dead");
 
             var col = GetComponent<Collider2D>();

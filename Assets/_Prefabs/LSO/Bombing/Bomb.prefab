@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3980898932878371541}
   - component: {fileID: 5643864475866093846}
+  - component: {fileID: -655741207923706400}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -46,3 +47,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Bombing
   speed: 3
   effect: {fileID: 4060151744882182914, guid: a44077a4138890e489c96c11e789c6c8, type: 3}
+--- !u!50 &-655741207923706400
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810854247381936306}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7

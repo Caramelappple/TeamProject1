@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7067c87e9e283418fd4da067c38591, type: 3}
   m_Name: KDH_TestSkill
   m_EditorClassIdentifier: Assembly-CSharp::KDH_SkillData
-  skillName: TestSkill
+  skillName: TestSkill 1
   skillDescription: "\uC774\uAC74 \uD14C\uC2A4\uD2B8\uC6A9 \uC2A4\uD0AC\uC785\uB2C8\uB2E4.
     \uD55C\uACB0\uC774 \uC6B4\uB3D9 \uB9CE\uC774 \uB41C\uB2E4."
   skillIcon: {fileID: 5634105631834451044, guid: fb851e1de46604b469182f44371a0935,

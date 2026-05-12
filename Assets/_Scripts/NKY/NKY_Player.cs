@@ -19,9 +19,10 @@ namespace _Scripts.NKY
             transform.position += (Vector3)_moveDir * (speed * Time.deltaTime);
             if (Keyboard.current.kKey.wasPressedThisFrame)
             {
-                if (target.TryGetComponent<NKY_Health>(out var health))
+                DamageData data = DamageData.Create(this.GetComponent<Health>(), 20);
+                if (target.TryGetComponent<Health>(out var health))
                 {
-                    health.GetDamage(NKY_DamageData.Create(health, 20));
+                    health.GetDamage(data);
                 }
             }
         }

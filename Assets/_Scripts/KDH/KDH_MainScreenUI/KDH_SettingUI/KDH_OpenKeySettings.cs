@@ -18,5 +18,7 @@ public class KDH_OpenKeySettings : MonoBehaviour
     public void Exit()
     {
         gameObject.SetActive(false);
+        
+        Time.timeScale = 1;
     }
 }

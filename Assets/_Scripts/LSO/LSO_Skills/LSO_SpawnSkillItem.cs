@@ -18,7 +18,10 @@ public class LSO_SpawnSkillItem : MonoBehaviour
 
    private void Start()
    {
-      Spawn(1);
+      for (int i = 0; i < spawnPoints.Length; i++)
+      {
+         Spawn(i);
+      }
    }
    
    public void Spawn(int point)
@@ -28,18 +31,6 @@ public class LSO_SpawnSkillItem : MonoBehaviour
 
          GameObject skillItem = Instantiate(skillPrefab[_skillID], spawnPoints[_point].position, Quaternion.identity);
          skillItem.transform.parent = spawnPoints[_point].transform;
-         skillItem.transform.position = new Vector3(spawnPoints[_point].position.x + 2,spawnPoints[_point].position.y,spawnPoints[_point].position.z);
-         
-         _skillID = Random.Range(0, skillPrefab.Length);
-         
-         GameObject skillItem2 = Instantiate(skillPrefab[_skillID], spawnPoints[_point].position, Quaternion.identity);
-         skillItem2.transform.parent = spawnPoints[_point].transform;
-         skillItem2.transform.position = new Vector3(spawnPoints[_point].position.x -2,spawnPoints[_point].position.y,spawnPoints[_point].position.z);
-         
-         GameObject skillGroup = new GameObject("SkillGroup");
-         skillGroup.transform.position = spawnPoints[_point].position;
-
-         skillItem.transform.parent = skillGroup.transform;
-         skillItem2.transform.parent = skillGroup.transform;
+         skillItem.transform.position =  spawnPoints[_point].position;
    }
 }
