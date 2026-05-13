@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LSO.SkillSystem.LSO_SkillResourceSO
   skillName: fasdfdsafasfadffsaafs
   skillDescription: fdsaf
-  skillIcon: {fileID: -7566001254248236219, guid: ed7e4614c85c69642b9c3f819bb5e40c,
-    type: 3}
+  skillIcon: {fileID: 21300030, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
   skillPrefab: {fileID: 7313268087140591529, guid: efaf64c074617694ea413503769491c5,
     type: 3}

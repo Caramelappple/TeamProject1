@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LSO.SkillSystem.LSO_SkillResourceSO
   skillName: Blood
   skillDescription: "\uD761\uD608\uD568"
-  skillIcon: {fileID: 21300000, guid: e437a0ab9375608449efc5300df2e8ba, type: 3}
+  skillIcon: {fileID: 21300008, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
   skillPrefab: {fileID: 5597526705496126092, guid: 5aa35f01fe705a842be2f053e14c10cb,
     type: 3}

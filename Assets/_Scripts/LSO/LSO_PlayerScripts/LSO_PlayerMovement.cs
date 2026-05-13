@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
-using System.Collections;
 
 public class LSO_PlayerMovement : MonoBehaviour
 {
@@ -10,9 +9,11 @@ public class LSO_PlayerMovement : MonoBehaviour
     public float speed = 3;
     protected Animator Animator;
     private SpriteRenderer _sprite;
+    
+    private bool _canMove = true;
 
     private Vector2 _moveDir;
-    public Vector2 lastDir = Vector2.down;
+    private Vector2 lastDir = Vector2.down;
     private Rigidbody2D _rigid;
 
     LSO_SkillItem _skillItem;
@@ -34,22 +35,20 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rigid.linearVelocity = _moveDir * speed;
+        if (_canMove)
+        {
+            _rigid.linearVelocity = _moveDir * speed;
+        }
+        else
+        {
+            _rigid.linearVelocity = Vector2.zero;
+            Debug.Log("멈춤");
+        }
     }
 
     private void Update()
     {
-        if (OnSkillEvent == null) return;
-
-        if (Keyboard.current.qKey.isPressed)
-        {
-            OnSkillEvent[0]?.Invoke(gameObject);
-        }
-
-        if (Keyboard.current.eKey.isPressed)
-        {
-            OnSkillEvent[1]?.Invoke(gameObject);
-        }
+        if (OnSkillEvent == null || !_canMove) return;
 
         if (Keyboard.current.fKey.isPressed && _skillItem)
         {
@@ -60,6 +59,16 @@ public class LSO_PlayerMovement : MonoBehaviour
         {
             LSO_SkillSlot.instance.AddSkill(_skillItem, 1);
         }
+        
+        if (Keyboard.current.qKey.isPressed)
+        {
+            OnSkillEvent[0]?.Invoke(gameObject);
+        }
+
+        if (Keyboard.current.eKey.isPressed)
+        {
+            OnSkillEvent[1]?.Invoke(gameObject);
+        }
     }
 
     private void OnMove(InputValue value)
@@ -67,7 +76,7 @@ public class LSO_PlayerMovement : MonoBehaviour
         _moveDir = value.Get<Vector2>();
         if (_moveDir != Vector2.zero) //움직였을때
             lastDir = _moveDir;
-
+        
         if (_moveDir.x != 0)
         {
             _sprite.flipX = _moveDir.x < 0;
@@ -94,6 +103,16 @@ public class LSO_PlayerMovement : MonoBehaviour
         {
             _skillItem = touchedSkill;
         }
+    }
+
+    public void SetMove(bool move)
+    {
+        _canMove = move;
+    }
+    
+    public Vector3 GetLastDir()
+    {
+        return lastDir;
     }
 }
 

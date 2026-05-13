@@ -9,6 +9,7 @@ public class LSO_Blood : MonoBehaviour,LSO_ISkill
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
     private bool _canUse = true;
+    private Vector3 _lastDir;
     
     private float _coolTime = 5f;
     private float _waitTime = 1f;
@@ -27,15 +28,16 @@ public class LSO_Blood : MonoBehaviour,LSO_ISkill
         
         _player = player;
         _playerMovement = player.GetComponent<LSO_PlayerMovement>();
+        _lastDir = _playerMovement.GetLastDir();
         
     
         //이펙트 가로 세로 정해주기
-        if (_playerMovement.lastDir.x != 0)
+        if (_lastDir.x != 0)
         {
             _effectInstance = Instantiate(hEffect, player.transform.position, Quaternion.identity);
             Debug.Log("Horizontal");
         }
-        else if (_playerMovement.lastDir.y != 0)
+        else if (_lastDir.y != 0)
         {
             _effectInstance = Instantiate(vEffect, player.transform.position, Quaternion.identity);
             Debug.Log("Vertical");
@@ -46,18 +48,18 @@ public class LSO_Blood : MonoBehaviour,LSO_ISkill
         {
             _spriteRenderer = _effectInstance.GetComponent<SpriteRenderer>();
 
-            if (_playerMovement.lastDir.x != 0)
+            if (_lastDir.x != 0)
             {
-                _spriteRenderer.flipX = _playerMovement.lastDir.x < 0;
+                _spriteRenderer.flipX = _lastDir.x < 0;
             }
             
-            if (_playerMovement.lastDir.y != 0)
+            if (_lastDir.y != 0)
             {
-                _spriteRenderer.flipY = _playerMovement.lastDir.y < 0;
+                _spriteRenderer.flipY = _lastDir.y < 0;
             }
             
             //보는 방향으로 히트박스 이동해주기
-            _effectInstance.transform.position += (Vector3)_playerMovement.lastDir * 1.2f;
+            _effectInstance.transform.position += _lastDir * 1.2f;
             
             if (!_animator)
             {

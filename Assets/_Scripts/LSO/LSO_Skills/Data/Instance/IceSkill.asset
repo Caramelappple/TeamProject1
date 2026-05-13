@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LSO.SkillSystem.LSO_SkillResourceSO
   skillName: Ice
   skillDescription: "\uC5BC\uC74C\uC744 \uC18C\uD658"
-  skillIcon: {fileID: 21300000, guid: 061f36f49e47f4459a88269bdea47c69, type: 3}
+  skillIcon: {fileID: 21300038, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
   skillPrefab: {fileID: 5213919056071174991, guid: 98f7c510666416a409a44b79bab21079,
     type: 3}

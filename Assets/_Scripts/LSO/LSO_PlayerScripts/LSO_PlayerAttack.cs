@@ -11,6 +11,7 @@ public class LSO_PlayerAttack : LSO_PlayerMovement
     private readonly float _cooldown = 0.15f;
     private readonly float _attackime = 0.3f;
     private readonly int _damage = 10;
+    private Vector3 _lastDir;
 
     private void Start()
     {
@@ -21,12 +22,14 @@ public class LSO_PlayerAttack : LSO_PlayerMovement
         if (!_attackable) return;
         IEnumerator attack = Attack();
         StartCoroutine(attack);
+        
+        _lastDir = gameObject.GetComponent<LSO_PlayerMovement>().GetLastDir();
     }
 
     IEnumerator Attack()
     {
         _attackable = false;
-        sword.transform.position = transform.position+(Vector3)lastDir;//공격 히트박스 이동
+        sword.transform.position = transform.position + _lastDir;//공격 히트박스 이동
         
         Collider2D[] colliders = Physics2D.OverlapBoxAll(sword.transform.position, sword.transform.localScale/2, 0);
         foreach (Collider2D collision in colliders)
@@ -45,5 +48,10 @@ public class LSO_PlayerAttack : LSO_PlayerMovement
         sword.SetActive(false);
         yield return new WaitForSeconds(_cooldown);//쿨타임 대기
         _attackable = true;
+    }
+
+    public void SetAttack(bool attackable)
+    {
+        _attackable = attackable;
     }
 }
