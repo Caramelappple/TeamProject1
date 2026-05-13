@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
-using System.Collections;
 
 public class LSO_PlayerMovement : MonoBehaviour
 {
@@ -10,9 +9,11 @@ public class LSO_PlayerMovement : MonoBehaviour
     public float speed = 3;
     protected Animator Animator;
     private SpriteRenderer _sprite;
+    
+    [SerializeField]private bool _canMove = true;
 
     private Vector2 _moveDir;
-    public Vector2 lastDir = Vector2.down;
+    private Vector2 _lastDir = Vector2.down;
     private Rigidbody2D _rigid;
 
     LSO_SkillItem _skillItem;
@@ -34,22 +35,13 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rigid.linearVelocity = _moveDir * speed;
+        if (!_canMove) return;
+        _rigid.linearVelocity = _moveDir.normalized * speed;
     }
 
     private void Update()
     {
-        if (OnSkillEvent == null) return;
-
-        if (Keyboard.current.qKey.isPressed)
-        {
-            OnSkillEvent[0]?.Invoke(gameObject);
-        }
-
-        if (Keyboard.current.eKey.isPressed)
-        {
-            OnSkillEvent[1]?.Invoke(gameObject);
-        }
+        if (OnSkillEvent == null || !_canMove) return;
 
         if (Keyboard.current.fKey.isPressed && _skillItem)
         {
@@ -60,23 +52,40 @@ public class LSO_PlayerMovement : MonoBehaviour
         {
             LSO_SkillSlot.instance.AddSkill(_skillItem, 1);
         }
+        
+        if (Keyboard.current.qKey.isPressed)
+        {
+            OnSkillEvent[0]?.Invoke(gameObject);
+        }
+
+        if (Keyboard.current.eKey.isPressed)
+        {
+            OnSkillEvent[1]?.Invoke(gameObject);
+        }
     }
 
     private void OnMove(InputValue value)
     {
+        if (!_canMove)
+        {
+            _moveDir = Vector2.zero;
+            return;
+        }
+        
+        Debug.Log(_rigid.linearVelocity);
+        
         _moveDir = value.Get<Vector2>();
         if (_moveDir != Vector2.zero) //움직였을때
-            lastDir = _moveDir;
-
+            _lastDir = _moveDir;
+        
         if (_moveDir.x != 0)
         {
             _sprite.flipX = _moveDir.x < 0;
         }
 
-        if (lastDir.x != 0 && lastDir.y != 0) //대각선으로 움직였을때
+        if (_lastDir.x != 0 && _lastDir.y != 0) //대각선으로 움직였을때
         {
-            lastDir = new Vector2(Mathf.Sign(lastDir.x), 0);
-            Debug.Log(lastDir);
+            _lastDir = new Vector2(Mathf.Sign(_lastDir.x), 0);
 
             Animator.SetFloat(MoveY, 0);
             Animator.SetBool(MoveX, _moveDir.x != 0);
@@ -96,5 +105,29 @@ public class LSO_PlayerMovement : MonoBehaviour
         }
     }
 
+ //HEAD
+
+    public void SetMove(bool move)
+    {
+        _canMove = move;
+    
+        // 스턴이 시작되는 순간 즉시 속도와 입력값을 0으로 밀어버림
+        if (!_canMove)
+        {
+            _moveDir = Vector2.zero;
+            if (_rigid != null)
+            {
+                _rigid.linearVelocity = Vector2.zero;
+            }
+            Animator.SetBool(MoveX, false);
+            Animator.SetFloat(MoveY, 0);
+        }
+    }
+    
+    public Vector3 GetLastDir()
+    {
+        return _lastDir;
+    }
+// base
 }
 

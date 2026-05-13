@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using _Scripts.NKY.Manager;
 using UnityEngine;
 
@@ -15,8 +14,7 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
         protected Animator _anim;
         protected NKY_ShadowController _shadow;
 
-        private Coroutine _masterHandle;
-        private Queue<System.Action> _attackEventQueue = new Queue<System.Action>();
+        
         protected void Awake()
         {
             OnAwake();
@@ -25,65 +23,13 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
         protected virtual void OnAwake() { }
 
         // ???? ????? (??? ???? ????)
-        public Coroutine ExecutePattern(IEnumerator pattern)
-        {
-            if (_masterHandle != null) return null;
-            _masterHandle = StartCoroutine(PatternMonitor(pattern));
-            return _masterHandle;
-        }
-
-        private IEnumerator PatternMonitor(IEnumerator pattern)
-        {
-            yield return StartCoroutine(pattern);
-            _masterHandle = null;
-            _attackEventQueue.Clear();
-        }
-
-        public void StopPattern()
-        {
-            if (_masterHandle != null)
-            {
-                StopCoroutine(_masterHandle);
-                _masterHandle = null;
-            }
-            _attackEventQueue.Clear();
-            _anim.Play("Idle");
-        }
 
         // --- ??????? ?? ???? ?????? ---
-        public void OnAttackEvent()
-        {
-            NKY_BossSkill bossSkill = GetComponentInChildren<NKY_BossSkill>();
-            _HitBoxController?.ResetHit();
-            if (bossSkill._attackEventQueue.Count > 0)
-            {
-                bossSkill._attackEventQueue.Dequeue()?.Invoke();
-            }
-        }
-
-        protected IEnumerator ComboAttack(string animName, params System.Action[] attackLogics)
-        {
-            _attackEventQueue.Clear();
-            _HitBoxController?.ResetHit();
-            foreach (var logic in attackLogics)
-                _attackEventQueue.Enqueue(logic);
-            _anim.Play(animName);
-            yield return StartCoroutine(WaitAnim(animName, 1.0f));
-        }
-
-        protected IEnumerator Attack(System.Action Logic)
-        {
-            _attackEventQueue.Clear();
-            _HitBoxController?.ResetHit();
-            _attackEventQueue.Enqueue(Logic);
-            OnAttackEvent();
-            yield break;
-        }
-
+        
         public IEnumerator DoShake(GameObject target, float duration, float power)
         {
             Vector3 originPos;
-
+            
             originPos = target.transform.localPosition;
 
             float timer = 0;
@@ -155,6 +101,11 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
             yield return new WaitUntil(() => _anim.GetCurrentAnimatorStateInfo(0).IsName(stateName));
             yield return new WaitUntil(() => _anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= normalizedTime);
         }
+        protected IEnumerator WaitAnim(Animator anim, string stateName, float normalizedTime)
+        {
+            yield return new WaitUntil(() => anim.GetCurrentAnimatorStateInfo(0).IsName(stateName));
+            yield return new WaitUntil(() => anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= normalizedTime);
+        }
 
         protected IEnumerator PlaySequence(params IEnumerator[] skills)
         {
@@ -185,12 +136,18 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
             NKY_IndicatorManager.Instance.ShowIndicator(hitBox, positionGetter(), duration);
             yield break;
         }
-
-        protected void HitToDamage(Collider2D target, int damage)
+        protected IEnumerator ShowWarn(NKY_IndicatorManager.IndicatorType type, Vector2 size, float duration, System.Func<Vector2> positionGetter, float angle = 0f)
         {
-            DamageData data = DamageData.Create(this.GetComponentInParent<Health>(), damage);
-            if (target.TryGetComponent<Health>(out var health))
+            NKY_IndicatorManager.Instance.ShowIndicator(type, positionGetter(), size, duration,  angle);
+            yield break;
+        }
+
+        protected void HitToDamage(GameObject giver, GameObject target, int damage)
+        {
+            if (target.TryGetComponent(out Health health))
             {
+                Health healthGiver = giver.GetComponent<Health>();
+                DamageData data = DamageData.Create(healthGiver, damage);
                 health.GetDamage(data);
             }
         }

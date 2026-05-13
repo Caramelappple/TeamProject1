@@ -7,6 +7,7 @@ public class LSO_Ice : MonoBehaviour,LSO_ISkill
     private GameObject _player;
     private LSO_PlayerMovement _playerMovement;
     private bool _canUse = true;
+    private Vector3 _lastDir;
     
     private float _coolTime = 5f;
     private float _waitTime = 0.08f;//아이스 스파이크 사이의 시간 간격
@@ -24,6 +25,7 @@ public class LSO_Ice : MonoBehaviour,LSO_ISkill
         
         _player = player;
         _playerMovement = _player.GetComponent<LSO_PlayerMovement>();
+        _lastDir = _playerMovement.GetLastDir();
         _tempTransform = new Vector3(player.transform.position.x, player.transform.position.y, _player.transform.position.z);
         
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
@@ -36,7 +38,7 @@ public class LSO_Ice : MonoBehaviour,LSO_ISkill
         //각도 나누는거 호연이꺼 떼옴
         //각도를 구한 다음 벡터 값으로 변환해, 결과적으로 도넛모양으로 생성함
         //데미지와 삭제는 각자 아이스 스파이크에서 처리
-        float baseAngle = Mathf.Atan2(_playerMovement.lastDir.y, _playerMovement.lastDir.x) * Mathf.Rad2Deg;
+        float baseAngle = Mathf.Atan2(_lastDir.y, _lastDir.x) * Mathf.Rad2Deg;
         float startAngle = baseAngle - (spreadAngle / 2f);
         float angleStep = spreadAngle / (_count - 1);
 

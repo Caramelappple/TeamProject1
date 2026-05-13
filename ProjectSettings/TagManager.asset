@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Item
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -11,6 +13,7 @@ TagManager:
   - 
   - Water
   - UI
+  - Player
   - 
   - 
   - 
@@ -33,9 +36,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Boss
+  - BossAttack
   - 
   m_SortingLayers:
   - name: Default

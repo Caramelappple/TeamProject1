@@ -16,7 +16,6 @@ namespace _Scripts.NKY
         }
         private void Update()
         {
-            transform.position += (Vector3)_moveDir * (speed * Time.deltaTime);
             if (Keyboard.current.kKey.wasPressedThisFrame)
             {
                 DamageData data = DamageData.Create(this.GetComponent<Health>(), 20);
@@ -26,13 +25,11 @@ namespace _Scripts.NKY
                 }
             }
         }
+
         void OnMove(InputValue inputValue)
         {
             _moveDir = inputValue.Get<Vector2>();
-        }
-        void OnJump()
-        {
-            Debug.Log("jump");
+            _rb.linearVelocity = _moveDir * speed;
         }
     }
 }

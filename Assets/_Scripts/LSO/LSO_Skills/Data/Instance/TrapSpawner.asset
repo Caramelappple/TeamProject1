@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LSO.SkillSystem.LSO_SkillResourceSO
   skillName: Trap
   skillDescription: "\uD2B8\uB7A9\uC744 \uC2A4\uD3F0\uD569\uB2C8\uB2E4"
-  skillIcon: {fileID: 4211761467620165101, guid: 5dc5f413728af844190780a1c835fa6c,
-    type: 3}
+  skillIcon: {fileID: 21300014, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
   skillPrefab: {fileID: 1451266573208215504, guid: 534f7469c4eb94044988cab93cec3ebb,
     type: 3}

@@ -10473,10 +10473,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a75e6a306940c4fa9144185defc573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KHG_PoisonField
-  poisonPrefab: {fileID: 3134492447149638931, guid: a164a93ebd1d7554eb05ee6846b32b31,
-    type: 3}
-  spawnDistance: 2
-  coolTime: 3
 --- !u!114 &615946081
 MonoBehaviour:
   m_ObjectHideFlags: 0

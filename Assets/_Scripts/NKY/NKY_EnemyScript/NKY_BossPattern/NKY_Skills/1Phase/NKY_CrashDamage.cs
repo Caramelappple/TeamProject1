@@ -23,6 +23,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
         {
             if (collision.TryGetComponent<Health>(out Health health))
             {
+                
                 DamageData damageData = DamageData.Create(health, damage);
                 health.GetDamage(damageData);
             }

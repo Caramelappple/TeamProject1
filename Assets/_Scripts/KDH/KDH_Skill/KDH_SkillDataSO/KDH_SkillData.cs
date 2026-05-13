@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "KDH_SkillData", menuName = "Scriptable Objects/KDH_SkillData")]

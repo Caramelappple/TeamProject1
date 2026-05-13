@@ -1,21 +1,21 @@
-using System;
 using System.Collections;
 using _Scripts.NKY._EnemyScript;
 using _Scripts.NKY._EnemyScript.BossPattern;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class NKY_ChargeSlash : NKY_BossSkill
 {
+    private static readonly int Stun = Animator.StringToHash("isStun");
+
     [Header("스킬 세팅")]
     [SerializeField] private Collider2D hitBox;
     [SerializeField] private GameObject attackSword;
     [SerializeField] private GameObject[] swordPoints;
-    [SerializeField] private ParticleSystem[] swordEffect;
+    [SerializeField] private ParticleSystem[] swordParticle;
     [SerializeField] private GameObject slashEffect;
     
     [Header("스킬 설정")]
-    [field: SerializeField] public override float damageScale { get; protected set; } = 3f;
+    [field: SerializeField] public override float DamageScale { get; protected set; } = 3f;
     
     private int _damage;
 
@@ -23,11 +23,11 @@ public class NKY_ChargeSlash : NKY_BossSkill
     {
         attackSword.SetActive(false);
         slashEffect.SetActive(false);
-        foreach (ParticleSystem particle in swordEffect)
+        foreach (ParticleSystem particle in swordParticle)
         {
             particle.Stop();
         }
-        _damage = (int)damageScale * _bossBrain.GetComponent<NKY_Enemy>().damage;
+        _damage = (int)DamageScale * _bossBrain.GetComponent<NKY_Enemy>().damage;
     }
 
     public override IEnumerator Execute(Transform boss, Transform target)
@@ -37,16 +37,20 @@ public class NKY_ChargeSlash : NKY_BossSkill
         {
             yield return PlaySequence(
                 SpownSword(attackSword, swordPoint),
-                ChargeEffect(swordEffect, attackSword, 1.5f),
+                ChargeEffect(swordParticle, attackSword, 0.8f),
                 ShowWarn(hitBox, 0.6f, () => hitBox.transform.position),
-                WaitUntilOrTime(() => false, 0.5f),
+                WaitUntilOrTime(() => false, 0.3f),
                 RotateSword(attackSword, swordPoint.transform.eulerAngles.z + 90f, swordPoint.transform.eulerAngles.z - 90f, -10f),
-                Attack(() => _HitBoxController.Cast(hitBox, (target) => HitToDamage(target, _damage))),
+                
+                Attack(() => _HitBoxController.Cast(hitBox, (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage))),
                 Effect(slashEffect, swordPoint)
             );
             Init(swordPoint);
         }
-        yield break;
+        _anim.SetBool(Stun, true);
+        yield return WaitUntilOrTime(()=>false, 4f);
+        _anim.SetBool(Stun, false);
+        yield return StartCoroutine(WaitAnim("StandUp", 1f));
     }
 
     private IEnumerator SpownSword(GameObject obj, GameObject point)

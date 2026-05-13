@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using _Scripts.NKY._EnemyScript;
 using _Scripts.NKY._EnemyScript.BossPattern;
 using UnityEngine;
@@ -13,14 +12,16 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 
         [Header("보스 스킬 세팅")]
         [SerializeField] private Collider2D[] slamHitbox;
+        [SerializeField] private GameObject dustEffect;
 
-        [field: SerializeField] public override float damageScale { get; protected set; } = 0.5f;
+        [field: SerializeField] public override float DamageScale { get; protected set; } = 0.5f;
 
-        private int _damage;
+        private int _damage = 0;
 
         private void Start()
         {
-            _damage = (int)damageScale * _bossBrain.GetComponent<NKY_Enemy>().damage;
+            _damage = (int)(DamageScale * _bossBrain.GetComponent<NKY_Enemy>().damage);
+            dustEffect.SetActive(false);
         }
 
         public override IEnumerator Execute(Transform boss, Transform target)
@@ -47,17 +48,32 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
                     WaitUntilOrTime(() => false, 0.15f),
                     MoveTo(boss, targetPos, 0.2f),
                     ComboAttack("StationaryAttack",
-                        () => _HitBoxController.Cast(slamHitbox[2], (target) => HitToDamage(target, (int)_damage)),
-                        () => _HitBoxController.Cast(slamHitbox[0], (target) => HitToDamage(target, (int)_damage)),
-                        () => _HitBoxController.Cast(slamHitbox[1], (target) => HitToDamage(target, (int)_damage))
+                        () => _HitBoxController.Cast(slamHitbox[2], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, (int)_damage)),
+                        () => _HitBoxController.Cast(slamHitbox[0], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, (int)_damage)),
+                        () => _HitBoxController.Cast(slamHitbox[1], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, (int)_damage))
                     ),
-                    ShadowLock(false),
-                    ShowWarn(slamHitbox[3], 0.8f, () => _shadow.transform.position),
-                    WaitUntilOrTime(() => false, 0.9f),
-                    Attack(() => _HitBoxController.Cast(slamHitbox[3], (target) => HitToDamage(target, (int)_damage * 2)))
+                    ShowWarn(slamHitbox[3], 0.6f, () => _shadow.transform.position),
+                    WaitUntilOrTime(() => false, 0.4f),
+                    Attack(() => _HitBoxController.Cast(slamHitbox[3], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, (int)_damage * 2))),
+                    PlayDustEffect(dustEffect, _shadow.transform.position),
+                    ShadowLock(false)
                 );
+                Init();
             }
             yield break;
+        }
+
+        private IEnumerator PlayDustEffect(GameObject effect, Vector2 pos)
+        {
+            Animator effectAnim =  effect.GetComponent<Animator>();
+            effect.SetActive(true);
+            effectAnim.Play("PlayDustEffect");
+            yield return WaitAnim(effectAnim, "PlayDustEffect", 0.9f);
+        }
+
+        private void Init()
+        {
+            dustEffect.SetActive(false);
         }
     }
 }
