@@ -560,7 +560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HitBoxController
   defaultLayer:
     serializedVersion: 2
-    m_Bits: 1048576
+    m_Bits: 0
 --- !u!114 &102294128
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ namespace _Scripts.NKY._EnemyScript
         
         [Header("보스의 스킬 패턴 세팅")]
         [SerializeField] private  NKY_BossSkill[] _skills;
-        public NKY_Player playerReference;
+        public LSO_PlayerMovement playerReference;
 
         [Header("보스 스텟 세팅")]
         [field: SerializeField] public int damage { get; private set; }

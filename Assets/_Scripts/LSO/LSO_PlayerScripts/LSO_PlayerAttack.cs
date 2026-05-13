@@ -36,7 +36,8 @@ public class LSO_PlayerAttack : LSO_PlayerMovement
         {
             if (collision.CompareTag("Enemy") && collision.TryGetComponent<Health>(out Health enemyHealth))
             {
-                DamageData data = DamageData.Create(enemyHealth, _damage);
+                Health health = gameObject.GetComponent<Health>();
+                DamageData data = DamageData.Create(health, _damage);
                 enemyHealth.GetDamage(data);
             }
         }
