@@ -332,8 +332,6 @@ MonoBehaviour:
   firePoint: {fileID: 645698483}
   projectilePrefab: {fileID: 4417867429317737372, guid: 36b7744730ff7e844adde487d5d366b0,
     type: 3}
-  projectilePrefab2: {fileID: 1664894272478871143, guid: 819b210b45effc043b16bfb8a55d4814,
-    type: 3}
   attackRange: 4
   attackCooldown: 1.2
   skillRange: 8
