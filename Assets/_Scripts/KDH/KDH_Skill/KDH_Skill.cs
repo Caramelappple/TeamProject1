@@ -18,6 +18,8 @@ public class KDH_Skill : MonoBehaviour
 
     public GameObject skills;               // 실제로 사용될 스킬들
 
+    private LSO_Ice iceSkill = new LSO_Ice();
+
     private float currentCooldownTime;  // 현재 재사용 대기 시간
     private bool isCooldown;             // 현재 쿨타임이 적용중인지 체크
 
@@ -41,20 +43,14 @@ public class KDH_Skill : MonoBehaviour
 
         GameObject player = GameObject.FindWithTag("Player");
 
-        Vector3 spawnPos = transform.position;
-        Quaternion spawnRot = transform.rotation;
+        GameObject skillObj = Instantiate(skills, player.transform.position, player.transform.rotation);
 
-        if (player != null)
-        {
-            // 플레이어가 있다면 플레이어 위치로 설정
-            spawnPos = player.transform.position;
-            spawnRot = player.transform.rotation;
-        }
+        LSO_ISkill skillLogic = skillObj.GetComponent<LSO_ISkill>();
 
         // 설정된 위치에 스킬 소환
         if (skills != null)
         {
-            Instantiate(skills, spawnPos, spawnRot);
+            skillLogic.UseSkill(player);
             Debug.Log($"{skillName} 소환");
         }
 

@@ -3,7 +3,7 @@ using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class LSO_PlayerAttack : LSO_PlayerMovement
+public class LSO_PlayerAttack : MonoBehaviour
 {
     [SerializeField] protected GameObject swordAxis;
     [SerializeField] protected GameObject sword;
@@ -11,7 +11,13 @@ public class LSO_PlayerAttack : LSO_PlayerMovement
     private readonly float _cooldown = 0.15f;
     private readonly float _attackime = 0.3f;
     private readonly int _damage = 10;
-    private Vector3 _lastDir;
+    private Vector3 lastDir;
+    private Animator _animator;
+
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
 
     private void Start()
     {
@@ -23,13 +29,13 @@ public class LSO_PlayerAttack : LSO_PlayerMovement
         IEnumerator attack = Attack();
         StartCoroutine(attack);
         
-        _lastDir = gameObject.GetComponent<LSO_PlayerMovement>().GetLastDir();
+        lastDir = gameObject.GetComponent<LSO_PlayerMovement>().GetLastDir();
     }
 
     IEnumerator Attack()
     {
         _attackable = false;
-        sword.transform.position = transform.position + _lastDir;//공격 히트박스 이동
+        sword.transform.position = transform.position + lastDir;//공격 히트박스 이동
         
         Collider2D[] colliders = Physics2D.OverlapBoxAll(sword.transform.position, sword.transform.localScale/2, 0);
         foreach (Collider2D collision in colliders)
@@ -42,7 +48,7 @@ public class LSO_PlayerAttack : LSO_PlayerMovement
             }
         }
         
-        Animator.SetTrigger("Attack");//애니메이션 재생
+        _animator.SetTrigger("Attack");//애니메이션 재생
         sword.SetActive(true);
         
         yield return new WaitForSeconds(_attackime);//공격 유지 시간 대기
@@ -55,5 +61,4 @@ public class LSO_PlayerAttack : LSO_PlayerMovement
     {
         _attackable = attackable;
     }
-    //sdafa
 }

@@ -13215,7 +13215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40297269b71441a4781af22ccea8771e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_PlayerAttack
-  speed: 3
+  speed: 4
   swordAxis: {fileID: 780874659}
   sword: {fileID: 2054296584}
 --- !u!114 &2062148693
@@ -13230,7 +13230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5dd52489c522842a3e5c3ce0aaf829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 10
+  speed: 3
 --- !u!114 &2062148694
 MonoBehaviour:
   m_ObjectHideFlags: 0
