@@ -65,7 +65,7 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
         {
             _attackEventQueue.Clear();
             _HitBoxController?.ResetHit();
-            foreach (var logic in attackLogics) 
+            foreach (var logic in attackLogics)
                 _attackEventQueue.Enqueue(logic);
             _anim.Play(animName);
             yield return StartCoroutine(WaitAnim(animName, 1.0f));
@@ -79,11 +79,11 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
             OnAttackEvent();
             yield break;
         }
-        
+
         public IEnumerator DoShake(GameObject target, float duration, float power)
         {
             Vector3 originPos;
-            
+
             originPos = target.transform.localPosition;
 
             float timer = 0;

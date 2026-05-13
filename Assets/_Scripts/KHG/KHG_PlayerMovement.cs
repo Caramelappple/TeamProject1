@@ -1,7 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections;
-using System;
 
 public class KHG_PlayerMovement : MonoBehaviour
 {
@@ -11,11 +10,6 @@ public class KHG_PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rigid;
     private Vector2 movedir;
     private Vector2 lastdir = Vector2.down;
-
-    private void Awake()
-    {
-        rigid = GetComponent<Rigidbody2D>();
-    }
 
     private void FixedUpdate()
     {

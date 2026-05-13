@@ -1,7 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KHG_PoisonDamage : MonoBehaviour
+public class KHG_PoisonDamage : MonoBehaviour,LSO_ISkill
 {
     [SerializeField] private float damage = 10f;
     [SerializeField] private float interval = 1f;
@@ -18,10 +19,8 @@ public class KHG_PoisonDamage : MonoBehaviour
             timer[other.gameObject] = 0f;
         }
 
-        // 시간 누적
         timer[other.gameObject] += Time.deltaTime;
 
-        // 1초 지났으면 데미지
         if (timer[other.gameObject] >= interval)
         {
             KHG_Health hp = other.GetComponent<KHG_Health>();
@@ -42,5 +41,15 @@ public class KHG_PoisonDamage : MonoBehaviour
         {
             timer.Remove(other.gameObject);
         }
+    }
+
+    public void UseSkill(GameObject player)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public IEnumerator CoolTime(float time)
+    {
+        throw new System.NotImplementedException();
     }
 }

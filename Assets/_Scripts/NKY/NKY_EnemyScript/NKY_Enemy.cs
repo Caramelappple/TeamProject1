@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace _Scripts.NKY._EnemyScript
 {
-    public class NKY_Enemy : NKY_BaseBoss
+    public class NKY_Enemy: NKY_BaseBoss
     {
         [Header("보스의 스킬 패턴 세팅")]
         [SerializeField] private NKY_BossSkill[] _skills;
         public NKY_Player playerReference;
-        
+
         [Header("보스 스텟 세팅")]
         [field: SerializeField] public int damage { get; private set; }
 
@@ -49,7 +49,7 @@ namespace _Scripts.NKY._EnemyScript
             {
                 yield return ExecutePattern(CentorMove());
 
-                if(_isDead) yield break;
+                if (_isDead) yield break;
 
                 yield return new WaitUntil(ShouldInterruptIdle);
 
@@ -61,7 +61,7 @@ namespace _Scripts.NKY._EnemyScript
                 _lastSkillTime = Time.time;
             }
         }
-        
+
         protected override IEnumerator PickNextSkill()
         {
             NKY_BossSkill selectedSkill = _skills[0];
@@ -122,7 +122,7 @@ namespace _Scripts.NKY._EnemyScript
 
             StopAllCoroutines();
             StopPattern();
-            
+
             if (_anim) _anim.Play("Dead");
 
             var col = GetComponent<Collider2D>();

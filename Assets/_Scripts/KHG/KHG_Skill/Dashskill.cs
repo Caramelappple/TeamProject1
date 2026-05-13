@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
 
-public class Dashskill : MonoBehaviour
+public class Dashskill : MonoBehaviour,LSO_ISkill
 {
     [Header("Dash Settings")]
     [SerializeField] private float dashSpeed = 30f;
@@ -56,6 +56,20 @@ public class Dashskill : MonoBehaviour
 
         yield return new WaitForSeconds(dashCooltime);
         canDash = true;
+    }
+
+    public void UseSkill(GameObject player)
+    {
+        Vector2 dashDir = playerMovement.GetLastDir();
+        if (dashDir != Vector2.zero)
+        {
+            StartCoroutine(DashRoutine(dashDir));
+        }
+    }
+
+    public IEnumerator CoolTime(float time)
+    {
+        throw new System.NotImplementedException();
     }
 
     public bool IsDashing => isDashing; 
