@@ -128,7 +128,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.01231721, y: 1.75}
+  m_Offset: {x: 0.01231721, y: 0.01}
   m_Size: {x: 0.61454767, y: 3.5}
   m_Direction: 0
 --- !u!114 &2752312111904947043
@@ -145,5 +145,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CrashDamage
   layerMask:
     serializedVersion: 2
-    m_Bits: 1048576
+    m_Bits: 0
   damage: 5

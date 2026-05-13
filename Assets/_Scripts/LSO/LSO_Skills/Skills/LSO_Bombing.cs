@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class LSO_Bombing : MonoBehaviour//,LSO_ISkill
+public class LSO_Bombing : MonoBehaviour,LSO_ISkill
 {
     private static readonly int Explode = Animator.StringToHash("Explode");
     private Animator _animator;
