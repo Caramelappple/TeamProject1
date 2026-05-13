@@ -95,5 +95,6 @@ public class LSO_PlayerMovement : MonoBehaviour
             _skillItem = touchedSkill;
         }
     }
+
 }
 
