@@ -11,6 +11,7 @@ public class JHY_Attack : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private GameObject projectilePrefab2;
 
     [Header("Attack Settings")]
     [SerializeField] private float attackRange = 2f;
@@ -209,7 +210,7 @@ public class JHY_Attack : MonoBehaviour
         {
             float currentAngle = shockwaveStartAngleOffset + (angleStep * i) + extraOffset;
             Quaternion rotation = Quaternion.Euler(0f, 0f, currentAngle);
-            Instantiate(projectilePrefab, spawnPosition, rotation);
+            Instantiate(projectilePrefab2, spawnPosition, rotation);
         }
     }
 
