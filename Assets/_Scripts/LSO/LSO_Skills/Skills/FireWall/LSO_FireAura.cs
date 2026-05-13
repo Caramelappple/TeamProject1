@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class LSO_FireAura : MonoBehaviour,LSO_ISkill
 {
-    private LSO_PlayerMovement _playerMovement;
+    private LSO_PlayerAttack _playerAttack;
     private GameObject _player;
     private bool _canUse = true;
     
@@ -22,7 +22,7 @@ public class LSO_FireAura : MonoBehaviour,LSO_ISkill
         if (!_canUse) return;
         
        _player = player;
-       _playerMovement = _player.GetComponent<LSO_PlayerMovement>();
+       _playerAttack = _player.GetComponent<LSO_PlayerAttack>();
        
        player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
     }
@@ -42,16 +42,16 @@ public class LSO_FireAura : MonoBehaviour,LSO_ISkill
                 enemyHealth.GetDamage(data);
             }
         }
-        float originalSpeed = _playerMovement.speed;
-        _playerMovement.speed *= speedMult;
-        Debug.Log(_playerMovement.speed);
+        float originalSpeed = _playerAttack.speed;
+        _playerAttack.speed *= speedMult;
+        Debug.Log(_playerAttack.speed);
         
         yield return  new WaitForSeconds(0.1f);
         _sprite.sprite = null;    
         
         yield return new WaitForSeconds(_waitTime);
         Destroy(_effectInstance);
-        _playerMovement.speed = originalSpeed;
+        _playerAttack.speed = originalSpeed;
         
         yield return new WaitForSeconds(time);
         _canUse = true;

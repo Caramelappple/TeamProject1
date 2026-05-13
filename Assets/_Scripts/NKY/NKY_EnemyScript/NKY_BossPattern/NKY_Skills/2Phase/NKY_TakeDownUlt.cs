@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using _Scripts.NKY._EnemyScript;
 using _Scripts.NKY._EnemyScript.BossPattern;
 using UnityEngine;
@@ -14,13 +15,13 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
         [SerializeField] private Collider2D[] slamHitbox;
         [SerializeField] private GameObject dustEffect;
 
-        [field: SerializeField] public override float DamageScale { get; protected set; } = 0.5f;
+        [field: SerializeField] public override float damageScale { get; protected set; } = 0.5f;
 
         private int _damage = 0;
 
         private void Start()
         {
-            _damage = (int)(DamageScale * _bossBrain.GetComponent<NKY_Enemy>().damage);
+            _damage = (int)(damageScale * _bossBrain.GetComponent<NKY_Enemy>().damage);
             dustEffect.SetActive(false);
         }
 

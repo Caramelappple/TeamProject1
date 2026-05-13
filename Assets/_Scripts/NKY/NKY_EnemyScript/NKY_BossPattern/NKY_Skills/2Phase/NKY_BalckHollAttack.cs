@@ -12,7 +12,6 @@ public class NKY_BalckHollAttack : NKY_BossSkill
     [SerializeField] private Transform[] point;
     [SerializeField] private GameObject hole;
     [SerializeField] private GameObject slashPrefab;
-    [SerializeField] private Collider2D holeCollider;
     
     [Header("스킬 설정")]
     [SerializeField] private float range;
@@ -24,14 +23,14 @@ public class NKY_BalckHollAttack : NKY_BossSkill
     
     private Queue<GameObject> slashQueue = new Queue<GameObject>();
     
-    [field: SerializeField] public override float DamageScale { get; protected set; } = 0.4f;
+    [field: SerializeField] public override float damageScale { get; protected set; } = 0.4f;
 
     private int _damage;
 
     protected override void OnAwake()
     {
         base.OnAwake();
-        _damage = (int)(DamageScale * _bossBrain.GetComponent<NKY_Enemy>().damage);
+        _damage = (int)(damageScale * _bossBrain.GetComponent<NKY_Enemy>().damage);
         hole.SetActive(false);
         CreateQueue();
     }
@@ -133,8 +132,7 @@ public class NKY_BalckHollAttack : NKY_BossSkill
             slash.transform.rotation = Quaternion.Euler(0f, 0f, pointIndex * -90f);
             
             yield return PlaySequence(
-                Attack(() => _HitBoxController.Cast(holeCollider, hole.transform.position,
-                    (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage))),
+                Attack(() => HitToDamage(boss.gameObject, target.gameObject, _damage)),
                 SlashEffect(slash),
                 EnQueue(slash, slashQueue));
         }

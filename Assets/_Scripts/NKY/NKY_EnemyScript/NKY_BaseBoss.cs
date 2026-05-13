@@ -19,8 +19,6 @@ namespace _Scripts.NKY._EnemyScript
         protected float _lastSkillTime = -99f;
 
         protected bool _isDead = false;
-        
-        protected Coroutine _masterHandle = null;
 
         protected bool IsSkillReady()
         {

@@ -10,10 +10,10 @@ public class LSO_PlayerMovement : MonoBehaviour
     protected Animator Animator;
     private SpriteRenderer _sprite;
     
-    [SerializeField]private bool _canMove = true;
+    private bool _canMove = true;
 
     private Vector2 _moveDir;
-    private Vector2 _lastDir = Vector2.down;
+    private Vector2 lastDir = Vector2.down;
     private Rigidbody2D _rigid;
 
     LSO_SkillItem _skillItem;
@@ -35,8 +35,15 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!_canMove) return;
-        _rigid.linearVelocity = _moveDir.normalized * speed;
+        if (_canMove)
+        {
+            _rigid.linearVelocity = _moveDir * speed;
+        }
+        else
+        {
+            _rigid.linearVelocity = Vector2.zero;
+            Debug.Log("멈춤");
+        }
     }
 
     private void Update()
@@ -66,26 +73,19 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     private void OnMove(InputValue value)
     {
-        if (!_canMove)
-        {
-            _moveDir = Vector2.zero;
-            return;
-        }
-        
-        Debug.Log(_rigid.linearVelocity);
-        
         _moveDir = value.Get<Vector2>();
         if (_moveDir != Vector2.zero) //움직였을때
-            _lastDir = _moveDir;
+            lastDir = _moveDir;
         
         if (_moveDir.x != 0)
         {
             _sprite.flipX = _moveDir.x < 0;
         }
 
-        if (_lastDir.x != 0 && _lastDir.y != 0) //대각선으로 움직였을때
+        if (lastDir.x != 0 && lastDir.y != 0) //대각선으로 움직였을때
         {
-            _lastDir = new Vector2(Mathf.Sign(_lastDir.x), 0);
+            lastDir = new Vector2(Mathf.Sign(lastDir.x), 0);
+            Debug.Log(lastDir);
 
             Animator.SetFloat(MoveY, 0);
             Animator.SetBool(MoveX, _moveDir.x != 0);
@@ -108,23 +108,11 @@ public class LSO_PlayerMovement : MonoBehaviour
     public void SetMove(bool move)
     {
         _canMove = move;
-    
-        // 스턴이 시작되는 순간 즉시 속도와 입력값을 0으로 밀어버림
-        if (!_canMove)
-        {
-            _moveDir = Vector2.zero;
-            if (_rigid != null)
-            {
-                _rigid.linearVelocity = Vector2.zero;
-            }
-            Animator.SetBool(MoveX, false);
-            Animator.SetFloat(MoveY, 0);
-        }
     }
     
     public Vector3 GetLastDir()
     {
-        return _lastDir;
+        return lastDir;
     }
 }
 

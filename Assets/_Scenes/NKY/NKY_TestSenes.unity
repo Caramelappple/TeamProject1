@@ -544,7 +544,7 @@ MonoBehaviour:
   - {fileID: 577079681}
   - {fileID: 586659103}
   - {fileID: 503507899}
-  playerReference: {fileID: 0}
+  playerReference: {fileID: 467756591}
   <damage>k__BackingField: 5
 --- !u!114 &102294124
 MonoBehaviour:
@@ -5999,8 +5999,8 @@ MonoBehaviour:
   hole: {fileID: 505032231}
   slashPrefab: {fileID: 1022309163451942407, guid: 833192a5b8418974cb3e3741ed9a8293,
     type: 3}
-  range: 13
-  pullStrength: 8
+  range: 8
+  pullStrength: 10
   lockStrength: 0.5
   slashCount: 7
   <damageScale>k__BackingField: 1

@@ -12,7 +12,7 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
             _bossBrain = GetComponentInParent<NKY_Enemy>();
         }
 
-        public abstract float DamageScale { get; protected set; }
+        public abstract float damageScale { get; protected set; }
         
         public virtual void Init(NKY_BaseBoss boss)
         {

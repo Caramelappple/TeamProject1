@@ -3,57 +3,50 @@ using UnityEngine;
 
 public class LSO_Immune : MonoBehaviour, LSO_ISkill
 {
-    private bool _canUse = true;
-    
-    [SerializeField] private float coolTime = 5f;
-    [SerializeField] private float waitTime = 3f;
-    
     private GameObject _player;
+    private SpriteRenderer _sprite;
+    private LSO_PlayerMovement _playerMovement;
+    private LSO_PlayerAttack _playerAttack;
 
+    private bool _canUse = true;
+    private bool _canMove = true;
+    
+    private float _coolTime = 5;
+    private float _waitTime = 3;
     public void UseSkill(GameObject player)
     {
         if (!_canUse) return;
-
-        // 스킬을 사용하는 "실행 주체"인 player의 컴포넌트에서 코루틴을 돌립니다.
-        // 이렇게 해야 스킬 아이템이 파괴되어도 코루틴이 끊기지 않습니다.
-        this._player = player;
-        player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(3));
+        
+        _player = player;
+        _sprite = player.GetComponent<SpriteRenderer>();
+        _playerMovement = player.GetComponent<LSO_PlayerMovement>();
+        _playerAttack = player.GetComponent<LSO_PlayerAttack>();
+        
+        player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
     }
 
     public IEnumerator CoolTime(float time)
     {
-        _canUse = false; // 쿨타임 시작
+        _canUse = false;
         
-        SpriteRenderer sprite = _player.GetComponent<SpriteRenderer>();
-        LSO_PlayerMovement movement = _player.GetComponent<LSO_PlayerMovement>();
-        LSO_PlayerAttack attack = _player.GetComponent<LSO_PlayerAttack>();
-        Health health = _player.GetComponent<Health>();
-
-        // 기존 상태 저장
-        Color originalColor = sprite.color;
         
-        sprite.color = new Color(1, 1, 0.2f, 1);
-        if (health != null) health.SetDamageable(false);
-        if (movement != null) movement.SetMove(false);
-        if (attack != null) attack.SetAttack(false);
-
-        // 지속 시간 대기
-        yield return new WaitForSeconds(waitTime);
-
-        // --- [상태 복구] ---
-        sprite.color = originalColor;
-        if (health != null) health.SetDamageable(true);  // 무적 해제
-        if (movement != null) movement.SetMove(true);   // 이동 허용
-        if (attack != null) attack.SetAttack(true);     // 공격 허용
-
-        // --- [남은 쿨타임 대기] ---
-        // 이미 _waitTime만큼 지났으므로 (전체 쿨타임 - 유지시간) 만큼 더 기다립니다.
-        float remainingCool = coolTime - waitTime;
-        if (remainingCool > 0)
-        {
-            yield return new WaitForSeconds(remainingCool);
-        }
-
+        Debug.Log("dsfa");
+        Color originalColor = new Color(_sprite.color.r, _sprite.color.g, _sprite.color.b, _sprite.color.a);//기존 색 저장
+        Health health = _player.GetComponent<Health>();//체력 가져오기
+        
+        _sprite.color = new Color(1, 1, 0.2f, 1);//색 바꾸기
+        health.SetDamageable(false);//무적으로 바꾸기
+        _playerMovement.SetMove(false);//못 움직이게 하기 및 스킬 착용 및 사용 막기
+        _playerAttack.SetAttack(false);//공격 못하게 하기
+        
+        yield return new WaitForSeconds(_waitTime);//유지시간
+        
+        _sprite.color = originalColor;
+        health.SetDamageable(false);
+        _playerAttack.SetAttack(false);//공격 못하게 하기
+        _playerMovement.SetMove(true);
+        
+        yield return new WaitForSeconds(time);
         _canUse = true;
     }
 }

@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using _Scripts.NKY._EnemyScript;
 using _Scripts.NKY._EnemyScript.BossPattern;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class NKY_ChargeSlash : NKY_BossSkill
 {
@@ -15,7 +17,7 @@ public class NKY_ChargeSlash : NKY_BossSkill
     [SerializeField] private GameObject slashEffect;
     
     [Header("스킬 설정")]
-    [field: SerializeField] public override float DamageScale { get; protected set; } = 3f;
+    [field: SerializeField] public override float damageScale { get; protected set; } = 3f;
     
     private int _damage;
 
@@ -27,7 +29,7 @@ public class NKY_ChargeSlash : NKY_BossSkill
         {
             particle.Stop();
         }
-        _damage = (int)DamageScale * _bossBrain.GetComponent<NKY_Enemy>().damage;
+        _damage = (int)damageScale * _bossBrain.GetComponent<NKY_Enemy>().damage;
     }
 
     public override IEnumerator Execute(Transform boss, Transform target)
@@ -37,11 +39,10 @@ public class NKY_ChargeSlash : NKY_BossSkill
         {
             yield return PlaySequence(
                 SpownSword(attackSword, swordPoint),
-                ChargeEffect(swordParticle, attackSword, 0.8f),
+                ChargeEffect(swordParticle, attackSword, 1.5f),
                 ShowWarn(hitBox, 0.6f, () => hitBox.transform.position),
-                WaitUntilOrTime(() => false, 0.3f),
+                WaitUntilOrTime(() => false, 0.5f),
                 RotateSword(attackSword, swordPoint.transform.eulerAngles.z + 90f, swordPoint.transform.eulerAngles.z - 90f, -10f),
-                
                 Attack(() => _HitBoxController.Cast(hitBox, (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage))),
                 Effect(slashEffect, swordPoint)
             );
@@ -51,6 +52,7 @@ public class NKY_ChargeSlash : NKY_BossSkill
         yield return WaitUntilOrTime(()=>false, 4f);
         _anim.SetBool(Stun, false);
         yield return StartCoroutine(WaitAnim("StandUp", 1f));
+        yield break;
     }
 
     private IEnumerator SpownSword(GameObject obj, GameObject point)
