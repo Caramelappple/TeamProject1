@@ -106,11 +106,9 @@ public class JHY_Attack : MonoBehaviour
         isSkillUsing = true;
         lastSkillTime = Time.time;
         bossMove?.StopMoving();
-
-
-        ani.ResetTrigger("attack");
-        ani.ResetTrigger("Jump");
         ani.SetTrigger("Skill");
+
+        Invoke(nameof(FireProjectiles), 0.5f);
         Invoke(nameof(EndSkill), 1.5f);
     }
     bool IsPlayerInSkillAngle()
@@ -179,23 +177,10 @@ public class JHY_Attack : MonoBehaviour
     {
         ani.SetTrigger("Jump");
         yield return new WaitForSeconds(2.1f);
-        
+        SpawnShockwave();
     }
 
-    public void SpawnShockwave_First()
-    {
-        SpawnShockwaveWithOffset(0f);
-    }
-
-    public void SpawnShockwave_Second()
-    {
-        if (shockwaveProjectileCount <= 0) return;
-
-        float angleStep = 360f / shockwaveProjectileCount;
-        SpawnShockwaveWithOffset(angleStep * 0.5f);
-    }
-
-    private void SpawnShockwaveWithOffset(float extraOffset)
+    public void SpawnShockwave()
     {
         Debug.Log("Shockwave!");
 
@@ -207,10 +192,9 @@ public class JHY_Attack : MonoBehaviour
 
         for (int i = 0; i < shockwaveProjectileCount; i++)
         {
-            float currentAngle = shockwaveStartAngleOffset + (angleStep * i) + extraOffset;
+            float currentAngle = shockwaveStartAngleOffset + (angleStep * i);
             Quaternion rotation = Quaternion.Euler(0f, 0f, currentAngle);
             Instantiate(projectilePrefab, spawnPosition, rotation);
         }
     }
-
 }
