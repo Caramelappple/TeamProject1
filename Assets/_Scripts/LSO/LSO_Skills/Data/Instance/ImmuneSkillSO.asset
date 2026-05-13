@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06120155515bb614abefb3c920fe08ff, type: 3}
-  m_Name: TrapSpawner
+  m_Name: ImmuneSkillSO
   m_EditorClassIdentifier: Assembly-CSharp::LSO.SkillSystem.LSO_SkillResourceSO
-  skillName: Trap
-  skillDescription: "\uD2B8\uB7A9\uC744 \uC2A4\uD3F0\uD569\uB2C8\uB2E4"
-  skillIcon: {fileID: 21300014, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
-  skillPrefab: {fileID: 1451266573208215504, guid: 534f7469c4eb94044988cab93cec3ebb,
+  skillName: "\uBB34\uC801"
+  skillDescription: "\u3134\u3141\u3147\u313B\u3134\u3139\u3134\u3134\u3139\u3139\u3134\u3139\u3147\u3134\u3139\u3139\u3147\u3134"
+  skillIcon: {fileID: 21300060, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
+  skillPrefab: {fileID: 4154913620570664508, guid: 4b57262aaca925e41b630335c70f7620,
     type: 3}

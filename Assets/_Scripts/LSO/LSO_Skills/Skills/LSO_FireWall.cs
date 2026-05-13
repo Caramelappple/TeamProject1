@@ -10,6 +10,7 @@ namespace _Scripts.LSO.LSO_Skills.Skills
         private LSO_PlayerMovement _playerMovement;
         private bool _canUse = true;
         private Vector2 _tempVector2;
+        private Vector3 _lastDir;
     
         [SerializeField] private GameObject effect;
         private GameObject _effectInstance;
@@ -25,7 +26,7 @@ namespace _Scripts.LSO.LSO_Skills.Skills
             
             _player = player;
             _playerMovement = _player.GetComponent<LSO_PlayerMovement>();
-            
+            _lastDir = _playerMovement.GetLastDir();
             _tempVector2 = new Vector2(_player.transform.position.x, _player.transform.position.y);
             
             player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
@@ -35,7 +36,7 @@ namespace _Scripts.LSO.LSO_Skills.Skills
         {
             _canUse = false;
 
-            Vector2 curDir = new Vector2(_playerMovement.lastDir.x, _playerMovement.lastDir.y);
+            Vector2 curDir = new Vector2(_lastDir.x, _lastDir.y);
 
             for (int i = 1; i <= _count; i++)
             {
