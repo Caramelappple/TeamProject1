@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 6376774095900369836}
   - component: {fileID: 2866584704287831074}
   m_Layer: 5
-  m_Name: TestSkillICon 3
+  m_Name: BloodSkillIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,12 +192,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c5d3e6a61d5f2f49815bde3f3b6877c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_Skill
-  skillName: TestSkill 3
+  skillName: Blood
   maxCooldownTime: 5
   textSkillData: {fileID: 0}
   textCooldownTime: {fileID: 964448010021108703}
   imageCooldownTime: {fileID: 792296827686754365}
-  skills: {fileID: 1486792077782306512, guid: 53a0de549d194ec4a87fd111d415190d, type: 3}
+  skills: {fileID: 5597526705496126092, guid: 5aa35f01fe705a842be2f053e14c10cb, type: 3}
 --- !u!222 &6376774095900369836
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -226,8 +226,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1361763470983434097, guid: 2a0c47e9e306e7d47a642f05b127f2df,
-    type: 3}
+  m_Sprite: {fileID: 21300008, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -302,8 +301,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1361763470983434097, guid: 2a0c47e9e306e7d47a642f05b127f2df,
-    type: 3}
+  m_Sprite: {fileID: 21300008, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
