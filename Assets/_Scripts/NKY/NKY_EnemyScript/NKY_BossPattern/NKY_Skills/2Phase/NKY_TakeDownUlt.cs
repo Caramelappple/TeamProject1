@@ -49,13 +49,13 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
                     WaitUntilOrTime(() => false, 0.15f),
                     MoveTo(boss, targetPos, 0.2f),
                     ComboAttack("StationaryAttack",
-                        () => _HitBoxController.Cast(slamHitbox[2], (hitTarget) => HitToDamage(hitTarget, (int)_damage)),
-                        () => _HitBoxController.Cast(slamHitbox[0], (hitTarget) => HitToDamage(hitTarget, (int)_damage)),
-                        () => _HitBoxController.Cast(slamHitbox[1], (hitTarget) => HitToDamage(hitTarget, (int)_damage))
+                        () => _HitBoxController.Cast(slamHitbox[2], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, (int)_damage)),
+                        () => _HitBoxController.Cast(slamHitbox[0], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, (int)_damage)),
+                        () => _HitBoxController.Cast(slamHitbox[1], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, (int)_damage))
                     ),
                     ShowWarn(slamHitbox[3], 0.6f, () => _shadow.transform.position),
                     WaitUntilOrTime(() => false, 0.4f),
-                    Attack(() => _HitBoxController.Cast(slamHitbox[3], (hitTarget) => HitToDamage(hitTarget, (int)_damage * 2))),
+                    Attack(() => _HitBoxController.Cast(slamHitbox[3], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, (int)_damage * 2))),
                     PlayDustEffect(dustEffect, _shadow.transform.position),
                     ShadowLock(false)
                 );

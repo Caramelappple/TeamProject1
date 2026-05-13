@@ -10,7 +10,6 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
         protected override void OnAwake()
         {
             _bossBrain = GetComponentInParent<NKY_Enemy>();
-            Debug.Log(_bossBrain.name);
         }
 
         public abstract float damageScale { get; protected set; }

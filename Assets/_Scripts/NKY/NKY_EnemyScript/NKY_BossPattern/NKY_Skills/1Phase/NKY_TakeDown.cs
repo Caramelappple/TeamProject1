@@ -47,9 +47,9 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
                     WaitUntilOrTime(() => false, 0.15f),
                     MoveTo(boss, targetPos, 0.2f),
                     ComboAttack("StationaryAttack",
-                        () => _HitBoxController.Cast(slamHitbox[2], (hitTarget) => HitToDamage(hitTarget, _damage)),
-                        () => _HitBoxController.Cast(slamHitbox[0], (hitTarget) => HitToDamage(hitTarget, _damage)),
-                        () => _HitBoxController.Cast(slamHitbox[1], (hitTarget) => HitToDamage(hitTarget, _damage))
+                        () => _HitBoxController.Cast(slamHitbox[2], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage)),
+                        () => _HitBoxController.Cast(slamHitbox[0], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage)),
+                        () => _HitBoxController.Cast(slamHitbox[1], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage))
                     ),
                     ShadowLock(false),
                     WaitUntilOrTime(() => false, 0.8f)

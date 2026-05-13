@@ -143,11 +143,12 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
             yield break;
         }
 
-        protected void HitToDamage(Collider2D target, int damage)
+        protected void HitToDamage(GameObject giver, GameObject target, int damage)
         {
-            if (target.TryGetComponent<Health>(out Health health))
+            if (target.TryGetComponent(out Health health))
             {
-                DamageData data = DamageData.Create(health, damage);
+                Health healthGiver = giver.GetComponent<Health>();
+                DamageData data = DamageData.Create(healthGiver, damage);
                 health.GetDamage(data);
             }
         }
