@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7067c87e9e283418fd4da067c38591, type: 3}
   m_Name: KDH_FireWall
   m_EditorClassIdentifier: Assembly-CSharp::KDH_SkillData
-  skillName: KDH_FireWall
+  skillName: "\uBD88\uAE30\uB465"
   skillDescription: "\uC0AC\uC6A9\uC2DC \uBCF4\uACE0\uC788\uB294 \uBC29\uD5A5\uC73C\uB85C
     \uC9C1\uC120\uC758 \uBD88\uAE30\uB465\uC744 \uC18C\uD658\uD569\uB2C8\uB2E4."
   skillIcon: {fileID: 21300030, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}

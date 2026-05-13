@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba7067c87e9e283418fd4da067c38591, type: 3}
+  m_Name: KDH_Trap
+  m_EditorClassIdentifier: Assembly-CSharp::KDH_SkillData
+  skillName: "\uB36B"
+  skillDescription: "\uB36B\uC744 \uC124\uCE58\uD569\uB2C8\uB2E4."
+  skillIcon: {fileID: 21300014, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
+  maxCooldownTime: 5
+  skillPrefab: {fileID: 8217472116318459907, guid: 515542048abc10c439732f4f285deebe,
+    type: 3}
+  skillIConPrefabs: {fileID: 4590441206724951262, guid: 18ce4cd4b1528e94c813d73f18aa3efa,
+    type: 3}

@@ -1799,6 +1799,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &254807741
 GameObject:
   m_ObjectHideFlags: 0
@@ -2408,6 +2413,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2cb8112c38fd30c4db969d2d864021b5, type: 2}
   - {fileID: 11400000, guid: 6e329342d551a634895e4b0ae83ef162, type: 2}
   - {fileID: 11400000, guid: 9690242182eb0474e9b55dd806e7001e, type: 2}
+  - {fileID: 11400000, guid: 98c585bc5b76a4b408890cb4bc14e9b0, type: 2}
+  - {fileID: 11400000, guid: 9715fba982226fd4983fd5d666268650, type: 2}
+  - {fileID: 11400000, guid: 44a50522ce0053b459c0ebdc3c63a08f, type: 2}
+  - {fileID: 11400000, guid: 8c01a85d743b08143acf0c9ce381ce46, type: 2}
+  - {fileID: 11400000, guid: ef386de9741f04f41bcedcbac07e80e2, type: 2}
   hadSkillData: []
   skillSystem: {fileID: 251780862}
   skillCardUI1: {fileID: 396927423}
