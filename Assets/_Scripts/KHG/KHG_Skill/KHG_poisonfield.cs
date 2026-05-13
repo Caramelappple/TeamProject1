@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.InputSystem;
 
 public class KHG_PoisonField : MonoBehaviour//,LSO_ISkill
 {
