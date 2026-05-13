@@ -15,22 +15,22 @@ public class KHG_PoisonField : MonoBehaviour//,LSO_ISkill
         if (Keyboard.current.rKey.wasPressedThisFrame && canUseSkill)
         {
 
-            //Vector2 lookDirection = playerMovement
+            Vector2 lookDirection = playerMovement.lastDir;
 
-            //Vector3 spawnPos = transform.position + new Vector3(lookDirection.x, lookDirection.y, 0) * spawnDistance;
+            Vector3 spawnPos = transform.position + new Vector3(lookDirection.x, lookDirection.y, 0) * spawnDistance;
 
-            //GameObject poison = Instantiate(poisonPrefab, spawnPos, Quaternion.identity);
+            GameObject poison = Instantiate(poisonPrefab, spawnPos, Quaternion.identity);
 
-            //// 오브젝트에 방향으로 속도 부여 (Rigidbody2D가 있을 경우)
-            //Rigidbody2D rb = poison.GetComponent<Rigidbody2D>();
-            //if (rb != null)
-            //{
-            //    rb.linearVelocity = lookDirection.normalized * 5f; // 발사 속도
-            //}
+            // 오브젝트에 방향으로 속도 부여 (Rigidbody2D가 있을 경우)
+            Rigidbody2D rb = poison.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.linearVelocity = lookDirection.normalized * 5f; // 발사 속도
+            }
 
-            //Destroy(poison, 5f);
+            Destroy(poison, 5f);
 
-            //StartCoroutine(SkillCoolTime());
+            StartCoroutine(SkillCoolTime());
         }
     }
 
