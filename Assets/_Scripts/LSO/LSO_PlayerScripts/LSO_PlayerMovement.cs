@@ -6,6 +6,7 @@ public class LSO_PlayerMovement : MonoBehaviour
 {
     private static readonly int MoveX = Animator.StringToHash("MoveX");
     private static readonly int MoveY = Animator.StringToHash("MoveY");
+    public Health Health {get; private set;}
     public float speed = 3;
     protected Animator Animator;
     private SpriteRenderer _sprite;
@@ -25,7 +26,7 @@ public class LSO_PlayerMovement : MonoBehaviour
         _rigid = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         _sprite = GetComponent<SpriteRenderer>();
-        //OnSkillEvent = new Action<GameObject>[LSO_SkillSlot.instance.slotIndex];
+        Health = GetComponent<Health>();
     }
 
     private void Start()
