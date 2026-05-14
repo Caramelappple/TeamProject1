@@ -37,7 +37,7 @@ public class NKY_SwordBomb : NKY_BossSkill
                 swordQueue.Enqueue(sword);
 
                 effect = Instantiate(effectPrefab, transform);
-                sword.SetActive(false);
+                effect.SetActive(false);
                 effectQueue.Enqueue(effect);
             }
         }
@@ -64,7 +64,7 @@ public class NKY_SwordBomb : NKY_BossSkill
                 effect = effectQueue.Dequeue();
                 
                 StartCoroutine(PlaySequence(
-                    ShowWarn(0, new Vector2(0.2f, (pos - sword.transform.position).magnitude),
+                    ShowWarn(0, new Vector2(0.2f , (pos - sword.transform.position).magnitude),
                         0.8f, () => Vector3.Lerp(sword.transform.position, pos, 0.5f), sword.transform.localEulerAngles.z),
                     WaitUntilOrTime(() => false, 0.6f),
                     MoveTo(sword.transform, pos, swordDuration),

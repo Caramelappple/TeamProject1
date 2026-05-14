@@ -44,4 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b8e36d5765483688a88dddc9638498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_RadialBeamSpawner
+  projectilePrefab: {fileID: 2954016388004856399, guid: 1502b58d54edcb241bc83fe079d9377b,
+    type: 3}
   effect: {fileID: 6314672923314067675, guid: 2d79b22bf32811c4d9285c74dd0b45e8, type: 3}

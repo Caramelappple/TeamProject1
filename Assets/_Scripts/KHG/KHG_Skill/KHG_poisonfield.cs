@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class KHG_PoisonField : MonoBehaviour//,LSO_ISkill
+public class KHG_PoisonField : MonoBehaviour,LSO_ISkill
 {
     [SerializeField] private GameObject poisonPrefab;
     [SerializeField] private float spawnDistance = 1.5f;
@@ -9,6 +9,14 @@ public class KHG_PoisonField : MonoBehaviour//,LSO_ISkill
     private LSO_PlayerMovement _playerMovement;
     private bool _canUse = true;
     
+    void Update()
+    {
+        // 키보드 E를 누르면 내 자신(this.gameObject)을 매개변수로 전달하며 실행
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            UseSkill(this.gameObject);
+        }
+    }
     public void UseSkill(GameObject player)
     {
         if (!_canUse) return;
@@ -31,7 +39,7 @@ public class KHG_PoisonField : MonoBehaviour//,LSO_ISkill
         Destroy(poison, 5f);
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
     }
-    private IEnumerator CoolTime(float time)
+    public IEnumerator CoolTime(float time)
     {
         _canUse = false;
         yield return new WaitForSeconds(time);

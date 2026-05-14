@@ -6,6 +6,7 @@ public class LSO_PlayerMovement : MonoBehaviour
 {
     private static readonly int MoveX = Animator.StringToHash("MoveX");
     private static readonly int MoveY = Animator.StringToHash("MoveY");
+    public Health Health {get; private set;}
     public float speed = 3;
     protected Animator Animator;
     private SpriteRenderer _sprite;
@@ -25,7 +26,7 @@ public class LSO_PlayerMovement : MonoBehaviour
         _rigid = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         _sprite = GetComponent<SpriteRenderer>();
-        //OnSkillEvent = new Action<GameObject>[LSO_SkillSlot.instance.slotIndex];
+        Health = GetComponent<Health>();
     }
 
     private void Start()
@@ -106,17 +107,46 @@ public class LSO_PlayerMovement : MonoBehaviour
     public void SetMove(bool move)
     {
         _canMove = move;
-    
-        // 스턴이 시작되는 순간 즉시 속도와 입력값을 0으로 밀어버림
+
         if (!_canMove)
         {
             _moveDir = Vector2.zero;
-            if (_rigid != null)
-            {
-                _rigid.linearVelocity = Vector2.zero;
-            }
+            if (_rigid != null) _rigid.linearVelocity = Vector2.zero;
             Animator.SetBool(MoveX, false);
             Animator.SetFloat(MoveY, 0);
+            if (_moveDir.x != 0)
+            {
+                _sprite.flipX = _moveDir.x < 0;
+            }
+        }
+        else
+        {
+            if (Keyboard.current != null)
+            {
+                Vector2 dir = Vector2.zero;
+                if (Keyboard.current.wKey.isPressed) dir.y += 1;
+                if (Keyboard.current.sKey.isPressed) dir.y -= 1;
+                if (Keyboard.current.aKey.isPressed) dir.x -= 1;
+                if (Keyboard.current.dKey.isPressed) dir.x += 1;
+                _moveDir = dir;
+                
+                if (_moveDir != Vector2.zero) //움직였을때
+                    _lastDir = _moveDir;
+                Animator.SetFloat(MoveY, _moveDir.y);
+                Animator.SetBool(MoveX, _moveDir.x != 0);
+                if (_lastDir.x != 0 && _lastDir.y != 0) //대각선으로 움직였을때
+                {
+                    _lastDir = new Vector2(Mathf.Sign(_lastDir.x), 0);
+
+                    Animator.SetFloat(MoveY, 0);
+                    Animator.SetBool(MoveX, _moveDir.x != 0);
+                }
+                else
+                {
+                    Animator.SetFloat(MoveY, _moveDir.y);
+                    Animator.SetBool(MoveX, _moveDir.x != 0);
+                }
+            }
         }
     }
     

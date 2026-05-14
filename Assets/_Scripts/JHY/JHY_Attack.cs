@@ -28,6 +28,18 @@ public class JHY_Attack : MonoBehaviour
     [SerializeField] private float shockwaveStartAngleOffset = 0f;
     [SerializeField] private float skillAngle = 60f;
 
+    [Header("Spider Web")]
+    [SerializeField] private GameObject spiderWebPrefab;
+    [SerializeField] private float spiderWebSpawnTimer = 15f;
+    [SerializeField] private float spiderWebDuration = 6f;
+
+
+    [Header("RainSpear")]
+    [SerializeField] private SpearSpawner spearSpawner;
+    [SerializeField] private float spearRainCoolTime = 20f;
+    private float lastSpearRainTime;
+
+
 
     private float lastAttackTime;
     private float lastSkillTime;
@@ -47,7 +59,29 @@ public class JHY_Attack : MonoBehaviour
 
 
     }
+    void Start()
+    {
+        StartCoroutine(SpiderWebRoutine());
+    }
 
+    IEnumerator SpiderWebRoutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(spiderWebSpawnTimer);
+
+            if (spiderWebPrefab != null)
+            {
+                GameObject web = Instantiate(
+                    spiderWebPrefab,
+                    transform.position,
+                    Quaternion.identity
+                );
+
+                Destroy(web, spiderWebDuration);
+            }
+        }
+    }
     void Update()
     {
         if (player == null) return;
@@ -55,6 +89,12 @@ public class JHY_Attack : MonoBehaviour
         FacePlayer();
 
         if (isSkillUsing || (bossMove != null && (bossMove.isMoving || bossMove.isStunned))) return;
+
+        if (Time.time >= lastSpearRainTime + spearRainCoolTime)
+        {
+            UseSpearRain();
+            return;
+        }
 
         float skilldistance = Vector2.Distance(firePoint.position, player.position);
         float attackdistance = Vector2.Distance(transform.position, player.position);
@@ -81,6 +121,27 @@ public class JHY_Attack : MonoBehaviour
             ani.SetTrigger("attack");
             lastAttackTime = Time.time;
         }
+    }
+    private void UseSpearRain()
+    {
+        lastSpearRainTime = Time.time;
+        isSkillUsing = true;
+        bossMove?.SetSkillLock(true);
+
+        ani.SetTrigger("Skill");
+
+        if (spearSpawner != null)
+        {
+            spearSpawner.SpawnSpears();
+        }
+
+        Invoke(nameof(EndSpearRain), 1.5f);
+    }
+
+    private void EndSpearRain()
+    {
+        bossMove?.SetSkillLock(false);
+        isSkillUsing = false;
     }
 
     void FacePlayer()
