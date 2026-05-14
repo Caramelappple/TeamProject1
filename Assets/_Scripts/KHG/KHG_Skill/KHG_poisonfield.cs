@@ -10,7 +10,7 @@ public class KHG_PoisonField : MonoBehaviour,LSO_ISkill
     private float _coolTime = 3f;
     private LSO_PlayerMovement _playerMovement;
     private bool _canUse = true;
-
+    
     public void UseSkill(GameObject player)
     {
         if (!_canUse) return;
