@@ -6,7 +6,7 @@ using UnityEngine;
 public class KDH_SkillUpdate : MonoBehaviour
 {
     public List<KDH_SkillData> allSkills;      // AllSkills 칸
-    public List<KDH_SkillData> hadSkillData;   // HadSkillData 칸
+    public List<KDH_SkillData> hadSkillData ;   // HadSkillData 칸
     public KDH_SkillSystem skillSystem;
 
     public KDH_SkillCardUI skillCardUI1;       // SkillCard UI1 칸
@@ -14,6 +14,7 @@ public class KDH_SkillUpdate : MonoBehaviour
     public GameObject selectionPanel;          // Selection Panel 칸
 
     public Transform skillBarParent;           // SkillBar Parent 칸
+    public Transform hadSkillBarParent;
 
     // 노란 오브젝트 충돌 시 이 함수를 호출
     public void ShowSkillSelection()
@@ -51,6 +52,7 @@ public class KDH_SkillUpdate : MonoBehaviour
         {
             // 아이콘 생성
             GameObject iconObj = Instantiate(selected.skillIConPrefabs, skillBarParent);
+            GameObject hadIconObj = Instantiate(selected.skillIConPrefabs, hadSkillBarParent);
 
             // 생성된 아이콘 스크립트 가져오기
             KDH_Skill skillScript = iconObj.GetComponent<KDH_Skill>();
@@ -67,7 +69,7 @@ public class KDH_SkillUpdate : MonoBehaviour
                     {   
                         if (skillSystem.skills[i] == null)
                         {
-                            // 방금 만든 스크립트를 슬롯에 직접 등록
+                            // 슬롯에 직접 등록
                             skillSystem.skills[i] = skillScript;
 
                             // 실제 스킬 로직 프리팹도 함께 넣어줌

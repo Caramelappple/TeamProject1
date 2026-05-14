@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class DamageableResources : MonoBehaviour
 {
+    private KDH_HealthBarUI healthBarUI;
+
     [SerializeField] private DamageableResourceSO _data;
     [field : SerializeField] public int MaxValue { get; private set; }
     [field: SerializeField]  public int MinValue { get; private set; }
