@@ -1,15 +1,18 @@
 using UnityEngine;
 using System.Collections;
 
-public class LSO_EnergyBall : MonoBehaviour,LSO_ISkill
+public class LSO_EnergyBallSpawner : MonoBehaviour,LSO_ISkill
 {
     [SerializeField] private GameObject effect;
     private GameObject _effectInstance;
     [SerializeField] private float spawnDistance = 1;
-    private float _speed = 12;
-    private float _coolTime = 3f;
-    private float _waitTime = 5f;
+    private float _speed = 5;
+    private float _coolTime = 30f;
+    private float _recoilTime = 0.3f;
+    private float _recoilSpeed = 1.8f;
+    private Vector2 lookDirection;
     private LSO_PlayerMovement _playerMovement;
+    private Rigidbody2D _rigid;
     private bool _canUse = true;
 
     private IEnumerator SkillCoolTime()
@@ -24,9 +27,9 @@ public class LSO_EnergyBall : MonoBehaviour,LSO_ISkill
         if (!_canUse) return;
         
         _playerMovement = player.GetComponent<LSO_PlayerMovement>();
-        Vector2 lookDirection = _playerMovement.GetLastDir();
-        _effectInstance = Instantiate(effect, player.transform.position + (Vector3)lookDirection * spawnDistance, Quaternion.identity);
-
+        lookDirection = _playerMovement.GetLastDir();
+        _effectInstance = Instantiate(effect, player.transform.position, Quaternion.identity);
+        _rigid = player.GetComponent<Rigidbody2D>();
         
         Rigidbody2D rigid = _effectInstance.GetComponent<Rigidbody2D>();
         rigid.linearVelocity = lookDirection.normalized * _speed; // 발사 속도
@@ -38,8 +41,12 @@ public class LSO_EnergyBall : MonoBehaviour,LSO_ISkill
     public IEnumerator CoolTime(float time)
     {
         _canUse = false;
-        yield return new WaitForSeconds(_waitTime);
-        Destroy(_effectInstance);
+        
+        _playerMovement.SetMove(false);
+        _rigid.linearVelocity = lookDirection.normalized * -_recoilSpeed;
+        yield return new WaitForSeconds(_recoilTime);
+        _playerMovement.SetMove(true);
+        _rigid.linearVelocity = Vector2.zero;
         yield return new WaitForSeconds(time);
         _canUse = true;
     }

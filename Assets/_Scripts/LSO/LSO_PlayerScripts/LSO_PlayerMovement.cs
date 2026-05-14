@@ -72,8 +72,6 @@ public class LSO_PlayerMovement : MonoBehaviour
             return;
         }
         
-        Debug.Log(_rigid.linearVelocity);
-        
         _moveDir = value.Get<Vector2>();
         if (_moveDir != Vector2.zero) //움직였을때
             _lastDir = _moveDir;
