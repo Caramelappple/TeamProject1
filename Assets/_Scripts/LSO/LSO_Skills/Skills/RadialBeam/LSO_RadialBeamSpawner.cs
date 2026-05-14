@@ -16,8 +16,8 @@ public class LSO_RadialBeamSpawner : MonoBehaviour,LSO_ISkill
     private float _spreadAngle = 360f;
     private float _range = 2;
     
-    private float _minwaitTime = 0.2f;
-    private float _maxwaitTime = 0.5f;
+    private float _minWaitTime = 0.2f;
+    private float _maxWaitTime = 0.5f;
     
     private Vector3 _spawnPos;
         
@@ -75,13 +75,12 @@ public class LSO_RadialBeamSpawner : MonoBehaviour,LSO_ISkill
 
         Vector2 dirToPlayer = (_spawnPos - firePoint.position).normalized;
         float baseAngle = Mathf.Atan2(dirToPlayer.y, dirToPlayer.x) * Mathf.Rad2Deg;
-        GameObject projectile;
         
         if (_projectileCount <= 1)
         {
             if (!firePoint) yield break;
                 
-            projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.Euler(0f, 0f, baseAngle));
+            Instantiate(projectilePrefab, firePoint.position, Quaternion.Euler(0f, 0f, baseAngle));
             yield break;
         }
         
@@ -90,8 +89,8 @@ public class LSO_RadialBeamSpawner : MonoBehaviour,LSO_ISkill
             if (!firePoint) yield break;
             
             float currentAngle = Random.Range(0f, 360f);
-            projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.Euler(0f, 0f, currentAngle));
-            yield return new WaitForSeconds(Random.Range(_minwaitTime, _maxwaitTime));
+            Instantiate(projectilePrefab, firePoint.position, Quaternion.Euler(0f, 0f, currentAngle));
+            yield return new WaitForSeconds(Random.Range(_minWaitTime, _maxWaitTime));
         }
     }
 }
