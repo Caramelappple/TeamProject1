@@ -35,6 +35,7 @@ public class JHY_Attack : MonoBehaviour
     private bool isSkillUsing = false;
     private Vector3 firePointBaseLocalPos;
     private Vector3 bossBaseScale;
+    [SerializeField] private JHY_WarningZone warningZone;
 
     void Awake()
     {
@@ -168,20 +169,30 @@ public class JHY_Attack : MonoBehaviour
     IEnumerator JumpAttackWrapper()
     {
         isSkillUsing = true;
-        bossMove?.StopMoving();
+        bossMove?.SetSkillLock(true);
 
         yield return StartCoroutine(JumpAttackRoutine());
         yield return new WaitForSeconds(2.0f);
 
+        bossMove?.SetSkillLock(false);
         isSkillUsing = false;
     }
+
 
     IEnumerator JumpAttackRoutine()
     {
         ani.SetTrigger("Jump");
-        yield return new WaitForSeconds(2.1f);
-        
+
+        yield return new WaitForSeconds(0.6f);
+
+        if (warningZone != null)
+        {
+            warningZone.Warning();
+        }
+
+        yield return new WaitForSeconds(1.5f);
     }
+
 
     public void SpawnShockwave_First()
     {
@@ -200,7 +211,7 @@ public class JHY_Attack : MonoBehaviour
     {
         Debug.Log("Shockwave!");
 
-        if (projectilePrefab == null) return;
+        if (projectilePrefab2 == null) return;
         if (shockwaveProjectileCount <= 0) return;
 
         Vector3 spawnPosition = transform.position;
