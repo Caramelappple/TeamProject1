@@ -454,7 +454,7 @@ MonoBehaviour:
   - {fileID: 566629618}
   - {fileID: 566629616}
   - {fileID: 566629615}
-  - {fileID: 0}
+  - {fileID: 566629621}
   disableColliders:
   - {fileID: 566629613}
   rb: {fileID: 566629611}
@@ -523,7 +523,7 @@ Transform:
   m_GameObject: {fileID: 645698482}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.586, y: 0.004, z: 0}
+  m_LocalPosition: {x: 0.463, y: 0.004, z: 0}
   m_LocalScale: {x: 1.3015817, y: 0.880228, z: 1.1237}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -568,7 +568,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.17610055, g: 0.17610055, b: 0.17610055, a: 0}
+  m_BackGroundColor: {r: 0.28930807, g: 0.16648859, b: 0.16648859, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
