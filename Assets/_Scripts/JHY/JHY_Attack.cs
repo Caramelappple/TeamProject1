@@ -33,6 +33,14 @@ public class JHY_Attack : MonoBehaviour
     [SerializeField] private float spiderWebSpawnTimer = 15f;
     [SerializeField] private float spiderWebDuration = 6f;
 
+
+    [Header("RainSpear")]
+    [SerializeField] private SpearSpawner spearSpawner;
+    [SerializeField] private float spearRainCoolTime = 20f;
+    private float lastSpearRainTime;
+
+
+
     private float lastAttackTime;
     private float lastSkillTime;
     private float lastJumpAttackTime;
@@ -82,6 +90,12 @@ public class JHY_Attack : MonoBehaviour
 
         if (isSkillUsing || (bossMove != null && (bossMove.isMoving || bossMove.isStunned))) return;
 
+        if (Time.time >= lastSpearRainTime + spearRainCoolTime)
+        {
+            UseSpearRain();
+            return;
+        }
+
         float skilldistance = Vector2.Distance(firePoint.position, player.position);
         float attackdistance = Vector2.Distance(transform.position, player.position);
         float diffX = Mathf.Abs(player.position.x - transform.position.x);
@@ -107,6 +121,27 @@ public class JHY_Attack : MonoBehaviour
             ani.SetTrigger("attack");
             lastAttackTime = Time.time;
         }
+    }
+    private void UseSpearRain()
+    {
+        lastSpearRainTime = Time.time;
+        isSkillUsing = true;
+        bossMove?.SetSkillLock(true);
+
+        ani.SetTrigger("Skill");
+
+        if (spearSpawner != null)
+        {
+            spearSpawner.SpawnSpears();
+        }
+
+        Invoke(nameof(EndSpearRain), 1.5f);
+    }
+
+    private void EndSpearRain()
+    {
+        bossMove?.SetSkillLock(false);
+        isSkillUsing = false;
     }
 
     void FacePlayer()

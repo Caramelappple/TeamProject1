@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 566629618}
   - component: {fileID: 566629619}
   - component: {fileID: 566629620}
+  - component: {fileID: 566629621}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -350,6 +351,8 @@ MonoBehaviour:
     type: 3}
   spiderWebSpawnTimer: 15
   spiderWebDuration: 6
+  spearSpawner: {fileID: 566629621}
+  spearRainCoolTime: 5
   warningZone: {fileID: 566629620}
 --- !u!95 &566629617
 Animator:
@@ -426,6 +429,23 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
+--- !u!114 &566629621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566629605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f84177588ed864c8d20b2549180272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpearSpawner
+  spearPrefab: {fileID: 5698082267851778533, guid: 5f85cefca86d3f14f8c4eb6241fd709d,
+    type: 3}
+  spawnCount: 20
+  spawnDelay: 0.2
+  topOffset: 1
 --- !u!1 &645698482
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,7 +775,7 @@ Transform:
   m_GameObject: {fileID: 1514935710}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.87, y: -0.46, z: 0}
+  m_LocalPosition: {x: -4.77, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
