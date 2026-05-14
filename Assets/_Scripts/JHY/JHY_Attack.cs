@@ -11,6 +11,7 @@ public class JHY_Attack : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private GameObject projectilePrefab2;
 
     [Header("Attack Settings")]
     [SerializeField] private float attackRange = 2f;
@@ -27,6 +28,18 @@ public class JHY_Attack : MonoBehaviour
     [SerializeField] private float shockwaveStartAngleOffset = 0f;
     [SerializeField] private float skillAngle = 60f;
 
+    [Header("Spider Web")]
+    [SerializeField] private GameObject spiderWebPrefab;
+    [SerializeField] private float spiderWebSpawnTimer = 15f;
+    [SerializeField] private float spiderWebDuration = 6f;
+
+
+    [Header("RainSpear")]
+    [SerializeField] private SpearSpawner spearSpawner;
+    [SerializeField] private float spearRainCoolTime = 20f;
+    private float lastSpearRainTime;
+
+
 
     private float lastAttackTime;
     private float lastSkillTime;
@@ -34,6 +47,7 @@ public class JHY_Attack : MonoBehaviour
     private bool isSkillUsing = false;
     private Vector3 firePointBaseLocalPos;
     private Vector3 bossBaseScale;
+    [SerializeField] private JHY_WarningZone warningZone;
 
     void Awake()
     {
@@ -45,7 +59,29 @@ public class JHY_Attack : MonoBehaviour
 
 
     }
+    void Start()
+    {
+        StartCoroutine(SpiderWebRoutine());
+    }
 
+    IEnumerator SpiderWebRoutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(spiderWebSpawnTimer);
+
+            if (spiderWebPrefab != null)
+            {
+                GameObject web = Instantiate(
+                    spiderWebPrefab,
+                    transform.position,
+                    Quaternion.identity
+                );
+
+                Destroy(web, spiderWebDuration);
+            }
+        }
+    }
     void Update()
     {
         if (player == null) return;
@@ -53,6 +89,12 @@ public class JHY_Attack : MonoBehaviour
         FacePlayer();
 
         if (isSkillUsing || (bossMove != null && (bossMove.isMoving || bossMove.isStunned))) return;
+
+        if (Time.time >= lastSpearRainTime + spearRainCoolTime)
+        {
+            UseSpearRain();
+            return;
+        }
 
         float skilldistance = Vector2.Distance(firePoint.position, player.position);
         float attackdistance = Vector2.Distance(transform.position, player.position);
@@ -80,6 +122,27 @@ public class JHY_Attack : MonoBehaviour
             lastAttackTime = Time.time;
         }
     }
+    private void UseSpearRain()
+    {
+        lastSpearRainTime = Time.time;
+        isSkillUsing = true;
+        bossMove?.SetSkillLock(true);
+
+        ani.SetTrigger("Skill");
+
+        if (spearSpawner != null)
+        {
+            spearSpawner.SpawnSpears();
+        }
+
+        Invoke(nameof(EndSpearRain), 1.5f);
+    }
+
+    private void EndSpearRain()
+    {
+        bossMove?.SetSkillLock(false);
+        isSkillUsing = false;
+    }
 
     void FacePlayer()
     {
@@ -106,9 +169,11 @@ public class JHY_Attack : MonoBehaviour
         isSkillUsing = true;
         lastSkillTime = Time.time;
         bossMove?.StopMoving();
-        ani.SetTrigger("Skill");
 
-        Invoke(nameof(FireProjectiles), 0.5f);
+
+        ani.ResetTrigger("attack");
+        ani.ResetTrigger("Jump");
+        ani.SetTrigger("Skill");
         Invoke(nameof(EndSkill), 1.5f);
     }
     bool IsPlayerInSkillAngle()
@@ -165,26 +230,49 @@ public class JHY_Attack : MonoBehaviour
     IEnumerator JumpAttackWrapper()
     {
         isSkillUsing = true;
-        bossMove?.StopMoving();
+        bossMove?.SetSkillLock(true);
 
         yield return StartCoroutine(JumpAttackRoutine());
         yield return new WaitForSeconds(2.0f);
 
+        bossMove?.SetSkillLock(false);
         isSkillUsing = false;
     }
+
 
     IEnumerator JumpAttackRoutine()
     {
         ani.SetTrigger("Jump");
-        yield return new WaitForSeconds(2.1f);
-        SpawnShockwave();
+
+        yield return new WaitForSeconds(0.6f);
+
+        if (warningZone != null)
+        {
+            warningZone.Warning();
+        }
+
+        yield return new WaitForSeconds(1.5f);
     }
 
-    public void SpawnShockwave()
+
+    public void SpawnShockwave_First()
+    {
+        SpawnShockwaveWithOffset(0f);
+    }
+
+    public void SpawnShockwave_Second()
+    {
+        if (shockwaveProjectileCount <= 0) return;
+
+        float angleStep = 360f / shockwaveProjectileCount;
+        SpawnShockwaveWithOffset(angleStep * 0.5f);
+    }
+
+    private void SpawnShockwaveWithOffset(float extraOffset)
     {
         Debug.Log("Shockwave!");
 
-        if (projectilePrefab == null) return;
+        if (projectilePrefab2 == null) return;
         if (shockwaveProjectileCount <= 0) return;
 
         Vector3 spawnPosition = transform.position;
@@ -192,9 +280,10 @@ public class JHY_Attack : MonoBehaviour
 
         for (int i = 0; i < shockwaveProjectileCount; i++)
         {
-            float currentAngle = shockwaveStartAngleOffset + (angleStep * i);
+            float currentAngle = shockwaveStartAngleOffset + (angleStep * i) + extraOffset;
             Quaternion rotation = Quaternion.Euler(0f, 0f, currentAngle);
-            Instantiate(projectilePrefab, spawnPosition, rotation);
+            Instantiate(projectilePrefab2, spawnPosition, rotation);
         }
     }
+
 }

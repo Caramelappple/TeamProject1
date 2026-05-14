@@ -17,13 +17,13 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
         [SerializeField] private int swordCount = 8;
         [SerializeField] private float swordDistance = 35;
         [SerializeField] private float swordDuration = 0.5f;
-        [field: SerializeField] public override float damageScale { get; protected set; } = 0.7f;
+        [field: SerializeField] public override float DamageScale { get; protected set; } = 0.7f;
         
         private int _damage;
 
         protected void Start()
         {
-            _damage = (int)damageScale * _bossBrain.GetComponent<NKY_Enemy>().damage;
+            _damage = (int)DamageScale * _bossBrain.GetComponent<NKY_Enemy>().damage;
             GameObject sword;
             for (int i = 0; i < swordCount; i++)
             {

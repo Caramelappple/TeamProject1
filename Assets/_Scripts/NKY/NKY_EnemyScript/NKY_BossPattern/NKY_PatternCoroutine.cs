@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using _Scripts.NKY.Manager;
 using UnityEngine;
 
@@ -15,7 +14,7 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
         protected Animator _anim;
         protected NKY_ShadowController _shadow;
 
-        protected Coroutine _masterHandle;
+        
         protected void Awake()
         {
             OnAwake();

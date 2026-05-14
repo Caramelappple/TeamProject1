@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &40355972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 40355973}
+  m_Layer: 30
+  m_Name: DashAndSlash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &40355973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40355972}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 590703720}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &90457534
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +238,38 @@ MonoBehaviour:
   - {fileID: 1293688305}
   swordParticle: []
   slashEffect: {fileID: 192988649}
-  <damageScale>k__BackingField: 3
+  <DamageScale>k__BackingField: 3
+--- !u!1 &136981809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 136981810}
+  m_Layer: 30
+  m_Name: SlashRush
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &136981810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136981809}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 590703720}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &173268526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -522,11 +584,12 @@ MonoBehaviour:
   hole: {fileID: 533077174}
   slashPrefab: {fileID: 1022309163451942407, guid: 833192a5b8418974cb3e3741ed9a8293,
     type: 3}
+  holeCollider: {fileID: 533077178}
   range: 8
   pullStrength: 10
   lockStrength: 0.5
   slashCount: 7
-  <damageScale>k__BackingField: 1
+  <DamageScale>k__BackingField: 0.4
 --- !u!4 &393221264
 Transform:
   m_ObjectHideFlags: 0
@@ -623,6 +686,7 @@ GameObject:
   - component: {fileID: 533077177}
   - component: {fileID: 533077176}
   - component: {fileID: 533077175}
+  - component: {fileID: 533077178}
   m_Layer: 30
   m_Name: BlackHole
   m_TagString: Untagged
@@ -730,6 +794,76 @@ Transform:
   - {fileID: 90457535}
   - {fileID: 888560438}
   m_Father: {fileID: 393221264}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &533077178
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533077174}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1.77
+--- !u!1 &590703719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 590703720}
+  m_Layer: 30
+  m_Name: Phase3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &590703720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590703719}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 40355973}
+  - {fileID: 1218274506}
+  - {fileID: 136981810}
+  m_Father: {fileID: 1620803153}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &633317824
 GameObject:
@@ -968,7 +1102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HitBoxController
   defaultLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!114 &713920012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -984,7 +1118,7 @@ MonoBehaviour:
   _data: {fileID: 11400000, guid: 6bb95d5c47193ec47a190479769658f1, type: 2}
   <MaxValue>k__BackingField: 1000
   <MinValue>k__BackingField: 0
-  _value: 1000
+  _value: 520
 --- !u!114 &713920013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -997,13 +1131,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd3981f39acbed4fb3a0457661e5a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NKY_Enemy.NKY_Enemy
-  _skillCooldown: 3
+  _skillCooldown: 1.8
   _skills:
   - {fileID: 1874845559}
   - {fileID: 1826878406}
   - {fileID: 134355378}
   - {fileID: 1290765489}
   - {fileID: 1828895056}
+  - {fileID: 393221263}
+  - {fileID: 393221263}
+  - {fileID: 393221263}
   - {fileID: 393221263}
   playerReference: {fileID: 2062148693}
   <damage>k__BackingField: 5
@@ -1210,7 +1347,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 780874660}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SwordAxis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1512,6 +1649,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1218274505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1218274506}
+  m_Layer: 30
+  m_Name: ReturnSwordAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1218274506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218274505}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 590703720}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1221267797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1525,6 +1693,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2752312111904947043, guid: f29f9c68cde12ee40b3ece26d597e163,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 3338311052345153939, guid: f29f9c68cde12ee40b3ece26d597e163,
         type: 3}
       propertyPath: m_Name
@@ -1534,6 +1707,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3338311052345153939, guid: f29f9c68cde12ee40b3ece26d597e163,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3861321164872177995, guid: f29f9c68cde12ee40b3ece26d597e163,
         type: 3}
@@ -1695,7 +1873,7 @@ MonoBehaviour:
   - {fileID: 1569694712}
   - {fileID: 1931688025}
   dustEffect: {fileID: 1925070023}
-  <damageScale>k__BackingField: 1.5
+  <DamageScale>k__BackingField: 0.5
 --- !u!1 &1293688305
 GameObject:
   m_ObjectHideFlags: 0
@@ -2096,7 +2274,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_Sprite: {fileID: 6502129103713456404, guid: 1a0665330d1e9e64b9b8c18e560a6080,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.60784316}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7172,6 +7350,7 @@ Transform:
   m_Children:
   - {fileID: 1782556468}
   - {fileID: 1818169048}
+  - {fileID: 590703720}
   m_Father: {fileID: 713920018}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1647796720
@@ -12236,7 +12415,7 @@ MonoBehaviour:
   swordCount: 8
   swordDistance: 35
   swordDuration: 0.5
-  <damageScale>k__BackingField: 1
+  <DamageScale>k__BackingField: 0.7
 --- !u!1 &1828895054
 GameObject:
   m_ObjectHideFlags: 0
@@ -12297,7 +12476,7 @@ MonoBehaviour:
   spawnInterval: 0.3
   swordCount: 8
   swordDuration: 0.2
-  <damageScale>k__BackingField: 0.7
+  <DamageScale>k__BackingField: 0.7
 --- !u!1 &1829568529
 GameObject:
   m_ObjectHideFlags: 0
@@ -12486,7 +12665,7 @@ MonoBehaviour:
   - {fileID: 481387254}
   - {fileID: 1324915408}
   - {fileID: 1053255763}
-  <damageScale>k__BackingField: 1
+  <DamageScale>k__BackingField: 0.5
 --- !u!1 &1903042129
 GameObject:
   m_ObjectHideFlags: 0
@@ -12821,7 +13000,7 @@ GameObject:
   - component: {fileID: 2054296587}
   - component: {fileID: 2054296586}
   - component: {fileID: 2054296585}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12966,7 +13145,7 @@ GameObject:
   - component: {fileID: 2062148691}
   - component: {fileID: 2062148690}
   - component: {fileID: 2062148689}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -13203,7 +13382,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 9
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}

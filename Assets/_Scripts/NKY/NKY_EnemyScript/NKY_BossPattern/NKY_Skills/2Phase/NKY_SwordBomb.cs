@@ -19,7 +19,7 @@ public class NKY_SwordBomb : NKY_BossSkill
         [SerializeField] private float spawnInterval = 0.3f;
         [SerializeField] private int swordCount = 8;
         [SerializeField] private float swordDuration = 0.2f;
-        [field: SerializeField] public override float damageScale { get; protected set; } = 0.7f;
+        [field: SerializeField] public override float DamageScale { get; protected set; } = 0.7f;
         
         private int _damage;
 
@@ -27,7 +27,7 @@ public class NKY_SwordBomb : NKY_BossSkill
         {
             bombCollider = effectPrefab.GetComponent<Collider2D>();
             effectPrefab.SetActive(false);
-            _damage = (int)(damageScale * _bossBrain.GetComponent<NKY_Enemy>().damage);
+            _damage = (int)(DamageScale * _bossBrain.GetComponent<NKY_Enemy>().damage);
             GameObject sword;
             GameObject effect;
             for (int i = 0; i < swordCount; i++)
