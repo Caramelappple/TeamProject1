@@ -25,7 +25,6 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
     {
         _damage = (int)(DamageScale * _bossBrain.GetComponent<NKY_Enemy>().damage);
         GameObject sword;
-        GameObject effect;
         for (int i = 0; i < swordCount; i++)
         {
             sword = Instantiate(swordPrefab, transform);
