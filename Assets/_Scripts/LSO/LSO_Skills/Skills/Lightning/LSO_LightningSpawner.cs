@@ -1,8 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-
-namespace _Scripts.LSO.LSO_Skills.Skills
-{
     public class LSO_LightningSpawner : MonoBehaviour,LSO_ISkill
     {
         private GameObject _player;
@@ -41,9 +38,10 @@ namespace _Scripts.LSO.LSO_Skills.Skills
                 Debug.LogWarning("No target found");
                 yield break;
             }
-
             for (int i = 0; i < Random.Range(_minCount, _maxCount); i++)
             {
+                if (!_target) break;
+                
                 _effectInstance = Instantiate(effect, _target.transform.position+new Vector3(Random.Range(-_range,_range),Random.Range(-_range,_range)), Quaternion.identity );
                 _effectInstance.transform.parent = transform;
                 
@@ -81,5 +79,4 @@ namespace _Scripts.LSO.LSO_Skills.Skills
 
             return result;
         }
-    }
 }
