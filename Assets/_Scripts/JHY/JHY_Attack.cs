@@ -28,6 +28,10 @@ public class JHY_Attack : MonoBehaviour
     [SerializeField] private float shockwaveStartAngleOffset = 0f;
     [SerializeField] private float skillAngle = 60f;
 
+    [Header("Spider Web")]
+    [SerializeField] private GameObject spiderWebPrefab;
+    [SerializeField] private float spiderWebSpawnTimer = 15f;
+    [SerializeField] private float spiderWebDuration = 6f;
 
     private float lastAttackTime;
     private float lastSkillTime;
@@ -47,7 +51,29 @@ public class JHY_Attack : MonoBehaviour
 
 
     }
+    void Start()
+    {
+        StartCoroutine(SpiderWebRoutine());
+    }
 
+    IEnumerator SpiderWebRoutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(spiderWebSpawnTimer);
+
+            if (spiderWebPrefab != null)
+            {
+                GameObject web = Instantiate(
+                    spiderWebPrefab,
+                    transform.position,
+                    Quaternion.identity
+                );
+
+                Destroy(web, spiderWebDuration);
+            }
+        }
+    }
     void Update()
     {
         if (player == null) return;
