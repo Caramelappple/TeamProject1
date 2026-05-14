@@ -69,6 +69,22 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
             from.position = end;
         }
 
+        protected IEnumerator ConstantMoveTo(Transform form, Vector3 to, float speed)
+        {
+            float currentTime = 0;
+            Vector3 start = form.position;
+            while (Vector3.Distance(form.position, to) > 0.1f)
+            {
+                form.position = Vector3.MoveTowards(start, to, currentTime);
+            
+                // 다음 프레임까지 대기
+                currentTime += speed * Time.deltaTime;
+                yield return null; 
+            }
+            
+            form.position = to;
+        }
+
         protected IEnumerator Move(Transform target, Vector2 direction, float distance, float duration)
         {
             Vector2 end = (Vector2)target.position + (direction.normalized * distance);

@@ -29,8 +29,8 @@ namespace _Scripts.NKY._EnemyScript
 
         protected bool ShouldInterruptIdle()
         {
-            float dist = Vector2.Distance(transform.position, _target.transform.position);
-            if (dist < 1.5f) return true;
+            //float dist = Vector2.Distance(transform.position, _target.transform.position);
+            //if (dist < 1.5f) return true;
 
             return IsSkillReady();
         }
