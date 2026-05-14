@@ -5,7 +5,6 @@ public class JHY_BossMove : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator ani;
-    //move
     [SerializeField] private float speed;
     [SerializeField] private Transform player;
     private SpriteRenderer sr;
@@ -21,12 +20,15 @@ public class JHY_BossMove : MonoBehaviour
     private float timer;
 
     [Header("Dash")]
-    [SerializeField] private float dashRange = 10f;        // 이 거리 안에 있으면 돌진 가능
-    [SerializeField] private float dashCooldown = 10f;    // 10초마다
-    [SerializeField] private float dashSpeed = 12f;       // 돌진 속도
-    [SerializeField] private float dashDuration = 0.7f;   // 돌진 시간
+    [SerializeField] private float dashRange = 10f;
+    [SerializeField] private float dashCooldown = 10f;
+    [SerializeField] private float dashSpeed = 12f;
+    [SerializeField] private float dashDuration = 0.7f;
     private float dashTimer;
     private bool isDashing;
+
+    private bool isSkillLocked;
+
     void Awake()
     {
         ani = GetComponent<Animator>();
@@ -38,8 +40,14 @@ public class JHY_BossMove : MonoBehaviour
 
     void Update()
     {
-        if (isStunned||isDashing) return;
+        if (isStunned || isDashing || isSkillLocked)
+        {
+            StopMoving();
+            return;
+        }
+
         if (player == null) return;
+
         if (isArrived)
         {
             timer -= Time.deltaTime;
@@ -50,10 +58,8 @@ public class JHY_BossMove : MonoBehaviour
             }
         }
 
-        
         LookAtPlayer();
 
-        
         if (!isArrived)
         {
             Vector2 targetPos = new Vector2(3.56f, -0.83f);
@@ -75,12 +81,12 @@ public class JHY_BossMove : MonoBehaviour
 
             dashTimer -= Time.deltaTime;
 
-            // 플레이어가 dashRange 안에 있고, 쿨타임이 끝났으면 돌진
             if (distance2 <= dashRange && dashTimer <= 0f)
             {
                 StartCoroutine(DashToPlayer());
                 return;
             }
+
             if (distance2 > chaseRange)
             {
                 MoveTowardsPlayer();
@@ -96,6 +102,7 @@ public class JHY_BossMove : MonoBehaviour
             }
         }
     }
+
     IEnumerator DashToPlayer()
     {
         isDashing = true;
@@ -107,9 +114,12 @@ public class JHY_BossMove : MonoBehaviour
 
         while (elapsed < dashDuration)
         {
-            transform.position += (Vector3)(dashDirection * dashSpeed * Time.deltaTime);
-           
+            if (isSkillLocked)
+            {
+                break;
+            }
 
+            transform.position += (Vector3)(dashDirection * dashSpeed * Time.deltaTime);
             ani.SetFloat("Speed", dashSpeed);
             elapsed += Time.deltaTime;
             yield return null;
@@ -119,6 +129,7 @@ public class JHY_BossMove : MonoBehaviour
         isMoving = false;
         ani.SetFloat("Speed", 0f);
     }
+
     IEnumerator Stun()
     {
         isStunned = true;
@@ -156,5 +167,16 @@ public class JHY_BossMove : MonoBehaviour
     {
         isMoving = false;
         ani.SetFloat("Speed", 0f);
+    }
+
+    public void SetSkillLock(bool value)
+    {
+        isSkillLocked = value;
+
+        if (value)
+        {
+            isDashing = false;
+            StopMoving();
+        }
     }
 }
