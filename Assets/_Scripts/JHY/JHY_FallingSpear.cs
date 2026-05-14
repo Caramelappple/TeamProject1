@@ -6,7 +6,7 @@ public class FallingSpear : MonoBehaviour
     [SerializeField] private float randomXOffset = 0.3f;
     [SerializeField] private float minDistance = 4f;
     [SerializeField] private float maxDistance = 7f;
-    [SerializeField] private float destroyDelay = 3f;
+    [SerializeField] private GameObject hitEffectPrefab;
 
     private Vector2 moveDir;
     private Vector3 startPos;
@@ -31,13 +31,19 @@ public class FallingSpear : MonoBehaviour
 
         if (Vector2.Distance(startPos, transform.position) >= moveDistance)
         {
-            hasStopped = true;
-            Invoke(nameof(DestroySelf), destroyDelay);
+            StopAndExplode();
         }
     }
 
-    private void DestroySelf()
+    private void StopAndExplode()
     {
+        hasStopped = true;
+
+        if (hitEffectPrefab != null)
+        {
+            Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
+        }
+
         Destroy(gameObject);
     }
 }
