@@ -401,7 +401,7 @@ MonoBehaviour:
   spiderWebSpawnTimer: 15
   spiderWebDuration: 6
   spearSpawner: {fileID: 566629621}
-  spearRainCoolTime: 10
+  spearRainCoolTime: 15
   warningZone: {fileID: 566629620}
 --- !u!95 &566629617
 Animator:
@@ -497,8 +497,7 @@ MonoBehaviour:
   spawnCount: 20
   spawnDelay: 0.2
   warningTime: 0.8
-  topOffset: 1
-  targetY: -2
+  spawnHeightOffset: 3
 --- !u!1 &645698482
 GameObject:
   m_ObjectHideFlags: 0
