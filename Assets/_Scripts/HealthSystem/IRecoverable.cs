@@ -1,6 +1,5 @@
 using System;
 using _Scripts.HealthSystem;
-using UnityEngine;
 
 public interface IRecoverable
 {

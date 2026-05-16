@@ -1,16 +1,12 @@
+using System.Collections;
+using _Scripts.NKY._EnemyScript.BossPattern;
 using UnityEngine;
 
-public class NKY_SlashRush : MonoBehaviour
+public class NKY_SlashRush : NKY_BossSkill
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public override float DamageScale { get; protected set; }
+    public override IEnumerator Execute(Transform boss, Transform target)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        throw new System.NotImplementedException();
     }
 }

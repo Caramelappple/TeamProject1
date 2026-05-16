@@ -1,7 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
-public class LSO_BearTrap : MonoBehaviour
+public class LSO_BearTrap : MonoBehaviour, LSO_ISkill
 {
     private Animator _animator;
     [SerializeField] private int damage = 20;
@@ -61,5 +62,15 @@ public class LSO_BearTrap : MonoBehaviour
                 _animator.SetTrigger("Explode");
             }
         }
+    }
+
+    public void UseSkill(GameObject player)
+    {
+        Debug.Log("함정 설치");
+    }
+
+    public IEnumerator CoolTime(float time)
+    {
+        yield return new WaitForSeconds(time);
     }
 }

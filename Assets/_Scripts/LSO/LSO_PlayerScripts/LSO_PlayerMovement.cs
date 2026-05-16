@@ -117,7 +117,7 @@ public class LSO_PlayerMovement : MonoBehaviour
             if (_moveDir.x != 0)
             {
                 _sprite.flipX = _moveDir.x < 0;
-            };
+            }
         }
         else
         {
@@ -134,6 +134,18 @@ public class LSO_PlayerMovement : MonoBehaviour
                     _lastDir = _moveDir;
                 Animator.SetFloat(MoveY, _moveDir.y);
                 Animator.SetBool(MoveX, _moveDir.x != 0);
+                if (_lastDir.x != 0 && _lastDir.y != 0) //대각선으로 움직였을때
+                {
+                    _lastDir = new Vector2(Mathf.Sign(_lastDir.x), 0);
+
+                    Animator.SetFloat(MoveY, 0);
+                    Animator.SetBool(MoveX, _moveDir.x != 0);
+                }
+                else
+                {
+                    Animator.SetFloat(MoveY, _moveDir.y);
+                    Animator.SetBool(MoveX, _moveDir.x != 0);
+                }
             }
         }
     }

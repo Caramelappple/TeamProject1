@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_Skill
   skillName: Trap
-  maxCooldownTime: 5
+  maxCooldownTime: 2
   textSkillData: {fileID: 0}
   textCooldownTime: {fileID: 8246403416872924375}
   imageCooldownTime: {fileID: 271397416181951451}

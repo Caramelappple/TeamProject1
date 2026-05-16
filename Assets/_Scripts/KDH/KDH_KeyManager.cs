@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -6,6 +7,9 @@ public class KDH_KeyManager : MonoBehaviour
 {
     [SerializeField] private GameObject _settingMenuUI;
     private InputAction _onSettingMenuAction;
+
+    [SerializeField] private GameObject skillSelectUI;
+    [SerializeField] private GameObject skillDeleteUI;
 
     private void Start()
     {
@@ -31,6 +35,8 @@ public class KDH_KeyManager : MonoBehaviour
     }
     public void OpenMenu()
     {
+        if (skillSelectUI.activeSelf || skillDeleteUI.activeSelf) return;
+
         _settingMenuUI.SetActive(true);
         StartCoroutine(PauseAfterDelay(0.01f));
     }

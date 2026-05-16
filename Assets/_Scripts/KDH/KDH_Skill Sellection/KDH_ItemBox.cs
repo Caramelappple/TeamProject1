@@ -6,16 +6,22 @@ public class KDH_ItemBox : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+
             // 매니저 스크립트를 찾음
             KDH_SkillUpdate manager = Object.FindFirstObjectByType<KDH_SkillUpdate>();
 
-            if (manager != null)
-            {
-                // 이 함수 안에서 UI도 켜고, 스킬도 랜덤으로 뽑음
-                manager.ShowSkillSelection();
+            KDH_DeleteSkillSlot deleteSkillSlot = Object.FindFirstObjectByType<KDH_DeleteSkillSlot>(FindObjectsInactive.Include);
 
+            if (manager != null)
+            {   
                 // 한 번 먹으면 사라짐
                 gameObject.SetActive(false);
+
+                if (manager.hadSkillData.Count >= 4)
+                    deleteSkillSlot.OnUIMan();
+
+                // 이 함수 안에서 UI도 켜고, 스킬도 랜덤으로 뽑음
+                manager.ShowSkillSelection();
             }
             else
             {
