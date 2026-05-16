@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2719085284589024013}
   - component: {fileID: 2015234126569774870}
   - component: {fileID: 2752312111904947043}
-  m_Layer: 7
+  m_Layer: 30
   m_Name: SwordBomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}

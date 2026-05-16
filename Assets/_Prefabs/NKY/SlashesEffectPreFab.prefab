@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8197133292058526434}
   - component: {fileID: 8085478429724597748}
   - component: {fileID: 7780080040475721820}
-  m_Layer: 0
+  m_Layer: 30
   m_Name: SlashesEffectPreFab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
