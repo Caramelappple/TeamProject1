@@ -2844,6 +2844,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 44a50522ce0053b459c0ebdc3c63a08f, type: 2}
   - {fileID: 11400000, guid: 8c01a85d743b08143acf0c9ce381ce46, type: 2}
   - {fileID: 11400000, guid: ef386de9741f04f41bcedcbac07e80e2, type: 2}
+  - {fileID: 11400000, guid: 54279dca146444948abded22ebb84acd, type: 2}
+  - {fileID: 11400000, guid: 3160ba2c430835c4f805a9ddfc8f65c8, type: 2}
   hadSkillData: []
   skillSystem: {fileID: 251780862}
   skillCardUI1: {fileID: 396927423}
