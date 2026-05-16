@@ -42,6 +42,12 @@ public class JHY_Attack : MonoBehaviour
     [SerializeField] private int meleeDamage = 10;
     [SerializeField] private Health playerHealth;
 
+    [Header("Summon Skill")]
+    [SerializeField] private float summonCoolTime = 40f;
+    [SerializeField] private JHY_MobSummoner mobSummoner;
+    private float lastSummonTime;
+    private bool isSummoning;
+
     private float lastAttackTime;
     private float lastSkillTime;
     private float lastJumpAttackTime;
@@ -71,24 +77,37 @@ public class JHY_Attack : MonoBehaviour
         {
             yield return new WaitForSeconds(spiderWebSpawnTimer);
 
-            if (spiderWebPrefab != null)
-            {
-                GameObject web = Instantiate(
-                    spiderWebPrefab,
-                    transform.position,
-                    Quaternion.identity
-                );
+            if (isSummoning) continue;
+            if (isSkillUsing) continue;
+            if (spiderWebPrefab == null) continue;
 
-                Destroy(web, spiderWebDuration);
-            }
+            GameObject web = Instantiate(
+                spiderWebPrefab,
+                transform.position,
+                Quaternion.identity
+            );
+
+            Destroy(web, spiderWebDuration);
         }
     }
+
     void Update()
     {
         if (player == null) return;
 
         FacePlayer();
 
+        if (isSummoning)
+        {
+            bossMove?.StopMoving();
+
+            if (mobSummoner != null && !mobSummoner.HasAliveSummons())
+            {
+                EndSummonState();
+            }
+
+            return;
+        }
         if (isSkillUsing || (bossMove != null && (bossMove.isMoving || bossMove.isStunned))) return;
 
         if (Time.time >= lastSpearRainTime + spearRainCoolTime)
@@ -96,6 +115,12 @@ public class JHY_Attack : MonoBehaviour
             UseSpearRain();
             return;
         }
+        if (Time.time >= lastSummonTime + summonCoolTime)
+        {
+            UseSummonSkill();
+            return;
+        }
+
 
         float skilldistance = Vector2.Distance(firePoint.position, player.position);
         float attackdistance = Vector2.Distance(transform.position, player.position);
@@ -133,6 +158,33 @@ public class JHY_Attack : MonoBehaviour
         DamageData data = DamageData.Create(null, meleeDamage);
         playerHealth.GetDamage(data);
     }
+    private void UseSummonSkill()
+    {
+        lastSummonTime = Time.time;
+        isSummoning = true;
+        isSkillUsing = true;
+
+        bossMove?.StopMoving();
+        bossMove?.SetSkillLock(true);
+
+        ani.ResetTrigger("attack");
+        ani.ResetTrigger("Jump");
+        ani.ResetTrigger("Skill");
+        
+        if (mobSummoner != null)
+        {
+            mobSummoner.SummonMobs();
+        }
+    }
+
+    private void EndSummonState()
+    {
+        isSummoning = false;
+        isSkillUsing = false;
+        bossMove?.SetSkillLock(false);
+    }
+
+
 
     private void UseSpearRain()
     {

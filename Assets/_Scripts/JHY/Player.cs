@@ -31,18 +31,19 @@ public class Player : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!collision.collider.CompareTag("Boss")) return;
+        if (!collision.collider.CompareTag("Boss") && !collision.collider.CompareTag("Monster")) return;
 
-        Health bossHealth = collision.collider.GetComponent<Health>();
-        if (bossHealth == null)
+        Health targetHealth = collision.collider.GetComponent<Health>();
+        if (targetHealth == null)
         {
-            bossHealth = collision.collider.GetComponentInParent<Health>();
+            targetHealth = collision.collider.GetComponentInParent<Health>();
         }
 
-        if (bossHealth == null) return;
+        if (targetHealth == null) return;
 
         DamageData data = DamageData.Create(null, damage);
-        bossHealth.GetDamage(data);
+        targetHealth.GetDamage(data);
     }
+
 
 }
