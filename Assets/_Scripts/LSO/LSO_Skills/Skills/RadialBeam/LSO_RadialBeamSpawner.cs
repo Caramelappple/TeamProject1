@@ -24,6 +24,7 @@ public class LSO_RadialBeamSpawner : MonoBehaviour,LSO_ISkill
     [SerializeField]private GameObject effect;
     private GameObject _effectInstance;//이펙트 복제한것
     private Animator _animator;
+    private bool _onEnd = false;
     
     public void UseSkill(GameObject player)
     { if (!_canUse) return;
@@ -55,6 +56,7 @@ public class LSO_RadialBeamSpawner : MonoBehaviour,LSO_ISkill
             yield return new WaitForSeconds(_waitTime);
         }
         _animator.SetTrigger("End");
+        _onEnd = true;
         yield return new WaitForSeconds(time);
         _canUse = true;
     }
@@ -86,7 +88,7 @@ public class LSO_RadialBeamSpawner : MonoBehaviour,LSO_ISkill
         
         for (int i = 0; i < _projectileCount; i++)
         {
-            if (!firePoint) yield break;
+            if (!firePoint || _onEnd) yield break;
             
             float currentAngle = Random.Range(0f, 360f);
             Instantiate(projectilePrefab, firePoint.position, Quaternion.Euler(0f, 0f, currentAngle));

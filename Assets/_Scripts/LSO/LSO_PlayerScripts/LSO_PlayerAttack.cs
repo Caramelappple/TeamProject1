@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using DG.Tweening;
 
 public class LSO_PlayerAttack : MonoBehaviour
 {
@@ -51,7 +52,6 @@ public class LSO_PlayerAttack : MonoBehaviour
         
         _movement.SetMove(false);
         _animator.SetTrigger("Attack");//애니메이션 재생
-        //transform.Do
         sword.SetActive(true);
         yield return new WaitForSeconds(_attackTime2);
         _movement.SetMove(true);
