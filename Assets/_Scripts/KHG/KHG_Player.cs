@@ -1,5 +1,6 @@
 using System;
 using KDH.ItemSystem;
+using KHG.ItemSystem;
 using UnityEngine;
 
 namespace KHG.Player
@@ -10,8 +11,6 @@ namespace KHG.Player
         
         private void OnCollisionEnter2D(Collision2D other)
         {
-            
-            //아이템에 닿았을 때 아이템을 먹는 동작
             if (other.gameObject.TryGetComponent(out KHG_ICollectable iCollectable))
             {
                 iCollectable.Collect(this);

@@ -1,7 +1,13 @@
+using System;
 using KHG.Player;
 using UnityEngine;
 
-public interface KHG_ICollectable 
+namespace KHG.ItemSystem
 {
-    public void Collect(KHG_Player Collector);
+    public interface KHG_ICollectable 
+    {
+        public event Action<KHG_ICollectable> OnCollected;
+        public void Collect(KHG_Player Collector);
+    }
 }
+

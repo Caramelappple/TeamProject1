@@ -1,41 +1,80 @@
-using System;
-using UnityEngine;
 using System.Collections;
-using UnityEngine.InputSystem;
+using UnityEngine;
 
-public class KHG_PoisonField : MonoBehaviour,LSO_ISkill
+public class KHG_PoisonField : MonoBehaviour, LSO_ISkill
 {
     [SerializeField] private GameObject poisonPrefab;
+
     [SerializeField] private float spawnDistance = 1.5f;
+    [SerializeField] private float moveSpeed = 5f;
+
+    [SerializeField] private float moveTime = 0.3f;
+
+    [SerializeField] private float lifeTime = 5f;
+
     private float _coolTime = 3f;
-    private LSO_PlayerMovement _playerMovement;
     private bool _canUse = true;
-    
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            UseSkill(gameObject);
+        }
+    }
+
     public void UseSkill(GameObject player)
     {
         if (!_canUse) return;
-        
-        _playerMovement = player.GetComponent<LSO_PlayerMovement>();
-        
-        Vector2 lookDirection = _playerMovement.GetLastDir();
 
-        Vector3 spawnPos = transform.position + new Vector3(lookDirection.x, lookDirection.y, 0) * spawnDistance;
+        LSO_PlayerMovement movement =
+            player.GetComponent<LSO_PlayerMovement>();
 
-        GameObject poison = Instantiate(poisonPrefab, spawnPos, Quaternion.identity);
+        if (movement == null)
+            return;
+
+        Vector2 dir = movement.GetLastDir();
+
+        if (dir == Vector2.zero)
+            return;
+
+        Vector3 spawnPos =
+            player.transform.position +
+            (Vector3)(dir.normalized * spawnDistance);
+
+        GameObject poison =
+            Instantiate(poisonPrefab, spawnPos, Quaternion.identity);
 
         Rigidbody2D rb = poison.GetComponent<Rigidbody2D>();
+
         if (rb != null)
         {
-            rb.linearVelocity = lookDirection.normalized * 5f; // 발사 속도
+            rb.linearVelocity = dir.normalized * moveSpeed;
+
+            StartCoroutine(StopPoison(rb, moveTime));
         }
 
-        Destroy(poison, 5f);
-        player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
+        Destroy(poison, lifeTime);
+
+        StartCoroutine(CoolTime(_coolTime));
     }
+
+    private IEnumerator StopPoison(Rigidbody2D rb, float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
+    }
+
     public IEnumerator CoolTime(float time)
     {
         _canUse = false;
+
         yield return new WaitForSeconds(time);
+
         _canUse = true;
     }
 }
