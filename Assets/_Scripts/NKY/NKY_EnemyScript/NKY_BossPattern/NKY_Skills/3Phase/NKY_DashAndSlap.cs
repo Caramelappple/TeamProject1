@@ -4,7 +4,7 @@ using _Scripts.NKY._EnemyScript.BossPattern;
 using DG.Tweening;
 using UnityEngine;
 
-public class NKY_DashAndSlash : NKY_BossSkill
+public class NKY_DashAndSlap : NKY_BossSkill
 {
     private static readonly int IsMove = Animator.StringToHash("isMove");
 

@@ -24,7 +24,6 @@ public class NKY_HitBoxController : MonoBehaviour
 
     public void Cast(Collider2D hitBox, System.Action<Collider2D> onHit)
     {
-
         Cast(hitBox, onHit, defaultLayer);
     }
     public void Cast(Collider2D hitBox, System.Action<Collider2D> onHit, LayerMask layer)

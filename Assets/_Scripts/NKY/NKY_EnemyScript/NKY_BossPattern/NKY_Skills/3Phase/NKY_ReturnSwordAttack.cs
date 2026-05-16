@@ -23,7 +23,7 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
     private int _damage;
     protected void Start()
     {
-        _damage = (int)(DamageScale * _bossBrain.GetComponent<NKY_Enemy>().damage);
+        _damage = (int)(DamageScale * _bossBrain.damage);
         GameObject sword;
         for (int i = 0; i < swordCount; i++)
         {

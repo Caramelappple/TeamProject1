@@ -9,7 +9,7 @@ namespace _Scripts.NKY.Manager
         public static NKY_IndicatorManager Instance { get; private set; }
 
     // ???? ?? ??? ?? Enum ??? ?????.
-    public enum IndicatorType { Box = 0, Circle = 1, Capsule = 2, Custom = 3 }
+    public enum IndicatorType { Box = 0, Circle = 1, Capsule = 2,  HarfCircle = 3, Custom = 4 }
 
     [SerializeField] private GameObject[] _indicatorPrefab;
     [SerializeField] private int _poolSize = 10;
