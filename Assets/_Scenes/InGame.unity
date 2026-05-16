@@ -201,7 +201,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2052507}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1031171663}
+        m_TargetAssemblyTypeName: KDH_DeleteSkillSlot, Assembly-CSharp
+        m_MethodName: Leave
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2052507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2041,12 +2053,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1031171663}
         m_TargetAssemblyTypeName: KDH_DeleteSkillSlot, Assembly-CSharp
-        m_MethodName: CancelInvoke
-        m_Mode: 5
+        m_MethodName: DeleteSkillByIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 3
           m_BoolArgument: 0
@@ -6911,6 +6923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_DeleteSkillSlot
   _gameObject: {fileID: 1031171661}
+  _skillSelectUI: {fileID: 620123423}
   _SkillUpdate: {fileID: 328223991}
 --- !u!1 &1037434358
 GameObject:
@@ -8653,6 +8666,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_KeyManager
   _settingMenuUI: {fileID: 461489712}
+  skillSelectUI: {fileID: 620123423}
+  skillDeleteUI: {fileID: 1031171661}
 --- !u!1 &1332601487
 GameObject:
   m_ObjectHideFlags: 0

@@ -46,7 +46,7 @@ public class KDH_SkillSystem : MonoBehaviour
             }
         }
 
-        // 2. 스킬 아이콘을 마우스로 클릭해서 스킬 시전
+        // 스킬 아이콘을 마우스로 클릭해서 스킬 시전
         if (Input.GetMouseButtonDown(0))
         {
             raycastResults.Clear();
@@ -86,6 +86,25 @@ public class KDH_SkillSystem : MonoBehaviour
             Debug.Log("더 이상 스킬을 장착할 공간이 없습니다.");
             // 자리가 없으면 생성된 프리팹을 다시 삭제
             Destroy(newSkill.gameObject);
+        }
+    }
+
+    public void RemoveSkillAndRearrange(int index)
+    {
+        if (index < 0 || index >= skills.Length) return;
+
+        // 해당 인덱스의 스킬(오브젝트) 파괴 및 null 처리
+        if (skills[index] != null)
+        {
+            Destroy(skills[index].gameObject);
+            skills[index] = null;
+        }
+
+        // 빈칸 채우기
+        for (int i = index; i < skills.Length - 1; i++)
+        {
+            skills[i] = skills[i + 1];
+            skills[i + 1] = null;
         }
     }
 }
