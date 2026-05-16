@@ -14,6 +14,8 @@ public class KDH_SkillSystem : MonoBehaviour
     private List<RaycastResult> raycastResults;
     private PointerEventData pointerEventData;
 
+    private bool _canUseSkill = true; // 시온의 무적상태 bool값
+
     private void Awake()
     {
         raycastResults = new List<RaycastResult>();
@@ -22,6 +24,8 @@ public class KDH_SkillSystem : MonoBehaviour
 
     private void Update()
     {
+        if (!_canUseSkill) return; // 무적 상태면 함수 탈출
+
         if (!Input.anyKeyDown) return;
 
         // KeyAction.KEYCOUNT(현재 4개)만큼 반복하며 키 입력을 확인
@@ -46,23 +50,31 @@ public class KDH_SkillSystem : MonoBehaviour
             }
         }
 
+
+
         // 스킬 아이콘을 마우스로 클릭해서 스킬 시전
-        if (Input.GetMouseButtonDown(0))
-        {
-            raycastResults.Clear();
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    raycastResults.Clear();
 
-            pointerEventData.position = Input.mousePosition;
-            graphicRaycaster.Raycast(pointerEventData, raycastResults);
+        //    pointerEventData.position = Input.mousePosition;
+        //    graphicRaycaster.Raycast(pointerEventData, raycastResults);
 
-            if (raycastResults.Count > 0)
-            {
-                if (raycastResults[0].gameObject.TryGetComponent<KDH_Skill>(out var skill))
-                {
-                    skill.UseSkill();
-                }
-            }
-        }
+        //    if (raycastResults.Count > 0)
+        //    {
+        //        if (raycastResults[0].gameObject.TryGetComponent<KDH_Skill>(out var skill))
+        //        {
+        //            skill.UseSkill();
+        //        }
+        //    }
+        //}
     }
+
+    public void SetCanUseSkill(bool canUse)
+    {
+        _canUseSkill = canUse;
+    }
+
     // 외부에서 스킬 프리팹 정보를 넘겨받는 메서드
     public void AddSkill(KDH_Skill newSkill)
     {

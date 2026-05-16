@@ -1,11 +1,11 @@
 using System.Collections;
 using UnityEngine;
-<<<<<<< HEAD
+//<<<<<<< HEAD
 using DG.Tweening;
 
-=======
+//=======
 //using DG.Tweening;  
->>>>>>> base
+//>>>>>>> base
 public class LSO_PlayerAttack : MonoBehaviour
 {
     [SerializeField] protected GameObject swordAxis;
@@ -57,10 +57,10 @@ public class LSO_PlayerAttack : MonoBehaviour
         
         _movement.SetMove(false);
         _animator.SetTrigger("Attack");//애니메이션 재생
-<<<<<<< HEAD
-=======
+//<<<<<<< HEAD
+//=======
         //transform.DOMove(targetDir * 0.001f, 0.05f);
->>>>>>> base
+//>>>>>>> base
         sword.SetActive(true);
         yield return new WaitForSeconds(_attackTime2);
         _movement.SetMove(true);

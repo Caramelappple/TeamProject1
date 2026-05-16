@@ -13,6 +13,8 @@ public class LSO_PlayerMovement : MonoBehaviour
     
     [SerializeField]private bool _canMove = true;
 
+    private int _disableMoveCount = 0; // 김동휘가 추가함
+
     private Vector2 _moveDir;
     private Vector2 _lastDir = Vector2.down;
     private Rigidbody2D _rigid;
@@ -106,7 +108,24 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     public void SetMove(bool move)
     {
-        _canMove = move;
+        // false 이면 카운트 증가, true이면 감소
+        if (!move) // 김동휘가 추가함
+        {
+            _disableMoveCount++; // 김동휘가 추가함
+        }
+        else
+        {
+            _disableMoveCount--; // 김동휘가 추가함
+            if (_disableMoveCount < 0) _disableMoveCount = 0; // 0 이하로 떨어지지 않게 방어
+        }
+
+        // 이동 금지 카운트가 0일 때만 실제로 이동 가능 상태(_canMove = true)가 됨
+        _canMove = (_disableMoveCount == 0); // 김동휘가 추가함 
+        ////////여기까지.//////////
+        
+        // 다른 이동기 스킬 만들 때 그냥 SetMove(false)와 SetMove(true) 그냥 상황에 맞춰서 쓰면 알아서 적용 됨.
+
+
 
         if (!_canMove)
         {
@@ -129,11 +148,13 @@ public class LSO_PlayerMovement : MonoBehaviour
                 if (Keyboard.current.aKey.isPressed) dir.x -= 1;
                 if (Keyboard.current.dKey.isPressed) dir.x += 1;
                 _moveDir = dir;
-                
+
                 if (_moveDir != Vector2.zero) //움직였을때
                     _lastDir = _moveDir;
+
                 Animator.SetFloat(MoveY, _moveDir.y);
                 Animator.SetBool(MoveX, _moveDir.x != 0);
+
                 if (_lastDir.x != 0 && _lastDir.y != 0) //대각선으로 움직였을때
                 {
                     _lastDir = new Vector2(Mathf.Sign(_lastDir.x), 0);
@@ -149,7 +170,7 @@ public class LSO_PlayerMovement : MonoBehaviour
             }
         }
     }
-    
+
     public Vector3 GetLastDir()
     {
         return _lastDir;
