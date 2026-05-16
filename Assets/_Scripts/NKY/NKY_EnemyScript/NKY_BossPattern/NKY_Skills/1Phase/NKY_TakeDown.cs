@@ -19,7 +19,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 
         private void Start()
         {
-            _damage = (int)(DamageScale * _bossBrain.GetComponent<NKY_Enemy>().damage);
+            _damage = (int)(DamageScale * _bossBrain.damage);
         }
 
         public override IEnumerator Execute(Transform boss, Transform target)

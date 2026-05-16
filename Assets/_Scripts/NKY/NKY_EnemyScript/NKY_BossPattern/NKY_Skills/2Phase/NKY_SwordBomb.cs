@@ -27,7 +27,7 @@ public class NKY_SwordBomb : NKY_BossSkill
         {
             bombCollider = effectPrefab.GetComponent<Collider2D>();
             effectPrefab.SetActive(false);
-            _damage = (int)(DamageScale * _bossBrain.GetComponent<NKY_Enemy>().damage);
+            _damage = (int)(DamageScale * _bossBrain.damage);
             GameObject sword;
             GameObject effect;
             for (int i = 0; i < swordCount; i++)

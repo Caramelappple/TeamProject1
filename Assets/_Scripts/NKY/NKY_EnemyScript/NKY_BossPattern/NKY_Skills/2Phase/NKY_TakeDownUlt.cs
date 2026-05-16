@@ -20,7 +20,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 
         private void Start()
         {
-            _damage = (int)(DamageScale * _bossBrain.GetComponent<NKY_Enemy>().damage);
+            _damage = (int)(DamageScale * _bossBrain.damage);
             dustEffect.SetActive(false);
         }
 
@@ -66,6 +66,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
         private IEnumerator PlayDustEffect(GameObject effect, Vector2 pos)
         {
             Animator effectAnim =  effect.GetComponent<Animator>();
+            effect.transform.position = pos;
             effect.SetActive(true);
             effectAnim.Play("PlayDustEffect");
             yield return WaitAnim(effectAnim, "PlayDustEffect", 0.9f);
