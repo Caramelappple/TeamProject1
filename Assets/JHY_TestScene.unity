@@ -187,9 +187,10 @@ GameObject:
   - component: {fileID: 566629619}
   - component: {fileID: 566629620}
   - component: {fileID: 566629621}
+  - component: {fileID: 566629622}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -402,6 +403,8 @@ MonoBehaviour:
   spiderWebDuration: 6
   spearSpawner: {fileID: 566629621}
   spearRainCoolTime: 15
+  meleeDamage: 5
+  playerHealth: {fileID: 1514935718}
   warningZone: {fileID: 566629620}
 --- !u!95 &566629617
 Animator:
@@ -449,7 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 345b1924dd7420f4eabaee526fa9c4a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JHY_Dead
-  health: 15
+  health: {fileID: 566629622}
   disableScripts:
   - {fileID: 566629618}
   - {fileID: 566629616}
@@ -490,7 +493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8f84177588ed864c8d20b2549180272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpearSpawner
-  spearPrefab: {fileID: 5698082267851778533, guid: 5f85cefca86d3f14f8c4eb6241fd709d,
+  spearPrefab: {fileID: 6164358910818268833, guid: 5877e7631dae37f45baf8db908a73f9f,
     type: 3}
   warningCirclePrefab: {fileID: 5796702642411047156, guid: 9cfeddbf6ae44d941bb187a3b886a471,
     type: 3}
@@ -498,6 +501,22 @@ MonoBehaviour:
   spawnDelay: 0.2
   warningTime: 0.8
   spawnHeightOffset: 3
+--- !u!114 &566629622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566629605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e8df4056084c78afb56d61aa4bd488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  _data: {fileID: 11400000, guid: 12761f64a73c74e4d84c7a29e220c9f8, type: 2}
+  <MaxValue>k__BackingField: 100
+  <MinValue>k__BackingField: 0
+  _value: 100
 --- !u!1 &645698482
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +773,7 @@ GameObject:
   - component: {fileID: 1514935712}
   - component: {fileID: 1514935716}
   - component: {fileID: 1514935717}
+  - component: {fileID: 1514935718}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -953,6 +973,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   speed: 7
+  damage: 5
+--- !u!114 &1514935718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514935710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e8df4056084c78afb56d61aa4bd488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  _data: {fileID: 11400000, guid: b17e129d47f47674eb3537011e8a4429, type: 2}
+  <MaxValue>k__BackingField: 100
+  <MinValue>k__BackingField: 0
+  _value: 100
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

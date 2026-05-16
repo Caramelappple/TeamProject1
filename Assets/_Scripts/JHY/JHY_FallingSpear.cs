@@ -1,11 +1,17 @@
 using UnityEngine;
 using System.Collections;
+using KSY.HealthSystem;
 
 public class FallingSpear : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 8f;
     [SerializeField] private GameObject hitEffectPrefab;
     [SerializeField] private float explodeDelay = 1f;
+
+    [Header("Damage")]
+    [SerializeField] private int damage = 20;
+    [SerializeField] private float damageRadius = 2f;
+    [SerializeField] private LayerMask playerLayer;
 
     private Vector2 targetPos;
     private bool hasTarget;
@@ -38,6 +44,17 @@ public class FallingSpear : MonoBehaviour
 
         hasExploded = true;
 
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, damageRadius, playerLayer);
+        if (hit != null)
+        {
+            Health playerHealth = hit.GetComponent<Health>();
+            if (playerHealth != null)
+            {
+                DamageData data = DamageData.Create(null, damage);
+                playerHealth.GetDamage(data);
+            }
+        }
+
         if (hitEffectPrefab != null)
         {
             Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
@@ -45,8 +62,6 @@ public class FallingSpear : MonoBehaviour
 
         Destroy(gameObject);
     }
-    void LateUpdate()
-    {
-        transform.rotation = Quaternion.Euler(0f, 0f, -225f);
-    }
+
+   
 }

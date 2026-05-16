@@ -1,8 +1,9 @@
 using UnityEngine;
+using KSY.HealthSystem;
 
 public class JHY_Dead : MonoBehaviour
 {
-    [SerializeField] private float health = 50f;
+    [SerializeField] private Health health;
     private Animator ani;
     private bool isDead;
 
@@ -15,14 +16,21 @@ public class JHY_Dead : MonoBehaviour
         ani = GetComponent<Animator>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnEnable()
+    {
+        health.OnDamage += HandleDamage;
+    }
+
+    private void OnDisable()
+    {
+        health.OnDamage -= HandleDamage;
+    }
+
+    private void HandleDamage(DamageResultData data)
     {
         if (isDead) return;
 
-        health -= 1;
-        Debug.Log(health);
-
-        if (health <= 0)
+        if (health.IsDestroyed)
         {
             Die();
         }

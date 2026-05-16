@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-
 public class JHY_Attack : MonoBehaviour
 {
     private Animator ani;
@@ -39,7 +38,9 @@ public class JHY_Attack : MonoBehaviour
     [SerializeField] private float spearRainCoolTime = 20f;
     private float lastSpearRainTime;
 
-
+    [Header("Damage")]
+    [SerializeField] private int meleeDamage = 10;
+    [SerializeField] private Health playerHealth;
 
     private float lastAttackTime;
     private float lastSkillTime;
@@ -122,6 +123,17 @@ public class JHY_Attack : MonoBehaviour
             lastAttackTime = Time.time;
         }
     }
+    public void DealMeleeDamage()
+    {
+        if (playerHealth == null || player == null) return;
+
+        float distance = Vector2.Distance(transform.position, player.position);
+        if (distance > attackRange) return;
+
+        DamageData data = DamageData.Create(null, meleeDamage);
+        playerHealth.GetDamage(data);
+    }
+
     private void UseSpearRain()
     {
         lastSpearRainTime = Time.time;

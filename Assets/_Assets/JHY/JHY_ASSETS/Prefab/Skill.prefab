@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8081426282360208884}
   - component: {fileID: -31450061645020166}
   - component: {fileID: -294662966256830147}
+  - component: {fileID: 4804875243278457720}
   m_Layer: 0
   m_Name: Skill
   m_TagString: Untagged
@@ -131,6 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::JHY_BossProjectile
   speed: 8
   lifeTime: 3
+  damage: 5
 --- !u!50 &-294662966256830147
 Rigidbody2D:
   serializedVersion: 5
@@ -158,3 +160,40 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!70 &4804875243278457720
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4417867429317737372}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 1.2103744e-10, y: 0.0010153357}
+  m_Size: {x: 0.41000018, y: 0.12758185}
+  m_Direction: 1
