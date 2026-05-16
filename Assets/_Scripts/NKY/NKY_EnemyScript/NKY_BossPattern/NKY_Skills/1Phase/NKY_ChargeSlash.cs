@@ -27,7 +27,7 @@ public class NKY_ChargeSlash : NKY_BossSkill
         {
             particle.Stop();
         }
-        _damage = (int)DamageScale * _bossBrain.GetComponent<NKY_Enemy>().damage;
+        _damage = (int)DamageScale * _bossBrain.damage;
     }
 
     public override IEnumerator Execute(Transform boss, Transform target)
