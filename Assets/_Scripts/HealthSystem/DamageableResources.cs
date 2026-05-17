@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class DamageableResources : MonoBehaviour
 {
+    public GameObject damageTextPrefab;
+
     private KDH_HealthBarUI healthBarUI;
 
     [SerializeField] private DamageableResourceSO _data;
@@ -72,6 +74,9 @@ public class DamageableResources : MonoBehaviour
         Value -= damage;
         int calcValue = Value;
         bool hasDamage = listValue > calcValue;
+
+        GameObject textObj = Instantiate(damageTextPrefab, transform.position + Vector3.up, Quaternion.identity);
+        textObj.GetComponent<KDH_DamageAnim>().Setup(damage);
 
         if (hasDamage)
         {
