@@ -16,7 +16,7 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
         
         public virtual void Init(NKY_BaseBoss boss)
         {
-            _anim = boss.GetComponent<Animator>();
+            Anim = boss.GetComponent<Animator>();
             _shadow = boss.GetComponentInChildren<NKY_ShadowController>();
             _HitBoxController = boss.GetComponent<NKY_HitBoxController>();
         }
@@ -28,7 +28,7 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
             _HitBoxController?.ResetHit();
             foreach (var logic in attackLogics) 
                 _bossBrain._attackEventQueue.Enqueue(logic);
-            _anim.Play(animName);
+            Anim.Play(animName);
             yield return StartCoroutine(WaitAnim(animName, 1.0f));
             _bossBrain._attackEventQueue.Clear();
         }

@@ -11,7 +11,7 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
 
         //private static readonly int Vanish = Animator.StringToHash("Vanish");
         protected NKY_HitBoxController _HitBoxController;
-        protected Animator _anim;
+        public Animator Anim { get; protected set; }
         protected NKY_ShadowController _shadow;
 
         
@@ -93,10 +93,10 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
 
         protected IEnumerator Teleport(Transform from, Vector2 to)
         {
-            _anim.SetTrigger(Vanish);
+            Anim.SetTrigger(Vanish);
             yield return StartCoroutine(WaitAnim("Vanish", 1f));
             from.position = to;
-            _anim.SetTrigger(Appear);
+            Anim.SetTrigger(Appear);
             yield return StartCoroutine(WaitAnim("Appear", 0.6f));
         }
 
@@ -114,8 +114,8 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
 
         protected IEnumerator WaitAnim(string stateName, float normalizedTime)
         {
-            yield return new WaitUntil(() => _anim.GetCurrentAnimatorStateInfo(0).IsName(stateName));
-            yield return new WaitUntil(() => _anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= normalizedTime);
+            yield return new WaitUntil(() => Anim.GetCurrentAnimatorStateInfo(0).IsName(stateName));
+            yield return new WaitUntil(() => Anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= normalizedTime);
         }
         protected IEnumerator WaitAnim(Animator anim, string stateName, float normalizedTime)
         {

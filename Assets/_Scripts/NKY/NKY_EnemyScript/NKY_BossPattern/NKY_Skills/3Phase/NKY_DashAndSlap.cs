@@ -29,10 +29,10 @@ public class NKY_DashAndSlap : NKY_BossSkill
         Vector3 dir = target.position - boss.transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         angle += 90f;
-        yield return PlaySequence(ShowWarn(0, new Vector2(2f, (target.position - boss.transform.position).magnitude + 2f), 2f, 
+        yield return PlaySequence(MoveAnim(true, dir, boss),
+            ShowWarn(0, new Vector2(2f, (target.position - boss.transform.position).magnitude + 2f), 2f, 
             () => Vector3.Lerp(boss.position, target.position, 0.5f), angle),
             WaitUntilOrTime(() => false, 0.7f),
-            MoveAnim(true, dir, boss),
             ConstantMoveTo(boss, target.position, dashSpeed),
             ShowWarn(col, 0.4f, () => _shadow.transform.position),
             MoveAnim(false, dir, boss),
@@ -56,8 +56,8 @@ public class NKY_DashAndSlap : NKY_BossSkill
 
     private IEnumerator MoveAnim(bool isMove, Vector2 dir, Transform target)
     {
-        _anim.SetBool(IsMove, isMove);
-        if (!isMove && Mathf.Approximately(target.rotation.y, 180))
+        Anim.SetBool(IsMove, isMove);
+        if (!isMove)
         {
             target.rotation = Quaternion.Euler(0, 0, 0);
         }
