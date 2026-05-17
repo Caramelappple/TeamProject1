@@ -52,6 +52,12 @@ public class JHY_Attack : MonoBehaviour
     [SerializeField] private Health bossHealth;
     [SerializeField] private float phase2Threshold = 0.5f;
     private bool isPhase2;
+    [SerializeField] private GameObject phase2EffectPrefab;
+    [SerializeField] private float phase2EffectLifeTime = 2f;
+    [SerializeField] private Color phase2Color = Color.purple;
+    [SerializeField] private GameObject phase2Aura;
+    private bool isPhaseChanging;
+    [SerializeField] private float phaseChangeDuration = 1.5f;
 
     private float lastAttackTime;
     private float lastSkillTime;
@@ -75,13 +81,17 @@ public class JHY_Attack : MonoBehaviour
     {
         StartCoroutine(SpiderWebRoutine());
     }
-
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+        CancelInvoke();
+    }
     IEnumerator SpiderWebRoutine()
     {
         while (true)
         {
             yield return new WaitForSeconds(spiderWebSpawnTimer);
-
+            if (!enabled) yield break;
             if (isSummoning) continue;
             if (isSkillUsing) continue;
             if (spiderWebPrefab == null) continue;
@@ -101,6 +111,7 @@ public class JHY_Attack : MonoBehaviour
         if (player == null) return;
 
         CheckPhase2();
+        if (isPhaseChanging) return;
         FacePlayer();
 
         if (isSummoning)
@@ -156,18 +167,52 @@ public class JHY_Attack : MonoBehaviour
     }
     private void CheckPhase2()
     {
-        if (isPhase2) return;
+       
+    
+        if (isPhase2 || isPhaseChanging) return;
         if (bossHealth == null) return;
 
         float hpPercent = (float)bossHealth.Value / bossHealth.MaxValue;
         if (hpPercent <= phase2Threshold)
         {
-            EnterPhase2();
+            StartCoroutine(EnterPhase2Routine());
         }
+    
+}
+    private IEnumerator EnterPhase2Routine()
+    {
+        isPhaseChanging = true;
+        isSkillUsing = true;
+
+        bossMove?.StopMoving();
+        bossMove?.SetSkillLock(true);
+
+        yield return new WaitForSeconds(phaseChangeDuration);
+
+        EnterPhase2();
+
+        isPhaseChanging = false;
+        isSkillUsing = false;
+        bossMove?.SetSkillLock(false);
     }
     private void EnterPhase2()
     {
         isPhase2 = true;
+        if (phase2EffectPrefab != null)
+        {
+            GameObject effect = Instantiate(phase2EffectPrefab, transform.position, Quaternion.identity);
+            Destroy(effect, phase2EffectLifeTime);
+        }
+
+        if (sr != null)
+        {
+            sr.color = phase2Color;
+        }
+
+        if (phase2Aura != null)
+        {
+            phase2Aura.SetActive(true);
+        }
 
         attackCooldown = 1.0f;
         skillCoolTime = 3.0f;

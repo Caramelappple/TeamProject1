@@ -17,7 +17,7 @@ public class FallingSpear : MonoBehaviour
     private bool hasTarget;
     private bool hasStopped;
     private bool hasExploded;
-
+    [SerializeField] private float hitEffectLifeTime = 1.5f;
     public void SetTarget(Vector2 target)
     {
         targetPos = target;
@@ -55,10 +55,14 @@ public class FallingSpear : MonoBehaviour
             }
         }
 
-        if (hitEffectPrefab != null)
-        {
-            Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
-        }
+        
+        
+            if (hitEffectPrefab != null)
+            {
+                GameObject effect = Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
+                Destroy(effect, hitEffectLifeTime);
+            }
+        
 
         Destroy(gameObject);
     }

@@ -478,6 +478,12 @@ MonoBehaviour:
   mobSummoner: {fileID: 566629623}
   bossHealth: {fileID: 566629622}
   phase2Threshold: 0.5
+  phase2EffectPrefab: {fileID: 9009288452742447151, guid: c4a37d35ee954f24c9e72e325446f30f,
+    type: 3}
+  phase2EffectLifeTime: 1.5
+  phase2Color: {r: 0.5579668, g: 0.02153778, b: 0.7610062, a: 1}
+  phase2Aura: {fileID: 0}
+  phaseChangeDuration: 1.5
   warningZone: {fileID: 566629620}
 --- !u!95 &566629617
 Animator:
