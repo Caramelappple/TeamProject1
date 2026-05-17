@@ -471,11 +471,13 @@ MonoBehaviour:
   spiderWebSpawnTimer: 15
   spiderWebDuration: 6
   spearSpawner: {fileID: 566629621}
-  spearRainCoolTime: 15
+  spearRainCoolTime: 20
   meleeDamage: 5
   playerHealth: {fileID: 1514935718}
-  summonCoolTime: 10
+  summonCoolTime: 40
   mobSummoner: {fileID: 566629623}
+  bossHealth: {fileID: 566629622}
+  phase2Threshold: 0.5
   warningZone: {fileID: 566629620}
 --- !u!95 &566629617
 Animator:
