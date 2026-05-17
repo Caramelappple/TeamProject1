@@ -106,6 +106,8 @@ public class LSO_PlayerMovement : MonoBehaviour
         }
     }
 
+ //HEAD
+
     public void SetMove(bool move)
     {
         // false 이면 카운트 증가, true이면 감소
@@ -175,5 +177,6 @@ public class LSO_PlayerMovement : MonoBehaviour
     {
         return _lastDir;
     }
+// base
 }
 

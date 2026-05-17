@@ -13,6 +13,7 @@ public class KHG_Udotanskill : MonoBehaviour,LSO_ISkill
         {
             StartCoroutine(CircleBulletSkill());
         }
+        
     }
 
     IEnumerator CircleBulletSkill()
