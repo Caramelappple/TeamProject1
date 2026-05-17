@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c5d3e6a61d5f2f49815bde3f3b6877c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_Skill
-  skillName: Ice
+  skillName: "\uC5BC\uC74C \uC1A1\uACF3"
   maxCooldownTime: 3
   textSkillData: {fileID: 0}
   textCooldownTime: {fileID: 4931405244431566153}

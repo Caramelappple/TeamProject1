@@ -22,13 +22,13 @@ public class KHG_PoisonField : MonoBehaviour,LSO_ISkill
             UseSkill(this.gameObject);
         }
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            UseSkill(gameObject);
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.R))
+    //    {
+    //        UseSkill(gameObject);
+    //    }
+    //}
 
     public void UseSkill(GameObject player)
     {

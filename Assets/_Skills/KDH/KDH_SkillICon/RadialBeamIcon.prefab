@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 7261500370962359476}
   - component: {fileID: 8825606430394069292}
   m_Layer: 5
-  m_Name: RadialBearIcon
+  m_Name: RadialBeamIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c5d3e6a61d5f2f49815bde3f3b6877c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_Skill
-  skillName: RadialBear
+  skillName: "\uC544\uB9C8\uD14C\uB77C\uC2A4\uC758 \uBE5B"
   maxCooldownTime: 5
   textSkillData: {fileID: 0}
   textCooldownTime: {fileID: 8246403416872924375}

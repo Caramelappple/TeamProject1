@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c5d3e6a61d5f2f49815bde3f3b6877c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_Skill
-  skillName: Trap
+  skillName: "\uAC00\uC2DC \uB36B"
   maxCooldownTime: 2
   textSkillData: {fileID: 0}
   textCooldownTime: {fileID: 8246403416872924375}

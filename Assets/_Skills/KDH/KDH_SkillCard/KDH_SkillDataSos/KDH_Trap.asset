@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7067c87e9e283418fd4da067c38591, type: 3}
   m_Name: KDH_Trap
   m_EditorClassIdentifier: Assembly-CSharp::KDH_SkillData
-  skillName: "\uB36B"
-  skillDescription: "\uB36B\uC744 \uC124\uCE58\uD569\uB2C8\uB2E4."
+  skillName: "\uAC00\uC2DC \uB36B"
+  skillDescription: "\uC0AC\uC6A9 \uC2DC \uD604\uC7AC \uC704\uCE58\uC5D0 \uAC00\uC2DC
+    \uB36B\uC774 \uC0DD\uC131\uB418\uBA70, \uB2FF\uC740 \uC801\uC740 \uB300\uBBF8\uC9C0\uB97C
+    \uC785\uC2B5\uB2C8\uB2E4. (\uAC00\uC2DC \uB36B\uC758 \uAC1C\uC218\uB294 \uC81C\uD55C\uC774
+    \uC5C6\uC2B5\uB2C8\uB2E4.) "
   skillIcon: {fileID: 21300014, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
   maxCooldownTime: 2
   skillPrefab: {fileID: 8217472116318459907, guid: 515542048abc10c439732f4f285deebe,

@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7067c87e9e283418fd4da067c38591, type: 3}
   m_Name: KDH_FireAura
   m_EditorClassIdentifier: Assembly-CSharp::KDH_SkillData
-  skillName: "\uD30C\uC774\uC5B4\uC694"
-  skillDescription: AURA +999
+  skillName: "\uC544\uC6B0\uB77C \uD654"
+  skillDescription: "\uC0AC\uC6A9 \uC2DC \uBD88\uAF43\uC744 \uB0A8\uAE30\uBA70 \uC804\uBC29\uC73C\uB85C
+    \uB3CC\uC9C4\uD569\uB2C8\uB2E4."
   skillIcon: {fileID: 21300032, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
   maxCooldownTime: 5
   skillPrefab: {fileID: 9117852009125758070, guid: 2fdc6189300ba5b4396b28b897eccaff,

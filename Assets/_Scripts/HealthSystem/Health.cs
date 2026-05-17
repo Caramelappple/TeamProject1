@@ -1,15 +1,12 @@
 using System;
 using _Scripts.HealthSystem;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Health : DamageableResources, IRecoverable
 {
-    public GameObject healTextPrefab;
-
     public event Action<RecoverResultData> OnRecover;
 
-    public void Recover(RecoverData data)
+    public virtual void Recover(RecoverData data)
     {
         if(IsDestroyed) return;
 
@@ -21,17 +18,12 @@ public class Health : DamageableResources, IRecoverable
         int calcValue = Value;
         bool hasRecover = lastValue < calcValue;
 
-        GameObject textObj = Instantiate(healTextPrefab, transform.position + Vector3.up, Quaternion.identity);
-        textObj.GetComponent<KDH_HealAnim>().Setup(recoverValue);
-
         if (hasRecover)
         {
             Debug.Log($"{recoverValue}??? ???? ???????. ??????? : {calcValue}");
             RecoverResultData resultData = RecoverResultData.Create(giver, recoverValue, Value);
             OnRecover?.Invoke(resultData);
         }
-
-
     }
     
     //??? ??
