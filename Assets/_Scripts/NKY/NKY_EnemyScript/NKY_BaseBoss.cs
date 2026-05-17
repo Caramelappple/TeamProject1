@@ -20,6 +20,8 @@ namespace _Scripts.NKY._EnemyScript
 
         protected bool _isDead = false;
         
+        protected bool _isStunned = false;
+        
         protected Coroutine _masterHandle = null;
 
         protected bool IsSkillReady()
@@ -61,7 +63,7 @@ namespace _Scripts.NKY._EnemyScript
                 _masterHandle = null;
             }
             _attackEventQueue.Clear();
-            _anim.Play("Idle");
+            Anim.Play("Idle");
         }
     }
 }

@@ -19,6 +19,7 @@ public class NKY_SlashRush : NKY_BossSkill
     private void Start()
     {
         _damage = (int)(DamageScale * _bossBrain.damage);
+        Debug.Log(_damage);
         slash.SetActive(false);
     }
 
@@ -34,20 +35,18 @@ public class NKY_SlashRush : NKY_BossSkill
             yield return PlaySequence(
                 Move(bossTransform, dir, moveDistance * 0.1f, 0.2f),
                 ShowWarn(NKY_IndicatorManager.IndicatorType.HarfCircle, new Vector2(3.5f, 3.5f), 0.5f, () => bossTransform.position, angle),
-                SlashEffect(slash, bossTransform.position, angle),
-                Attack(() => _HitBoxController.Cast(slashCollider, (hitTarget) =>
-                {
-                    HitToDamage(boss.gameObject, hitTarget.gameObject, _damage);
-                }))
+                SlashEffect(slash, bossTransform.position, angle, slashCollider),
+                Attack(() => _HitBoxController.Cast(slashCollider,(hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage)))
                 );
         }
     }
 
-    private IEnumerator SlashEffect(GameObject effect, Vector2 pos, float angle)
+    private IEnumerator SlashEffect(GameObject effect, Vector2 pos, float angle, Collider2D col)
     {
         Animator effectAnim = effect.GetComponentInChildren<Animator>();
         effect.transform.position = pos;
-        effect.transform.rotation = Quaternion.Euler(0, 0, angle);
+        col.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        effect.transform.rotation = Quaternion.Euler(0f, 0f, angle);
         effect.SetActive(true);
         effectAnim.Play("SlashEffect");
         yield return WaitAnim(effectAnim, "SlashEffect", 0.9f);
