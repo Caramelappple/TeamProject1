@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -14,10 +13,10 @@ public class LSO_FireAura : MonoBehaviour,LSO_ISkill
     private GameObject _effectInstance;
     private Animator _animator;
     
-    private float _coolTime = 5f;
-    private float _waitTime = 0.5f;
-    private int _damage = 10;
-    private float _speed = 10f;
+    [SerializeField]private float coolTime = 5f;
+    [SerializeField] private float waitTime = 0.5f;
+    [SerializeField]private int damage = 10;
+    [SerializeField ]private float speed = 10f;
 
     public void UseSkill(GameObject player)
     {
@@ -28,7 +27,7 @@ public class LSO_FireAura : MonoBehaviour,LSO_ISkill
        _attack = _player.GetComponent<LSO_PlayerAttack>();
        _rigid = _player.GetComponent<Rigidbody2D>();
        
-       player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
+       player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(coolTime));
     }
 
     public IEnumerator CoolTime(float time)
@@ -42,7 +41,7 @@ public class LSO_FireAura : MonoBehaviour,LSO_ISkill
         {
             if (collision.CompareTag("Enemy") && collision.TryGetComponent<Health>(out Health enemyHealth))
             {
-                DamageData data = DamageData.Create(enemyHealth, _damage);
+                DamageData data = DamageData.Create(enemyHealth, damage);
                 enemyHealth.GetDamage(data);
             }
         }
@@ -51,9 +50,9 @@ public class LSO_FireAura : MonoBehaviour,LSO_ISkill
         yield return  new WaitForSeconds(0.1f);
   
         _playerMovement.SetMove(false);
-        _rigid.linearVelocity = -_playerMovement.GetLastDir().normalized * _speed;
+        _rigid.linearVelocity = -_playerMovement.GetLastDir().normalized * speed;
         
-        yield return new WaitForSeconds(_waitTime);
+        yield return new WaitForSeconds(waitTime);
         _attack.OnAttack();
         _rigid.linearVelocity = Vector2.zero;
         _playerMovement.SetMove(true);

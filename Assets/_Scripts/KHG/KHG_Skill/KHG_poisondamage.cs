@@ -23,7 +23,7 @@ public class KHG_PoisonDamage : MonoBehaviour,LSO_ISkill
 
         if (timer[other.gameObject] >= interval)
         {
-            KHG_Health hp = other.GetComponent<KHG_Health>();
+            Health hp = other.GetComponent<Health>();
 
             if (hp != null)
             {

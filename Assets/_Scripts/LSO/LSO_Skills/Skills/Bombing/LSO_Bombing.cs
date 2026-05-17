@@ -12,9 +12,7 @@ public class LSO_Bombing : MonoBehaviour,LSO_ISkill
     private GameObject _effectInstance;
     
     [SerializeField] private float coolTime = 5f;
-
     [SerializeField] private int selfDamage = 30;
-    [SerializeField] private int damage = 80;
 
     public void UseSkill(GameObject player)
     {

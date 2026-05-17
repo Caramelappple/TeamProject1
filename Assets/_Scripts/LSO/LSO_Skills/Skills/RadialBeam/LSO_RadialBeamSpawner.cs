@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class LSO_RadialBeamSpawner : MonoBehaviour,LSO_ISkill
 { 
-    private GameObject _player;
     private bool _canUse = true;
     
     private float _coolTime = 5f;
@@ -13,7 +12,6 @@ public class LSO_RadialBeamSpawner : MonoBehaviour,LSO_ISkill
     private int _count = 15;
     [SerializeField]private GameObject projectilePrefab;
     private int _projectileCount = 6;
-    private float _spreadAngle = 360f;
     private float _range = 2;
     
     private float _minWaitTime = 0.2f;
@@ -28,8 +26,6 @@ public class LSO_RadialBeamSpawner : MonoBehaviour,LSO_ISkill
     
     public void UseSkill(GameObject player)
     { if (!_canUse) return;
-        _player = player;
-        
         _randomDegree = Random.Range(-180, 180);
         Vector3 spawnRot = new Vector3(0,0,_randomDegree);
         _spawnPos = new Vector3(player.transform.position.x, player.transform.position.y+ _range, player.transform.position.z);

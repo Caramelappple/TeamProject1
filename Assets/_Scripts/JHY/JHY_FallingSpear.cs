@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using KSY.HealthSystem;
 
 public class FallingSpear : MonoBehaviour
 {
@@ -54,16 +53,13 @@ public class FallingSpear : MonoBehaviour
                 playerHealth.GetDamage(data);
             }
         }
-
         
+        if (hitEffectPrefab != null)
+        {
+            GameObject effect = Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
+            Destroy(effect, hitEffectLifeTime);
+        }
         
-            if (hitEffectPrefab != null)
-            {
-                GameObject effect = Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
-                Destroy(effect, hitEffectLifeTime);
-            }
-        
-
         Destroy(gameObject);
     }
 
