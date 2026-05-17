@@ -609,6 +609,9 @@ MonoBehaviour:
   - {fileID: 675010454}
   - {fileID: 800202184}
   - {fileID: 1575637778}
+  summonEffectPrefab: {fileID: 6729229264775802217, guid: 58060b15caa8f58498fae97cfe4d87c7,
+    type: 3}
+  summonEffectLifeTime: 1.2
 --- !u!1 &633714635
 GameObject:
   m_ObjectHideFlags: 0

@@ -179,6 +179,11 @@ MonoBehaviour:
   animator: {fileID: 0}
   disableColliders:
   - {fileID: -7103411521585941311}
+  knockbackForce: 4
+  knockbackDuration: 0.15
+  deathEffectPrefab: {fileID: 5511017839225745216, guid: 3bbccdef68c793b4ab8a21e1dc0fe0f3,
+    type: 3}
+  deathEffectLifeTime: 1.5
 --- !u!114 &-4795346000127264374
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,6 +19,14 @@ public class Monster : MonoBehaviour
     [SerializeField] private Collider2D[] disableColliders;
     private bool isDead;
 
+    [Header("Knockback")]
+    [SerializeField] private float knockbackForce = 4f;
+    [SerializeField] private float knockbackDuration = 0.15f;
+    private float knockbackTimer;
+
+    [Header("Death Effect")]
+    [SerializeField] private GameObject deathEffectPrefab;
+    [SerializeField] private float deathEffectLifeTime = 1.5f;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -57,6 +65,12 @@ public class Monster : MonoBehaviour
             return;
         }
 
+        if (knockbackTimer > 0f)
+        {
+            knockbackTimer -= Time.fixedDeltaTime;
+            return;
+        }
+
         if (player == null)
         {
             rb.linearVelocity = Vector2.zero;
@@ -90,9 +104,23 @@ public class Monster : MonoBehaviour
     {
         if (isDead) return;
         if (health == null) return;
-        if (!health.IsDestroyed) return;
 
-        Die();
+        ApplyKnockback();
+
+        if (health.IsDestroyed)
+        {
+            Die();
+        }
+    }
+
+    private void ApplyKnockback()
+    {
+        if (player == null) return;
+
+        Vector2 dir = ((Vector2)transform.position - (Vector2)player.position).normalized;
+        rb.linearVelocity = Vector2.zero;
+        rb.AddForce(dir * knockbackForce, ForceMode2D.Impulse);
+        knockbackTimer = knockbackDuration;
     }
 
     private void Die()
@@ -110,6 +138,13 @@ public class Monster : MonoBehaviour
             col.enabled = false;
         }
 
+        if (deathEffectPrefab != null)
+        {
+            GameObject effect = Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
+            Destroy(effect, deathEffectLifeTime);
+        }
+
         Destroy(gameObject);
     }
+    
 }

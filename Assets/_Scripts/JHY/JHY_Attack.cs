@@ -48,6 +48,11 @@ public class JHY_Attack : MonoBehaviour
     private float lastSummonTime;
     private bool isSummoning;
 
+    [Header("Phase")]
+    [SerializeField] private Health bossHealth;
+    [SerializeField] private float phase2Threshold = 0.5f;
+    private bool isPhase2;
+
     private float lastAttackTime;
     private float lastSkillTime;
     private float lastJumpAttackTime;
@@ -95,6 +100,7 @@ public class JHY_Attack : MonoBehaviour
     {
         if (player == null) return;
 
+        CheckPhase2();
         FacePlayer();
 
         if (isSummoning)
@@ -147,6 +153,32 @@ public class JHY_Attack : MonoBehaviour
             ani.SetTrigger("attack");
             lastAttackTime = Time.time;
         }
+    }
+    private void CheckPhase2()
+    {
+        if (isPhase2) return;
+        if (bossHealth == null) return;
+
+        float hpPercent = (float)bossHealth.Value / bossHealth.MaxValue;
+        if (hpPercent <= phase2Threshold)
+        {
+            EnterPhase2();
+        }
+    }
+    private void EnterPhase2()
+    {
+        isPhase2 = true;
+
+        attackCooldown = 1.0f;
+        skillCoolTime = 3.0f;
+        jumpAttackCoolTime = 3.0f;
+        spearRainCoolTime = 12.0f;
+        summonCoolTime = 25.0f;
+        projectileCount = 7;
+        shockwaveProjectileCount = 16;
+        spiderWebSpawnTimer = 8.0f;
+
+        Debug.Log("2페이즈 진입");
     }
     public void DealMeleeDamage()
     {

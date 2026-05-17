@@ -6,6 +6,10 @@ public class JHY_MobSummoner : MonoBehaviour
     [SerializeField] private GameObject[] mobPrefabs;
     [SerializeField] private Transform[] summonPoints;
 
+    [Header("Summon Effect")]
+    [SerializeField] private GameObject summonEffectPrefab;
+    [SerializeField] private float summonEffectLifeTime = 1.5f;
+
     private readonly List<GameObject> summonedMobs = new List<GameObject>();
 
     public void SummonMobs()
@@ -16,6 +20,12 @@ public class JHY_MobSummoner : MonoBehaviour
 
         foreach (Transform point in summonPoints)
         {
+            if (summonEffectPrefab != null)
+            {
+                GameObject effect = Instantiate(summonEffectPrefab, point.position, Quaternion.identity);
+                Destroy(effect, summonEffectLifeTime);
+            }
+
             int index = Random.Range(0, mobPrefabs.Length);
             GameObject mob = Instantiate(mobPrefabs[index], point.position, Quaternion.identity);
             summonedMobs.Add(mob);
