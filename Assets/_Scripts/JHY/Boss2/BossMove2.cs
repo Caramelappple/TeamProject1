@@ -7,11 +7,23 @@ public class BossFollow2D : MonoBehaviour
     public float followRange = 10f;
     public float keepDistance = 3f;
 
+    public float dashInterval = 10f;
+    public float dashSpeed = 12f;
+    public float dashDuration = 0.5f;
+
     private Animator anim;
+    private Rigidbody2D rb;
+
+    private float lastDashTime;
+    private float dashTimer;
+    private bool isDashing;
+    private Vector2 dashDir;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        lastDashTime = Time.time;
     }
 
     private void Update()
@@ -19,6 +31,27 @@ public class BossFollow2D : MonoBehaviour
         if (player == null)
         {
             anim.SetFloat("Speed", 0f);
+            return;
+        }
+
+        if (isDashing)
+        {
+            dashTimer -= Time.deltaTime;
+            rb.linearVelocity = dashDir * dashSpeed;
+            anim.SetFloat("Speed", dashSpeed);
+
+            if (dashTimer <= 0f)
+            {
+                isDashing = false;
+                rb.linearVelocity = Vector2.zero;
+            }
+
+            return;
+        }
+
+        if (Time.time >= lastDashTime + dashInterval)
+        {
+            StartDash();
             return;
         }
 
@@ -30,13 +63,23 @@ public class BossFollow2D : MonoBehaviour
             Vector2 dir = ((Vector2)player.position - (Vector2)transform.position).normalized;
             transform.position = (Vector2)transform.position + dir * moveSpeed * Time.deltaTime;
             currentSpeed = moveSpeed;
-
-            if (player.position.x < transform.position.x)
-                transform.localScale = new Vector3(1, 1, 1);
-            else
-                transform.localScale = new Vector3(-1, 1, 1);
         }
 
+        if (player.position.x < transform.position.x)
+            transform.localScale = new Vector3(1, 1, 1);
+        else
+            transform.localScale = new Vector3(-1, 1, 1);
+
         anim.SetFloat("Speed", currentSpeed);
+    }
+
+    private void StartDash()
+    {
+        lastDashTime = Time.time;
+        isDashing = true;
+        dashTimer = dashDuration;
+        dashDir = ((Vector2)player.position - (Vector2)transform.position).normalized;
+
+        anim.SetTrigger("Attack");
     }
 }

@@ -133,9 +133,12 @@ GameObject:
   - component: {fileID: 1215458596}
   - component: {fileID: 1215458595}
   - component: {fileID: 1215458594}
+  - component: {fileID: 1215458598}
+  - component: {fileID: 1215458599}
+  - component: {fileID: 1215458600}
   m_Layer: 0
   m_Name: Boss2
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -231,6 +234,9 @@ MonoBehaviour:
   moveSpeed: 3
   followRange: 10
   keepDistance: 3
+  dashInterval: 10
+  dashSpeed: 15
+  dashDuration: 0.7
 --- !u!70 &1215458595
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -317,6 +323,56 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1215458598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215458590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3001d83329b09284bbca168ea676bc41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossAttack2
+  player: {fileID: 1228297285}
+  attackRange: 4
+  attackCooldown: 1.5
+  damage: 3
+--- !u!114 &1215458599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215458590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e8df4056084c78afb56d61aa4bd488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  _data: {fileID: 11400000, guid: e1290899297b1d74f89ed15c373be020, type: 2}
+  <MaxValue>k__BackingField: 100
+  <MinValue>k__BackingField: 0
+  _value: 100
+--- !u!114 &1215458600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215458590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1cb934d2a896c4eb7ce4a7eeefb7d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossHitReaction
+  disableScripts:
+  - {fileID: 1215458594}
+  - {fileID: 1215458598}
+  disableColliders:
+  - {fileID: 1215458595}
+  rb: {fileID: 1215458596}
 --- !u!1 &1228297278
 GameObject:
   m_ObjectHideFlags: 0
