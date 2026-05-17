@@ -1,6 +1,5 @@
 //이거 사용
 using System;
-using _Scripts.HealthSystem;
 using UnityEngine;
 
 public class DamageableResources : MonoBehaviour

@@ -1,5 +1,4 @@
 using UnityEngine;
-using KSY.HealthSystem;
 
 public class JHY_Dead : MonoBehaviour
 {

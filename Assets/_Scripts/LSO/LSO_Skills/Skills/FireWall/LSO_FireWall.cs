@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace _Scripts.LSO.LSO_Skills.Skills
@@ -17,7 +16,6 @@ namespace _Scripts.LSO.LSO_Skills.Skills
     
         private float _waitTime = 0.1f;
         private float _coolTime = 5f;
-        private int _damage = 80;
         private int _count = 5;
         private float _gap = 2.5f;
         public void UseSkill(GameObject player)

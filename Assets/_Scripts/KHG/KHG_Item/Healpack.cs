@@ -1,5 +1,5 @@
 using System;
-using KHG.HealthSystme;
+using _Scripts.HealthSystem;
 using KHG.Player;
 using UnityEngine;
 using KHG.ItemSystem;
@@ -16,7 +16,7 @@ public class Healpack : MonoBehaviour, KHG_ICollectable
 
         if (hasHealth)
         {
-            KHG_RecoverData data =  new KHG_RecoverData(null, healAmount);
+           RecoverData data =  new RecoverData(null, healAmount);
             health.Recover(data);
         }
     }

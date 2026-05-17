@@ -1,8 +1,6 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
-using UnityEngine.Serialization;
 
 public class LSO_Editor : MonoBehaviour
 {
@@ -34,7 +32,7 @@ public class LSO_Editor : MonoBehaviour
         health.OnDamage += (data) => Debug.Log($"<color=red>{this.gameObject}가 {data.giver}로부터 {data.damage}만큼 대미지를 받았습니다!</color>");
     }
 
-    public void SetHit(Health health)
+    private void SetHit(Health health)
     {
         StartCoroutine(SetHitCoroutine(health));
     }
