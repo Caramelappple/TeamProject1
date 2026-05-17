@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Health : DamageableResources, IRecoverable
 {
+    public GameObject healTextPrefab;
+
     public event Action<RecoverResultData> OnRecover;
 
     public void Recover(RecoverData data)
@@ -19,7 +21,10 @@ public class Health : DamageableResources, IRecoverable
         int calcValue = Value;
         bool hasRecover = lastValue < calcValue;
 
-        if(hasRecover)
+        GameObject textObj = Instantiate(healTextPrefab, transform.position + Vector3.up, Quaternion.identity);
+        textObj.GetComponent<KDH_HealAnim>().Setup(recoverValue);
+
+        if (hasRecover)
         {
             Debug.Log($"{recoverValue}??? ???? ???????. ??????? : {calcValue}");
             RecoverResultData resultData = RecoverResultData.Create(giver, recoverValue, Value);
