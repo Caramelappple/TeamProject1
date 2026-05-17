@@ -54,10 +54,10 @@ public class JHY_Attack : MonoBehaviour
     private bool isPhase2;
     [SerializeField] private GameObject phase2EffectPrefab;
     [SerializeField] private float phase2EffectLifeTime = 2f;
-    [SerializeField] private Color phase2Color = Color.purple;
     [SerializeField] private GameObject phase2Aura;
     private bool isPhaseChanging;
     [SerializeField] private float phaseChangeDuration = 1.5f;
+    private GameObject spawnedAura;
 
     private float lastAttackTime;
     private float lastSkillTime;
@@ -204,26 +204,33 @@ public class JHY_Attack : MonoBehaviour
             Destroy(effect, phase2EffectLifeTime);
         }
 
-        if (sr != null)
+
         {
-            sr.color = phase2Color;
-        }
+            if (phase2Aura != null && spawnedAura == null)
+            {
+                spawnedAura = Instantiate(phase2Aura, transform.position, Quaternion.identity, transform);
+            }
 
-        if (phase2Aura != null)
+
+            attackCooldown = 1.0f;
+            skillCoolTime = 3.0f;
+            jumpAttackCoolTime = 3.0f;
+            spearRainCoolTime = 12.0f;
+            summonCoolTime = 25.0f;
+            projectileCount = 7;
+            shockwaveProjectileCount = 16;
+            spiderWebSpawnTimer = 8.0f;
+
+            Debug.Log("2페이즈 진입");
+        }
+    }
+    public void ClearAura()
+    {
+        if (spawnedAura != null)
         {
-            phase2Aura.SetActive(true);
+            Destroy(spawnedAura);
+            spawnedAura = null;
         }
-
-        attackCooldown = 1.0f;
-        skillCoolTime = 3.0f;
-        jumpAttackCoolTime = 3.0f;
-        spearRainCoolTime = 12.0f;
-        summonCoolTime = 25.0f;
-        projectileCount = 7;
-        shockwaveProjectileCount = 16;
-        spiderWebSpawnTimer = 8.0f;
-
-        Debug.Log("2페이즈 진입");
     }
     public void DealMeleeDamage()
     {

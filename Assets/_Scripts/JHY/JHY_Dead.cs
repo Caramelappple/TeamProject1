@@ -10,7 +10,7 @@ public class JHY_Dead : MonoBehaviour
     [SerializeField] private MonoBehaviour[] disableScripts;
     [SerializeField] private Collider2D[] disableColliders;
     [SerializeField] private Rigidbody2D rb;
-
+   
     private void Awake()
     {
         ani = GetComponent<Animator>();
@@ -39,6 +39,13 @@ public class JHY_Dead : MonoBehaviour
     private void Die()
     {
         isDead = true;
+
+        JHY_Attack attack = GetComponent<JHY_Attack>();
+        if (attack != null)
+        {
+            attack.ClearAura();
+        }
+
         ani.SetTrigger("Dead");
 
         foreach (MonoBehaviour script in disableScripts)
