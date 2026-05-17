@@ -15,14 +15,6 @@ public class KHG_PoisonField : MonoBehaviour, LSO_ISkill
     private float _coolTime = 3f;
     private bool _canUse = true;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            UseSkill(gameObject);
-        }
-    }
-
     public void UseSkill(GameObject player)
     {
         if (!_canUse) return;
