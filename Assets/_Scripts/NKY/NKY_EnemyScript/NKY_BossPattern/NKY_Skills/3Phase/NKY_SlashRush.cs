@@ -1,12 +1,56 @@
+using System;
 using System.Collections;
 using _Scripts.NKY._EnemyScript.BossPattern;
+using _Scripts.NKY.Manager;
 using UnityEngine;
 
 public class NKY_SlashRush : NKY_BossSkill
 {
-    public override float DamageScale { get; protected set; }
+    [SerializeField] private GameObject slash;
+    [SerializeField] private Collider2D slashCollider;
+    
+    [Header("스킬 설정")]
+    [SerializeField] private int attackCount = 15;
+    [SerializeField] private float moveDistance = 3f;
+    [field: SerializeField] public override float DamageScale { get; protected set; }
+    
+    private int _damage;
+
+    private void Start()
+    {
+        _damage = (int)(DamageScale * _bossBrain.damage);
+        slash.SetActive(false);
+    }
+
     public override IEnumerator Execute(Transform boss, Transform target)
     {
-        throw new System.NotImplementedException();
+        Transform targetTransform = target;
+        Transform bossTransform = boss;
+        for (int i = 0; i < attackCount; i++)
+        {
+            Vector2 dir = (targetTransform.position - bossTransform.position).normalized;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            angle -= 90f;
+            yield return PlaySequence(
+                Move(bossTransform, dir, moveDistance * 0.1f, 0.2f),
+                ShowWarn(NKY_IndicatorManager.IndicatorType.HarfCircle, new Vector2(3.5f, 3.5f), 0.5f, () => bossTransform.position, angle),
+                SlashEffect(slash, bossTransform.position, angle),
+                Attack(() => _HitBoxController.Cast(slashCollider, (hitTarget) =>
+                {
+                    HitToDamage(boss.gameObject, hitTarget.gameObject, _damage);
+                }))
+                );
+        }
+    }
+
+    private IEnumerator SlashEffect(GameObject effect, Vector2 pos, float angle)
+    {
+        Animator effectAnim = effect.GetComponentInChildren<Animator>();
+        effect.transform.position = pos;
+        effect.transform.rotation = Quaternion.Euler(0, 0, angle);
+        effect.SetActive(true);
+        effectAnim.Play("SlashEffect");
+        yield return WaitAnim(effectAnim, "SlashEffect", 0.9f);
+        effect.SetActive(false);
     }
 }
