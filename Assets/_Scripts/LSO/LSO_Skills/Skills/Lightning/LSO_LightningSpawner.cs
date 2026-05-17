@@ -11,7 +11,7 @@ using UnityEngine;
         
         private float _coolTime = 5f;
         private float _minWaitTime = 0.1f;
-        private float _maxWaitTime = 0.8f;
+        private float _maxWaitTime = 0.4f;
         private int _minCount = 4;
         private int _maxCount = 10;//내리칠 횟수
         private float _range  = 1.2f;//오차 범위

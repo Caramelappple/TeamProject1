@@ -146,6 +146,10 @@ public class LSO_PlayerMovement : MonoBehaviour
                     Animator.SetFloat(MoveY, _moveDir.y);
                     Animator.SetBool(MoveX, _moveDir.x != 0);
                 }
+                if (_moveDir.x != 0)
+                {
+                    _sprite.flipX = _moveDir.x < 0;
+                }
             }
         }
     }

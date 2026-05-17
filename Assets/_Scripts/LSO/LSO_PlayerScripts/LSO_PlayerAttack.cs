@@ -1,21 +1,18 @@
 using System.Collections;
 using UnityEngine;
-<<<<<<< HEAD
 using DG.Tweening;
-
-=======
-//using DG.Tweening;  
->>>>>>> base
 public class LSO_PlayerAttack : MonoBehaviour
 {
     [SerializeField] protected GameObject swordAxis;
     [SerializeField] protected GameObject sword;
     private LSO_PlayerMovement _movement;
+    
     private bool _attackable = true;
-    private readonly float _cooldown = 0.12f;
-    private readonly float _attackTime = 0.25f;
-    private  readonly float _attackTime2 = 0.05f;
-    private readonly int _damage = 10;
+    private readonly float _cooldown = 0.12f;//진짜 0.001 딘위정도는 건드려도 됨
+    private readonly float _attackTime = 0.22f;//건드려도 됨
+    private  readonly float _attackTime2 = 0.08f;//건드리면 절대 안됨
+    private readonly int _damage = 10;//맘대로
+    
     private Vector3 _lastDir;
     private Animator _animator;
 
@@ -29,7 +26,7 @@ public class LSO_PlayerAttack : MonoBehaviour
     {
         sword.SetActive(false);
     }
-    private void OnAttack()
+    public void OnAttack()
     {
         if (!_attackable) return;
     
@@ -42,8 +39,6 @@ public class LSO_PlayerAttack : MonoBehaviour
     IEnumerator Attack()
     {
         _attackable = false;
-        
-        Vector3 targetDir = new Vector3(transform.position.x - _lastDir.x, transform.position.y - _lastDir.y, transform.position.z - _lastDir.z).normalized;
         Collider2D[] colliders = Physics2D.OverlapBoxAll(sword.transform.position, sword.transform.localScale/2, 0);
         foreach (Collider2D collision in colliders)
         {
@@ -57,14 +52,12 @@ public class LSO_PlayerAttack : MonoBehaviour
         
         _movement.SetMove(false);
         _animator.SetTrigger("Attack");//애니메이션 재생
-<<<<<<< HEAD
-=======
-        //transform.DOMove(targetDir * 0.001f, 0.05f);
->>>>>>> base
+        transform.DOMove(transform.position-_lastDir * 0.2f, 0.15f);
         sword.SetActive(true);
         yield return new WaitForSeconds(_attackTime2);
         _movement.SetMove(true);
         yield return new WaitForSeconds(_attackTime);//공격 유지 시간 대기
+        
        
         sword.SetActive(false);
         yield return new WaitForSeconds(_cooldown);//쿨타임 대기
