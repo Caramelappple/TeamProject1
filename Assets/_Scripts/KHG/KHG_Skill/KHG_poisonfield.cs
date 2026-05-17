@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class KHG_PoisonField : MonoBehaviour,LSO_ISkill
+public class KHG_PoisonField : MonoBehaviour, LSO_ISkill
 {
     [SerializeField] private GameObject poisonPrefab;
 
@@ -14,21 +14,6 @@ public class KHG_PoisonField : MonoBehaviour,LSO_ISkill
 
     private float _coolTime = 3f;
     private bool _canUse = true;
-    
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            UseSkill(this.gameObject);
-        }
-    }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            UseSkill(gameObject);
-        }
-    }
 
     public void UseSkill(GameObject player)
     {
