@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float speed = 7f;
     private Vector2 moveDir;
     private float currentSlowMultiplier = 1f;
+    [SerializeField] private int damage = 5;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -28,4 +29,21 @@ public class Player : MonoBehaviour
     {
         rb.linearVelocity = moveDir * speed*currentSlowMultiplier;
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!collision.collider.CompareTag("Boss") && !collision.collider.CompareTag("Monster")) return;
+
+        Health targetHealth = collision.collider.GetComponent<Health>();
+        if (targetHealth == null)
+        {
+            targetHealth = collision.collider.GetComponentInParent<Health>();
+        }
+
+        if (targetHealth == null) return;
+
+        DamageData data = DamageData.Create(null, damage);
+        targetHealth.GetDamage(data);
+    }
+
+
 }

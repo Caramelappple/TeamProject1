@@ -1,49 +1,71 @@
 using UnityEngine;
+using System.Collections;
+using KSY.HealthSystem;
 
 public class FallingSpear : MonoBehaviour
 {
-    [SerializeField] private float fallSpeed = 8f;
-    [SerializeField] private float randomXOffset = 0.3f;
-    [SerializeField] private float minDistance = 4f;
-    [SerializeField] private float maxDistance = 7f;
+    [SerializeField] private float moveSpeed = 8f;
     [SerializeField] private GameObject hitEffectPrefab;
+    [SerializeField] private float explodeDelay = 1f;
 
-    private Vector2 moveDir;
-    private Vector3 startPos;
-    private float moveDistance;
+    [Header("Damage")]
+    [SerializeField] private int damage = 20;
+    [SerializeField] private float damageRadius = 2f;
+    [SerializeField] private LayerMask playerLayer;
+
+    private Vector2 targetPos;
+    private bool hasTarget;
     private bool hasStopped;
-
-    private void Start()
+    private bool hasExploded;
+    [SerializeField] private float hitEffectLifeTime = 1.5f;
+    public void SetTarget(Vector2 target)
     {
-        startPos = transform.position;
-
-        float xOffset = Random.Range(-randomXOffset, randomXOffset);
-        moveDir = new Vector2(xOffset, -1f).normalized;
-
-        moveDistance = Random.Range(minDistance, maxDistance);
+        targetPos = target;
+        hasTarget = true;
     }
 
     private void Update()
     {
-        if (hasStopped) return;
+        if (!hasTarget || hasStopped || hasExploded) return;
 
-        transform.position += (Vector3)(moveDir * fallSpeed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
 
-        if (Vector2.Distance(startPos, transform.position) >= moveDistance)
+        if (Vector2.Distance(transform.position, targetPos) <= 0.05f)
         {
-            StopAndExplode();
+            transform.position = targetPos;
+            hasStopped = true;
+            StartCoroutine(ExplodeAfterDelay());
         }
     }
 
-    private void StopAndExplode()
+    private IEnumerator ExplodeAfterDelay()
     {
-        hasStopped = true;
+        yield return new WaitForSeconds(explodeDelay);
 
-        if (hitEffectPrefab != null)
+        hasExploded = true;
+
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, damageRadius, playerLayer);
+        if (hit != null)
         {
-            Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
+            Health playerHealth = hit.GetComponent<Health>();
+            if (playerHealth != null)
+            {
+                DamageData data = DamageData.Create(null, damage);
+                playerHealth.GetDamage(data);
+            }
         }
+
+        
+        
+            if (hitEffectPrefab != null)
+            {
+                GameObject effect = Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
+                Destroy(effect, hitEffectLifeTime);
+            }
+        
 
         Destroy(gameObject);
     }
+
+   
 }
