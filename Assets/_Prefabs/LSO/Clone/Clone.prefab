@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2370451911163315259}
   - component: {fileID: -2310347756555602786}
   - component: {fileID: 1219370194204929178}
-  - component: {fileID: 582997931140312981}
   - component: {fileID: -7401771483448136743}
   m_Layer: 0
   m_Name: Clone
@@ -184,20 +183,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &582997931140312981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 110515909054239624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40297269b71441a4781af22ccea8771e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LSO_PlayerAttack
-  swordAxis: {fileID: 4392053502029261114}
-  sword: {fileID: 823444306591474005}
 --- !u!114 &-7401771483448136743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +195,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68ddf0cd2e8d7542a1b11f57993fef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Clone
+  swordAxis: {fileID: 4392053502029261114}
+  sword: {fileID: 823444306591474005}
 --- !u!1 &823444306591474005
 GameObject:
   m_ObjectHideFlags: 0

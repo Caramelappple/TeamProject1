@@ -67,7 +67,7 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     private void OnMove(InputValue value)
     {
-        if (!_canMove)
+        if (!_canMove)//움직일수 없을떼
         {
             _moveDir = Vector2.zero;
             return;
@@ -77,12 +77,12 @@ public class LSO_PlayerMovement : MonoBehaviour
         if (_moveDir != Vector2.zero) //움직였을때
             _lastDir = _moveDir;
         
-        if (_moveDir.x != 0)
+        if (_moveDir.x != 0)//보는 방향 따라서 뒤집기
         {
             _sprite.flipX = _moveDir.x < 0;
         }
 
-        if (_lastDir.x != 0 && _lastDir.y != 0) //대각선으로 움직였을때
+        if (_lastDir.x != 0 && _lastDir.y != 0) //대각선으로 움직였을때 양옆으로 변환해주기
         {
             _lastDir = new Vector2(Mathf.Sign(_lastDir.x), 0);
 
@@ -157,6 +157,11 @@ public class LSO_PlayerMovement : MonoBehaviour
     public Vector3 GetLastDir()
     {
         return _lastDir;
+    }
+    
+    public Vector3 GetMoveDir()
+    {
+        return _moveDir;
     }
 }
 

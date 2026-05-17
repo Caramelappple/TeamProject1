@@ -3,72 +3,115 @@ using UnityEngine;
 
 public class LSO_Clone : MonoBehaviour
 {
-    [SerializeField] private GameObject swordAxis;
+    private static readonly int MoveY = Animator.StringToHash("MoveY");
+    private static readonly int MoveX = Animator.StringToHash("MoveX");
     [SerializeField] private GameObject sword;
+    
+    private bool _attackable = true;
+    private readonly float _cooldown = 0.5f;
+    private readonly float _attackTime = 0.2f;
+    private readonly float _liveTime = 7.8f;
+    private readonly int _damage = 10;
+    
+    private bool _isAnimReady;
 
-    private float _liveTime = 8f;
-    private float _attackCooldown = 0.5f;
-    private float _attackRange = 1.5f;
-    private int _damage = 10;
-    private bool _canAttack = true;
+    private GameObject _player;
+    private LSO_PlayerMovement _movement;
+    private Health _playerHealth;
+    
+    private Vector3 _lastDir;
+    private Animator _cloneAnim;
+    private SpriteRenderer _clonSprite;
+
+    private void Awake()
+    {
+        _cloneAnim = GetComponent<Animator>();
+        _clonSprite = GetComponent<SpriteRenderer>();
+        _cloneAnim.enabled = false;
+        _clonSprite.enabled = false;
+    }
+
+    private void Start()
+    {
+        sword.SetActive(false);
+    }
 
     private void OnEnable()
     {
-        sword.SetActive(false);
         Destroy(gameObject, _liveTime);
     }
 
     private void Update()
     {
-        if (!_canAttack) return;
-
-        GameObject nearest = GetNearest();
-        if (nearest == null) return;
-
-        StartCoroutine(Attack(nearest));
+        if (!_attackable || !_player || !_movement || !_isAnimReady) return;
+        _attackable = false;
+        SetClone();
+        StartCoroutine(Attack());
+        gameObject.GetComponent<Rigidbody2D>().linearVelocity = _lastDir * 0.5f;
     }
 
-    private GameObject GetNearest()
+    private IEnumerator Attack()
     {
-        Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, _attackRange);
+        //_attackable = false;
+        
+        sword.SetActive(true);
 
-        GameObject result = null;
-        float minDist = float.MaxValue;
-
-        foreach (Collider2D target in targets)
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(sword.transform.position, sword.transform.localScale / 2, 0);
+        foreach (Collider2D collision in colliders)
         {
-            if (!target.CompareTag("Enemy")) continue;
-
-            float dist = Vector2.Distance(transform.position, target.transform.position);
-            if (dist < minDist)
+            if (collision.CompareTag("Enemy") && collision.TryGetComponent<Health>(out Health enemyHealth))
             {
-                minDist = dist;
-                result = target.gameObject;
+                DamageData data = DamageData.Create(_playerHealth, _damage);
+                enemyHealth.GetDamage(data);
             }
         }
-        return result;
+
+        yield return new WaitForSeconds(_attackTime);
+
+        sword.SetActive(false);
+        yield return new WaitForSeconds(_cooldown);
+        _attackable = true;
+    }
+    
+    private void SetDir()
+    {
+        if (_lastDir.x != 0)
+            _clonSprite.flipX = _lastDir.x < 0;
+
+        if (_lastDir.x != 0 && _lastDir.y != 0)
+        {
+            _lastDir = new Vector2(Mathf.Sign(_lastDir.x), 0);
+            _cloneAnim.SetFloat(MoveY, 0);
+            _cloneAnim.SetBool(MoveX, true);
+        }
+        else
+        {
+            _cloneAnim.SetFloat(MoveY, _lastDir.y);
+            _cloneAnim.SetBool(MoveX, _lastDir.x != 0);
+        }
     }
 
-    private IEnumerator Attack(GameObject target)
+    private void SetClone()
     {
-        _canAttack = false;
+        sword.transform.position = transform.position + _lastDir;
+        _cloneAnim.SetTrigger("Attack");
+    }
 
-        if (target != null && target.TryGetComponent<Health>(out Health enemyHealth))
-        {
-            // 넉백 없이 데미지만
-            DamageData data = new DamageData(enemyHealth, _damage);
-            enemyHealth.GetDamage(data);
+    public void Init(LSO_PlayerMovement movement)
+    {
+        _player = movement.gameObject;
+        _playerHealth = _player.GetComponent<Health>();
+        _movement = movement;
+        _lastDir = movement.GetLastDir();
+        StartCoroutine(InitAnim());
+    }
 
-            // 검 방향 설정
-            Vector3 dir = (target.transform.position - transform.position).normalized;
-            sword.transform.position = transform.position + dir;
-            sword.SetActive(true);
-
-            yield return new WaitForSeconds(0.2f);
-            sword.SetActive(false);
-        }
-
-        yield return new WaitForSeconds(_attackCooldown);
-        _canAttack = true;
+    private IEnumerator InitAnim()
+    {
+        yield return new WaitForSeconds(0.1f);
+        _cloneAnim.enabled = true;
+        SetDir();
+        _clonSprite.enabled = true;
+        _isAnimReady = true;
     }
 }

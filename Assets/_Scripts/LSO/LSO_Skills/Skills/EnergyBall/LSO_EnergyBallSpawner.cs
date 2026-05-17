@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using DG.Tweening;
 
 public class LSO_EnergyBallSpawner : MonoBehaviour,LSO_ISkill
 {
@@ -31,8 +32,9 @@ public class LSO_EnergyBallSpawner : MonoBehaviour,LSO_ISkill
         _effectInstance = Instantiate(effect, player.transform.position, Quaternion.identity);
         _rigid = player.GetComponent<Rigidbody2D>();
         
-        Rigidbody2D rigid = _effectInstance.GetComponent<Rigidbody2D>();
-        rigid.linearVelocity = lookDirection.normalized * _speed; // 발사 속도
+        Rigidbody2D rigid = _effectInstance.GetComponent<Rigidbody2D>(); 
+        //rigid.linearVelocity = lookDirection.normalized * _speed; // 발사 속도
+        rigid.DOMove(_effectInstance.transform.position+(Vector3)lookDirection * _speed, 2.8f).SetEase(Ease.OutSine);
         
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
         

@@ -1,11 +1,14 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class LSO_Slow : MonoBehaviour,LSO_ISkill
 {
+    private float _tolerance = 0.1f;
     [SerializeField]private GameObject effect;
     private GameObject _effectInstance;
     private Animator _animator;
+    private GameObject _player;
     
     private bool _canUse = true;
     private float _coolTime = 60f;
@@ -13,9 +16,11 @@ public class LSO_Slow : MonoBehaviour,LSO_ISkill
     public void UseSkill(GameObject player)
     {
         if (!_canUse) return;
+        _player = player;
         _effectInstance = Instantiate(effect, player.transform.position, Quaternion.identity);
         _animator = _effectInstance.GetComponent<Animator>();
         Time.timeScale = 0.5f;
+        player.GetComponent<MonoBehaviour>().StartCoroutine(SetSat(-100));
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
     }
 
@@ -24,6 +29,7 @@ public class LSO_Slow : MonoBehaviour,LSO_ISkill
         _canUse  = false;
         yield return new WaitForSecondsRealtime(_waitTime);
         Time.timeScale = 1f;
+        _player.GetComponent<MonoBehaviour>().StartCoroutine(SetSat(0));
         yield return new WaitForSeconds(time);
         _canUse = true;
     }
@@ -38,6 +44,16 @@ public class LSO_Slow : MonoBehaviour,LSO_ISkill
         if (stateInfo.IsName("Animation-magic-12-a") && stateInfo.normalizedTime >= 0.95f)
         {
            Destroy(_effectInstance);
+        }
+    }
+    
+    private IEnumerator SetSat(float value)
+    {
+        while (Math.Abs(LSO_Editor.Instance.colorGrading.saturation.value - value) > _tolerance)
+        {
+            yield return null;
+            LSO_Editor.Instance.colorGrading.saturation.value +=
+                LSO_Editor.Instance.colorGrading.saturation.value > value ? -0.5f : 0.5f;
         }
     }
 }
