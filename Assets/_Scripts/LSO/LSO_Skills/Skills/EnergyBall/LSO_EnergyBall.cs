@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LSO_EnergyBall : MonoBehaviour
 {
-    private int _damage = 100;
+    private int _damage = 50;
     private Animator _animator;
 
     private void Awake()

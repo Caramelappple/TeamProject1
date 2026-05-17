@@ -44,8 +44,10 @@ public class LSO_RadialBeamSpawner : MonoBehaviour,LSO_ISkill
     public IEnumerator CoolTime(float time)
     {
         _canUse = false;
+        _onEnd = false;
         for (int i = 0; i < _count; i++)
         {
+            if (!_effectInstance)  yield break;
             //이펙트 돌리기
             _randomDegree = Random.Range(-180, 180);
             Vector3 spawnRot = new Vector3(0, 0, _randomDegree);

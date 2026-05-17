@@ -13,8 +13,6 @@ public class LSO_PlayerMovement : MonoBehaviour
     
     [SerializeField]private bool _canMove = true;
 
-    private int _disableMoveCount = 0; // 김동휘가 추가함
-
     private Vector2 _moveDir;
     private Vector2 _lastDir = Vector2.down;
     private Rigidbody2D _rigid;
@@ -69,7 +67,7 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     private void OnMove(InputValue value)
     {
-        if (!_canMove)
+        if (!_canMove)//움직일수 없을떼
         {
             _moveDir = Vector2.zero;
             return;
@@ -79,12 +77,12 @@ public class LSO_PlayerMovement : MonoBehaviour
         if (_moveDir != Vector2.zero) //움직였을때
             _lastDir = _moveDir;
         
-        if (_moveDir.x != 0)
+        if (_moveDir.x != 0)//보는 방향 따라서 뒤집기
         {
             _sprite.flipX = _moveDir.x < 0;
         }
 
-        if (_lastDir.x != 0 && _lastDir.y != 0) //대각선으로 움직였을때
+        if (_lastDir.x != 0 && _lastDir.y != 0) //대각선으로 움직였을때 양옆으로 변환해주기
         {
             _lastDir = new Vector2(Mathf.Sign(_lastDir.x), 0);
 
@@ -106,28 +104,9 @@ public class LSO_PlayerMovement : MonoBehaviour
         }
     }
 
- //HEAD
-
     public void SetMove(bool move)
     {
-        // false 이면 카운트 증가, true이면 감소
-        if (!move) // 김동휘가 추가함
-        {
-            _disableMoveCount++; // 김동휘가 추가함
-        }
-        else
-        {
-            _disableMoveCount--; // 김동휘가 추가함
-            if (_disableMoveCount < 0) _disableMoveCount = 0; // 0 이하로 떨어지지 않게 방어
-        }
-
-        // 이동 금지 카운트가 0일 때만 실제로 이동 가능 상태(_canMove = true)가 됨
-        _canMove = (_disableMoveCount == 0); // 김동휘가 추가함 
-        ////////여기까지.//////////
-        
-        // 다른 이동기 스킬 만들 때 그냥 SetMove(false)와 SetMove(true) 그냥 상황에 맞춰서 쓰면 알아서 적용 됨.
-
-
+        _canMove = move;
 
         if (!_canMove)
         {
@@ -150,13 +129,11 @@ public class LSO_PlayerMovement : MonoBehaviour
                 if (Keyboard.current.aKey.isPressed) dir.x -= 1;
                 if (Keyboard.current.dKey.isPressed) dir.x += 1;
                 _moveDir = dir;
-
+                
                 if (_moveDir != Vector2.zero) //움직였을때
                     _lastDir = _moveDir;
-
                 Animator.SetFloat(MoveY, _moveDir.y);
                 Animator.SetBool(MoveX, _moveDir.x != 0);
-
                 if (_lastDir.x != 0 && _lastDir.y != 0) //대각선으로 움직였을때
                 {
                     _lastDir = new Vector2(Mathf.Sign(_lastDir.x), 0);
@@ -169,14 +146,22 @@ public class LSO_PlayerMovement : MonoBehaviour
                     Animator.SetFloat(MoveY, _moveDir.y);
                     Animator.SetBool(MoveX, _moveDir.x != 0);
                 }
+                if (_moveDir.x != 0)
+                {
+                    _sprite.flipX = _moveDir.x < 0;
+                }
             }
         }
     }
-
+    
     public Vector3 GetLastDir()
     {
         return _lastDir;
     }
-// base
+    
+    public Vector3 GetMoveDir()
+    {
+        return _moveDir;
+    }
 }
 

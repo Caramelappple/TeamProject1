@@ -8,6 +8,12 @@ public class Health : DamageableResources, IRecoverable
     public GameObject healTextPrefab;
 
     public event Action<RecoverResultData> OnRecover;
+    
+    // Health.cs
+    private void Start()
+    {
+        LSO_Editor.Instance?.Register(this);
+    }
 
     public void Recover(RecoverData data)
     {
