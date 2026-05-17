@@ -597,6 +597,7 @@ MonoBehaviour:
   <MaxValue>k__BackingField: 100
   <MinValue>k__BackingField: 0
   _value: 100
+  healTextPrefab: {fileID: 0}
 --- !u!114 &566629623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1218,6 +1219,7 @@ MonoBehaviour:
   <MaxValue>k__BackingField: 100
   <MinValue>k__BackingField: 0
   _value: 100
+  healTextPrefab: {fileID: 0}
 --- !u!1 &1575637777
 GameObject:
   m_ObjectHideFlags: 0
