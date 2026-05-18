@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using _Scripts.NKY._EnemyScript.BossPattern;
 using _Scripts.NKY.Manager;
@@ -45,7 +44,7 @@ public class NKY_SlashRush : NKY_BossSkill
     {
         Animator effectAnim = effect.GetComponentInChildren<Animator>();
         effect.transform.position = pos;
-        col.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        col.transform.rotation = Quaternion.Euler(0f, 0f, angle + 180f);
         effect.transform.rotation = Quaternion.Euler(0f, 0f, angle);
         effect.SetActive(true);
         effectAnim.Play("SlashEffect");
