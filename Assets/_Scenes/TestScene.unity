@@ -1572,7 +1572,7 @@ MonoBehaviour:
   _data: {fileID: 11400000, guid: 6bb95d5c47193ec47a190479769658f1, type: 2}
   <MaxValue>k__BackingField: 1000
   <MinValue>k__BackingField: 0
-  _value: 520
+  _value: 1000
 --- !u!114 &713920013
 MonoBehaviour:
   m_ObjectHideFlags: 0
