@@ -6,7 +6,6 @@ public class LSO_EnergyBallSpawner : MonoBehaviour,LSO_ISkill
 {
     [SerializeField] private GameObject effect;
     private GameObject _effectInstance;
-    [SerializeField] private float spawnDistance = 1;
     private float _speed = 5;
     private float _coolTime = 30f;
     private float _recoilTime = 0.3f;

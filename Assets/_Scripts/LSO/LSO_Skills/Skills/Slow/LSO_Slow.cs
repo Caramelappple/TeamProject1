@@ -19,7 +19,7 @@ public class LSO_Slow : MonoBehaviour,LSO_ISkill
         _player = player;
         _effectInstance = Instantiate(effect, player.transform.position, Quaternion.identity);
         _animator = _effectInstance.GetComponent<Animator>();
-        Time.timeScale = 0.5f;
+        _player.GetComponent<MonoBehaviour>().StartCoroutine(SetScale(0.5f));
         player.GetComponent<MonoBehaviour>().StartCoroutine(SetSat(-100));
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
     }
@@ -28,7 +28,7 @@ public class LSO_Slow : MonoBehaviour,LSO_ISkill
     {
         _canUse  = false;
         yield return new WaitForSecondsRealtime(_waitTime);
-        Time.timeScale = 1f;
+        _player.GetComponent<MonoBehaviour>().StartCoroutine(SetScale(1));
         _player.GetComponent<MonoBehaviour>().StartCoroutine(SetSat(0));
         yield return new WaitForSeconds(time);
         _canUse = true;
@@ -54,6 +54,16 @@ public class LSO_Slow : MonoBehaviour,LSO_ISkill
             yield return null;
             LSO_Editor.Instance.colorGrading.saturation.value +=
                 LSO_Editor.Instance.colorGrading.saturation.value > value ? -0.5f : 0.5f;
+        }
+    }
+    
+    private IEnumerator SetScale(float value)
+    {
+        while (Math.Abs(Time.timeScale - value) > _tolerance)
+        {
+            yield return null;
+            Time.timeScale  +=
+                Time.timeScale > value ? -0.5f : 0.5f;
         }
     }
 }
