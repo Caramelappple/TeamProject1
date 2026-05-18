@@ -39,11 +39,7 @@ public class LSO_Editor : MonoBehaviour
     private IEnumerator SetHitCoroutine(Health health)
     {
         if (!health.gameObject.CompareTag("Player")) yield break;
-        while (vignette.intensity.value < 0.48f)
-        {
-            yield return null;
-            vignette.intensity.value += 0.007f;
-        }
+        vignette.intensity.value = 0.48f;
         vignette.active = true;
         yield return new WaitForSeconds(0.16f);
         while (vignette.intensity.value > 0f)
