@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Health : DamageableResources, IRecoverable
 {
-    public GameObject healTextPrefab;
-
     public event Action<RecoverResultData> OnRecover;
     
     // Health.cs
@@ -15,7 +13,7 @@ public class Health : DamageableResources, IRecoverable
         LSO_Editor.Instance?.Register(this);
     }
 
-    public void Recover(RecoverData data)
+    public virtual void Recover(RecoverData data)
     {
         if(IsDestroyed) return;
 
@@ -26,9 +24,6 @@ public class Health : DamageableResources, IRecoverable
         Value += recoverValue;
         int calcValue = Value;
         bool hasRecover = lastValue < calcValue;
-
-        GameObject textObj = Instantiate(healTextPrefab, transform.position + Vector3.up, Quaternion.identity);
-        textObj.GetComponent<KDH_HealAnim>().Setup(recoverValue);
 
         if (hasRecover)
         {
