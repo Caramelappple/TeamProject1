@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class KDH_CreditsController : MonoBehaviour
@@ -5,6 +6,7 @@ public class KDH_CreditsController : MonoBehaviour
     [SerializeField] private float scrollSpeed = 100f;
     [SerializeField] private float disappearYPosition = -1200f; // 사라질 좌표
 
+    [SerializeField] private GameObject parent;
     private RectTransform rectTransform;
 
     void Start()
@@ -20,8 +22,15 @@ public class KDH_CreditsController : MonoBehaviour
 
             if (rectTransform.anchoredPosition.y <= disappearYPosition)
             {
-                gameObject.SetActive(false);
+                StartCoroutine(OutEnding());
             }
         }
+    }
+
+    private IEnumerator OutEnding()
+    {
+        scrollSpeed = 0;
+        yield return new WaitForSeconds(7f);
+        parent.SetActive(false);
     }
 }
