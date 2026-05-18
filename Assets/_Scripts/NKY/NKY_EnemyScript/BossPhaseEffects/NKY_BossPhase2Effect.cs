@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 
@@ -13,7 +12,7 @@ namespace _Scripts.NKY._EnemyScript.BossPhaseEffects
         [SerializeField] private GameObject bloodEffect;
         [SerializeField] private GameObject fireEffect;
 
-        private Animator _effectAnim = null;
+        private Animator _fireAnim = null;
         
         
         private void Start()
@@ -24,24 +23,25 @@ namespace _Scripts.NKY._EnemyScript.BossPhaseEffects
 
         public override IEnumerator PlayPhaseEffect()
         {
-            StartCoroutine(PlayEffect(bloodEffect, "BloodEffect"));
+            StartCoroutine(PlayEffect(bloodEffect, "BloodEffect", 0.5f));
             _bossBrain.Anim.SetBool(IsStun, true);
             yield return StartCoroutine(WaitUntilOrTime(() => false, 0.8f));
-            StartEffect(fireEffect, "FireEffect", true);
+            StartEffect(fireEffect, "FireEffect", true, _fireAnim);
             yield return StartCoroutine(WaitUntilOrTime(() => false, 2f));
             _bossBrain.Anim.SetBool(IsStun, false);
         }
 
         public override IEnumerator EndPhaseEffect()
         {
-            yield return EndEffect(fireEffect, "FireEffect");
+            
+            yield return EndEffect(fireEffect, 0.7f);
         }
 
-        private IEnumerator PlayEffect(GameObject effect, string animName)
+        private IEnumerator PlayEffect(GameObject effect, string animName, float duration)
         {
             Animator effectAnim = effect.GetComponent<Animator>();
             StartEffect(effect, animName, false,  effectAnim);
-            yield return EndEffect(effect, animName, effectAnim);
+            yield return EndEffect(effect, duration);
         }
 
         private void StartEffect(GameObject effect, string animName, bool doScale = false, Animator effectAnim = null)
@@ -58,13 +58,11 @@ namespace _Scripts.NKY._EnemyScript.BossPhaseEffects
             effectAnim.Play(animName);
         }
 
-        private IEnumerator EndEffect(GameObject effect ,string animName, Animator effectAnim = null)
+        private IEnumerator EndEffect(GameObject effect ,float duration)
         {
-            if (effectAnim == null) yield break;
-            
-            yield return WaitAnim(effectAnim, animName, 1);
+            effect.GetComponent<SpriteRenderer>().DOFade(0, duration);
+            yield return WaitUntilOrTime(() => false, duration);
             effect.SetActive(false);
-            _effectAnim = null;
         }
     }
 }
