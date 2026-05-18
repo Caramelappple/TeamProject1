@@ -1,54 +1,72 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KHG_PoisonDamage : MonoBehaviour,LSO_ISkill
+public class KHG_PoisonDamage : MonoBehaviour
 {
-    [SerializeField] private float damage = 10f;
-    [SerializeField] private float interval = 1f;
+    [SerializeField] private int damage = 1;
+    [SerializeField] private float interval = 0.1f;
 
-    private Dictionary<GameObject, float> timer = new Dictionary<GameObject, float>();
+    private Health _playerHealth;
+    
+    private Animator _animator;
 
-    private void OnTriggerStay(Collider other)
+    public void Init(Health playerHealth)
     {
-        if (!other.CompareTag("Player")) return;
+        _playerHealth = playerHealth;
+    }
 
-        if (!timer.ContainsKey(other.gameObject))
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
+
+    private Dictionary<GameObject, float> _timer = new Dictionary<GameObject, float>();
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //임시
+        if (collision.CompareTag("Enemy") && collision.TryGetComponent<Health>(out Health health2))
         {
-            timer[other.gameObject] = 0f;
+            DamageData data = new DamageData(_playerHealth, damage);
+            health2.GetDamage(data);
         }
+    }
+    
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        
+        
+        if (!_playerHealth ) return;
+        _timer.TryAdd(collision.gameObject, 0f);
 
-        timer[other.gameObject] += Time.deltaTime;
+        _timer[collision.gameObject] += Time.deltaTime;
 
-        if (timer[other.gameObject] >= interval)
+        if (_timer[collision.gameObject] >= interval)
         {
-            Health hp = other.GetComponent<Health>();
-
-            if (hp != null)
+            if (collision.CompareTag("Enemy") && collision.TryGetComponent<Health>(out Health health))
             {
-                //hp.TakeDamage(damage);
+                DamageData data = new DamageData(_playerHealth, damage);
+                health.GetDamage(data);
             }
 
-            timer[other.gameObject] = 0f;
+            _timer[collision.gameObject] = 0f;
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         // 나가면 타이머 제거 (중요)
-        if (timer.ContainsKey(other.gameObject))
+        _timer.Remove(other.gameObject);
+    }
+    
+    private void FixedUpdate()
+    {
+        AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
+        if (stateInfo.IsName("Animation-magic-12-e") && stateInfo.normalizedTime >= 0.95f)
         {
-            timer.Remove(other.gameObject);
+            Destroy(gameObject);
         }
-    }
-
-    public void UseSkill(GameObject player)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public IEnumerator CoolTime(float time)
-    {
-        throw new System.NotImplementedException();
     }
 }
