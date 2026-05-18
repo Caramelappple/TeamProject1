@@ -25,7 +25,7 @@ public class KHG_Bomb : MonoBehaviour, LSO_ISkill
 
         LSO_PlayerMovement movement = player.GetComponent<LSO_PlayerMovement>();
 
-        Vector2 dir = movement.GetLastDir();
+        Vector2 dir = movement.GetFixedLastDir();
 
         if (dir == Vector2.zero)
             return;

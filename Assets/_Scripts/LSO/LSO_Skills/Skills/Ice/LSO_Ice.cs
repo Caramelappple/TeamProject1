@@ -23,7 +23,7 @@ public class LSO_Ice : MonoBehaviour,LSO_ISkill
         
         _player = player;
         _playerMovement = _player.GetComponent<LSO_PlayerMovement>();
-        _lastDir = _playerMovement.GetLastDir();
+        _lastDir = _playerMovement.GetFixedLastDir();
         _tempTransform = new Vector3(player.transform.position.x, player.transform.position.y, _player.transform.position.z);
         
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));

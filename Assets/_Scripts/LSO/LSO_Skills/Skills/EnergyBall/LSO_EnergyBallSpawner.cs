@@ -20,7 +20,7 @@ public class LSO_EnergyBallSpawner : MonoBehaviour,LSO_ISkill
         if (!_canUse) return;
         
         _playerMovement = player.GetComponent<LSO_PlayerMovement>();
-        _lookDirection = _playerMovement.GetLastDir();
+        _lookDirection = _playerMovement.GetFixedLastDir();
         _effectInstance = Instantiate(effect, player.transform.position, Quaternion.identity);
         _rigid = player.GetComponent<Rigidbody2D>();
         

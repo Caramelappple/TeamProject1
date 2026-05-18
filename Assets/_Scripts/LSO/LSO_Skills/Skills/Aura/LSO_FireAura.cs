@@ -50,7 +50,7 @@ public class LSO_FireAura : MonoBehaviour,LSO_ISkill
         yield return  new WaitForSeconds(0.1f);
   
         _playerMovement.SetMove(false);
-        _rigid.linearVelocity = -_playerMovement.GetLastDir().normalized * speed;
+        _rigid.linearVelocity = -_playerMovement.GetFixedLastDir().normalized * speed;
         
         yield return new WaitForSeconds(waitTime);
         _attack.OnAttack();
