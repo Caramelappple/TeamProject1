@@ -2906,6 +2906,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ef386de9741f04f41bcedcbac07e80e2, type: 2}
   - {fileID: 11400000, guid: 54279dca146444948abded22ebb84acd, type: 2}
   - {fileID: 11400000, guid: 3160ba2c430835c4f805a9ddfc8f65c8, type: 2}
+  - {fileID: 11400000, guid: 48c42e677e972194d8f3e4f8db586d34, type: 2}
+  - {fileID: 11400000, guid: b4c877a6200d9d64b85e0c70cb554678, type: 2}
+  - {fileID: 11400000, guid: 418b2e7c3f6cb834c970995e9334bd5f, type: 2}
+  - {fileID: 11400000, guid: 987be2a5cfa90b74e8a75beef2b75911, type: 2}
   hadSkillData: []
   skillSystem: {fileID: 251780862}
   skillCardUI1: {fileID: 396927423}
