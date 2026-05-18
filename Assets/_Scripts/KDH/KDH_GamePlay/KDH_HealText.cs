@@ -1,16 +1,27 @@
-using _Scripts.HealthSystem;
 using UnityEngine;
+using _Scripts.HealthSystem;
 
-public class KDH_HealText : Health
+public class KDH_HealText : MonoBehaviour
 {
-    [SerializeField] private GameObject damageTextPrefab;
+    [SerializeField] private GameObject healTextPrefab;
 
-    public override void Recover(RecoverData data)
+    private Health myHealth;
+
+    private void Awake()
     {
-        base.Recover(data);
+        myHealth = GetComponent<Health>();
 
-        int recoverValue = data.recoverValue;
-        GameObject textObj = Instantiate(damageTextPrefab, transform.position + Vector3.up, Quaternion.identity);
-        textObj.GetComponent<KDH_HealAnim>().Setup(recoverValue);
+        if (myHealth != null)
+        {
+            myHealth.OnRecover += SpawnText;
+        }
+    }
+
+    private void SpawnText(RecoverResultData resultData)
+    {
+        int heal = resultData.recoverValue;
+
+        GameObject textObj = Instantiate(healTextPrefab, transform.position + Vector3.up, Quaternion.identity);
+        textObj.GetComponent<KDH_HealAnim>().Setup(heal);
     }
 }
