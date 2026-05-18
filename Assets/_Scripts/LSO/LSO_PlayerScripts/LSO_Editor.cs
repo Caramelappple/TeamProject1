@@ -39,9 +39,10 @@ public class LSO_Editor : MonoBehaviour
     private IEnumerator SetHitCoroutine(Health health)
     {
         if (!health.gameObject.CompareTag("Player")) yield break;
+        CameraShake.instance.Shake(0.15f, 0.12f);
         vignette.intensity.value = 0.48f;
         vignette.active = true;
-        yield return new WaitForSeconds(0.16f);
+        yield return new WaitForSeconds(0.2f);
         while (vignette.intensity.value > 0f)
         {
             yield return null;

@@ -1,16 +1,16 @@
 using System.Collections;
 using UnityEngine;
-using DG.Tweening;
 public class LSO_PlayerAttack : MonoBehaviour
 {
     [SerializeField] protected GameObject sword;
     private LSO_PlayerMovement _movement;
-    
+    private SpriteRenderer _sprite;
+        
     private bool _attackable = true;
     private readonly float _attackCooldown = 0.12f;
-    private readonly float _attackTime = 0.22f;//건드려도 됨
-    private  readonly float _attackTime2 = 0.08f;//건드리면 절대 안됨
+    private readonly float _attackTime = 0.3f;//건드려도 됨
     private readonly int _damage = 10;//맘대로
+    private bool _isAttacking;
     
     private Vector3 _lastDir;
     private Animator _animator;
@@ -19,6 +19,7 @@ public class LSO_PlayerAttack : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         _movement = GetComponent<LSO_PlayerMovement>();
+        _sprite = GetComponent<SpriteRenderer>();
     }
 
     private void Start()
@@ -29,7 +30,7 @@ public class LSO_PlayerAttack : MonoBehaviour
     {
         if (!_attackable) return;
     
-        _lastDir = _movement.GetLastDir();
+        _lastDir = _movement.GetFixedLastDir();
         
         sword.transform.position = transform.position + _lastDir;
         StartCoroutine(Attack());
@@ -37,6 +38,7 @@ public class LSO_PlayerAttack : MonoBehaviour
 
     IEnumerator Attack()
     {
+        _isAttacking = true;
         _attackable = false;
         Collider2D[] colliders = Physics2D.OverlapBoxAll(sword.transform.position, sword.transform.localScale/2, 0);
         foreach (Collider2D collision in colliders)
@@ -48,23 +50,67 @@ public class LSO_PlayerAttack : MonoBehaviour
                 enemyHealth.GetDamage(data);
             }
         }
-        
-        _movement.SetMove(false);
-        transform.DOMove(transform.position-_lastDir * 0.2f, 0.15f);
+        //transform.DOMove(transform.position-_lastDir * 0.2f, 0.15f); //<- 넉백 코드
         sword.SetActive(true);
         _animator.SetTrigger("Attack");//애니메이션 재생
-        yield return new WaitForSeconds(_attackTime2);
-        _movement.SetMove(true);
-        yield return new WaitForSeconds(_attackTime);//공격 유지 시간 대기
         
-       
+        StartCoroutine(IsDirSame());
+        
+        float elapsed = 0f;
+        while (elapsed < _attackTime)
+        {
+            if (!_isAttacking)
+            {
+                CancelAnim(_movement.GetFixedLastDir());
+                break;
+            }
+               
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        
         sword.SetActive(false);
         yield return new WaitForSeconds(_attackCooldown);//쿨타임 대기
         _attackable = true;
+        _isAttacking = false;
     }
 
     public void SetAttack(bool attackable)
     {
         _attackable = attackable;
+    }
+
+    private IEnumerator IsDirSame()
+    {
+        while (true)
+        {
+            yield return null;
+            if (_lastDir != _movement.GetFixedLastDir())
+            {
+                _isAttacking = false;
+                yield break;
+            }
+        }
+    }
+
+    private void CancelAnim(Vector3 dir)
+    {
+        if (dir.normalized == Vector3.up)
+        {
+            _animator.Play("Up", 0, 0f);
+        }else if (dir.normalized == Vector3.down)
+        {
+            _animator.Play("Down", 0, 0f);
+        }
+        else if (dir.normalized == Vector3.left || dir.normalized == Vector3.right)
+        {
+            _animator.Play("Next", 0, 0f);
+            if (dir.x != 0)
+            {
+                _sprite.flipX = dir.x < 0;
+            }
+        }
+        else
+            Debug.Log(dir+"가 이상함 다시 코드 짜 플레이어 어택");
     }
 }

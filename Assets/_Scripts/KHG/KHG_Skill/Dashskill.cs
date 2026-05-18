@@ -29,9 +29,9 @@ public class Dashskill : MonoBehaviour, LSO_ISkill
         if (playerMovement == null) return;
 
         // 기존 F키 입력으로도 작동하게 두고 싶다면 유지 (LSO 시스템과 겹치지 않는지 확인 필요)
-        if (Keyboard.current.fKey.wasPressedThisFrame && canDash)
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && canDash)
         {
-            Vector2 dashDir = playerMovement.GetLastDir();
+            Vector2 dashDir = playerMovement.GetFixedLastDir();
             if (dashDir != Vector2.zero)
             {
                 StartCoroutine(DashRoutine(dashDir));

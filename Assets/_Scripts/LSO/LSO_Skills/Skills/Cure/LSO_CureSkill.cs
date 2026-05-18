@@ -19,27 +19,22 @@ public class LSO_CureSkill : MonoBehaviour,LSO_ISkill
     public void UseSkill(GameObject player)
     {
         if (!_canUse) return;
-        Vector3 offset = new Vector3(0f, 0.2f, 0f);
+        Vector3 offset = new Vector3(0f, 0.4f, 0f);
         
         _player = player;
         _playerMovement = player.GetComponent<LSO_PlayerMovement>();
         _effectInstance = Instantiate(effect, player.transform.position+offset, Quaternion.identity);
+        _effectInstance.transform.SetParent(player.transform);
         _animator = _effectInstance.GetComponent<Animator>();
             
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
-        
-        
-        
     }
 
     public IEnumerator CoolTime(float time)
     {
         _canUse = false;
-        _playerMovement.SetMove(false);
         
         yield return new WaitForSeconds(_waitTime);
-        
-        _playerMovement.SetMove(true);
 
         if (_player.TryGetComponent<Health>(out Health health))
         {

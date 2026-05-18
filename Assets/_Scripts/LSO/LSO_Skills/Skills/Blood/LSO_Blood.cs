@@ -28,7 +28,7 @@ public class LSO_Blood : MonoBehaviour,LSO_ISkill
         
         _player = player;
         _playerMovement = player.GetComponent<LSO_PlayerMovement>();
-        _lastDir = _playerMovement.GetLastDir();
+        _lastDir = _playerMovement.GetFixedLastDir();
         
     
         //이펙트 가로 세로 정해주기

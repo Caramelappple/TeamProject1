@@ -24,7 +24,7 @@ namespace _Scripts.LSO.LSO_Skills.Skills
             
             _player = player;
             _playerMovement = _player.GetComponent<LSO_PlayerMovement>();
-            _lastDir = _playerMovement.GetLastDir();
+            _lastDir = _playerMovement.GetFixedLastDir();
             _tempVector2 = new Vector2(_player.transform.position.x, _player.transform.position.y);
             
             player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));

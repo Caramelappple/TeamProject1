@@ -6,14 +6,15 @@ public class LSO_PlayerMovement : MonoBehaviour
 {
     private static readonly int MoveX = Animator.StringToHash("MoveX");
     private static readonly int MoveY = Animator.StringToHash("MoveY");
-    public Health Health {get; private set;}
+    public Health Health { get; private set; }
     public float speed = 3;
     protected Animator Animator;
     private SpriteRenderer _sprite;
-    
-    [SerializeField]private bool _canMove = true;
+
+    [SerializeField] private bool _canMove = true;
 
     private Vector2 _moveDir;
+    private Vector2 _fixedLastDir = Vector2.down;
     private Vector2 _lastDir = Vector2.down;
     private Rigidbody2D _rigid;
 
@@ -53,7 +54,7 @@ public class LSO_PlayerMovement : MonoBehaviour
         {
             LSO_SkillSlot.instance.AddSkill(_skillItem, 1);
         }
-        
+
         if (Keyboard.current.qKey.isPressed)
         {
             OnSkillEvent[0]?.Invoke(gameObject);
@@ -67,24 +68,24 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     private void OnMove(InputValue value)
     {
-        if (!_canMove)//움직일수 없을떼
+        if (!_canMove) //움직일수 없을떼
         {
             _moveDir = Vector2.zero;
             return;
         }
-        
+
         _moveDir = value.Get<Vector2>();
         if (_moveDir != Vector2.zero) //움직였을때
-            _lastDir = _moveDir;
-        
-        if (_moveDir.x != 0)//보는 방향 따라서 뒤집기
+            _fixedLastDir = _moveDir;
+
+        if (_moveDir.x != 0) //보는 방향 따라서 뒤집기
         {
             _sprite.flipX = _moveDir.x < 0;
         }
 
-        if (_lastDir.x != 0 && _lastDir.y != 0) //대각선으로 움직였을때 양옆으로 변환해주기
+        if (_fixedLastDir.x != 0 && _fixedLastDir.y != 0) //대각선으로 움직였을때 양옆으로 변환해주기
         {
-            _lastDir = new Vector2(Mathf.Sign(_lastDir.x), 0);
+            _fixedLastDir = new Vector2(Mathf.Sign(_fixedLastDir.x), 0);
 
             Animator.SetFloat(MoveY, 0);
             Animator.SetBool(MoveX, _moveDir.x != 0);
@@ -129,14 +130,19 @@ public class LSO_PlayerMovement : MonoBehaviour
                 if (Keyboard.current.aKey.isPressed) dir.x -= 1;
                 if (Keyboard.current.dKey.isPressed) dir.x += 1;
                 _moveDir = dir;
-                
-                if (_moveDir != Vector2.zero) //움직였을때
+
+                if (_moveDir != Vector2.zero)
+                {
+                    //움직였을때
+                    _fixedLastDir = _moveDir;
                     _lastDir = _moveDir;
+                }
+
                 Animator.SetFloat(MoveY, _moveDir.y);
                 Animator.SetBool(MoveX, _moveDir.x != 0);
-                if (_lastDir.x != 0 && _lastDir.y != 0) //대각선으로 움직였을때
+                if (_fixedLastDir.x != 0 && _fixedLastDir.y != 0) //대각선으로 움직였을때
                 {
-                    _lastDir = new Vector2(Mathf.Sign(_lastDir.x), 0);
+                    _fixedLastDir = new Vector2(Mathf.Sign(_fixedLastDir.x), 0);
 
                     Animator.SetFloat(MoveY, 0);
                     Animator.SetBool(MoveX, _moveDir.x != 0);
@@ -146,6 +152,7 @@ public class LSO_PlayerMovement : MonoBehaviour
                     Animator.SetFloat(MoveY, _moveDir.y);
                     Animator.SetBool(MoveX, _moveDir.x != 0);
                 }
+
                 if (_moveDir.x != 0)
                 {
                     _sprite.flipX = _moveDir.x < 0;
@@ -153,12 +160,17 @@ public class LSO_PlayerMovement : MonoBehaviour
             }
         }
     }
-    
+
+    public Vector3 GetFixedLastDir()
+    {
+        return _fixedLastDir;
+    }
+
     public Vector3 GetLastDir()
     {
         return _lastDir;
     }
-    
+
     public Vector3 GetMoveDir()
     {
         return _moveDir;

@@ -25,7 +25,7 @@ public class KHG_PoisonField : MonoBehaviour, LSO_ISkill
         if (movement == null)
             return;
 
-        Vector2 dir = movement.GetLastDir();
+        Vector2 dir = movement.GetFixedLastDir();
 
         if (dir == Vector2.zero)
             return;
