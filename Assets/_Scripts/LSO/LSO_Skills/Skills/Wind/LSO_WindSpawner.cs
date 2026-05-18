@@ -26,7 +26,7 @@ public class LSO_WindSpawner : MonoBehaviour,LSO_ISkill
         _rigid = _effectInstance.GetComponent<Rigidbody2D>();
         _playerMovement = player.GetComponent<LSO_PlayerMovement>();
 
-        _rigid.linearVelocity = _playerMovement.GetLastDir();
+        _rigid.linearVelocity = _playerMovement.GetFixedLastDir();
         
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
     }

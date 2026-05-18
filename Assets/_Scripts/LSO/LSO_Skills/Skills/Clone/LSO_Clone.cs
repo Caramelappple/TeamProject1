@@ -102,7 +102,7 @@ public class LSO_Clone : MonoBehaviour
         _player = movement.gameObject;
         _playerHealth = _player.GetComponent<Health>();
         _movement = movement;
-        _lastDir = movement.GetLastDir();
+        _lastDir = movement.GetFixedLastDir();
         StartCoroutine(InitAnim());
     }
 

@@ -13,7 +13,6 @@ public class KHG_PoisonDamage : MonoBehaviour,LSO_ISkill
     {
         if (!other.CompareTag("Player")) return;
 
-        // 처음 들어온 대상이면 타이머 초기화
         if (!timer.ContainsKey(other.gameObject))
         {
             timer[other.gameObject] = 0f;

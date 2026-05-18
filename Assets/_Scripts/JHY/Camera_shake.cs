@@ -26,6 +26,7 @@ public class CameraShake : MonoBehaviour
 
     IEnumerator ShakeRoutine(float duration, float magnitude)
     {
+        originalLocalPos = transform.localPosition; 
         float elapsed = 0f;
 
         while (elapsed < duration)
