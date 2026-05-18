@@ -1,4 +1,3 @@
-using KSY.HealthSystem;
 using UnityEngine;
 
 public class JHY_BossProjectile : MonoBehaviour
@@ -13,7 +12,7 @@ public class JHY_BossProjectile : MonoBehaviour
 
     void Update()
     {
-        transform.position += transform.right * speed * Time.deltaTime;
+        transform.position += transform.right * (speed * Time.deltaTime);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

@@ -61,7 +61,7 @@ namespace _Scripts.NKY._EnemyScript
                 
                 yield return new WaitUntil(ShouldInterruptIdle);
 
-                Debug.Log(_isStunned);
+
                 if (_isDead || _isStunned) yield break;
 
                 _nextSkill = PickNextSkill();
@@ -172,10 +172,10 @@ namespace _Scripts.NKY._EnemyScript
                 return;
             }
             _isDead = true;
-
+            
             StopAllCoroutines();
             StopPattern();
-
+            StartCoroutine(phase3Effect.EndPhaseEffect());
             if (Anim) Anim.Play("Dead");
 
             var col = GetComponent<Collider2D>();

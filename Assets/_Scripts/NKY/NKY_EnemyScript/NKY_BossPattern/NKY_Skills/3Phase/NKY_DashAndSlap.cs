@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using _Scripts.NKY._EnemyScript.BossPattern;
 using DG.Tweening;

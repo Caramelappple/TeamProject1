@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LSO_Ice : MonoBehaviour,LSO_ISkill
@@ -11,7 +10,6 @@ public class LSO_Ice : MonoBehaviour,LSO_ISkill
     
     private float _coolTime = 5f;
     private float _waitTime = 0.08f;//아이스 스파이크 사이의 시간 간격
-    private int _damage = 10;
     private int _count = 12;//소환할 개수
     private float _range = 1.8f;//플레이어를 중심으로 띄어진 거리
     private Vector3 _tempTransform;

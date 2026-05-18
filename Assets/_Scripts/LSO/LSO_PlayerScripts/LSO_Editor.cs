@@ -1,8 +1,6 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
-using UnityEngine.Serialization;
 
 public class LSO_Editor : MonoBehaviour
 {
@@ -31,10 +29,9 @@ public class LSO_Editor : MonoBehaviour
     public void Register(Health health)
     {
         health.OnDamage += (data) => SetHit(health);
-        health.OnDamage += (data) => Debug.Log($"<color=red>{this.gameObject}가 {data.giver}로부터 {data.damage}만큼 대미지를 받았습니다!</color>");
     }
 
-    public void SetHit(Health health)
+    private void SetHit(Health health)
     {
         StartCoroutine(SetHitCoroutine(health));
     }
@@ -42,17 +39,13 @@ public class LSO_Editor : MonoBehaviour
     private IEnumerator SetHitCoroutine(Health health)
     {
         if (!health.gameObject.CompareTag("Player")) yield break;
-        while (vignette.intensity.value < 0.5f)
-        {
-            yield return null;
-            vignette.intensity.value += 0.01f;
-        }
+        vignette.intensity.value = 0.48f;
         vignette.active = true;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.16f);
         while (vignette.intensity.value > 0f)
         {
             yield return null;
-            vignette.intensity.value -= 0.01f;
+            vignette.intensity.value -= 0.007f;
         }
         vignette.active = false;
     }

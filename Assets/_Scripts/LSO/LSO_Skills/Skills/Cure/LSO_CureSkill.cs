@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using _Scripts.HealthSystem;
 using UnityEngine;
@@ -16,10 +15,10 @@ public class LSO_CureSkill : MonoBehaviour,LSO_ISkill
     private int _healValue = 40;
     
     private bool _canUse = true;
-    private bool _onCure = false;
     
     public void UseSkill(GameObject player)
     {
+        if (!_canUse) return;
         Vector3 offset = new Vector3(0f, 0.2f, 0f);
         
         _player = player;
