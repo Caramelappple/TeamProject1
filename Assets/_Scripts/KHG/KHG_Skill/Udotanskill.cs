@@ -6,31 +6,11 @@ public class KHG_Udotanskill : MonoBehaviour,LSO_ISkill
     public GameObject bulletPrefab; 
     public float skillCooldown = 3f; 
     private bool isSkillReady = true; 
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E) && isSkillReady)
-        {
-            StartCoroutine(CircleBulletSkill());
-        }
-        
-    }
-
-    IEnumerator CircleBulletSkill()
-    {
-        isSkillReady = false; 
-
-       
-        Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-        
-
-        yield return new WaitForSeconds(skillCooldown);
-
-        isSkillReady = true; 
-    }
-
     public void UseSkill(GameObject player)
     {
+        if (!isSkillReady) return;
+        
+        player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(skillCooldown));
         
     }
 
@@ -38,9 +18,7 @@ public class KHG_Udotanskill : MonoBehaviour,LSO_ISkill
     {
             isSkillReady = false;
             Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-
-            yield return new WaitForSeconds(skillCooldown);
-
+            yield return new WaitForSeconds(time);
             isSkillReady = true;
     }
 }
