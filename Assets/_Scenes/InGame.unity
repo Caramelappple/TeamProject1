@@ -873,6 +873,7 @@ GameObject:
   - component: {fileID: 76131544}
   - component: {fileID: 76131543}
   - component: {fileID: 76131542}
+  - component: {fileID: 76131547}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -892,14 +893,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e8df4056084c78afb56d61aa4bd488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  damageTextPrefab: {fileID: 8118361260314724747, guid: 17af1d46e642e2e48a03cf1470278831,
-    type: 3}
   _data: {fileID: 11400000, guid: a9852c15953447b47b3b03660ecc917d, type: 2}
   <MaxValue>k__BackingField: 0
   <MinValue>k__BackingField: 0
   _value: 0
-  healTextPrefab: {fileID: 8118361260314724747, guid: db888331b8d53f240bd85d7346d7ace6,
-    type: 3}
 --- !u!50 &76131543
 Rigidbody2D:
   serializedVersion: 5
@@ -1048,6 +1045,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &76131547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76131541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 825ff256fa7fd134096070b68a27a2f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KDH_DamageText
+  damageTextPrefab: {fileID: 8118361260314724747, guid: 17af1d46e642e2e48a03cf1470278831,
+    type: 3}
 --- !u!1 &88279843
 GameObject:
   m_ObjectHideFlags: 0
@@ -6620,6 +6631,7 @@ GameObject:
   - component: {fileID: 996600789}
   - component: {fileID: 996600788}
   - component: {fileID: 996600787}
+  - component: {fileID: 996600797}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6639,14 +6651,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e8df4056084c78afb56d61aa4bd488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  damageTextPrefab: {fileID: 8118361260314724747, guid: 17af1d46e642e2e48a03cf1470278831,
-    type: 3}
   _data: {fileID: 11400000, guid: ce8449da67f267e4fb28d6f33a5df1f0, type: 2}
   <MaxValue>k__BackingField: 100
   <MinValue>k__BackingField: 0
   _value: 100
-  healTextPrefab: {fileID: 8118361260314724747, guid: db888331b8d53f240bd85d7346d7ace6,
-    type: 3}
 --- !u!114 &996600788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6694,7 +6702,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40297269b71441a4781af22ccea8771e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_PlayerAttack
-  swordAxis: {fileID: 250808984}
   sword: {fileID: 1787843098}
 --- !u!114 &996600791
 MonoBehaviour:
@@ -6890,6 +6897,20 @@ Transform:
   - {fileID: 250808985}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &996600797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996600786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c0cb38bf8d34b64f8f0286f5764fca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KDH_HealText
+  healTextPrefab: {fileID: 8118361260314724747, guid: db888331b8d53f240bd85d7346d7ace6,
+    type: 3}
 --- !u!1 &1009997721
 GameObject:
   m_ObjectHideFlags: 0
