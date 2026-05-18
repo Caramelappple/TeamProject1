@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6630356420841714342}
   - component: {fileID: -6166290513177967772}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: PoisonSkill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

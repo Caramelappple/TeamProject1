@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06120155515bb614abefb3c920fe08ff, type: 3}
-  m_Name: SkillDataSo
+  m_Name: PoisonSkillSO
   m_EditorClassIdentifier: Assembly-CSharp::LSO.SkillSystem.LSO_SkillResourceSO
   skillName: "\uD3EC\uC774\uC98C"
   skillDescription: "\uB3C5 \uB370\uBBF8\uC9C0"

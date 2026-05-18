@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class KHG_PoisonDamage : MonoBehaviour
 {
-    [SerializeField] private int damage = 1;
-    [SerializeField] private float interval = 0.1f;
+    [SerializeField] private int damage = 10;
+    [SerializeField] private float interval = 0.01f;
 
     private Health _playerHealth;
     
@@ -27,11 +27,11 @@ public class KHG_PoisonDamage : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //임시
-        if (collision.CompareTag("Enemy") && collision.TryGetComponent<Health>(out Health health2))
-        {
-            DamageData data = new DamageData(_playerHealth, damage);
-            health2.GetDamage(data);
-        }
+        //if (collision.CompareTag("Enemy") && collision.TryGetComponent<Health>(out Health health2))
+        //{
+         //   DamageData data = new DamageData(_playerHealth, damage);
+         //   health2.GetDamage(data);
+        //}
     }
     
     private void OnTriggerStay2D(Collider2D collision)
