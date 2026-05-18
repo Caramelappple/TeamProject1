@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Item
   - Enemy
+  - RandomBox
+  - Monster
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -16,7 +19,7 @@ TagManager:
   - Player
   - 
   - 
-  - 
+  - post
   - 
   - 
   - 
@@ -38,7 +41,7 @@ TagManager:
   - 
   - Boss
   - BossAttack
-  - 
+  - Monster
   m_SortingLayers:
   - name: Default
     uniqueID: 0

@@ -20,6 +20,8 @@ namespace _Scripts.NKY._EnemyScript
 
         protected bool _isDead = false;
         
+        protected bool _isStunned = false;
+        
         protected Coroutine _masterHandle = null;
 
         protected bool IsSkillReady()
@@ -29,8 +31,8 @@ namespace _Scripts.NKY._EnemyScript
 
         protected bool ShouldInterruptIdle()
         {
-            float dist = Vector2.Distance(transform.position, _target.transform.position);
-            if (dist < 1.5f) return true;
+            //float dist = Vector2.Distance(transform.position, _target.transform.position);
+            //if (dist < 1.5f) return true;
 
             return IsSkillReady();
         }
@@ -61,7 +63,7 @@ namespace _Scripts.NKY._EnemyScript
                 _masterHandle = null;
             }
             _attackEventQueue.Clear();
-            _anim.Play("Idle");
+            Anim.Play("Idle");
         }
     }
 }

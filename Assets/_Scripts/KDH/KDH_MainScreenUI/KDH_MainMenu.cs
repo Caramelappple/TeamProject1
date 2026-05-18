@@ -2,14 +2,11 @@ using UnityEngine;
 
 public class KDH_MainMenu : MonoBehaviour
 {
+    [SerializeField] private KDH_SceneTransition FadeUi;
     public void OnClickNewGame ()
     {
-        Debug.Log("새 게임"); //클릭하면 새 게임 생성(아직 구현X)
-    }
-
-    public void OnClickLoad ()
-    {
-        Debug.Log("불러오기"); //클리하면 이전 게임으로 플레이(구현 X)
+        Debug.Log("게임 플레이"); //클릭하면 새 게임 생성(아직 구현X)
+        FadeUi.GoToNextScene("InGame");
     }
 
     public void OnClickOption ()

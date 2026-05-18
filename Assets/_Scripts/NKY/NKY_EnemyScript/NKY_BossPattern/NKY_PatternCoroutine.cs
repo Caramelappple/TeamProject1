@@ -11,7 +11,7 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
 
         //private static readonly int Vanish = Animator.StringToHash("Vanish");
         protected NKY_HitBoxController _HitBoxController;
-        protected Animator _anim;
+        public Animator Anim { get; protected set; }
         protected NKY_ShadowController _shadow;
 
         
@@ -69,6 +69,22 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
             from.position = end;
         }
 
+        protected IEnumerator ConstantMoveTo(Transform form, Vector3 to, float speed)
+        {
+            float currentTime = 0;
+            Vector3 start = form.position;
+            while (Vector3.Distance(form.position, to) > 0.1f)
+            {
+                form.position = Vector3.MoveTowards(start, to, currentTime);
+            
+                // 다음 프레임까지 대기
+                currentTime += speed * Time.deltaTime;
+                yield return null; 
+            }
+            
+            form.position = to;
+        }
+
         protected IEnumerator Move(Transform target, Vector2 direction, float distance, float duration)
         {
             Vector2 end = (Vector2)target.position + (direction.normalized * distance);
@@ -77,10 +93,10 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
 
         protected IEnumerator Teleport(Transform from, Vector2 to)
         {
-            _anim.SetTrigger(Vanish);
+            Anim.SetTrigger(Vanish);
             yield return StartCoroutine(WaitAnim("Vanish", 1f));
             from.position = to;
-            _anim.SetTrigger(Appear);
+            Anim.SetTrigger(Appear);
             yield return StartCoroutine(WaitAnim("Appear", 0.6f));
         }
 
@@ -98,8 +114,8 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
 
         protected IEnumerator WaitAnim(string stateName, float normalizedTime)
         {
-            yield return new WaitUntil(() => _anim.GetCurrentAnimatorStateInfo(0).IsName(stateName));
-            yield return new WaitUntil(() => _anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= normalizedTime);
+            yield return new WaitUntil(() => Anim.GetCurrentAnimatorStateInfo(0).IsName(stateName));
+            yield return new WaitUntil(() => Anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= normalizedTime);
         }
         protected IEnumerator WaitAnim(Animator anim, string stateName, float normalizedTime)
         {

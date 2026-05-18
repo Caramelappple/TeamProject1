@@ -1,8 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-
-namespace _Scripts.LSO.LSO_Skills.Skills
-{
     public class LSO_LightningSpawner : MonoBehaviour,LSO_ISkill
     {
         private GameObject _player;
@@ -14,7 +11,7 @@ namespace _Scripts.LSO.LSO_Skills.Skills
         
         private float _coolTime = 5f;
         private float _minWaitTime = 0.1f;
-        private float _maxWaitTime = 0.8f;
+        private float _maxWaitTime = 0.4f;
         private int _minCount = 4;
         private int _maxCount = 10;//내리칠 횟수
         private float _range  = 1.2f;//오차 범위
@@ -41,9 +38,10 @@ namespace _Scripts.LSO.LSO_Skills.Skills
                 Debug.LogWarning("No target found");
                 yield break;
             }
-
             for (int i = 0; i < Random.Range(_minCount, _maxCount); i++)
             {
+                if (!_target) break;
+                
                 _effectInstance = Instantiate(effect, _target.transform.position+new Vector3(Random.Range(-_range,_range),Random.Range(-_range,_range)), Quaternion.identity );
                 _effectInstance.transform.parent = transform;
                 
@@ -81,5 +79,4 @@ namespace _Scripts.LSO.LSO_Skills.Skills
 
             return result;
         }
-    }
 }

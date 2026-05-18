@@ -6,8 +6,14 @@ using UnityEngine;
 public class Health : DamageableResources, IRecoverable
 {
     public event Action<RecoverResultData> OnRecover;
+    
+    // Health.cs
+    private void Start()
+    {
+        LSO_Editor.Instance?.Register(this);
+    }
 
-    public void Recover(RecoverData data)
+    public virtual void Recover(RecoverData data)
     {
         if(IsDestroyed) return;
 
@@ -19,7 +25,7 @@ public class Health : DamageableResources, IRecoverable
         int calcValue = Value;
         bool hasRecover = lastValue < calcValue;
 
-        if(hasRecover)
+        if (hasRecover)
         {
             Debug.Log($"{recoverValue}??? ???? ???????. ??????? : {calcValue}");
             RecoverResultData resultData = RecoverResultData.Create(giver, recoverValue, Value);

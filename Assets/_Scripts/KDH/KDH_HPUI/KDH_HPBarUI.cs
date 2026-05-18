@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class KDH_HealthBarUI : MonoBehaviour
 {
     public Image hpBarImage;
-    public KDH_Health healthResource; //플레이어를 연결
+    public Health healthResource; //플레이어를 연결
 
     [Header("체력 닳는 효과들")]
     public float lerpSpeed = 2.0f; //닳는 속도

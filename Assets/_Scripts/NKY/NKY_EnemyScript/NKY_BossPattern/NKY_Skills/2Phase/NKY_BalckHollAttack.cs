@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using _Scripts.NKY._EnemyScript;
 using _Scripts.NKY._EnemyScript.BossPattern;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class NKY_BalckHollAttack : NKY_BossSkill
 {
@@ -31,7 +33,7 @@ public class NKY_BalckHollAttack : NKY_BossSkill
     protected override void OnAwake()
     {
         base.OnAwake();
-        _damage = (int)(DamageScale * _bossBrain.GetComponent<NKY_Enemy>().damage);
+        _damage = (int)(DamageScale * _bossBrain.damage);
         hole.SetActive(false);
         CreateQueue();
     }

@@ -1,6 +1,5 @@
 //이거 사용
 using System;
-using _Scripts.HealthSystem;
 using UnityEngine;
 
 public class DamageableResources : MonoBehaviour
@@ -37,7 +36,7 @@ public class DamageableResources : MonoBehaviour
     protected virtual void Awake()
     {
         Initialize();
-        OnDamage += (data) => Debug.Log($"<color=red>{this.gameObject}가 {data.giver}로부터 {data.damage}만큼 대미지를 받았습니다!</color>");
+       OnDamage += (data) => Debug.Log($"<color=red>{this.gameObject}가 {data.giver}로부터 {data.damage}만큼 대미지를 받았습니다!</color>");
     }
     
     public void Initialize()

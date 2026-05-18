@@ -20,7 +20,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 
         private void Start()
         {
-            _damage = (int)(DamageScale * _bossBrain.GetComponent<NKY_Enemy>().damage);
+            _damage = (int)(DamageScale * _bossBrain.damage);
             dustEffect.SetActive(false);
         }
 
@@ -29,14 +29,14 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
             Vector3 targetPos;
             for (int i = 0; i < 3; i++)
             {
-                _anim.SetTrigger(Vanish);
+                Anim.SetTrigger(Vanish);
                 yield return StartCoroutine(WaitAnim("Vanish", 1f));
                 
                 targetPos = target.position;
                 boss.position = targetPos + new Vector3(0, 3, 0);
                 yield return ShadowMoveLock(targetPos);
 
-                _anim.SetTrigger(Appear);
+                Anim.SetTrigger(Appear);
                 yield return StartCoroutine(WaitAnim("Appear", 0.6f));
                 
                 yield return PlaySequence(
@@ -66,6 +66,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
         private IEnumerator PlayDustEffect(GameObject effect, Vector2 pos)
         {
             Animator effectAnim =  effect.GetComponent<Animator>();
+            effect.transform.position = pos;
             effect.SetActive(true);
             effectAnim.Play("PlayDustEffect");
             yield return WaitAnim(effectAnim, "PlayDustEffect", 0.9f);

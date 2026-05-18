@@ -27,7 +27,7 @@ public class NKY_ChargeSlash : NKY_BossSkill
         {
             particle.Stop();
         }
-        _damage = (int)DamageScale * _bossBrain.GetComponent<NKY_Enemy>().damage;
+        _damage = (int)DamageScale * _bossBrain.damage;
     }
 
     public override IEnumerator Execute(Transform boss, Transform target)
@@ -47,9 +47,9 @@ public class NKY_ChargeSlash : NKY_BossSkill
             );
             Init(swordPoint);
         }
-        _anim.SetBool(Stun, true);
+        Anim.SetBool(Stun, true);
         yield return WaitUntilOrTime(()=>false, 4f);
-        _anim.SetBool(Stun, false);
+        Anim.SetBool(Stun, false);
         yield return StartCoroutine(WaitAnim("StandUp", 1f));
     }
 

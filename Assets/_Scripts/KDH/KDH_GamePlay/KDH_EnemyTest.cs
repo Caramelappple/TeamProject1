@@ -7,7 +7,6 @@ public class KDH_EnemyTest : MonoBehaviour
     private int _damageAmount = 10;
     private KDH_Health _myHealth;
 
-
     private void Awake()
     {
         _myHealth = GetComponent<KDH_Health>();

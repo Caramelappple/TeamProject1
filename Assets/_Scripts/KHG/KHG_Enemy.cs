@@ -10,8 +10,8 @@ namespace KHG.Enemy
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            KHG_Health health;
-            if (collision.gameObject.TryGetComponent<KHG_Health>(out health))
+            Health health;
+            if (collision.gameObject.TryGetComponent<Health>(out health))
             {
 
                 
@@ -20,7 +20,7 @@ namespace KHG.Enemy
                 
             }
         }
-        public void Test1(KHG_DamageData args)
+        public void Test1(DamageData args)
         {
             
 

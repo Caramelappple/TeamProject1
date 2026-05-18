@@ -11,15 +11,21 @@ namespace _Scripts.NKY._EnemyScript
         [SerializeField] private  NKY_BossSkill[] _skills;
         public LSO_PlayerMovement playerReference;
 
+        [Header("보스 페이즈 효과")] 
+        [SerializeField] private NKY_PhaseEffect phase2Effect;
+        [SerializeField] private NKY_PhaseEffect phase3Effect;
+
         [Header("보스 스텟 세팅")]
         [field: SerializeField] public int damage { get; private set; }
 
         private Health _myHealth;
 
+        private IEnumerator _nextSkill;
+
         protected override void OnAwake()
         {
             _HitBoxController = GetComponent<NKY_HitBoxController>();
-            _anim = GetComponent<Animator>();
+            Anim = GetComponent<Animator>();
             _shadow = GetComponent<NKY_ShadowController>();
             _myHealth = gameObject.GetComponent<Health>();
             _target = playerReference.gameObject;
@@ -55,10 +61,11 @@ namespace _Scripts.NKY._EnemyScript
                 
                 yield return new WaitUntil(ShouldInterruptIdle);
 
-                if (_isDead) yield break;
+                Debug.Log(_isStunned);
+                if (_isDead || _isStunned) yield break;
 
-                IEnumerator nextSkill = PickNextSkill();
-                yield return ExecutePattern(nextSkill);
+                _nextSkill = PickNextSkill();
+                yield return ExecutePattern(_nextSkill);
 
                 _lastSkillTime = Time.time;
             }
@@ -99,19 +106,20 @@ namespace _Scripts.NKY._EnemyScript
         private IEnumerator PlayPhase2()
         {
             if(bossPhase == 2) yield break;
-            
-            Debug.Log("페이즈 2");
+            _isStunned = true;
             bossPhase = 2;
             _skillCooldown *=  0.6f;
             damage = (int)(damage * 2f);
             
-            yield return Phase2Effect();
             yield return ExecutePattern(CentorMove());
+            yield return Phase2Effect();
+            _isStunned = false;
+            StartCoroutine(BossMainRoutine());
         }
 
         private IEnumerator Phase2Effect()
         {
-            yield break;
+            yield return phase2Effect.PlayPhaseEffect();
         }
 
         private IEnumerator PlayPhase3()
@@ -120,7 +128,6 @@ namespace _Scripts.NKY._EnemyScript
             
             _myHealth.Value = _myHealth.MaxValue;
             
-            Debug.Log("페이즈 3");
             bossPhase = 3;
             _skillCooldown *=  0.5f;
             damage = (int)(damage * 1.5f);
@@ -131,7 +138,8 @@ namespace _Scripts.NKY._EnemyScript
 
         private IEnumerator Phase3Effect()
         {
-            yield break;
+            yield return phase2Effect.EndPhaseEffect();
+            yield return phase3Effect.PlayPhaseEffect();
         }
 
         //????? ?????? ????
@@ -168,7 +176,7 @@ namespace _Scripts.NKY._EnemyScript
             StopAllCoroutines();
             StopPattern();
 
-            if (_anim) _anim.Play("Dead");
+            if (Anim) Anim.Play("Dead");
 
             var col = GetComponent<Collider2D>();
             if (col) col.enabled = false;

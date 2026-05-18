@@ -159,7 +159,7 @@ TextureImporter:
         height: 33
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 4, y: 4, z: 21, w: 4}
       customData: 
       outline: []
       physicsShape: []
@@ -238,28 +238,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1-bit_UI_byBatuhanK_4
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 107
-        width: 118
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 296739ec9a21e7700800000000000000
-      internalID: 539889525855581842
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: 1-bit_UI_byBatuhanK_5
       rect:
         serializedVersion: 2
@@ -285,13 +263,13 @@ TextureImporter:
       name: 1-bit_UI_byBatuhanK_6
       rect:
         serializedVersion: 2
-        x: 249
-        y: 45
-        width: 215
-        height: 107
+        x: 376
+        y: 384
+        width: 441
+        height: 33
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 9, y: 9, z: 9, w: 9}
       customData: 
       outline: []
       physicsShape: []
@@ -347,6 +325,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: 1-bit_UI_byBatuhanK 4_0
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 334
+        width: 441
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 9, y: 9, z: 9, w: 9}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89519638a2addd4ab9fd481088aff82
+      internalID: -1130746868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -361,6 +361,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      1-bit_UI_byBatuhanK 4_0: -1130746868
       1-bit_UI_byBatuhanK_0: -7566001254248236219
       1-bit_UI_byBatuhanK_1: 6900779525515493339
       1-bit_UI_byBatuhanK_2: 3966392815263420760

@@ -18,7 +18,7 @@ public class KDH_Skill : MonoBehaviour
 
     public GameObject skills;               // 실제로 사용될 스킬들
 
-    private LSO_Ice iceSkill = new LSO_Ice();
+    //private LSO_Ice iceSkill = new LSO_Ice();
 
     private float currentCooldownTime;  // 현재 재사용 대기 시간
     private bool isCooldown;             // 현재 쿨타임이 적용중인지 체크
@@ -42,20 +42,34 @@ public class KDH_Skill : MonoBehaviour
         }
 
         GameObject player = GameObject.FindWithTag("Player");
+        if (player == null) { Debug.LogError("Player 태그를 찾을 수 없습니다!"); return; }
+
+        // 1. 프리팹 자체가 할당되어 있는지 확인
+        if (skills == null)
+        {
+            Debug.LogError($"{skillName}의 skillPrefab이 비어있습니다!");
+            return;
+        }
 
         GameObject skillObj = Instantiate(skills, player.transform.position, player.transform.rotation);
 
+        // 2. 스크립트(인터페이스)가 들어있는지 확인
         LSO_ISkill skillLogic = skillObj.GetComponent<LSO_ISkill>();
 
-        // 설정된 위치에 스킬 소환
-        if (skills != null)
+        if (skillLogic != null)
         {
             skillLogic.UseSkill(player);
-            Debug.Log($"{skillName} 소환");
-        }
+            Debug.Log($"{skillName} 실행 완료");
 
-        textSkillData.text = $"Use Skill : {skillName}";
-        StartCoroutine(nameof(OnCooldownTime), maxCooldownTime);
+            textSkillData.text = $"Use Skill : {skillName}";
+            StartCoroutine(nameof(OnCooldownTime), maxCooldownTime);
+        }
+        else
+        {
+            // 이 메시지가 뜬다면 프리팹에 스크립트를 안 붙인 것입니다.
+            Debug.LogError($"{skills.name} 프리팹에 LSO_ISkill 컴포넌트가 없습니다!");
+            Destroy(skillObj); // 실행 불가능한 오브젝트는 지워줍니다.
+        }
     }
     public void SetTextReference(TextMeshProUGUI sceneText)
     {

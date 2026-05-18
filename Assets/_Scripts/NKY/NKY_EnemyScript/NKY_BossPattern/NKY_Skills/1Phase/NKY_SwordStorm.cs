@@ -23,7 +23,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 
         protected void Start()
         {
-            _damage = (int)DamageScale * _bossBrain.GetComponent<NKY_Enemy>().damage;
+            _damage = (int)(DamageScale * _bossBrain.damage);
             GameObject sword;
             for (int i = 0; i < swordCount; i++)
             {
