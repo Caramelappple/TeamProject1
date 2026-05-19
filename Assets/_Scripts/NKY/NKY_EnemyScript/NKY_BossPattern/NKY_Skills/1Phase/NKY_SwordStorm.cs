@@ -33,9 +33,10 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
             }
         }
 
+        private List<GameObject> swords = new List<GameObject>();
         public override IEnumerator Execute(Transform boss, Transform target)
         {
-            GameObject sword = null;
+            GameObject sword;
             Vector3 moveDir;
             int spawnRange;
                 
@@ -48,6 +49,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
                 sword.transform.position = spawnPoints[spawnRange].position;
                 moveDir = (target.transform.position - sword.transform.position).normalized;
                 sword.transform.up = moveDir;
+                swords.Add(sword);
                 sword.SetActive(true);
 
                 BoxCollider2D col = sword.GetComponentInChildren<BoxCollider2D>();
@@ -63,6 +65,16 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
                 yield return new WaitForSeconds(spawnInterval);
             }
             yield break;
+        }
+
+        public override void EndSkill()
+        {
+            foreach (GameObject sword in swords)
+            {
+                sword.SetActive(false);
+                swordQueue.Enqueue(sword);
+            }
+            swords = null;
         }
 
 

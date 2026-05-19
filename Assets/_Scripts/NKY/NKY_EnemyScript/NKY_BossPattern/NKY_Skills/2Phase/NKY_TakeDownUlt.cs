@@ -63,6 +63,12 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
             yield break;
         }
 
+        public override void EndSkill()
+        {
+            StartCoroutine(ShadowLock(false));
+            Init();
+        }
+
         private IEnumerator PlayDustEffect(GameObject effect, Vector2 pos)
         {
             Animator effectAnim =  effect.GetComponent<Animator>();
