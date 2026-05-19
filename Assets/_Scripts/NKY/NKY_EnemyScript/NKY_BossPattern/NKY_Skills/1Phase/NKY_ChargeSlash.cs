@@ -53,14 +53,25 @@ public class NKY_ChargeSlash : NKY_BossSkill
         yield return StartCoroutine(WaitAnim("StandUp", 1f));
     }
 
+    public override void EndSkill()
+    {
+        foreach (GameObject swordPoint in swordPoints)
+        {
+            Init(swordPoint);
+        }
+        foreach (ParticleSystem particle in swordParticle)
+        {
+            particle.Stop();
+            particle.gameObject.SetActive(false);
+        }
+    }
+
     private IEnumerator SpownSword(GameObject obj, GameObject point)
     {
         obj.SetActive(true);
         obj.transform.parent = point.transform;
         obj.transform.position = point.transform.position;
         obj.transform.rotation = point.transform.rotation;
-
-        
         yield break;
     }
 

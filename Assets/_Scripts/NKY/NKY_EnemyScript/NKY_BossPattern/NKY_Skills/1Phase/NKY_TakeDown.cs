@@ -56,5 +56,10 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
             }
             yield break;
         }
+
+        public override void EndSkill()
+        {
+            StartCoroutine(ShadowLock(false));
+        }
     }
 }

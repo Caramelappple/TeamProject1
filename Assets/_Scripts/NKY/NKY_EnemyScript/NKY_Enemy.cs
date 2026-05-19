@@ -1,4 +1,5 @@
 using System.Collections;
+using _Scripts.HealthSystem;
 using _Scripts.NKY._EnemyScript.BossPattern;
 using UnityEngine;
 
@@ -60,13 +61,13 @@ namespace _Scripts.NKY._EnemyScript
                 if (_isDead) yield break;
                 
                 yield return new WaitUntil(ShouldInterruptIdle);
-
-
+                
                 if (_isDead || _isStunned) yield break;
-
+                
                 _nextSkill = PickNextSkill();
+                Debug.Log(_nextSkill);
                 yield return ExecutePattern(_nextSkill);
-
+                
                 _lastSkillTime = Time.time;
             }
         }
@@ -90,6 +91,7 @@ namespace _Scripts.NKY._EnemyScript
                     break;
             }
 
+            _bossSkill = selectedSkill;
             return selectedSkill.Execute(transform, _target.transform);
         }
         
@@ -103,16 +105,26 @@ namespace _Scripts.NKY._EnemyScript
             }
         }
 
-        private IEnumerator PlayPhase2()
+        private void PlayPhase2()
         {
-            if(bossPhase == 2) yield break;
+            if(bossPhase == 2) return;
             _isStunned = true;
             bossPhase = 2;
             _skillCooldown *=  0.6f;
             damage = (int)(damage * 2f);
             
-            yield return ExecutePattern(CentorMove());
-            yield return Phase2Effect();
+            StopAllCoroutines();
+            StartCoroutine(Phase2ProcessRoutine());
+        }
+
+        private IEnumerator Phase2ProcessRoutine()
+        {
+            if(_bossSkill != null)
+                _bossSkill.EndSkill();
+            _masterHandle = null;
+            StartCoroutine(ShadowLock(false));
+            yield return StartCoroutine(Phase2Effect());
+            yield return StartCoroutine(CentorMove());
             _isStunned = false;
             StartCoroutine(BossMainRoutine());
         }
@@ -122,18 +134,37 @@ namespace _Scripts.NKY._EnemyScript
             yield return phase2Effect.PlayPhaseEffect();
         }
 
-        private IEnumerator PlayPhase3()
+        private void PlayPhase3()
         {
-            if(bossPhase == 3) yield break;
+            if(bossPhase == 3) return;
             
-            _myHealth.Value = _myHealth.MaxValue;
+            _isStunned = true;
+            if (_isDead)
+            {
+                _isDead = false;
+                _myHealth.Value += 1;
+                RecoverData data = RecoverData.Create(_myHealth, 10);
+                _myHealth.Recover(data);
+            }
             
             bossPhase = 3;
             _skillCooldown *=  0.5f;
             damage = (int)(damage * 1.5f);
             
-            yield return Phase3Effect();
-            yield return ExecutePattern(CentorMove());
+            StopAllCoroutines();
+            StartCoroutine(Phase3ProcessRoutine());
+        }
+
+        private IEnumerator Phase3ProcessRoutine()
+        {
+            if(_bossSkill != null)
+                _bossSkill.EndSkill();
+            _masterHandle = null;
+            StartCoroutine(ShadowLock(false));
+            yield return StartCoroutine(Phase3Effect());
+            yield return StartCoroutine(CentorMove());
+            _isStunned = false;
+            StartCoroutine(BossMainRoutine());
         }
 
         private IEnumerator Phase3Effect()
@@ -149,16 +180,15 @@ namespace _Scripts.NKY._EnemyScript
         }
         private void SetDamage(DamageResultData args) //Enemy?? ???????? ???? ????? ???????
         {
-            if (_isDead) return;
-
             //2페이즈 세팅
-            if (args.currentHealth < _myHealth.MaxValue / 2)
+            if (args.currentHealth < _myHealth.MaxValue / 2 && bossPhase < 2)
             {
-                StartCoroutine(PlayPhase2());
+                PlayPhase2();
             }
 
             if (_myHealth.IsDestroyed)
             {
+                _isDead = true;
                 Die();
             }
         }
@@ -168,11 +198,11 @@ namespace _Scripts.NKY._EnemyScript
         {
             if (bossPhase < 3)
             {
-                StartCoroutine(PlayPhase3());
+                PlayPhase3();
                 return;
             }
-            _isDead = true;
-            
+            if(_bossSkill != null)
+                _bossSkill.EndSkill();
             StopAllCoroutines();
             StopPattern();
             StartCoroutine(phase3Effect.EndPhaseEffect());

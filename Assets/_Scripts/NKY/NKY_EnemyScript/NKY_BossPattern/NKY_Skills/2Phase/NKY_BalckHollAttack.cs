@@ -62,6 +62,16 @@ public class NKY_BalckHollAttack : NKY_BossSkill
         _targetRigid = null;
     }
 
+    public override void EndSkill()
+    {
+        _targetRigid = null;
+        StartCoroutine(OffHoleEffect(hole));
+        foreach (GameObject slash in slashs)
+        {
+            StartCoroutine(EnQueue(slash, slashQueue));
+        }
+    }
+
     private IEnumerator OnHoleEffect(GameObject effect, Vector3 position)
     {
         Animator anim = effect.GetComponent<Animator>();
@@ -112,6 +122,7 @@ public class NKY_BalckHollAttack : NKY_BossSkill
         yield break;
     }
 
+    private List<GameObject> slashs = new List<GameObject>();
     private IEnumerator Slash(Transform[] point, Transform boss, Transform target)
     {
         GameObject slash;
@@ -133,6 +144,7 @@ public class NKY_BalckHollAttack : NKY_BossSkill
             slash.SetActive(true);
             slash.transform.position = point[pointIndex].position;
             slash.transform.rotation = Quaternion.Euler(0f, 0f, pointIndex * -90f);
+            slashs.Add(slash);
             
             yield return PlaySequence(
                 Attack(() => _HitBoxController.Cast(holeCollider, hole.transform.position,
