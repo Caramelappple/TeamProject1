@@ -57,7 +57,6 @@ public class KHG_PoisonDamage : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        // 나가면 타이머 제거 (중요)
         _timer.Remove(other.gameObject);
     }
     

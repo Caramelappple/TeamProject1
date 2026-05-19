@@ -8,6 +8,9 @@ public class CircleBullet : MonoBehaviour
     private Transform _target;
     private Rigidbody2D _rb;
     private SpriteRenderer _spriteRenderer;
+    private Health _playerHealth;
+    [SerializeField] private int damage = 5;
+    private Animator _animator;
 
     bool hasTarget
     {
@@ -33,6 +36,12 @@ public class CircleBullet : MonoBehaviour
         if(!hasTarget) return;
         Move();
         FlipX();
+        AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
+        if (stateInfo.IsName("Animation-magic-5-a") && stateInfo.normalizedTime >= 0.95f)
+        {
+            Destroy(gameObject);
+        }
+        
     }
 
     private void Move()
@@ -49,7 +58,11 @@ public class CircleBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag(_enemyTag))
-            Destroy(gameObject);
+        if (collision.CompareTag("Enemy") && collision.TryGetComponent<Health>(out Health health))
+        {
+            DamageData data = new DamageData(_playerHealth, damage);
+            health.GetDamage(data);
+        }
     }
+    
 }
