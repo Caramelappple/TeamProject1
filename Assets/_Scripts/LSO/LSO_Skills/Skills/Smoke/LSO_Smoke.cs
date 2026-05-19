@@ -2,7 +2,7 @@ using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 
-public class LSO_FireAura : MonoBehaviour,LSO_ISkill
+public class LSO_FireAura : MonoBehaviour,LSO_ISkill            
 {
     private LSO_PlayerMovement _playerMovement;
     private GameObject _player;
