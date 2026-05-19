@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06120155515bb614abefb3c920fe08ff, type: 3}
-  m_Name: FireAuraSO
+  m_Name: SmokeSkillSO
   m_EditorClassIdentifier: Assembly-CSharp::LSO.SkillSystem.LSO_SkillResourceSO
-  skillName: fasj;faf;sll;
-  skillDescription: fda
+  skillName: "\uC5F0\uB9C9"
+  skillDescription: "\uC5F0\uB9C9\uC744 \uD130\uD2B8\uB9BC\uACFC \uB3D9\uC2DC\uC5D0
+    \uC774\uB3D9\uD569\uB2C8\uB2E4"
   skillIcon: {fileID: 21300032, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
   skillPrefab: {fileID: 9117852009125758070, guid: 2fdc6189300ba5b4396b28b897eccaff,
     type: 3}

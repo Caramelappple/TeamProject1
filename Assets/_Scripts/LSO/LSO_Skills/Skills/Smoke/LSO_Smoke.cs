@@ -1,10 +1,10 @@
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
 public class LSO_FireAura : MonoBehaviour,LSO_ISkill
 {
     private LSO_PlayerMovement _playerMovement;
-    private LSO_PlayerAttack _attack;
     private GameObject _player;
     private Rigidbody2D _rigid;
     private bool _canUse = true;
@@ -14,9 +14,9 @@ public class LSO_FireAura : MonoBehaviour,LSO_ISkill
     private Animator _animator;
     
     [SerializeField]private float coolTime = 5f;
-    [SerializeField] private float waitTime = 0.5f;
+    [SerializeField] private float waitTime = 1.2f;
     [SerializeField]private int damage = 10;
-    [SerializeField ]private float speed = 10f;
+    [SerializeField]private float speed = 6f;
 
     public void UseSkill(GameObject player)
     {
@@ -24,7 +24,6 @@ public class LSO_FireAura : MonoBehaviour,LSO_ISkill
         
        _player = player;
        _playerMovement = _player.GetComponent<LSO_PlayerMovement>();
-       _attack = _player.GetComponent<LSO_PlayerAttack>();
        _rigid = _player.GetComponent<Rigidbody2D>();
        
        player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(coolTime));
@@ -50,10 +49,10 @@ public class LSO_FireAura : MonoBehaviour,LSO_ISkill
         yield return  new WaitForSeconds(0.1f);
   
         _playerMovement.SetMove(false);
-        _rigid.linearVelocity = -_playerMovement.GetFixedLastDir().normalized * speed;
+        //_rigid.linearVelocity = _playerMovement.GetFixedLastDir().normalized;
+        _rigid.DOMove(  _player.transform.position+_playerMovement.GetFixedLastDir() * speed, waitTime).SetEase(Ease.OutQuart);
         
         yield return new WaitForSeconds(waitTime);
-        _attack.OnAttack();
         _rigid.linearVelocity = Vector2.zero;
         _playerMovement.SetMove(true);
         
@@ -66,7 +65,7 @@ public class LSO_FireAura : MonoBehaviour,LSO_ISkill
         if (!_animator || !_effectInstance) return;
         
         AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
-        if (stateInfo.IsName("Animation-magic-2-b") && stateInfo.normalizedTime >= 0.95f)
+        if (stateInfo.IsName("Animation-magic-5-g") && stateInfo.normalizedTime >= 0.95f)
         {
             Destroy(_effectInstance);
         }
