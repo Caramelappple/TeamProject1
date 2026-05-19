@@ -1,69 +1,87 @@
-using System;
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
-public class LSO_Slow : MonoBehaviour,LSO_ISkill
+public class LSO_Slow : MonoBehaviour, LSO_ISkill
 {
-    private float _tolerance = 0.1f;
-    [SerializeField]private GameObject effect;
+    [SerializeField] private GameObject effect;
     private GameObject _effectInstance;
     private Animator _animator;
-    private GameObject _player;
-    
+
     private bool _canUse = true;
-    private float _coolTime = 60f;
-    private float _waitTime = 5f;
+    private float _coolTime = 30f;
+    private float _waitTime = 10f;
+
+    private Tween _scaleTween;
+    private Tween _satTween;
+
     public void UseSkill(GameObject player)
     {
         if (!_canUse) return;
-        _player = player;
         _effectInstance = Instantiate(effect, player.transform.position, Quaternion.identity);
         _animator = _effectInstance.GetComponent<Animator>();
-        _player.GetComponent<MonoBehaviour>().StartCoroutine(SetScale(0.5f));
-        player.GetComponent<MonoBehaviour>().StartCoroutine(SetSat(-100));
-        player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
+
+        StartCoroutine(LSO_Editor.Instance.SetBlur());
+        SetScale(0.5f);
+        SetSat(-100f);
+
+        StartCoroutine(CoolTime(_coolTime));
     }
 
     public IEnumerator CoolTime(float time)
     {
-        _canUse  = false;
+        _canUse = false;
         yield return new WaitForSecondsRealtime(_waitTime);
-        _player.GetComponent<MonoBehaviour>().StartCoroutine(SetScale(1));
-        _player.GetComponent<MonoBehaviour>().StartCoroutine(SetSat(0));
-        yield return new WaitForSeconds(time);
+
+        SetScale(1f);
+        SetSat(0f);
+        StartCoroutine(LSO_Editor.Instance.SetBlur());
+
+        yield return new WaitForSecondsRealtime(time); // timeScale 영향 안 받도록
         _canUse = true;
     }
-    
+
     private void FixedUpdate()
     {
-        // _animator가 null이거나 아직 반환 중이면 실행하지 않음
-        if (!_animator || !_effectInstance) return; 
-        
+        if (!_animator || !_effectInstance) return;
+
         AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
-    
         if (stateInfo.IsName("Animation-magic-12-a") && stateInfo.normalizedTime >= 0.95f)
         {
-           Destroy(_effectInstance);
+            Destroy(_effectInstance);
         }
     }
-    
-    private IEnumerator SetSat(float value)
+
+    private void SetSat(float value)
     {
-        while (Math.Abs(LSO_Editor.Instance.colorGrading.saturation.value - value) > _tolerance)
-        {
-            yield return null;
-            LSO_Editor.Instance.colorGrading.saturation.value +=
-                LSO_Editor.Instance.colorGrading.saturation.value > value ? -0.5f : 0.5f;
-        }
+        _satTween?.Kill();
+        _satTween = DOTween.To(
+            () => LSO_Editor.Instance.colorGrading.saturation.value,
+            x => LSO_Editor.Instance.colorGrading.saturation.value = x,
+            value, 1f
+        ).SetUpdate(true);
     }
-    
-    private IEnumerator SetScale(float value)
+
+    private void SetScale(float value)
     {
-        while (Math.Abs(Time.timeScale - value) > _tolerance)
-        {
-            yield return null;
-            Time.timeScale  +=
-                Time.timeScale > value ? -0.5f : 0.5f;
-        }
+        _scaleTween?.Kill();
+        _scaleTween = DOTween.To(
+            () => Time.timeScale,
+            x => Time.timeScale = x,
+            value, 1f
+        ).SetUpdate(true);
+    }
+
+    private void OnDestroy()
+    {
+        // 게임오브젝트 삭제 시 모든 Tween 강제 종료
+        _scaleTween?.Kill();
+        _satTween?.Kill();
+        
+
+        // 혹시 진행 중이던 값 원상복구
+        Time.timeScale = 1f;
+        if (LSO_Editor.Instance != null)
+            LSO_Editor.Instance.colorGrading.saturation.value = 0f;
     }
 }

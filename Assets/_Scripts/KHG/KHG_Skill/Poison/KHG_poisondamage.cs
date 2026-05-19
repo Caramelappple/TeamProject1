@@ -23,16 +23,6 @@ public class KHG_PoisonDamage : MonoBehaviour
     }
 
     private Dictionary<GameObject, float> _timer = new Dictionary<GameObject, float>();
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        //임시
-        //if (collision.CompareTag("Enemy") && collision.TryGetComponent<Health>(out Health health2))
-        //{
-         //   DamageData data = new DamageData(_playerHealth, damage);
-         //   health2.GetDamage(data);
-        //}
-    }
     
     private void OnTriggerStay2D(Collider2D collision)
     {

@@ -6,6 +6,7 @@ public class LSO_WindSpawner : MonoBehaviour,LSO_ISkill
     [SerializeField] private GameObject effect;
     private GameObject _effectInstance;
     private float _coolTime = 10f;
+    private float _speed = 1.2f;
     private LSO_PlayerMovement _playerMovement;
     private Rigidbody2D _rigid;
     private bool _canUse = true;
@@ -22,11 +23,12 @@ public class LSO_WindSpawner : MonoBehaviour,LSO_ISkill
         if (!_canUse) return;
         
         _effectInstance = Instantiate(effect, player.transform.position, Quaternion.identity);
+        _effectInstance.GetComponent<LSO_Wind>().Init(player.GetComponent<Health>());
         _effectInstance.transform.SetParent(transform);
         _rigid = _effectInstance.GetComponent<Rigidbody2D>();
         _playerMovement = player.GetComponent<LSO_PlayerMovement>();
 
-        _rigid.linearVelocity = _playerMovement.GetFixedLastDir();
+        _rigid.linearVelocity = _playerMovement.GetLastDir() * _speed;
         
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
     }
