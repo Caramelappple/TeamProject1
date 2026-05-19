@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using _Scripts.NKY._EnemyScript;
 using _Scripts.NKY._EnemyScript.BossPattern;
 using UnityEngine;
 
@@ -19,7 +18,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 
         private void Start()
         {
-            _damage = (int)(DamageScale * _bossBrain.damage);
+            _damage = (int)(DamageScale * _bossBrain.Damage);
         }
 
         public override IEnumerator Execute(Transform boss, Transform target)

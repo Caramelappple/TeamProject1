@@ -1,12 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using _Scripts.NKY._EnemyScript;
 using _Scripts.NKY._EnemyScript.BossPattern;
 using _Scripts.NKY.NKY_EnemyScript.NKY_Skills;
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class NKY_ReturnSwordAttack : NKY_BossSkill
 {
@@ -24,7 +20,7 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
     private int _damage;
     protected void Start()
     {
-        _damage = (int)(DamageScale * _bossBrain.damage);
+        _damage = (int)(DamageScale * _bossBrain.Damage);
         for (int i = 0; i < swordCount; i++)
         {
             GameObject sword;

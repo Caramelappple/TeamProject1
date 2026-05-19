@@ -23,6 +23,7 @@ namespace _Scripts.NKY._EnemyScript.BossPhaseEffects
 
         public override IEnumerator PlayPhaseEffect()
         {
+            Camera.main.transform.DOShakePosition(0.6f, 1.6f);
             StartCoroutine(PlayEffect(bloodEffect, "BloodEffect", 0.5f));
             _bossBrain.Anim.SetBool(IsStun, true);
             yield return StartCoroutine(WaitUntilOrTime(() => false, 0.8f));

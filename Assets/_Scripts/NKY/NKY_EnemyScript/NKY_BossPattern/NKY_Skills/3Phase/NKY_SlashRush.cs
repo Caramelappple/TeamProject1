@@ -17,7 +17,7 @@ public class NKY_SlashRush : NKY_BossSkill
 
     private void Start()
     {
-        _damage = (int)(DamageScale * _bossBrain.damage);
+        _damage = (int)(DamageScale * _bossBrain.Damage);
         slash.SetActive(false);
     }
 

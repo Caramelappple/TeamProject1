@@ -58,7 +58,7 @@ public class NKY_HitBoxController : MonoBehaviour
         hitBox.transform.position = position;
 
         Physics2D.SyncTransforms();
-
+        
         int count = hitBox.Overlap(filter, results);
 
         for (int i = 0; i < count; i++)
