@@ -35,12 +35,13 @@ public class LSO_PlayerAttack : MonoBehaviour
         sword.transform.position = transform.position + _lastDir;
         StartCoroutine(Attack());
     }
-
+    
     IEnumerator Attack()
     {
         _isAttacking = true;
         _attackable = false;
-        Collider2D[] colliders = Physics2D.OverlapBoxAll(sword.transform.position, sword.transform.localScale/2, 0);
+
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(sword.transform.position, sword.transform.localScale / 2, 0);
         foreach (Collider2D collision in colliders)
         {
             if (collision.CompareTag("Enemy") && collision.TryGetComponent<Health>(out Health enemyHealth))
@@ -50,27 +51,33 @@ public class LSO_PlayerAttack : MonoBehaviour
                 enemyHealth.GetDamage(data);
             }
         }
-        //transform.DOMove(transform.position-_lastDir * 0.2f, 0.15f); //<- 넉백 코드
+
         sword.SetActive(true);
-        _animator.SetTrigger("Attack");//애니메이션 재생
-        
+        _animator.SetTrigger("Attack");
         StartCoroutine(IsDirSame());
-        
+
         float elapsed = 0f;
         while (elapsed < _attackTime)
         {
-            if (!_isAttacking)
+            if (!_isAttacking) // 방향 바뀌어서 취소됨
             {
                 CancelAnim(_movement.GetFixedLastDir());
-                break;
+                sword.SetActive(false);
+
+                // 취소 시점부터 쿨타임 새로 카운트
+                yield return new WaitForSeconds(_attackCooldown+_attackTime);
+                _attackable = true;
+                // _isAttacking은 이미 false
+                yield break; // ← 코루틴 완전 종료
             }
-               
+
             elapsed += Time.deltaTime;
             yield return null;
         }
-        
+
+        // 정상 종료 경로
         sword.SetActive(false);
-        yield return new WaitForSeconds(_attackCooldown);//쿨타임 대기
+        yield return new WaitForSeconds(_attackCooldown);
         _attackable = true;
         _isAttacking = false;
     }
