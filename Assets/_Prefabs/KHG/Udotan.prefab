@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6367704239807418340}
   - component: {fileID: -7284984700477797376}
+  - component: {fileID: 3400892837427770486}
   m_Layer: 0
   m_Name: Udotan
   m_TagString: Untagged
@@ -44,6 +45,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e02d184fd606f43aa5225f2553011a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KHG_Udotanskill
-  bulletPrefab: {fileID: 3363435978997619672, guid: 7e9e3bc170e51d34cb3351750f391351,
+  bulletPrefab: {fileID: 992231960834194030, guid: 0f7712d6083f91d4a95f4fd67e730be2,
     type: 3}
   skillCooldown: 3
+--- !u!50 &3400892837427770486
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5281115400797012292}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
