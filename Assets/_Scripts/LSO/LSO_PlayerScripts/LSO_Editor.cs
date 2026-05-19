@@ -29,7 +29,7 @@ public class LSO_Editor : MonoBehaviour
     public void Register(Health health)
     {
         health.OnDamage += (data) => SetHit(health);
-        health.OnDamage += (data) => SetLow(health);
+        //health.OnDamage += (data) => SetLow(health);
      }
 
     private void SetHit(Health health)
@@ -68,20 +68,20 @@ public class LSO_Editor : MonoBehaviour
             vignette.intensity.value = 0.48f;
             vignette.active = true;
             yield return new WaitForSeconds(0.2f);
+            
+            // 체력이 10% 이하인 동안 계속 실행
+            while (health.Value / health.MaxValue <= 0.1f)
+            {
+                yield return new WaitForSeconds(1f);
+                CameraShake.instance.Shake(1f, 0.001f);
+            }
+            
+            while (vignette.intensity.value > 0f)
+            {
+                yield return null;
+                vignette.intensity.value -= 0.007f;
+            }
+            vignette.active = false;
         }
-        
-        // 체력이 10% 이하인 동안 계속 실행
-        while (health.Value / health.MaxValue <= 0.1f)
-        {
-            yield return new WaitForSeconds(1f);
-            CameraShake.instance.Shake(1f, 0.001f);
-        }
-        
-        while (vignette.intensity.value > 0f)
-        {
-            yield return null;
-            vignette.intensity.value -= 0.007f;
-        }
-        vignette.active = false;
     }
 }

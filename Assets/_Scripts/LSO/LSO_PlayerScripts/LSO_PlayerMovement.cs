@@ -172,7 +172,7 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     public Vector3 GetLastDir()
     {
-        return _lastDir;
+        return _lastDir.normalized;
     }
 
     public Vector3 GetMoveDir()
