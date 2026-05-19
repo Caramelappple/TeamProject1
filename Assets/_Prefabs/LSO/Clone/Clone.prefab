@@ -84,7 +84,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 8
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
@@ -195,7 +195,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68ddf0cd2e8d7542a1b11f57993fef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Clone
-  swordAxis: {fileID: 4392053502029261114}
   sword: {fileID: 823444306591474005}
 --- !u!1 &823444306591474005
 GameObject:
