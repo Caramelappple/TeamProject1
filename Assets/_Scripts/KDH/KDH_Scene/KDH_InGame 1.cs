@@ -7,7 +7,7 @@ public class KDH_InGame1 : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene("");
+            SceneManager.LoadScene("1");
         }
     }
 }

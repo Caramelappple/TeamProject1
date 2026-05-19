@@ -36,6 +36,8 @@ public class JHY_BossMove : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         timer = stunTime;
         dashTimer = dashCooldown;
+
+        player = NKY_GameManager.instance.player.transform;
     }
 
     void Update()
