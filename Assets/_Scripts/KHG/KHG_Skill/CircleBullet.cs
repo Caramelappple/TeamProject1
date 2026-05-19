@@ -1,24 +1,23 @@
-using System.Collections;
 using UnityEngine;
 
-public class CircleBullet : MonoBehaviour,LSO_ISkill
+public class CircleBullet : MonoBehaviour
 {
     private readonly string _enemyTag = "Enemy";
     public float speed = 7f;
 
-    private Transform target;
-    private Rigidbody2D rb;
-    private SpriteRenderer spriteRenderer;
+    private Transform _target;
+    private Rigidbody2D _rb;
+    private SpriteRenderer _spriteRenderer;
 
     bool hasTarget
     {
-        get { return target != null; }
+        get { return _target != null; }
     }
     
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        _rb = GetComponent<Rigidbody2D>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         FindTarget(); 
     }
 
@@ -26,7 +25,7 @@ public class CircleBullet : MonoBehaviour,LSO_ISkill
     {
         GameObject enemyObj = GameObject.FindWithTag(_enemyTag);
         if (enemyObj != null)
-            target = enemyObj.transform;
+            _target = enemyObj.transform;
     }
 
     private void FixedUpdate()
@@ -38,28 +37,19 @@ public class CircleBullet : MonoBehaviour,LSO_ISkill
 
     private void Move()
     {
-        Vector2 direction = (target.position - transform.position).normalized;
-        rb.linearVelocity = direction * speed;
+        Vector2 direction = (_target.position - transform.position).normalized;
+        _rb.linearVelocity = direction * speed;
     }
 
     private void FlipX()
     {
-        if (rb.linearVelocity.x != 0)
-            spriteRenderer.flipX = (rb.linearVelocity.x < 0f);
+        if (_rb.linearVelocity.x != 0)
+            _spriteRenderer.flipX = (_rb.linearVelocity.x < 0f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag(_enemyTag))
             Destroy(gameObject);
-    }
-
-    public void UseSkill(GameObject player)
-    {
-    }
-
-    public IEnumerator CoolTime(float time)
-    {
-        yield break; 
     }
 }

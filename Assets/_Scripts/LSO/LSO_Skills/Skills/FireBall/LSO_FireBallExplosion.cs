@@ -13,7 +13,7 @@ public class LSO_FireBallExplosion : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.CompareTag("Player") && collision.TryGetComponent<Health>(out Health health))
+        if (collision.CompareTag("Enemy") && collision.TryGetComponent<Health>(out Health health))
         {
             DamageData data = new DamageData(health, _damage);
             health.GetDamage(data);
