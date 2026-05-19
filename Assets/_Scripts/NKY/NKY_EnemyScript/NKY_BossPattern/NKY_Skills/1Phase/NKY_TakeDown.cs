@@ -23,9 +23,12 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 
         public override IEnumerator Execute(Transform boss, Transform target)
         {
+            Collider2D bossCol = boss.GetComponent<Collider2D>();
+            
             Vector3 targetPos;
             for (int i = 0; i < 3; i++)
             {
+                bossCol.isTrigger = true;
                 Anim.SetTrigger(Vanish);
                 yield return StartCoroutine(WaitAnim("Vanish", 1f));
                 
@@ -49,9 +52,10 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
                         () => _HitBoxController.Cast(slamHitbox[0], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage)),
                         () => _HitBoxController.Cast(slamHitbox[1], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage))
                     ),
-                    ShadowLock(false),
-                    WaitUntilOrTime(() => false, 0.8f)
+                    ShadowLock(false)
                 );
+                bossCol.isTrigger = false;
+                yield return WaitUntilOrTime(() => false, 0.8f);
             }
             yield break;
         }

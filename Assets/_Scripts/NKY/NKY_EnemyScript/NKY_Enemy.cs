@@ -202,6 +202,7 @@ namespace _Scripts.NKY._EnemyScript
                 PlayPhase3();
                 return;
             }
+            
             if(_bossSkill != null)
                 _bossSkill.EndSkill();
             StopAllCoroutines();
@@ -212,13 +213,13 @@ namespace _Scripts.NKY._EnemyScript
             var col = GetComponent<Collider2D>();
             if (col) col.enabled = false;
         }
-        private void OnCollisionEnter2D(Collision2D collision)
+        /*private void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.gameObject.TryGetComponent(out Health health))
             {
                 DamageData data = DamageData.Create(_myHealth, Damage);
                 health.GetDamage(data);
             }
-        }
+        }*/
     }
 }

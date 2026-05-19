@@ -19,6 +19,7 @@ public class NKY_SwordBomb : NKY_BossSkill
         [SerializeField] private float spawnInterval = 0.3f;
         [SerializeField] private int swordCount = 8;
         [SerializeField] private float swordMoveDuration = 0.2f;
+        [SerializeField] private string playAnimName;
         [field: SerializeField] public override float DamageScale { get; protected set; } = 0.7f;
         
         private int _damage;
@@ -53,6 +54,10 @@ public class NKY_SwordBomb : NKY_BossSkill
             int spawnRange;
             for (int i = 0; i < swordCount; i++)
             {
+                if (playAnimName != null)
+                {
+                    Anim.Play(playAnimName);
+                }
                 Vector3 pos = target.position;
                 spawnRange = Random.Range(0, spawnPoints.Length);
                 sword = swordQueue.Dequeue();
