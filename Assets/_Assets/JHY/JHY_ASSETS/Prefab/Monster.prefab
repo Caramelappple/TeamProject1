@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -4795346000127264374}
   m_Layer: 31
   m_Name: Monster
-  m_TagString: Monster
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,4 +200,3 @@ MonoBehaviour:
   <MaxValue>k__BackingField: 10
   <MinValue>k__BackingField: 0
   _value: 10
-  healTextPrefab: {fileID: 0}
