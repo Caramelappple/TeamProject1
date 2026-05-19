@@ -181,7 +181,7 @@ MonoBehaviour:
   - {fileID: -7103411521585941311}
   knockbackForce: 4
   knockbackDuration: 0.15
-  deathEffectPrefab: {fileID: 3472974159546426470, guid: ce95b63d66c0fcf48a47fbaf390803b6,
+  deathEffectPrefab: {fileID: 4956884340829469077, guid: d7036ccf266c45d4db8abceb0172036e,
     type: 3}
   deathEffectLifeTime: 1.5
 --- !u!114 &-4795346000127264374
