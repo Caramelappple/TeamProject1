@@ -59,14 +59,6 @@ public class JHY_Attack : MonoBehaviour
     [SerializeField] private float phaseChangeDuration = 1.5f;
     private GameObject spawnedAura;
 
-    [Header("SFX")]
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip attackSfx;
-    [SerializeField] private AudioClip skillSfx;
-    [SerializeField] private AudioClip summonSfx;
-    [SerializeField] private AudioClip jumpSfx;
-    [SerializeField] private AudioClip phase2Sfx;
-
     private float lastAttackTime;
     private float lastSkillTime;
     private float lastJumpAttackTime;
@@ -94,28 +86,6 @@ public class JHY_Attack : MonoBehaviour
         StopAllCoroutines();
         CancelInvoke();
     }
-    private void PlaySfx(AudioClip clip)
-    {
-        if (audioSource == null || clip == null) return;
-        audioSource.PlayOneShot(clip);
-    }
-
-    public void PlayAttackSfx()
-    {
-        PlaySfx(attackSfx);
-    }
-
-    public void PlaySkillSfx()
-    {
-        PlaySfx(skillSfx);
-    }
-
-    public void PlayJumpSfx()
-    {
-        PlaySfx(jumpSfx);
-    }
-
-    
     IEnumerator SpiderWebRoutine()
     {
         while (true)
@@ -228,8 +198,6 @@ public class JHY_Attack : MonoBehaviour
     private void EnterPhase2()
     {
         isPhase2 = true;
-        PlaySfx(phase2Sfx);
-
         if (phase2EffectPrefab != null)
         {
             GameObject effect = Instantiate(phase2EffectPrefab, transform.position, Quaternion.identity);
@@ -286,8 +254,7 @@ public class JHY_Attack : MonoBehaviour
         ani.ResetTrigger("attack");
         ani.ResetTrigger("Jump");
         ani.ResetTrigger("Skill");
-        PlaySfx(summonSfx);
-
+        
         if (mobSummoner != null)
         {
             mobSummoner.SummonMobs();
@@ -355,8 +322,6 @@ public class JHY_Attack : MonoBehaviour
         ani.ResetTrigger("attack");
         ani.ResetTrigger("Jump");
         ani.SetTrigger("Skill");
-       
-
         Invoke(nameof(EndSkill), 1.5f);
     }
     bool IsPlayerInSkillAngle()
@@ -426,7 +391,6 @@ public class JHY_Attack : MonoBehaviour
     IEnumerator JumpAttackRoutine()
     {
         ani.SetTrigger("Jump");
-       
 
         yield return new WaitForSeconds(0.6f);
 
