@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LSO_Wind : MonoBehaviour
@@ -6,15 +7,21 @@ public class LSO_Wind : MonoBehaviour
     
     private float _speed = 1f;
     private float _pullForce = 10f;
-    private float _innerRange = 5f;
-    private int _damage = 30;
+    private float _innerRange = 8f;
+    private int _damage = 2;
     private float _liveTime = 5f;
+    private float _interval = 0.5f;
+    private Health _playerHealth;
 
     private void Awake()
     {
         _rigid = GetComponent<Rigidbody2D>();
     }
 
+    public void Init(Health health)
+    {
+        _playerHealth = health;
+    }
     private void OnEnable()
     {
         Destroy(gameObject, _liveTime);
@@ -22,6 +29,7 @@ public class LSO_Wind : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!_playerHealth) return;
         Pull();
     }
 
@@ -36,16 +44,13 @@ public class LSO_Wind : MonoBehaviour
         {
             if (target == null) continue;
             if (!target.CompareTag("Enemy")) continue;
+            
+            _rigid.linearVelocity = Vector2.zero;
 
-            Rigidbody2D targetRb = target.GetComponent<Rigidbody2D>();
-            if (targetRb == null) continue;
-
-            Vector2 dir = (Vector2)transform.position - targetRb.position;
+            Vector2 dir = (Vector2)transform.position - (Vector2)target.transform.position;
             float dist = dir.magnitude;
-            float strength = 1f - (dist / _innerRange); // 가까울수록 강하게
 
             // AddForce로 흡입 (Tween 안 씀)
-            targetRb.AddForce(dir.normalized * (_pullForce * strength));
 
             // 가장 가까운 Enemy 추적
             if (dist < minDist)
@@ -90,5 +95,32 @@ public class LSO_Wind : MonoBehaviour
 
             targetRb.linearVelocity = Vector2.zero; // 남은 힘 초기화
         }
+    }
+    
+    private Dictionary<GameObject, float> _timer = new Dictionary<GameObject, float>();
+    
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (!_playerHealth ) return;
+        _timer.TryAdd(collision.gameObject, 0f);
+
+        _timer[collision.gameObject] += Time.deltaTime;
+
+        if (_timer[collision.gameObject] >= _interval)
+        {
+            if (collision.CompareTag("Enemy") && collision.TryGetComponent<Health>(out Health health))
+            {
+                DamageData data = new DamageData(_playerHealth, _damage);
+                health.GetDamage(data);
+            }
+
+            _timer[collision.gameObject] = 0f;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        // 나가면 타이머 제거 (중요)
+        _timer.Remove(other.gameObject);
     }
 }

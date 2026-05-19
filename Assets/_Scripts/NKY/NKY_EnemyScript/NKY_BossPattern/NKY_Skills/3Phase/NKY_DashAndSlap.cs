@@ -42,6 +42,14 @@ public class NKY_DashAndSlap : NKY_BossSkill
             PlayDustEffect(dustEffect, boss)
             );
     }
+
+    public override void EndSkill()
+    {
+        dustEffect.SetActive(false);
+        _bossBrain.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+        Anim.SetBool(IsMove, false);
+    }
+
     private IEnumerator PlayDustEffect(GameObject effect, Transform pos)
     {
         Animator effectAnim =  effect.GetComponent<Animator>();

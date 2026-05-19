@@ -15,7 +15,7 @@ MonoBehaviour:
   skillName: "\uC790\uD3ED"
   skillDescription: "\uAC00\uC9C0\uACE0 \uC788\uB294 \uD3ED\uD0C4\uC744 \uD130\uD2B8\uB9BD\uB2C8\uB2E4.
     (\uC0AC\uC6A9\uC2DC \uCCB4\uB825 - 30)"
-  skillIcon: {fileID: 21300004, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
+  skillIcon: {fileID: 21300054, guid: d87ac3c3eb635674c8bb306c9681baa7, type: 3}
   maxCooldownTime: 5
   skillPrefab: {fileID: 1810854247381936306, guid: 0781334c88a7bab44a9ad7b0bc1d4fc1,
     type: 3}

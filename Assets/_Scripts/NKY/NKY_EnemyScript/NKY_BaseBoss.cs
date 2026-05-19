@@ -11,6 +11,8 @@ namespace _Scripts.NKY._EnemyScript
 
         protected int bossPhase = 1;
         
+        protected NKY_BossSkill _bossSkill = null;
+        
         public Queue<System.Action> _attackEventQueue { get; private set; } = new Queue<System.Action>();
         
 

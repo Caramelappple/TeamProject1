@@ -42,6 +42,9 @@ public class NKY_SwordBomb : NKY_BossSkill
             }
         }
 
+        private List<GameObject> swords = new List<GameObject>();
+        private List<GameObject> effects =  new List<GameObject>();
+        
         public override IEnumerator Execute(Transform boss, Transform target)
         {
             GameObject sword = null;
@@ -59,9 +62,11 @@ public class NKY_SwordBomb : NKY_BossSkill
                 sword.transform.position = spawnPoints[spawnRange].position;
                 moveDir = (target.transform.position - sword.transform.position).normalized;
                 sword.transform.up = moveDir;
+                swords.Add(sword);
                 sword.SetActive(true);
 
                 effect = effectQueue.Dequeue();
+                effects.Add(effect);
                 
                 StartCoroutine(PlaySequence(
                     ShowWarn(0, new Vector2(0.2f , (pos - sword.transform.position).magnitude),
@@ -80,6 +85,19 @@ public class NKY_SwordBomb : NKY_BossSkill
             }
             yield break;
         }
+
+        public override void EndSkill()
+        {
+            foreach (GameObject sword in swords)
+            {
+                StartCoroutine(EnQueues(sword, swordQueue));
+            }
+            foreach (GameObject effect in effects)
+            {
+                StartCoroutine(EnQueues(effect, effectQueue));
+            }
+        }
+
         private IEnumerator EnQueues(GameObject obj, Queue<GameObject> queue)
         {
             obj.SetActive(false);

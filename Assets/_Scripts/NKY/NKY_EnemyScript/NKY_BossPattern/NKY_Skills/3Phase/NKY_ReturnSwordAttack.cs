@@ -20,13 +20,14 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
     
     private Queue<GameObject> swordQueue = new Queue<GameObject>();
     [field: SerializeField] public override float DamageScale { get; protected set; } = 1f;
+    private List<GameObject> swords =  new List<GameObject>();
     private int _damage;
     protected void Start()
     {
         _damage = (int)(DamageScale * _bossBrain.damage);
-        GameObject sword;
         for (int i = 0; i < swordCount; i++)
         {
+            GameObject sword;
             sword = Instantiate(swordPrefab, transform);
             sword.SetActive(false);
             swordQueue.Enqueue(sword);
@@ -34,14 +35,16 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
     }
     public override IEnumerator Execute(Transform boss, Transform target)
     {
-        GameObject[] swords = new GameObject[swordCount];
+        swords.Clear();
+        GameObject[] _swords = new GameObject[swordCount];
         for (int i = 0; i < swordCount; i++)
         {
-            swords[i] = swordQueue.Dequeue();
-            swords[i].GetComponent<NKY_CrashDamage>().damage = _damage;
+            _swords[i] = swordQueue.Dequeue();
+            _swords[i].GetComponent<NKY_CrashDamage>().damage = _damage;
+            swords.Add(_swords[i]);
         }
         Vector3 moveDir;
-        foreach (GameObject sword in swords)
+        foreach (GameObject sword in _swords)
         {
             Vector3 pos = target.position;
             
@@ -60,24 +63,33 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
         }
 
         yield return new WaitForSeconds(0.5f);
-        foreach (GameObject sword in swords)
+        foreach (GameObject sword in _swords)
         {
             StartCoroutine(ReturnSword(sword, boss));
         }
         yield return new WaitForSeconds(1f);
-        foreach (GameObject sword in swords)
+        foreach (GameObject sword in _swords)
         {
             StartCoroutine(ShowWarn(0, new Vector2(0.4f, (boss.transform.position - sword.transform.position).magnitude),
                 0.8f, () => Vector3.Lerp(sword.transform.position, boss.transform.position, 0.5f),
                 sword.transform.localEulerAngles.z));
         }
         yield return new WaitForSeconds(0.9f);
-        foreach (GameObject sword in swords)
+        foreach (GameObject sword in _swords)
         {
             StartCoroutine(MoveTo(sword.transform, boss.position, swordDuration));
         }
         yield return new WaitForSeconds(3f);
-        EnQueues(swords, swordQueue);
+        EnQueues(_swords, swordQueue);
+    }
+
+    public override void EndSkill()
+    {
+        foreach (GameObject obj in swords)
+        {
+            obj.SetActive(false);
+            swordQueue.Enqueue(obj);
+        }
     }
 
     private IEnumerator ReturnSword(GameObject sword, Transform target)
