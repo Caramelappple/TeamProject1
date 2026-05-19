@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42cc3e7214d8792478b0673e680d3189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PunchSpawner
+  Effect: {fileID: 5010421656102145119, guid: 65411afd7dfd0ee4d9dc53e960ec2982, type: 3}

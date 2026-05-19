@@ -52,7 +52,11 @@ public class LSO_CameraMovement : MonoBehaviour
     private void LateUpdate()
     {
         transform.position = Vector3.Lerp(transform.position, target.position, speed * Time.deltaTime);
-        transform.position = new Vector3(transform.position.x, transform.position.y, -10f);
+        transform.position = new Vector3(
+            transform.position.x + CameraShake.instance.ShakeOffset.x,
+            transform.position.y + CameraShake.instance.ShakeOffset.y,
+            -10f
+        );
     }
     
     CameraShake cameraShake;

@@ -4,43 +4,32 @@ using System.Collections;
 public class CameraShake : MonoBehaviour
 {
     public static CameraShake instance;
-
-    private Vector3 originalLocalPos;
+    public Vector3 ShakeOffset { get; private set; } // 카메라 이동 스크립트가 읽어감
     private Coroutine shakeCoroutine;
 
-    void Awake()
-    {
-        instance = this;
-        originalLocalPos = transform.localPosition;
-    }
+    void Awake() => instance = this;
 
     public void Shake(float duration, float magnitude)
     {
         if (shakeCoroutine != null)
-        {
             StopCoroutine(shakeCoroutine);
-        }
-
         shakeCoroutine = StartCoroutine(ShakeRoutine(duration, magnitude));
     }
 
     IEnumerator ShakeRoutine(float duration, float magnitude)
     {
-        originalLocalPos = transform.localPosition; 
         float elapsed = 0f;
-
         while (elapsed < duration)
         {
-            float x = Random.Range(-1f, 1f) * magnitude;
-            float y = Random.Range(-1f, 1f) * magnitude;
-
-            transform.localPosition = originalLocalPos + new Vector3(x, y, 0f);
-
+            ShakeOffset = new Vector3(
+                Random.Range(-1f, 1f) * magnitude,
+                Random.Range(-1f, 1f) * magnitude,
+                0f
+            );
             elapsed += Time.deltaTime;
             yield return null;
         }
-
-        transform.localPosition = originalLocalPos;
+        ShakeOffset = Vector3.zero;
         shakeCoroutine = null;
     }
 }
