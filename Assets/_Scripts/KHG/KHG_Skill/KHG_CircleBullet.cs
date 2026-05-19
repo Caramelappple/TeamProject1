@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CircleBullet : MonoBehaviour
+public class KHG_CircleBullet : MonoBehaviour
 {
     private readonly string _enemyTag = "Enemy";
     public float speed = 7f;
@@ -11,28 +11,48 @@ public class CircleBullet : MonoBehaviour
     private Health _playerHealth;
     [SerializeField] private int damage = 5;
     private Animator _animator;
+    
+    [SerializeField] private float scanRange;
+    [SerializeField] private RaycastHit2D[] targets;
+    [SerializeField] private Transform nearestTarget;
 
     bool hasTarget
     {
         get { return _target != null; }
     }
     
-    void Start()
+    void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        FindTarget(); 
     }
-
-    private void FindTarget()
+  
+    Transform GetNearest()
     {
-        GameObject enemyObj = GameObject.FindWithTag(_enemyTag);
-        if (enemyObj != null)
-            _target = enemyObj.transform;
+        Transform result = null;
+        float diff = 100;
+
+        foreach(RaycastHit2D target in targets)
+        {
+            Vector3 myPos = transform.position;
+            Vector3 targetPos = target.transform.position;
+            float curDiff = Vector3.Distance(myPos, targetPos);
+
+            if (curDiff<diff)
+            {
+                diff = curDiff;
+                result = target.transform;
+            }
+        }
+
+        return result;
     }
 
     private void FixedUpdate()
     {
+        targets = Physics2D.CircleCastAll(transform.position, scanRange, Vector2.zero, 0, 0);
+        nearestTarget = GetNearest();
+        
         if(!hasTarget) return;
         Move();
         FlipX();
@@ -42,10 +62,16 @@ public class CircleBullet : MonoBehaviour
             Destroy(gameObject);
         }
         
+        _target = nearestTarget;
+        if (_target)
+        {
+            Move();
+        }
     }
 
     private void Move()
     {
+        _rb.linearVelocity = Vector2.zero;
         Vector2 direction = (_target.position - transform.position).normalized;
         _rb.linearVelocity = direction * speed;
     }

@@ -10363,7 +10363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_PlayerMovement
   speed: 3
-  _canMove: 1
+  canMove: 1
 --- !u!95 &615946083
 Animator:
   serializedVersion: 7
