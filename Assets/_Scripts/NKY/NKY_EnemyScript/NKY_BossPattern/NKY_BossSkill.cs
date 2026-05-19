@@ -21,6 +21,8 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
             _HitBoxController = boss.GetComponent<NKY_HitBoxController>();
         }
         public abstract IEnumerator Execute(Transform boss, Transform target);
+
+        public abstract void EndSkill();
         
         protected IEnumerator ComboAttack(string animName, params System.Action[] attackLogics)
         {

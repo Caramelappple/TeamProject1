@@ -18,7 +18,6 @@ public class NKY_SlashRush : NKY_BossSkill
     private void Start()
     {
         _damage = (int)(DamageScale * _bossBrain.damage);
-        Debug.Log(_damage);
         slash.SetActive(false);
     }
 
@@ -38,6 +37,11 @@ public class NKY_SlashRush : NKY_BossSkill
                 Attack(() => _HitBoxController.Cast(slashCollider,(hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage)))
                 );
         }
+    }
+
+    public override void EndSkill()
+    {
+        slash.SetActive(false);
     }
 
     private IEnumerator SlashEffect(GameObject effect, Vector2 pos, float angle, Collider2D col)
