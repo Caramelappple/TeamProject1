@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06120155515bb614abefb3c920fe08ff, type: 3}
   m_Name: PunchSkillSo
   m_EditorClassIdentifier: Assembly-CSharp::LSO.SkillSystem.LSO_SkillResourceSO
-  skillName: 
-  skillDescription: 
-  skillIcon: {fileID: 0}
-  skillPrefab: {fileID: 0}
+  skillName: "\uBB34\uB2E4\uB450\uB2E4\u315C\uB2E4\u314F"
+  skillDescription: adsafssfdafdsa
+  skillIcon: {fileID: 21300040, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
+  skillPrefab: {fileID: 5088893081917882387, guid: eb8297e72b8fdb244b54efafd9c74bf6,
+    type: 3}

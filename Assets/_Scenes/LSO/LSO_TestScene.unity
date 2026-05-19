@@ -574,6 +574,8 @@ GameObject:
   - component: {fileID: 420668342}
   - component: {fileID: 420668343}
   - component: {fileID: 420668344}
+  - component: {fileID: 420668346}
+  - component: {fileID: 420668345}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -856,6 +858,34 @@ MonoBehaviour:
   dashCoolTime: 0.46
   rigid: {fileID: 0}
   tr: {fileID: 0}
+--- !u!114 &420668345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420668328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 825ff256fa7fd134096070b68a27a2f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KDH_DamageText
+  damageTextPrefab: {fileID: 8118361260314724747, guid: 17af1d46e642e2e48a03cf1470278831,
+    type: 3}
+--- !u!114 &420668346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420668328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c0cb38bf8d34b64f8f0286f5764fca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KDH_HealText
+  healTextPrefab: {fileID: 8118361260314724747, guid: db888331b8d53f240bd85d7346d7ace6,
+    type: 3}
 --- !u!1 &513060943
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,6 +1002,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 900361289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1254285829
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6898139170995705687, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_Name
+      value: PunchSkillItem
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a844ad8457c6b8d4b8adf015483cba2b, type: 3}
 --- !u!1 &1382990028
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,6 +1084,8 @@ GameObject:
   - component: {fileID: 1382990030}
   - component: {fileID: 1382990029}
   - component: {fileID: 1382990034}
+  - component: {fileID: 1382990036}
+  - component: {fileID: 1382990035}
   m_Layer: 0
   m_Name: Enemy (2)
   m_TagString: Enemy
@@ -1169,6 +1269,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aedf0ed1ab7cf7346a89770c96ceb774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &1382990035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382990028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c0cb38bf8d34b64f8f0286f5764fca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KDH_HealText
+  healTextPrefab: {fileID: 8118361260314724747, guid: db888331b8d53f240bd85d7346d7ace6,
+    type: 3}
+--- !u!114 &1382990036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382990028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 825ff256fa7fd134096070b68a27a2f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KDH_DamageText
+  damageTextPrefab: {fileID: 8118361260314724747, guid: 17af1d46e642e2e48a03cf1470278831,
+    type: 3}
 --- !u!1 &1400688326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,12 +1852,12 @@ PrefabInstance:
     - target: {fileID: 7496823442101976510, guid: c289a65885fea754a8330b627363c120,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.27
+      value: 3.64
       objectReference: {fileID: 0}
     - target: {fileID: 7496823442101976510, guid: c289a65885fea754a8330b627363c120,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.46
+      value: -2.39
       objectReference: {fileID: 0}
     - target: {fileID: 7496823442101976510, guid: c289a65885fea754a8330b627363c120,
         type: 3}
@@ -2725,3 +2853,4 @@ SceneRoots:
   - {fileID: 900361289}
   - {fileID: 8461865593597054368}
   - {fileID: 2072903085}
+  - {fileID: 1254285829}

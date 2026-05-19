@@ -20,8 +20,10 @@ public class LSO_WindSpawner : MonoBehaviour,LSO_ISkill
     public void UseSkill(GameObject player)
     {
         if (!_canUse) return;
+        _canUse = false;
         
         _effectInstance = Instantiate(effect, player.transform.position, Quaternion.identity);
+        _effectInstance.GetComponent<LSO_Wind>().Init(player.GetComponent<Health>());
         _effectInstance.transform.SetParent(transform);
         _rigid = _effectInstance.GetComponent<Rigidbody2D>();
         _playerMovement = player.GetComponent<LSO_PlayerMovement>();
@@ -33,7 +35,6 @@ public class LSO_WindSpawner : MonoBehaviour,LSO_ISkill
 
     public IEnumerator CoolTime(float time)
     {
-        _canUse = false;
         yield return new WaitForSeconds(time);
         _canUse = true;
     }
