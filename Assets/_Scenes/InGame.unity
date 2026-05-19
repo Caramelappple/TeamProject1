@@ -1344,7 +1344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fed69e499f3974438827a0da261b48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_UISound
-  audioSource: {fileID: 132676567}
+  audioSource: {fileID: 1988534627}
   hoverSound: {fileID: 8300000, guid: 17632031f1ccf094690e3e964f409b9c, type: 3}
   clickSound: {fileID: 8300000, guid: 06bc9ba6d0074df4c97a0bb264ae298f, type: 3}
 --- !u!1 &132676562
@@ -6023,6 +6023,7 @@ GameObject:
   - component: {fileID: 723255701}
   - component: {fileID: 723255700}
   - component: {fileID: 723255699}
+  - component: {fileID: 723255702}
   m_Layer: 5
   m_Name: Close Imagin
   m_TagString: Untagged
@@ -6145,6 +6146,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723255697}
   m_CullTransparentMesh: 1
+--- !u!114 &723255702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723255697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fed69e499f3974438827a0da261b48f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KDH_UISound
+  audioSource: {fileID: 1988534627}
+  hoverSound: {fileID: 8300000, guid: 17632031f1ccf094690e3e964f409b9c, type: 3}
+  clickSound: {fileID: 8300000, guid: 06bc9ba6d0074df4c97a0bb264ae298f, type: 3}
 --- !u!1 &724338858
 GameObject:
   m_ObjectHideFlags: 0
@@ -9391,7 +9407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fed69e499f3974438827a0da261b48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_UISound
-  audioSource: {fileID: 132676567}
+  audioSource: {fileID: 1988534627}
   hoverSound: {fileID: 8300000, guid: 17632031f1ccf094690e3e964f409b9c, type: 3}
   clickSound: {fileID: 8300000, guid: 06bc9ba6d0074df4c97a0bb264ae298f, type: 3}
 --- !u!114 &1232858437
@@ -10328,7 +10344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fed69e499f3974438827a0da261b48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_UISound
-  audioSource: {fileID: 132676567}
+  audioSource: {fileID: 1988534627}
   hoverSound: {fileID: 8300000, guid: 17632031f1ccf094690e3e964f409b9c, type: 3}
   clickSound: {fileID: 8300000, guid: 06bc9ba6d0074df4c97a0bb264ae298f, type: 3}
 --- !u!114 &1386427295
@@ -11709,6 +11725,7 @@ GameObject:
   - component: {fileID: 1714955625}
   - component: {fileID: 1714955624}
   - component: {fileID: 1714955623}
+  - component: {fileID: 1714955626}
   m_Layer: 5
   m_Name: Open Imagin
   m_TagString: Untagged
@@ -11831,6 +11848,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714955621}
   m_CullTransparentMesh: 1
+--- !u!114 &1714955626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714955621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fed69e499f3974438827a0da261b48f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KDH_UISound
+  audioSource: {fileID: 1988534627}
+  hoverSound: {fileID: 8300000, guid: 17632031f1ccf094690e3e964f409b9c, type: 3}
+  clickSound: {fileID: 8300000, guid: 06bc9ba6d0074df4c97a0bb264ae298f, type: 3}
 --- !u!1 &1720291597
 GameObject:
   m_ObjectHideFlags: 0
