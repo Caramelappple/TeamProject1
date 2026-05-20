@@ -235,7 +235,7 @@ MonoBehaviour:
   followRange: 10
   keepDistance: 3
   dashInterval: 10
-  dashSpeed: 15
+  dashSpeed: 10
   dashDuration: 0.7
 --- !u!70 &1215458595
 CapsuleCollider2D:
@@ -336,9 +336,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossAttack2
   player: {fileID: 1228297285}
-  attackRange: 4
-  attackCooldown: 1.5
-  damage: 3
+  attackRange: 3
+  attackCooldown: 2
+  damage: 5
 --- !u!114 &1215458599
 MonoBehaviour:
   m_ObjectHideFlags: 0
