@@ -560,7 +560,7 @@ GameObject:
   - component: {fileID: 566629623}
   m_Layer: 29
   m_Name: Boss
-  m_TagString: Boss
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -786,12 +786,6 @@ MonoBehaviour:
   phase2Aura: {fileID: 6827825845814320766, guid: ad3515a2d3158284c88195d9529c48ea,
     type: 3}
   phaseChangeDuration: 1.5
-  audioSource: {fileID: 0}
-  attackSfx: {fileID: 0}
-  skillSfx: {fileID: 0}
-  summonSfx: {fileID: 0}
-  jumpSfx: {fileID: 0}
-  phase2Sfx: {fileID: 0}
   warningZone: {fileID: 566629620}
 --- !u!95 &566629617
 Animator:
