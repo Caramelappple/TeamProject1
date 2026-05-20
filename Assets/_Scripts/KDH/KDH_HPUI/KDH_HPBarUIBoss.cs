@@ -1,0 +1,122 @@
+using System.Collections;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class KDH_HealthBarBossUI : MonoBehaviour
+{
+    private static KDH_HealthBarBossUI instance;
+
+    public GameObject boss;
+    public Image hpBarImage;
+    public Health healthResource; //플레이어를 연결
+
+    [Header("체력 닳는 효과들")]
+    public float lerpSpeed = 2.0f; //닳는 속도
+    public float shakeDuration = 0.2f;
+    public float shakeAmount = 5f;
+
+    public float _previousHealth;
+    private RectTransform _rectTransform;
+    private Vector2 _originalPosition;
+    private Coroutine _shakeCoroutine;
+    private void Awake()
+    {
+        _rectTransform = GetComponent<RectTransform>();
+        _originalPosition = _rectTransform.anchoredPosition;
+    }
+
+
+    // 중요: 이름은 OnSceneLoaded로, 매개변수는 UnityEngine.SceneManagement.Scene으로!
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        GameObject bossObj = null;
+        if (boss == null)
+        {
+            bossObj = GameObject.Find("Boss");
+            healthResource = bossObj.GetComponent<Health>();
+        }
+
+
+        if (bossObj != null)
+        {
+            healthResource = NKY_GameManager.instance.player.GetComponent<Health>();
+
+            // 새 보스를 찾았으니 이전 체력 값 초기
+        }
+        else
+        {
+            healthResource = null;
+        }
+        _previousHealth = healthResource.Value;
+        hpBarImage.fillAmount = (float)healthResource.Value / healthResource.MaxValue;
+    }
+
+    private void OnEnable()
+    {
+        // 2. 중요: 씬 로드 완료 이벤트에 내 함수를 등록합니다.
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        // 오브젝트가 비활성화될 때 이벤트 해제
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    private void Start()
+    {
+
+        _rectTransform = GetComponent<RectTransform>();
+        _originalPosition = _rectTransform.anchoredPosition;
+
+        if (healthResource != null)
+        {
+            _previousHealth = healthResource.Value;
+
+            if (healthResource.MaxValue > 0)
+            {
+                hpBarImage.fillAmount = (float)healthResource.Value / healthResource.MaxValue;
+            }
+        }
+    }
+
+
+    private void Update() //실시간으로 체력바가 바꿔지기 위해 Update를 사용
+    {
+        //방어 코드
+        if (hpBarImage == null || healthResource == null || healthResource.MaxValue <= 0) return;
+
+        //조건들
+        if (healthResource.Value < _previousHealth)
+        {
+            //흔들기 실행
+            if (_shakeCoroutine != null) StopCoroutine(_shakeCoroutine);
+            _shakeCoroutine = StartCoroutine(ShakeRoutine());
+        }
+
+        //현재 체력을 이전 체력으로 덮어쓰기
+        _previousHealth = healthResource.Value;
+
+        //부드럽게 스르륵 깎이는 효과
+        float targetFill = (float)healthResource.Value / healthResource.MaxValue;
+        hpBarImage.fillAmount = Mathf.Lerp(hpBarImage.fillAmount, targetFill, Time.deltaTime * lerpSpeed);
+    }
+
+    private IEnumerator ShakeRoutine()
+    {
+        float elapsed = 0f;
+
+        while (elapsed < shakeDuration)
+        {
+            float x = Random.Range(-1f, 1f) * shakeAmount;
+            float y = Random.Range(-1f, 1f) * shakeAmount;
+
+            _rectTransform.anchoredPosition = new Vector2(_originalPosition.x, _originalPosition.y + y);
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        _rectTransform.anchoredPosition = _originalPosition;
+    }
+}

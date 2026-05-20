@@ -19,11 +19,6 @@ public class KDH_HealthBarUI : MonoBehaviour
     private Vector2 _originalPosition;
     private Coroutine _shakeCoroutine;
 
-    private void OnSceneLoad(Unity.VectorGraphics.Scene scene, LoadSceneMode mode)
-    {
-        healthResource = GameObject.Find("Boss").GetComponent<Health>();
-    }
-
     private void Start()
     {
 
