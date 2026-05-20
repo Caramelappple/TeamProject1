@@ -5,9 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class KDH_HealthBarBossUI : MonoBehaviour
 {
-    private static KDH_HealthBarBossUI instance;
+    public static KDH_HealthBarBossUI instance;
 
-    public GameObject boss;
     public Image hpBarImage;
     public Health healthResource; //플레이어를 연결
 
@@ -20,41 +19,26 @@ public class KDH_HealthBarBossUI : MonoBehaviour
     private RectTransform _rectTransform;
     private Vector2 _originalPosition;
     private Coroutine _shakeCoroutine;
+
     private void Awake()
     {
         _rectTransform = GetComponent<RectTransform>();
         _originalPosition = _rectTransform.anchoredPosition;
     }
 
-
-    // 중요: 이름은 OnSceneLoaded로, 매개변수는 UnityEngine.SceneManagement.Scene으로!
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        GameObject bossObj = null;
-        if (boss == null)
-        {
-            bossObj = GameObject.Find("Boss");
-            healthResource = bossObj.GetComponent<Health>();
-        }
+        GameObject boss = GameObject.FindGameObjectWithTag("Enemy");
 
+        healthResource = boss.GetComponent<Health>();
 
-        if (bossObj != null)
-        {
-            healthResource = NKY_GameManager.instance.player.GetComponent<Health>();
-
-            // 새 보스를 찾았으니 이전 체력 값 초기
-        }
-        else
-        {
-            healthResource = null;
-        }
         _previousHealth = healthResource.Value;
         hpBarImage.fillAmount = (float)healthResource.Value / healthResource.MaxValue;
     }
 
     private void OnEnable()
     {
-        // 2. 중요: 씬 로드 완료 이벤트에 내 함수를 등록합니다.
+        // 씬 로드 완료 이벤트에 내 함수를 등록합니다.
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
