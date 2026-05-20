@@ -7,6 +7,7 @@ public class LSO_PlayerAttack : MonoBehaviour
     private SpriteRenderer _sprite;
         
     private bool _attackable = true;
+    private bool _canAttack = true;
     private readonly float _attackCooldown = 0.12f;
     private readonly float _attackTime = 0.3f;//건드려도 됨
     private readonly int _damage = 10;//맘대로
@@ -28,7 +29,7 @@ public class LSO_PlayerAttack : MonoBehaviour
     }
     public void OnAttack()
     {
-        if (!_attackable) return;
+        if (!_attackable || !_canAttack) return;
     
         _lastDir = _movement.GetFixedLastDir();
         
@@ -82,7 +83,7 @@ public class LSO_PlayerAttack : MonoBehaviour
         _isAttacking = false;
     }
 
-    public void SetAttack(bool attackable)
+    private void SetAttack(bool attackable)
     {
         _attackable = attackable;
     }
@@ -119,5 +120,10 @@ public class LSO_PlayerAttack : MonoBehaviour
         }
         else
             Debug.Log(dir+"가 이상함 다시 코드 짜 플레이어 어택");
+    }
+
+    public void SetCanAttack(bool attackable)
+    {
+        _canAttack =  attackable;
     }
 }

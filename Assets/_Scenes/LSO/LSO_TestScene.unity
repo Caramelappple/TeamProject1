@@ -1295,7 +1295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 825ff256fa7fd134096070b68a27a2f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_DamageText
-  damageTextPrefab: {fileID: 8118361260314724747, guid: 17af1d46e642e2e48a03cf1470278831,
+  damageTextPrefab: {fileID: 8118361260314724747, guid: d94e793e463af3c428d86a16149dc6a7,
     type: 3}
 --- !u!1 &1400688326
 GameObject:
@@ -1773,7 +1773,7 @@ PrefabInstance:
     - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.62
+      value: 0.83
       objectReference: {fileID: 0}
     - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
         type: 3}

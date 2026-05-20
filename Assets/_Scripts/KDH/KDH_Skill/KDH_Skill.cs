@@ -20,10 +20,10 @@ public class KDH_Skill : MonoBehaviour
 
     //private LSO_Ice iceSkill = new LSO_Ice();
 
-    private float currentCooldownTime;  // 현재 재사용 대기 시간
-    private bool isCooldown;     
+    private float _currentCooldownTime;  // 현재 재사용 대기 시간
+    private bool _isCooldown;     
     
-    GameObject skillObj;
+    private GameObject _skillObj;
     // 현재 쿨타임이 적용중인지 체크
 
     private void Awake()
@@ -38,9 +38,9 @@ public class KDH_Skill : MonoBehaviour
     {
         if (textSkillData == null) return;
 
-        if (isCooldown)
+        if (_isCooldown)
         {
-            textSkillData.text = $"[{skillName}] Cooldown Time : {currentCooldownTime:F1}";
+            textSkillData.text = $"[{skillName}] Cooldown Time : {_currentCooldownTime:F1}";
             return;
         }
 
@@ -55,14 +55,14 @@ public class KDH_Skill : MonoBehaviour
         }
 
 
-        if (!skillObj)
+        if (!_skillObj)
         {
-            skillObj = Instantiate(skills, player.transform.position, player.transform.rotation);
-            //skillObj.gameObject.transform.SetParent();//이시온이 고쳐야 함
+            _skillObj = Instantiate(skills, player.transform.position, player.transform.rotation);
+            _skillObj.gameObject.transform.SetParent(gameObject.transform);//이시온이 고쳐야 함
         }
 
         // 2. 스크립트(인터페이스)가 들어있는지 확인
-        LSO_ISkill skillLogic = skillObj.GetComponent<LSO_ISkill>();
+        LSO_ISkill skillLogic = _skillObj.GetComponent<LSO_ISkill>();
 
         if (skillLogic != null)
         {
@@ -76,7 +76,7 @@ public class KDH_Skill : MonoBehaviour
         {
             // 이 메시지가 뜬다면 프리팹에 스크립트를 안 붙인 것입니다.
             Debug.LogError($"{skills.name} 프리팹에 LSO_ISkill 컴포넌트가 없습니다!");
-            Destroy(skillObj); // 실행 불가능한 오브젝트는 지워줍니다.
+            Destroy(_skillObj); // 실행 불가능한 오브젝트는 지워줍니다.
         }
     }
     public void SetTextReference(TextMeshProUGUI sceneText)
@@ -90,17 +90,17 @@ public class KDH_Skill : MonoBehaviour
     private IEnumerator OnCooldownTime(float maxCooldownTime)
     {
         // 스킬 재사용 대기 시간 저장
-        currentCooldownTime = maxCooldownTime;
+        _currentCooldownTime = maxCooldownTime;
 
         SetCooldownIs(true);
 
-        while (currentCooldownTime > 0)
+        while (_currentCooldownTime > 0)
         {
-            currentCooldownTime -= Time.deltaTime;
+            _currentCooldownTime -= Time.deltaTime;
             // Image UI의 fillAmount를 조절해 채워지는 이미지 모양 설정
-            imageCooldownTime.fillAmount = currentCooldownTime / maxCooldownTime;
+            imageCooldownTime.fillAmount = _currentCooldownTime / maxCooldownTime;
             // Text UI에 쿨다운 시간 표시
-            textCooldownTime.text = currentCooldownTime.ToString("F1");
+            textCooldownTime.text = _currentCooldownTime.ToString("F1");
 
             yield return null;
         }
@@ -110,7 +110,7 @@ public class KDH_Skill : MonoBehaviour
 
     private void SetCooldownIs(bool boolean)
     {
-        isCooldown = boolean;
+        _isCooldown = boolean;
         textCooldownTime.enabled = boolean;
         imageCooldownTime.enabled = boolean;
     }

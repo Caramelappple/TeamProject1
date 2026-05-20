@@ -37,7 +37,7 @@ public class LSO_Immune : MonoBehaviour, LSO_ISkill
         sprite.color = new Color(1, 1, 0.2f, 1);
         if (health != null) health.SetDamageable(false);
         if (movement != null) movement.SetMove(false);
-        if (attack != null) attack.SetAttack(false);
+        if (attack != null) attack.SetCanAttack(false);
         if (skillSystem != null) skillSystem.SetCanUseSkill(false); // 김동휘가 건듦 무적상태일 때 스킬이 입력 안 되게
 
         // 지속 시간 대기
@@ -47,7 +47,7 @@ public class LSO_Immune : MonoBehaviour, LSO_ISkill
         sprite.color = originalColor;
         if (health != null) health.SetDamageable(true);  // 무적 해제
         if (movement != null) movement.SetMove(true);   // 이동 허용
-        if (attack != null) attack.SetAttack(true);     // 공격 허용
+        if (attack != null) attack.SetCanAttack(true);     // 공격 허용
         if (skillSystem != null) skillSystem.SetCanUseSkill(true); // 김동휘가 건듦 무적상태가 끝나면 스킬 입력 가능
 
         // --- [남은 쿨타임 대기] ---

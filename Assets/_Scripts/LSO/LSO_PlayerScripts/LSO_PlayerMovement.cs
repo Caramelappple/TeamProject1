@@ -8,9 +8,9 @@ public class LSO_PlayerMovement : MonoBehaviour
     private static readonly int MoveY = Animator.StringToHash("MoveY");
     public Health Health { get; private set; }
     public float speed = 3;
-    protected Animator Animator;
+    private Animator Animator;
     private SpriteRenderer _sprite;
-
+    
     [SerializeField] private bool _canMove = true;
 
     private Vector2 _moveDir;
@@ -112,7 +112,6 @@ public class LSO_PlayerMovement : MonoBehaviour
     public void SetMove(bool move)
     {
         _canMove = move;
-
         if (!_canMove)
         {
             _moveDir = Vector2.zero;

@@ -11,8 +11,8 @@ public class KDH_SkillSystem : MonoBehaviour
     [SerializeField]
     public KDH_Skill[] skills; //스킬 장착창(슬롯) <- 여기서 얻은 스킬을 설정하여 사용하면 되
 
-    private List<RaycastResult> raycastResults;
-    private PointerEventData pointerEventData;
+    private List<RaycastResult> raycastResults;//<- 지워도 됨? 안써서
+    private PointerEventData pointerEventData;//<- 지워도 됨? 안 써서
 
     private bool _canUseSkill = true; // 시온의 무적상태 bool값
 
@@ -28,7 +28,7 @@ public class KDH_SkillSystem : MonoBehaviour
 
         if (!Input.anyKeyDown) return;
 
-        // KeyAction.KEYCOUNT(현재 4개)만큼 반복하며 키 입력을 확인
+        // KeyAction.KeyCount(현재 4개)만큼 반복하며 키 입력을 확인
         for (int i = 0; i < (int)KeyAction.KEYCOUNT; i++)
         {
             // 등록된 스킬 배열 개수보다 넘어가면 검사 중지
@@ -80,7 +80,7 @@ public class KDH_SkillSystem : MonoBehaviour
     {
         bool isAdded = false;
 
-        // KeyAction.KEYCOUNT (4개) 만큼 루프
+        // KeyAction.KeyCount (4개) 만큼 루프
         for (int i = 0; i < (int)KeyAction.KEYCOUNT; i++)
         {
             // 빈 자리가 있다면
