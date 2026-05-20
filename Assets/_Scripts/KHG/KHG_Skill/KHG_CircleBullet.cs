@@ -63,7 +63,7 @@ public class KHG_CircleBullet : MonoBehaviour
         }
         
         _target = nearestTarget;
-        if (_target)
+        if (_target = null)
         {
             Move();
         }
