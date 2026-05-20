@@ -7459,7 +7459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 3
-  _canMove: 1
+  canMove: 1
 --- !u!114 &996600792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10019,6 +10019,7 @@ GameObject:
   - component: {fileID: 1332601490}
   - component: {fileID: 1332601489}
   - component: {fileID: 1332601488}
+  - component: {fileID: 1332601493}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -10039,8 +10040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_CameraMovement
   target: {fileID: 996600796}
-  bossTargets:
-  - {fileID: 0}
+  bossTargets: []
   speed: 1
   test: 0
   last: 0
@@ -10162,6 +10162,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1332601493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332601487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006caf2eeb35b1745a8b2c2ea321393a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraShake
 --- !u!1 &1344272415
 GameObject:
   m_ObjectHideFlags: 0
