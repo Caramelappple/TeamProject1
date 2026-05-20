@@ -7,7 +7,7 @@ public class JHY_Attack : MonoBehaviour
     private JHY_BossMove bossMove;
 
     [Header("References")]
-    private Transform player;
+    [SerializeField]private Transform player;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private GameObject projectilePrefab2;
@@ -79,7 +79,7 @@ public class JHY_Attack : MonoBehaviour
     }
     void Start()
     {
-        player = NKY_GameManager.instance.player.transform;
+        //player = NKY_GameManager.instance.player.transform;
         StartCoroutine(SpiderWebRoutine());
     }
     private void OnDisable()

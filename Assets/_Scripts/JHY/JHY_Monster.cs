@@ -81,16 +81,16 @@ public class Monster : MonoBehaviour
         rb.linearVelocity = direction * moveSpeed;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void TryDamagePlayer(Collider2D other)
     {
         if (isDead) return;
-        if (!collision.collider.CompareTag("Player")) return;
+        if (!other.CompareTag("Player")) return;
         if (Time.time < lastAttackTime + attackCooldown) return;
 
-        Health playerHealth = collision.collider.GetComponent<Health>();
+        Health playerHealth = other.GetComponent<Health>();
         if (playerHealth == null)
         {
-            playerHealth = collision.collider.GetComponentInParent<Health>();
+            playerHealth = other.GetComponentInParent<Health>();
         }
 
         if (playerHealth == null) return;
@@ -98,6 +98,16 @@ public class Monster : MonoBehaviour
         DamageData data = DamageData.Create(null, damage);
         playerHealth.GetDamage(data);
         lastAttackTime = Time.time;
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        TryDamagePlayer(other);
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        TryDamagePlayer(collision.collider);
     }
 
     private void HandleDamage(DamageResultData data)
