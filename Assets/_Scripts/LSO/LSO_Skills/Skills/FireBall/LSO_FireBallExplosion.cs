@@ -4,14 +4,14 @@ using UnityEngine;
 public class LSO_FireBallExplosion : MonoBehaviour
 {
     private Animator _animator;
-    private int _damage = 40;
+    [SerializeField] private int _damage = 40;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy") && collision.TryGetComponent<Health>(out Health health))
         {

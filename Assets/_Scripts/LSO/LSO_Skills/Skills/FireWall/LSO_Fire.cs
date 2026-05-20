@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LSO_Fire : MonoBehaviour
 {
-    private int _damage = 80;
+    [SerializeField] private int _damage = 80;
     private Animator _animator;
 
     private void Awake()

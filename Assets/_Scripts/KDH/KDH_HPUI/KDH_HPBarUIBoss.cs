@@ -1,11 +1,12 @@
 using System.Collections;
-using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class KDH_HealthBarUI : MonoBehaviour
+public class KDH_HealthBarBossUI : MonoBehaviour
 {
+    public static KDH_HealthBarBossUI instance;
+
     public Image hpBarImage;
     public Health healthResource; //플레이어를 연결
 
@@ -19,13 +20,40 @@ public class KDH_HealthBarUI : MonoBehaviour
     private Vector2 _originalPosition;
     private Coroutine _shakeCoroutine;
 
+    private void Awake()
+    {
+        _rectTransform = GetComponent<RectTransform>();
+        _originalPosition = _rectTransform.anchoredPosition;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        GameObject boss = GameObject.FindGameObjectWithTag("Enemy");
+
+        healthResource = boss.GetComponent<Health>();
+
+        _previousHealth = healthResource.Value;
+        hpBarImage.fillAmount = (float)healthResource.Value / healthResource.MaxValue;
+    }
+
+    private void OnEnable()
+    {
+        // 씬 로드 완료 이벤트에 내 함수를 등록합니다.
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        // 오브젝트가 비활성화될 때 이벤트 해제
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
     private void Start()
     {
 
         _rectTransform = GetComponent<RectTransform>();
         _originalPosition = _rectTransform.anchoredPosition;
 
-        if (healthResource != null )
+        if (healthResource != null)
         {
             _previousHealth = healthResource.Value;
 
