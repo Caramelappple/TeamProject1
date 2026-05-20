@@ -1,6 +1,8 @@
 using System.Collections;
+using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class KDH_HealthBarUI : MonoBehaviour
 {
@@ -17,8 +19,14 @@ public class KDH_HealthBarUI : MonoBehaviour
     private Vector2 _originalPosition;
     private Coroutine _shakeCoroutine;
 
+    private void OnSceneLoad(Unity.VectorGraphics.Scene scene, LoadSceneMode mode)
+    {
+        healthResource = GameObject.Find("Boss").GetComponent<Health>();
+    }
+
     private void Start()
     {
+
         _rectTransform = GetComponent<RectTransform>();
         _originalPosition = _rectTransform.anchoredPosition;
 

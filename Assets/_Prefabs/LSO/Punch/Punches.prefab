@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9091776605128910243}
-  - component: {fileID: 771968753298245971}
+  - component: {fileID: -3516797784266265023}
   m_Layer: 0
   m_Name: Punches
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.8449998, y: 1.67, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9164826292913812940}
@@ -37,7 +37,7 @@ Transform:
   - {fileID: 3276394002850935617}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &771968753298245971
+--- !u!114 &-3516797784266265023
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 459a67cb5f5fef4469a45300b4511078, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Punch
+  m_EditorClassIdentifier: Assembly-CSharp::LSO_Punch
 --- !u!1 &6080948902421761921
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 8632532901090048272}
   - component: {fileID: 6135525500608890328}
   - component: {fileID: 7399346435168659229}
+  - component: {fileID: 2511134993128601499}
   m_Layer: 0
   m_Name: Punch (3)
   m_TagString: Untagged
@@ -194,12 +195,24 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.16
+--- !u!114 &2511134993128601499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6080948902421761921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459a67cb5f5fef4469a45300b4511078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LSO_Punch
 --- !u!1 &6822685069505474351
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +225,7 @@ GameObject:
   - component: {fileID: 6532756896655543012}
   - component: {fileID: 8028083398312994931}
   - component: {fileID: 9047108247369324667}
+  - component: {fileID: 7481268474314268926}
   m_Layer: 0
   m_Name: Punch (2)
   m_TagString: Untagged
@@ -345,12 +359,24 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.16
+--- !u!114 &7481268474314268926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6822685069505474351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459a67cb5f5fef4469a45300b4511078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LSO_Punch
 --- !u!1 &7315646252486260460
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +389,7 @@ GameObject:
   - component: {fileID: 6510697807037846424}
   - component: {fileID: 7045295709910081564}
   - component: {fileID: 5853172086816851884}
+  - component: {fileID: 8238251004934711554}
   m_Layer: 0
   m_Name: Punch (4)
   m_TagString: Untagged
@@ -496,12 +523,24 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.16
+--- !u!114 &8238251004934711554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315646252486260460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459a67cb5f5fef4469a45300b4511078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LSO_Punch
 --- !u!1 &7844215994176548690
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,6 +553,7 @@ GameObject:
   - component: {fileID: 5736502182764949193}
   - component: {fileID: 8592208948903711869}
   - component: {fileID: 6185337704498349259}
+  - component: {fileID: 1609460583327540962}
   m_Layer: 0
   m_Name: Punch
   m_TagString: Untagged
@@ -647,12 +687,24 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.16
+--- !u!114 &1609460583327540962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7844215994176548690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459a67cb5f5fef4469a45300b4511078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LSO_Punch
 --- !u!1 &7969000201227409317
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,6 +717,7 @@ GameObject:
   - component: {fileID: 5016793757115649150}
   - component: {fileID: 7487410422488829002}
   - component: {fileID: 4933928268461347859}
+  - component: {fileID: 6960908023961179160}
   m_Layer: 0
   m_Name: Punch (1)
   m_TagString: Untagged
@@ -798,9 +851,21 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.16
+--- !u!114 &6960908023961179160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7969000201227409317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459a67cb5f5fef4469a45300b4511078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LSO_Punch

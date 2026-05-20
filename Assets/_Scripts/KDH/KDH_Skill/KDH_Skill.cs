@@ -21,7 +21,10 @@ public class KDH_Skill : MonoBehaviour
     //private LSO_Ice iceSkill = new LSO_Ice();
 
     private float currentCooldownTime;  // 현재 재사용 대기 시간
-    private bool isCooldown;             // 현재 쿨타임이 적용중인지 체크
+    private bool isCooldown;     
+    
+    GameObject skillObj;
+    // 현재 쿨타임이 적용중인지 체크
 
     private void Awake()
     {
@@ -35,7 +38,7 @@ public class KDH_Skill : MonoBehaviour
     {
         if (textSkillData == null) return;
 
-        if (isCooldown == true)
+        if (isCooldown)
         {
             textSkillData.text = $"[{skillName}] Cooldown Time : {currentCooldownTime:F1}";
             return;
@@ -51,7 +54,12 @@ public class KDH_Skill : MonoBehaviour
             return;
         }
 
-        GameObject skillObj = Instantiate(skills, player.transform.position, player.transform.rotation);
+
+        if (!skillObj)
+        {
+            skillObj = Instantiate(skills, player.transform.position, player.transform.rotation);
+            //skillObj.gameObject.transform.SetParent();//이시온이 고쳐야 함
+        }
 
         // 2. 스크립트(인터페이스)가 들어있는지 확인
         LSO_ISkill skillLogic = skillObj.GetComponent<LSO_ISkill>();
@@ -89,7 +97,7 @@ public class KDH_Skill : MonoBehaviour
         while (currentCooldownTime > 0)
         {
             currentCooldownTime -= Time.deltaTime;
-            // Image UI의 fiilAmount를 조절해 채워지는 이미지 모양 설정
+            // Image UI의 fillAmount를 조절해 채워지는 이미지 모양 설정
             imageCooldownTime.fillAmount = currentCooldownTime / maxCooldownTime;
             // Text UI에 쿨다운 시간 표시
             textCooldownTime.text = currentCooldownTime.ToString("F1");

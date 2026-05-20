@@ -351,12 +351,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e8df4056084c78afb56d61aa4bd488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  damageTextPrefab: {fileID: 0}
   _data: {fileID: 11400000, guid: e1290899297b1d74f89ed15c373be020, type: 2}
   <MaxValue>k__BackingField: 100
   <MinValue>k__BackingField: 0
   _value: 100
-  healTextPrefab: {fileID: 0}
 --- !u!114 &1215458600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,12 +407,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e8df4056084c78afb56d61aa4bd488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  damageTextPrefab: {fileID: 0}
   _data: {fileID: 11400000, guid: bf34ed92773759844becabe5c271ff14, type: 2}
   <MaxValue>k__BackingField: 100
   <MinValue>k__BackingField: 0
   _value: 100
-  healTextPrefab: {fileID: 0}
 --- !u!114 &1228297280
 MonoBehaviour:
   m_ObjectHideFlags: 0
