@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/_Scenes/InGame.unity
     guid: 513bb80e9b7975d4595abeda41b5814f
   - enabled: 1
-    path: Assets/_Scenes/KHG/KHG_scene/KHG_map2.unity
+    path: Assets/_Scenes/KHG/KHG_scene/KHG_map1.unity
     guid: f23f7d8f155a0494eb4649912f7e7322
   - enabled: 1
     path: Assets/_Scenes/KHG/KHG_scene/KHG_map3.unity

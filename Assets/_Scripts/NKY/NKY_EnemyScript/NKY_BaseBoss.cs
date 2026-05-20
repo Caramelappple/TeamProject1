@@ -9,7 +9,7 @@ namespace _Scripts.NKY._EnemyScript
     {
         protected GameObject _target;
 
-        protected int bossPhase = 1;
+        public int bossPhase = 1;
         
         protected NKY_BossSkill _bossSkill = null;
         

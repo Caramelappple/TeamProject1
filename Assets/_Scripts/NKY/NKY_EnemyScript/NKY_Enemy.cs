@@ -1,8 +1,8 @@
+using System.Collections;
 using _Scripts.HealthSystem;
 using _Scripts.NKY._EnemyScript.BossPattern;
-using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace _Scripts.NKY._EnemyScript
 {
@@ -10,15 +10,16 @@ namespace _Scripts.NKY._EnemyScript
     {
         
         [Header("보스의 스킬 패턴 세팅")]
-        [SerializeField] private  NKY_BossSkill[] _skills;
+        [SerializeField] private  NKY_BossSkill[] skills;
         public LSO_PlayerMovement playerReference;
+        [SerializeField] private NKY_BossSkillEnd  _bossSkillEnd = null;
 
         [Header("보스 페이즈 효과")] 
         [SerializeField] private NKY_PhaseEffect phase2Effect;
         [SerializeField] private NKY_PhaseEffect phase3Effect;
 
         [Header("보스 스텟 세팅")]
-        [field: SerializeField] public int damage { get; private set; }
+        [field: SerializeField] public int Damage { get; private set; }
 
         private Health _myHealth;
 
@@ -30,18 +31,18 @@ namespace _Scripts.NKY._EnemyScript
             Anim = GetComponent<Animator>();
             _shadow = GetComponent<NKY_ShadowController>();
             _myHealth = gameObject.GetComponent<Health>();
-            playerReference = NKY_GameManager.instance.player.GetComponent<LSO_PlayerMovement>();
+            //playerReference = NKY_GameManager.instance.player.GetComponent<LSO_PlayerMovement>();
             _target = playerReference.gameObject;
 
-            if (_skills != null)
+            if (skills != null)
             {
-                foreach (var skill in _skills)
+                foreach (var skill in skills)
                 {
                     skill.Init(this);
                 }
             }
         }
-
+        
         private void Start()
         {
             if (_myHealth != null)
@@ -67,29 +68,29 @@ namespace _Scripts.NKY._EnemyScript
                 if (_isDead || _isStunned) yield break;
                 
                 _nextSkill = PickNextSkill();
-                Debug.Log(_nextSkill);
                 yield return ExecutePattern(_nextSkill);
-                
+                if(_bossSkillEnd != null)
+                    yield return _bossSkillEnd.BossSkillEnd();
                 _lastSkillTime = Time.time;
             }
         }
 
         protected override IEnumerator PickNextSkill()
         {
-            NKY_BossSkill selectedSkill = _skills[0];
+            NKY_BossSkill selectedSkill = skills[0];
             switch (bossPhase)
             {
                 case 1:
-                    selectedSkill = _skills[Random.Range(0, _skills.Length / 3)];
+                    selectedSkill = skills[Random.Range(0, skills.Length / 3)];
                     break;
                 case 2:
-                    selectedSkill = _skills[Random.Range(_skills.Length / 3, (_skills.Length * 2) / 3)];
+                    selectedSkill = skills[Random.Range(skills.Length / 3, (skills.Length * 2) / 3)];
                     break;
                 case 3:
-                    selectedSkill = _skills[Random.Range((_skills.Length * 2) / 3, _skills.Length)];
+                    selectedSkill = skills[Random.Range((skills.Length * 2) / 3, skills.Length)];
                     break;
                 case 4:
-                    selectedSkill = _skills[Random.Range(0, _skills.Length)];
+                    selectedSkill = skills[Random.Range(0, skills.Length)];
                     break;
             }
 
@@ -109,12 +110,11 @@ namespace _Scripts.NKY._EnemyScript
 
         private void PlayPhase2()
         {
-            if(bossPhase == 2) return;
+            if(bossPhase == 2 || phase2Effect == null) return;
             _isStunned = true;
             bossPhase = 2;
             _skillCooldown *=  0.6f;
-            damage = (int)(damage * 2f);
-            
+            Damage = (int)(Damage * 2f);
             StopAllCoroutines();
             StartCoroutine(Phase2ProcessRoutine());
         }
@@ -138,20 +138,20 @@ namespace _Scripts.NKY._EnemyScript
 
         private void PlayPhase3()
         {
-            if(bossPhase == 3) return;
+            if(bossPhase == 3 || phase3Effect == null) return;
             
             _isStunned = true;
             if (_isDead)
             {
                 _isDead = false;
                 _myHealth.Value += 1;
-                RecoverData data = RecoverData.Create(_myHealth, 10);
+                RecoverData data = RecoverData.Create(_myHealth, _myHealth.MaxValue);
                 _myHealth.Recover(data);
             }
-            
+            Anim.Play("Idle");
             bossPhase = 3;
             _skillCooldown *=  0.5f;
-            damage = (int)(damage * 1.5f);
+            Damage = (int)(Damage * 1.5f);
             
             StopAllCoroutines();
             StartCoroutine(Phase3ProcessRoutine());
@@ -187,7 +187,8 @@ namespace _Scripts.NKY._EnemyScript
             {
                 PlayPhase2();
             }
-
+            
+            Debug.Log(bossPhase);
             if (_myHealth.IsDestroyed)
             {
                 _isDead = true;
@@ -203,6 +204,7 @@ namespace _Scripts.NKY._EnemyScript
                 PlayPhase3();
                 return;
             }
+            
             if(_bossSkill != null)
                 _bossSkill.EndSkill();
             StopAllCoroutines();
@@ -212,6 +214,14 @@ namespace _Scripts.NKY._EnemyScript
 
             var col = GetComponent<Collider2D>();
             if (col) col.enabled = false;
+        }
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.TryGetComponent(out Health health))
+            {
+                DamageData data = DamageData.Create(_myHealth, Damage);
+                health.GetDamage(data);
+            }
         }
     }
 }
