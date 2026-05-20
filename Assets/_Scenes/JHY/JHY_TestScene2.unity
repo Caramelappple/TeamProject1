@@ -337,7 +337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BossAttack2
   player: {fileID: 1228297285}
   attackRange: 3
-  attackCooldown: 2
+  attackCooldown: 3
   damage: 5
 --- !u!114 &1215458599
 MonoBehaviour:

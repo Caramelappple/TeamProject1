@@ -9996,7 +9996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 3
-  canMove: 1
+  _canMove: 1
 --- !u!114 &996600792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10171,7 +10171,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 250808985}
@@ -16925,8 +16925,6 @@ MonoBehaviour:
   _settingMenuUI: {fileID: 461489712}
   skillSelectUI: {fileID: 620123423}
   skillDeleteUI: {fileID: 1031171661}
-<<<<<<< HEAD
-=======
 --- !u!1 &1332601487
 GameObject:
   m_ObjectHideFlags: 0
@@ -17095,7 +17093,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006caf2eeb35b1745a8b2c2ea321393a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraShake
->>>>>>> LSO
 --- !u!1 &1344272415
 GameObject:
   m_ObjectHideFlags: 0
@@ -21742,3 +21739,4 @@ SceneRoots:
   - {fileID: 1884519303}
   - {fileID: 706359628}
   - {fileID: 204672877}
+  - {fileID: 1332601492}
