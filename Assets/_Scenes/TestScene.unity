@@ -1589,9 +1589,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NKY_Enemy.NKY_Enemy
   _skillCooldown: 1.8
   skills:
-  - {fileID: 1874845559}
-  - {fileID: 1874845559}
-  - {fileID: 1874845559}
+  - {fileID: 1218274507}
+  - {fileID: 1218274507}
+  - {fileID: 1218274507}
   - {fileID: 1290765489}
   - {fileID: 1290765489}
   - {fileID: 1290765489}
@@ -2371,6 +2371,7 @@ MonoBehaviour:
     type: 3}
   returnTarget: {fileID: 713920018}
   playAnimName: 
+  bul: 0
   spawnInterval: 0.1
   swordCount: 20
   swordDuration: 0.08

@@ -12,6 +12,7 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
     [SerializeField] private GameObject swordPrefab;
     [SerializeField] private Transform returnTarget;
     [SerializeField] private string playAnimName = "";
+    [SerializeField] private bool bul;
         
     [Header("보스 스킬 스텟 세팅")]
     [SerializeField] private float spawnInterval = 0.3f;
@@ -53,13 +54,12 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
         {
             Vector3 to;
             float currentAngle;
-            moveDir = (pos - sword.transform.position).normalized;
-            distance = Mathf.Abs(Vector3.Distance(sword.transform.position, pos));
+            moveDir = (target.position - sword.transform.position).normalized;
             sword.transform.position = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
-            if (string.IsNullOrEmpty(playAnimName))
+            if (bul)
             {
                 Anim.Play(playAnimName);
-                distance *= 2;
+                distance = Mathf.Abs(Vector3.Distance(sword.transform.position, pos)) * 2;
                 fireAngle += 360 / (float)swordCount;
                 sword.transform.rotation = Quaternion.Euler(0, 0, fireAngle);
                 to = sword.transform.position + (sword.transform.up * distance);
@@ -70,6 +70,7 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
                 sword.transform.up = moveDir;
                 to = target.position;
                 currentAngle = sword.transform.localEulerAngles.z;
+                distance = Mathf.Abs(Vector3.Distance(sword.transform.position, target.position));
             }
             sword.SetActive(true);
             
@@ -100,7 +101,7 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
         yield return new WaitForSeconds(0.9f);
         foreach (GameObject sword in _swords)
         {
-            StartCoroutine(MoveTo(sword.transform, curPos, swordDuration));
+            StartCoroutine(MoveTo(sword.transform, curPos, swordDuration * 0.5f));
         }
         yield return new WaitForSeconds(3f);
         EnQueues(_swords, swordQueue);
