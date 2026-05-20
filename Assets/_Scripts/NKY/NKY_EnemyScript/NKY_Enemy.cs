@@ -113,7 +113,6 @@ namespace _Scripts.NKY._EnemyScript
             bossPhase = 2;
             _skillCooldown *=  0.6f;
             Damage = (int)(Damage * 2f);
-            
             StopAllCoroutines();
             StartCoroutine(Phase2ProcessRoutine());
         }
@@ -144,10 +143,10 @@ namespace _Scripts.NKY._EnemyScript
             {
                 _isDead = false;
                 _myHealth.Value += 1;
-                RecoverData data = RecoverData.Create(_myHealth, 10);
+                RecoverData data = RecoverData.Create(_myHealth, _myHealth.MaxValue);
                 _myHealth.Recover(data);
             }
-            
+            Anim.Play("Idle");
             bossPhase = 3;
             _skillCooldown *=  0.5f;
             Damage = (int)(Damage * 1.5f);
@@ -186,7 +185,8 @@ namespace _Scripts.NKY._EnemyScript
             {
                 PlayPhase2();
             }
-
+            
+            Debug.Log(bossPhase);
             if (_myHealth.IsDestroyed)
             {
                 _isDead = true;
@@ -213,13 +213,13 @@ namespace _Scripts.NKY._EnemyScript
             var col = GetComponent<Collider2D>();
             if (col) col.enabled = false;
         }
-        /*private void OnCollisionEnter2D(Collision2D collision)
+        private void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.gameObject.TryGetComponent(out Health health))
             {
                 DamageData data = DamageData.Create(_myHealth, Damage);
                 health.GetDamage(data);
             }
-        }*/
+        }
     }
 }

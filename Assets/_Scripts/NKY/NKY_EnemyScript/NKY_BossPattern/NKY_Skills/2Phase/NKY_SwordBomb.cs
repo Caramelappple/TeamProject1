@@ -54,9 +54,17 @@ public class NKY_SwordBomb : NKY_BossSkill
             int spawnRange;
             for (int i = 0; i < swordCount; i++)
             {
-                if (playAnimName != null)
+                if (string.IsNullOrEmpty(playAnimName))
                 {
                     Anim.Play(playAnimName);
+                    if ((target.position - boss.position).x < 0)
+                    {
+                        boss.rotation = Quaternion.Euler(0, 180, 0);
+                    }
+                    else
+                    {
+                        boss.rotation = Quaternion.Euler(0, 0, 0);
+                    }
                 }
                 Vector3 pos = target.position;
                 spawnRange = Random.Range(0, spawnPoints.Length);
@@ -81,15 +89,14 @@ public class NKY_SwordBomb : NKY_BossSkill
                     ShowWarn(bombCollider, 0.5f, () => pos),
                     WaitUntilOrTime(() => false, 0.5f),
                     EnQueues(sword, swordQueue),
-                    PlayBombEffect(effect, pos),
                     Attack(() =>
                     {
                         _HitBoxController.Cast(bombCollider, pos,
                             (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage));
                     }),
+                    PlayBombEffect(effect, pos),
                     EnQueues(effect, effectQueue)
                 ));
-
                 yield return new WaitForSeconds(spawnInterval);
             }
             yield break;

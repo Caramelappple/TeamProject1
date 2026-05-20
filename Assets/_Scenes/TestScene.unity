@@ -1590,14 +1590,14 @@ MonoBehaviour:
   _skillCooldown: 1.8
   skills:
   - {fileID: 1874845559}
-  - {fileID: 1826878406}
-  - {fileID: 134355378}
+  - {fileID: 1874845559}
+  - {fileID: 1874845559}
   - {fileID: 1290765489}
-  - {fileID: 1828895056}
-  - {fileID: 393221263}
-  - {fileID: 40355974}
+  - {fileID: 1290765489}
+  - {fileID: 1290765489}
   - {fileID: 1218274507}
-  - {fileID: 136981811}
+  - {fileID: 1218274507}
+  - {fileID: 1218274507}
   playerReference: {fileID: 2062148693}
   phase2Effect: {fileID: 580173627}
   phase3Effect: {fileID: 1341960663}
@@ -1659,7 +1659,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -2369,6 +2369,8 @@ MonoBehaviour:
   - {fileID: 1218274506}
   swordPrefab: {fileID: 3338311052345153939, guid: f29f9c68cde12ee40b3ece26d597e163,
     type: 3}
+  returnTarget: {fileID: 713920018}
+  playAnimName: 
   spawnInterval: 0.1
   swordCount: 20
   swordDuration: 0.08

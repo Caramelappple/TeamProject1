@@ -1,13 +1,17 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using _Scripts.NKY._EnemyScript.BossPattern;
 using _Scripts.NKY.NKY_EnemyScript.NKY_Skills;
+using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class NKY_ReturnSwordAttack : NKY_BossSkill
 {
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private GameObject swordPrefab;
+    [SerializeField] private Transform returnTarget;
+    [SerializeField] private string playAnimName = "";
         
     [Header("보스 스킬 스텟 세팅")]
     [SerializeField] private float spawnInterval = 0.3f;
@@ -31,6 +35,11 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
     }
     public override IEnumerator Execute(Transform boss, Transform target)
     {
+        Vector3 pos = returnTarget.position;
+        Vector3 moveDir;
+        float distance = 0;
+        float fireAngle = 0;
+        
         swords.Clear();
         GameObject[] _swords = new GameObject[swordCount];
         for (int i = 0; i < swordCount; i++)
@@ -39,21 +48,36 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
             _swords[i].GetComponent<NKY_CrashDamage>().damage = _damage;
             swords.Add(_swords[i]);
         }
-        Vector3 moveDir;
+
         foreach (GameObject sword in _swords)
         {
-            Vector3 pos = target.position;
-            
-            sword.transform.position = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
+            Vector3 to;
+            float currentAngle;
             moveDir = (pos - sword.transform.position).normalized;
-            sword.transform.up = moveDir;
+            distance = Mathf.Abs(Vector3.Distance(sword.transform.position, pos));
+            sword.transform.position = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
+            if (string.IsNullOrEmpty(playAnimName))
+            {
+                Anim.Play(playAnimName);
+                distance *= 2;
+                fireAngle += 360 / (float)swordCount;
+                sword.transform.rotation = Quaternion.Euler(0, 0, fireAngle);
+                to = sword.transform.position + (sword.transform.up * distance);
+                currentAngle = fireAngle;
+            }
+            else
+            {
+                sword.transform.up = moveDir;
+                to = target.position;
+                currentAngle = sword.transform.localEulerAngles.z;
+            }
             sword.SetActive(true);
-
+            
             yield return PlaySequence(
-                ShowWarn(0, new Vector2(0.4f , (pos - sword.transform.position).magnitude),
-                    0.8f, () => Vector3.Lerp(sword.transform.position, pos, 0.5f), sword.transform.localEulerAngles.z),
+                ShowWarn(0, new Vector2(0.4f , distance),
+                    0.8f, () => Vector3.Lerp(sword.transform.position, to, 0.5f), currentAngle),
                 WaitUntilOrTime(() => false, 0.2f),
-                MoveTo(sword.transform, target.position, swordDuration)
+                Move(sword.transform, sword.transform.up, distance, swordDuration)
             );
             yield return new WaitForSeconds(spawnInterval);
         }
@@ -61,19 +85,22 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
         yield return new WaitForSeconds(0.5f);
         foreach (GameObject sword in _swords)
         {
-            StartCoroutine(ReturnSword(sword, boss));
+            StartCoroutine(ReturnSword(sword, returnTarget));
         }
         yield return new WaitForSeconds(1f);
+        Vector3 curPos = returnTarget.position;
+        
         foreach (GameObject sword in _swords)
         {
-            StartCoroutine(ShowWarn(0, new Vector2(0.4f, (boss.transform.position - sword.transform.position).magnitude),
-                0.8f, () => Vector3.Lerp(sword.transform.position, boss.transform.position, 0.5f),
+            distance = Vector3.Distance(sword.transform.position, curPos);
+            StartCoroutine(ShowWarn(0, new Vector2(0.4f, distance),
+                0.8f, () => Vector3.Lerp(sword.transform.position, curPos, 0.5f),
                 sword.transform.localEulerAngles.z));
         }
         yield return new WaitForSeconds(0.9f);
         foreach (GameObject sword in _swords)
         {
-            StartCoroutine(MoveTo(sword.transform, boss.position, swordDuration));
+            StartCoroutine(MoveTo(sword.transform, curPos, swordDuration));
         }
         yield return new WaitForSeconds(3f);
         EnQueues(_swords, swordQueue);

@@ -366,8 +366,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 919484495}
+  - component: {fileID: 919484496}
   m_Layer: 30
-  m_Name: GameObject
+  m_Name: DiffusionAndAgglomeration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -388,6 +389,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1337888369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &919484496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919484494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8192304f921ff54889397dd0953fba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NKY_ReturnSwordAttack
+  spawnPoints:
+  - {fileID: 1971926568}
+  swordPrefab: {fileID: 7601340347430588439, guid: 7bfb841379beb51489cd548e02e68d28,
+    type: 3}
+  returnTarget: {fileID: 1986267174}
+  playAnimName: Attack2
+  spawnInterval: 0.1
+  swordCount: 20
+  swordDuration: 4
+  <DamageScale>k__BackingField: 1
 --- !u!1 &1192947886
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,7 +688,7 @@ MonoBehaviour:
   bombCollider: {fileID: 1192947887}
   spawnInterval: 0.3
   swordCount: 1
-  swordMoveDuration: 2
+  swordMoveDuration: 0.5
   playAnimName: Attack1
   <DamageScale>k__BackingField: 3
 --- !u!4 &1366919774
@@ -853,7 +876,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::_Scripts.NKY._EnemyScript.NKY_Enemy
   _skillCooldown: 4
   skills:
-  - {fileID: 1366919773}
+  - {fileID: 919484496}
+  - {fileID: 919484496}
   playerReference: {fileID: 1986267169}
   phase2Effect: {fileID: 0}
   phase3Effect: {fileID: 0}

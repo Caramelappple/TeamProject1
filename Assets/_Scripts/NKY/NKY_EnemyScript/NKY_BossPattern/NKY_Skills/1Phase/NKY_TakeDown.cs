@@ -62,6 +62,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 
         public override void EndSkill()
         {
+            Anim.Play("Idle");\
             StartCoroutine(ShadowLock(false));
         }
     }

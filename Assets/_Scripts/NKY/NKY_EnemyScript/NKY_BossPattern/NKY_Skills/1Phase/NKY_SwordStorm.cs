@@ -68,6 +68,8 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 
         public override void EndSkill()
         {
+            if(swords.Count <= 0) return;
+            
             foreach (GameObject sword in swords)
             {
                 sword.SetActive(false);
