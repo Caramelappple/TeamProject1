@@ -107,14 +107,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallingSpear
   moveSpeed: 10
-  hitEffectPrefab: {fileID: 2853822345852306010, guid: e7d9721ace7ad054a8280b81261e819b,
+  hitEffectPrefab: {fileID: 6814668039328291312, guid: 096b137e97f87d94cb4f0c88c627f2c6,
     type: 3}
   explodeDelay: 1
-  damage: 5
+  damage: 4
   damageRadius: 2
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  landEffectPrefab: {fileID: 7135044549648595617, guid: 7e2aaaf5b035b1c4f9d573a1588f4051,
+    type: 3}
+  landEffectLifeTime: 1
+  landEffectOffset: {x: 0, y: -1}
+  hitEffectLifeTime: 1.5
 --- !u!50 &6550862583283464048
 Rigidbody2D:
   serializedVersion: 5

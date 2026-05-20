@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 372617399}
   - component: {fileID: 372617398}
   - component: {fileID: 372617397}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -729,8 +729,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BossController
   speed: 3
   player: {fileID: 372617407}
-  chaseRange: 5.04
-  stopRange: 2
+  chaseRange: 7
+  stopRange: 4
   isMoving: 0
   stunTime: 14
   stunDuration: 8
@@ -759,7 +759,7 @@ MonoBehaviour:
     type: 3}
   attackRange: 4
   attackCooldown: 1.2
-  skillRange: 8
+  skillRange: 15
   skillCoolTime: 3
   jumpAttackCoolTime: 7
   projectileCount: 5
@@ -770,7 +770,7 @@ MonoBehaviour:
   skillAngle: 100
   spiderWebPrefab: {fileID: 6537672017439616555, guid: 6f4b6864af0ae164d82c4157bc5bd01b,
     type: 3}
-  spiderWebSpawnTimer: 15
+  spiderWebSpawnTimer: 10
   spiderWebDuration: 6
   spearSpawner: {fileID: 566629621}
   spearRainCoolTime: 20
@@ -786,6 +786,12 @@ MonoBehaviour:
   phase2Aura: {fileID: 6827825845814320766, guid: ad3515a2d3158284c88195d9529c48ea,
     type: 3}
   phaseChangeDuration: 1.5
+  audioSource: {fileID: 0}
+  attackSfx: {fileID: 0}
+  skillSfx: {fileID: 0}
+  summonSfx: {fileID: 0}
+  jumpSfx: {fileID: 0}
+  phase2Sfx: {fileID: 0}
   warningZone: {fileID: 566629620}
 --- !u!95 &566629617
 Animator:
@@ -895,9 +901,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   _data: {fileID: 11400000, guid: 12761f64a73c74e4d84c7a29e220c9f8, type: 2}
-  <MaxValue>k__BackingField: 100
+  <MaxValue>k__BackingField: 500
   <MinValue>k__BackingField: 0
-  _value: 100
+  _value: 500
 --- !u!114 &566629623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -947,7 +953,7 @@ Transform:
   m_GameObject: {fileID: 633714635}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.68, y: -4.79, z: 0}
+  m_LocalPosition: {x: -4.52, y: -3.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -978,7 +984,7 @@ Transform:
   m_GameObject: {fileID: 645698482}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.463, y: 0.004, z: 0}
+  m_LocalPosition: {x: 0.3, y: 0.013, z: 0}
   m_LocalScale: {x: 1.3015817, y: 0.880228, z: 1.1237}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1330,7 +1336,7 @@ GameObject:
   - component: {fileID: 1761762216}
   - component: {fileID: 1761762215}
   - component: {fileID: 1761762214}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1466,7 +1472,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1853288911}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SwordAxis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
