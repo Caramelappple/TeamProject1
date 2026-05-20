@@ -776,7 +776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 3
-  canMove: 1
+  _canMove: 1
 --- !u!114 &420668338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1762,6 +1762,80 @@ MonoBehaviour:
   colorGrading: {fileID: 0}
   bloom: {fileID: 0}
   vignette: {fileID: 0}
+--- !u!1001 &2080298752
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721833652296281055, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6898139170995705687, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: m_Name
+      value: PunchSkillItem (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526371938425082783, guid: a844ad8457c6b8d4b8adf015483cba2b,
+        type: 3}
+      propertyPath: skillData
+      value: 
+      objectReference: {fileID: 11400000, guid: 4586c9530cec16a46926ff0e5abd721f,
+        type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a844ad8457c6b8d4b8adf015483cba2b, type: 3}
 --- !u!1001 &2131951401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2854,3 +2928,4 @@ SceneRoots:
   - {fileID: 8461865593597054368}
   - {fileID: 2072903085}
   - {fileID: 1254285829}
+  - {fileID: 2080298752}

@@ -75,8 +75,12 @@ public class LSO_PlayerMovement : MonoBehaviour
         }
 
         _moveDir = value.Get<Vector2>();
-        if (_moveDir != Vector2.zero) //움직였을때
+        if (_moveDir != Vector2.zero)
+        {
+            //움직였을때
             _fixedLastDir = _moveDir;
+            _lastDir = _moveDir;
+        }
 
         if (_moveDir.x != 0) //보는 방향 따라서 뒤집기
         {
