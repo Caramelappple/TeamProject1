@@ -30,10 +30,10 @@ public class LSO_PlayerMovement : MonoBehaviour
         Health = GetComponent<Health>();
     }
 
-    private void Start()
-    {
-        OnSkillEvent = new Action<GameObject>[LSO_SkillSlot.instance.slotIndex];
-    }
+    //private void Start()
+    //{
+    //    OnSkillEvent = new Action<GameObject>[LSO_SkillSlot.instance.slotIndex];
+    //}
 
     private void FixedUpdate()
     {

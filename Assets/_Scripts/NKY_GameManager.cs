@@ -6,10 +6,7 @@ public class NKY_GameManager : MonoBehaviour
 
     public static NKY_GameManager instance;
 
-    private NKY_GameManager() 
-    {
-
-    }
+    public GameObject EndUI;
 
     private void Awake()
     {

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 343940969388468375}
   - component: {fileID: -5603735059937245127}
   - component: {fileID: -8634728493169593194}
+  - component: {fileID: -8673271133228900105}
   m_Layer: 0
   m_Name: FireBallEffect
   m_TagString: Untagged
@@ -195,3 +196,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-8673271133228900105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3937254013632766617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d050f50114210245a1cd49d5108c5dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LSO_FireBallExplosion
+  _damage: 40
