@@ -1,6 +1,7 @@
-using System.Collections;
 using _Scripts.HealthSystem;
 using _Scripts.NKY._EnemyScript.BossPattern;
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace _Scripts.NKY._EnemyScript
@@ -10,7 +11,7 @@ namespace _Scripts.NKY._EnemyScript
         
         [Header("보스의 스킬 패턴 세팅")]
         [SerializeField] private  NKY_BossSkill[] _skills;
-        //public LSO_PlayerMovement playerReference;
+        public LSO_PlayerMovement playerReference;
 
         [Header("보스 페이즈 효과")] 
         [SerializeField] private NKY_PhaseEffect phase2Effect;
@@ -29,7 +30,7 @@ namespace _Scripts.NKY._EnemyScript
             Anim = GetComponent<Animator>();
             _shadow = GetComponent<NKY_ShadowController>();
             _myHealth = gameObject.GetComponent<Health>();
-            _target = NKY_GameManager.instance.player.gameObject;
+            playerReference = NKY_GameManager.instance.player.GetComponent<LSO_PlayerMovement>();
 
             if (_skills != null)
             {
@@ -92,6 +93,7 @@ namespace _Scripts.NKY._EnemyScript
             }
 
             _bossSkill = selectedSkill;
+            Debug.Log("디버그");
             return selectedSkill.Execute(transform, _target.transform);
         }
         

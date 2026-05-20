@@ -12,11 +12,18 @@ public class FallingSpear : MonoBehaviour
     [SerializeField] private float damageRadius = 2f;
     [SerializeField] private LayerMask playerLayer;
 
+    [Header("Land Effect")]
+    [SerializeField] private GameObject landEffectPrefab;
+    [SerializeField] private float landEffectLifeTime = 1f;
+    [SerializeField] private Vector2 landEffectOffset = new Vector2(0f, -0.3f);
+
     private Vector2 targetPos;
     private bool hasTarget;
     private bool hasStopped;
     private bool hasExploded;
+
     [SerializeField] private float hitEffectLifeTime = 1.5f;
+
     public void SetTarget(Vector2 target)
     {
         targetPos = target;
@@ -33,6 +40,14 @@ public class FallingSpear : MonoBehaviour
         {
             transform.position = targetPos;
             hasStopped = true;
+
+            if (landEffectPrefab != null)
+            {
+                Vector3 spawnPos = transform.position + (Vector3)landEffectOffset;
+                GameObject landEffect = Instantiate(landEffectPrefab, spawnPos, Quaternion.identity);
+                Destroy(landEffect, landEffectLifeTime);
+            }
+
             StartCoroutine(ExplodeAfterDelay());
         }
     }
@@ -40,7 +55,6 @@ public class FallingSpear : MonoBehaviour
     private IEnumerator ExplodeAfterDelay()
     {
         yield return new WaitForSeconds(explodeDelay);
-
         hasExploded = true;
 
         Collider2D hit = Physics2D.OverlapCircle(transform.position, damageRadius, playerLayer);
@@ -53,15 +67,13 @@ public class FallingSpear : MonoBehaviour
                 playerHealth.GetDamage(data);
             }
         }
-        
+
         if (hitEffectPrefab != null)
         {
             GameObject effect = Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
             Destroy(effect, hitEffectLifeTime);
         }
-        
+
         Destroy(gameObject);
     }
-
-   
 }

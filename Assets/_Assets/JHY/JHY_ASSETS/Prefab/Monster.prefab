@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -4795346000127264374}
   m_Layer: 31
   m_Name: Monster
-  m_TagString: Monster
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   - {fileID: -7103411521585941311}
   knockbackForce: 4
   knockbackDuration: 0.15
-  deathEffectPrefab: {fileID: 5511017839225745216, guid: 3bbccdef68c793b4ab8a21e1dc0fe0f3,
+  deathEffectPrefab: {fileID: 3221970763397476767, guid: 0f930805a86f57d448c48912473612b0,
     type: 3}
   deathEffectLifeTime: 1.5
 --- !u!114 &-4795346000127264374
@@ -197,6 +197,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   _data: {fileID: 11400000, guid: 576ccc14d6a98614ab5876a91319b86e, type: 2}
-  <MaxValue>k__BackingField: 10
+  <MaxValue>k__BackingField: 20
   <MinValue>k__BackingField: 0
-  _value: 10
+  _value: 20

@@ -165,4 +165,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f0f88d92afac6246a811f64a9bfc731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpiderWebZone
-  slowMultiplier: 0.5
+  webRadius: 7
