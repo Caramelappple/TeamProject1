@@ -8,10 +8,10 @@ public class LSO_PlayerMovement : MonoBehaviour
     private static readonly int MoveY = Animator.StringToHash("MoveY");
     public Health Health { get; private set; }
     public float speed = 3;
-    private Animator Animator;
+    private Animator _animator;
     private SpriteRenderer _sprite;
-    
-    [SerializeField] private bool _canMove = true;
+     
+    [SerializeField] private bool canMove = true;
 
     private Vector2 _moveDir;
     private Vector2 _fixedLastDir = Vector2.down;
@@ -20,30 +20,30 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     LSO_SkillItem _skillItem;
     private LSO_ISkill _skill;
-    public Action<GameObject>[] OnSkillEvent;
+    public Action<GameObject>[] onSkillEvent;
 
     private void Awake()
     {
         _rigid = GetComponent<Rigidbody2D>();
-        Animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
         _sprite = GetComponent<SpriteRenderer>();
         Health = GetComponent<Health>();
     }
 
     private void Start()
     {
-        OnSkillEvent = new Action<GameObject>[LSO_SkillSlot.instance.slotIndex];
+        onSkillEvent = new Action<GameObject>[LSO_SkillSlot.instance.slotIndex];
     }
 
     private void FixedUpdate()
     {
-        if (!_canMove) return;
+        if (!canMove) return;
         _rigid.linearVelocity = _moveDir.normalized * speed;
     }
 
     private void Update()
     {
-        if (OnSkillEvent == null || !_canMove) return;
+        if (onSkillEvent == null || !canMove) return;
 
         if (Keyboard.current.fKey.isPressed && _skillItem)
         {
@@ -57,18 +57,18 @@ public class LSO_PlayerMovement : MonoBehaviour
 
         if (Keyboard.current.qKey.isPressed)
         {
-            OnSkillEvent[0]?.Invoke(gameObject);
+            onSkillEvent[0]?.Invoke(gameObject);
         }
 
         if (Keyboard.current.eKey.isPressed)
         {
-            OnSkillEvent[1]?.Invoke(gameObject);
+            onSkillEvent[1]?.Invoke(gameObject);
         }
     }
 
     private void OnMove(InputValue value)
     {
-        if (!_canMove) //움직일수 없을떼
+        if (!canMove) //움직일수 없을떼
         {
             _moveDir = Vector2.zero;
             return;
@@ -91,13 +91,13 @@ public class LSO_PlayerMovement : MonoBehaviour
         {
             _fixedLastDir = new Vector2(Mathf.Sign(_fixedLastDir.x), 0);
 
-            Animator.SetFloat(MoveY, 0);
-            Animator.SetBool(MoveX, _moveDir.x != 0);
+            _animator.SetFloat(MoveY, 0);
+            _animator.SetBool(MoveX, _moveDir.x != 0);
         }
         else
         {
-            Animator.SetFloat(MoveY, _moveDir.y);
-            Animator.SetBool(MoveX, _moveDir.x != 0);
+            _animator.SetFloat(MoveY, _moveDir.y);
+            _animator.SetBool(MoveX, _moveDir.x != 0);
         }
     }
 
@@ -111,13 +111,13 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     public void SetMove(bool move)
     {
-        _canMove = move;
-        if (!_canMove)
+        canMove = move;
+        if (!canMove)
         {
             _moveDir = Vector2.zero;
             if (_rigid != null) _rigid.linearVelocity = Vector2.zero;
-            Animator.SetBool(MoveX, false);
-            Animator.SetFloat(MoveY, 0);
+            _animator.SetBool(MoveX, false);
+            _animator.SetFloat(MoveY, 0);
             if (_moveDir.x != 0)
             {
                 _sprite.flipX = _moveDir.x < 0;
@@ -141,19 +141,19 @@ public class LSO_PlayerMovement : MonoBehaviour
                     _lastDir = _moveDir;
                 }
 
-                Animator.SetFloat(MoveY, _moveDir.y);
-                Animator.SetBool(MoveX, _moveDir.x != 0);
+                _animator.SetFloat(MoveY, _moveDir.y);
+                _animator.SetBool(MoveX, _moveDir.x != 0);
                 if (_fixedLastDir.x != 0 && _fixedLastDir.y != 0) //대각선으로 움직였을때
                 {
                     _fixedLastDir = new Vector2(Mathf.Sign(_fixedLastDir.x), 0);
 
-                    Animator.SetFloat(MoveY, 0);
-                    Animator.SetBool(MoveX, _moveDir.x != 0);
+                    _animator.SetFloat(MoveY, 0);
+                    _animator.SetBool(MoveX, _moveDir.x != 0);
                 }
                 else
                 {
-                    Animator.SetFloat(MoveY, _moveDir.y);
-                    Animator.SetBool(MoveX, _moveDir.x != 0);
+                    _animator.SetFloat(MoveY, _moveDir.y);
+                    _animator.SetBool(MoveX, _moveDir.x != 0);
                 }
 
                 if (_moveDir.x != 0)
