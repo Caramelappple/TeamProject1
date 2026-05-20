@@ -10101,6 +10101,7 @@ GameObject:
   - component: {fileID: 996600787}
   - component: {fileID: 996600797}
   - component: {fileID: 996600798}
+  - component: {fileID: 996600799}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -10172,7 +10173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 3
-  _canMove: 1
+  canMove: 1
 --- !u!114 &996600792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10379,6 +10380,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f65497a3a7dffe499cdd8b0157d3ea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_KeppGoing
+--- !u!114 &996600799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996600786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b9e4d2ebb76f524b9cacdc42e85ce83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LSO_PlayerDead
+  _menuGo: {fileID: 1721921142}
 --- !u!1 &1009997721
 GameObject:
   m_ObjectHideFlags: 0
@@ -18694,7 +18708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1650006075
 RectTransform:
   m_ObjectHideFlags: 0

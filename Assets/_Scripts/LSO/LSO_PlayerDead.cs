@@ -8,7 +8,9 @@ public class LSO_PlayerDead : MonoBehaviour
     private Health _health;
     private SpriteRenderer _sprite;
     private Animator _animator;
-    
+
+    [SerializeField] private KDH_MainMenuGo _menuGo;
+
     private LSO_Editor _editor;
     
     private void Awake()
@@ -42,6 +44,8 @@ public class LSO_PlayerDead : MonoBehaviour
         SetSat(-100);
         SetTra(0);
         Up();
+
+        _menuGo.MakeUI();
     }
     private void SetSat(float targetValue)
     {
