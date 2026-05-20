@@ -47,15 +47,16 @@ public class BossHitReaction : MonoBehaviour
             return;
         }
 
-        // ★ 추가됨: 만약 보스가 지금 공격 중(IsAttacking == true)이라면,
-        // 데미지는 이미 Health에서 받았으니, 아래의 "TakeHit" 애니메이션을 틀지 않고 여기서 끝냅니다!
+        // ★ 콘솔 창에서 이 로그가 어떻게 찍히는지 확인하기 위함입니다.
+        Debug.Log($"[피격 시도] IsAttacking 상태: {bossAttack?.IsAttacking}");
+
         if (bossAttack != null && bossAttack.IsAttacking)
         {
-            Debug.Log("보스가 공격 중이라 끄떡없습니다! (슈퍼아머)");
+            Debug.Log("===> 슈퍼아머 작동으로 피격 애니메이션을 스킵합니다.");
             return;
         }
 
-        // 평소에 맞을 때만 "TakeHit" 재생
+        Debug.Log("===> 정상 작동: anim.SetTrigger('TakeHit')를 호출합니다.");
         anim.SetTrigger("TakeHit");
     }
 
