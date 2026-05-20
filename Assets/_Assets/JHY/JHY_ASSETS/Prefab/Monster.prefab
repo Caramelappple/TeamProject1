@@ -181,7 +181,7 @@ MonoBehaviour:
   - {fileID: -7103411521585941311}
   knockbackForce: 4
   knockbackDuration: 0.15
-  deathEffectPrefab: {fileID: 4956884340829469077, guid: d7036ccf266c45d4db8abceb0172036e,
+  deathEffectPrefab: {fileID: 3221970763397476767, guid: 0f930805a86f57d448c48912473612b0,
     type: 3}
   deathEffectLifeTime: 1.5
 --- !u!114 &-4795346000127264374
@@ -197,6 +197,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   _data: {fileID: 11400000, guid: 576ccc14d6a98614ab5876a91319b86e, type: 2}
-  <MaxValue>k__BackingField: 10
+  <MaxValue>k__BackingField: 20
   <MinValue>k__BackingField: 0
-  _value: 10
+  _value: 20
