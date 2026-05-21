@@ -6,6 +6,9 @@ public class BossHitReaction : MonoBehaviour
     private Animator anim;
     private bool isDead;
 
+    // ★ 추가됨: 보스의 공격 상태를 가져오기 위한 변수
+    private BossAttack2 bossAttack;
+
     [SerializeField] private MonoBehaviour[] disableScripts;
     [SerializeField] private Collider2D[] disableColliders;
     [SerializeField] private Rigidbody2D rb;
@@ -14,6 +17,9 @@ public class BossHitReaction : MonoBehaviour
     {
         health = GetComponent<Health>();
         anim = GetComponent<Animator>();
+
+        // ★ 추가됨: 시작할 때 같은 오브젝트에 있는 BossAttack2를 찾아서 연결해 둡니다.
+        bossAttack = GetComponent<BossAttack2>();
 
         if (rb == null)
             rb = GetComponent<Rigidbody2D>();
@@ -41,6 +47,16 @@ public class BossHitReaction : MonoBehaviour
             return;
         }
 
+        // ★ 콘솔 창에서 이 로그가 어떻게 찍히는지 확인하기 위함입니다.
+        Debug.Log($"[피격 시도] IsAttacking 상태: {bossAttack?.IsAttacking}");
+
+        if (bossAttack != null && bossAttack.IsAttacking)
+        {
+            Debug.Log("===> 슈퍼아머 작동으로 피격 애니메이션을 스킵합니다.");
+            return;
+        }
+
+        Debug.Log("===> 정상 작동: anim.SetTrigger('TakeHit')를 호출합니다.");
         anim.SetTrigger("TakeHit");
     }
 

@@ -11,6 +11,9 @@ public class BossAttack2 : MonoBehaviour
     private float lastAttackTime;
     private bool isDead;
 
+    // ★ 추가됨: 보스가 현재 공격 애니메이션 중인지 확인하는 변수 (외부에서 읽기 전용)
+    public bool IsAttacking { get; private set; }
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -28,6 +31,18 @@ public class BossAttack2 : MonoBehaviour
             lastAttackTime = Time.time;
             anim.SetTrigger("Attack");
         }
+    }
+
+    // ★ 추가됨: 애니메이션 이벤트가 맨 처음(0프레임)에 호출할 함수
+    public void OnAttackStart()
+    {
+        IsAttacking = true;
+    }
+
+    // ★ 추가됨: 애니메이션 이벤트가 맨 끝(마지막 프레임)에 호출할 함수
+    public void OnAttackEnd()
+    {
+        IsAttacking = false;
     }
 
     public void AttackPlayer()
