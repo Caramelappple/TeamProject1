@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db88baa32d4d470faf101adad4bc61f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_Scripts.LSO.LSO_Skills.Skills.LSO_FireWall
+  clip: {fileID: 8300000, guid: 0e733e9a8d5814d78aee867414ae4269, type: 3}
   effect: {fileID: 7643000115279140553, guid: 8cdf96a51a5c0ad48b4bc413618abcb2, type: 3}

@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class LSO_FireBallSpawner : MonoBehaviour,LSO_ISkill
 {
+    [SerializeField] private AudioClip clip;
+    
     private LSO_PlayerMovement _movement;
     private Vector3 _lastDir;
      
@@ -19,8 +21,10 @@ public class LSO_FireBallSpawner : MonoBehaviour,LSO_ISkill
         _lastDir = _movement.GetFixedLastDir();
         float angle = Mathf.Atan2(_lastDir.y, _lastDir.x) * Mathf.Rad2Deg;
         
+       
         _fireball = Instantiate(fireballPrefab, player.transform.position, Quaternion.AngleAxis(angle+90, Vector3.forward));
         _fireball.GetComponent<LSO_FireBall>().Init(_lastDir);
+        LSO_SoundManager.Instance.SfxPlay(clip);
         
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
     }

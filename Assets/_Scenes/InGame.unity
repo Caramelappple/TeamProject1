@@ -6397,9 +6397,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossAttack2
   player: {fileID: 996600796}
-  attackRange: 4
-  attackCooldown: 1.5
-  damage: 3
+  attackRange: 3
+  attackCooldown: 3
+  damage: 5
 --- !u!114 &569689463
 MonoBehaviour:
   m_ObjectHideFlags: 0

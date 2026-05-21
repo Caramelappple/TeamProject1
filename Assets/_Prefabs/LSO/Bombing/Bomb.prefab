@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a8d6e80860fc7845b2fe1f94a5379e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Bombing
+  clip: {fileID: 8300000, guid: 3b7b7836343d14cefa6ab9a593dfe357, type: 3}
   effect: {fileID: 4060151744882182914, guid: a44077a4138890e489c96c11e789c6c8, type: 3}
   coolTime: 5
   selfDamage: 30
-  damage: 80

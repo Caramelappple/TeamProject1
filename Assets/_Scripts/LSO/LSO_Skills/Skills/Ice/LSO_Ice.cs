@@ -3,13 +3,16 @@ using UnityEngine;
 
 public class LSO_Ice : MonoBehaviour,LSO_ISkill
 {
+    [SerializeField] private AudioClip[] clips;
+    private int _clipIndex;
+    
     private GameObject _player;
     private LSO_PlayerMovement _playerMovement;
     private bool _canUse = true;
     private Vector3 _lastDir;
     
     private float _coolTime = 5f;
-    private float _waitTime = 0.08f;//아이스 스파이크 사이의 시간 간격
+    private float _waitTime = 0.12f;//아이스 스파이크 사이의 시간 간격
     private int _count = 12;//소환할 개수
     private float _range = 1.8f;//플레이어를 중심으로 띄어진 거리
     private Vector3 _tempTransform;
@@ -40,11 +43,14 @@ public class LSO_Ice : MonoBehaviour,LSO_ISkill
         float startAngle = baseAngle - (spreadAngle / 2f);
         float angleStep = spreadAngle / (_count - 1);
 
-        for (int i = 0; i < _count; i++)
+        for (int i = 0; i < _count-1; i++)
         {
             float currentAngle = startAngle + (angleStep * i);
             float radian = currentAngle * Mathf.Deg2Rad;
             Vector2 direction = new Vector2(Mathf.Cos(radian), Mathf.Sin(radian));
+            
+            LSO_SoundManager.Instance.SfxPlay(clips[_clipIndex]);
+            _clipIndex = (_clipIndex + 1) % clips.Length;
             
             _effectInstance = Instantiate(effect, (Vector3)direction*_range + _tempTransform, Quaternion.identity);
             _effectInstance.transform.SetParent(gameObject.transform);

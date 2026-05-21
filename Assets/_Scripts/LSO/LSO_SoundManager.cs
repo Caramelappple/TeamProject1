@@ -4,18 +4,28 @@ public class LSO_SoundManager : MonoBehaviour
 {
     public static LSO_SoundManager Instance;
 
-    private void Awake()
+    public AudioSource bgmSource;  // BGM 전용
+    public AudioSource sfxSource;  // SFX 전용 (PlayOneShot 사용)
+
+    void Awake()
     {
-        Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else Destroy(gameObject);
     }
 
-
-    public void SfxPlay(string sfxName,AudioClip clip)
+    public void PlayBGM(AudioClip clip)
     {
-        GameObject go = new GameObject(sfxName+"Sound");
-        AudioSource source = go.AddComponent<AudioSource>();
-        source.clip = clip;
-        source.Play();
-        Destroy(go, clip.length);
+        bgmSource.clip = clip;
+        bgmSource.loop = true;
+        bgmSource.Play();
+    }
+
+    public void SfxPlay(AudioClip clip)
+    {
+        sfxSource.PlayOneShot(clip);  // 동시 재생 OK
     }
 }

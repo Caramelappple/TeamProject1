@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class LSO_WindSpawner : MonoBehaviour,LSO_ISkill
 {
+    [SerializeField] private AudioClip clip;
+    
     [SerializeField] private GameObject effect;
     private GameObject _effectInstance;
     private float _coolTime = 10f;
@@ -22,12 +24,14 @@ public class LSO_WindSpawner : MonoBehaviour,LSO_ISkill
         if (!_canUse) return;
         _canUse = false;
         
+        LSO_SoundManager.Instance.SfxPlay(clip);
+        
         _effectInstance = Instantiate(effect, player.transform.position, Quaternion.identity);
         _effectInstance.GetComponent<LSO_Wind>().Init(player.GetComponent<Health>());
         _effectInstance.transform.SetParent(transform);
         _rigid = _effectInstance.GetComponent<Rigidbody2D>();
         _playerMovement = player.GetComponent<LSO_PlayerMovement>();
-
+        
         _rigid.linearVelocity = _playerMovement.GetFixedLastDir();
         
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
