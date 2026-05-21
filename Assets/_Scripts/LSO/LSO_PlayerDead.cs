@@ -43,6 +43,7 @@ public class LSO_PlayerDead : MonoBehaviour
         health.SetDamageable(false);
         _attack.SetCanAttack(false);
         _movement.SetMove(false);
+        Camera.main.GetComponent<LSO_CameraMovement>().test = true;
     
         SetSat(-100);
         SetTra(0);

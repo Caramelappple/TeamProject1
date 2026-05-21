@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64eea0e920750f4dab083ba0aa532d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Slow
+  clip: {fileID: 8300000, guid: 0ea096d0fbf034ba8bb5b08cd5d20ee3, type: 3}
   effect: {fileID: 2248660430399015613, guid: 20e99dc366e5153499f48c022ba76618, type: 3}
