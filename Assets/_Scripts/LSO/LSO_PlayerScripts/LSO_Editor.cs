@@ -41,8 +41,10 @@ public class LSO_Editor : MonoBehaviour
 
     private IEnumerator SetHitCoroutine(Health health , DamageResultData data)
     {
-        
-        if (!health.gameObject.CompareTag("Player") || data.giver.CompareTag("Player")) yield break;
+        if (data.giver)
+        {
+            if (!health.gameObject.CompareTag("Player") || data.giver.CompareTag("Player")) yield break;
+        }
         LSO_SoundManager.Instance.SfxPlay(clips[Random.Range(0, clips.Length)]);
         
         vignette.color.value = new Color32(255, 170, 179, 255);

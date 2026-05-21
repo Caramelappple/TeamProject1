@@ -19,6 +19,8 @@ public class BossFollow2D : MonoBehaviour
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         lastDashTime = Time.time;
+
+        player = NKY_GameManager.instance.player.transform;
     }
     private void Update()
     {
