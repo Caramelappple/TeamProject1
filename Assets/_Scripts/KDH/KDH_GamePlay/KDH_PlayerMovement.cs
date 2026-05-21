@@ -1,6 +1,4 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.Android;
 using UnityEngine.InputSystem;
 
 public class KDH_PlayerMovement : MonoBehaviour
