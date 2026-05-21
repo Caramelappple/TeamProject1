@@ -6346,7 +6346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f469a8d7084c16e45afac5f311ccc573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_InitItemPortal
-  itemPack: {fileID: 0}
+  itemPack: {fileID: 6640355510752913436, guid: 419b8511b3b8a8f4bbacbe44c68299ec,
+    type: 3}
 --- !u!1 &1391451643
 GameObject:
   m_ObjectHideFlags: 0
