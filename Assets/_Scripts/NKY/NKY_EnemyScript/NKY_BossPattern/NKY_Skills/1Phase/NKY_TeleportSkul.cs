@@ -61,8 +61,18 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
                 crash.teleportTarget = boss;
                 skuls.Add(_swords[i]);
             }
-            Anim.Play(playAnimName);
-            yield return WaitAnim(playAnimName, 0.8f);
+            if (playAnimName != null)
+            {
+                Anim.Play(playAnimName);
+                if ((target.position - boss.position).x < 0)
+                {
+                    boss.rotation = Quaternion.Euler(0, 180, 0);
+                }
+                else
+                {
+                    boss.rotation = Quaternion.Euler(0, 0, 0);
+                }
+            }
             foreach (GameObject skul in _swords)
             {
                 Vector3 to;
