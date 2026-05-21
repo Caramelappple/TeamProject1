@@ -44,6 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2103b9d6230104b8f0030854f1fcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Blood
-  clip: {fileID: 8300000, guid: 657ed399b484844c8aceb6a7489d6079, type: 3}
   hEffect: {fileID: 7209271979582039876, guid: 3678edc21e25f034097f88fff7c2c196, type: 3}
   vEffect: {fileID: 8364555677630382504, guid: 41ef4ba765f23e149adf1cc115c4833b, type: 3}

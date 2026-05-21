@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class LSO_Slow : MonoBehaviour,LSO_ISkill
 {
-    [SerializeField] private AudioClip clip;
-    
     private float _tolerance = 0.1f;
     [SerializeField]private GameObject effect;
     private GameObject _effectInstance;
@@ -21,7 +19,6 @@ public class LSO_Slow : MonoBehaviour,LSO_ISkill
         _player = player;
         _effectInstance = Instantiate(effect, player.transform.position, Quaternion.identity);
         _animator = _effectInstance.GetComponent<Animator>();
-        LSO_SoundManager.Instance.SfxPlay(clip);
         _player.GetComponent<MonoBehaviour>().StartCoroutine(SetScale(0.5f));
         player.GetComponent<MonoBehaviour>().StartCoroutine(SetSat(-100));
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
@@ -33,7 +30,6 @@ public class LSO_Slow : MonoBehaviour,LSO_ISkill
         yield return new WaitForSecondsRealtime(_waitTime);
         _player.GetComponent<MonoBehaviour>().StartCoroutine(SetScale(1));
         _player.GetComponent<MonoBehaviour>().StartCoroutine(SetSat(0));
-        LSO_SoundManager.Instance.SfxPlay(clip);
         yield return new WaitForSeconds(time);
         _canUse = true;
     }

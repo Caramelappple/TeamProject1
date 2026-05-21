@@ -230,7 +230,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -2119547469
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -8107,7 +8107,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -2119547469
   m_SortingLayer: -1
-  m_SortingOrder: 2
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -14132,7 +14132,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -2119547469
   m_SortingLayer: -1
-  m_SortingOrder: 4
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -20564,7 +20564,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -2119547469
   m_SortingLayer: -1
-  m_SortingOrder: 1
+  m_SortingOrder: -3
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -23706,7 +23706,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -2119547469
   m_SortingLayer: -1
-  m_SortingOrder: 3
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -24426,21 +24426,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd3981f39acbed4fb3a0457661e5a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NKY_Enemy.NKY_Enemy
+  bossPhase: 1
   _skillCooldown: 1.8
-  _skills:
-  - {fileID: 1781352936}
-  - {fileID: 1709958997}
-  - {fileID: 1355050129}
-  - {fileID: 775105456}
-  - {fileID: 775105456}
-  - {fileID: 775105456}
-  - {fileID: 2047782804}
-  - {fileID: 1489001129}
-  - {fileID: 1905282105}
+  skills: []
   playerReference: {fileID: 0}
+  _bossSkillEnd: {fileID: 0}
   phase2Effect: {fileID: 1200569571}
   phase3Effect: {fileID: 1082273229}
-  <damage>k__BackingField: 5
+  <Damage>k__BackingField: 0
 --- !u!50 &1484317606
 Rigidbody2D:
   serializedVersion: 5
@@ -24734,6 +24727,9 @@ MonoBehaviour:
   - {fileID: 1489001128}
   swordPrefab: {fileID: 3338311052345153939, guid: f29f9c68cde12ee40b3ece26d597e163,
     type: 3}
+  returnTarget: {fileID: 0}
+  playAnimName: 
+  bul: 0
   spawnInterval: 0.1
   swordCount: 20
   swordDuration: 0.08
@@ -25913,9 +25909,11 @@ MonoBehaviour:
     type: 3}
   effectPrefab: {fileID: 8294358143505051542, guid: c5b7754f41228a94ea00d44811d148f8,
     type: 3}
+  bombCollider: {fileID: 0}
   spawnInterval: 0.3
   swordCount: 8
-  swordDuration: 0.2
+  swordMoveDuration: 0.2
+  playAnimName: 
   <DamageScale>k__BackingField: 0.7
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

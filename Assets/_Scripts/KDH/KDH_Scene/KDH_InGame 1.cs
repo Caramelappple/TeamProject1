@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,7 +8,8 @@ public class KDH_InGame1 : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene("1");
+            SceneManager.LoadScene(2);
+            NKY_GameManager.instance.player.transform.position = new Vector3(0f, 0f, 0f); ;
         }
     }
 }

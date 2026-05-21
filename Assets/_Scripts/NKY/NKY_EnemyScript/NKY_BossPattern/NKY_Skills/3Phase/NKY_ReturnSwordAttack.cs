@@ -39,7 +39,6 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
         Vector3 moveDir;
         float distance = 0;
         float fireAngle = 0;
-        
         swords.Clear();
         GameObject[] _swords = new GameObject[swordCount];
         for (int i = 0; i < swordCount; i++)
@@ -49,6 +48,17 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
             swords.Add(_swords[i]);
         }
 
+        if (playAnimName != null)
+        {
+            if ((target.position - boss.position).x < 0)
+            {
+                boss.rotation = Quaternion.Euler(0, 180, 0);
+            }
+            else
+            {
+                boss.rotation = Quaternion.Euler(0, 0, 0);
+            }
+        }
         foreach (GameObject sword in _swords)
         {
             Vector3 to;

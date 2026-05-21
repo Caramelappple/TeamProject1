@@ -2,7 +2,7 @@
 using UnityEngine;
 
 public class LSO_RadialBeamSpawner : MonoBehaviour,LSO_ISkill
-{
+{ 
     [SerializeField] private AudioClip[] clip;
     
     private bool _canUse = true;
@@ -24,7 +24,7 @@ public class LSO_RadialBeamSpawner : MonoBehaviour,LSO_ISkill
     [SerializeField]private GameObject effect;
     private GameObject _effectInstance;//이펙트 복제한것
     private Animator _animator;
-    private bool _onEnd;
+    private bool _onEnd = false;
     
     public void UseSkill(GameObject player)
     { if (!_canUse) return;
@@ -81,7 +81,7 @@ public class LSO_RadialBeamSpawner : MonoBehaviour,LSO_ISkill
         if (_projectileCount <= 1)
         {
             if (!firePoint) yield break;
-            
+                
             LSO_SoundManager.Instance.SfxPlay(clip[Random.Range(0, clip.Length)]);
             Instantiate(projectilePrefab, firePoint.position, Quaternion.Euler(0f, 0f, baseAngle));
             

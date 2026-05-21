@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using _Scripts.NKY._EnemyScript.BossPattern;
+using _Scripts.NKY.Manager;
 using UnityEngine;
 
 namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
@@ -40,7 +41,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
                 yield return StartCoroutine(WaitAnim("Appear", 0.6f));
                 
                 yield return PlaySequence(
-                    ShowWarn(slamHitbox[0], 0.8f, () => _shadow.transform.position),
+                    ShowWarn((NKY_IndicatorManager.IndicatorType)1, new Vector2(12f, 2f), 0.8f, () => _shadow.transform.position),
                     ShowWarn(slamHitbox[2], 0.8f, () => _shadow.transform.position));
 
                 yield return PlaySequence(

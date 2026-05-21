@@ -32,7 +32,6 @@ public class NKY_SlashRush : NKY_BossSkill
             angle -= 90f;
             yield return PlaySequence(
                 Move(bossTransform, dir, moveDistance * 0.1f, 0.2f),
-                ShowWarn(NKY_IndicatorManager.IndicatorType.HarfCircle, new Vector2(3.5f, 3.5f), 0.5f, () => bossTransform.position, angle),
                 SlashEffect(slash, bossTransform.position, angle, slashCollider),
                 Attack(() => _HitBoxController.Cast(slashCollider,(hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage)))
                 );
