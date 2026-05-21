@@ -12,7 +12,7 @@ namespace _Scripts.NKY._EnemyScript
         [Header("보스의 스킬 패턴 세팅")]
         [SerializeField] private  NKY_BossSkill[] skills;
         public LSO_PlayerMovement playerReference;
-        [SerializeField] private NKY_BossSkillEnd  _bossSkillEnd = null;
+        [SerializeField] private NKY_BossPatternEnd  bossPatternEnd = null;
 
         [Header("보스 페이즈 효과")] 
         [SerializeField] private NKY_PhaseEffect phase2Effect;
@@ -69,8 +69,8 @@ namespace _Scripts.NKY._EnemyScript
                 
                 _nextSkill = PickNextSkill();
                 yield return ExecutePattern(_nextSkill);
-                if(_bossSkillEnd != null)
-                    yield return _bossSkillEnd.BossSkillEnd();
+                if(bossPatternEnd != null)
+                    yield return bossPatternEnd.BossPatternEnd(transform);
                 _lastSkillTime = Time.time;
             }
         }
