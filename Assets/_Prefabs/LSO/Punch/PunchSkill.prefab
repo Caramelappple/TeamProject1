@@ -44,4 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42cc3e7214d8792478b0673e680d3189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PunchSpawner
+  clip:
+  - {fileID: 8300000, guid: b5be1fc0677fa429bae9def683eb8df4, type: 3}
+  - {fileID: 8300000, guid: 373993fe8ec1d44798ad79abd9d9e530, type: 3}
+  - {fileID: 8300000, guid: 3c31239ae3e184d249fad36895811bdc, type: 3}
   effect: {fileID: 5010421656102145119, guid: 65411afd7dfd0ee4d9dc53e960ec2982, type: 3}

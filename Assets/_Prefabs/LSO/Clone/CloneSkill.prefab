@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d558cf4243d2941a6bc42691919b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_CloneSpawner
+  clip: {fileID: 8300000, guid: d4eb3860e207c4844bb6ad3af3262894, type: 3}
   clonePrefab: {fileID: 110515909054239624, guid: 6bb4a2cb999d9e94093c032582aebf4b,
     type: 3}

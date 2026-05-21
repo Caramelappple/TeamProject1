@@ -15,6 +15,6 @@ MonoBehaviour:
   skillName: "\uC5F0\uB9C9"
   skillDescription: "\uC5F0\uB9C9\uC744 \uD130\uD2B8\uB9BC\uACFC \uB3D9\uC2DC\uC5D0
     \uC774\uB3D9\uD569\uB2C8\uB2E4"
-  skillIcon: {fileID: 21300032, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
-  skillPrefab: {fileID: 9117852009125758070, guid: 2fdc6189300ba5b4396b28b897eccaff,
+  skillIcon: {fileID: 21300050, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
+  skillPrefab: {fileID: 9117852009125758070, guid: ee7ceeb26044af5478a767237089ed42,
     type: 3}

@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eb9b665e095e7648926ef5ef6010b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_FireAura
-  effect: {fileID: 9059873508784684391, guid: eaf9a8c868b1fa84c9ab68f3e4e55f69, type: 3}
+  clip: {fileID: 8300000, guid: 979ea697d5434401695ad021d86eaefc, type: 3}
+  effect: {fileID: 9059873508784684391, guid: 734da0e0c29d93e4bb45806294d622d0, type: 3}
   coolTime: 5
   waitTime: 1
   damage: 20

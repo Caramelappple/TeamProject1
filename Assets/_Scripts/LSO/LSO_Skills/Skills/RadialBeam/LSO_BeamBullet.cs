@@ -1,9 +1,7 @@
-using System;
 using UnityEngine;
 
 public class LSO_BeamBullet : MonoBehaviour
 {
-    private Rigidbody2D _rigid;
     private float _speed = 0.25f;
     private float _lifeTime = 1.8f;
     private int _damage = 5;
@@ -12,11 +10,6 @@ public class LSO_BeamBullet : MonoBehaviour
     {
         Destroy(gameObject, _lifeTime);
     }
-    private void Awake()
-    {
-        _rigid = GetComponent<Rigidbody2D>();
-    }
-
     private void FixedUpdate()
     {
         transform.position += transform.right * _speed;
