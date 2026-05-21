@@ -237,6 +237,10 @@ MonoBehaviour:
   dashInterval: 10
   dashSpeed: 10
   dashDuration: 0.7
+  dashPrepareTime: 0.75
+  dashWarningPrefab: {fileID: 5234287652115864234, guid: 7397bceca59d5514090fe117691db18e,
+    type: 3}
+  dashWarningDistance: 2
 --- !u!70 &1215458595
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -271,8 +275,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.013644218, y: -0.7727959}
-  m_Size: {x: 3.4723787, y: 3.8544087}
+  m_Offset: {x: -0.08969927, y: -0.85734975}
+  m_Size: {x: 2.9274778, y: 3.685301}
   m_Direction: 0
 --- !u!50 &1215458596
 Rigidbody2D:
