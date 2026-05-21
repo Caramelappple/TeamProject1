@@ -45,7 +45,7 @@ public class LSO_PlayerAttack : MonoBehaviour
         _isAttacking = true;
         _attackable = false;
         
-        LSO_SoundManager.Instance.SfxPlay("Attack", clip[_clipIndex]);
+        LSO_SoundManager.Instance.SfxPlay(clip[_clipIndex]);
         _clipIndex = (_clipIndex + 1) % clip.Length;
         
         Collider2D[] colliders = Physics2D.OverlapBoxAll(sword.transform.position, sword.transform.localScale / 2, 0);

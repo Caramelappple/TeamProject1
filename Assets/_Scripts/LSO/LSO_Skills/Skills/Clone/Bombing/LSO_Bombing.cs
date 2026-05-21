@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class LSO_Bombing : MonoBehaviour,LSO_ISkill
 {
+    [SerializeField] private AudioClip clip;
+    
     private static readonly int Explode = Animator.StringToHash("Explode");
     private Animator _animator;
     private LSO_PlayerMovement _playerMovement;
@@ -13,11 +15,13 @@ public class LSO_Bombing : MonoBehaviour,LSO_ISkill
     
     [SerializeField] private float coolTime = 5f;
     [SerializeField] private int selfDamage = 30;
+    
 
     public void UseSkill(GameObject player)
     {
         if (!_canUse) return;
-
+        
+        LSO_SoundManager.Instance.SfxPlay(clip); // 오디오 실행
         if (!_effectInstance || !_animator)
         {
             _effectInstance = Instantiate(effect, player.transform.position, transform.rotation);
@@ -40,10 +44,10 @@ public class LSO_Bombing : MonoBehaviour,LSO_ISkill
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(coolTime));
     }
 
-    public IEnumerator CoolTime(float coolTime)
+    public IEnumerator CoolTime(float time)
     {
         _canUse = false;
-        yield return new WaitForSeconds(coolTime);//쿨타임 대기
+        yield return new WaitForSeconds(time);//쿨타임 대기
         _canUse = true;
     }
 }

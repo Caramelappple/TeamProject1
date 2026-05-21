@@ -6,10 +6,9 @@ public class LSO_Wind : MonoBehaviour
     private Rigidbody2D _rigid;
     
     private float _speed = 1f;
-    private float _pullForce = 10f;
     private float _innerRange = 8f;
-    private int _damage = 2;
-    private float _liveTime = 5f;
+    private int _damage = 3;
+    private float _liveTime = 9.2f;
     private float _interval = 0.5f;
     private Health _playerHealth;
 
