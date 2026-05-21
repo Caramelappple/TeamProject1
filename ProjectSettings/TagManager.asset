@@ -9,7 +9,6 @@ TagManager:
   - RandomBox
   - Monster
   - Boss
-  - Dummy
   layers:
   - Default
   - TransparentFX
