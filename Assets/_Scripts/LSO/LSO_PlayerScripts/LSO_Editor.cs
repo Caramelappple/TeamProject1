@@ -4,6 +4,9 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class LSO_Editor : MonoBehaviour
 {
+    [SerializeField] private AudioClip[] clip;
+    private int _clipIndex;
+    
     public static LSO_Editor Instance;
     
     public PostProcessVolume postProcessVolume;
@@ -39,8 +42,12 @@ public class LSO_Editor : MonoBehaviour
 
     private IEnumerator SetHitCoroutine(Health health)
     {
-        vignette.color.value = new Color32(255, 170, 179, 255);
+        
         if (!health.gameObject.CompareTag("Player")) yield break;
+        LSO_SoundManager.Instance.SfxPlay("Attack", clip[_clipIndex]);
+        _clipIndex = (_clipIndex + 1) % clip.Length;
+        
+        vignette.color.value = new Color32(255, 170, 179, 255);
         CameraShake.instance.Shake(0.15f, 0.12f);
         vignette.intensity.value = 0.48f;
         vignette.active = true;

@@ -2,6 +2,9 @@ using System.Collections;
 using UnityEngine;
 public class LSO_PlayerAttack : MonoBehaviour
 {
+    [SerializeField] private AudioClip[] clip;
+    private int _clipIndex;
+    
     [SerializeField] protected GameObject sword;
     private LSO_PlayerMovement _movement;
     private SpriteRenderer _sprite;
@@ -41,7 +44,10 @@ public class LSO_PlayerAttack : MonoBehaviour
     {
         _isAttacking = true;
         _attackable = false;
-
+        
+        LSO_SoundManager.Instance.SfxPlay("Attack", clip[_clipIndex]);
+        _clipIndex = (_clipIndex + 1) % clip.Length;
+        
         Collider2D[] colliders = Physics2D.OverlapBoxAll(sword.transform.position, sword.transform.localScale / 2, 0);
         foreach (Collider2D collision in colliders)
         {
@@ -82,12 +88,7 @@ public class LSO_PlayerAttack : MonoBehaviour
         _attackable = true;
         _isAttacking = false;
     }
-
-    private void SetAttack(bool attackable)
-    {
-        _attackable = attackable;
-    }
-
+    
     private IEnumerator IsDirSame()
     {
         while (true)

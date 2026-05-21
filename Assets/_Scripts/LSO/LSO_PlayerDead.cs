@@ -3,6 +3,8 @@ using DG.Tweening;
 
 public class LSO_PlayerDead : MonoBehaviour
 {
+    [SerializeField]private AudioClip clip;
+    
     private LSO_PlayerAttack _attack;
     private LSO_PlayerMovement _movement;
     private Health _health;
@@ -32,6 +34,7 @@ public class LSO_PlayerDead : MonoBehaviour
         if (health.Value > health.MinValue) return;
     
         // 1. 애니메이션을 정상 실행 (컴포넌트를 바로 끄지 않음)
+        LSO_SoundManager.Instance.SfxPlay("Die",clip);
         _animator.Play("DownIdle");
         DOVirtual.DelayedCall(0.02f, () => _animator.speed = 0f);
         health.Value = 0;

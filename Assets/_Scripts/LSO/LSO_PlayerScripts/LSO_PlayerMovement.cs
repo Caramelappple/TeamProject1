@@ -10,6 +10,12 @@ public class LSO_PlayerMovement : MonoBehaviour
     public float speed = 3;
     private Animator _animator;
     private SpriteRenderer _sprite;
+    private AudioSource _audioSource;
+    
+    [SerializeField]private AudioClip[] clips; //오디오 소리를 모아두는 클립
+    [SerializeField]private float footstepRate = 0.2f; // 간격
+    private float _footStepTime; // 시간받아서
+    private int _clipIndex;
      
     [SerializeField] private bool canMove = true;
 
@@ -20,7 +26,7 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     LSO_SkillItem _skillItem;
     private LSO_ISkill _skill;
-    public Action<GameObject>[] onSkillEvent;
+    public Action<GameObject>[] OnSkillEvent;
 
     private void Awake()
     {
@@ -28,12 +34,13 @@ public class LSO_PlayerMovement : MonoBehaviour
         _animator = GetComponent<Animator>();
         _sprite = GetComponent<SpriteRenderer>();
         Health = GetComponent<Health>();
+        _audioSource = GetComponent<AudioSource>(); 
     }
 
 
     private void Start()
     {
-        onSkillEvent = new Action<GameObject>[LSO_SkillSlot.instance.slotIndex];
+        OnSkillEvent = new Action<GameObject>[LSO_SkillSlot.instance.slotIndex];
     }
 
     private void FixedUpdate()
@@ -44,7 +51,13 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (onSkillEvent == null || !canMove) return;
+        if (OnSkillEvent == null || !canMove) return;
+        if (Time.time - _footStepTime > footstepRate && _rigid.linearVelocity.magnitude > 0.1f)
+        {
+            _footStepTime = Time.time; //시간을 현재시간으로
+            _audioSource.PlayOneShot(clips[_clipIndex]); // 오디오 실행
+            _clipIndex = (_clipIndex + 1) % clips.Length;
+        }
 
         if (Keyboard.current.fKey.isPressed && _skillItem)
         {
@@ -58,13 +71,15 @@ public class LSO_PlayerMovement : MonoBehaviour
 
         if (Keyboard.current.qKey.isPressed)
         {
-            onSkillEvent[0]?.Invoke(gameObject);
+            OnSkillEvent[0]?.Invoke(gameObject);
         }
 
         if (Keyboard.current.eKey.isPressed)
         {
-            onSkillEvent[1]?.Invoke(gameObject);
+            OnSkillEvent[1]?.Invoke(gameObject);
         }
+        
+        
     }
 
     private void OnMove(InputValue value)
@@ -100,7 +115,14 @@ public class LSO_PlayerMovement : MonoBehaviour
             _animator.SetFloat(MoveY, _moveDir.y);
             _animator.SetBool(MoveX, _moveDir.x != 0);
         }
-    }
+
+        /*if (Time.time - _footStepTime > footstepRate) // 시간을 재준다.
+        {
+            _footStepTime = Time.time; //시간을 현재시간으로
+            _audioSource.PlayOneShot(clips[_clipIndex]); // 오디오 실행
+            _clipIndex = (_clipIndex + 1) % clips.Length;
+        }*/
+}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

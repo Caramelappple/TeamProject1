@@ -45,7 +45,7 @@ public class LSO_SkillSlot : MonoBehaviour
         {
             if (_skillSlot[i] == skill)
             {
-                _playerMovement.onSkillEvent[i] -= skill.UseSkill;
+                _playerMovement.OnSkillEvent[i] -= skill.UseSkill;
                 _skillSlot[i] = null;
                 _skillItem[i] = null;
             }
@@ -53,13 +53,13 @@ public class LSO_SkillSlot : MonoBehaviour
 
         // 해당 슬롯 기존 스킬 구독 해제 및 삭제
         if (_skillSlot[index] != null)
-            _playerMovement.onSkillEvent[index] -= _skillSlot[index].UseSkill;
+            _playerMovement.OnSkillEvent[index] -= _skillSlot[index].UseSkill;
 
         RemoveSkill(index);
 
         _skillItem[index] = skillItem;
         _skillSlot[index] = skill;
-        _playerMovement.onSkillEvent[index] += skill.UseSkill;
+        _playerMovement.OnSkillEvent[index] += skill.UseSkill;
     }
     
     
