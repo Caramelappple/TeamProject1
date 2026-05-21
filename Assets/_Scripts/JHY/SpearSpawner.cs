@@ -17,18 +17,18 @@ public class SpearSpawner : MonoBehaviour
 
     private IEnumerator SpawnSpearsRoutine()
     {
-        Camera cam = Camera.main;
-        Vector3 leftBottom = cam.ViewportToWorldPoint(new Vector3(0f, 0f, 0f));
-        Vector3 rightTop = cam.ViewportToWorldPoint(new Vector3(1f, 1f, 0f));
-
         for (int i = 0; i < spawnCount; i++)
         {
+            // ★ 루프마다 카메라 위치 새로 계산
+            Camera cam = Camera.main;
+            Vector3 leftBottom = cam.ViewportToWorldPoint(new Vector3(0f, 0f, 0f));
+            Vector3 rightTop = cam.ViewportToWorldPoint(new Vector3(1f, 1f, 0f));
+
             float targetX = Random.Range(leftBottom.x, rightTop.x);
             float targetY = Random.Range(leftBottom.y, rightTop.y);
             Vector2 targetPos = new Vector2(targetX, targetY);
 
             StartCoroutine(SpawnOneSpear(targetPos));
-
             yield return new WaitForSeconds(spawnDelay);
         }
     }

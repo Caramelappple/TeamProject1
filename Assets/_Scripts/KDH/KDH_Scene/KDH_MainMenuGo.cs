@@ -4,22 +4,18 @@ using UnityEngine.SceneManagement;
 
 public class KDH_MainMenuGo : MonoBehaviour
 {
-    private GameObject me;
+    [SerializeField] private GameObject me;
 
     private void Start()
     {
-        me = gameObject;
-        me.SetActive(false);
+        if (me != null) me.SetActive(false);
     }
 
     public void MakeUI()
     {
-        StartCoroutine(Wait());
-    }
+        gameObject.SetActive(true);
 
-    public void Dead()
-    {
-        me.SetActive(true);
+        StartCoroutine(Wait());
     }
 
     public void GoMain()
@@ -30,12 +26,12 @@ public class KDH_MainMenuGo : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
-        me.SetActive(false);
     }
 
     private IEnumerator Wait()
     {
-        yield return new WaitForSeconds(2f);
-        Dead();
+        yield return new WaitForSeconds(4f);
+
+        if (me != null) me.SetActive(true);
     }
 }

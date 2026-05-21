@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class JHY_BossMove : MonoBehaviour
 {
+    [SerializeField] private Health playerHealth;
     private Rigidbody2D rb;
     private Animator ani;
     [SerializeField] private float speed;
@@ -37,11 +38,19 @@ public class JHY_BossMove : MonoBehaviour
         timer = stunTime;
         dashTimer = dashCooldown;
 
-        player = NKY_GameManager.instance.player.transform;
+        //player = NKY_GameManager.instance.player.transform;
     }
 
     void Update()
     {
+        if (playerHealth != null && playerHealth.IsDestroyed)
+        {
+            StopMoving();
+            StopAllCoroutines(); // 진행 중인 스턴/돌진 코루틴 중단
+            isDashing = false;
+            isStunned = false;
+            return;
+        }
         if (isStunned || isDashing || isSkillLocked)
         {
             StopMoving();
