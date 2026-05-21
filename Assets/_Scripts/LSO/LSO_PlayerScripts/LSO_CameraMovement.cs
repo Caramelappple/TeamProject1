@@ -10,7 +10,7 @@ public class LSO_CameraMovement : MonoBehaviour
     [SerializeField]private float speed = 1.2f;
     private float _originSpeed;
 
-    [SerializeField]private bool test;
+    public bool test;
     [SerializeField]private bool last;
     private bool _isReturning;
 
