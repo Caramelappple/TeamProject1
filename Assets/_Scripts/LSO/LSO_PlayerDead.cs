@@ -14,7 +14,8 @@ public class LSO_PlayerDead : MonoBehaviour
     [SerializeField] private KDH_MainMenuGo _menuGo;
 
     private LSO_Editor _editor;
-    
+
+    private bool isDead = false;
     private void Awake()
     {
         _health = GetComponent<Health>();
@@ -33,8 +34,10 @@ public class LSO_PlayerDead : MonoBehaviour
 
     private void Die(Health health)
     {
-        if (health.Value > health.MinValue) return;
+        if (isDead || health.Value > health.MinValue) return;
     
+        isDead = true;
+
         // 1. 애니메이션을 정상 실행 (컴포넌트를 바로 끄지 않음)
         LSO_SoundManager.Instance.SfxPlay("Die",clip);
         _animator.Play("DownIdle");
@@ -50,6 +53,7 @@ public class LSO_PlayerDead : MonoBehaviour
 
         _menuGo.MakeUI();
     }
+
     private void SetSat(float targetValue)
     {
         float startValue = _editor.colorGrading.saturation.value;

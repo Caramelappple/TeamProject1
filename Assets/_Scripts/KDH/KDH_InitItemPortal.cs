@@ -1,20 +1,24 @@
-using System.Collections.Generic;
+using _Scripts.HealthSystem;
 using UnityEngine;
 
 public class KDH_InitItemPortal : MonoBehaviour
 {
     private Health health;
+    [SerializeField] private GameObject itemPack;
 
-    private void Awake()
+    private void Start()
     {
         health = GetComponent<Health>();
     }
-
-    public void Enable()
+    private void Update()
     {
-        if (health.Value <= 0)
+        if (health == null) return;
+
+        if (health.IsDestroyed || health.Value <= 0)
         {
-            Debug.Log("죽음");
+            itemPack.SetActive(true);
+
+            enabled = false;
         }
     }
 }
