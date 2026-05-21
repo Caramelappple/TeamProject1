@@ -79,7 +79,7 @@ public class JHY_Attack : MonoBehaviour
     }
     void Start()
     {
-        player = NKY_GameManager.instance.player.transform;
+       // player = NKY_GameManager.instance.player.transform;
         StartCoroutine(SpiderWebRoutine());
     }
     private void OnDisable()
@@ -93,6 +93,7 @@ public class JHY_Attack : MonoBehaviour
         {
             yield return new WaitForSeconds(spiderWebSpawnTimer);
             if (!enabled) yield break;
+            if (playerHealth != null && playerHealth.IsDestroyed) yield break;
             if (isSummoning) continue;
             if (isSkillUsing) continue;
             if (spiderWebPrefab == null) continue;
@@ -110,7 +111,7 @@ public class JHY_Attack : MonoBehaviour
     void Update()
     {
         if (player == null) return;
-
+        if (playerHealth != null && playerHealth.IsDestroyed) return;
         CheckPhase2();
         if (isPhaseChanging) return;
         FacePlayer();
