@@ -36,7 +36,7 @@ public class LSO_PlayerDead : MonoBehaviour
         if (health.Value > health.MinValue) return;
     
         // 1. 애니메이션을 정상 실행 (컴포넌트를 바로 끄지 않음)
-        LSO_SoundManager.Instance.SfxPlay("Die",clip);
+        LSO_SoundManager.Instance.SfxPlay(clip);
         _animator.Play("DownIdle");
         DOVirtual.DelayedCall(0.02f, () => _animator.speed = 0f);
         health.Value = 0;
@@ -48,7 +48,7 @@ public class LSO_PlayerDead : MonoBehaviour
         SetTra(0);
         Up();
 
-        _menuGo.MakeUI();
+        _menuGo.MakeUI();//널 엑셉션 남
     }
     private void SetSat(float targetValue)
     {

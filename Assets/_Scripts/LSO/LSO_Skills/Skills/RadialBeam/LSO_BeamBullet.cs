@@ -29,6 +29,5 @@ public class LSO_BeamBullet : MonoBehaviour
             DamageData data = new DamageData(health, _damage);
             health.GetDamage(data);
         }
-        Destroy(gameObject);
     }
 }

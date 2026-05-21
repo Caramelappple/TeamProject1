@@ -44,5 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ceb6953faf84f4a896cb92967d884c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Ice
+  clips:
+  - {fileID: 8300000, guid: f92c34c4b3df04b3c93db107fd00c08f, type: 3}
+  - {fileID: 8300000, guid: 24e4601468f1a4d88a7d5b619833e90f, type: 3}
+  - {fileID: 8300000, guid: 2f769e1ca5a0b491faacc4495519d094, type: 3}
+  - {fileID: 8300000, guid: 1d51e619f7f4643da9ffd0d84af33723, type: 3}
   spreadAngle: 360
   effect: {fileID: 2327826971356343359, guid: 4ffecb439f262d940a4777d53f9dce56, type: 3}

@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc065389efecef4db46f6153b5711c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_WindSpawner
+  clip: {fileID: 8300000, guid: 61ac1d1e1d583422a96a9aba56370d85, type: 3}
   effect: {fileID: 4444331399251687241, guid: 71163724ab95e5c4498dff0558cf1646, type: 3}
-  spawnDistance: 1

@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 5419246179330834277}
   - component: {fileID: 1606371756026527663}
   - component: {fileID: 343940969388468375}
-  - component: {fileID: -5603735059937245127}
   - component: {fileID: -8634728493169593194}
-  - component: {fileID: -8673271133228900105}
+  - component: {fileID: -5603735059937245127}
   m_Layer: 0
   m_Name: FireBallEffect
   m_TagString: Untagged
@@ -155,20 +154,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.02}
   m_Size: {x: 0.3, y: 0.7}
   m_Direction: 0
---- !u!114 &-5603735059937245127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3937254013632766617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02fab16851cf57a43980382c11fce35e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LSO_FireBall
-  explosionPrefab: {fileID: 3967992238580947959, guid: d4c5507b5f8d96340b05ee57f02c912f,
-    type: 3}
 --- !u!50 &-8634728493169593194
 Rigidbody2D:
   serializedVersion: 5
@@ -196,7 +181,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-8673271133228900105
+--- !u!114 &-5603735059937245127
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -205,7 +190,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3937254013632766617}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d050f50114210245a1cd49d5108c5dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 02fab16851cf57a43980382c11fce35e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LSO_FireBallExplosion
-  _damage: 40
+  m_EditorClassIdentifier: Assembly-CSharp::LSO_FireBall
+  clip: {fileID: 8300000, guid: 641510560598b4103bd932975b38a0af, type: 3}
+  explosionPrefab: {fileID: 3967992238580947959, guid: d4c5507b5f8d96340b05ee57f02c912f,
+    type: 3}

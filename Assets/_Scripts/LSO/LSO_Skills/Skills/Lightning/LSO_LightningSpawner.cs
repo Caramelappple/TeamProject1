@@ -2,6 +2,8 @@
 using UnityEngine;
     public class LSO_LightningSpawner : MonoBehaviour,LSO_ISkill
     {
+        [SerializeField] private AudioClip[] clips;
+        
         private GameObject _player;
         private bool _canUse = true;
         private Collider2D[] _targets;
@@ -41,6 +43,8 @@ using UnityEngine;
             for (int i = 0; i < Random.Range(_minCount, _maxCount); i++)
             {
                 if (!_target) break;
+                
+                LSO_SoundManager.Instance.SfxPlay(clips[Random.Range(0, clips.Length)]);
                 
                 _effectInstance = Instantiate(effect, _target.transform.position+new Vector3(Random.Range(-_range,_range),Random.Range(-_range,_range)), Quaternion.identity );
                 _effectInstance.transform.parent = transform;

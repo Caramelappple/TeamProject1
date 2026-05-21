@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LSO_CureSkill : MonoBehaviour,LSO_ISkill
 {
+    [SerializeField] private AudioClip clip;
     private LSO_PlayerMovement _playerMovement;
     private Animator _animator;
     [SerializeField]private GameObject effect;
@@ -26,6 +27,8 @@ public class LSO_CureSkill : MonoBehaviour,LSO_ISkill
         _effectInstance = Instantiate(effect, player.transform.position+offset, Quaternion.identity);
         _effectInstance.transform.SetParent(player.transform);
         _animator = _effectInstance.GetComponent<Animator>();
+        
+        LSO_SoundManager.Instance.SfxPlay(clip);    
             
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
     }
