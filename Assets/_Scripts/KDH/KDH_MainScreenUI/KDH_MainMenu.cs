@@ -7,7 +7,7 @@ public class KDH_MainMenu : MonoBehaviour
     public void OnClickNewGame ()
     {
         Debug.Log("게임 플레이");
-        FadeUi.GoToNextScene("InGame");
+        FadeUi.GoToNextScene("KHG_tumap");
     }
 
     public void OnClickOption ()

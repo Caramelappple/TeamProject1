@@ -15,6 +15,8 @@ public class BossAttack2 : MonoBehaviour
         anim = GetComponent<Animator>();
         health = GetComponent<Health>(); // ★ 추가
         lastAttackTime = -attackCooldown;
+
+        player = NKY_GameManager.instance.player.transform;
     }
     private void Update()
     {
