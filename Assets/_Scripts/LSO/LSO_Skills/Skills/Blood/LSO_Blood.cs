@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class LSO_Blood : MonoBehaviour,LSO_ISkill
 {
-    [SerializeField]private AudioClip clip;
-    
     private LSO_PlayerMovement _playerMovement;
     private GameObject _player;
     private Animator _animator;
@@ -68,7 +66,6 @@ public class LSO_Blood : MonoBehaviour,LSO_ISkill
                 _animator = _effectInstance.GetComponent<Animator>();
             }
         }
-        LSO_SoundManager.Instance.SfxPlay(clip);
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
     }
 

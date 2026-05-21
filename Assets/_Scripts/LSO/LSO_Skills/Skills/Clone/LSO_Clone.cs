@@ -97,7 +97,7 @@ public class LSO_Clone : MonoBehaviour
         _cloneAnim.SetTrigger("Attack");
     }
 
-    public void Init(LSO_PlayerMovement movement,LSO_PlayerAttack attack)
+    public void Init(LSO_PlayerMovement movement)
     {
         _player = movement.gameObject;
         _playerHealth = _player.GetComponent<Health>();
