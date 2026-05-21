@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3733339313324921814}
   - component: {fileID: 5213478916290292787}
   - component: {fileID: 692848093647370861}
+  - component: {fileID: 1430487045193547977}
   m_Layer: 0
   m_Name: MoveMap 4
   m_TagString: Untagged
@@ -152,3 +153,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 348311f5a37ec8041a360189a7e4ecf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_InGame4
+--- !u!95 &1430487045193547977
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3008224016556032654}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d3604374037e73f49a455293611924fa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
