@@ -54,7 +54,7 @@ public class NKY_SwordBomb : NKY_BossSkill
             int spawnRange;
             for (int i = 0; i < swordCount; i++)
             {
-                if (string.IsNullOrEmpty(playAnimName))
+                if (playAnimName != null)
                 {
                     Anim.Play(playAnimName);
                     if ((target.position - boss.position).x < 0)
