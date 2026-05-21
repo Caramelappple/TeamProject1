@@ -8,10 +8,16 @@ public class LSO_PlayerMovement : MonoBehaviour
     private static readonly int MoveY = Animator.StringToHash("MoveY");
     public Health Health { get; private set; }
     public float speed = 3;
-    protected Animator Animator;
+    private Animator _animator;
     private SpriteRenderer _sprite;
-
-    [SerializeField] private bool _canMove = true;
+    private AudioSource _audioSource;
+    
+    [SerializeField]private AudioClip[] clips; //오디오 소리를 모아두는 클립
+    [SerializeField]private float footstepRate = 0.2f; // 간격
+    private float _footStepTime; // 시간받아서
+    private int _clipIndex;
+     
+    [SerializeField] private bool canMove = true;
 
     private Vector2 _moveDir;
     private Vector2 _fixedLastDir = Vector2.down;
@@ -25,10 +31,12 @@ public class LSO_PlayerMovement : MonoBehaviour
     private void Awake()
     {
         _rigid = GetComponent<Rigidbody2D>();
-        Animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
         _sprite = GetComponent<SpriteRenderer>();
         Health = GetComponent<Health>();
+        _audioSource = GetComponent<AudioSource>(); 
     }
+
 
     private void Start()
     {
@@ -37,13 +45,19 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!_canMove) return;
+        if (!canMove) return;
         _rigid.linearVelocity = _moveDir.normalized * speed;
     }
 
     private void Update()
     {
-        if (OnSkillEvent == null || !_canMove) return;
+        if (OnSkillEvent == null || !canMove) return;
+        if (Time.time - _footStepTime > footstepRate && _rigid.linearVelocity.magnitude > 0.1f)
+        {
+            _footStepTime = Time.time; //시간을 현재시간으로
+            //_audioSource.PlayOneShot(clips[_clipIndex]); // 오디오 실행
+            _clipIndex = (_clipIndex + 1) % clips.Length;
+        }
 
         if (Keyboard.current.fKey.isPressed && _skillItem)
         {
@@ -64,11 +78,13 @@ public class LSO_PlayerMovement : MonoBehaviour
         {
             OnSkillEvent[1]?.Invoke(gameObject);
         }
+        
+        
     }
 
     private void OnMove(InputValue value)
     {
-        if (!_canMove) //움직일수 없을떼
+        if (!canMove) //움직일수 없을떼
         {
             _moveDir = Vector2.zero;
             return;
@@ -91,15 +107,22 @@ public class LSO_PlayerMovement : MonoBehaviour
         {
             _fixedLastDir = new Vector2(Mathf.Sign(_fixedLastDir.x), 0);
 
-            Animator.SetFloat(MoveY, 0);
-            Animator.SetBool(MoveX, _moveDir.x != 0);
+            _animator.SetFloat(MoveY, 0);
+            _animator.SetBool(MoveX, _moveDir.x != 0);
         }
         else
         {
-            Animator.SetFloat(MoveY, _moveDir.y);
-            Animator.SetBool(MoveX, _moveDir.x != 0);
+            _animator.SetFloat(MoveY, _moveDir.y);
+            _animator.SetBool(MoveX, _moveDir.x != 0);
         }
-    }
+
+        /*if (Time.time - _footStepTime > footstepRate) // 시간을 재준다.
+        {
+            _footStepTime = Time.time; //시간을 현재시간으로
+            _audioSource.PlayOneShot(clips[_clipIndex]); // 오디오 실행
+            _clipIndex = (_clipIndex + 1) % clips.Length;
+        }*/
+}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -111,14 +134,13 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     public void SetMove(bool move)
     {
-        _canMove = move;
-
-        if (!_canMove)
+        canMove = move;
+        if (!canMove)
         {
             _moveDir = Vector2.zero;
             if (_rigid != null) _rigid.linearVelocity = Vector2.zero;
-            Animator.SetBool(MoveX, false);
-            Animator.SetFloat(MoveY, 0);
+            _animator.SetBool(MoveX, false);
+            _animator.SetFloat(MoveY, 0);
             if (_moveDir.x != 0)
             {
                 _sprite.flipX = _moveDir.x < 0;
@@ -142,19 +164,19 @@ public class LSO_PlayerMovement : MonoBehaviour
                     _lastDir = _moveDir;
                 }
 
-                Animator.SetFloat(MoveY, _moveDir.y);
-                Animator.SetBool(MoveX, _moveDir.x != 0);
+                _animator.SetFloat(MoveY, _moveDir.y);
+                _animator.SetBool(MoveX, _moveDir.x != 0);
                 if (_fixedLastDir.x != 0 && _fixedLastDir.y != 0) //대각선으로 움직였을때
                 {
                     _fixedLastDir = new Vector2(Mathf.Sign(_fixedLastDir.x), 0);
 
-                    Animator.SetFloat(MoveY, 0);
-                    Animator.SetBool(MoveX, _moveDir.x != 0);
+                    _animator.SetFloat(MoveY, 0);
+                    _animator.SetBool(MoveX, _moveDir.x != 0);
                 }
                 else
                 {
-                    Animator.SetFloat(MoveY, _moveDir.y);
-                    Animator.SetBool(MoveX, _moveDir.x != 0);
+                    _animator.SetFloat(MoveY, _moveDir.y);
+                    _animator.SetBool(MoveX, _moveDir.x != 0);
                 }
 
                 if (_moveDir.x != 0)

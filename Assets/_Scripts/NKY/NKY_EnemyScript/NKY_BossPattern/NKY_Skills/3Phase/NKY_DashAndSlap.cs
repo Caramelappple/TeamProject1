@@ -19,7 +19,7 @@ public class NKY_DashAndSlap : NKY_BossSkill
 
     private void Start()
     {
-        _damage = (int)(DamageScale * _bossBrain.damage);
+        _damage = (int)(DamageScale * _bossBrain.Damage);
         dustEffect.SetActive(false);
     }
 

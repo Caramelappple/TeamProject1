@@ -1,5 +1,4 @@
 using System.Collections;
-using _Scripts.NKY._EnemyScript;
 using _Scripts.NKY._EnemyScript.BossPattern;
 using UnityEngine;
 
@@ -27,7 +26,7 @@ public class NKY_ChargeSlash : NKY_BossSkill
         {
             particle.Stop();
         }
-        _damage = (int)DamageScale * _bossBrain.damage;
+        _damage = (int)DamageScale * _bossBrain.Damage;
     }
 
     public override IEnumerator Execute(Transform boss, Transform target)

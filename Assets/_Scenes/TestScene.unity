@@ -503,7 +503,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1163,7 +1163,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1588,20 +1588,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NKY_Enemy.NKY_Enemy
   _skillCooldown: 1.8
-  _skills:
-  - {fileID: 1874845559}
-  - {fileID: 1826878406}
-  - {fileID: 134355378}
-  - {fileID: 393221263}
-  - {fileID: 393221263}
-  - {fileID: 393221263}
-  - {fileID: 40355974}
+  skills:
   - {fileID: 1218274507}
-  - {fileID: 136981811}
+  - {fileID: 1218274507}
+  - {fileID: 1218274507}
+  - {fileID: 1290765489}
+  - {fileID: 1290765489}
+  - {fileID: 1290765489}
+  - {fileID: 1218274507}
+  - {fileID: 1218274507}
+  - {fileID: 1218274507}
   playerReference: {fileID: 2062148693}
   phase2Effect: {fileID: 580173627}
   phase3Effect: {fileID: 1341960663}
-  <damage>k__BackingField: 5
+  <Damage>k__BackingField: 15
 --- !u!50 &713920014
 Rigidbody2D:
   serializedVersion: 5
@@ -1610,7 +1610,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713920010}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2369,6 +2369,9 @@ MonoBehaviour:
   - {fileID: 1218274506}
   swordPrefab: {fileID: 3338311052345153939, guid: f29f9c68cde12ee40b3ece26d597e163,
     type: 3}
+  returnTarget: {fileID: 713920018}
+  playAnimName: 
+  bul: 0
   spawnInterval: 0.1
   swordCount: 20
   swordDuration: 0.08
@@ -2480,6 +2483,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1221267797}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1255008700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1255008701}
+  - component: {fileID: 1255008702}
+  m_Layer: 30
+  m_Name: collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1255008701
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255008700}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1828895055}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1255008702
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255008700}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 2.5
 --- !u!1 &1290765487
 GameObject:
   m_ObjectHideFlags: 0
@@ -7956,74 +8027,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!1001 &1452088426
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1067091506942886616, guid: 376f791456d275841a57abfd113d1358,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.393875
-      objectReference: {fileID: 0}
-    - target: {fileID: 1067091506942886616, guid: 376f791456d275841a57abfd113d1358,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.0931327
-      objectReference: {fileID: 0}
-    - target: {fileID: 1067091506942886616, guid: 376f791456d275841a57abfd113d1358,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1067091506942886616, guid: 376f791456d275841a57abfd113d1358,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1067091506942886616, guid: 376f791456d275841a57abfd113d1358,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1067091506942886616, guid: 376f791456d275841a57abfd113d1358,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1067091506942886616, guid: 376f791456d275841a57abfd113d1358,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1067091506942886616, guid: 376f791456d275841a57abfd113d1358,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1067091506942886616, guid: 376f791456d275841a57abfd113d1358,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1067091506942886616, guid: 376f791456d275841a57abfd113d1358,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4042321198220744512, guid: 376f791456d275841a57abfd113d1358,
-        type: 3}
-      propertyPath: m_Name
-      value: Skill2 (5)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 376f791456d275841a57abfd113d1358, type: 3}
 --- !u!1001 &1522515154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13496,7 +13499,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1255008701}
   m_Father: {fileID: 1818169048}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1828895056
@@ -13520,9 +13524,11 @@ MonoBehaviour:
     type: 3}
   effectPrefab: {fileID: 8294358143505051542, guid: c5b7754f41228a94ea00d44811d148f8,
     type: 3}
+  bombCollider: {fileID: 1255008702}
   spawnInterval: 0.3
   swordCount: 8
-  swordDuration: 0.2
+  swordMoveDuration: 0.2
+  playAnimName: 
   <DamageScale>k__BackingField: 0.7
 --- !u!1 &1829568529
 GameObject:
@@ -13778,7 +13784,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856155465}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14447,7 +14453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 3
-  _canMove: 1
+  canMove: 1
 --- !u!114 &2062148694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14536,7 +14542,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -14642,7 +14648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dashskill
   dashSpeed: 8
   dashDuration: 0.2
-  dashCooltime: 0.1
+  dashCoolTime: 0.1
   rigid: {fileID: 0}
   tr: {fileID: 0}
 --- !u!1 &2081244400
@@ -14685,14 +14691,13 @@ SceneRoots:
   - {fileID: 713920018}
   - {fileID: 1062693003}
   - {fileID: 2062148698}
+  - {fileID: 1856155466}
   - {fileID: 1522515154}
   - {fileID: 1309260179}
   - {fileID: 1659168730}
   - {fileID: 989340467}
   - {fileID: 173268526}
-  - {fileID: 1856155466}
   - {fileID: 548321276}
-  - {fileID: 1452088426}
   - {fileID: 1354371371}
   - {fileID: 511944059}
   - {fileID: 1787842508}

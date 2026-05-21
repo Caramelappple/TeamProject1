@@ -1,5 +1,6 @@
 using System.Collections;
 using _Scripts.NKY.Manager;
+using DG.Tweening;
 using UnityEngine;
 
 namespace _Scripts.NKY._EnemyScript.BossPattern
@@ -57,16 +58,12 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
 
         protected IEnumerator MoveTo(Transform from, Vector2 to, float duration)
         {
-            float time = 0;
-            Vector3 start = from.position;
-            Vector3 end = to;
-            while (time < duration)
+            from.DOMove(to, duration);
+            if (Vector3.Distance(from.position, to) < 0.01f)
             {
-                from.position = Vector3.Lerp(start, end, time / duration);
-                time += Time.deltaTime;
-                yield return null;
+                from.position = to;
+                yield break;
             }
-            from.position = end;
         }
 
         protected IEnumerator ConstantMoveTo(Transform form, Vector3 to, float speed)

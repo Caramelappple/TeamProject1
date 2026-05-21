@@ -45,3 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_FireAura
   effect: {fileID: 9059873508784684391, guid: eaf9a8c868b1fa84c9ab68f3e4e55f69, type: 3}
+  coolTime: 5
+  waitTime: 0.56
+  damage: 15
+  speed: 6.3

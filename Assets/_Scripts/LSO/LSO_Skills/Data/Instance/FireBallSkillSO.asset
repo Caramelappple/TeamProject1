@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LSO.SkillSystem.LSO_SkillResourceSO
   skillName: "\uD30C\uC774\uC5B4\uBCFC"
   skillDescription: "\uD30C\uC78E\u3147\u3147\uB2C8\u314F\uB7EC\uBBF8\u314F\u3134"
-  skillIcon: {fileID: 21300004, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
+  skillIcon: {fileID: 21300030, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
   skillPrefab: {fileID: 3895518459018752480, guid: 3dd99f3c7676ec34689e78eff3f42ce6,
     type: 3}

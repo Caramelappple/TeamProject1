@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using _Scripts.NKY._EnemyScript;
 using _Scripts.NKY._EnemyScript.BossPattern;
 using UnityEngine;
 
@@ -23,7 +22,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 
         protected void Start()
         {
-            _damage = (int)(DamageScale * _bossBrain.damage);
+            _damage = (int)(DamageScale * _bossBrain.Damage);
             GameObject sword;
             for (int i = 0; i < swordCount; i++)
             {
@@ -69,6 +68,8 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 
         public override void EndSkill()
         {
+            if(swords.Count <= 0) return;
+            
             foreach (GameObject sword in swords)
             {
                 sword.SetActive(false);

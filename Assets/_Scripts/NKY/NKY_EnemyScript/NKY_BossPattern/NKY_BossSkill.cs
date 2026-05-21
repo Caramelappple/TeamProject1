@@ -16,7 +16,7 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
         
         public virtual void Init(NKY_BaseBoss boss)
         {
-            Anim = boss.GetComponent<Animator>();
+            Anim = boss.GetComponentInChildren<Animator>();
             _shadow = boss.GetComponentInChildren<NKY_ShadowController>();
             _HitBoxController = boss.GetComponent<NKY_HitBoxController>();
         }

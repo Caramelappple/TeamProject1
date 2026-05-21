@@ -4,6 +4,9 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class LSO_Editor : MonoBehaviour
 {
+    [SerializeField] private AudioClip[] clip;
+    private int _clipIndex;
+    
     public static LSO_Editor Instance;
     
     public PostProcessVolume postProcessVolume;
@@ -37,15 +40,14 @@ public class LSO_Editor : MonoBehaviour
         StartCoroutine(SetHitCoroutine(health));
     }
 
-    private void SetLow(Health health)
-    {
-        StartCoroutine(LowHealth(health));
-    }
-
     private IEnumerator SetHitCoroutine(Health health)
     {
-        vignette.color.value = new Color32(255, 170, 179, 255);
+        
         if (!health.gameObject.CompareTag("Player")) yield break;
+        LSO_SoundManager.Instance.SfxPlay("Attack", clip[_clipIndex]);
+        _clipIndex = (_clipIndex + 1) % clip.Length;
+        
+        vignette.color.value = new Color32(255, 170, 179, 255);
         CameraShake.instance.Shake(0.15f, 0.12f);
         vignette.intensity.value = 0.48f;
         vignette.active = true;
@@ -58,30 +60,5 @@ public class LSO_Editor : MonoBehaviour
         vignette.active = false;
     }
 
-    private IEnumerator LowHealth(Health health)
-    {
-        if (!health.gameObject.CompareTag("Player")) yield break;
-
-        if (health.Value / health.MaxValue <= 0.1f)
-        {
-            vignette.color.value = new Color32(152, 139, 141, 255);
-            vignette.intensity.value = 0.48f;
-            vignette.active = true;
-            yield return new WaitForSeconds(0.2f);
-            
-            // 체력이 10% 이하인 동안 계속 실행
-            while (health.Value / health.MaxValue <= 0.1f)
-            {
-                yield return new WaitForSeconds(1f);
-                CameraShake.instance.Shake(1f, 0.001f);
-            }
-            
-            while (vignette.intensity.value > 0f)
-            {
-                yield return null;
-                vignette.intensity.value -= 0.007f;
-            }
-            vignette.active = false;
-        }
-    }
+  
 }

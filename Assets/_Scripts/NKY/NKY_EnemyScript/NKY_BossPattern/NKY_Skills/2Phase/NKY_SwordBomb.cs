@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using _Scripts.NKY._EnemyScript;
 using _Scripts.NKY._EnemyScript.BossPattern;
 using _Scripts.NKY.NKY_EnemyScript.NKY_Skills;
 using UnityEngine;
@@ -10,24 +9,26 @@ public class NKY_SwordBomb : NKY_BossSkill
         [SerializeField] private Transform[] spawnPoints;
         [SerializeField] private GameObject swordPrefab;
         [SerializeField] private GameObject effectPrefab;
+        [SerializeField] private Collider2D bombCollider;
         private Queue<GameObject> effectQueue = new Queue<GameObject>();
-        private Collider2D bombCollider;
+        
         
         private Queue<GameObject> swordQueue = new Queue<GameObject>();
         
         [Header("보스 스킬 스텟 세팅")]
         [SerializeField] private float spawnInterval = 0.3f;
         [SerializeField] private int swordCount = 8;
-        [SerializeField] private float swordDuration = 0.2f;
+        [SerializeField] private float swordMoveDuration = 0.2f;
+        [SerializeField] private string playAnimName;
         [field: SerializeField] public override float DamageScale { get; protected set; } = 0.7f;
         
         private int _damage;
 
         protected void Start()
         {
-            bombCollider = effectPrefab.GetComponent<Collider2D>();
+            //bombCollider = effectPrefab.GetComponent<Collider2D>();
             effectPrefab.SetActive(false);
-            _damage = (int)(DamageScale * _bossBrain.damage);
+            _damage = (int)(DamageScale * _bossBrain.Damage);
             GameObject sword;
             GameObject effect;
             for (int i = 0; i < swordCount; i++)
@@ -51,9 +52,20 @@ public class NKY_SwordBomb : NKY_BossSkill
             GameObject effect = null;
             Vector3 moveDir;
             int spawnRange;
-                
-            for (int i = 1; i < swordCount; i++)
+            for (int i = 0; i < swordCount; i++)
             {
+                if (string.IsNullOrEmpty(playAnimName))
+                {
+                    Anim.Play(playAnimName);
+                    if ((target.position - boss.position).x < 0)
+                    {
+                        boss.rotation = Quaternion.Euler(0, 180, 0);
+                    }
+                    else
+                    {
+                        boss.rotation = Quaternion.Euler(0, 0, 0);
+                    }
+                }
                 Vector3 pos = target.position;
                 spawnRange = Random.Range(0, spawnPoints.Length);
                 sword = swordQueue.Dequeue();
@@ -72,15 +84,19 @@ public class NKY_SwordBomb : NKY_BossSkill
                     ShowWarn(0, new Vector2(0.2f , (pos - sword.transform.position).magnitude),
                         0.8f, () => Vector3.Lerp(sword.transform.position, pos, 0.5f), sword.transform.localEulerAngles.z),
                     WaitUntilOrTime(() => false, 0.6f),
-                    MoveTo(sword.transform, pos, swordDuration),
+                    MoveTo(sword.transform, pos, swordMoveDuration),
+                    WaitUntilOrTime(() => false, swordMoveDuration),
                     ShowWarn(bombCollider, 0.5f, () => pos),
                     WaitUntilOrTime(() => false, 0.5f),
                     EnQueues(sword, swordQueue),
+                    Attack(() =>
+                    {
+                        _HitBoxController.Cast(bombCollider, pos,
+                            (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage));
+                    }),
                     PlayBombEffect(effect, pos),
-                    Attack(() => _HitBoxController.Cast(bombCollider, (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage))),
                     EnQueues(effect, effectQueue)
                 ));
-
                 yield return new WaitForSeconds(spawnInterval);
             }
             yield break;

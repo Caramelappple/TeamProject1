@@ -1,4 +1,5 @@
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
 public class LSO_FireAura : MonoBehaviour,LSO_ISkill
@@ -50,7 +51,8 @@ public class LSO_FireAura : MonoBehaviour,LSO_ISkill
         yield return  new WaitForSeconds(0.1f);
   
         _playerMovement.SetMove(false);
-        _rigid.linearVelocity = -_playerMovement.GetFixedLastDir().normalized * speed;
+        //_rigid.linearVelocity = _playerMovement.GetFixedLastDir() * speed;
+        _rigid.DOMove(_player.transform.position + _playerMovement.GetFixedLastDir() * speed, waitTime).SetEase(Ease.OutCubic);
         
         yield return new WaitForSeconds(waitTime);
         _attack.OnAttack();
@@ -66,7 +68,7 @@ public class LSO_FireAura : MonoBehaviour,LSO_ISkill
         if (!_animator || !_effectInstance) return;
         
         AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
-        if (stateInfo.IsName("Animation-magic-2-b") && stateInfo.normalizedTime >= 0.95f)
+        if (stateInfo.IsName("Animation-magic-5-g") && stateInfo.normalizedTime >= 0.95f)
         {
             Destroy(_effectInstance);
         }

@@ -2,11 +2,15 @@ using System.Collections;
 using UnityEngine;
 public class LSO_PlayerAttack : MonoBehaviour
 {
+    [SerializeField] private AudioClip[] clip;
+    private int _clipIndex;
+    
     [SerializeField] protected GameObject sword;
     private LSO_PlayerMovement _movement;
     private SpriteRenderer _sprite;
         
     private bool _attackable = true;
+    private bool _canAttack = true;
     private readonly float _attackCooldown = 0.12f;
     private readonly float _attackTime = 0.3f;//건드려도 됨
     private readonly int _damage = 10;//맘대로
@@ -28,7 +32,7 @@ public class LSO_PlayerAttack : MonoBehaviour
     }
     public void OnAttack()
     {
-        if (!_attackable) return;
+        if (!_attackable || !_canAttack) return;
     
         _lastDir = _movement.GetFixedLastDir();
         
@@ -40,7 +44,10 @@ public class LSO_PlayerAttack : MonoBehaviour
     {
         _isAttacking = true;
         _attackable = false;
-
+        
+        LSO_SoundManager.Instance.SfxPlay("Attack", clip[_clipIndex]);
+        _clipIndex = (_clipIndex + 1) % clip.Length;
+        
         Collider2D[] colliders = Physics2D.OverlapBoxAll(sword.transform.position, sword.transform.localScale / 2, 0);
         foreach (Collider2D collision in colliders)
         {
@@ -81,12 +88,7 @@ public class LSO_PlayerAttack : MonoBehaviour
         _attackable = true;
         _isAttacking = false;
     }
-
-    public void SetAttack(bool attackable)
-    {
-        _attackable = attackable;
-    }
-
+    
     private IEnumerator IsDirSame()
     {
         while (true)
@@ -119,5 +121,10 @@ public class LSO_PlayerAttack : MonoBehaviour
         }
         else
             Debug.Log(dir+"가 이상함 다시 코드 짜 플레이어 어택");
+    }
+
+    public void SetCanAttack(bool attackable)
+    {
+        _canAttack =  attackable;
     }
 }

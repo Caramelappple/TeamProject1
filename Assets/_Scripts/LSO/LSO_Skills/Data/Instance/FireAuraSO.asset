@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LSO.SkillSystem.LSO_SkillResourceSO
   skillName: fasj;faf;sll;
   skillDescription: fda
-  skillIcon: {fileID: 21300032, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
+  skillIcon: {fileID: 21300050, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
   skillPrefab: {fileID: 9117852009125758070, guid: 2fdc6189300ba5b4396b28b897eccaff,
     type: 3}

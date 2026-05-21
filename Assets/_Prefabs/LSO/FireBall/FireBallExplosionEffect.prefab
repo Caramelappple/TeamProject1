@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 163082005708009624}
   - component: {fileID: 7335104229253134659}
-  - component: {fileID: 4957274315099240851}
   - component: {fileID: 8389657287171933244}
   m_Layer: 0
   m_Name: FireBallExplosionEffect
@@ -93,18 +92,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &4957274315099240851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3967992238580947959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d050f50114210245a1cd49d5108c5dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LSO_FireBallExplosion
 --- !u!95 &8389657287171933244
 Animator:
   serializedVersion: 7

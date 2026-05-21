@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LSO.SkillSystem.LSO_SkillResourceSO
   skillName: Bomb
   skillDescription: sfda
-  skillIcon: {fileID: 21300054, guid: d87ac3c3eb635674c8bb306c9681baa7, type: 3}
+  skillIcon: {fileID: 21300054, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
   skillPrefab: {fileID: 1810854247381936306, guid: 0781334c88a7bab44a9ad7b0bc1d4fc1,
     type: 3}
