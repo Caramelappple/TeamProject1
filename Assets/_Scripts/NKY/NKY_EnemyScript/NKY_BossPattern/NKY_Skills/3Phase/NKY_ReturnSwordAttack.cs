@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using _Scripts.NKY._EnemyScript.BossPattern;
 using _Scripts.NKY.NKY_EnemyScript.NKY_Skills;
-using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
