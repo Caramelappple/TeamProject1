@@ -11065,9 +11065,10 @@ GameObject:
   - component: {fileID: 1295674324}
   - component: {fileID: 1295674323}
   - component: {fileID: 1295674325}
+  - component: {fileID: 1295674326}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Dummy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11169,6 +11170,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1295674326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295674322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee562dba20bfd54d8ba0d064e85640b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KHG_DummyHit
 --- !u!1 &1297961432
 GameObject:
   m_ObjectHideFlags: 0

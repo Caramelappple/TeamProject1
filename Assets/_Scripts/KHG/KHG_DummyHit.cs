@@ -10,8 +10,9 @@ public class KHG_DummyHit : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.gameObject.CompareTag("Dummy"))
         {
             if (_animator != null)
