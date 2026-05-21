@@ -1,57 +1,48 @@
 using UnityEngine;
-
 public class BossAttack2 : MonoBehaviour
 {
     public Transform player;
     public float attackRange = 2f;
     public float attackCooldown = 1.5f;
     public int damage = 3;
-
     private Animator anim;
+    private Health health; // ★ 추가
     private float lastAttackTime;
     private bool isDead;
-
-    // ★ 추가됨: 보스가 현재 공격 애니메이션 중인지 확인하는 변수 (외부에서 읽기 전용)
     public bool IsAttacking { get; private set; }
-
     private void Start()
     {
         anim = GetComponent<Animator>();
+        health = GetComponent<Health>(); // ★ 추가
         lastAttackTime = -attackCooldown;
     }
-
     private void Update()
     {
         if (player == null || isDead) return;
-
         float distance = Vector2.Distance(transform.position, player.position);
-
         if (distance <= attackRange && Time.time >= lastAttackTime + attackCooldown)
         {
             lastAttackTime = Time.time;
             anim.SetTrigger("Attack");
         }
     }
-
-    // ★ 추가됨: 애니메이션 이벤트가 맨 처음(0프레임)에 호출할 함수
+    // 애니메이션 이벤트 - 공격 시작 프레임
     public void OnAttackStart()
     {
         IsAttacking = true;
+        health?.SetDamageable(false); // ★ 공격 중 피격 불가
     }
-
-    // ★ 추가됨: 애니메이션 이벤트가 맨 끝(마지막 프레임)에 호출할 함수
+    // 애니메이션 이벤트 - 공격 끝 프레임
     public void OnAttackEnd()
     {
         IsAttacking = false;
+        health?.SetDamageable(true); // ★ 공격 끝나면 피격 가능
     }
-
     public void AttackPlayer()
     {
         if (player == null || isDead) return;
-
         float distance = Vector2.Distance(transform.position, player.position);
         if (distance > attackRange) return;
-
         Health playerHealth = player.GetComponent<Health>();
         if (playerHealth != null)
         {
@@ -59,9 +50,9 @@ public class BossAttack2 : MonoBehaviour
             playerHealth.GetDamage(damageData);
         }
     }
-
     public void SetDead()
     {
         isDead = true;
+        health?.SetDamageable(true); // ★ 사망 시 반드시 원복 (Die() 흐름 보장)
     }
 }
