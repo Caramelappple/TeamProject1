@@ -55,7 +55,7 @@ public class LSO_PlayerMovement : MonoBehaviour
         if (Time.time - _footStepTime > footstepRate && _rigid.linearVelocity.magnitude > 0.1f)
         {
             _footStepTime = Time.time; //시간을 현재시간으로
-            _audioSource.PlayOneShot(clips[_clipIndex]); // 오디오 실행
+            //_audioSource.PlayOneShot(clips[_clipIndex]); // 오디오 실행
             _clipIndex = (_clipIndex + 1) % clips.Length;
         }
 
