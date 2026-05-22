@@ -8241,7 +8241,6 @@ GameObject:
   - component: {fileID: 2087425298}
   - component: {fileID: 2087425297}
   - component: {fileID: 2087425296}
-  - component: {fileID: 2087425295}
   - component: {fileID: 2087425294}
   m_Layer: 5
   m_Name: UI
@@ -8262,18 +8261,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &2087425295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2087425293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f65497a3a7dffe499cdd8b0157d3ea9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::KDH_KeppGoing
 --- !u!114 &2087425296
 MonoBehaviour:
   m_ObjectHideFlags: 0
