@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2ebeaaf3198ebc48aaacc815b585864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Skill
-  skillData: {fileID: 11400000, guid: 0953ad695e56d724c8a8aa7d7467814d, type: 2}
+  skillData: {fileID: 11400000, guid: 7e4a20c6cd3b4384ca2487ea903e5c86, type: 2}
   canAdd: 1
   sprite: {fileID: 0}
   prefab: {fileID: 0}
