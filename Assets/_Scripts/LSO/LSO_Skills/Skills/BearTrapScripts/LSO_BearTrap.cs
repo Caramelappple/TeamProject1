@@ -4,8 +4,6 @@ using System.Collections;
 
 public class LSO_BearTrap : MonoBehaviour, LSO_ISkill
 {
-    [SerializeField] private AudioClip clip;
-    
     private Animator _animator;
     [SerializeField] private int damage = 20;
     
@@ -59,7 +57,6 @@ public class LSO_BearTrap : MonoBehaviour, LSO_ISkill
             if (collision.TryGetComponent<Health>(out Health enemyHealth))
             {
                 // 데미지 처리
-                LSO_SoundManager.Instance.SfxPlay(clip);
                 DamageData data = new DamageData(enemyHealth, damage);
                 enemyHealth.GetDamage(data);
                 _animator.SetTrigger("Explode");

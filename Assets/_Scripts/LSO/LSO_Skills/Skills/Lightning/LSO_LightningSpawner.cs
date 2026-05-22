@@ -42,7 +42,7 @@ using UnityEngine;
             }
             for (int i = 0; i < Random.Range(_minCount, _maxCount); i++)
             {
-                if (!_target) break;
+                if (!_target || !gameObject) break;
                 
                 LSO_SoundManager.Instance.SfxPlay(clips[Random.Range(0, clips.Length)]);
                 
