@@ -21,40 +21,45 @@ public class LSO_CameraMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (test)//보스에게 카메라 이동 테스트용, 나중에 수정 필요
+        if (test)
         {
+            if (bossTargets == null || bossTargets.Length == 0 || bossTargets[0] == null) return;
+
             target = bossTargets[0];
             speed = 5;
             last = true;
             _isReturning = false;
         }
-        else if (last && !test && !_isReturning) // 중복 실행 방지, 플레이어가 보스에게 돌아오지 않은 상태에서만 실행
+        else if (last && !test && !_isReturning)
         {
             last = false;
             _isReturning = true;
             target = _originTarget;
-            speed = 50;// 플레이어에게 빠르게 돌아오기 위해 속도 증가
+            speed = 50;
             StartCoroutine(CameraWait());
         }
     }
 
-    private IEnumerator CameraWait()
-    {
-        yield return new WaitUntil(() =>
-            Vector3.Distance(transform.position, target.position) < 0.1f);
-
-        speed = _originSpeed;// 원래 속도로 복귀
-        _isReturning = false;
-    }
-
     private void LateUpdate()
     {
+        Vector3 shakeOffset = CameraShake.instance != null
+            ? CameraShake.instance.ShakeOffset
+            : Vector3.zero;
+
         transform.position = Vector3.Lerp(transform.position, target.position, speed * Time.deltaTime);
         transform.position = new Vector3(
-            transform.position.x + CameraShake.instance.ShakeOffset.x,
-            transform.position.y + CameraShake.instance.ShakeOffset.y,
+            transform.position.x + shakeOffset.x,
+            transform.position.y + shakeOffset.y,
             -10f
         );
+    }
+
+    private IEnumerator CameraWait()
+    {
+        yield return new WaitUntil(() => target == null || Vector3.Distance(transform.position, target.position) < 0.1f);
+
+        speed = _originSpeed;
+        _isReturning = false;
     }
     
     CameraShake _cameraShake;

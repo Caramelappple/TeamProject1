@@ -21,8 +21,9 @@ public class LSO_Slow : MonoBehaviour,LSO_ISkill
         _player = player;
         LSO_SoundManager.Instance.SfxPlay(clip);
         _effectInstance = Instantiate(effect, player.transform.position, Quaternion.identity);
+        _effectInstance.transform.SetParent(transform);
         _animator = _effectInstance.GetComponent<Animator>();
-        _player.GetComponent<MonoBehaviour>().StartCoroutine(SetScale(0.5f));
+        player.GetComponent<MonoBehaviour>().StartCoroutine(SetScale(0.5f));
         player.GetComponent<MonoBehaviour>().StartCoroutine(SetSat(-100));
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
     }

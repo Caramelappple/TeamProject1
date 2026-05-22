@@ -12,14 +12,12 @@ public class LSO_Immune : MonoBehaviour, LSO_ISkill
     
     private GameObject _player;
     
-    private Animator _animator;
 
     public void UseSkill(GameObject player)
     {
         if (!_canUse) return;
 
-        LSO_SoundManager.Instance.SfxPlay(clip);
-        _animator = player.GetComponent<Animator>();
+        LSO_SoundManager.Instance.SfxPlay(clip);    
         this._player = player;
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(3));
     }
@@ -32,7 +30,6 @@ public class LSO_Immune : MonoBehaviour, LSO_ISkill
         LSO_PlayerMovement movement = _player.GetComponent<LSO_PlayerMovement>();
         LSO_PlayerAttack attack = _player.GetComponent<LSO_PlayerAttack>();
         Health health = _player.GetComponent<Health>();
-        _animator.speed = 0f;
 
         KDH_SkillSystem skillSystem = FindFirstObjectByType<KDH_SkillSystem>(); // 김동휘가 건듦
 
@@ -44,7 +41,6 @@ public class LSO_Immune : MonoBehaviour, LSO_ISkill
         if (movement != null) movement.SetMove(false);
         if (attack != null) attack.SetCanAttack(false);
         if (skillSystem != null) skillSystem.SetCanUseSkill(false); // 김동휘가 건듦 무적상태일 때 스킬이 입력 안 되게
-        if (_animator != null) _animator.speed = 0f;
 
         // 지속 시간 대기
         yield return new WaitForSeconds(waitTime);

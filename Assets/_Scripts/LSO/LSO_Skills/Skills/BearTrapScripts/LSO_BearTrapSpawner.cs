@@ -42,7 +42,8 @@ public class LSO_BearTrapSpawner : MonoBehaviour,LSO_ISkill
     private void SpawnTrap(GameObject player)
     {
         if (!_canSpawn) return;
-
+        
+        LSO_SoundManager.Instance.SfxPlay(clip);
         GameObject trap;
 
         if (trapPool.Count > 0)
@@ -78,7 +79,6 @@ public class LSO_BearTrapSpawner : MonoBehaviour,LSO_ISkill
     }
     public void UseSkill(GameObject player)
     {
-        LSO_SoundManager.Instance.SfxPlay(clip);
         SpawnTrap(player);
     }
     
