@@ -85,16 +85,16 @@ public class KDH_HealthBarBossUI : MonoBehaviour
     // 보스를 찾고 UI를 켜고 끄는 핵심 함수
     private void FindBoss()
     {
-        GameObject boss = GameObject.FindGameObjectWithTag("Enemy");
+        //GameObject boss = GameObject.FindGameObjectWithTag("Enemy");
 
-        if (boss != null)
-        {
-            healthResource = boss.GetComponent<Health>();
-        }
-        else
-        {
-            healthResource = null;
-        }
+        //if (boss != null)
+        //{
+        //    healthResource = boss.GetComponent<Health>();
+        //}
+        //else
+        //{
+        //    healthResource = null;
+        //}
 
         // 보스가 존재하고 Health 컴포넌트가 있다면?
         if (healthResource != null)

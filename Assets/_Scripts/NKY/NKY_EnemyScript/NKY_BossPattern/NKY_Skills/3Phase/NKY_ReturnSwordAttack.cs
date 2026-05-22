@@ -35,7 +35,7 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
     }
     public override IEnumerator Execute(Transform boss, Transform target)
     {
-        Vector3 pos = returnTarget.position;
+        Vector3 pos = returnTarget.position; 
         Vector3 moveDir;
         float distance = 0;
         float fireAngle = 0;

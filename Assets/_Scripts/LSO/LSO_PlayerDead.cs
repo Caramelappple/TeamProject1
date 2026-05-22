@@ -52,7 +52,7 @@ public class LSO_PlayerDead : MonoBehaviour
         SetTra(0);
         Up();
 
-        //_menuGo.MakeUI();//널 엑셉션 남
+        _menuGo.MakeUI();//널 엑셉션 남
     }
 
     private void SetSat(float targetValue)
