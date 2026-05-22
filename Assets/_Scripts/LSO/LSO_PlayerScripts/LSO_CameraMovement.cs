@@ -38,7 +38,7 @@ public class LSO_CameraMovement : MonoBehaviour
         }
     }
 
-    private IEnumerator CameraWait()//카메라가 플레이어에게 돌아올 때까지 기다리는 코루틴
+    private IEnumerator CameraWait()
     {
         yield return new WaitUntil(() =>
             Vector3.Distance(transform.position, target.position) < 0.1f);
