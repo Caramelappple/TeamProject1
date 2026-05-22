@@ -1,0 +1,715 @@
+fileFormatVersion: 2
+guid: e3b50583f1aea534f8a3f5027dbfa7f0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9024923479935118641
+    second: ssss_red_nobg_0
+  - first:
+      213: 1711855380837826321
+    second: ssss_red_nobg_1
+  - first:
+      213: 3036810557573623781
+    second: ssss_red_nobg_2
+  - first:
+      213: -435631059674707470
+    second: ssss_red_nobg_3
+  - first:
+      213: -3830286282401418332
+    second: ssss_red_nobg_4
+  - first:
+      213: -1522772065036840304
+    second: ssss_red_nobg_5
+  - first:
+      213: 8358332821255634674
+    second: ssss_red_nobg_6
+  - first:
+      213: -3834652188368486707
+    second: ssss_red_nobg_7
+  - first:
+      213: 88918859604263215
+    second: ssss_red_nobg_8
+  - first:
+      213: -7511858132663462508
+    second: ssss_red_nobg_9
+  - first:
+      213: -5187935604584183181
+    second: ssss_red_nobg_10
+  - first:
+      213: -4594520470642171851
+    second: ssss_red_nobg_11
+  - first:
+      213: -2811182204996736441
+    second: ssss_red_nobg_12
+  - first:
+      213: 5289678896452031589
+    second: ssss_red_nobg_13
+  - first:
+      213: -7986519235956324359
+    second: ssss_red_nobg_14
+  - first:
+      213: -818447122241894279
+    second: ssss_red_nobg_15
+  - first:
+      213: -4461270003054019357
+    second: ssss_red_nobg_16
+  - first:
+      213: 8606154480939860170
+    second: ssss_red_nobg_17
+  - first:
+      213: -2180207510458920635
+    second: ssss_red_nobg_18
+  - first:
+      213: 2367346445349155593
+    second: ssss_red_nobg_19
+  - first:
+      213: 3262113393434788602
+    second: ssss_red_nobg_20
+  - first:
+      213: -3684548181505824752
+    second: ssss_red_nobg_21
+  - first:
+      213: -3277004635071567370
+    second: ssss_red_nobg_22
+  - first:
+      213: 1353841155518165435
+    second: ssss_red_nobg_23
+  - first:
+      213: -326290339651593793
+    second: ssss_red_nobg_24
+  - first:
+      213: 7043583596557646508
+    second: ssss_red_nobg_25
+  - first:
+      213: -2960236607976778833
+    second: ssss_red_nobg_26
+  - first:
+      213: 3880023461306405071
+    second: ssss_red_nobg_27
+  - first:
+      213: -1721944121150259083
+    second: ssss_red_nobg_28
+  - first:
+      213: 2180332232145294883
+    second: ssss_red_nobg_29
+  - first:
+      213: 653524567301737352
+    second: ssss_red_nobg_30
+  - first:
+      213: 5764864601336512265
+    second: ssss_red_nobg_31
+  - first:
+      213: -2674805596751643698
+    second: ssss_red_nobg_32
+  - first:
+      213: -6730932608638863998
+    second: ssss_red_nobg_33
+  - first:
+      213: -7643378597359907214
+    second: ssss_red_nobg_34
+  - first:
+      213: 2727033000710554237
+    second: ssss_red_nobg_35
+  - first:
+      213: -8748318018663437278
+    second: ssss_red_nobg_36
+  - first:
+      213: 4803053694789009151
+    second: ssss_red_nobg_37
+  - first:
+      213: -2399596559310247095
+    second: ssss_red_nobg_38
+  - first:
+      213: -1004037643418277184
+    second: ssss_red_nobg_39
+  - first:
+      213: -5858309445698615109
+    second: ssss_red_nobg_40
+  - first:
+      213: -4434454724804987314
+    second: ssss_red_nobg_41
+  - first:
+      213: 8592285688744613872
+    second: ssss_red_nobg_42
+  - first:
+      213: -8601889131925885091
+    second: ssss_red_nobg_43
+  - first:
+      213: 5597808052065752009
+    second: ssss_red_nobg_44
+  - first:
+      213: -1318379356373414401
+    second: ssss_red_nobg_45
+  - first:
+      213: -1619792976829202216
+    second: ssss_red_nobg_46
+  - first:
+      213: 2319137815246059155
+    second: ssss_red_nobg_47
+  - first:
+      213: -4679494268822485214
+    second: ssss_red_nobg_48
+  - first:
+      213: 2556853227408739498
+    second: ssss_red_nobg_49
+  - first:
+      213: 5556157863553305092
+    second: ssss_red_nobg_50
+  - first:
+      213: -3533907572223594265
+    second: ssss_red_nobg_51
+  - first:
+      213: 760754246563380177
+    second: ssss_red_nobg_52
+  - first:
+      213: 1072657868677268819
+    second: ssss_red_nobg_53
+  - first:
+      213: -3629050539149652040
+    second: ssss_red_nobg_54
+  - first:
+      213: 9165939187583662539
+    second: ssss_red_nobg_55
+  - first:
+      213: -9208195980634017077
+    second: ssss_red_nobg_56
+  - first:
+      213: 136215182025916811
+    second: ssss_red_nobg_57
+  - first:
+      213: 757062229960816297
+    second: ssss_red_nobg_58
+  - first:
+      213: -3191533879817598147
+    second: ssss_red_nobg_59
+  - first:
+      213: -798236257019297189
+    second: ssss_red_nobg_60
+  - first:
+      213: 2162822008254683506
+    second: ssss_red_nobg_61
+  - first:
+      213: -1442387267492689875
+    second: ssss_red_nobg_62
+  - first:
+      213: -6223973447339199877
+    second: ssss_red_nobg_63
+  - first:
+      213: -2879021581711517851
+    second: ssss_red_nobg_64
+  - first:
+      213: -412526448884010802
+    second: ssss_red_nobg_65
+  - first:
+      213: 3278120494448801708
+    second: ssss_red_nobg_66
+  - first:
+      213: -5975273349525678649
+    second: ssss_red_nobg_67
+  - first:
+      213: -3696569258241091669
+    second: ssss_red_nobg_68
+  - first:
+      213: 2178381542726730351
+    second: ssss_red_nobg_69
+  - first:
+      213: -2328689454702448884
+    second: ssss_red_nobg_70
+  - first:
+      213: 6879398843501327110
+    second: ssss_red_nobg_71
+  - first:
+      213: 8505001303381934897
+    second: ssss_red_nobg_72
+  - first:
+      213: 9160936727956431870
+    second: ssss_red_nobg_73
+  - first:
+      213: -6695153582009587130
+    second: ssss_red_nobg_74
+  - first:
+      213: -8763965642269564210
+    second: ssss_red_nobg_75
+  - first:
+      213: -1748467736749738825
+    second: ssss_red_nobg_76
+  - first:
+      213: 1650054088406821123
+    second: ssss_red_nobg_77
+  - first:
+      213: 4636890209009303717
+    second: ssss_red_nobg_78
+  - first:
+      213: 1409141272724732569
+    second: ssss_red_nobg_79
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ssss_red_nobg_0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 102
+        width: 12
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13d6d92c618fe3d70800000000000000
+      internalID: 9024923479935118641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssss_red_nobg_1
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 91
+        width: 18
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11ffda9266bb1c710800000000000000
+      internalID: 1711855380837826321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssss_red_nobg_2
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 61
+        width: 16
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5efe456cc1be42a20800000000000000
+      internalID: 3036810557573623781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssss_red_nobg_3
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 25
+        width: 17
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f946fafbd354f9f0800000000000000
+      internalID: -435631059674707470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssss_red_nobg_4
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 4
+        width: 116
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a3796d7be618dac0800000000000000
+      internalID: -3830286282401418332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssss_red_nobg_5
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 25
+        width: 67
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0925795ffd60edae0800000000000000
+      internalID: -1522772065036840304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssss_red_nobg_6
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 13
+        width: 126
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fe3e65aa63cef370800000000000000
+      internalID: 8358332821255634674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssss_red_nobg_7
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 4
+        width: 129
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dce3f1bc62498cac0800000000000000
+      internalID: -3834652188368486707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssss_red_nobg_8
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 0
+        width: 129
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f218b805b37eb3100800000000000000
+      internalID: 88918859604263215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssss_red_nobg_10
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 6
+        width: 110
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37a8823fd00c008b0800000000000000
+      internalID: -5187935604584183181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssss_red_nobg_16
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 11
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ecfbdca1926612c0800000000000000
+      internalID: -4461270003054019357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssss_red_nobg_33
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 7
+        width: 106
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 285bcf6547ce692a0800000000000000
+      internalID: -6730932608638863998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: bc3aa92ff36cd52499747b8aef30198b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ssss_red_nobg_0: 9024923479935118641
+      ssss_red_nobg_1: 1711855380837826321
+      ssss_red_nobg_10: -5187935604584183181
+      ssss_red_nobg_11: -4594520470642171851
+      ssss_red_nobg_12: -2811182204996736441
+      ssss_red_nobg_13: 5289678896452031589
+      ssss_red_nobg_14: -7986519235956324359
+      ssss_red_nobg_15: -818447122241894279
+      ssss_red_nobg_16: -4461270003054019357
+      ssss_red_nobg_17: 8606154480939860170
+      ssss_red_nobg_18: -2180207510458920635
+      ssss_red_nobg_19: 2367346445349155593
+      ssss_red_nobg_2: 3036810557573623781
+      ssss_red_nobg_20: 3262113393434788602
+      ssss_red_nobg_21: -3684548181505824752
+      ssss_red_nobg_22: -3277004635071567370
+      ssss_red_nobg_23: 1353841155518165435
+      ssss_red_nobg_24: -326290339651593793
+      ssss_red_nobg_25: 7043583596557646508
+      ssss_red_nobg_26: -2960236607976778833
+      ssss_red_nobg_27: 3880023461306405071
+      ssss_red_nobg_28: -1721944121150259083
+      ssss_red_nobg_29: 2180332232145294883
+      ssss_red_nobg_3: -435631059674707470
+      ssss_red_nobg_30: 653524567301737352
+      ssss_red_nobg_31: 5764864601336512265
+      ssss_red_nobg_32: -2674805596751643698
+      ssss_red_nobg_33: -6730932608638863998
+      ssss_red_nobg_34: -7643378597359907214
+      ssss_red_nobg_35: 2727033000710554237
+      ssss_red_nobg_36: -8748318018663437278
+      ssss_red_nobg_37: 4803053694789009151
+      ssss_red_nobg_38: -2399596559310247095
+      ssss_red_nobg_39: -1004037643418277184
+      ssss_red_nobg_4: -3830286282401418332
+      ssss_red_nobg_40: -5858309445698615109
+      ssss_red_nobg_41: -4434454724804987314
+      ssss_red_nobg_42: 8592285688744613872
+      ssss_red_nobg_43: -8601889131925885091
+      ssss_red_nobg_44: 5597808052065752009
+      ssss_red_nobg_45: -1318379356373414401
+      ssss_red_nobg_46: -1619792976829202216
+      ssss_red_nobg_47: 2319137815246059155
+      ssss_red_nobg_48: -4679494268822485214
+      ssss_red_nobg_49: 2556853227408739498
+      ssss_red_nobg_5: -1522772065036840304
+      ssss_red_nobg_50: 5556157863553305092
+      ssss_red_nobg_51: -3533907572223594265
+      ssss_red_nobg_52: 760754246563380177
+      ssss_red_nobg_53: 1072657868677268819
+      ssss_red_nobg_54: -3629050539149652040
+      ssss_red_nobg_55: 9165939187583662539
+      ssss_red_nobg_56: -9208195980634017077
+      ssss_red_nobg_57: 136215182025916811
+      ssss_red_nobg_58: 757062229960816297
+      ssss_red_nobg_59: -3191533879817598147
+      ssss_red_nobg_6: 8358332821255634674
+      ssss_red_nobg_60: -798236257019297189
+      ssss_red_nobg_61: 2162822008254683506
+      ssss_red_nobg_62: -1442387267492689875
+      ssss_red_nobg_63: -6223973447339199877
+      ssss_red_nobg_64: -2879021581711517851
+      ssss_red_nobg_65: -412526448884010802
+      ssss_red_nobg_66: 3278120494448801708
+      ssss_red_nobg_67: -5975273349525678649
+      ssss_red_nobg_68: -3696569258241091669
+      ssss_red_nobg_69: 2178381542726730351
+      ssss_red_nobg_7: -3834652188368486707
+      ssss_red_nobg_70: -2328689454702448884
+      ssss_red_nobg_71: 6879398843501327110
+      ssss_red_nobg_72: 8505001303381934897
+      ssss_red_nobg_73: 9160936727956431870
+      ssss_red_nobg_74: -6695153582009587130
+      ssss_red_nobg_75: -8763965642269564210
+      ssss_red_nobg_76: -1748467736749738825
+      ssss_red_nobg_77: 1650054088406821123
+      ssss_red_nobg_78: 4636890209009303717
+      ssss_red_nobg_79: 1409141272724732569
+      ssss_red_nobg_8: 88918859604263215
+      ssss_red_nobg_80: -1065050224
+      ssss_red_nobg_9: -7511858132663462508
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

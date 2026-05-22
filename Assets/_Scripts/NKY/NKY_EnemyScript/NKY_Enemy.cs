@@ -8,7 +8,7 @@ namespace _Scripts.NKY._EnemyScript
 {
     public class NKY_Enemy: NKY_BaseBoss
     {
-        
+        [SerializeField] private NKY_BossIntro intro;
         [Header("보스의 스킬 패턴 세팅")]
         [SerializeField] private  NKY_BossSkill[] skills;
         public LSO_PlayerMovement playerReference;
@@ -45,13 +45,15 @@ namespace _Scripts.NKY._EnemyScript
         
         private void Start()
         {
+            intro.gameObject.SetActive(true);
+            StartCoroutine(intro.PlayIntro());
             if (_myHealth != null)
             {
                 _myHealth.OnHit += IsHit;
                 _myHealth.OnDamage += SetDamage;
             }
 
-            StartCoroutine(BossMainRoutine());
+            //StartCoroutine(BossMainRoutine());
         }
 
         protected override IEnumerator BossMainRoutine()
