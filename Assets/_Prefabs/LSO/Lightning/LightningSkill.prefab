@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6523594206812736514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8620461590295197292}
+  - component: {fileID: -7146192952102912462}
+  m_Layer: 0
+  m_Name: LightningSkill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8620461590295197292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6523594206812736514}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.78643, y: -0.23791, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-7146192952102912462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6523594206812736514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa46ee7b754241cc8d0023e8342e7010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_Scripts.LSO.LSO_Skills.Skills.LSO_LightningSpawner
+  clips:
+  - {fileID: 8300000, guid: e23a86af9e9a74717b72ded08064d01a, type: 3}
+  - {fileID: 8300000, guid: 8b3982077b54a4dad8ea1fdfaed5a463, type: 3}
+  - {fileID: 8300000, guid: 8fc4b13ab672841f0be9d0d92f645f83, type: 3}
+  - {fileID: 8300000, guid: 3fc62d90e9aea4540ad0b23fa2ff6ce3, type: 3}
+  - {fileID: 8300000, guid: a715fd3b370414b28a2a40bc90b279f8, type: 3}
+  - {fileID: 8300000, guid: 4c70d944ea73740a58a9dc6a65d46397, type: 3}
+  - {fileID: 8300000, guid: 657b1c58f7a6c4cc682ea89b80d3e5e9, type: 3}
+  - {fileID: 8300000, guid: 1e459b8425d374fa9b680a3352fad484, type: 3}
+  - {fileID: 8300000, guid: f2c90c97a02424155a6e2ffd1f4ea5dd, type: 3}
+  - {fileID: 8300000, guid: 3665f122f5e8e444aa927abe881d59b0, type: 3}
+  - {fileID: 8300000, guid: fb85ea8e103994e81843cf91b49c9376, type: 3}
+  - {fileID: 8300000, guid: e759992620da9407c90d6fc2373b4b4e, type: 3}
+  effect: {fileID: 4037454949488126040, guid: 4978844acbd7b4b4492d6322cc90a762, type: 3}

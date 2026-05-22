@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba7067c87e9e283418fd4da067c38591, type: 3}
+  m_Name: KDH_Bomb
+  m_EditorClassIdentifier: Assembly-CSharp::KDH_SkillData
+  skillName: "\uC790\uD3ED"
+  skillDescription: "\uAC00\uC9C0\uACE0 \uC788\uB294 \uD3ED\uD0C4\uC744 \uD130\uD2B8\uB9BD\uB2C8\uB2E4.
+    (\uC0AC\uC6A9\uC2DC \uCCB4\uB825 - 30)"
+  skillIcon: {fileID: 21300054, guid: d87ac3c3eb635674c8bb306c9681baa7, type: 3}
+  maxCooldownTime: 5
+  skillPrefab: {fileID: 1810854247381936306, guid: 0781334c88a7bab44a9ad7b0bc1d4fc1,
+    type: 3}
+  skillIConPrefabs: {fileID: 4590441206724951262, guid: 0331a730bef1c354ca6fd0e799cccb57,
+    type: 3}

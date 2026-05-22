@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06120155515bb614abefb3c920fe08ff, type: 3}
+  m_Name: IceSkill
+  m_EditorClassIdentifier: Assembly-CSharp::LSO.SkillSystem.LSO_SkillResourceSO
+  skillName: Ice
+  skillDescription: "\uC5BC\uC74C\uC744 \uC18C\uD658"
+  skillIcon: {fileID: 21300038, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
+  skillPrefab: {fileID: 5213919056071174991, guid: 98f7c510666416a409a44b79bab21079,
+    type: 3}

@@ -1,0 +1,26 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class KDH_MainMenu : MonoBehaviour
+{
+    [SerializeField] private KDH_SceneTransition FadeUi;
+    public void OnClickNewGame ()
+    {
+        Debug.Log("게임 플레이");
+        FadeUi.GoToNextScene("KHG_tumap");
+    }
+
+    public void OnClickOption ()
+    {
+        Debug.Log("옵션"); //클릭하면 옵션창 등장
+    }
+
+    public void OnClickQuit ()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false; //클릭하면 게임 종료
+#else
+        Application.Quit(); //클릭하면 게임 종료
+#endif
+    }
+}
