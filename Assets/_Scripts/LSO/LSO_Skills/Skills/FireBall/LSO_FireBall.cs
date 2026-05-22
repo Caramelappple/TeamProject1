@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class LSO_FireBall : MonoBehaviour
 {
-    [SerializeField] private AudioClip clip;
-    
     [SerializeField]private GameObject explosionPrefab;
     
     private Rigidbody2D _rigid;
@@ -33,7 +31,6 @@ public class LSO_FireBall : MonoBehaviour
     {
         if (!_canExplode) yield break;
         yield return new WaitForSeconds(_liveTime);
-        LSO_SoundManager.Instance.SfxPlay(clip);
         Instantiate(explosionPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
     }
