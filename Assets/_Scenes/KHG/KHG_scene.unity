@@ -24429,7 +24429,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NKY_Enemy.NKY_Enemy
   bossPhase: 1
   _skillCooldown: 1.8
-  skills: []
+  skills:
+  - {fileID: 1781352936}
+  - {fileID: 1709958997}
+  - {fileID: 1355050129}
+  - {fileID: 1153682826}
+  - {fileID: 2131660779}
+  - {fileID: 775105456}
+  - {fileID: 2047782804}
+  - {fileID: 1489001129}
+  - {fileID: 1905282105}
   playerReference: {fileID: 0}
   bossPatternEnd: {fileID: 0}
   phase2Effect: {fileID: 1200569571}

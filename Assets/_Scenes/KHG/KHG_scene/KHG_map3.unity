@@ -3371,7 +3371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dad5415db13537d4b86753de769d0310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_BossName
-  bossName: "\uC800\uB141 \uC810\uD638\uC694"
+  bossName: "\uD30C\uBA78\uC758 \uAD70\uC8FC"
   UI: {fileID: 0}
 --- !u!114 &1202624604
 MonoBehaviour:
@@ -3694,7 +3694,7 @@ GameObject:
   - component: {fileID: 2045152298}
   - component: {fileID: 2045152297}
   - component: {fileID: 2045152296}
-  m_Layer: 0
+  m_Layer: 25
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
