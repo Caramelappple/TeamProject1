@@ -9,7 +9,7 @@ namespace _Scripts.NKY._EnemyScript.BossPhaseEffects
         private static readonly int IsStun = Animator.StringToHash("isStun");
 
         [Header("이펙트 세팅")]
-        [SerializeField] private GameObject bloodEffect;
+        //[SerializeField] private GameObject bloodEffect;
         [SerializeField] private GameObject fireEffect;
 
         private Animator _fireAnim = null;
@@ -17,14 +17,12 @@ namespace _Scripts.NKY._EnemyScript.BossPhaseEffects
         
         private void Start()
         {
-            bloodEffect.SetActive(false);
             fireEffect.SetActive(false);
         }
 
         public override IEnumerator PlayPhaseEffect()
         {
             Camera.main.transform.DOShakePosition(0.6f, 1.6f);
-            StartCoroutine(PlayEffect(bloodEffect, "BloodEffect", 0.5f));
             _bossBrain.Anim.SetBool(IsStun, true);
             yield return StartCoroutine(WaitUntilOrTime(() => false, 0.8f));
             StartEffect(fireEffect, "FireEffect", true, _fireAnim);
