@@ -23,7 +23,7 @@ public class LSO_CameraMovement : MonoBehaviour
     {
         if (test)//보스에게 카메라 이동 테스트용, 나중에 수정 필요
         {
-            target = bossTargets[0];
+            //target = bossTargets[0];
             speed = 5;
             last = true;
             _isReturning = false;
