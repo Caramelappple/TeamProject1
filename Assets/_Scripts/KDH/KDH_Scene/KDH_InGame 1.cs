@@ -8,7 +8,7 @@ public class KDH_InGame1 : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene(2);
+            KDH_SceneFader.Instance.FadeToScene("InGame");
             NKY_GameManager.instance.player.transform.position = new Vector3(0f, 0f, 0f); ;
         }
     }

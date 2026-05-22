@@ -5967,6 +5967,7 @@ GameObject:
   - component: {fileID: 1345346372}
   - component: {fileID: 1345346385}
   - component: {fileID: 1345346386}
+  - component: {fileID: 1345346387}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -6359,6 +6360,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_InitItemPortal
   itemPack: {fileID: 155158996}
+--- !u!114 &1345346387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345346371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 825ff256fa7fd134096070b68a27a2f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KDH_DamageText
+  damageTextPrefab: {fileID: 8118361260314724747, guid: 17af1d46e642e2e48a03cf1470278831,
+    type: 3}
 --- !u!1 &1391451643
 GameObject:
   m_ObjectHideFlags: 0
