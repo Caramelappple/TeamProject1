@@ -107,8 +107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30a819eda4acbf478e3c67f8729a93a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_BearTrap
-  clip: {fileID: 8300000, guid: f5a962cf7a0c349e8a20af1cba03d5ed, type: 3}
-  damage: 20
 --- !u!70 &485549797607290400
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
