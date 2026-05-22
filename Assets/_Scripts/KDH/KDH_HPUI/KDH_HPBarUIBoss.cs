@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class KDH_HealthBarBossUI : MonoBehaviour
 {
     public static KDH_HealthBarBossUI instance;
+    private KDH_PlaySoundOnEnable fade;
 
     public Image hpBarImage;
     public Health healthResource; //플레이어를 연결
@@ -28,9 +29,13 @@ public class KDH_HealthBarBossUI : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+
         GameObject boss = GameObject.FindGameObjectWithTag("Enemy");
 
+        if (boss != null )
         healthResource = boss.GetComponent<Health>();
+
+        gameObject.SetActive(true);
 
         _previousHealth = healthResource.Value;
         hpBarImage.fillAmount = (float)healthResource.Value / healthResource.MaxValue;
