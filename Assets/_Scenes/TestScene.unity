@@ -1861,9 +1861,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd3981f39acbed4fb3a0457661e5a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NKY_Enemy.NKY_Enemy
-  bossPhase: 2
+  bossPhase: 1
   _skillCooldown: 1.8
   skills:
+<<<<<<< HEAD
   - {fileID: 1874845559}
 <<<<<<< HEAD
   - {fileID: 1826878406}
@@ -1884,6 +1885,19 @@ MonoBehaviour:
   playerReference: {fileID: 2029763800}
 >>>>>>> base
   bossPatternEnd: {fileID: 0}
+=======
+  - {fileID: 1218274507}
+  - {fileID: 1218274507}
+  - {fileID: 1218274507}
+  - {fileID: 1290765489}
+  - {fileID: 1290765489}
+  - {fileID: 1290765489}
+  - {fileID: 1218274507}
+  - {fileID: 1218274507}
+  - {fileID: 1218274507}
+  playerReference: {fileID: 2062148693}
+  _bossSkillEnd: {fileID: 0}
+>>>>>>> parent of 69a5c078 (save)
   phase2Effect: {fileID: 580173627}
   phase3Effect: {fileID: 1341960663}
   <Damage>k__BackingField: 15
@@ -14132,7 +14146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dba503ad84009741b266f19fead13b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Editor
-  clips: []
   postProcessVolume: {fileID: 0}
   colorGrading: {fileID: 0}
   bloom: {fileID: 0}
@@ -15919,7 +15932,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40297269b71441a4781af22ccea8771e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_PlayerAttack
-  clips: []
   sword: {fileID: 2054296584}
 --- !u!114 &2062148693
 MonoBehaviour:
@@ -15934,8 +15946,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 3
-  clips: []
-  footstepRate: 0.2
   canMove: 1
 --- !u!114 &2062148694
 MonoBehaviour:

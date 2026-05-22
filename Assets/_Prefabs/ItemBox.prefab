@@ -152,4 +152,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8968af25586839b4a9b963e6f371b9e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_ItemBox
-  clip: {fileID: 8300000, guid: 1c8f7cf1aebdb4efda330c1fc4fb4da6, type: 3}

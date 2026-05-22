@@ -40,7 +40,7 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-            OnSkillEvent = new Action<GameObject>[LSO_SkillSlot.instance.slotIndex];
+        OnSkillEvent = new Action<GameObject>[LSO_SkillSlot.instance.slotIndex];
     }
 
     private void FixedUpdate()
