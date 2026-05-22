@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b8b23ccd6b9b574c94c9cb96f1398e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_EnergyBall
+  clip: {fileID: 8300000, guid: 0ae5feceddfce42d4b8af6a64c11fd77, type: 3}
   effect: {fileID: 5373473974996808387, guid: 17464d7228c092b498f4545d579421fb, type: 3}
-  spawnDistance: 10

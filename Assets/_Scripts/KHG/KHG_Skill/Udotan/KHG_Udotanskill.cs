@@ -3,6 +3,8 @@ using System.Collections;
 
 public class KHG_Udotanskill : MonoBehaviour,LSO_ISkill
 {
+    [SerializeField] private AudioClip clip;
+    
     [SerializeField] private GameObject bulletPrefab; 
     private GameObject _bullet;
     private Rigidbody2D _rigid;
@@ -17,6 +19,7 @@ public class KHG_Udotanskill : MonoBehaviour,LSO_ISkill
         if (!isSkillReady) return;
         isSkillReady = false;
         
+        LSO_SoundManager.Instance.SfxPlay(clip);
         _bullet = Instantiate(bulletPrefab, player.transform.position, Quaternion.identity);
         _rigid = _bullet.GetComponent<Rigidbody2D>();
         _movement = player.GetComponent<LSO_PlayerMovement>();

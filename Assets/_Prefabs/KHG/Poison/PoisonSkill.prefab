@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a75e6a306940c4fa9144185defc573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KHG_PoisonField
+  clip: {fileID: 8300000, guid: adcfc3f9cf7a14590ae0988bda56accd, type: 3}
   poisonPrefab: {fileID: 7473640022190133471, guid: 5ccc8cbd74eee484eacd296c0ed28ecf,
     type: 3}
   spawnDistance: 1.5

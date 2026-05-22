@@ -6,7 +6,7 @@ public class KHG_CircleBullet : MonoBehaviour
     private readonly string _enemyTag = "Enemy";
     private float _speed;
     private float _trackingSpeed = 0.8f;
-    private float _liveTime = 3f;
+    private float _liveTime = 5f;
 
     private Transform _target;
     private Rigidbody2D _rb;
