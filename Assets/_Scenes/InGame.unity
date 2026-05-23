@@ -6229,10 +6229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dba503ad84009741b266f19fead13b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Editor
-  clip:
-  - {fileID: 8300000, guid: 0675418fad33b754e9dcccb4cbdcc2ed, type: 3}
-  - {fileID: 8300000, guid: a96354575fd6fa44dab3348bbe6faacf, type: 3}
-  - {fileID: 8300000, guid: abe40b13b0d86a044a357cf037bcade0, type: 3}
+  clips: []
   postProcessVolume: {fileID: 0}
   colorGrading: {fileID: 0}
   bloom: {fileID: 0}
@@ -6611,6 +6608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f469a8d7084c16e45afac5f311ccc573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_InitItemPortal
+  itemPack: {fileID: 0}
 --- !u!1 &576613498
 GameObject:
   m_ObjectHideFlags: 0
@@ -17077,6 +17075,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c0de709f460a042982d4c2c2b846f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  bgmSource: {fileID: 0}
+  sfxSource: {fileID: 0}
 --- !u!114 &1331853187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19274,6 +19274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8eb10fa73b4f8c47a5604e91e919022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_MainMenuGo
+  me: {fileID: 0}
 --- !u!1 &1726111003
 GameObject:
   m_ObjectHideFlags: 0
