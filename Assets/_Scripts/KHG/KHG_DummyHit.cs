@@ -13,12 +13,9 @@ public class KHG_DummyHit : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.gameObject.CompareTag("Dummy"))
+        if (!collision.gameObject.CompareTag("Dummy") && _animator)
         {
-            if (_animator != null)
-            {
-                _animator.SetTrigger("crow");
-            }
+                _animator.SetTrigger("Hit");
         }
     }
 }
