@@ -533,6 +533,7 @@ MonoBehaviour:
   spawnDelay: 0.2
   warningTime: 0.8
   spawnHeightOffset: 3
+  warningOffset: {x: 0, y: -0.8}
 --- !u!114 &566629622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -936,7 +937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 761876236}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SwordAxis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1013,7 +1014,7 @@ GameObject:
   - component: {fileID: 1571487503}
   - component: {fileID: 1571487502}
   - component: {fileID: 1571487501}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player (1)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1485,7 +1486,7 @@ GameObject:
   - component: {fileID: 1747134750}
   - component: {fileID: 1747134749}
   - component: {fileID: 1747134748}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}

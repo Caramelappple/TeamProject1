@@ -9,7 +9,7 @@ public class SpearSpawner : MonoBehaviour
     [SerializeField] private float spawnDelay = 0.2f;
     [SerializeField] private float warningTime = 0.8f;
     [SerializeField] private float spawnHeightOffset = 3f;
-
+    [SerializeField] private Vector2 warningOffset = new Vector2(0f, -0.3f);
     public void SpawnSpears()
     {
         StartCoroutine(SpawnSpearsRoutine());
@@ -39,7 +39,7 @@ public class SpearSpawner : MonoBehaviour
 
         if (warningCirclePrefab != null)
         {
-            warning = Instantiate(warningCirclePrefab, targetPos, Quaternion.identity);
+            warning = Instantiate(warningCirclePrefab, targetPos + warningOffset, Quaternion.identity);
         }
 
         yield return new WaitForSeconds(warningTime);
