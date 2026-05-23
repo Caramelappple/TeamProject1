@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class LSO_BearTrapSpawner : MonoBehaviour,LSO_ISkill
 {
-    [SerializeField] private AudioClip clip;
-    
     public static LSO_BearTrapSpawner instance;
     [SerializeField]private float coolTime = 1f;
     private bool _canSpawn = true;
@@ -42,8 +40,7 @@ public class LSO_BearTrapSpawner : MonoBehaviour,LSO_ISkill
     private void SpawnTrap(GameObject player)
     {
         if (!_canSpawn) return;
-        
-        LSO_SoundManager.Instance.SfxPlay(clip);
+
         GameObject trap;
 
         if (trapPool.Count > 0)

@@ -45,7 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e02d184fd606f43aa5225f2553011a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KHG_Udotanskill
-  clip: {fileID: 8300000, guid: 34efaef1401a7493fa62ff9d39245c9e, type: 3}
   bulletPrefab: {fileID: 992231960834194030, guid: 0f7712d6083f91d4a95f4fd67e730be2,
     type: 3}
   skillCooldown: 3
