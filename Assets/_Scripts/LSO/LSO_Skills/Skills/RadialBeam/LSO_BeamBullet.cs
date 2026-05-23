@@ -6,7 +6,7 @@ public class LSO_BeamBullet : MonoBehaviour
     private Rigidbody2D _rigid;
     private float _speed = 0.25f;
     private float _lifeTime = 1.8f;
-    private int _damage = 5;
+    private int _damage = 2;
 
     private void Start()
     {

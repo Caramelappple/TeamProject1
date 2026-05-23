@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class KHG_PoisonField : MonoBehaviour, LSO_ISkill
 {
+    [SerializeField] private AudioClip clip;
+    
     [SerializeField] private GameObject poisonPrefab;
 
     [SerializeField] private float spawnDistance = 1.5f;
@@ -13,7 +15,8 @@ public class KHG_PoisonField : MonoBehaviour, LSO_ISkill
     public void UseSkill(GameObject player)
     {
         if (!_canUse) return;
-
+        
+        LSO_SoundManager.Instance.SfxPlay(clip);
         LSO_PlayerMovement movement = player.GetComponent<LSO_PlayerMovement>();
         
 
@@ -21,7 +24,8 @@ public class KHG_PoisonField : MonoBehaviour, LSO_ISkill
 
         Vector2 dir = movement.GetFixedLastDir();
         Vector3 spawnPos = player.transform.position + (Vector3)(dir * spawnDistance);
-
+        
+        
         GameObject poison = Instantiate(poisonPrefab, spawnPos, Quaternion.identity);
         poison.GetComponent<KHG_PoisonDamage>().Init(player.GetComponent<Health>());
 
