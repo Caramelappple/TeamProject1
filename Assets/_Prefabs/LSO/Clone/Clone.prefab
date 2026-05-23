@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -2310347756555602786}
   - component: {fileID: 1219370194204929178}
   - component: {fileID: -7401771483448136743}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Clone
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68ddf0cd2e8d7542a1b11f57993fef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Clone
+  clip: {fileID: 8300000, guid: 87e9fc04cbc5d4f638092101d70f4ee0, type: 3}
   sword: {fileID: 823444306591474005}
 --- !u!1 &823444306591474005
 GameObject:
@@ -207,7 +208,7 @@ GameObject:
   - component: {fileID: 6216137958193085912}
   - component: {fileID: 4095975827472851798}
   - component: {fileID: 4245850033887127012}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +344,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 105754969697982135}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SwordAxis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
