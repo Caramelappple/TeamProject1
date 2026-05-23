@@ -4,8 +4,11 @@
     <file url="file://$PROJECT_DIR$/Assets/_Scripts/HealthSystem/Health.cs" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/Assets/_Scripts/KSY/HealthSystem/KSY_DamageableResource.cs" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/Assets/_Scripts/KSY/HealthSystem/KSY_Health.cs" charset="EUC-KR" />
+    <file url="file://$PROJECT_DIR$/Assets/_Scripts/NKY/NKY_EnemyScript/NKY_BossPattern/NKY_PatternCoroutine.cs" charset="EUC-KR" />
+    <file url="file://$PROJECT_DIR$/Assets/_Scripts/NKY/NKY_EnemyScript/NKY_BossPattern/NKY_Skills/1Phase/NKY_SwordStorm.cs" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/Assets/_Scripts/NKY/NKY_EnemyScript/NKY_BossPattern/NKY_Skills/3Phase/NKY_DashAndSlap.cs" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/Assets/_Scripts/NKY/NKY_EnemyScript/NKY_BossPattern/NKY_Skills/3Phase/NKY_SlashRush.cs" charset="EUC-KR" />
+    <file url="file://$PROJECT_DIR$/Assets/_Scripts/NKY/NKY_EnemyScript/NKY_Enemy.cs" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/Assets/_Scripts/NKY/NKY_HealthSystem/NKY_Health.cs" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/Assets/_Scripts/NKY/NKY_Manager/NKY_IndicatorManager.cs" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/Assets/_Scripts/NKY/_EnemyScript/NKY_Enemy.cs" charset="EUC-KR" />

@@ -7014,7 +7014,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.01, y: 0.34994, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 437112006}
@@ -10822,6 +10822,7 @@ GameObject:
   - component: {fileID: 1295674323}
   - component: {fileID: 1295674325}
   - component: {fileID: 1295674326}
+  - component: {fileID: 1295674327}
   m_Layer: 0
   m_Name: Square
   m_TagString: Dummy
@@ -10899,7 +10900,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -33.048676, y: 16.652487, z: 0}
-  m_LocalScale: {x: 4.188, y: 4.188, z: 4.188}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -10938,6 +10939,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee562dba20bfd54d8ba0d064e85640b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KHG_DummyHit
+--- !u!70 &1295674327
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295674322}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.46, y: 0.6}
+  m_Direction: 0
 --- !u!1 &1297961432
 GameObject:
   m_ObjectHideFlags: 0
@@ -18539,7 +18577,7 @@ PrefabInstance:
     - target: {fileID: 6074788775643387732, guid: da7f9f8b4f1e2b5469c3ce9d3a6c76d9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.84
+      value: -28.23
       objectReference: {fileID: 0}
     - target: {fileID: 6074788775643387732, guid: da7f9f8b4f1e2b5469c3ce9d3a6c76d9,
         type: 3}

@@ -45,8 +45,8 @@ namespace _Scripts.NKY._EnemyScript
         
         private void Start()
         {
-            intro.gameObject.SetActive(true);
-            StartCoroutine(intro.PlayIntro());
+            //intro.gameObject.SetActive(true);//이시온이 끔
+            //StartCoroutine(intro.PlayIntro());//이시온이 끔
             if (_myHealth != null)
             {
                 _myHealth.OnHit += IsHit;
