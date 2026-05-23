@@ -8,7 +8,7 @@ public class JHY_MobSummoner : MonoBehaviour
 
     [Header("Summon Effect")]
     [SerializeField] private GameObject summonEffectPrefab;
-    [SerializeField] private float summonEffectLifeTime = 1.5f;
+    [SerializeField] private float summonEffectLifeTime = 1.2f;
 
     private readonly List<GameObject> summonedMobs = new List<GameObject>();
 

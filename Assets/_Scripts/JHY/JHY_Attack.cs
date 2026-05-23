@@ -13,11 +13,11 @@ public class JHY_Attack : MonoBehaviour
     [SerializeField] private GameObject projectilePrefab2;
 
     [Header("Attack Settings")]
-    [SerializeField] private float attackRange = 2f;
-    [SerializeField] private float attackCooldown = 1.5f;
-    [SerializeField] private float skillRange = 4f;
-    [SerializeField] private float skillCoolTime = 5f;
-    [SerializeField] private float jumpAttackCoolTime = 5f;
+    [SerializeField] private float attackRange = 4f;
+    [SerializeField] private float attackCooldown = 1.2f;
+    [SerializeField] private float skillRange = 15f;
+    [SerializeField] private float skillCoolTime = 3f;
+    [SerializeField] private float jumpAttackCoolTime = 7f;
 
     [Header("Skill Details")]
     [SerializeField] private int projectileCount = 5;
@@ -25,11 +25,11 @@ public class JHY_Attack : MonoBehaviour
     [SerializeField] private float detectRangeX = 1.0f;
     [SerializeField] private int shockwaveProjectileCount = 12;
     [SerializeField] private float shockwaveStartAngleOffset = 0f;
-    [SerializeField] private float skillAngle = 60f;
+    [SerializeField] private float skillAngle = 100f;
 
     [Header("Spider Web")]
     [SerializeField] private GameObject spiderWebPrefab;
-    [SerializeField] private float spiderWebSpawnTimer = 15f;
+    [SerializeField] private float spiderWebSpawnTimer = 13f;
     [SerializeField] private float spiderWebDuration = 6f;
 
 
@@ -39,7 +39,7 @@ public class JHY_Attack : MonoBehaviour
     private float lastSpearRainTime;
 
     [Header("Damage")]
-    [SerializeField] private int meleeDamage = 10;
+    [SerializeField] private int meleeDamage = 5;
     [SerializeField] private Health playerHealth;
 
     [Header("Summon Skill")]
@@ -53,7 +53,7 @@ public class JHY_Attack : MonoBehaviour
     [SerializeField] private float phase2Threshold = 0.5f;
     private bool isPhase2;
     [SerializeField] private GameObject phase2EffectPrefab;
-    [SerializeField] private float phase2EffectLifeTime = 2f;
+    [SerializeField] private float phase2EffectLifeTime = 1.5f;
     [SerializeField] private GameObject phase2Aura;
     private bool isPhaseChanging;
     [SerializeField] private float phaseChangeDuration = 1.5f;

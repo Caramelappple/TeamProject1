@@ -6,15 +6,15 @@ public class JHY_BossMove : MonoBehaviour
     [SerializeField] private Health playerHealth;
     private Rigidbody2D rb;
     private Animator ani;
-    [SerializeField] private float speed;
+    [SerializeField] private float speed = 3;
     [SerializeField] private Transform player;
     private SpriteRenderer sr;
-    [SerializeField] private float chaseRange = 5f;
-    [SerializeField] private float stopRange = 2f;
+    [SerializeField] private float chaseRange = 7f;
+    [SerializeField] private float stopRange = 4f;
     private bool isArrived = false;
     public bool isMoving;
 
-    [SerializeField] private float stunTime = 20f;
+    [SerializeField] private float stunTime = 15f;
     [SerializeField] private float stunDuration = 7f;
 
     public bool isStunned;
@@ -22,7 +22,7 @@ public class JHY_BossMove : MonoBehaviour
 
     [Header("Dash")]
     [SerializeField] private float dashRange = 10f;
-    [SerializeField] private float dashCooldown = 10f;
+    [SerializeField] private float dashCooldown = 7f;
     [SerializeField] private float dashSpeed = 12f;
     [SerializeField] private float dashDuration = 0.7f;
     private float dashTimer;
@@ -37,10 +37,7 @@ public class JHY_BossMove : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         timer = stunTime;
         dashTimer = dashCooldown;
-    }
 
-    private void Start()
-    {
         player = NKY_GameManager.instance.player.transform;
     }
 
