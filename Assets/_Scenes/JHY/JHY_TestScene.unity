@@ -349,7 +349,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -383,11 +383,11 @@ MonoBehaviour:
   chaseRange: 7
   stopRange: 4
   isMoving: 0
-  stunTime: 15
-  stunDuration: 7
+  stunTime: 14
+  stunDuration: 8
   isStunned: 0
   dashRange: 10
-  dashCooldown: 7
+  dashCooldown: 6
   dashSpeed: 12
   dashDuration: 0.7
 --- !u!114 &566629616
@@ -421,7 +421,7 @@ MonoBehaviour:
   skillAngle: 100
   spiderWebPrefab: {fileID: 6537672017439616555, guid: 6f4b6864af0ae164d82c4157bc5bd01b,
     type: 3}
-  spiderWebSpawnTimer: 13
+  spiderWebSpawnTimer: 10
   spiderWebDuration: 6
   spearSpawner: {fileID: 566629621}
   spearRainCoolTime: 20
@@ -533,7 +533,6 @@ MonoBehaviour:
   spawnDelay: 0.2
   warningTime: 0.8
   spawnHeightOffset: 3
-  warningOffset: {x: 0, y: -0.8}
 --- !u!114 &566629622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -937,7 +936,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 761876236}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: SwordAxis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1014,7 +1013,7 @@ GameObject:
   - component: {fileID: 1571487503}
   - component: {fileID: 1571487502}
   - component: {fileID: 1571487501}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Player (1)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1486,7 +1485,7 @@ GameObject:
   - component: {fileID: 1747134750}
   - component: {fileID: 1747134749}
   - component: {fileID: 1747134748}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}

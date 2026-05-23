@@ -1889,8 +1889,7 @@ GameObject:
   - component: {fileID: 569689460}
   - component: {fileID: 569689470}
   - component: {fileID: 569689471}
-  - component: {fileID: 569689472}
-  m_Layer: 29
+  m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1944,14 +1943,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossAttack2
   player: {fileID: 0}
-  attackRange: 3.3
+  attackRange: 3
   attackCooldown: 3
   damage: 5
-  comboCooldown: 8
-  comboRange: 3.3
-  comboWarningPrefab: {fileID: 8169960489270038553, guid: 3d24d1cb0e1c8c245ba8f3b26f453744,
-    type: 3}
-  comboWarningTime: 1
 --- !u!114 &569689463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1972,8 +1966,7 @@ MonoBehaviour:
   dashSpeed: 15
   dashDuration: 0.7
   dashPrepareTime: 0.75
-  dashWarningPrefab: {fileID: 5234287652115864234, guid: 7397bceca59d5514090fe117691db18e,
-    type: 3}
+  dashWarningPrefab: {fileID: 0}
   dashWarningDistance: 2
   rotateWarningToDashDirection: 1
 --- !u!70 &569689464
@@ -2164,20 +2157,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_InitItemPortal
   itemPack: {fileID: 362385293}
---- !u!114 &569689472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 569689459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dad5415db13537d4b86753de769d0310, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::KDH_BossName
-  bossName: "\uBD88\uCE78\uC6B0\uB974\uC2A4"
-  UI: {fileID: 0}
 --- !u!1 &634071877
 GameObject:
   m_ObjectHideFlags: 0
