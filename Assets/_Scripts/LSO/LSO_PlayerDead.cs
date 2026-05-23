@@ -37,17 +37,17 @@ public class LSO_PlayerDead : MonoBehaviour
         if (isDead || health.Value > health.MinValue) return;
     
         isDead = true;
-
+        
+        _attack.SetCanAttack(false);
+        _movement.SetMove(false);
+        health.SetDamageable(false);
+        health.Value = 0;
         // 1. 애니메이션을 정상 실행 (컴포넌트를 바로 끄지 않음)
         LSO_SoundManager.Instance.SfxPlay(clip);
         _animator.Play("DownIdle");
         DOVirtual.DelayedCall(0.02f, () => _animator.speed = 0f);
-        health.Value = 0;
-        health.SetDamageable(false);
-        _attack.SetCanAttack(false);
-        _movement.SetMove(false);
-        Camera.main.GetComponent<LSO_CameraMovement>().test = true;
-    
+        
+        //Camera.main.GetComponent<LSO_CameraMovement>().test = true;
         SetSat(-100);
         SetTra(0);
         Up();

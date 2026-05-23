@@ -36,7 +36,7 @@ public class LSO_Editor : MonoBehaviour
 
     private void SetHit(Health health, DamageResultData data)
     {
-        //StartCoroutine(SetHitCoroutine(health, data));
+        StartCoroutine(SetHitCoroutine(health, data));
     }
 
     private IEnumerator SetHitCoroutine(Health health , DamageResultData data)
