@@ -78,8 +78,8 @@ public class JHY_Attack : MonoBehaviour
 
     }
     void Start()
-    { 
-        player = NKY_GameManager.instance.player.transform;
+    {
+       player = NKY_GameManager.instance.player.transform;
         StartCoroutine(SpiderWebRoutine());
     }
     private void OnDisable()

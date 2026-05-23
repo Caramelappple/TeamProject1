@@ -3,8 +3,6 @@ using System.Collections;
 
 public class LSO_EnergyBallSpawner : MonoBehaviour,LSO_ISkill
 {
-    [SerializeField] private AudioClip clip;
-    
     [SerializeField] private GameObject effect;
     private GameObject _effectInstance;
     private float _speed = 5;
@@ -20,7 +18,6 @@ public class LSO_EnergyBallSpawner : MonoBehaviour,LSO_ISkill
     {
         if (!_canUse) return;
         
-        LSO_SoundManager.Instance.SfxPlay(clip);
         _playerMovement = player.GetComponent<LSO_PlayerMovement>();
         _lookDirection = _playerMovement.GetFixedLastDir();
         _effectInstance = Instantiate(effect, player.transform.position, Quaternion.identity);

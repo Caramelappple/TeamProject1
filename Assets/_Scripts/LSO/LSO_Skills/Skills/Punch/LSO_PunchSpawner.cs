@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class LSO_PunchSpawner : MonoBehaviour,LSO_ISkill
 {
-    [SerializeField] private AudioClip clip;
-    
     [SerializeField] private GameObject effect;
     private GameObject _effectInstance;
     private GameObject _player;
@@ -39,7 +37,6 @@ public class LSO_PunchSpawner : MonoBehaviour,LSO_ISkill
             foreach (LSO_Punch punch in _punches)
             {
                 punch.Init(_player.GetComponent<Health>());
-                LSO_SoundManager.Instance.SfxPlay(clip);
                 punch.gameObject.SetActive(true);
                 yield return new WaitForSeconds(_waitTime);
             }
