@@ -2,7 +2,7 @@ using UnityEngine;
 public class BossAttack2 : MonoBehaviour
 {
     public Transform player;
-    public float attackRange = 3f;
+    public float attackRange = 3.3f;
     public float attackCooldown = 3f;
     public int damage = 5;
 
