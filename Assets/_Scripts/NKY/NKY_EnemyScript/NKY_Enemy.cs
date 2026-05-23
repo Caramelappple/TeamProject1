@@ -1,7 +1,6 @@
 using System.Collections;
 using _Scripts.HealthSystem;
 using _Scripts.NKY._EnemyScript.BossPattern;
-using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -30,10 +29,6 @@ namespace _Scripts.NKY._EnemyScript
         {
             _HitBoxController = GetComponent<NKY_HitBoxController>();
             Anim = GetComponent<Animator>();
-            if(Anim == null)
-            {
-                Anim = GetComponentInChildren<Animator>();
-            }
             _shadow = GetComponent<NKY_ShadowController>();
             _myHealth = gameObject.GetComponent<Health>();
             playerReference = NKY_GameManager.instance.player.GetComponent<LSO_PlayerMovement>();
@@ -190,11 +185,12 @@ namespace _Scripts.NKY._EnemyScript
         private void SetDamage(DamageResultData args) //Enemy?? ???????? ???? ????? ???????
         {
             //2페이즈 세팅
-            if (phase2Effect != null || (args.currentHealth < _myHealth.MaxValue / 2 && bossPhase < 2))
+            if (args.currentHealth < _myHealth.MaxValue / 2 && bossPhase < 2)
             {
                 PlayPhase2();
             }
             
+            Debug.Log(bossPhase);
             if (_myHealth.IsDestroyed)
             {
                 _isDead = true;
@@ -205,7 +201,7 @@ namespace _Scripts.NKY._EnemyScript
         // ReSharper disable Unity.PerformanceAnalysis
         private void Die()
         {
-            if (phase3Effect != null || bossPhase < 3)
+            if (bossPhase < 3)
             {
                 PlayPhase3();
                 return;
@@ -215,17 +211,15 @@ namespace _Scripts.NKY._EnemyScript
                 _bossSkill.EndSkill();
             StopAllCoroutines();
             StopPattern();
-            if(phase3Effect != null)
-                StartCoroutine(phase3Effect.EndPhaseEffect());
-            Camera.main.DOShakePosition(0.5f, 2f);
-            Anim.Play("Dead");
+            StartCoroutine(phase3Effect.EndPhaseEffect());
+            if (Anim) Anim.Play("Dead");
 
             var col = GetComponent<Collider2D>();
             if (col) col.enabled = false;
         }
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Player") && collision.gameObject.TryGetComponent(out Health health))
+            if (collision.gameObject.TryGetComponent(out Health health))
             {
                 DamageData data = DamageData.Create(_myHealth, Damage);
                 health.GetDamage(data);

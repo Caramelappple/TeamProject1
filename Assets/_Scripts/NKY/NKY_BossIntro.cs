@@ -36,7 +36,7 @@ public class NKY_BossIntro : MonoBehaviour
 
     public IEnumerator PlayIntro()
     {
-        _camera.transform.DOMove(new Vector3(boss.position.x, boss.position.y, _camera.transform.position.z), 2.5f).SetEase(Ease.OutQuint);
+        _camera.transform.DOMove(boss.position, 2.5f).SetEase(Ease.OutQuint);
         top.DOSizeDelta(introSize, 2f).SetEase(Ease.OutQuint);
         bottom.DOSizeDelta(introSize, 2f).SetEase(Ease.OutQuint);
         yield return new WaitForSeconds(1f);

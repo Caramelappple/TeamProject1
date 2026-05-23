@@ -23,13 +23,13 @@ public class LSO_Ice : MonoBehaviour,LSO_ISkill
     public void UseSkill(GameObject player)
     {
         if (!_canUse) return;
-        
+    
         _player = player;
         _playerMovement = _player.GetComponent<LSO_PlayerMovement>();
         _lastDir = _playerMovement.GetFixedLastDir();
         _tempTransform = new Vector3(player.transform.position.x, player.transform.position.y, _player.transform.position.z);
-        
-        player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
+    
+        StartCoroutine(CoolTime(_coolTime));
     }
 
     public IEnumerator CoolTime(float time)
@@ -52,7 +52,11 @@ public class LSO_Ice : MonoBehaviour,LSO_ISkill
             LSO_SoundManager.Instance.SfxPlay(clips[_clipIndex]);
             _clipIndex = (_clipIndex + 1) % clips.Length;
             
-            _effectInstance = Instantiate(effect, (Vector3)direction*_range + _tempTransform, Quaternion.identity);
+            _effectInstance = Instantiate(effect, (Vector3)direction * _range + _tempTransform, Quaternion.identity);
+            
+            if (this != null && gameObject != null)
+                _effectInstance.transform.SetParent(gameObject.transform);
+            
             _effectInstance.transform.SetParent(gameObject.transform);
             yield return new WaitForSeconds(_waitTime);
         }
