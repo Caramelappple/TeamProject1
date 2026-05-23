@@ -45,9 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_RadialBeamSpawner
   clip:
-  - {fileID: 8300000, guid: 05e7ba2963a4b4f4cb668efd8f2bb63e, type: 3}
-  - {fileID: 8300000, guid: 4d3bb708b5989488993a4e27ecf74848, type: 3}
-  - {fileID: 8300000, guid: 945517ee79b144ad297d92014aa97dde, type: 3}
+  - {fileID: 8300000, guid: b16527a5d33c34d199cab4dd4dd20e61, type: 3}
+  - {fileID: 8300000, guid: b415f7dc16e8d498094965f74846a7cd, type: 3}
+  - {fileID: 8300000, guid: 9c6f90ebb2777424f969a695f1edd04a, type: 3}
+  - {fileID: 8300000, guid: be5030a9ada7a4c669c6d42cb4ae327b, type: 3}
+  - {fileID: 8300000, guid: 1a1da88f2e28c4ef683c0b8998e10a67, type: 3}
   projectilePrefab: {fileID: 2954016388004856399, guid: 1502b58d54edcb241bc83fe079d9377b,
     type: 3}
   effect: {fileID: 6314672923314067675, guid: 2d79b22bf32811c4d9285c74dd0b45e8, type: 3}

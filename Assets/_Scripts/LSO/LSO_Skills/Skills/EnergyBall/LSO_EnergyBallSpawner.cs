@@ -3,6 +3,8 @@ using System.Collections;
 
 public class LSO_EnergyBallSpawner : MonoBehaviour,LSO_ISkill
 {
+    [SerializeField] private AudioClip clip;
+    
     [SerializeField] private GameObject effect;
     private GameObject _effectInstance;
     private float _speed = 5;
@@ -25,6 +27,7 @@ public class LSO_EnergyBallSpawner : MonoBehaviour,LSO_ISkill
         
         Rigidbody2D rigid = _effectInstance.GetComponent<Rigidbody2D>(); 
         rigid.linearVelocity = _lookDirection.normalized * _speed; // 발사 속도
+        LSO_SoundManager.Instance.SfxPlay(clip);
         //rigid.DOMove(_effectInstance.transform.position+(Vector3)_lookDirection * _speed, 2.8f).SetEase(Ease.OutSine);
         
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));

@@ -8,17 +8,9 @@ public class KDH_SceneTransition : MonoBehaviour
     public Image fadeImage;
     public float fadeDuration = 1.0f;
 
-    private void OnEnable()
+    private void Start()
     {
-        if (SceneManager.GetActiveScene().name == "MainMenu")
-        {
-            fadeImage.gameObject.SetActive(false);
-            Time.timeScale = 1f;
-        }
-        else
-        {
-            StartCoroutine(FadeIn());
-        }
+        StartCoroutine(FadeIn());
     }
 
     public void GoToNextScene(string sceneName)
@@ -49,11 +41,10 @@ public class KDH_SceneTransition : MonoBehaviour
         fadeImage.color = new Color(0, 0, 0, 1f);
 
         float timer = 0f;
-        float alpha = 1f;
         while (timer < fadeDuration)
         {
             timer += Time.unscaledDeltaTime;
-            alpha = 1f - (timer / fadeDuration);
+            float alpha = 1f - (timer / fadeDuration);
             fadeImage.color = new Color(0, 0, 0, alpha);
             yield return null;
         }

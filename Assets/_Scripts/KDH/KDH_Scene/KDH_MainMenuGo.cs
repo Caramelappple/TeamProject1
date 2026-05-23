@@ -20,7 +20,7 @@ public class KDH_MainMenuGo : MonoBehaviour
 
     public void GoMain()
     {
-        SceneManager.LoadScene("MainMenu");
+        KDH_SceneFader.Instance.FadeToScene("KHG_tumap");
     }
 
     public void Exit()
