@@ -2,7 +2,6 @@ using System;
 using _Scripts.HealthSystem;
 using KHG.Player;
 using UnityEngine;
-using KHG.ItemSystem;
 
 public class KHG_Healpack : MonoBehaviour, KHG_ICollectable
 {
