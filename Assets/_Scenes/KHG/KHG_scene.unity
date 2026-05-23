@@ -23213,7 +23213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e02c3b2901648cd8752fa341b95c52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_Scripts.NKY._EnemyScript.BossPhaseEffects.NKY_BossPhase2Effect
-  bloodEffect: {fileID: 1492492732}
   fireEffect: {fileID: 1367649289}
 --- !u!1 &1281262654
 GameObject:
@@ -24624,6 +24623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NKY_Enemy.NKY_Enemy
   bossPhase: 1
   _skillCooldown: 1.8
+  intro: {fileID: 0}
   skills:
   - {fileID: 1781352936}
   - {fileID: 1709958997}
