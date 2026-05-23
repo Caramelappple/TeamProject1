@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class BossMove2 : MonoBehaviour
 {
-    private BossAttack2 bossAttack;
-    private Health playerHealth;
+
     public Transform player;
     public float moveSpeed = 3f;
     public float followRange = 10f;
@@ -39,7 +38,6 @@ public class BossMove2 : MonoBehaviour
 
     private void Start()
     {
-        bossAttack = GetComponent<BossAttack2>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
@@ -47,11 +45,6 @@ public class BossMove2 : MonoBehaviour
         lastDashTime = Time.time;
 
         player = NKY_GameManager.instance.player.transform;
-
-        if (player != null)
-        {
-            playerHealth = player.GetComponent<Health>();
-        }
     }
 
     private void Update()
@@ -62,22 +55,7 @@ public class BossMove2 : MonoBehaviour
             anim.SetFloat("Speed", 0f);
             return;
         }
-        if (playerHealth != null && playerHealth.IsDestroyed)
-        {
-            rb.linearVelocity = Vector2.zero;
-            anim.SetFloat("Speed", 0f);
-            RemoveDashWarning();
-            isPreparingDash = false;
-            isDashing = false;
-            health?.SetDamageable(true);
-            return;
-        }
-        if (bossAttack != null && bossAttack.IsAttacking)
-        {
-            rb.linearVelocity = Vector2.zero;
-            anim.SetFloat("Speed", 0f);
-            return;
-        }
+
         if (isPreparingDash)
         {
             dashPrepareTimer -= Time.deltaTime;
@@ -140,7 +118,6 @@ public class BossMove2 : MonoBehaviour
 
     private void StartDashPrepare()
     {
-        bossAttack?.RemoveComboWarning();
         lastDashTime = Time.time;
         isPreparingDash = true;
         dashPrepareTimer = dashPrepareTime;
