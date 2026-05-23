@@ -383,11 +383,11 @@ MonoBehaviour:
   chaseRange: 7
   stopRange: 4
   isMoving: 0
-  stunTime: 14
-  stunDuration: 8
+  stunTime: 15
+  stunDuration: 7
   isStunned: 0
   dashRange: 10
-  dashCooldown: 6
+  dashCooldown: 7
   dashSpeed: 12
   dashDuration: 0.7
 --- !u!114 &566629616
@@ -421,7 +421,7 @@ MonoBehaviour:
   skillAngle: 100
   spiderWebPrefab: {fileID: 6537672017439616555, guid: 6f4b6864af0ae164d82c4157bc5bd01b,
     type: 3}
-  spiderWebSpawnTimer: 10
+  spiderWebSpawnTimer: 13
   spiderWebDuration: 6
   spearSpawner: {fileID: 566629621}
   spearRainCoolTime: 20
