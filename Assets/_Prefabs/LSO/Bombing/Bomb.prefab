@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3980898932878371541}
   - component: {fileID: -655741207923706400}
-  - component: {fileID: 2554643487681683336}
+  - component: {fileID: 56999109523474331}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -60,7 +60,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &2554643487681683336
+--- !u!114 &56999109523474331
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1810854247381936306}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 850f952fcc9384d4bb02923eb018b346, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a8d6e80860fc7845b2fe1f94a5379e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Bombing
   clip: {fileID: 8300000, guid: 3b7b7836343d14cefa6ab9a593dfe357, type: 3}

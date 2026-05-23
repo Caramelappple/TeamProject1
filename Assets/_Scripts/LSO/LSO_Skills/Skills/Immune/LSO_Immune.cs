@@ -3,21 +3,19 @@ using UnityEngine;
 
 public class LSO_Immune : MonoBehaviour, LSO_ISkill
 {
-    [SerializeField] private AudioClip clip;
-    
     private bool _canUse = true;
     
     [SerializeField] private float coolTime = 5f;
     [SerializeField] private float waitTime = 3f;
     
     private GameObject _player;
-    
 
     public void UseSkill(GameObject player)
     {
         if (!_canUse) return;
 
-        LSO_SoundManager.Instance.SfxPlay(clip);    
+        // 스킬을 사용하는 "실행 주체"인 player의 컴포넌트에서 코루틴을 돌립니다.
+        // 이렇게 해야 스킬 아이템이 파괴되어도 코루틴이 끊기지 않습니다.
         this._player = player;
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(3));
     }
@@ -52,7 +50,8 @@ public class LSO_Immune : MonoBehaviour, LSO_ISkill
         if (attack != null) attack.SetCanAttack(true);     // 공격 허용
         if (skillSystem != null) skillSystem.SetCanUseSkill(true); // 김동휘가 건듦 무적상태가 끝나면 스킬 입력 가능
 
-        //[남은 쿨타임 대기]
+        // --- [남은 쿨타임 대기] ---
+        // 이미 _waitTime만큼 지났으므로 (전체 쿨타임 - 유지시간) 만큼 더 기다립니다.
         float remainingCool = coolTime - waitTime;
         if (remainingCool > 0)
         {

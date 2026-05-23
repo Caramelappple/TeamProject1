@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class KHG_PoisonField : MonoBehaviour, LSO_ISkill
 {
-    [SerializeField] private AudioClip clip;
-    
     [SerializeField] private GameObject poisonPrefab;
 
     [SerializeField] private float spawnDistance = 1.5f;
@@ -15,9 +13,7 @@ public class KHG_PoisonField : MonoBehaviour, LSO_ISkill
     public void UseSkill(GameObject player)
     {
         if (!_canUse) return;
-        
-        LSO_SoundManager.Instance.SfxPlay(clip);
-        
+
         LSO_PlayerMovement movement = player.GetComponent<LSO_PlayerMovement>();
         
 
