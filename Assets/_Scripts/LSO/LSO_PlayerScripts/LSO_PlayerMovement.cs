@@ -4,6 +4,8 @@ using System;
 
 public class LSO_PlayerMovement : MonoBehaviour
 {
+    public static LSO_PlayerMovement instance;
+
     private static readonly int MoveX = Animator.StringToHash("MoveX");
     private static readonly int MoveY = Animator.StringToHash("MoveY");
     public Health Health { get; private set; }
@@ -30,6 +32,15 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+
         _rigid = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _sprite = GetComponent<SpriteRenderer>();

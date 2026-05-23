@@ -18,36 +18,60 @@ public class KDH_MainMenuGo : MonoBehaviour
     }
     public void GoMain()
     {
-        StartCoroutine(ResetAndGoMainRoutine());
+        if (me != null) me.SetActive(false);
+        StartCoroutine(WipeOutAndGoMainRoutine());
     }
 
-    private IEnumerator ResetAndGoMainRoutine()
+    private IEnumerator WipeOutAndGoMainRoutine()
     {
         if (KDH_SceneFader.Instance != null)
         {
             KDH_SceneFader.Instance.FadeToScene("MainMenu");
         }
+
         yield return new WaitForSeconds(1.0f);
 
-        // 저장된 게임 데이터가 있다면 초기화 (필요 없다면 제외 가능)
         PlayerPrefs.DeleteAll();
-        Debug.Log("게임 데이터 초기화 완료");
+        Debug.Log("모든 로컬 데이터 포맷 완료");
 
-        // DontDestroyOnLoad에 누적된 다른 오브젝트들을 파괴합니다.
-        DestroyAllDontDestroyOnLoadObjects();
+        NullifyAllSingletons();
+        WipeOutEverything();
 
-        SceneManager.LoadScene("MainMenu");
+        Canvas[] allCanvases = FindObjectsByType<Canvas>(FindObjectsSortMode.None);
+        foreach (Canvas canvas in allCanvases)
+        {
+            canvas.gameObject.SetActive(false);
+        }
+
+        // 메인 메뉴 씬을 새로 로드
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 
-    private void DestroyAllDontDestroyOnLoadObjects()
+    private void NullifyAllSingletons()
+    {
+        LSO_PlayerMovement.instance = null;
+        NKY_GameManager.instance = null;
+        KDH_HealthBarBossUI.instance = null;
+    }
+
+    private void WipeOutEverything()
     {
         GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
 
+        Scene currentScene = SceneManager.GetActiveScene();
+
         foreach (GameObject obj in allObjects)
         {
-            if (obj.transform.parent == null && obj.scene.buildIndex == -1)
+            if (obj.transform.parent == null)
             {
-                Destroy(obj);
+                if (obj.scene.buildIndex == -1)
+                {
+                    if (obj != gameObject && !transform.IsChildOf(obj.transform) && obj != transform.root.gameObject)
+                    {
+                        Debug.Log($"[UI/오브젝트 소각 이사] : {obj.name}");
+                        SceneManager.MoveGameObjectToScene(obj, currentScene);
+                    }
+                }
             }
         }
     }
