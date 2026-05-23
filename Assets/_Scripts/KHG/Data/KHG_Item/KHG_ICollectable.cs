@@ -10,4 +10,3 @@ namespace KHG.ItemSystem
         public void Collect(KHG_Player Collector);
     }
 }
-

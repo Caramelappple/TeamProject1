@@ -3,21 +3,20 @@ using UnityEngine;
 
 public class KHG_ItemSpawner : MonoBehaviour
 {
-    private float time;
+    private float _time;
     [SerializeField] private GameObject item;
     private void Start()
     {
-        time = Random.Range(20f, 61f);
-        StartCoroutine(test());
+        _time = Random.Range(20f, 61f);
+        StartCoroutine(itemspawn());
     }
    
     
-    IEnumerator test()
+    IEnumerator itemspawn()
     {
-        yield return  new WaitForSeconds(time);
+        yield return  new WaitForSeconds(_time);
         
     }
+    
 
-    //소환할 위치 정하기
-    //
 }
