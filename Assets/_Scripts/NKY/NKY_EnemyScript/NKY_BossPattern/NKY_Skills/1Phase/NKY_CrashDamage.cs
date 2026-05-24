@@ -18,7 +18,6 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            Debug.Log(damage);
             if (collision.TryGetComponent(out Health health))
             {
                 DamageData damageData = DamageData.Create(health, damage);
