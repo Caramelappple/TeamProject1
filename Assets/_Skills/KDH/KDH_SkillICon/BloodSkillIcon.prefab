@@ -192,8 +192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c5d3e6a61d5f2f49815bde3f3b6877c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_Skill
-  skillName: "\uC120\uC5F4\uD3EC\uC2DD"
-  maxCooldownTime: 5
+  skillName: "\uC120\uC5F4\uD3EC\uC2DD\uC790"
+  maxCooldownTime: 9
   textSkillData: {fileID: 0}
   textCooldownTime: {fileID: 964448010021108703}
   imageCooldownTime: {fileID: 792296827686754365}

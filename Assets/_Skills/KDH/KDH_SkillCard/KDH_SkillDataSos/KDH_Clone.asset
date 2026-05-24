@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7067c87e9e283418fd4da067c38591, type: 3}
   m_Name: KDH_Clone
   m_EditorClassIdentifier: Assembly-CSharp::KDH_SkillData
-  skillName: "\uBCF5\uC81C"
-  skillDescription: "\uC2DC\uACF5\uAC04\uC744 \uCD08\uC6D4\uD558\uC5EC \uB098\uB791
-    \uB611\uAC19\uC740 \uD074\uB860\uC744 \uC0DD\uC131\uD569\uB2C8\uB2E4."
+  skillName: "\uBD84\uC2E0\uC804\uC0AC"
+  skillDescription: "\uC790\uC2E0\uACFC \uB611\uAC19\uC774 \uC0DD\uAE34 \uBD84\uC2E0\uC774
+    \uB098\uD0C0\uB098 \uC804\uC9C4\uD558\uBA74\uC11C \uC0C1\uB300\uC5D0\uAC8C \uD53C\uD574\uB97C
+    \uC90D\uB2C8\uB2E4"
   skillIcon: {fileID: 21300068, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
-  maxCooldownTime: 7
+  maxCooldownTime: 10
   skillPrefab: {fileID: 4814690990919480269, guid: bc1ae0a9ae99cc6478786aa9535e5b42,
     type: 3}
   skillIConPrefabs: {fileID: 4590441206724951262, guid: 092bd8ce0f923d444b026590a0ed6524,

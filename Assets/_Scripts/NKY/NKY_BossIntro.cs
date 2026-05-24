@@ -35,8 +35,8 @@ public class NKY_BossIntro : MonoBehaviour
 
     public IEnumerator PlayIntro()
     {
-        yield return new WaitForSeconds(2.5f); // KDH가 추가함
         gameObject.SetActive(true);
+        yield return new WaitForSeconds(2.5f); // KDH가 추가함
         _camera.transform.DOMove(new Vector3(boss.position.x, boss.position.y, _camera.transform.position.z), 2.5f).SetEase(Ease.OutQuint);
         top.DOSizeDelta(introSize, 2f).SetEase(Ease.OutQuint);
         bottom.DOSizeDelta(introSize, 2f).SetEase(Ease.OutQuint);
