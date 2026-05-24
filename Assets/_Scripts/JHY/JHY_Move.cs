@@ -32,6 +32,7 @@ public class JHY_BossMove : MonoBehaviour
 
     private bool canAct = false;
     [SerializeField] private float startDelay = 5f;
+
     void Awake()
     {
         ani = GetComponent<Animator>();
@@ -39,16 +40,17 @@ public class JHY_BossMove : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         timer = stunTime;
         dashTimer = dashCooldown;
-
-        //player = NKY_GameManager.instance.player.transform;
     }
 
     private IEnumerator Start()
     {
+        player = NKY_GameManager.instance.player.transform;
+
         canAct = false;
         yield return new WaitForSeconds(startDelay);
         canAct = true;
     }
+
     void Update()
     {
         if (!canAct) return;

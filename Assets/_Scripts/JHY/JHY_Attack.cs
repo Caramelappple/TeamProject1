@@ -76,8 +76,6 @@ public class JHY_Attack : MonoBehaviour
         bossMove = GetComponent<JHY_BossMove>();
 
         bossBaseScale = transform.localScale;
-
-
     }
     private IEnumerator Start()
     {

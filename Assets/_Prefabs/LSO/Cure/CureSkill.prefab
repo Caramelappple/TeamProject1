@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   effect: {fileID: 7865111169201036416, guid: 3b297badef927fd40859837d9b59c9d2, type: 3}
   _coolTime: 7
-  _healValue: 20
+  _healValue: 25
