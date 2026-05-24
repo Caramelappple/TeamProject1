@@ -2,27 +2,10 @@ using UnityEngine;
 using System.Collections;
 public class JHY_Attack : MonoBehaviour
 {
-    /*[Header("AudioClips")]
-    [SerializeField] private AudioClip spiderWebClip;
-    [SerializeField] private AudioClip phase2Clip;
-    [SerializeField] private AudioClip meleeClip;
-    [SerializeField] private AudioClip spearClip;
-    [SerializeField] private AudioClip summonClip;
-    [SerializeField] private AudioClip monsterDeathClip;
-    [SerializeField] private AudioClip jumpAttackClip;
-    [SerializeField] private AudioClip fireProjectilesClip;
-    [SerializeField] private AudioClip bossDeathClip;*/
-    
-    //호연아 제발 나눠서 잘 해라 뭐가 뭔지 하나도 모르겠다.
-    //주석이라도 달아주던가 해야지 진짜 오디오 넣을려는데 모르겠다.
-    //내일 보면 주석 달아두던가 너가 오디오 넣어라.
-    //-이시온-
-    
-    
-    private Animator _ani;
-    private SpriteRenderer _sr;
-    private JHY_BossMove _bossMove;
-    
+    private Animator ani;
+    private SpriteRenderer sr;
+    private JHY_BossMove bossMove;
+
     [Header("References")]
     [SerializeField]private Transform player;
     [SerializeField] private Transform firePoint;
@@ -30,69 +13,69 @@ public class JHY_Attack : MonoBehaviour
     [SerializeField] private GameObject projectilePrefab2;
 
     [Header("Attack Settings")]
-    [SerializeField] private float attackRange = 2f;
-    [SerializeField] private float attackCooldown = 1.5f;
-    [SerializeField] private float skillRange = 4f;
+    [SerializeField] private float attackRange = 4f;
+    [SerializeField] private float attackCooldown = 1.2f;
+    [SerializeField] private float skillRange = 15f;
     [SerializeField] private float skillCoolTime = 5f;
-    [SerializeField] private float jumpAttackCoolTime = 5f;
+    [SerializeField] private float jumpAttackCoolTime = 7f;
 
     [Header("Skill Details")]
     [SerializeField] private int projectileCount = 5;
     [SerializeField] private float spreadAngle = 60f;
     [SerializeField] private float detectRangeX = 1.0f;
     [SerializeField] private int shockwaveProjectileCount = 12;
-    [SerializeField] private float shockwaveStartAngleOffset;
-    [SerializeField] private float skillAngle = 60f;
+    [SerializeField] private float shockwaveStartAngleOffset = 0f;
+    [SerializeField] private float skillAngle = 100f;
 
     [Header("Spider Web")]
     [SerializeField] private GameObject spiderWebPrefab;
-    [SerializeField] private float spiderWebSpawnTimer = 15f;
+    [SerializeField] private float spiderWebSpawnTimer = 13f;
     [SerializeField] private float spiderWebDuration = 6f;
 
 
     [Header("RainSpear")]
     [SerializeField] private SpearSpawner spearSpawner;
     [SerializeField] private float spearRainCoolTime = 20f;
-    private float _lastSpearRainTime;
+    private float lastSpearRainTime;
 
     [Header("Damage")]
-    [SerializeField] private int meleeDamage = 10;
+    [SerializeField] private int meleeDamage = 5;
     [SerializeField] private Health playerHealth;
 
     [Header("Summon Skill")]
     [SerializeField] private float summonCoolTime = 40f;
     [SerializeField] private JHY_MobSummoner mobSummoner;
-    private float _lastSummonTime;
-    private bool _isSummoning;
+    private float lastSummonTime;
+    private bool isSummoning;
 
     [Header("Phase")]
     [SerializeField] private Health bossHealth;
     [SerializeField] private float phase2Threshold = 0.5f;
-    private bool _isPhase2;
+    private bool isPhase2;
     [SerializeField] private GameObject phase2EffectPrefab;
-    [SerializeField] private float phase2EffectLifeTime = 2f;
+    [SerializeField] private float phase2EffectLifeTime = 1.5f;
     [SerializeField] private GameObject phase2Aura;
-    private bool _isPhaseChanging;
+    private bool isPhaseChanging;
     [SerializeField] private float phaseChangeDuration = 1.5f;
-    private GameObject _spawnedAura;
+    private GameObject spawnedAura;
 
-    private float _lastAttackTime;
-    private float _lastSkillTime;
-    private float _lastJumpAttackTime;
-    private bool _isSkillUsing;
-    private Vector3 _firePointBaseLocalPos;
-    private Vector3 _bossBaseScale;
+    private float lastAttackTime;
+    private float lastSkillTime;
+    private float lastJumpAttackTime;
+    private bool isSkillUsing = false;
+    private Vector3 firePointBaseLocalPos;
+    private Vector3 bossBaseScale;
     [SerializeField] private JHY_WarningZone warningZone;
 
     public bool canAct = false;
-    [SerializeField] private float startDelay = 3f;
+    [SerializeField] private float startDelay = 5f;
     void Awake()
     {
-        _ani = GetComponent<Animator>();
-        _sr = GetComponent<SpriteRenderer>();
-        _bossMove = GetComponent<JHY_BossMove>();
+        ani = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
+        bossMove = GetComponent<JHY_BossMove>();
 
-        _bossBaseScale = transform.localScale;
+        bossBaseScale = transform.localScale;
 
 
     }
@@ -125,8 +108,8 @@ public class JHY_Attack : MonoBehaviour
             if (!enabled) yield break;
             if (!canAct) continue;
             if (playerHealth != null && playerHealth.IsDestroyed) yield break;
-            if (_isSummoning) continue;
-            if (_isSkillUsing) continue;
+            if (isSummoning) continue;
+            if (isSkillUsing) continue;
             if (spiderWebPrefab == null) continue;
 
             GameObject web = Instantiate(
@@ -145,12 +128,12 @@ public class JHY_Attack : MonoBehaviour
         if (player == null) return;
         if (playerHealth != null && playerHealth.IsDestroyed) return;
         CheckPhase2();
-        if (_isPhaseChanging) return;
+        if (isPhaseChanging) return;
         FacePlayer();
 
-        if (_isSummoning)
+        if (isSummoning)
         {
-            _bossMove?.StopMoving();
+            bossMove?.StopMoving();
 
             if (mobSummoner != null && !mobSummoner.HasAliveSummons())
             {
@@ -159,32 +142,32 @@ public class JHY_Attack : MonoBehaviour
 
             return;
         }
-        if (_isSkillUsing || (_bossMove != null && (_bossMove.isMoving || _bossMove.isStunned))) return;
+        if (isSkillUsing || (bossMove != null && (bossMove.isMoving || bossMove.isStunned))) return;
 
-        if (Time.time >= _lastSpearRainTime + spearRainCoolTime)
+        if (Time.time >= lastSpearRainTime + spearRainCoolTime)
         {
             UseSpearRain();
             return;
         }
-        if (Time.time >= _lastSummonTime + summonCoolTime)
+        if (Time.time >= lastSummonTime + summonCoolTime)
         {
             UseSummonSkill();
             return;
         }
 
 
-        float skillDistance = Vector2.Distance(firePoint.position, player.position);
-        float attackDistance = Vector2.Distance(transform.position, player.position);
+        float skilldistance = Vector2.Distance(firePoint.position, player.position);
+        float attackdistance = Vector2.Distance(transform.position, player.position);
         float diffX = Mathf.Abs(player.position.x - transform.position.x);
 
-        if (diffX <= detectRangeX && Time.time >= _lastJumpAttackTime + jumpAttackCoolTime)
+        if (diffX <= detectRangeX && Time.time >= lastJumpAttackTime + jumpAttackCoolTime)
         {
-            _lastJumpAttackTime = Time.time;
+            lastJumpAttackTime = Time.time;
             StartCoroutine(JumpAttackWrapper());
             return;
         }
 
-        if (skillDistance <= skillRange && Time.time >= _lastSkillTime + skillCoolTime)
+        if (skilldistance <= skillRange && Time.time >= lastSkillTime + skillCoolTime)
         {
             if (IsPlayerOutsideFirePoint() && IsPlayerInSkillAngle())
             {
@@ -193,17 +176,18 @@ public class JHY_Attack : MonoBehaviour
             }
         }
 
-        if (attackDistance <= attackRange && Time.time >= _lastAttackTime + attackCooldown)
+        if (attackdistance <= attackRange && Time.time >= lastAttackTime + attackCooldown)
         {
-            _ani.SetTrigger("attack");
-            _lastAttackTime = Time.time;
+            ani.SetTrigger("attack");
+            lastAttackTime = Time.time;
+            // r기본 근접공격 사운드
         }
     }
     private void CheckPhase2()
     {
        
     
-        if (_isPhase2 || _isPhaseChanging) return;
+        if (isPhase2 || isPhaseChanging) return;
         if (bossHealth == null) return;
 
         float hpPercent = (float)bossHealth.Value / bossHealth.MaxValue;
@@ -212,26 +196,27 @@ public class JHY_Attack : MonoBehaviour
             StartCoroutine(EnterPhase2Routine());
         }
     
-    }
+}
     private IEnumerator EnterPhase2Routine()
     {
-        _isPhaseChanging = true;
-        _isSkillUsing = true;
+        isPhaseChanging = true;
+        isSkillUsing = true;
 
-        _bossMove?.StopMoving();
-        _bossMove?.SetSkillLock(true);
+        bossMove?.StopMoving();
+        bossMove?.SetSkillLock(true);
 
         yield return new WaitForSeconds(phaseChangeDuration);
 
         EnterPhase2();
 
-        _isPhaseChanging = false;
-        _isSkillUsing = false;
-        _bossMove?.SetSkillLock(false);
+        isPhaseChanging = false;
+        isSkillUsing = false;
+        bossMove?.SetSkillLock(false);
     }
     private void EnterPhase2()
     {
-        _isPhase2 = true;
+        isPhase2 = true;
+        //2페이즈 변신 효과음 재생
         if (phase2EffectPrefab != null)
         {
             GameObject effect = Instantiate(phase2EffectPrefab, transform.position, Quaternion.identity);
@@ -240,9 +225,9 @@ public class JHY_Attack : MonoBehaviour
 
 
         {
-            if (phase2Aura != null && _spawnedAura == null)
+            if (phase2Aura != null && spawnedAura == null)
             {
-                _spawnedAura = Instantiate(phase2Aura, transform.position, Quaternion.identity, transform);
+                spawnedAura = Instantiate(phase2Aura, transform.position, Quaternion.identity, transform);
             }
 
             attackCooldown = 1.0f;
@@ -259,10 +244,10 @@ public class JHY_Attack : MonoBehaviour
     }
     public void ClearAura()
     {
-        if (_spawnedAura != null)
+        if (spawnedAura != null)
         {
-            Destroy(_spawnedAura);
-            _spawnedAura = null;
+            Destroy(spawnedAura);
+            spawnedAura = null;
         }
     }
     public void DealMeleeDamage()
@@ -277,40 +262,41 @@ public class JHY_Attack : MonoBehaviour
     }
     private void UseSummonSkill()
     {
-        _lastSummonTime = Time.time;
-        _isSummoning = true;
-        _isSkillUsing = true;
+        lastSummonTime = Time.time;
+        isSummoning = true;
+        isSkillUsing = true;
 
-        _bossMove?.StopMoving();
-        _bossMove?.SetSkillLock(true);
+        bossMove?.StopMoving();
+        bossMove?.SetSkillLock(true);
 
-        _ani.ResetTrigger("attack");
-        _ani.ResetTrigger("Jump");
-        _ani.ResetTrigger("Skill");
+        ani.ResetTrigger("attack");
+        ani.ResetTrigger("Jump");
+        ani.ResetTrigger("Skill");
         
         if (mobSummoner != null)
         {
             mobSummoner.SummonMobs();
+            //잡몹 소환
         }
     }
 
     private void EndSummonState()
     {
-        _isSummoning = false;
-        _isSkillUsing = false;
-        _bossMove?.SetSkillLock(false);
+        isSummoning = false;
+        isSkillUsing = false;
+        bossMove?.SetSkillLock(false);
     }
 
 
 
     private void UseSpearRain()
     {
-        _lastSpearRainTime = Time.time;
-        _isSkillUsing = true;
-        _bossMove?.SetSkillLock(true);
+        lastSpearRainTime = Time.time;
+        isSkillUsing = true;
+        bossMove?.SetSkillLock(true);
 
-        _ani.SetTrigger("Skill");
-
+        ani.SetTrigger("Skill");
+        //여기에 창 비 시전 마법 효과음/ 보스 포효 소리 재생
         if (spearSpawner != null)
         {
             spearSpawner.SpawnSpears();
@@ -321,25 +307,25 @@ public class JHY_Attack : MonoBehaviour
 
     private void EndSpearRain()
     {
-        _bossMove?.SetSkillLock(false);
-        _isSkillUsing = false;
+        bossMove?.SetSkillLock(false);
+        isSkillUsing = false;
     }
 
     void FacePlayer()
     {
-        if (_bossMove != null && _bossMove.isStunned) return;
+        if (bossMove != null && bossMove.isStunned) return;
         bool faceLeft = player.position.x < transform.position.x;
         float dir = faceLeft ? -1f : 1f;
 
         transform.localScale = new Vector3(
-            Mathf.Abs(_bossBaseScale.x) * dir,
-            _bossBaseScale.y,
-            _bossBaseScale.z
+            Mathf.Abs(bossBaseScale.x) * dir,
+            bossBaseScale.y,
+            bossBaseScale.z
         );
 
-        if (_sr != null)
+        if (sr != null)
         {
-            _sr.flipX = false;
+            sr.flipX = false;
         }
 
 
@@ -347,14 +333,15 @@ public class JHY_Attack : MonoBehaviour
 
     void UseSkill()
     {
-        _isSkillUsing = true;
-        _lastSkillTime = Time.time;
-        _bossMove?.StopMoving();
+        isSkillUsing = true;
+        lastSkillTime = Time.time;
+        bossMove?.StopMoving();
 
 
-        _ani.ResetTrigger("attack");
-        _ani.ResetTrigger("Jump");
-        _ani.SetTrigger("Skill");
+        ani.ResetTrigger("attack");
+        ani.ResetTrigger("Jump");
+        ani.SetTrigger("Skill");
+        //스킬 발사하는 소리
         Invoke(nameof(EndSkill), 1.5f);
     }
     bool IsPlayerInSkillAngle()
@@ -369,7 +356,7 @@ public class JHY_Attack : MonoBehaviour
 
     public void EndSkill()
     {
-        _isSkillUsing = false;
+        isSkillUsing = false;
     }
 
     public void FireProjectiles()
@@ -410,20 +397,21 @@ public class JHY_Attack : MonoBehaviour
 
     IEnumerator JumpAttackWrapper()
     {
-        _isSkillUsing = true;
-        _bossMove?.SetSkillLock(true);
+        isSkillUsing = true;
+        bossMove?.SetSkillLock(true);
 
         yield return StartCoroutine(JumpAttackRoutine());
         yield return new WaitForSeconds(2.0f);
 
-        _bossMove?.SetSkillLock(false);
-        _isSkillUsing = false;
+        bossMove?.SetSkillLock(false);
+        isSkillUsing = false;
     }
 
 
     IEnumerator JumpAttackRoutine()
     {
-        _ani.SetTrigger("Jump");
+        //점프 올라가는 소리
+        ani.SetTrigger("Jump");
 
         yield return new WaitForSeconds(0.6f);
 
@@ -451,6 +439,7 @@ public class JHY_Attack : MonoBehaviour
 
     private void SpawnShockwaveWithOffset(float extraOffset)
     {
+        //점프 착지 충격파 소리
         Debug.Log("Shockwave!");
 
         if (projectilePrefab2 == null) return;
