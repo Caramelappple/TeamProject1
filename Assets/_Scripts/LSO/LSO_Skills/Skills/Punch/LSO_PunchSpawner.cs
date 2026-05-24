@@ -12,7 +12,7 @@ public class LSO_PunchSpawner : MonoBehaviour,LSO_ISkill
     
     private LSO_PlayerMovement _movement;
     private bool _canUse = true;
-    private float _coolTime = 8f;
+    [SerializeField] private float _coolTime = 8f;
     private float _distance = 1.5f;
     private float _waitTime = 0.08f;
     private int _count = 5;

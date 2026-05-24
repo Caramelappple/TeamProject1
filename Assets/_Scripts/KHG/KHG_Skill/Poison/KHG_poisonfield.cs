@@ -9,7 +9,7 @@ public class KHG_PoisonField : MonoBehaviour, LSO_ISkill
 
     [SerializeField] private float spawnDistance = 1.5f;
 
-    private float _coolTime = 3f;
+    [SerializeField]private float _coolTime = 3f;
     private bool _canUse = true;
 
     public void UseSkill(GameObject player)

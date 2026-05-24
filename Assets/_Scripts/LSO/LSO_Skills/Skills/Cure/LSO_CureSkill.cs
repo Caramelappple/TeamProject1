@@ -11,7 +11,7 @@ public class LSO_CureSkill : MonoBehaviour,LSO_ISkill
     private GameObject _effectInstance;
     private GameObject _player;
     
-    private float _coolTime = 10f;
+    [SerializeField] private float _coolTime = 10f;
     private float _waitTime = 2.6f;
     private int _healValue = 40;
     

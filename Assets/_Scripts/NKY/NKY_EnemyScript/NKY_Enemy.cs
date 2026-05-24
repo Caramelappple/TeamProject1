@@ -132,6 +132,10 @@ namespace _Scripts.NKY._EnemyScript
 
         private IEnumerator Phase2ProcessRoutine()
         {
+            foreach (NKY_BossSkill skill in skills)
+            {
+                skill.ChangedDamage();
+            }
             if (_bossSkill != null)
                 _bossSkill.EndSkill();
             _masterHandle = null;
@@ -170,6 +174,10 @@ namespace _Scripts.NKY._EnemyScript
 
         private IEnumerator Phase3ProcessRoutine()
         {
+            foreach (NKY_BossSkill skill in skills)
+            {
+                skill.ChangedDamage();
+            }
             if (_bossSkill != null)
                 _bossSkill.EndSkill();
             _masterHandle = null;

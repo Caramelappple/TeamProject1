@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class LSO_Punch : MonoBehaviour
 {
-   private int _damage = 2;
+   [SerializeField] private int _damage = 2;
    private Health _playerHealth;
    private Animator _animator;
       

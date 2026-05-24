@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class LSO_IceSpike : MonoBehaviour
 {
-    private int _damage = 10;
-    private float _time = 1.8f;
+    [SerializeField] private int _damage = 10;
+    [SerializeField] private float _time = 1.8f;
   
     private void OnTriggerEnter2D(Collider2D collision)
     {

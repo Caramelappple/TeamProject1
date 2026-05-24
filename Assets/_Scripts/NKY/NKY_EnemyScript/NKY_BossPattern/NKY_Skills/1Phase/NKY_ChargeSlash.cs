@@ -71,6 +71,7 @@ public class NKY_ChargeSlash : NKY_BossSkill
         obj.transform.parent = point.transform;
         obj.transform.position = point.transform.position;
         obj.transform.rotation = point.transform.rotation;
+        NKY_SoundManager.Instance.PlaySFX("SwordSpawn");
         yield break;
     }
 
@@ -101,17 +102,19 @@ public class NKY_ChargeSlash : NKY_BossSkill
         obj.transform.position =  point.transform.position;
         obj.transform.rotation =  Quaternion.Euler(0f, 0f, point.transform.rotation.eulerAngles.z);
         obj.SetActive(true);
+        NKY_SoundManager.Instance.PlaySFX("Slash");
         yield return WaitUntilOrTime(()=>false, 0.6f);
     }
 
     private IEnumerator ChargeEffect(ParticleSystem[] particles, GameObject obj, float chargeDuration)
     {
+        NKY_SoundManager.Instance.PlaySFX("Charge");
         foreach (ParticleSystem particle in particles)
         {
             particle.Play();
         }
         
-        yield return StartCoroutine(DoShake(obj, chargeDuration, 1.1f));
+        yield return StartCoroutine(DoShake(obj, chargeDuration, 0.3f));
         foreach (ParticleSystem particle in particles)
         {
             particle.Stop();
