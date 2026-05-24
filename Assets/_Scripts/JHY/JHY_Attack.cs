@@ -67,6 +67,8 @@ public class JHY_Attack : MonoBehaviour
     private Vector3 bossBaseScale;
     [SerializeField] private JHY_WarningZone warningZone;
 
+    public bool canAct = false;
+    [SerializeField] private float startDelay = 3f;
     void Awake()
     {
         ani = GetComponent<Animator>();
@@ -77,10 +79,21 @@ public class JHY_Attack : MonoBehaviour
 
 
     }
-    void Start()
+    private IEnumerator Start()
     {
-       player = NKY_GameManager.instance.player.transform;
+        player = NKY_GameManager.instance.player.transform;
+
+        if (player != null)
+        {
+            playerHealth = player.GetComponent<Health>();
+        }
+
+        canAct = false;
         StartCoroutine(SpiderWebRoutine());
+
+        yield return new WaitForSeconds(startDelay);
+
+        canAct = true;
     }
     private void OnDisable()
     {
@@ -93,6 +106,7 @@ public class JHY_Attack : MonoBehaviour
         {
             yield return new WaitForSeconds(spiderWebSpawnTimer);
             if (!enabled) yield break;
+            if (!canAct) continue;
             if (playerHealth != null && playerHealth.IsDestroyed) yield break;
             if (isSummoning) continue;
             if (isSkillUsing) continue;
@@ -110,6 +124,7 @@ public class JHY_Attack : MonoBehaviour
 
     void Update()
     {
+        if (!canAct) return;
         if (player == null) return;
         if (playerHealth != null && playerHealth.IsDestroyed) return;
         CheckPhase2();
@@ -212,7 +227,6 @@ public class JHY_Attack : MonoBehaviour
             {
                 spawnedAura = Instantiate(phase2Aura, transform.position, Quaternion.identity, transform);
             }
-
 
             attackCooldown = 1.0f;
             skillCoolTime = 3.0f;

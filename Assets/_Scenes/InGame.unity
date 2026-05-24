@@ -1965,7 +1965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossFollow
   player: {fileID: 0}
-  moveSpeed: 3
+  moveSpeed: 2
   followRange: 10
   keepDistance: 3
   dashInterval: 10

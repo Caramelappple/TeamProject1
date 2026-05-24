@@ -5,7 +5,7 @@ public class BossMove2 : MonoBehaviour
     private BossAttack2 bossAttack;
     private Health playerHealth;
     public Transform player;
-    public float moveSpeed = 3f;
+    public float moveSpeed = 2f;
     public float followRange = 10f;
     public float keepDistance = 3f;
 

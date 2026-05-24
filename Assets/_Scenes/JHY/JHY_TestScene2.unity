@@ -242,7 +242,6 @@ MonoBehaviour:
   comboWarningPrefab: {fileID: 8169960489270038553, guid: 3d24d1cb0e1c8c245ba8f3b26f453744,
     type: 3}
   comboWarningTime: 1
-  comboWarningOffsetX: 1.5
 --- !u!114 &26222858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossFollow
   player: {fileID: 181821775}
-  moveSpeed: 3
+  moveSpeed: 2
   followRange: 10
   keepDistance: 3
   dashInterval: 10
