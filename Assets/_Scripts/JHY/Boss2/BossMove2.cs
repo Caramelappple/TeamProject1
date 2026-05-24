@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class BossMove2 : MonoBehaviour
@@ -19,6 +20,9 @@ public class BossMove2 : MonoBehaviour
     public GameObject dashWarningPrefab;
     public float dashWarningDistance = 2f;
     public bool rotateWarningToDashDirection = true;
+
+    [Header("intro")]
+    [SerializeField] private NKY_BossIntro intro;
 
     private Animator anim;
     private Rigidbody2D rb;
@@ -46,12 +50,15 @@ public class BossMove2 : MonoBehaviour
         health = GetComponent<Health>();
         lastDashTime = Time.time;
 
-        player = NKY_GameManager.instance.player.transform;
+        StartCoroutine(PlayBoss());
+    }
 
-        if (player != null)
-        {
-            playerHealth = player.GetComponent<Health>();
-        }
+    private IEnumerator PlayBoss()
+    {
+        StartCoroutine(intro.PlayIntro());
+        yield return new WaitForSeconds(5.9f + intro.textMoveTime);
+        player = NKY_GameManager.instance.player.transform;
+        playerHealth = player.GetComponent<Health>();
     }
 
     private void Update()
