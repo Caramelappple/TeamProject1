@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8773f318bcad4b0494a1f3014b8d7342, type: 3}
   m_Name: Boss2
   m_EditorClassIdentifier: Assembly-CSharp::DamageableResourceSO
-  <maxValue>k__BackingField: 500
+  <maxValue>k__BackingField: 750
   <minValue>k__BackingField: 0
-  <startValue>k__BackingField: 500
+  <startValue>k__BackingField: 750
