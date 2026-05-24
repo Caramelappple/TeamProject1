@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class KDH_TestSkill : MonoBehaviour
@@ -13,7 +12,7 @@ public class KDH_TestSkill : MonoBehaviour
 
     private void OnEnable()
     {
-        gameObject.SetActive (true);
+        gameObject.SetActive(true);
         sprite.color = color;
     }
 }

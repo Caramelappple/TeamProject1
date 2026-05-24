@@ -1,8 +1,3 @@
-using KDH_HealthSystem;
-using UnityEngine;
-
-//이벤트 발생 시 전달되는 매개변수(데이터)를 담는 객체
-//구조체는 모든 매개변수를 초기화를 해줘야 함.
 public readonly struct KDH_DamageData
 {
     public readonly KDH_Entity giver;

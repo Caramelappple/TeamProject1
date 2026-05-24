@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace KDH_HealthSystem
 {
     public readonly struct KDH_RecoverData
