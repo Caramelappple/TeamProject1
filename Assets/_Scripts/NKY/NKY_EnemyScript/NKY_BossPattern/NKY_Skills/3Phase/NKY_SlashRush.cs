@@ -51,6 +51,7 @@ public class NKY_SlashRush : NKY_BossSkill
         effect.transform.rotation = Quaternion.Euler(0f, 0f, angle);
         effect.SetActive(true);
         effectAnim.Play("SlashEffect");
+        NKY_SoundManager.Instance.PlaySFX("Swing");
         yield return WaitAnim(effectAnim, "SlashEffect", 0.9f);
         effect.SetActive(false);
     }
