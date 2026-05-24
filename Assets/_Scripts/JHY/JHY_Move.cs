@@ -40,7 +40,7 @@ public class JHY_BossMove : MonoBehaviour
         timer = stunTime;
         dashTimer = dashCooldown;
 
-        player = NKY_GameManager.instance.player.transform;
+        //player = NKY_GameManager.instance.player.transform;
     }
 
     private IEnumerator Start()
@@ -130,6 +130,7 @@ public class JHY_BossMove : MonoBehaviour
         dashTimer = dashCooldown;
 
         //보스가 빠르게 돌진 소리
+        NKY_SoundManager.Instance.PlaySFX("Rush");
         Vector2 dashDirection = (player.position - transform.position).normalized;
         float elapsed = 0f;
 
@@ -158,6 +159,7 @@ public class JHY_BossMove : MonoBehaviour
         ani.SetFloat("Speed", 0f);
         ani.SetTrigger("Stop");
         //보스가 스턴 소리
+        NKY_SoundManager.Instance.PlaySFX("Stun");
         yield return new WaitForSeconds(stunDuration);
         //보스가 정신을 차리고 다시 일어나는 짧은 효과음 재생
         timer = stunTime;
