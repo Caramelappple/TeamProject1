@@ -195,7 +195,14 @@ public class JHY_Attack : MonoBehaviour
             ani.SetTrigger("attack");
             lastAttackTime = Time.time;
             // r기본 근접공격 사운드
-           　NKY_SoundManager.Instance.PlaySFX("Melee");
+            Invoke(nameof(PlayMeleeAttackSound), 0.25f);
+        }
+    }
+    public void PlayMeleeAttackSound()
+    {
+        if (NKY_SoundManager.Instance != null)
+        {
+            NKY_SoundManager.Instance.PlaySFX("Melee");
         }
     }
     private void CheckPhase2()
