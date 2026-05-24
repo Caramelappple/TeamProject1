@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PunchSpawner
   effect: {fileID: 5010421656102145119, guid: 65411afd7dfd0ee4d9dc53e960ec2982, type: 3}
-  _coolTime: 18
+  _coolTime: 1

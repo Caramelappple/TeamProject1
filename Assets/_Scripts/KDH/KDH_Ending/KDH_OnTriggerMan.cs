@@ -16,6 +16,7 @@ public class KDH_OnTriggerMan : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             endingBox.SetActive(true);
+            NKY_SoundManager.Instance.StopBGM();
         }
     }
 }

@@ -11053,6 +11053,7 @@ GameObject:
   - component: {fileID: 553722391}
   - component: {fileID: 553722390}
   - component: {fileID: 553722389}
+  - component: {fileID: 553722399}
   m_Layer: 29
   m_Name: Boss
   m_TagString: Enemy
@@ -11149,6 +11150,7 @@ MonoBehaviour:
   phase2Effect: {fileID: 1993860080}
   phase3Effect: {fileID: 1454412139}
   <Damage>k__BackingField: 15
+  deadSound: {fileID: 11400000, guid: aa9bec5758eee0b4aa175174ffb95d91, type: 2}
 --- !u!50 &553722394
 Rigidbody2D:
   serializedVersion: 5
@@ -11313,6 +11315,19 @@ Transform:
   - {fileID: 1101235368}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &553722399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553722388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f469a8d7084c16e45afac5f311ccc573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KDH_InitItemPortal
+  itemPack: {fileID: 1847938073}
 --- !u!1 &686371989
 GameObject:
   m_ObjectHideFlags: 0
@@ -11536,6 +11551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8192304f921ff54889397dd0953fba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NKY_ReturnSwordAttack
+  throwSword: {fileID: 0}
   spawnPoints:
   - {fileID: 797116774}
   swordPrefab: {fileID: 3338311052345153939, guid: f29f9c68cde12ee40b3ece26d597e163,
@@ -21925,6 +21941,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03bc623b0f644a349bd233f519d5d962, type: 3}
+--- !u!1 &1847938073 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8683736497937130041, guid: 03bc623b0f644a349bd233f519d5d962,
+    type: 3}
+  m_PrefabInstance: {fileID: 1847938072}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1870896545
 GameObject:
   m_ObjectHideFlags: 0
@@ -27342,7 +27364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!225 &2068372430
 CanvasGroup:
   m_ObjectHideFlags: 0

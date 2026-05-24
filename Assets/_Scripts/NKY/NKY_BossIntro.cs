@@ -1,4 +1,3 @@
-using System;
 using DG.Tweening;
 using System.Collections;
 using TMPro;
@@ -64,7 +63,6 @@ public class NKY_BossIntro : MonoBehaviour
         if (_attack != null) _attack.SetCanAttack(false);
         if (_skillSystem != null) _skillSystem.SetCanUseSkill(false); // 김동휘거 떼옴
         
-        yield return new WaitForSeconds(2.5f); // KDH가 추가함
         gameObject.SetActive(true);
         yield return new WaitForSeconds(2.5f); // KDH가 추가함
         _camera.transform.DOMove(new Vector3(boss.position.x, boss.position.y, _camera.transform.position.z), 2.5f).SetEase(Ease.OutQuint);

@@ -45,8 +45,7 @@ public class LSO_Editor : MonoBehaviour
         if (data.giver)
         {
             if (!health.gameObject.CompareTag("Player")) yield break;
-        }
-        //LSO_SoundManager.Instance.SfxPlay(clips[Random.Range(0, clips.Length)]);
+        } //LSO_SoundManager.Instance.SfxPlay(clips[Random.Range(0, clips.Length)]);
         NKY_SoundManager.Instance.PlaySFX(soundData[Random.Range(0, soundData.Length)].soundName); // 나강윤 추가
         
         vignette.color.value = new Color32(255, 170, 179, 255);

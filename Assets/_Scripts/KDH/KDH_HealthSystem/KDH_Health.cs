@@ -1,10 +1,6 @@
 using KDH_HealthSystem;
-using NUnit.Framework.Internal;
 using System;
-using UnityEngine;
-using UnityEngine.UI;
 using static KDH_HealthSystem.KDH_RecoverData;
-using static UnityEngine.Rendering.DebugUI;
 
 public class KDH_Health : KDH_DamageAbleResorce, KDH_IRecoverableResource
 {

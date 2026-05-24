@@ -1,6 +1,5 @@
 using System.Collections;
 using _Scripts.NKY._EnemyScript.BossPattern;
-using _Scripts.NKY.Manager;
 using UnityEngine;
 
 public class NKY_SlashRush : NKY_BossSkill

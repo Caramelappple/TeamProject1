@@ -1,10 +1,10 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class NKY_GameManager : MonoBehaviour
 {
     public static NKY_GameManager instance;
+    
+    [SerializeField] private NKY_SoundData[] soundData;
 
     // ★ 보스가 그토록 원하던 바로 그 player 변수입니다!
     // 보스 코드가 이 변수를 참조하므로, 씬이 바뀔 때마다 최신 플레이어로 갈아끼워 줍니다.
@@ -23,6 +23,8 @@ public class NKY_GameManager : MonoBehaviour
             return;
         }
     }
+
+    
 
     private void OnEnable() => SceneManager.sceneLoaded += OnSceneLoaded;
     private void OnDisable() => SceneManager.sceneLoaded -= OnSceneLoaded;

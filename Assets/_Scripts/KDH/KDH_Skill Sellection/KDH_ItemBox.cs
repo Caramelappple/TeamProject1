@@ -13,7 +13,7 @@ public class KDH_ItemBox : MonoBehaviour
             KDH_DeleteSkillSlot deleteSkillSlot = Object.FindFirstObjectByType<KDH_DeleteSkillSlot>(FindObjectsInactive.Include);
 
             if (manager != null)
-            {   
+            {
                 // 한 번 먹으면 사라짐
                 gameObject.SetActive(false);
 

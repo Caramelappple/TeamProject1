@@ -1,8 +1,6 @@
 using System.Collections;
-using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class KDH_HealthBarUI : MonoBehaviour
 {
@@ -25,7 +23,7 @@ public class KDH_HealthBarUI : MonoBehaviour
         _rectTransform = GetComponent<RectTransform>();
         _originalPosition = _rectTransform.anchoredPosition;
 
-        if (healthResource != null )
+        if (healthResource != null)
         {
             _previousHealth = healthResource.Value;
 

@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections;
+
 public class BossAttack2 : MonoBehaviour
 {
     public Transform player;

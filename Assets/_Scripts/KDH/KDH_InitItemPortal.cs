@@ -1,4 +1,3 @@
-using _Scripts.HealthSystem;
 using UnityEngine;
 
 public class KDH_InitItemPortal : MonoBehaviour

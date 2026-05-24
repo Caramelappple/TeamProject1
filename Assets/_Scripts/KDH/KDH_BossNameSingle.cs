@@ -10,5 +10,5 @@ public class KDH_BossNameSingle : MonoBehaviour
         instance = this;
     }
 
-    [field:SerializeField] public TextMeshProUGUI title { get; private set; }
+    [field: SerializeField] public TextMeshProUGUI title { get; private set; }
 }
