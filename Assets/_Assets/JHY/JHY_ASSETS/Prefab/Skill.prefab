@@ -132,7 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::JHY_BossProjectile
   speed: 4.5
   lifeTime: 3
-  damage: 11
+  damage: 10
 --- !u!50 &-294662966256830147
 Rigidbody2D:
   serializedVersion: 5
