@@ -17,7 +17,7 @@ namespace KHG.Player
             if (other.gameObject.TryGetComponent(out KHG_ICollectable iCollectable))
             {
                 Debug.Log($"[플레이어] 트리거 아이템 발견: {other.gameObject.name}");
-                iCollectable.Collect(this);
+                iCollectable.Collect(this); 
             }
         }
 
