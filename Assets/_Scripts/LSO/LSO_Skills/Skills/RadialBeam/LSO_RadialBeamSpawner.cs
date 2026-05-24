@@ -84,7 +84,7 @@ public class LSO_RadialBeamSpawner : MonoBehaviour,LSO_ISkill
         {
             if (!firePoint) yield break;
                 
-            NKY_SoundManager.Instance.PlaySFX(SoundClip[1].soundName);
+            NKY_SoundManager.Instance.PlaySFX(SoundClip[Random.Range(0, SoundClip.Length)].soundName);
             Instantiate(projectilePrefab, firePoint.position, Quaternion.Euler(0f, 0f, baseAngle));
             
             yield break;
@@ -94,7 +94,7 @@ public class LSO_RadialBeamSpawner : MonoBehaviour,LSO_ISkill
         {
             if (!firePoint || _onEnd) yield break;
             
-            NKY_SoundManager.Instance.PlaySFX(SoundClip[1].soundName);
+            NKY_SoundManager.Instance.PlaySFX(SoundClip[Random.Range(0, SoundClip.Length)].soundName);
             float currentAngle = Random.Range(0f, 360f);
             Instantiate(projectilePrefab, firePoint.position, Quaternion.Euler(0f, 0f, currentAngle));
             yield return new WaitForSeconds(Random.Range(_minWaitTime, _maxWaitTime));

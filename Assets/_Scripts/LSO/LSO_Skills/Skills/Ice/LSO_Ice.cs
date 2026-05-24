@@ -50,7 +50,7 @@ public class LSO_Ice : MonoBehaviour,LSO_ISkill
             float radian = currentAngle * Mathf.Deg2Rad;
             Vector2 direction = new Vector2(Mathf.Cos(radian), Mathf.Sin(radian));
             
-            NKY_SoundManager.Instance.PlaySFX(soundClip[1].soundName);
+            NKY_SoundManager.Instance.PlaySFX(soundClip[Random.Range(0, soundClip.Length)].soundName);
             _clipIndex = (_clipIndex + 1) % soundClip.Length;
             
             _effectInstance = Instantiate(effect, (Vector3)direction * _range + _tempTransform, Quaternion.identity);

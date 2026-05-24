@@ -153,6 +153,7 @@ public class BossMove2 : MonoBehaviour
 
     private void BeginDash()
     {
+        NKY_SoundManager.Instance.PlaySFX("SlimeRush");
         isPreparingDash = false;
         isDashing = true;
         dashTimer = dashDuration;

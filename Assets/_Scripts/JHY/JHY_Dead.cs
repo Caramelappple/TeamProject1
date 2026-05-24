@@ -43,6 +43,7 @@ public class JHY_Dead : MonoBehaviour
     {
         isDead = true;
         //사망 효과음 재생
+        NKY_SoundManager.Instance.PlaySFX("Dead");
         JHY_Attack attack = GetComponent<JHY_Attack>();
         if (attack != null)
         {

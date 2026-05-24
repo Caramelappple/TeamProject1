@@ -65,6 +65,16 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
                 yield break;
             }
         }
+        
+        protected IEnumerator MoveTo(Transform from, Vector2 to, float duration,Ease ease)
+        {
+            from.DOMove(to, duration).SetEase(ease);
+            if (Vector3.Distance(from.position, to) < 0.01f)
+            {
+                from.position = to;
+                yield break;
+            }
+        }
 
         protected IEnumerator ConstantMoveTo(Transform form, Vector3 to, float speed)
         {

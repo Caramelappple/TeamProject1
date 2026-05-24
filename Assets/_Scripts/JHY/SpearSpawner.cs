@@ -40,7 +40,7 @@ public class SpearSpawner : MonoBehaviour
         if (warningCirclePrefab != null)
         {
             warning = Instantiate(warningCirclePrefab, targetPos + warningOffset, Quaternion.identity);
-            //창이 떨어지기 직전 경고 사운드? 소환 사운드? 재생
+            NKY_SoundManager.Instance.PlaySFX("FallSpear");
         }
 
         yield return new WaitForSeconds(warningTime);

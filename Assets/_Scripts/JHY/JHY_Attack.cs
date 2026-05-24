@@ -81,18 +81,31 @@ public class JHY_Attack : MonoBehaviour
     }
     private IEnumerator Start()
     {
-        player = NKY_GameManager.instance.player.transform;
+       
+        canAct = false;
 
-        if (player != null)
+       
+        if (NKY_GameManager.instance != null && NKY_GameManager.instance.player != null)
         {
+            player = NKY_GameManager.instance.player.transform;
             playerHealth = player.GetComponent<Health>();
         }
 
-        canAct = false;
+       
         StartCoroutine(SpiderWebRoutine());
 
+       
         yield return new WaitForSeconds(startDelay);
 
+       
+        float sceneTime = Time.time;
+
+        lastAttackTime = sceneTime;
+        lastSkillTime = sceneTime;
+        lastJumpAttackTime = sceneTime;
+        lastSpearRainTime = sceneTime;  
+
+      
         canAct = true;
     }
     private void OnDisable()
@@ -112,6 +125,7 @@ public class JHY_Attack : MonoBehaviour
             if (isSkillUsing) continue;
             if (spiderWebPrefab == null) continue;
 
+            NKY_SoundManager.Instance.PlaySFX("SpiderWeb");
             GameObject web = Instantiate(
                 spiderWebPrefab,
                 transform.position,
@@ -181,6 +195,14 @@ public class JHY_Attack : MonoBehaviour
             ani.SetTrigger("attack");
             lastAttackTime = Time.time;
             // r기본 근접공격 사운드
+            Invoke(nameof(PlayMeleeAttackSound), 0.25f);
+        }
+    }
+    public void PlayMeleeAttackSound()
+    {
+        if (NKY_SoundManager.Instance != null)
+        {
+            NKY_SoundManager.Instance.PlaySFX("Melee");
         }
     }
     private void CheckPhase2()
@@ -217,6 +239,7 @@ public class JHY_Attack : MonoBehaviour
     {
         isPhase2 = true;
         //2페이즈 변신 효과음 재생
+        NKY_SoundManager.Instance.PlaySFX("Phase2");
         if (phase2EffectPrefab != null)
         {
             GameObject effect = Instantiate(phase2EffectPrefab, transform.position, Quaternion.identity);
@@ -276,7 +299,7 @@ public class JHY_Attack : MonoBehaviour
         if (mobSummoner != null)
         {
             mobSummoner.SummonMobs();
-            //잡몹 소환
+            NKY_SoundManager.Instance.PlaySFX("MobSpawn");
         }
     }
 
@@ -342,7 +365,12 @@ public class JHY_Attack : MonoBehaviour
         ani.ResetTrigger("Jump");
         ani.SetTrigger("Skill");
         //스킬 발사하는 소리
+        Invoke(nameof(PlaySkillSound), 0.65f);
         Invoke(nameof(EndSkill), 1.5f);
+    }
+    void PlaySkillSound()
+    {
+        NKY_SoundManager.Instance.PlaySFX("XFire");
     }
     bool IsPlayerInSkillAngle()
     {
@@ -440,6 +468,7 @@ public class JHY_Attack : MonoBehaviour
     private void SpawnShockwaveWithOffset(float extraOffset)
     {
         //점프 착지 충격파 소리
+        NKY_SoundManager.Instance.PlaySFX("Jump");
         Debug.Log("Shockwave!");
 
         if (projectilePrefab2 == null) return;

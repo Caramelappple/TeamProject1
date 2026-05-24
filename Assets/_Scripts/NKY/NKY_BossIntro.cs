@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using System.Collections;
 using TMPro;
@@ -10,6 +11,14 @@ public class NKY_BossIntro : MonoBehaviour
     [SerializeField] private RectTransform bottom;
     [SerializeField] private TextMeshProUGUI bossNameText;
     public string bossName;
+
+    [Header("Player")] 
+    private GameObject _player;
+    private Health _health;
+    private LSO_PlayerMovement _movement;
+    private LSO_PlayerAttack _attack;
+    private KDH_SkillSystem _skillSystem;
+    
 
     [Header("target")]
     [SerializeField] private Transform boss;
@@ -33,8 +42,29 @@ public class NKY_BossIntro : MonoBehaviour
         _camera = Camera.main;
     }
 
+    private void Start()
+    {
+        _player = NKY_GameManager.instance.player;
+        _health = _player.GetComponent<Health>();
+        _movement = _player.GetComponent<LSO_PlayerMovement>();
+        _attack = _player.GetComponent<LSO_PlayerAttack>();
+        _skillSystem = FindFirstObjectByType<KDH_SkillSystem>();
+    }
+
     public IEnumerator PlayIntro()
     {
+        _player = NKY_GameManager.instance.player;
+        _health = _player.GetComponent<Health>();
+        _movement = _player.GetComponent<LSO_PlayerMovement>();
+        _attack = _player.GetComponent<LSO_PlayerAttack>();
+        _skillSystem = FindFirstObjectByType<KDH_SkillSystem>();
+        
+        if (_health != null) _health.SetDamageable(false);
+        if (_movement != null) _movement.SetMove(false);
+        if (_attack != null) _attack.SetCanAttack(false);
+        if (_skillSystem != null) _skillSystem.SetCanUseSkill(false); // 김동휘거 떼옴
+        
+        yield return new WaitForSeconds(2.5f); // KDH가 추가함
         gameObject.SetActive(true);
         yield return new WaitForSeconds(2.5f); // KDH가 추가함
         _camera.transform.DOMove(new Vector3(boss.position.x, boss.position.y, _camera.transform.position.z), 2.5f).SetEase(Ease.OutQuint);
@@ -54,6 +84,12 @@ public class NKY_BossIntro : MonoBehaviour
         top.DOSizeDelta(startSize, 2f).SetEase(Ease.OutQuint);
         bottom.DOSizeDelta(startSize, 2f).SetEase(Ease.OutQuint);
         yield return new WaitForSeconds(1.8f);
+        
+        if (_health != null) _health.SetDamageable(true);
+        if (_movement != null) _movement.SetMove(true);
+        if (_attack != null) _attack.SetCanAttack(true);
+        if (_skillSystem != null) _skillSystem.SetCanUseSkill(true); // 김동휘거 떼옴
+        
         gameObject.SetActive(false);
     }
 

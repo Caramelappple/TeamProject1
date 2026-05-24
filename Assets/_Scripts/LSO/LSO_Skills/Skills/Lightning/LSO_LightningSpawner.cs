@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class LSO_LightningSpawner : MonoBehaviour, LSO_ISkill
 {
@@ -53,7 +54,7 @@ public class LSO_LightningSpawner : MonoBehaviour, LSO_ISkill
             if (_isDestroyed) yield break; //삭제됐으면 중단
             if (!_target) break;
 
-            NKY_SoundManager.Instance.PlaySFX(SoundClip[1].soundName);
+            NKY_SoundManager.Instance.PlaySFX(SoundClip[Random.Range(0, SoundClip.Length)].soundName);
             
             _effectInstance = Instantiate(
                 effect,

@@ -98,7 +98,7 @@ public class NKY_SwordBomb : NKY_BossSkill
                 ));
                 yield return new WaitForSeconds(spawnInterval);
             }
-        yield return WaitUntilOrTime(() => false, swordMoveDuration + spawnInterval + 0.8f);
+            yield return WaitUntilOrTime(() => false, swordMoveDuration + spawnInterval + 0.8f);
             yield break;
         }
 

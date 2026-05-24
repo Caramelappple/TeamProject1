@@ -121,6 +121,8 @@ public class BossAttack2 : MonoBehaviour
 
     public void AttackPlayer()
     {
+        NKY_SoundManager.Instance.PlaySFX("NormalAttack");
+        
         if (player == null || isDead) return;
         if (bossFollow != null && bossFollow.IsDashingNow) return;
 
@@ -133,7 +135,8 @@ public class BossAttack2 : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, player.position);
         if (distance > attackRange) return;
-
+        
+        
         if (playerHealth != null)
         {
             DamageData damageData = DamageData.Create(null, damage);
