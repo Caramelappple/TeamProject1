@@ -60,12 +60,6 @@ public class NKY_GameManager : MonoBehaviour
         {
             LSO_PlayerMovement.instance.transform.position = spawnPoint.transform.position;
         }
-        
-        if (scene.name != "MainMenu" &&  scene.name != "KHG_tumap")
-        {
-            NKY_SoundManager.Instance.PlayBGM(soundData[Random.Range(0, soundData.Length)].soundName); 
-            Debug.Log("dfa");
-        }
     }
 
     private void ClearInGameDontDestroyObjects()
