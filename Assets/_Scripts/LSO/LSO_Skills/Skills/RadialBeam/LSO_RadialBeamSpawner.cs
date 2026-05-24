@@ -7,7 +7,7 @@ public class LSO_RadialBeamSpawner : MonoBehaviour,LSO_ISkill
     
     private bool _canUse = true;
     
-    private float _coolTime = 5f;
+    [SerializeField] private float _coolTime = 5f;
     private float _waitTime = 0.2f;
     
     private int _randomDegree;

@@ -13,7 +13,7 @@ public class LSO_Slow : MonoBehaviour,LSO_ISkill
     private GameObject _player;
     
     private bool _canUse = true;
-    private float _coolTime = 60f;
+    [SerializeField] private float _coolTime = 60f;
     private float _waitTime = 5f;
     public void UseSkill(GameObject player)
     {

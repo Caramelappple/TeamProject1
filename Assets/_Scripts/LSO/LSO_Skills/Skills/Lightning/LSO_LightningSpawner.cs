@@ -12,7 +12,7 @@ public class LSO_LightningSpawner : MonoBehaviour, LSO_ISkill
 
     private readonly float _diff = 100;
 
-    private float _coolTime = 5f;
+    [SerializeField] private float _coolTime = 5f;
     private float _minWaitTime = 0.1f;
     private float _maxWaitTime = 0.4f;
     private int _minCount = 4;

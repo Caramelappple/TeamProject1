@@ -77,7 +77,9 @@ public class NKY_BalckHollAttack : NKY_BossSkill
         effect.SetActive(true);
         effect.transform.position = position;
         effect.transform.localScale = effectScale * 0.3f;
+        NKY_SoundManager.Instance.PlaySFX("OmenBlackHole");
         yield return StartCoroutine(WaitUntilOrTime(() => false, 2f));
+        NKY_SoundManager.Instance.PlaySFX("StartBlackHole");
         float current = 0.3f;
         while (true)
         {
@@ -97,15 +99,18 @@ public class NKY_BalckHollAttack : NKY_BossSkill
 
     private IEnumerator OffHoleEffect(GameObject effect)
     {
-        Vector2 effectScale = effect.transform.localScale;
+        Vector2 effectScale = effect.transform.localScale * 0.1f;
+        NKY_SoundManager.Instance.PlaySFX("EndBlackHole");
         while (true)
         {
             effect.transform.localScale = Vector2.Lerp(effectScale, effectScale * 0.1f, -Time.deltaTime);
             yield return null;
             if(effect.transform.localScale.x <= effectScale.x && effect.transform.localScale.y <= effectScale.y)
+            {
+                effect.SetActive(false);
                 break;
+            }
         }
-        effect.SetActive(false);
     }
 
     private IEnumerator OnPull(GameObject target)

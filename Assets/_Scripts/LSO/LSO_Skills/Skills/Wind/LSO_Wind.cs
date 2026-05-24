@@ -7,7 +7,7 @@ public class LSO_Wind : MonoBehaviour
     
     private float _speed = 1f;
     private float _innerRange = 8f;
-    private int _damage = 3;
+    [SerializeField] private int _damage = 3;
     private float _liveTime = 9.2f;
     private float _interval = 0.5f;
     private Health _playerHealth;

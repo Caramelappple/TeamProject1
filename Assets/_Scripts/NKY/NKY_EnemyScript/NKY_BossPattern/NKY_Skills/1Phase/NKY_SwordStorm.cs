@@ -6,11 +6,7 @@ using UnityEngine;
 namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 {
     public class NKY_SwordStorm : NKY_BossSkill
-    {
-        [Header("오디오 클립")]
-        [SerializeField] private AudioClip summonSword;//이시온이 넣음
-        [SerializeField] private AudioClip swordAttack;//이시온이 넣음
-        
+    {   
         [SerializeField] private Transform[] spawnPoints;
         [SerializeField] private GameObject swordPrefab;
         private Queue<GameObject> swordQueue = new Queue<GameObject>();
@@ -30,8 +26,6 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
             GameObject sword;
             for (int i = 0; i < swordCount; i++)
             {
-                LSO_SoundManager.Instance.SfxPlay(summonSword);//이시온이 넣음
-                
                 sword = Instantiate(swordPrefab, transform);
                 sword.SetActive(false);
                 swordQueue.Enqueue(sword);
@@ -47,7 +41,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
                 
             for (int i = 1; i < swordCount; i++)
             {
-                LSO_SoundManager.Instance.SfxPlay(swordAttack);//이시온이 추가함
+                NKY_SoundManager.Instance.PlaySFX("SwordSpawn");
                 
                 spawnRange = Random.Range(0, spawnPoints.Length);
                 sword = swordQueue.Dequeue();

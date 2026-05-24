@@ -7,7 +7,7 @@ public class LSO_WindSpawner : MonoBehaviour,LSO_ISkill
     
     [SerializeField] private GameObject effect;
     private GameObject _effectInstance;
-    private float _coolTime = 10f;
+    [SerializeField] private float _coolTime = 10f;
     private LSO_PlayerMovement _playerMovement;
     private Rigidbody2D _rigid;
     private bool _canUse = true;

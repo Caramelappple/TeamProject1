@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c9fcb7c28e2de842a898afab6ce9da6, type: 3}
-  m_Name: Earthquake
+  m_Name: LSO_Clone1
   m_EditorClassIdentifier: Assembly-CSharp::NKY_SoundData
-  soundName: Earthquake
-  clip: {fileID: 8300000, guid: 956fd22b53107d0418739a8c9eb8eda8, type: 3}
-  mixerGroup: {fileID: -4496128942595586582, guid: 44e6620588154be43b389c0e82d9dffb,
-    type: 2}
+  soundName: 
+  clip: {fileID: 0}
+  mixerGroup: {fileID: 0}
   volume: 1
-  minPitch: 0.5
-  maxPitch: 0.6
+  minPitch: 0.95
+  maxPitch: 1.05

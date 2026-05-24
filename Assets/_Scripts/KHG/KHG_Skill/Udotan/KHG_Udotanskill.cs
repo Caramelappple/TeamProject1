@@ -11,7 +11,7 @@ public class KHG_Udotanskill : MonoBehaviour,LSO_ISkill
     private LSO_PlayerMovement _movement;
     private float _speed = 3f;
     
-    public float skillCooldown = 3f; 
+    [SerializeField] public float skillCooldown = 3f; 
     private bool isSkillReady = true; 
     
     public void UseSkill(GameObject player)

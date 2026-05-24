@@ -2023,7 +2023,7 @@ GameObject:
   - component: {fileID: 1969228926}
   - component: {fileID: 1969228925}
   - component: {fileID: 1969228924}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2060,7 +2060,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

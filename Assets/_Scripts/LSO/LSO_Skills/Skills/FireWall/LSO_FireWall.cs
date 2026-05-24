@@ -17,7 +17,7 @@ namespace _Scripts.LSO.LSO_Skills.Skills
         private GameObject _effectInstance;
     
         private float _waitTime = 0.1f;
-        private float _coolTime = 5f;
+        [SerializeField] private float _coolTime = 5f;
         private int _count = 5;
         private float _gap = 2.5f;
         public void UseSkill(GameObject player)

@@ -10,7 +10,7 @@ public class LSO_BearTrapSpawner : MonoBehaviour,LSO_ISkill
     public static LSO_BearTrapSpawner instance;
     [SerializeField]private float coolTime = 1f;
     private bool _canSpawn = true;
-    private int _trapCount = 5;
+    [SerializeField] private int _trapCount = 5;
     public readonly Stack<GameObject> trapPool = new Stack<GameObject>();
     public LinkedList<GameObject> activeTraps = new LinkedList<GameObject>();
     [SerializeField] private GameObject trapPrefab;

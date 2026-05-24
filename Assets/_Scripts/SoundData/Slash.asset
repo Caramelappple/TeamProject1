@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c9fcb7c28e2de842a898afab6ce9da6, type: 3}
-  m_Name: Teleport
+  m_Name: Slash
   m_EditorClassIdentifier: Assembly-CSharp::NKY_SoundData
-  soundName: Teleport
-  clip: {fileID: 8300000, guid: ddc27d8001caf204cad96a9571e897ee, type: 3}
+  soundName: Slash
+  clip: {fileID: 8300000, guid: a2493ee6d66ce164eba8784947e318c1, type: 3}
   mixerGroup: {fileID: -4496128942595586582, guid: 44e6620588154be43b389c0e82d9dffb,
     type: 2}
   volume: 1
-  minPitch: 1.2
-  maxPitch: 1.3
+  minPitch: 0.7
+  maxPitch: 0.7

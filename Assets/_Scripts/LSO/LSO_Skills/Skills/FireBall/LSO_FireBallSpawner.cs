@@ -12,7 +12,7 @@ public class LSO_FireBallSpawner : MonoBehaviour,LSO_ISkill
     private GameObject _fireball;
     
     private bool _canUse = true;
-    private float _coolTime = 5f;
+    [SerializeField] private float _coolTime = 5f;
     public void UseSkill(GameObject player)
     {
         if (!_canUse) return;
