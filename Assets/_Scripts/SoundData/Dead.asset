@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9fcb7c28e2de842a898afab6ce9da6, type: 3}
   m_Name: Dead
   m_EditorClassIdentifier: Assembly-CSharp::NKY_SoundData
-  soundName: FireOn
-  clip: {fileID: 8300000, guid: bcc3444da62c440238ff3cc0c64722e1, type: 3}
+  soundName: Dead
+  clip: {fileID: 8300000, guid: 0d436d33b50d28a46946f3793414b1b0, type: 3}
   mixerGroup: {fileID: -4496128942595586582, guid: 44e6620588154be43b389c0e82d9dffb,
     type: 2}
   volume: 1
