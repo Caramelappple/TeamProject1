@@ -115,6 +115,11 @@ public class JHY_Attack : MonoBehaviour
     }
     IEnumerator SpiderWebRoutine()
     {
+       
+        while (!canAct)
+        {
+            yield return null; 
+        }
         while (true)
         {
             yield return new WaitForSeconds(spiderWebSpawnTimer);
