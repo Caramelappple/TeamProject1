@@ -16,7 +16,7 @@ public class NKY_ChargeSlash : NKY_BossSkill
     [Header("스킬 설정")]
     [field: SerializeField] public override float DamageScale { get; protected set; } = 3f;
     
-    private int _damage;
+    //private int _damage;
 
     private void Start()
     {
@@ -111,7 +111,7 @@ public class NKY_ChargeSlash : NKY_BossSkill
             particle.Play();
         }
         
-        yield return StartCoroutine(DoShake(obj, chargeDuration, 0.2f));
+        yield return StartCoroutine(DoShake(obj, chargeDuration, 1.1f));
         foreach (ParticleSystem particle in particles)
         {
             particle.Stop();

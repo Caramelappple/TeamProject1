@@ -15,7 +15,7 @@ public class NKY_DashAndSlap : NKY_BossSkill
     [SerializeField] private float dashSpeed = 7f;
     [field: SerializeField] public override float DamageScale { get; protected set; } = 1f;
     
-    private int _damage;
+    //private int _damage;
 
     private void Start()
     {

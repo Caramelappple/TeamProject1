@@ -15,7 +15,9 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 
         [field: SerializeField] public override float DamageScale { get; protected set; } = 0.5f;
 
-        private int _damage;
+        private Collider2D bossCol;
+
+        //private int _damage;
 
         private void Start()
         {
@@ -24,13 +26,14 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 
         public override IEnumerator Execute(Transform boss, Transform target)
         {
-            Collider2D bossCol = boss.GetComponent<Collider2D>();
+            bossCol = boss.GetComponent<Collider2D>();
             
             Vector3 targetPos;
             for (int i = 0; i < 3; i++)
             {
                 bossCol.isTrigger = true;
                 Anim.SetTrigger(Vanish);
+                NKY_SoundManager.Instance.PlaySFX("Teleport");
                 yield return StartCoroutine(WaitAnim("Vanish", 1f));
                 
                 targetPos = target.position;
@@ -48,7 +51,8 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
                     Move(boss, Vector2.up, 0.5f, 0.1f),
                     WaitUntilOrTime(() => false, 0.15f),
                     MoveTo(boss, targetPos, 0.2f),
-                    ComboAttack("StationaryAttack",
+                    WaitUntilOrTime(() => false, 0.2f),
+                    ComboAttack("StationaryAttack", "Lending",
                         () => _HitBoxController.Cast(slamHitbox[2], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage)),
                         () => _HitBoxController.Cast(slamHitbox[0], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage)),
                         () => _HitBoxController.Cast(slamHitbox[1], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage))
@@ -65,6 +69,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
         {
             Anim.Play("Idle");
             StartCoroutine(ShadowLock(false));
+            bossCol.isTrigger = false;
         }
     }
 }

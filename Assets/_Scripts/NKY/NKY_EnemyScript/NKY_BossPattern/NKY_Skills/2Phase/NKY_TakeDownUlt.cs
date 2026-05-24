@@ -15,7 +15,9 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 
         [field: SerializeField] public override float DamageScale { get; protected set; } = 0.5f;
 
-        private int _damage = 0;
+        private Collider2D col;
+
+        //private int _damage = 0;
 
         private void Start()
         {
@@ -25,12 +27,16 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
 
         public override IEnumerator Execute(Transform boss, Transform target)
         {
+            col = boss.GetComponent<Collider2D>();
             Vector3 targetPos;
             for (int i = 0; i < 3; i++)
             {
                 Anim.SetTrigger(Vanish);
+                NKY_SoundManager.Instance.PlaySFX("Teleport");
                 yield return StartCoroutine(WaitAnim("Vanish", 1f));
-                
+
+                col.isTrigger = true;
+
                 targetPos = target.position;
                 boss.position = targetPos + new Vector3(0, 3, 0);
                 yield return ShadowMoveLock(targetPos);
@@ -46,17 +52,17 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
                     Move(boss, Vector2.up, 0.5f, 0.1f),
                     WaitUntilOrTime(() => false, 0.15f),
                     MoveTo(boss, targetPos, 0.2f),
-                    ComboAttack("StationaryAttack",
-                        () => _HitBoxController.Cast(slamHitbox[2], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, (int)_damage)),
-                        () => _HitBoxController.Cast(slamHitbox[0], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, (int)_damage)),
-                        () => _HitBoxController.Cast(slamHitbox[1], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, (int)_damage))
+                    ComboAttack("StationaryAttack", "Lending",
+                        () => _HitBoxController.Cast(slamHitbox[2], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage)),
+                        () => _HitBoxController.Cast(slamHitbox[0], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage)),
+                        () => _HitBoxController.Cast(slamHitbox[1], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage))
                     ),
                     ShowWarn(slamHitbox[3], 0.6f, () => _shadow.transform.position),
                     WaitUntilOrTime(() => false, 0.4f),
                     Attack(() => _HitBoxController.Cast(slamHitbox[3], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, (int)_damage * 2))),
-                    PlayDustEffect(dustEffect, _shadow.transform.position),
-                    ShadowLock(false)
+                    PlayDustEffect(dustEffect, _shadow.transform.position)
                 );
+                col.isTrigger = false;
                 Init();
             }
             yield break;
@@ -73,6 +79,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
             Animator effectAnim =  effect.GetComponent<Animator>();
             effect.transform.position = pos;
             effect.SetActive(true);
+            NKY_SoundManager.Instance.PlaySFX("Earthquake");
             effectAnim.Play("PlayDustEffect");
             yield return WaitAnim(effectAnim, "PlayDustEffect", 0.9f);
         }
@@ -80,6 +87,8 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
         private void Init()
         {
             dustEffect.SetActive(false);
+            StartCoroutine(ShadowLock(false));
+            col.isTrigger = false;
         }
     }
 }

@@ -13,7 +13,7 @@ public class NKY_SlashRush : NKY_BossSkill
     [SerializeField] private float moveDistance = 3f;
     [field: SerializeField] public override float DamageScale { get; protected set; }
     
-    private int _damage;
+    //private int _damage;
 
     private void Start()
     {
