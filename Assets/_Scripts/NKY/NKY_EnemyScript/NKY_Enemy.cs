@@ -10,6 +10,7 @@ namespace _Scripts.NKY._EnemyScript
     public class NKY_Enemy : NKY_BaseBoss
     {
         [SerializeField] private NKY_BossIntro intro;
+
         [Header("������ ��ų ���� ����")]
         [SerializeField] private NKY_BossSkill[] skills;
         public LSO_PlayerMovement playerReference;
@@ -21,6 +22,9 @@ namespace _Scripts.NKY._EnemyScript
 
         [Header("���� ���� ����")]
         [field: SerializeField] public int Damage { get; private set; }
+
+        [Header("sound")]
+        [SerializeField] private NKY_SoundData deadSound;
 
         private Health _myHealth;
 
@@ -36,7 +40,6 @@ namespace _Scripts.NKY._EnemyScript
             }
             _shadow = GetComponent<NKY_ShadowController>();
             _myHealth = gameObject.GetComponent<Health>();
-            playerReference = NKY_GameManager.instance.player.GetComponent<LSO_PlayerMovement>();
             _target = playerReference.gameObject;
 
             if (skills != null)
@@ -220,7 +223,7 @@ namespace _Scripts.NKY._EnemyScript
         // ReSharper disable Unity.PerformanceAnalysis
         private void Die()
         {
-            if (phase3Effect != null || bossPhase < 3)
+            if (phase3Effect != null && bossPhase < 3)
             {
                 PlayPhase3();
                 return;
@@ -234,6 +237,7 @@ namespace _Scripts.NKY._EnemyScript
                 StartCoroutine(phase3Effect.EndPhaseEffect());
             Camera.main.DOShakePosition(0.5f, 2f);
             Anim.Play("Dead");
+            NKY_SoundManager.Instance.PlaySFX(deadSound.soundName);
 
             var col = GetComponent<Collider2D>();
             if (col) col.enabled = false;
