@@ -1,0 +1,2093 @@
+fileFormatVersion: 2
+guid: b7d3954da54c1744fa528080873eb3ec
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2987734352200578416
+    second: Colour variations (16x16)_0
+  - first:
+      213: -3636024705039999820
+    second: Colour variations (16x16)_1
+  - first:
+      213: 7246495158293542691
+    second: Colour variations (16x16)_2
+  - first:
+      213: 6404021513493420422
+    second: Colour variations (16x16)_3
+  - first:
+      213: 1453258463113000027
+    second: Colour variations (16x16)_4
+  - first:
+      213: -8785245080752993148
+    second: Colour variations (16x16)_5
+  - first:
+      213: 8863562945818100957
+    second: Colour variations (16x16)_6
+  - first:
+      213: -6348103802102819199
+    second: Colour variations (16x16)_7
+  - first:
+      213: 4986650982723011821
+    second: Colour variations (16x16)_8
+  - first:
+      213: 428510750055977419
+    second: Colour variations (16x16)_9
+  - first:
+      213: -4632487740703387127
+    second: Colour variations (16x16)_10
+  - first:
+      213: -8479219446189126479
+    second: Colour variations (16x16)_11
+  - first:
+      213: 7852420156188837274
+    second: Colour variations (16x16)_12
+  - first:
+      213: -6875667269075383571
+    second: Colour variations (16x16)_13
+  - first:
+      213: 1248496259301107244
+    second: Colour variations (16x16)_14
+  - first:
+      213: 11479745882512094
+    second: Colour variations (16x16)_15
+  - first:
+      213: -8493639897111541270
+    second: Colour variations (16x16)_16
+  - first:
+      213: -4316271416403172626
+    second: Colour variations (16x16)_17
+  - first:
+      213: 7540532358695555349
+    second: Colour variations (16x16)_18
+  - first:
+      213: -3807569150579275826
+    second: Colour variations (16x16)_19
+  - first:
+      213: -4588286920878894211
+    second: Colour variations (16x16)_20
+  - first:
+      213: -5355638966178695640
+    second: Colour variations (16x16)_21
+  - first:
+      213: -2964872094151032050
+    second: Colour variations (16x16)_22
+  - first:
+      213: -4837794019803776579
+    second: Colour variations (16x16)_23
+  - first:
+      213: -6383282510300837769
+    second: Colour variations (16x16)_24
+  - first:
+      213: -5781371305215495711
+    second: Colour variations (16x16)_25
+  - first:
+      213: 1073535789603337533
+    second: Colour variations (16x16)_26
+  - first:
+      213: -2494816297010572048
+    second: Colour variations (16x16)_27
+  - first:
+      213: -3245879612799884682
+    second: Colour variations (16x16)_28
+  - first:
+      213: -1950842997188816199
+    second: Colour variations (16x16)_29
+  - first:
+      213: 7960443590344215553
+    second: Colour variations (16x16)_30
+  - first:
+      213: 3579145155270102480
+    second: Colour variations (16x16)_31
+  - first:
+      213: -1146058950831142603
+    second: Colour variations (16x16)_32
+  - first:
+      213: -5596892279917605730
+    second: Colour variations (16x16)_33
+  - first:
+      213: 2077701935220280507
+    second: Colour variations (16x16)_34
+  - first:
+      213: -424742329996545819
+    second: Colour variations (16x16)_35
+  - first:
+      213: -5353377990837897391
+    second: Colour variations (16x16)_36
+  - first:
+      213: -2059330293389856087
+    second: Colour variations (16x16)_37
+  - first:
+      213: -3063963356089176792
+    second: Colour variations (16x16)_38
+  - first:
+      213: 3806453582232363183
+    second: Colour variations (16x16)_39
+  - first:
+      213: 5812580051921274760
+    second: Colour variations (16x16)_40
+  - first:
+      213: 1484680972135835020
+    second: Colour variations (16x16)_41
+  - first:
+      213: -6914547220654306301
+    second: Colour variations (16x16)_42
+  - first:
+      213: 4715743873575301022
+    second: Colour variations (16x16)_43
+  - first:
+      213: -1963498859867418845
+    second: Colour variations (16x16)_44
+  - first:
+      213: -5079489293969383238
+    second: Colour variations (16x16)_45
+  - first:
+      213: 408561774608953971
+    second: Colour variations (16x16)_46
+  - first:
+      213: -1628255769807616628
+    second: Colour variations (16x16)_47
+  - first:
+      213: 3609482131570259239
+    second: Colour variations (16x16)_48
+  - first:
+      213: -6405547290286663248
+    second: Colour variations (16x16)_49
+  - first:
+      213: 7532407061792055437
+    second: Colour variations (16x16)_50
+  - first:
+      213: -3262070200255701001
+    second: Colour variations (16x16)_51
+  - first:
+      213: 36975546717037852
+    second: Colour variations (16x16)_52
+  - first:
+      213: -862921737294544130
+    second: Colour variations (16x16)_53
+  - first:
+      213: 4220367250075401482
+    second: Colour variations (16x16)_54
+  - first:
+      213: -274806531598465455
+    second: Colour variations (16x16)_55
+  - first:
+      213: 8653604276928409872
+    second: Colour variations (16x16)_56
+  - first:
+      213: -3697021240570748945
+    second: Colour variations (16x16)_57
+  - first:
+      213: -3966249968689938626
+    second: Colour variations (16x16)_58
+  - first:
+      213: -5999603250337870077
+    second: Colour variations (16x16)_59
+  - first:
+      213: -6066830448711894610
+    second: Colour variations (16x16)_60
+  - first:
+      213: 1631165091363667576
+    second: Colour variations (16x16)_61
+  - first:
+      213: 1639303024193284793
+    second: Colour variations (16x16)_62
+  - first:
+      213: -5907622187162989437
+    second: Colour variations (16x16)_63
+  - first:
+      213: 2405821920025531209
+    second: Colour variations (16x16)_64
+  - first:
+      213: 1889285801289934534
+    second: Colour variations (16x16)_65
+  - first:
+      213: 6612855971057041808
+    second: Colour variations (16x16)_66
+  - first:
+      213: 47196923542044507
+    second: Colour variations (16x16)_67
+  - first:
+      213: -4568246462079501691
+    second: Colour variations (16x16)_68
+  - first:
+      213: -3052359307083137469
+    second: Colour variations (16x16)_69
+  - first:
+      213: -1403691347736856656
+    second: Colour variations (16x16)_70
+  - first:
+      213: 6177336396257903417
+    second: Colour variations (16x16)_71
+  - first:
+      213: -1722819790352402739
+    second: Colour variations (16x16)_72
+  - first:
+      213: 8101313806663436805
+    second: Colour variations (16x16)_73
+  - first:
+      213: 3743229253302993951
+    second: Colour variations (16x16)_74
+  - first:
+      213: -5083198763421359052
+    second: Colour variations (16x16)_75
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Colour variations (16x16)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 075b52a4090967920800000000000000
+      internalID: 2987734352200578416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 223
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bcdb859bce3a8dc0800000000000000
+      internalID: -3636024705039999820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 207
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 327bca0f3f8b09460800000000000000
+      internalID: 7246495158293542691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_3
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 223
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6891cb5f2a7afd850800000000000000
+      internalID: 6404021513493420422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_4
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 207
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b543eac5fd20b2410800000000000000
+      internalID: 1453258463113000027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_5
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 223
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48c48f0352a841680800000000000000
+      internalID: -8785245080752993148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_6
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 207
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd48dcdb983b10b70800000000000000
+      internalID: 8863562945818100957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_7
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 224
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 186da56c93107e7a0800000000000000
+      internalID: -6348103802102819199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_8
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de4ce0cf5a4243540800000000000000
+      internalID: 4986650982723011821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_9
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc1d58fb14062f500800000000000000
+      internalID: 428510750055977419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_10
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 223
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 902d50d91f816bfb0800000000000000
+      internalID: -4632487740703387127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_11
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 207
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bc0059a6d2c35a80800000000000000
+      internalID: -8479219446189126479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_12
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 224
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a95c0c4378669fc60800000000000000
+      internalID: 7852420156188837274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dea4bf03c09b490a0800000000000000
+      internalID: -6875667269075383571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 208
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c26eb07abbc835110800000000000000
+      internalID: 1248496259301107244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_15
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 224
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eda507f94c8c82000800000000000000
+      internalID: 11479745882512094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 208
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae9c49ac387802a80800000000000000
+      internalID: -8493639897111541270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_17
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 191
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee2ed1fe3068914c0800000000000000
+      internalID: -4316271416403172626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_18
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 191
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51113619a3a55a860800000000000000
+      internalID: 7540532358695555349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_19
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 191
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec78cf9e70cc82bc0800000000000000
+      internalID: -3807569150579275826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_20
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 208
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d735171fa512350c0800000000000000
+      internalID: -4588286920878894211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_21
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 826bda35cb2fca5b0800000000000000
+      internalID: -5355638966178695640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_22
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 191
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e03c8a7f988aad6d0800000000000000
+      internalID: -2964872094151032050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_23
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 208
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db9361188f3bcdcb0800000000000000
+      internalID: -4837794019803776579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_24
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7780e8080660a67a0800000000000000
+      internalID: -6383282510300837769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_25
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 208
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e17efdcd6174cfa0800000000000000
+      internalID: -5781371305215495711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d35b9f0ec17f5ee00800000000000000
+      internalID: 1073535789603337533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_27
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 33
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f454d4cbc1a06dd0800000000000000
+      internalID: -2494816297010572048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_28
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 672616780b154f2d0800000000000000
+      internalID: -3245879612799884682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_29
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 192
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b2900c41a63de4e0800000000000000
+      internalID: -1950842997188816199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_30
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10c8009e44d297e60800000000000000
+      internalID: 7960443590344215553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_31
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 175
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dd4f6b3e8daba130800000000000000
+      internalID: 3579145155270102480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_32
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 192
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5398d00d4716810f0800000000000000
+      internalID: -1146058950831142603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_33
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 192
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9c82610028d352b0800000000000000
+      internalID: -5596892279917605730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_34
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 176
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbc42f5e6ea75dc10800000000000000
+      internalID: 2077701935220280507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_35
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 143
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e0fb7be9130b1af0800000000000000
+      internalID: -424742329996545819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_36
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 160
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15776bba41bf4b5b0800000000000000
+      internalID: -5353377990837897391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 162
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a2fb4b420acb63e0800000000000000
+      internalID: -2059330293389856087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_38
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 160
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82dad7baf8d9a75d0800000000000000
+      internalID: -3063963356089176792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 146
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa029f69d5d33d430800000000000000
+      internalID: 3806453582232363183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_40
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 144
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8870a47c2ce6aa050800000000000000
+      internalID: 5812580051921274760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8520fc5a75aa9410800000000000000
+      internalID: 1484680972135835020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 111
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30c4c3a00f79a00a0800000000000000
+      internalID: -6914547220654306301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_43
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 111
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9f2e246110b17140800000000000000
+      internalID: 4715743873575301022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_44
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 127
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32fc7b4a03040c4e0800000000000000
+      internalID: -1963498859867418845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_45
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 95
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab02e8046670289b0800000000000000
+      internalID: -5079489293969383238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_46
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 127
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 372be54f4c08ba500800000000000000
+      internalID: 408561774608953971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_47
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 95
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c85032511064769e0800000000000000
+      internalID: -1628255769807616628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_48
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7257d53ffd4771230800000000000000
+      internalID: 3609482131570259239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_49
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b95f727dacea17a0800000000000000
+      internalID: -6405547290286663248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 95
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8062c5705c788860800000000000000
+      internalID: 7532407061792055437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_51
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 95
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ff1f51af6ccab2d0800000000000000
+      internalID: -3262070200255701001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_52
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 95
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c15e177501d538000800000000000000
+      internalID: 36975546717037852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_53
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 95
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef2889b70494604f0800000000000000
+      internalID: -862921737294544130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 31
+        width: 97
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0dbf6a47a1c19a30800000000000000
+      internalID: 4220367250075401482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_55
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 81
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 156cd1e5ae0bf2cf0800000000000000
+      internalID: -274806531598465455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_56
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 81
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0117e19bd37c71870800000000000000
+      internalID: 8653604276928409872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_57
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 81
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fefd4b4f4ca81bcc0800000000000000
+      internalID: -3697021240570748945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_58
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 16
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3ff4d5eaac05f8c0800000000000000
+      internalID: -3966249968689938626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_59
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30f055e81a02dbca0800000000000000
+      internalID: -5999603250337870077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_60
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea9f000b9d94ecba0800000000000000
+      internalID: -6066830448711894610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_61
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 16
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87ebfb0220013a610800000000000000
+      internalID: 1631165091363667576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_62
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 16
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9baa3444a69ffb610800000000000000
+      internalID: 1639303024193284793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_63
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 16
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38c0fe2bbe8e30ea0800000000000000
+      internalID: -5907622187162989437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_64
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 16
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94358f72a42336120800000000000000
+      internalID: 2405821920025531209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_65
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 16
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c663192d67183a10800000000000000
+      internalID: 1889285801289934534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_66
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 16
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0910da1287595cb50800000000000000
+      internalID: 6612855971057041808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_67
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 16
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5ff6361a5da7a000800000000000000
+      internalID: 47196923542044507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_68
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 16
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58af05ddb045a90c0800000000000000
+      internalID: -4568246462079501691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_69
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 16
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34eb37ed167d3a5d0800000000000000
+      internalID: -3052359307083137469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_70
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 5
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b7fad30826158ce0800000000000000
+      internalID: -1403691347736856656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_71
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9334b0539be4ab550800000000000000
+      internalID: 6177336396257903417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_72
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 8
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc6380057805718e0800000000000000
+      internalID: -1722819790352402739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_73
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 2
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a442c0cf5ad6070800000000000000
+      internalID: 8101313806663436805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_74
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f14c9f36c2f92f330800000000000000
+      internalID: 3743229253302993951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Colour variations (16x16)_75
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 434a09718a9d479b0800000000000000
+      internalID: -5083198763421359052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Colour variations (16x16)_0: 2987734352200578416
+      Colour variations (16x16)_1: -3636024705039999820
+      Colour variations (16x16)_10: -4632487740703387127
+      Colour variations (16x16)_11: -8479219446189126479
+      Colour variations (16x16)_12: 7852420156188837274
+      Colour variations (16x16)_13: -6875667269075383571
+      Colour variations (16x16)_14: 1248496259301107244
+      Colour variations (16x16)_15: 11479745882512094
+      Colour variations (16x16)_16: -8493639897111541270
+      Colour variations (16x16)_17: -4316271416403172626
+      Colour variations (16x16)_18: 7540532358695555349
+      Colour variations (16x16)_19: -3807569150579275826
+      Colour variations (16x16)_2: 7246495158293542691
+      Colour variations (16x16)_20: -4588286920878894211
+      Colour variations (16x16)_21: -5355638966178695640
+      Colour variations (16x16)_22: -2964872094151032050
+      Colour variations (16x16)_23: -4837794019803776579
+      Colour variations (16x16)_24: -6383282510300837769
+      Colour variations (16x16)_25: -5781371305215495711
+      Colour variations (16x16)_26: 1073535789603337533
+      Colour variations (16x16)_27: -2494816297010572048
+      Colour variations (16x16)_28: -3245879612799884682
+      Colour variations (16x16)_29: -1950842997188816199
+      Colour variations (16x16)_3: 6404021513493420422
+      Colour variations (16x16)_30: 7960443590344215553
+      Colour variations (16x16)_31: 3579145155270102480
+      Colour variations (16x16)_32: -1146058950831142603
+      Colour variations (16x16)_33: -5596892279917605730
+      Colour variations (16x16)_34: 2077701935220280507
+      Colour variations (16x16)_35: -424742329996545819
+      Colour variations (16x16)_36: -5353377990837897391
+      Colour variations (16x16)_37: -2059330293389856087
+      Colour variations (16x16)_38: -3063963356089176792
+      Colour variations (16x16)_39: 3806453582232363183
+      Colour variations (16x16)_4: 1453258463113000027
+      Colour variations (16x16)_40: 5812580051921274760
+      Colour variations (16x16)_41: 1484680972135835020
+      Colour variations (16x16)_42: -6914547220654306301
+      Colour variations (16x16)_43: 4715743873575301022
+      Colour variations (16x16)_44: -1963498859867418845
+      Colour variations (16x16)_45: -5079489293969383238
+      Colour variations (16x16)_46: 408561774608953971
+      Colour variations (16x16)_47: -1628255769807616628
+      Colour variations (16x16)_48: 3609482131570259239
+      Colour variations (16x16)_49: -6405547290286663248
+      Colour variations (16x16)_5: -8785245080752993148
+      Colour variations (16x16)_50: 7532407061792055437
+      Colour variations (16x16)_51: -3262070200255701001
+      Colour variations (16x16)_52: 36975546717037852
+      Colour variations (16x16)_53: -862921737294544130
+      Colour variations (16x16)_54: 4220367250075401482
+      Colour variations (16x16)_55: -274806531598465455
+      Colour variations (16x16)_56: 8653604276928409872
+      Colour variations (16x16)_57: -3697021240570748945
+      Colour variations (16x16)_58: -3966249968689938626
+      Colour variations (16x16)_59: -5999603250337870077
+      Colour variations (16x16)_6: 8863562945818100957
+      Colour variations (16x16)_60: -6066830448711894610
+      Colour variations (16x16)_61: 1631165091363667576
+      Colour variations (16x16)_62: 1639303024193284793
+      Colour variations (16x16)_63: -5907622187162989437
+      Colour variations (16x16)_64: 2405821920025531209
+      Colour variations (16x16)_65: 1889285801289934534
+      Colour variations (16x16)_66: 6612855971057041808
+      Colour variations (16x16)_67: 47196923542044507
+      Colour variations (16x16)_68: -4568246462079501691
+      Colour variations (16x16)_69: -3052359307083137469
+      Colour variations (16x16)_7: -6348103802102819199
+      Colour variations (16x16)_70: -1403691347736856656
+      Colour variations (16x16)_71: 6177336396257903417
+      Colour variations (16x16)_72: -1722819790352402739
+      Colour variations (16x16)_73: 8101313806663436805
+      Colour variations (16x16)_74: 3743229253302993951
+      Colour variations (16x16)_75: -5083198763421359052
+      Colour variations (16x16)_8: 4986650982723011821
+      Colour variations (16x16)_9: 428510750055977419
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

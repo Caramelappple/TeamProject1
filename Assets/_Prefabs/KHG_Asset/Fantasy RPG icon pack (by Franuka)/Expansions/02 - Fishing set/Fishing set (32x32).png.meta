@@ -1,0 +1,1443 @@
+fileFormatVersion: 2
+guid: 0fcf142badb42994f9993534a5422c45
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2251896801272215516
+    second: Fishing set (32x32)_0
+  - first:
+      213: -4083781487996763022
+    second: Fishing set (32x32)_1
+  - first:
+      213: -1995148271328572390
+    second: Fishing set (32x32)_2
+  - first:
+      213: 7519857247033798240
+    second: Fishing set (32x32)_3
+  - first:
+      213: 6583640327969536809
+    second: Fishing set (32x32)_4
+  - first:
+      213: 4119767823985079270
+    second: Fishing set (32x32)_5
+  - first:
+      213: 8658665100060583672
+    second: Fishing set (32x32)_6
+  - first:
+      213: 4138680210682874762
+    second: Fishing set (32x32)_7
+  - first:
+      213: 760604094792276040
+    second: Fishing set (32x32)_8
+  - first:
+      213: 2734299666059924121
+    second: Fishing set (32x32)_9
+  - first:
+      213: 3861753052870603941
+    second: Fishing set (32x32)_10
+  - first:
+      213: -8754332258357711749
+    second: Fishing set (32x32)_11
+  - first:
+      213: 5107863587110687989
+    second: Fishing set (32x32)_12
+  - first:
+      213: -9048767090931307362
+    second: Fishing set (32x32)_13
+  - first:
+      213: 8386690012962614444
+    second: Fishing set (32x32)_14
+  - first:
+      213: -1536841032251036369
+    second: Fishing set (32x32)_15
+  - first:
+      213: 9149120890090278569
+    second: Fishing set (32x32)_16
+  - first:
+      213: -6435261403475038929
+    second: Fishing set (32x32)_17
+  - first:
+      213: 565701822073626587
+    second: Fishing set (32x32)_18
+  - first:
+      213: -215705939110144581
+    second: Fishing set (32x32)_19
+  - first:
+      213: -2669323328960687615
+    second: Fishing set (32x32)_20
+  - first:
+      213: -5998573343071702785
+    second: Fishing set (32x32)_21
+  - first:
+      213: 3998879886427651722
+    second: Fishing set (32x32)_22
+  - first:
+      213: -5867602420378304247
+    second: Fishing set (32x32)_23
+  - first:
+      213: 2703335730618090002
+    second: Fishing set (32x32)_24
+  - first:
+      213: -2900298604581765324
+    second: Fishing set (32x32)_25
+  - first:
+      213: 5787306256376141271
+    second: Fishing set (32x32)_26
+  - first:
+      213: -7109743229391338367
+    second: Fishing set (32x32)_27
+  - first:
+      213: 7270943068513868553
+    second: Fishing set (32x32)_28
+  - first:
+      213: 2875851698159068667
+    second: Fishing set (32x32)_29
+  - first:
+      213: 898995249084737842
+    second: Fishing set (32x32)_30
+  - first:
+      213: 2855215061096994448
+    second: Fishing set (32x32)_31
+  - first:
+      213: 3983340139311124467
+    second: Fishing set (32x32)_32
+  - first:
+      213: 7701601314211809490
+    second: Fishing set (32x32)_33
+  - first:
+      213: 578640966861189498
+    second: Fishing set (32x32)_34
+  - first:
+      213: -5005682115904368934
+    second: Fishing set (32x32)_35
+  - first:
+      213: -9091810548294182668
+    second: Fishing set (32x32)_36
+  - first:
+      213: -6440382941317199079
+    second: Fishing set (32x32)_37
+  - first:
+      213: 760937511224282535
+    second: Fishing set (32x32)_38
+  - first:
+      213: -6177120041833150686
+    second: Fishing set (32x32)_39
+  - first:
+      213: -1450553435370841000
+    second: Fishing set (32x32)_40
+  - first:
+      213: -8959500481085888
+    second: Fishing set (32x32)_41
+  - first:
+      213: -3914262283847165284
+    second: Fishing set (32x32)_42
+  - first:
+      213: 1310067735053587933
+    second: Fishing set (32x32)_43
+  - first:
+      213: -7822697931536398302
+    second: Fishing set (32x32)_44
+  - first:
+      213: -4947806739100515128
+    second: Fishing set (32x32)_45
+  - first:
+      213: -6017211264309997817
+    second: Fishing set (32x32)_46
+  - first:
+      213: -4363676002052137228
+    second: Fishing set (32x32)_47
+  - first:
+      213: 3406778897651671513
+    second: Fishing set (32x32)_48
+  - first:
+      213: -4815489308486346019
+    second: Fishing set (32x32)_49
+  - first:
+      213: -2797758712997948803
+    second: Fishing set (32x32)_50
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fishing set (32x32)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 223
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 428c4515ac7afb0e0800000000000000
+      internalID: -2251896801272215516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 223
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27403ab9f5e7357c0800000000000000
+      internalID: -4083781487996763022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_2
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 223
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1cc93dc73fcf44e0800000000000000
+      internalID: -1995148271328572390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_3
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 191
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06ea8130356eb5860800000000000000
+      internalID: 7519857247033798240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_4
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 223
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92b7f852ff9cd5b50800000000000000
+      internalID: 6583640327969536809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_5
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 191
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e3f6b9220b5c2930800000000000000
+      internalID: 4119767823985079270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_6
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 223
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f6ee2e6802c92870800000000000000
+      internalID: 8658665100060583672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_7
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 223
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8b01b459bb8f6930800000000000000
+      internalID: 4138680210682874762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_8
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 191
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8481dc4f4653e8a00800000000000000
+      internalID: 760604094792276040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_9
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 225
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99298f03f0f22f520800000000000000
+      internalID: 2734299666059924121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_10
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 225
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a4f1aee0f3b79530800000000000000
+      internalID: 3861753052870603941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_11
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 225
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7c68d6813d528680800000000000000
+      internalID: -8754332258357711749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_12
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 191
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f492eeaed6c2e640800000000000000
+      internalID: 5107863587110687989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_13
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 191
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9c6bc1f5425c6280800000000000000
+      internalID: -9048767090931307362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_14
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 191
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cace3f7d122836470800000000000000
+      internalID: 8386690012962614444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_15
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 193
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2dae64493b0caae0800000000000000
+      internalID: -1536841032251036369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 161
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aecfe4b9f438fe70800000000000000
+      internalID: 9149120890090278569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_17
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 161
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2da61959db51b6a0800000000000000
+      internalID: -6435261403475038929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_18
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 161
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdf5d795fc6c9d700800000000000000
+      internalID: 565701822073626587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_19
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 161
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb5d56b5798a10df0800000000000000
+      internalID: -215705939110144581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_20
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 161
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10292a23398a4fad0800000000000000
+      internalID: -2669323328960687615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_21
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 163
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff075178359c0cca0800000000000000
+      internalID: -5998573343071702785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_22
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 161
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8e79f9d110ee7730800000000000000
+      internalID: 3998879886427651722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_23
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 159
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9010122cfa6129ea0800000000000000
+      internalID: -5867602420378304247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_24
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 161
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 212cc1c268d248520800000000000000
+      internalID: 2703335730618090002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 127
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43fb75b19c110c7d0800000000000000
+      internalID: -2900298604581765324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 63
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d512b1b064a05050800000000000000
+      internalID: 5787306256376141271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_27
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 127
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18404efa33e155d90800000000000000
+      internalID: -7109743229391338367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_28
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 127
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90b9bdc923497e460800000000000000
+      internalID: 7270943068513868553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_29
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 95
+        width: 130
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf5a97fe1e319e720800000000000000
+      internalID: 2875851698159068667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_30
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 127
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 239a57c7a6fd97c00800000000000000
+      internalID: 898995249084737842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_31
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 127
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 096180278f2cf9720800000000000000
+      internalID: 2855215061096994448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_32
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 127
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ffc13780caa74730800000000000000
+      internalID: 3983340139311124467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_33
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 63
+        width: 66
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d8c647279591ea60800000000000000
+      internalID: 7701601314211809490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_34
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 95
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a71ff32c4eeb70800800000000000000
+      internalID: 578640966861189498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_35
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 127
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade8ef603ae388ab0800000000000000
+      internalID: -5005682115904368934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_36
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 127
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f896cf0a7663d180800000000000000
+      internalID: -9091810548294182668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 33
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91b8d4566d92f96a0800000000000000
+      internalID: -6440382941317199079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_38
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 0
+        width: 34
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ad0bc482a46f8a00800000000000000
+      internalID: 760937511224282535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_39
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 0
+        width: 34
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227c69bbc06764aa0800000000000000
+      internalID: -6177120041833150686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_40
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 63
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85c9ffcf5599edbe0800000000000000
+      internalID: -1450553435370841000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_41
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 0
+        width: 34
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04eb57cb16b20eff0800000000000000
+      internalID: -8959500481085888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_42
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 63
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a9495013fbda9c0800000000000000
+      internalID: -3914262283847165284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_43
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 0
+        width: 34
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd5d19bf9ab4e2210800000000000000
+      internalID: 1310067735053587933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_44
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 63
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 228079d7da1307390800000000000000
+      internalID: -7822697931536398302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_45
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 0
+        width: 34
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c441a24cfbd55bb0800000000000000
+      internalID: -4947806739100515128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_46
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 63
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70fc2545c329e7ca0800000000000000
+      internalID: -6017211264309997817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_47
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 0
+        width: 34
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fe19cebbcb1173c0800000000000000
+      internalID: -4363676002052137228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_48
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 0
+        width: 34
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d123d68b5f474f20800000000000000
+      internalID: 3406778897651671513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_49
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 0
+        width: 34
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddadafbccf1fb2db0800000000000000
+      internalID: -4815489308486346019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fishing set (32x32)_50
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 0
+        width: 34
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72d080164d5c29d0800000000000000
+      internalID: -2797758712997948803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Fishing set (32x32)_0: -2251896801272215516
+      Fishing set (32x32)_1: -4083781487996763022
+      Fishing set (32x32)_10: 3861753052870603941
+      Fishing set (32x32)_11: -8754332258357711749
+      Fishing set (32x32)_12: 5107863587110687989
+      Fishing set (32x32)_13: -9048767090931307362
+      Fishing set (32x32)_14: 8386690012962614444
+      Fishing set (32x32)_15: -1536841032251036369
+      Fishing set (32x32)_16: 9149120890090278569
+      Fishing set (32x32)_17: -6435261403475038929
+      Fishing set (32x32)_18: 565701822073626587
+      Fishing set (32x32)_19: -215705939110144581
+      Fishing set (32x32)_2: -1995148271328572390
+      Fishing set (32x32)_20: -2669323328960687615
+      Fishing set (32x32)_21: -5998573343071702785
+      Fishing set (32x32)_22: 3998879886427651722
+      Fishing set (32x32)_23: -5867602420378304247
+      Fishing set (32x32)_24: 2703335730618090002
+      Fishing set (32x32)_25: -2900298604581765324
+      Fishing set (32x32)_26: 5787306256376141271
+      Fishing set (32x32)_27: -7109743229391338367
+      Fishing set (32x32)_28: 7270943068513868553
+      Fishing set (32x32)_29: 2875851698159068667
+      Fishing set (32x32)_3: 7519857247033798240
+      Fishing set (32x32)_30: 898995249084737842
+      Fishing set (32x32)_31: 2855215061096994448
+      Fishing set (32x32)_32: 3983340139311124467
+      Fishing set (32x32)_33: 7701601314211809490
+      Fishing set (32x32)_34: 578640966861189498
+      Fishing set (32x32)_35: -5005682115904368934
+      Fishing set (32x32)_36: -9091810548294182668
+      Fishing set (32x32)_37: -6440382941317199079
+      Fishing set (32x32)_38: 760937511224282535
+      Fishing set (32x32)_39: -6177120041833150686
+      Fishing set (32x32)_4: 6583640327969536809
+      Fishing set (32x32)_40: -1450553435370841000
+      Fishing set (32x32)_41: -8959500481085888
+      Fishing set (32x32)_42: -3914262283847165284
+      Fishing set (32x32)_43: 1310067735053587933
+      Fishing set (32x32)_44: -7822697931536398302
+      Fishing set (32x32)_45: -4947806739100515128
+      Fishing set (32x32)_46: -6017211264309997817
+      Fishing set (32x32)_47: -4363676002052137228
+      Fishing set (32x32)_48: 3406778897651671513
+      Fishing set (32x32)_49: -4815489308486346019
+      Fishing set (32x32)_5: 4119767823985079270
+      Fishing set (32x32)_50: -2797758712997948803
+      Fishing set (32x32)_6: 8658665100060583672
+      Fishing set (32x32)_7: 4138680210682874762
+      Fishing set (32x32)_8: 760604094792276040
+      Fishing set (32x32)_9: 2734299666059924121
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
