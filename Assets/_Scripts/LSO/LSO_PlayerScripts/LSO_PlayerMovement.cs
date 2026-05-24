@@ -32,14 +32,7 @@ public class LSO_PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
         instance = this;
-        DontDestroyOnLoad(gameObject);
 
         _rigid = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();

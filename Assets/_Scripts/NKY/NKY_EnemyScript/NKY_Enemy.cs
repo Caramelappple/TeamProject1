@@ -31,7 +31,6 @@ namespace _Scripts.NKY._EnemyScript
             Anim = GetComponent<Animator>();
             _shadow = GetComponent<NKY_ShadowController>();
             _myHealth = gameObject.GetComponent<Health>();
-            playerReference = NKY_GameManager.instance.player.GetComponent<LSO_PlayerMovement>();
             _target = playerReference.gameObject;
 
             if (skills != null)

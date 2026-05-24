@@ -91,12 +91,11 @@ public class JHY_Attack : MonoBehaviour
         _bossMove = GetComponent<JHY_BossMove>();
 
         _bossBaseScale = transform.localScale;
-
-
     }
     void Start()
     {
-       player = NKY_GameManager.instance.player.transform;
+        player = NKY_GameManager.instance.player.transform;
+
         StartCoroutine(SpiderWebRoutine());
     }
     private void OnDisable()
