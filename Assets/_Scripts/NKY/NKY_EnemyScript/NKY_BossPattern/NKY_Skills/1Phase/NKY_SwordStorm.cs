@@ -18,7 +18,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
         [SerializeField] private float swordDuration = 0.5f;
         [field: SerializeField] public override float DamageScale { get; protected set; } = 0.7f;
         
-        private int _damage;
+        //private int _damage;
 
         protected void Start()
         {

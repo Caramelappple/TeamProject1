@@ -21,7 +21,7 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
     private Queue<GameObject> swordQueue = new Queue<GameObject>();
     [field: SerializeField] public override float DamageScale { get; protected set; } = 1f;
     private List<GameObject> swords =  new List<GameObject>();
-    private int _damage;
+    //private int _damage;
     protected void Start()
     {
         _damage = (int)(DamageScale * _bossBrain.Damage);

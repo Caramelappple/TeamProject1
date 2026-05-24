@@ -681,7 +681,7 @@ MonoBehaviour:
   - {fileID: 1971926568}
   swordPrefab: {fileID: 7601340347430588439, guid: 7bfb841379beb51489cd548e02e68d28,
     type: 3}
-  returnTarget: {fileID: 0}
+  returnTarget: {fileID: 1805345649}
   playAnimName: Attack2
   bul: 1
   spawnInterval: 0.1

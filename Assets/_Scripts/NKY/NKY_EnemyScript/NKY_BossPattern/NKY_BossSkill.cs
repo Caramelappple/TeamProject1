@@ -13,7 +13,15 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
         }
 
         public abstract float DamageScale { get; protected set; }
-        
+
+        protected int _damage = 0;
+
+        public virtual void ChangedDamage()
+        {
+            _damage = (int)(_bossBrain.Damage * DamageScale);
+        }
+
+
         public virtual void Init(NKY_BaseBoss boss)
         {
             Anim = boss.GetComponentInChildren<Animator>();

@@ -50,15 +50,22 @@ namespace _Scripts.NKY._EnemyScript
         
         private void Start()
         {
-            intro.gameObject.SetActive(true);
-            StartCoroutine(intro.PlayIntro());
+
             if (_myHealth != null)
             {
                 _myHealth.OnHit += IsHit;
                 _myHealth.OnDamage += SetDamage;
             }
 
-            //StartCoroutine(BossMainRoutine());
+            StartCoroutine(PlayBoss());
+        }
+
+        private IEnumerator PlayBoss()
+        {
+            intro.gameObject.SetActive(false);
+            yield return StartCoroutine(intro.PlayIntro());
+
+            StartCoroutine(BossMainRoutine());
         }
 
         protected override IEnumerator BossMainRoutine()
@@ -128,6 +135,10 @@ namespace _Scripts.NKY._EnemyScript
 
         private IEnumerator Phase2ProcessRoutine()
         {
+            foreach(NKY_BossSkill skill in skills)
+            {
+                skill.ChangedDamage();
+            }
             if(_bossSkill != null)
                 _bossSkill.EndSkill();
             _masterHandle = null;
@@ -166,7 +177,11 @@ namespace _Scripts.NKY._EnemyScript
 
         private IEnumerator Phase3ProcessRoutine()
         {
-            if(_bossSkill != null)
+            foreach (NKY_BossSkill skill in skills)
+            {
+                skill.ChangedDamage();
+            }
+            if (_bossSkill != null)
                 _bossSkill.EndSkill();
             _masterHandle = null;
             StartCoroutine(ShadowLock(false));
@@ -227,7 +242,7 @@ namespace _Scripts.NKY._EnemyScript
         {
             if (collision.gameObject.CompareTag("Player") && collision.gameObject.TryGetComponent(out Health health))
             {
-                DamageData data = DamageData.Create(_myHealth, Damage);
+                DamageData data = DamageData.Create(_myHealth, (int)(Damage * 0.2f));
                 health.GetDamage(data);
             }
         }

@@ -22,7 +22,7 @@ public class NKY_BossIntro : MonoBehaviour
     Vector2 startSize;
     Vector2 introSize;
 
-    private void Start()
+    private void Awake()
     {
         bossNameText.text = bossName;
         bossNameText.color = new Color(bossNameText.color.r, bossNameText.color.g, bossNameText.color.b, 0);
@@ -31,11 +31,12 @@ public class NKY_BossIntro : MonoBehaviour
         top.sizeDelta = startSize;
         bottom.sizeDelta = startSize;
         _camera = Camera.main;
-        gameObject.SetActive(false);
     }
 
     public IEnumerator PlayIntro()
     {
+        gameObject.SetActive(true);
+        Debug.Log($"{_camera}, {bossNameText}, {top}, {bottom}, {startSize}, {introSize}");
         _camera.transform.DOMove(new Vector3(boss.position.x, boss.position.y, _camera.transform.position.z), 2.5f).SetEase(Ease.OutQuint);
         top.DOSizeDelta(introSize, 2f).SetEase(Ease.OutQuint);
         bottom.DOSizeDelta(introSize, 2f).SetEase(Ease.OutQuint);
