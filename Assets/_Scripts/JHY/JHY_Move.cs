@@ -1,4 +1,4 @@
-using _Scripts.NKY.NKY_EnemyScript.NKY_Skills;
+
 using System.Collections;
 using UnityEditor;
 using UnityEngine;
@@ -27,7 +27,7 @@ public class JHY_BossMove : MonoBehaviour
 
     [SerializeField] private float stopRange = 4f;
 
-    private bool isArrived = false;
+    public bool isArrived = false;
 
     public bool isMoving;
 
