@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_Scripts.LSO.LSO_Skills.Skills.LSO_FireWall
   effect: {fileID: 7643000115279140553, guid: 8cdf96a51a5c0ad48b4bc413618abcb2, type: 3}
-  _coolTime: 9
+  _coolTime: 1

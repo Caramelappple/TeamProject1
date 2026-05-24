@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Smoke
   effect: {fileID: 9059873508784684391, guid: 734da0e0c29d93e4bb45806294d622d0, type: 3}
-  coolTime: 5
+  coolTime: 1
   waitTime: 1.2
   damage: 10
   speed: 6

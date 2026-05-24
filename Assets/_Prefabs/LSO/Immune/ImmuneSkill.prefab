@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 252281505fff3df4fbf3cbf7d556d665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Immune
-  coolTime: 18
+  coolTime: 1
   waitTime: 3

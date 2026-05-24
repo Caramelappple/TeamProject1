@@ -57,5 +57,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d6a3944ef8a910f4a87f081b1cff4495, type: 2}
   - {fileID: 11400000, guid: 5a64c2fe122aa0d428739a91a6fae1f3, type: 2}
   - {fileID: 11400000, guid: 45c5c9f31a6a3744ea26fe8bdcbcea67, type: 2}
-  _coolTime: 9
+  _coolTime: 1
   effect: {fileID: 4037454949488126040, guid: 4978844acbd7b4b4492d6322cc90a762, type: 3}
