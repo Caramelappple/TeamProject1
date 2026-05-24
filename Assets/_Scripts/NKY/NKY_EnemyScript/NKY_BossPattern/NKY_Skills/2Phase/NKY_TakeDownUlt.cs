@@ -32,6 +32,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
             for (int i = 0; i < 3; i++)
             {
                 Anim.SetTrigger(Vanish);
+                NKY_SoundManager.Instance.PlaySFX("Teleport");
                 yield return StartCoroutine(WaitAnim("Vanish", 1f));
 
                 col.isTrigger = true;
@@ -51,10 +52,10 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
                     Move(boss, Vector2.up, 0.5f, 0.1f),
                     WaitUntilOrTime(() => false, 0.15f),
                     MoveTo(boss, targetPos, 0.2f),
-                    ComboAttack("StationaryAttack",
-                        () => _HitBoxController.Cast(slamHitbox[2], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, (int)_damage)),
-                        () => _HitBoxController.Cast(slamHitbox[0], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, (int)_damage)),
-                        () => _HitBoxController.Cast(slamHitbox[1], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, (int)_damage))
+                    ComboAttack("StationaryAttack", "Lending",
+                        () => _HitBoxController.Cast(slamHitbox[2], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage)),
+                        () => _HitBoxController.Cast(slamHitbox[0], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage)),
+                        () => _HitBoxController.Cast(slamHitbox[1], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage))
                     ),
                     ShowWarn(slamHitbox[3], 0.6f, () => _shadow.transform.position),
                     WaitUntilOrTime(() => false, 0.4f),
@@ -78,6 +79,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
             Animator effectAnim =  effect.GetComponent<Animator>();
             effect.transform.position = pos;
             effect.SetActive(true);
+            NKY_SoundManager.Instance.PlaySFX("Earthquake");
             effectAnim.Play("PlayDustEffect");
             yield return WaitAnim(effectAnim, "PlayDustEffect", 0.9f);
         }

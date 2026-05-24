@@ -232,7 +232,7 @@ namespace _Scripts.NKY._EnemyScript
         {
             if (collision.gameObject.CompareTag("Player") && collision.gameObject.TryGetComponent(out Health health))
             {
-                DamageData data = DamageData.Create(_myHealth, Damage);
+                DamageData data = DamageData.Create(_myHealth, (int)(Damage * 0.2f));
                 health.GetDamage(data);
             }
         }
