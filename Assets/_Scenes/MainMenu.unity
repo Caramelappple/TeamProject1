@@ -931,7 +931,7 @@ RectTransform:
   m_GameObject: {fileID: 164123104}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 966678452}
@@ -1677,7 +1677,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBA54\uC778\uD654\uBA74"
+  m_text: "\uB098\uAC00\uAE30"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6b4868444770684ba81b85937eea8e9, type: 2}
   m_sharedMaterial: {fileID: 5814521389155015449, guid: c6b4868444770684ba81b85937eea8e9,
@@ -5094,7 +5094,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBA54\uC778 \uD654\uBA74\uC73C\uB85C \uB098\uAC00\uC2DC\uACA0\uC2B5\uB2C8\uAE4C? "
+  m_text: "\uB098\uAC00\uC2DC\uACA0\uC2B5\uB2C8\uAE4C? "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6b4868444770684ba81b85937eea8e9, type: 2}
   m_sharedMaterial: {fileID: 5814521389155015449, guid: c6b4868444770684ba81b85937eea8e9,
@@ -7797,7 +7797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
@@ -10037,7 +10037,6 @@ GameObject:
   - component: {fileID: 1659430251}
   - component: {fileID: 1659430255}
   - component: {fileID: 1659430254}
-  - component: {fileID: 1659430256}
   m_Layer: 5
   m_Name: MakeNewGame
   m_TagString: Untagged
@@ -10131,7 +10130,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1659430252
 MonoBehaviour:
@@ -10281,22 +10280,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fed69e499f3974438827a0da261b48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_UISound
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1456039936}
   hoverSound: {fileID: 8300000, guid: 17632031f1ccf094690e3e964f409b9c, type: 3}
   clickSound: {fileID: 8300000, guid: 06bc9ba6d0074df4c97a0bb264ae298f, type: 3}
---- !u!114 &1659430256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659430249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebaa3a7063e791942bfa222f2907a092, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::KDH_ButtonAudioController
-  clickSound: {fileID: 0}
 --- !u!1 &1677084284
 GameObject:
   m_ObjectHideFlags: 0

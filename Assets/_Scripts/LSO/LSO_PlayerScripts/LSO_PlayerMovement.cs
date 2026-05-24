@@ -19,12 +19,12 @@ public class LSO_PlayerMovement : MonoBehaviour
     private float _footStepTime; // 시간받아서
     private int _clipIndex;
      
-    [SerializeField] private bool canMove = true;
+    public bool canMove = true;
 
     private Vector2 _moveDir;
     private Vector2 _fixedLastDir = Vector2.down;
     private Vector2 _lastDir = Vector2.down;
-    private Rigidbody2D _rigid;
+    public Rigidbody2D _rigid;
 
     LSO_SkillItem _skillItem;
     private LSO_ISkill _skill;
