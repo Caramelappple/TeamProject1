@@ -13,10 +13,10 @@ public class LSO_Blood : MonoBehaviour,LSO_ISkill
     private bool _canUse = true;
     private Vector3 _lastDir;
     
-    private float _coolTime = 5f;
-    private float _waitTime = 1f;
-    private int _damage = 30;
-    private int _healValue = 10;
+    [SerializeField] private float _coolTime = 5f;
+    [SerializeField] private float _waitTime = 1f;
+    [SerializeField] private int _damage = 30;
+    [SerializeField] private int _healValue = 10;
     
     [SerializeField]private GameObject hEffect;
     [SerializeField]private GameObject vEffect;

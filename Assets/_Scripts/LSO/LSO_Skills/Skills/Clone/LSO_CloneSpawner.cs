@@ -11,7 +11,7 @@ public class LSO_CloneSpawner : MonoBehaviour, LSO_ISkill
     private LSO_PlayerMovement _movement;
     
     private bool _canUse = true;
-    private float _coolTime = 15f;
+    [SerializeField] private float _coolTime = 15f;
 
     public void UseSkill(GameObject player)
     {

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class LSO_Lightning : MonoBehaviour
 {
-    private int _damage = 8;
+    [SerializeField] private int _damage = 8;
     private float _time = 2.4f;
     
     private void OnEnable()

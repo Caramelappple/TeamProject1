@@ -7,10 +7,10 @@ public class LSO_EnergyBallSpawner : MonoBehaviour,LSO_ISkill
     
     [SerializeField] private GameObject effect;
     private GameObject _effectInstance;
-    private float _speed = 5;
-    private float _coolTime = 30f;
-    private float _recoilTime = 0.3f;
-    private float _recoilSpeed = 1.8f;
+    [SerializeField] private float _speed = 5;
+    [SerializeField] private float _coolTime = 30f;
+    [SerializeField] private float _recoilTime = 0.3f;
+    [SerializeField] private float _recoilSpeed = 1.8f;
     private Vector2 _lookDirection;
     private LSO_PlayerMovement _playerMovement;
     private Rigidbody2D _rigid;
