@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9fcb7c28e2de842a898afab6ce9da6, type: 3}
   m_Name: LSO_SkullAttack
   m_EditorClassIdentifier: Assembly-CSharp::NKY_SoundData
-  soundName: 
-  clip: {fileID: 0}
-  mixerGroup: {fileID: 0}
+  soundName: SkullAttack
+  clip: {fileID: 8300000, guid: 620d5bde5b3014c7e89ee7d23697c4f5, type: 3}
+  mixerGroup: {fileID: -4496128942595586582, guid: 44e6620588154be43b389c0e82d9dffb,
+    type: 2}
   volume: 1
   minPitch: 0.95
   maxPitch: 1.05

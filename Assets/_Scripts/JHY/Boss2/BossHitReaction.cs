@@ -58,10 +58,12 @@ public class BossHitReaction : MonoBehaviour
 
         Debug.Log("===> 정상 작동: anim.SetTrigger('TakeHit')를 호출합니다.");
         anim.SetTrigger("TakeHit");
+        NKY_SoundManager.Instance.PlaySFX("Reaction");
     }
 
     private void Die()
     {
+        NKY_SoundManager.Instance.PlaySFX("SlimeDeath");
         isDead = true;
         anim.SetTrigger("Dead");
 
