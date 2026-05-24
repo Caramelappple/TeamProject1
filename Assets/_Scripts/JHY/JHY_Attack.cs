@@ -81,7 +81,7 @@ public class JHY_Attack : MonoBehaviour
     }
     private IEnumerator Start()
     {
-        //player = NKY_GameManager.instance.player.transform;
+        player = NKY_GameManager.instance.player.transform;
 
         if (player != null)
         {
