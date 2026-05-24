@@ -70,7 +70,7 @@ public class FallingSpear : MonoBehaviour
 
         if (hitEffectPrefab != null)
         {
-            //창이 폭발하거나 사라질 때 나는 '쾅!' 하는 폭발음 재생
+            NKY_SoundManager.Instance.PlaySFX("SpearBom");
             GameObject effect = Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
             Destroy(effect, hitEffectLifeTime);
         }
