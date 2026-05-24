@@ -425,7 +425,7 @@ MonoBehaviour:
   spiderWebDuration: 6
   spearSpawner: {fileID: 566629621}
   spearRainCoolTime: 20
-  meleeDamage: 5
+  meleeDamage: 7
   playerHealth: {fileID: 1571487506}
   summonCoolTime: 40
   mobSummoner: {fileID: 566629623}
@@ -549,9 +549,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   _data: {fileID: 11400000, guid: 12761f64a73c74e4d84c7a29e220c9f8, type: 2}
-  <MaxValue>k__BackingField: 500
+  <MaxValue>k__BackingField: 2000
   <MinValue>k__BackingField: 0
-  _value: 500
+  _value: 2000
 --- !u!114 &566629623
 MonoBehaviour:
   m_ObjectHideFlags: 0

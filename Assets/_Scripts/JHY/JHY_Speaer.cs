@@ -4,7 +4,7 @@ public class JHY_BossProjectile : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     [SerializeField] private float lifeTime = 3f;
-    [SerializeField] private int damage = 5;
+    [SerializeField] private int damage = 6;
     void Start()
     {
         Destroy(gameObject, lifeTime);

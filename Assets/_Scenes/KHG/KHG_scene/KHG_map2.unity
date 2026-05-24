@@ -6581,7 +6581,7 @@ MonoBehaviour:
   spiderWebDuration: 6
   spearSpawner: {fileID: 1345346374}
   spearRainCoolTime: 20
-  meleeDamage: 5
+  meleeDamage: 7
   playerHealth: {fileID: 0}
   summonCoolTime: 40
   mobSummoner: {fileID: 1345346372}

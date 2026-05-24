@@ -8,7 +8,7 @@ public class FallingSpear : MonoBehaviour
     [SerializeField] private float explodeDelay = 1f;
 
     [Header("Damage")]
-    [SerializeField] private int damage = 4;
+    [SerializeField] private int damage = 7;
     [SerializeField] private float damageRadius = 1.7f;
     [SerializeField] private LayerMask playerLayer;
 

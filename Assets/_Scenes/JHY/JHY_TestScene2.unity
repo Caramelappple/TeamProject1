@@ -236,7 +236,7 @@ MonoBehaviour:
   player: {fileID: 181821775}
   attackRange: 3.3
   attackCooldown: 3
-  damage: 5
+  damage: 8
   comboCooldown: 7
   comboRange: 3.3
   comboWarningPrefab: {fileID: 8169960489270038553, guid: 3d24d1cb0e1c8c245ba8f3b26f453744,
