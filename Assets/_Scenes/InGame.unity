@@ -786,9 +786,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossAttack2
   player: {fileID: 0}
-  attackRange: 3
+  attackRange: 3.3
   attackCooldown: 3
   damage: 5
+  comboCooldown: 7
+  comboRange: 3.3
+  comboWarningPrefab: {fileID: 8169960489270038553, guid: 3d24d1cb0e1c8c245ba8f3b26f453744,
+    type: 3}
+  comboWarningTime: 1
 --- !u!114 &569689463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -809,7 +814,8 @@ MonoBehaviour:
   dashSpeed: 15
   dashDuration: 0.7
   dashPrepareTime: 0.75
-  dashWarningPrefab: {fileID: 0}
+  dashWarningPrefab: {fileID: 5234287652115864234, guid: 7397bceca59d5514090fe117691db18e,
+    type: 3}
   dashWarningDistance: 2
   rotateWarningToDashDirection: 1
 --- !u!70 &569689464
