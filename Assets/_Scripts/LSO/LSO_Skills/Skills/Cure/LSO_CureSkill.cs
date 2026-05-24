@@ -12,7 +12,7 @@ public class LSO_CureSkill : MonoBehaviour,LSO_ISkill
     
     [SerializeField] private float _coolTime = 10f;
     private float _waitTime = 2.6f;
-    private int _healValue = 40;
+    [SerializeField] private int _healValue = 20;
     
     private bool _canUse = true;
     

@@ -47,4 +47,5 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: adcfc3f9cf7a14590ae0988bda56accd, type: 3}
   poisonPrefab: {fileID: 7473640022190133471, guid: 5ccc8cbd74eee484eacd296c0ed28ecf,
     type: 3}
-  spawnDistance: 1.5
+  spawnDistance: 2
+  _coolTime: 9

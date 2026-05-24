@@ -48,7 +48,7 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 34efaef1401a7493fa62ff9d39245c9e, type: 3}
   bulletPrefab: {fileID: 992231960834194030, guid: 0f7712d6083f91d4a95f4fd67e730be2,
     type: 3}
-  skillCooldown: 3
+  skillCooldown: 12
 --- !u!50 &3400892837427770486
 Rigidbody2D:
   serializedVersion: 5

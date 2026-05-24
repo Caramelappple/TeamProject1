@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fadbdf4413b77b740ab37bdde57313c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KHG_CircleBullet
-  damage: 5
+  damage: 35
   scanRange: 3
   targets: []
   nearestTarget: {fileID: 0}

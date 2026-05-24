@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383f97fe9ce22de42b7ffd2dda346e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KHG_PoisonDamage
-  damage: 7
+  damage: 12
   interval: 0.06
 --- !u!58 &-7864136475983122362
 CircleCollider2D:

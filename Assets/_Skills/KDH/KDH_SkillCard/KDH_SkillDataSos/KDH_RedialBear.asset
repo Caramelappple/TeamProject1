@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7067c87e9e283418fd4da067c38591, type: 3}
   m_Name: KDH_RedialBear
   m_EditorClassIdentifier: Assembly-CSharp::KDH_SkillData
-  skillName: "\uBC29\uC0AC\uD615 \uACF0"
-  skillDescription: "\uC774\uAC8C \uBB54\uAC00\uC694"
+  skillName: "\uC885\uB9D0\uC758 \uD669\uAE08\uBE5B \uD0DC\uC591"
+  skillDescription: "\uC804\uBC29\uD5A5\uC73C\uB85C \uBC2B\uC758 \uCD1D\uC54C\uC744
+    \uBC1C\uC0AC\uD569\uB2C8\uB2E4"
   skillIcon: {fileID: 21300024, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
-  maxCooldownTime: 5
+  maxCooldownTime: 13
   skillPrefab: {fileID: 552737152551600111, guid: baf240b4264184d4e9372f38d018bf07,
     type: 3}
   skillIConPrefabs: {fileID: 4590441206724951262, guid: cfde33cddf8c62644bc71dcbd3154c6b,

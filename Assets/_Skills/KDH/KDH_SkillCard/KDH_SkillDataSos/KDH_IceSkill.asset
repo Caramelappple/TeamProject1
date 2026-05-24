@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7067c87e9e283418fd4da067c38591, type: 3}
   m_Name: KDH_IceSkill
   m_EditorClassIdentifier: Assembly-CSharp::KDH_SkillData
-  skillName: Ice
-  skillDescription: "\uC5BC\uC74C \uC2A4\uD0AC"
+  skillName: "\uB300\uD64D\uB828 \uBE59\uB95C\uD658"
+  skillDescription: "\uC790\uC2E0\uC744 \uB458\uB7EC\uC2F8\uB294 \uC5BC\uC74C \uC7A5\uBCBD\uC744
+    \uC18C\uD658\uD569\uB2C8\uB2E4"
   skillIcon: {fileID: 21300038, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
-  maxCooldownTime: 3
+  maxCooldownTime: 11
   skillPrefab: {fileID: 5213919056071174991, guid: 98f7c510666416a409a44b79bab21079,
     type: 3}
   skillIConPrefabs: {fileID: 298457392466231963, guid: fb7b24c0fc389bc4ea04bea56eb0117a,

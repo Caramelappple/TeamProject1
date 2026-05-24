@@ -127,8 +127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c5d3e6a61d5f2f49815bde3f3b6877c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KDH_Skill
-  skillName: RadialBear
-  maxCooldownTime: 5
+  skillName: "\uC885\uB9D0\uC758 \uD669\uAE08\uBE5B \uD0DC\uC591"
+  maxCooldownTime: 13
   textSkillData: {fileID: 0}
   textCooldownTime: {fileID: 8246403416872924375}
   imageCooldownTime: {fileID: 271397416181951451}

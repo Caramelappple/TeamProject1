@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459a67cb5f5fef4469a45300b4511078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Punch
+  _damage: 9
 --- !u!1 &6080948902421761921
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459a67cb5f5fef4469a45300b4511078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Punch
+  _damage: 2
 --- !u!1 &6822685069505474351
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459a67cb5f5fef4469a45300b4511078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Punch
+  _damage: 2
 --- !u!1 &7315646252486260460
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,6 +544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459a67cb5f5fef4469a45300b4511078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Punch
+  _damage: 2
 --- !u!1 &7844215994176548690
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,6 +709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459a67cb5f5fef4469a45300b4511078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Punch
+  _damage: 2
 --- !u!1 &7969000201227409317
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,3 +874,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459a67cb5f5fef4469a45300b4511078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Punch
+  _damage: 2

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7067c87e9e283418fd4da067c38591, type: 3}
   m_Name: KDH_Lightning
   m_EditorClassIdentifier: Assembly-CSharp::KDH_SkillData
-  skillName: "\uD3ED\uD48D"
-  skillDescription: "\uAC00\uC7A5 \uAC00\uAE4C\uC6B4 \uC801\uD55C\uD14C \uBCBC\uB77D\uC73C\uB85C
-    \uACF5\uACA9\uD569\uB2C8\uB2E4."
+  skillName: "\uC790\uB1CC\uAC81"
+  skillDescription: "\uC0C1\uB300\uC5D0\uAC8C 70~80% \uD655\uB960\uB85C \uB099\uB8B0\uAC00
+    \uB5A8\uC5B4\uC9D1\uB2C8\uB2E4"
   skillIcon: {fileID: 21300026, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
-  maxCooldownTime: 5
+  maxCooldownTime: 9
   skillPrefab: {fileID: 6523594206812736514, guid: 35f997b8406e4f443a48330766fa9da4,
     type: 3}
   skillIConPrefabs: {fileID: 4590441206724951262, guid: 982c53c1dbdd5704d88775d61423a36e,
