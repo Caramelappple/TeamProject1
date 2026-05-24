@@ -6,16 +6,17 @@ public class BossAttack2 : MonoBehaviour
     public float attackRange = 3.3f;
     public float attackCooldown = 3f;
     public int damage = 5;
-    public float comboCooldown = 8f;
+    public float comboCooldown = 7f;
     public float comboRange = 3.3f;
     private float lastComboTime;
-   private Health playerHealth;
+    private Health playerHealth;
     private Animator anim;
     private Health health;
     private BossMove2 bossFollow;
     private float lastAttackTime;
     private bool isDead;
     private Rigidbody2D rb;
+
     [Header("Combo Warning")]
     public GameObject comboWarningPrefab;
     public float comboWarningTime = 1f;
@@ -43,7 +44,6 @@ public class BossAttack2 : MonoBehaviour
 
     private void Update()
     {
-        
         if (playerHealth != null && playerHealth.IsDestroyed) return;
         SyncAttackState();
 
@@ -74,10 +74,10 @@ public class BossAttack2 : MonoBehaviour
 
         if (comboWarningPrefab == null) return;
 
+        
         Vector3 spawnPos = transform.position;
-        currentComboWarning = Instantiate(comboWarningPrefab, spawnPos, Quaternion.identity);
+        currentComboWarning = Instantiate(comboWarningPrefab, spawnPos, Quaternion.identity, transform);
     }
-
     public void RemoveComboWarning()
     {
         if (currentComboWarning != null)
@@ -89,36 +89,32 @@ public class BossAttack2 : MonoBehaviour
 
     public void OnAttackStart()
     {
-
         if (bossFollow != null && bossFollow.IsDashingNow)
         {
             IsAttacking = false;
-            health?.SetDamageable(true);
             return;
         }
 
         IsAttacking = true;
-        health?.SetDamageable(false);
+        // 무적 처리(SetDamageable) 제거됨
     }
+
     public void OnAttackEnd()
     {
         IsAttacking = false;
-        health?.SetDamageable(true);
+        // 무적 해제 처리 제거됨
     }
 
     private void SyncAttackState()
     {
         if (anim == null) return;
-      
-        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
 
-        
-            bool inAttackState = stateInfo.IsTag("Attack");
+        AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        bool inAttackState = stateInfo.IsTag("Attack");
 
         if (!inAttackState && IsAttacking)
         {
             IsAttacking = false;
-            health?.SetDamageable(true);
             Debug.Log("강제 복구: 공격 상태가 아니라서 IsAttacking 해제");
         }
     }
@@ -149,6 +145,5 @@ public class BossAttack2 : MonoBehaviour
     {
         isDead = true;
         IsAttacking = false;
-        health?.SetDamageable(true);
     }
 }
