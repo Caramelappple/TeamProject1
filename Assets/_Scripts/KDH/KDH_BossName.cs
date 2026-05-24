@@ -1,7 +1,5 @@
-using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class KDH_BossName : MonoBehaviour
 {
@@ -10,6 +8,6 @@ public class KDH_BossName : MonoBehaviour
 
     private void Start()
     {
-        KDH_BossNameSingle.instance.title.text = bossName;
+        //KDH_BossNameSingle.instance.title.text = bossName;
     }
 }

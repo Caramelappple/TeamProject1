@@ -1,4 +1,6 @@
+using _Scripts.NKY.NKY_EnemyScript.NKY_Skills;
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 
 public class JHY_BossMove : MonoBehaviour
@@ -28,6 +30,9 @@ public class JHY_BossMove : MonoBehaviour
     [SerializeField] private float dashCooldown = 8f;
     [SerializeField] private float dashSpeed = 12f;
     [SerializeField] private float dashDuration = 0.7f;
+
+    [Header("intro")]
+    [SerializeField] private NKY_BossIntro bossIntro;
     private float dashTimer;
     private bool isDashing;
 
@@ -46,8 +51,12 @@ public class JHY_BossMove : MonoBehaviour
 
     private void Start()
     {
-        // ◀ 공격 스크립트와 싱크를 맞추기 위해 자체적인 Start 코루틴 대기는 삭제합니다.
-        // ◀ 대신 시작할 때 확실하게 매니저에서 플레이어를 세팅합니다.
+        StartCoroutine(PlayBoss());
+    }
+
+    private IEnumerator PlayBoss()
+    {
+        yield return StartCoroutine(bossIntro.PlayIntro());
         SetPlayerTarget();
     }
 
