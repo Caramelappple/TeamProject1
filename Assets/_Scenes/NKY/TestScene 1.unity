@@ -1328,7 +1328,7 @@ PrefabInstance:
     - target: {fileID: 9189167798248658793, guid: b594ddf7fe3dee14fb5b861d836eab8f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9189167798248658793, guid: b594ddf7fe3dee14fb5b861d836eab8f,
         type: 3}
@@ -2126,12 +2126,12 @@ MonoBehaviour:
   _skillCooldown: 1.8
   intro: {fileID: 926261507}
   skills:
-  - {fileID: 1826878406}
-  - {fileID: 1826878406}
-  - {fileID: 1826878406}
-  - {fileID: 1290765489}
-  - {fileID: 1290765489}
-  - {fileID: 1290765489}
+  - {fileID: 393221263}
+  - {fileID: 393221263}
+  - {fileID: 393221263}
+  - {fileID: 1828895056}
+  - {fileID: 1828895056}
+  - {fileID: 1828895056}
   - {fileID: 40355974}
   - {fileID: 1218274507}
   - {fileID: 136981811}
@@ -14417,13 +14417,19 @@ MonoBehaviour:
   initialPoolSize: 10
   bgmSource: {fileID: 0}
   registrySoundData:
-  - {fileID: 11400000, guid: e13b4bbce39c299488389e0b9cd4f0d1, type: 2}
   - {fileID: 11400000, guid: 457a755f5e5009942af4321cbef427c6, type: 2}
-  - {fileID: 11400000, guid: f6fb1c05eec509f4c987ebd1e13394d0, type: 2}
-  - {fileID: 11400000, guid: 04f1befb88b5bc14ba985e55a75e8edb, type: 2}
-  - {fileID: 11400000, guid: 9d2782d94c88a08459ad5465bf329381, type: 2}
-  - {fileID: 11400000, guid: 98e75e72eff5f8a449cf1ae7db1aa570, type: 2}
+  - {fileID: 11400000, guid: 781cd327645b72642a8a81b09506351e, type: 2}
   - {fileID: 11400000, guid: a296ae8953f0c9c479bf91ee31fe1929, type: 2}
+  - {fileID: 11400000, guid: 98e75e72eff5f8a449cf1ae7db1aa570, type: 2}
+  - {fileID: 11400000, guid: 4f3194bfc13aed44da46eb9575fd3b9e, type: 2}
+  - {fileID: 11400000, guid: f6fb1c05eec509f4c987ebd1e13394d0, type: 2}
+  - {fileID: 11400000, guid: 9d2782d94c88a08459ad5465bf329381, type: 2}
+  - {fileID: 11400000, guid: 39be04727d75db844b6bd45b6a65be78, type: 2}
+  - {fileID: 11400000, guid: 58a523d717e720c40a45dde6eba3edb7, type: 2}
+  - {fileID: 11400000, guid: 1ac7f51f523055b45b37838980751c09, type: 2}
+  - {fileID: 11400000, guid: e13b4bbce39c299488389e0b9cd4f0d1, type: 2}
+  - {fileID: 11400000, guid: 2c9e5d0a2f89b5b40a977d9e28255a3e, type: 2}
+  - {fileID: 11400000, guid: 04f1befb88b5bc14ba985e55a75e8edb, type: 2}
 --- !u!4 &1758181933
 Transform:
   m_ObjectHideFlags: 0
@@ -14733,8 +14739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 645dc4bde06cfab488182b923e0bc491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_Scripts.NKY._EnemyScript.Skills.SwordStorm
-  summonSword: {fileID: 8300000, guid: 3f8c53300a72f4b4d91d2ed830be37f7, type: 3}
-  swordAttack: {fileID: 8300000, guid: 089579859603db64aa0561d68275ad93, type: 3}
   spawnPoints:
   - {fileID: 705630864}
   - {fileID: 853037822}

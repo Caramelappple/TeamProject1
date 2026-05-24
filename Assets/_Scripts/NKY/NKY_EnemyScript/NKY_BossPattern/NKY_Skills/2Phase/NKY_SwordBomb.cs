@@ -22,11 +22,9 @@ public class NKY_SwordBomb : NKY_BossSkill
         [SerializeField] private string playAnimName;
         [field: SerializeField] public override float DamageScale { get; protected set; } = 0.7f;
         
-        //private int _damage;
 
         protected void Start()
         {
-            //bombCollider = effectPrefab.GetComponent<Collider2D>();
             effectPrefab.SetActive(false);
             _damage = (int)(DamageScale * _bossBrain.Damage);
             GameObject sword;
@@ -84,6 +82,7 @@ public class NKY_SwordBomb : NKY_BossSkill
                     ShowWarn(0, new Vector2(0.2f , (pos - sword.transform.position).magnitude),
                         0.8f, () => Vector3.Lerp(sword.transform.position, pos, 0.5f), sword.transform.localEulerAngles.z),
                     WaitUntilOrTime(() => false, 0.6f),
+                    SoundPlay("SwordSpawn"),
                     MoveTo(sword.transform, pos, swordMoveDuration),
                     WaitUntilOrTime(() => false, swordMoveDuration),
                     ShowWarn(bombCollider, 0.5f, () => pos),
@@ -128,6 +127,13 @@ public class NKY_SwordBomb : NKY_BossSkill
             effect.transform.position = pos;
             effect.SetActive(true);
             effectAnim.Play("BombEffectAnim");
+            NKY_SoundManager.Instance.PlaySFX("Bomb");
             yield return WaitAnim(effectAnim, "BombEffectAnim", 0.9f);
         }
+
+    private IEnumerator SoundPlay(string soundName)
+    {
+        NKY_SoundManager.Instance.PlaySFX(soundName);
+        yield break;
+    }
 }
