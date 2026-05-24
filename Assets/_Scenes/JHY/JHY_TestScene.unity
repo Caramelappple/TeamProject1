@@ -379,7 +379,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BossController
   speed: 2
   chaseRange: 7
-  stopRange: 4
+  stopRange: 2
+  isArrived: 0
   isMoving: 0
   stunTime: 14
   stunDuration: 8
@@ -424,7 +425,7 @@ MonoBehaviour:
   spiderWebDuration: 6
   spearSpawner: {fileID: 566629621}
   spearRainCoolTime: 20
-  meleeDamage: 5
+  meleeDamage: 15
   playerHealth: {fileID: 1571487506}
   summonCoolTime: 40
   mobSummoner: {fileID: 566629623}
@@ -548,9 +549,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   _data: {fileID: 11400000, guid: 12761f64a73c74e4d84c7a29e220c9f8, type: 2}
-  <MaxValue>k__BackingField: 500
+  <MaxValue>k__BackingField: 2000
   <MinValue>k__BackingField: 0
-  _value: 500
+  _value: 2000
 --- !u!114 &566629623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -604,6 +605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0ad12e052c1e534c8362a278bb8ffb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NKY_GameManager
+  soundData: []
   <player>k__BackingField: {fileID: 1571487500}
 --- !u!4 &583915693
 Transform:
