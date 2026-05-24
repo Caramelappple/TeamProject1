@@ -24,7 +24,7 @@ public class LSO_PlayerMovement : MonoBehaviour
     private Vector2 _moveDir;
     private Vector2 _fixedLastDir = Vector2.down;
     private Vector2 _lastDir = Vector2.down;
-    private Rigidbody2D _rigid;
+    public Rigidbody2D _rigid;
 
     LSO_SkillItem _skillItem;
     private LSO_ISkill _skill;

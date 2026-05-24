@@ -24,7 +24,12 @@ public class NKY_GameManager : MonoBehaviour
         }
     }
 
-    
+
+    private void Start()
+    {
+        NKY_SoundManager.Instance.PlayBGM(soundData[Random.Range(0, soundData.Length)].soundName);
+    }
+
 
     private void OnEnable() => SceneManager.sceneLoaded += OnSceneLoaded;
     private void OnDisable() => SceneManager.sceneLoaded -= OnSceneLoaded;
