@@ -110,7 +110,7 @@ MonoBehaviour:
   hitEffectPrefab: {fileID: 6814668039328291312, guid: 096b137e97f87d94cb4f0c88c627f2c6,
     type: 3}
   explodeDelay: 1
-  damage: 4
+  damage: 12
   damageRadius: 1.7
   playerLayer:
     serializedVersion: 2

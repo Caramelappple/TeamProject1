@@ -1,6 +1,4 @@
-using Unity.Cinemachine;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class KDH_InGame4 : MonoBehaviour
 {

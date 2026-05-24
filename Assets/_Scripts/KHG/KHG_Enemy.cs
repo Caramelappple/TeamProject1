@@ -1,4 +1,3 @@
-using KHG.Player;
 using UnityEngine;
 
 
@@ -6,7 +5,6 @@ namespace KHG.Enemy
 {
     public class KHG_Enemy : MonoBehaviour
     {
-        private int _damage = 1;
 
         private void OnCollisionEnter2D(Collision2D collision)
         {

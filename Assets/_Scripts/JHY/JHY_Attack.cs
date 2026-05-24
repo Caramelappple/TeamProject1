@@ -7,7 +7,7 @@ public class JHY_Attack : MonoBehaviour
     private JHY_BossMove bossMove;
 
     [Header("References")]
-    [SerializeField]private Transform player;
+    [SerializeField] private Transform player;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private GameObject projectilePrefab2;
@@ -32,14 +32,13 @@ public class JHY_Attack : MonoBehaviour
     [SerializeField] private float spiderWebSpawnTimer = 13f;
     [SerializeField] private float spiderWebDuration = 6f;
 
-
     [Header("RainSpear")]
     [SerializeField] private SpearSpawner spearSpawner;
     [SerializeField] private float spearRainCoolTime = 20f;
     private float lastSpearRainTime;
 
     [Header("Damage")]
-    [SerializeField] private int meleeDamage = 5;
+    [SerializeField] private int meleeDamage = 15;
     [SerializeField] private Health playerHealth;
 
     [Header("Summon Skill")]
@@ -63,20 +62,27 @@ public class JHY_Attack : MonoBehaviour
     private float lastSkillTime;
     private float lastJumpAttackTime;
     private bool isSkillUsing = false;
-    private Vector3 firePointBaseLocalPos;
-    private Vector3 bossBaseScale;
+
+   
+    private float firePointStartX;
     [SerializeField] private JHY_WarningZone warningZone;
 
     public bool canAct = false;
     [SerializeField] private float startDelay = 5f;
+
     void Awake()
     {
         ani = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         bossMove = GetComponent<JHY_BossMove>();
 
-        bossBaseScale = transform.localScale;
+       
+        if (firePoint != null)
+        {
+            firePointStartX = firePoint.localPosition.x;
+        }
     }
+
     private IEnumerator Start()
     {
         canAct = false;
@@ -90,31 +96,29 @@ public class JHY_Attack : MonoBehaviour
         }
 
         StartCoroutine(SpiderWebRoutine());
-
         yield return new WaitForSeconds(startDelay);
 
         float sceneTime = Time.time;
-
-      
         lastAttackTime = sceneTime;
         lastSkillTime = sceneTime;
         lastJumpAttackTime = sceneTime;
         lastSpearRainTime = sceneTime;
-        lastSummonTime = sceneTime; 
+        lastSummonTime = sceneTime;
 
         canAct = true;
     }
+
     private void OnDisable()
     {
         StopAllCoroutines();
         CancelInvoke();
     }
+
     IEnumerator SpiderWebRoutine()
     {
-       
         while (!canAct)
         {
-            yield return null; 
+            yield return null;
         }
         while (true)
         {
@@ -149,12 +153,10 @@ public class JHY_Attack : MonoBehaviour
         if (isSummoning)
         {
             bossMove?.StopMoving();
-
             if (mobSummoner != null && !mobSummoner.HasAliveSummons())
             {
                 EndSummonState();
             }
-
             return;
         }
         if (isSkillUsing || (bossMove != null && (bossMove.isMoving || bossMove.isStunned))) return;
@@ -169,7 +171,6 @@ public class JHY_Attack : MonoBehaviour
             UseSummonSkill();
             return;
         }
-
 
         float skilldistance = Vector2.Distance(firePoint.position, player.position);
         float attackdistance = Vector2.Distance(transform.position, player.position);
@@ -195,10 +196,10 @@ public class JHY_Attack : MonoBehaviour
         {
             ani.SetTrigger("attack");
             lastAttackTime = Time.time;
-            // r기본 근접공격 사운드
             Invoke(nameof(PlayMeleeAttackSound), 0.25f);
         }
     }
+
     public void PlayMeleeAttackSound()
     {
         if (NKY_SoundManager.Instance != null)
@@ -206,10 +207,9 @@ public class JHY_Attack : MonoBehaviour
             NKY_SoundManager.Instance.PlaySFX("Melee");
         }
     }
+
     private void CheckPhase2()
     {
-       
-    
         if (isPhase2 || isPhaseChanging) return;
         if (bossHealth == null) return;
 
@@ -218,8 +218,8 @@ public class JHY_Attack : MonoBehaviour
         {
             StartCoroutine(EnterPhase2Routine());
         }
-    
-}
+    }
+
     private IEnumerator EnterPhase2Routine()
     {
         isPhaseChanging = true;
@@ -236,10 +236,10 @@ public class JHY_Attack : MonoBehaviour
         isSkillUsing = false;
         bossMove?.SetSkillLock(false);
     }
+
     private void EnterPhase2()
     {
         isPhase2 = true;
-        //2페이즈 변신 효과음 재생
         NKY_SoundManager.Instance.PlaySFX("Phase2");
         if (phase2EffectPrefab != null)
         {
@@ -247,25 +247,23 @@ public class JHY_Attack : MonoBehaviour
             Destroy(effect, phase2EffectLifeTime);
         }
 
-
+        if (phase2Aura != null && spawnedAura == null)
         {
-            if (phase2Aura != null && spawnedAura == null)
-            {
-                spawnedAura = Instantiate(phase2Aura, transform.position, Quaternion.identity, transform);
-            }
-
-            attackCooldown = 1.0f;
-            skillCoolTime = 3.0f;
-            jumpAttackCoolTime = 3.0f;
-            spearRainCoolTime = 12.0f;
-            summonCoolTime = 25.0f;
-            projectileCount = 7;
-            shockwaveProjectileCount = 16;
-            spiderWebSpawnTimer = 8.0f;
-
-            Debug.Log("2페이즈 진입");
+            spawnedAura = Instantiate(phase2Aura, transform.position, Quaternion.identity, transform);
         }
+
+        attackCooldown = 1.0f;
+        skillCoolTime = 3.0f;
+        jumpAttackCoolTime = 3.0f;
+        spearRainCoolTime = 12.0f;
+        summonCoolTime = 25.0f;
+        projectileCount = 7;
+        shockwaveProjectileCount = 16;
+        spiderWebSpawnTimer = 8.0f;
+
+        Debug.Log("2페이즈 진입");
     }
+
     public void ClearAura()
     {
         if (spawnedAura != null)
@@ -274,6 +272,7 @@ public class JHY_Attack : MonoBehaviour
             spawnedAura = null;
         }
     }
+
     public void DealMeleeDamage()
     {
         if (playerHealth == null || player == null) return;
@@ -284,6 +283,7 @@ public class JHY_Attack : MonoBehaviour
         DamageData data = DamageData.Create(null, meleeDamage);
         playerHealth.GetDamage(data);
     }
+
     private void UseSummonSkill()
     {
         lastSummonTime = Time.time;
@@ -296,7 +296,7 @@ public class JHY_Attack : MonoBehaviour
         ani.ResetTrigger("attack");
         ani.ResetTrigger("Jump");
         ani.ResetTrigger("Skill");
-        
+
         if (mobSummoner != null)
         {
             mobSummoner.SummonMobs();
@@ -311,8 +311,6 @@ public class JHY_Attack : MonoBehaviour
         bossMove?.SetSkillLock(false);
     }
 
-
-
     private void UseSpearRain()
     {
         lastSpearRainTime = Time.time;
@@ -320,7 +318,6 @@ public class JHY_Attack : MonoBehaviour
         bossMove?.SetSkillLock(true);
 
         ani.SetTrigger("Skill");
-        //여기에 창 비 시전 마법 효과음/ 보스 포효 소리 재생
         if (spearSpawner != null)
         {
             spearSpawner.SpawnSpears();
@@ -335,53 +332,63 @@ public class JHY_Attack : MonoBehaviour
         isSkillUsing = false;
     }
 
+   
     void FacePlayer()
     {
         if (bossMove != null && bossMove.isStunned) return;
-        bool faceLeft = player.position.x < transform.position.x;
-        float dir = faceLeft ? -1f : 1f;
+        if (player == null || sr == null) return;
 
-        transform.localScale = new Vector3(
-            Mathf.Abs(bossBaseScale.x) * dir,
-            bossBaseScale.y,
-            bossBaseScale.z
-        );
+        bool playerIsRight = player.position.x > transform.position.x;
 
-        if (sr != null)
+        if (playerIsRight)
         {
+           
+            if (firePoint != null)
+                firePoint.localPosition = new Vector3(firePointStartX, firePoint.localPosition.y, firePoint.localPosition.z);
+
+           
             sr.flipX = false;
         }
+        else
+        {
+         
+            if (firePoint != null)
+                firePoint.localPosition = new Vector3(-firePointStartX, firePoint.localPosition.y, firePoint.localPosition.z);
 
-
+          
+            sr.flipX = true;
+        }
     }
-
     void UseSkill()
     {
         isSkillUsing = true;
         lastSkillTime = Time.time;
         bossMove?.StopMoving();
 
-
         ani.ResetTrigger("attack");
         ani.ResetTrigger("Jump");
         ani.SetTrigger("Skill");
-        //스킬 발사하는 소리
         Invoke(nameof(PlaySkillSound), 0.65f);
         Invoke(nameof(EndSkill), 1.5f);
     }
+
     void PlaySkillSound()
     {
         NKY_SoundManager.Instance.PlaySFX("XFire");
     }
+
+    
     bool IsPlayerInSkillAngle()
     {
-        Vector2 lookDir = transform.localScale.x < 0 ? Vector2.left : Vector2.right;
+        if (sr == null || player == null || firePoint == null) return false;
+
+       
+        Vector2 lookDir = sr.flipX ? Vector2.left : Vector2.right;
         Vector2 toPlayer = (player.position - firePoint.position).normalized;
 
         float angle = Vector2.Angle(lookDir, toPlayer);
         return angle <= skillAngle * 0.5f;
     }
-
 
     public void EndSkill()
     {
@@ -391,9 +398,12 @@ public class JHY_Attack : MonoBehaviour
     public void FireProjectiles()
     {
         Debug.Log("FireProjectiles called");
+        if (player == null || firePoint == null || projectilePrefab == null || sr == null) return;
 
-        if (player == null || firePoint == null || projectilePrefab == null) return;
+       
+        Vector2 lookDir = sr.flipX ? Vector2.left : Vector2.right;
 
+        // 플레이어 방향으로 기본 각도 계산
         Vector2 dirToPlayer = (player.position - firePoint.position).normalized;
         float baseAngle = Mathf.Atan2(dirToPlayer.y, dirToPlayer.x) * Mathf.Rad2Deg;
 
@@ -413,11 +423,13 @@ public class JHY_Attack : MonoBehaviour
         }
     }
 
+   
     bool IsPlayerOutsideFirePoint()
     {
-        if (player == null || firePoint == null) return false;
+        if (player == null || firePoint == null || sr == null) return false;
 
-        Vector2 lookDir = transform.localScale.x < 0 ? Vector2.left : Vector2.right;
+        // 실제 정면 방향 기준을 반대로 맞춤.
+        Vector2 lookDir = sr.flipX ? Vector2.left : Vector2.right;
         float playerForwardDistance = Vector2.Dot(player.position - transform.position, lookDir);
         float firePointForwardDistance = Vector2.Dot(firePoint.position - transform.position, lookDir);
 
@@ -436,22 +448,17 @@ public class JHY_Attack : MonoBehaviour
         isSkillUsing = false;
     }
 
-
     IEnumerator JumpAttackRoutine()
     {
-        //점프 올라가는 소리
         ani.SetTrigger("Jump");
-
         yield return new WaitForSeconds(0.6f);
 
         if (warningZone != null)
         {
             warningZone.Warning();
         }
-
         yield return new WaitForSeconds(1.5f);
     }
-
 
     public void SpawnShockwave_First()
     {
@@ -468,7 +475,6 @@ public class JHY_Attack : MonoBehaviour
 
     private void SpawnShockwaveWithOffset(float extraOffset)
     {
-        //점프 착지 충격파 소리
         NKY_SoundManager.Instance.PlaySFX("Jump");
         Debug.Log("Shockwave!");
 

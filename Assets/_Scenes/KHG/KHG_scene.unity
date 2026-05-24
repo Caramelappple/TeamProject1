@@ -9296,7 +9296,7 @@ MonoBehaviour:
   col: {fileID: 1338387880}
   dustEffect: {fileID: 63522286}
   dashSpeed: 16
-  <DamageScale>k__BackingField: 1
+  <DamageScale>k__BackingField: 1.4
 --- !u!1 &180432474
 GameObject:
   m_ObjectHideFlags: 0
@@ -9443,10 +9443,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NKY_BalckHollAttack
   point:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1336175716}
+  - {fileID: 1147065031}
+  - {fileID: 1938291012}
+  - {fileID: 917076654}
   hole: {fileID: 841953234}
   slashPrefab: {fileID: 1022309163451942407, guid: 833192a5b8418974cb3e3741ed9a8293,
     type: 3}
@@ -9455,7 +9455,7 @@ MonoBehaviour:
   pullStrength: 10
   lockStrength: 0.5
   slashCount: 7
-  <DamageScale>k__BackingField: 0.4
+  <DamageScale>k__BackingField: 1
 --- !u!1 &286630311
 GameObject:
   m_ObjectHideFlags: 0
@@ -9488,7 +9488,7 @@ MonoBehaviour:
   slash: {fileID: 156742617}
   slashCollider: {fileID: 2066643915}
   attackCount: 15
-  moveDistance: 6
+  moveDistance: 10
   <DamageScale>k__BackingField: 1
 --- !u!4 &286630313
 Transform:
@@ -11117,9 +11117,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   _data: {fileID: 11400000, guid: 6bb95d5c47193ec47a190479769658f1, type: 2}
-  <MaxValue>k__BackingField: 1000
+  <MaxValue>k__BackingField: 2000
   <MinValue>k__BackingField: 0
-  _value: 1000
+  _value: 2000
 --- !u!114 &553722393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11136,12 +11136,12 @@ MonoBehaviour:
   _skillCooldown: 1.8
   intro: {fileID: 1197835664}
   skills:
-  - {fileID: 280623755}
-  - {fileID: 280623755}
-  - {fileID: 280623755}
+  - {fileID: 1631599801}
+  - {fileID: 940973356}
+  - {fileID: 1599055959}
+  - {fileID: 1504207093}
   - {fileID: 1244189072}
-  - {fileID: 1244189072}
-  - {fileID: 1244189072}
+  - {fileID: 280623755}
   - {fileID: 164770063}
   - {fileID: 797116775}
   - {fileID: 286630312}
@@ -11150,7 +11150,7 @@ MonoBehaviour:
   phase2Effect: {fileID: 1993860080}
   phase3Effect: {fileID: 1454412139}
   <Damage>k__BackingField: 15
-  deadSound: {fileID: 0}
+  deadSound: {fileID: 11400000, guid: aa9bec5758eee0b4aa175174ffb95d91, type: 2}
 --- !u!50 &553722394
 Rigidbody2D:
   serializedVersion: 5
@@ -11551,7 +11551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8192304f921ff54889397dd0953fba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NKY_ReturnSwordAttack
-  throwSword: {fileID: 0}
+  throwSword: {fileID: 11400000, guid: 2c9e5d0a2f89b5b40a977d9e28255a3e, type: 2}
   spawnPoints:
   - {fileID: 797116774}
   swordPrefab: {fileID: 3338311052345153939, guid: f29f9c68cde12ee40b3ece26d597e163,
@@ -11562,7 +11562,7 @@ MonoBehaviour:
   spawnInterval: 0.1
   swordCount: 20
   swordDuration: 0.25
-  <DamageScale>k__BackingField: 1.2
+  <DamageScale>k__BackingField: 0.3
 --- !u!1001 &818102552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18716,17 +18716,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_Scripts.NKY._EnemyScript.Skills.SwordStorm
   spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 15451359}
+  - {fileID: 1928548852}
+  - {fileID: 1345082333}
+  - {fileID: 1504015989}
   swordPrefab: {fileID: 3338311052345153939, guid: f29f9c68cde12ee40b3ece26d597e163,
     type: 3}
   spawnInterval: 0.3
   swordCount: 8
   swordDistance: 35
   swordDuration: 0.5
-  <DamageScale>k__BackingField: 0.7
+  <DamageScale>k__BackingField: 0.8
 --- !u!1 &982715871
 GameObject:
   m_ObjectHideFlags: 0
@@ -19475,10 +19475,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NKY_SwordBomb
   spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 15451359}
+  - {fileID: 1928548852}
+  - {fileID: 1345082333}
+  - {fileID: 1504015989}
   swordPrefab: {fileID: 3338311052345153939, guid: 41621aeda3d46e042b24dc4c8b60f3d2,
     type: 3}
   effectPrefab: {fileID: 8294358143505051542, guid: c5b7754f41228a94ea00d44811d148f8,
@@ -20859,7 +20859,7 @@ MonoBehaviour:
   - {fileID: 478349814}
   - {fileID: 1585510829}
   dustEffect: {fileID: 28452518}
-  <DamageScale>k__BackingField: 0.5
+  <DamageScale>k__BackingField: 0.8
 --- !u!1 &1531920233
 GameObject:
   m_ObjectHideFlags: 0
@@ -21159,9 +21159,9 @@ MonoBehaviour:
   hitBox: {fileID: 1811148727}
   attackSword: {fileID: 724919489}
   swordPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 544550562}
+  - {fileID: 1281262654}
+  - {fileID: 2116329950}
   swordParticle:
   - {fileID: 1870896548}
   - {fileID: 918167689}
@@ -21218,7 +21218,7 @@ MonoBehaviour:
   - {fileID: 1765245944}
   - {fileID: 1268291538}
   - {fileID: 1259069726}
-  <DamageScale>k__BackingField: 0.5
+  <DamageScale>k__BackingField: 0.7
 --- !u!1 &1631863148
 GameObject:
   m_ObjectHideFlags: 0
@@ -21857,7 +21857,7 @@ Transform:
   m_GameObject: {fileID: 1828309813}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -14.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

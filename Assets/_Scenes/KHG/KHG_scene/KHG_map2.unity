@@ -6447,9 +6447,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   _data: {fileID: 11400000, guid: 12761f64a73c74e4d84c7a29e220c9f8, type: 2}
-  <MaxValue>k__BackingField: 100
+  <MaxValue>k__BackingField: 1700
   <MinValue>k__BackingField: 0
-  _value: 100
+  _value: 1700
 --- !u!114 &1345346374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6487,7 +6487,7 @@ MonoBehaviour:
     type: 3}
   maxRadius: 2.5
   growTime: 1.5
-  damage: 30
+  damage: 20
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -6581,7 +6581,7 @@ MonoBehaviour:
   spiderWebDuration: 6
   spearSpawner: {fileID: 1345346374}
   spearRainCoolTime: 20
-  meleeDamage: 5
+  meleeDamage: 4
   playerHealth: {fileID: 0}
   summonCoolTime: 40
   mobSummoner: {fileID: 1345346372}
@@ -6611,6 +6611,7 @@ MonoBehaviour:
   speed: 2
   chaseRange: 7
   stopRange: 4
+  isArrived: 0
   isMoving: 0
   stunTime: 14
   stunDuration: 8

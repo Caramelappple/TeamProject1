@@ -236,7 +236,7 @@ MonoBehaviour:
   player: {fileID: 181821775}
   attackRange: 3.3
   attackCooldown: 3
-  damage: 5
+  damage: 20
   comboCooldown: 7
   comboRange: 3.3
   comboWarningPrefab: {fileID: 8169960489270038553, guid: 3d24d1cb0e1c8c245ba8f3b26f453744,
@@ -458,10 +458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dba503ad84009741b266f19fead13b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Editor
-  clips:
-  - {fileID: 8300000, guid: 49a71e43a7454e145a2d8dbc8f588785, type: 3}
-  - {fileID: 8300000, guid: 7bced0a60b39bbc409bda01034c2e1e9, type: 3}
-  - {fileID: 8300000, guid: 1a1ffc6a66c96a94b944d6cfa7e67944, type: 3}
+  soundData: []
   postProcessVolume: {fileID: 0}
   colorGrading: {fileID: 0}
   bloom: {fileID: 0}
@@ -849,10 +846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40297269b71441a4781af22ccea8771e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_PlayerAttack
-  clip:
-  - {fileID: 8300000, guid: e4bd2b9f2efc0c544a777d132d35c973, type: 3}
-  - {fileID: 8300000, guid: 4604e8211ceabe846a9ef84bd5603bd2, type: 3}
-  - {fileID: 8300000, guid: 3e61f634acaf9b84ea3fb309061f5142, type: 3}
+  soundDatas: []
   sword: {fileID: 2026017942}
 --- !u!114 &181821770
 MonoBehaviour:
@@ -1069,7 +1063,7 @@ PrefabInstance:
     - target: {fileID: 5427699281272864468, guid: b594ddf7fe3dee14fb5b861d836eab8f,
         type: 3}
       propertyPath: bossName
-      value: "\uB370\uBAAC"
+      value: "\uBD88\uCE78\uC6B0\uB8E8\uC2A4"
       objectReference: {fileID: 0}
     - target: {fileID: 8927698071244457517, guid: b594ddf7fe3dee14fb5b861d836eab8f,
         type: 3}
@@ -1210,6 +1204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0ad12e052c1e534c8362a278bb8ffb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NKY_GameManager
+  soundData: []
   <player>k__BackingField: {fileID: 181821760}
 --- !u!4 &402918530
 Transform:

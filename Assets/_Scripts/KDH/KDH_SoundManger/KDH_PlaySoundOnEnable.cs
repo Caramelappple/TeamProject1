@@ -35,7 +35,7 @@ public class KDH_PlaySoundOnEnable : MonoBehaviour
             flashImage.color = tempColor;
             yield return null;
         }
-        
+
         tempColor.a = 0f;
         flashImage.color = tempColor;
     }

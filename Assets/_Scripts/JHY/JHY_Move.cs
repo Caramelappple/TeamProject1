@@ -1,6 +1,4 @@
-using _Scripts.NKY.NKY_EnemyScript.NKY_Skills;
 using System.Collections;
-using UnityEditor;
 using UnityEngine;
 
 public class JHY_BossMove : MonoBehaviour
@@ -8,15 +6,15 @@ public class JHY_BossMove : MonoBehaviour
     private Rigidbody2D rb;
     private Animator ani;
     private SpriteRenderer sr;
-    private JHY_Attack bossAttack; // ◀ 공격 스크립트 참조 추가
+    private JHY_Attack bossAttack;
 
     [SerializeField] private float speed = 2;
     private Transform player;
-    private Health playerHealth; // ◀ 인스펙터에서 안 넣어도 자동으로 찾도록 수정
+    private Health playerHealth;
 
     [SerializeField] private float chaseRange = 7f;
-    [SerializeField] private float stopRange = 4f;
-    private bool isArrived = false;
+    [SerializeField] private float stopRange = 2f;
+    public bool isArrived = false;
     public bool isMoving;
 
     [SerializeField] private float stunTime = 15f;
@@ -35,7 +33,6 @@ public class JHY_BossMove : MonoBehaviour
     [SerializeField] private NKY_BossIntro bossIntro;
     private float dashTimer;
     private bool isDashing;
-
     private bool isSkillLocked;
 
     void Awake()
@@ -43,7 +40,7 @@ public class JHY_BossMove : MonoBehaviour
         ani = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        bossAttack = GetComponent<JHY_Attack>(); // ◀ 컴포넌트 가져오기
+        bossAttack = GetComponent<JHY_Attack>();
 
         timer = stunTime;
         dashTimer = dashCooldown;
@@ -71,10 +68,8 @@ public class JHY_BossMove : MonoBehaviour
 
     void Update()
     {
-        // ★ [핵심] 공격 스크립트의 canAct 상태를 그대로 따라갑니다.
         if (bossAttack == null || !bossAttack.canAct) return;
 
-        // 만약 어떤 이유로든 플레이어를 못 찾았다면 다시 시도
         if (player == null)
         {
             SetPlayerTarget();
@@ -106,11 +101,12 @@ public class JHY_BossMove : MonoBehaviour
             }
         }
 
-        LookAtPlayer();
-
         if (!isArrived)
         {
             Vector2 targetPos = new Vector2(3.56f, -0.83f);
+            Vector2 moveDir = (targetPos - (Vector2)transform.position).normalized;
+            LookAtDirection(moveDir);
+
             transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
             float distance = Vector2.Distance(transform.position, targetPos);
             isMoving = true;
@@ -125,8 +121,9 @@ public class JHY_BossMove : MonoBehaviour
         }
         else
         {
-            float distance2 = Vector2.Distance(transform.position, player.position);
+            LookAtPlayer();
 
+            float distance2 = Vector2.Distance(transform.position, player.position);
             dashTimer -= Time.deltaTime;
 
             if (distance2 <= dashRange && dashTimer <= 0f)
@@ -148,6 +145,34 @@ public class JHY_BossMove : MonoBehaviour
                 isMoving = false;
                 ani.SetFloat("Speed", 0);
             }
+        }
+    }
+
+
+    void LookAtDirection(Vector2 dir)
+    {
+        if (sr == null || dir.x == 0) return;
+
+        
+        if (dir.x > 0)
+            sr.flipX = false;
+        else if (dir.x < 0)
+            sr.flipX = true;
+    }
+
+  
+    void LookAtPlayer()
+    {
+        if (player == null || sr == null) return;
+
+       
+        if (player.position.x > transform.position.x)
+        {
+            sr.flipX = false;
+        }
+        else
+        {
+            sr.flipX = true;
         }
     }
 
@@ -188,18 +213,6 @@ public class JHY_BossMove : MonoBehaviour
         isStunned = false;
     }
 
-    void LookAtPlayer()
-    {
-        if (player.position.x > transform.position.x)
-        {
-            sr.flipX = false;
-        }
-        else
-        {
-            sr.flipX = true;
-        }
-    }
-
     void MoveTowardsPlayer()
     {
         Vector2 targetPos = new Vector2(player.position.x, player.position.y);
@@ -217,7 +230,6 @@ public class JHY_BossMove : MonoBehaviour
     public void SetSkillLock(bool value)
     {
         isSkillLocked = value;
-
         if (value)
         {
             isDashing = false;
