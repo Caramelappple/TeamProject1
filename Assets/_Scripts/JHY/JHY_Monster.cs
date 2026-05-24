@@ -4,7 +4,7 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     [Header("Move")]
-    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float moveSpeed = 3f;
     private Transform player;
     private Rigidbody2D rb;
 

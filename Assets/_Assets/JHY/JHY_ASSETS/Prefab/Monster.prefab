@@ -30,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 7780400313367859899}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.293, y: -0.3381, z: 0}
-  m_LocalScale: {x: 0.5492, y: 0.5492, z: 0.5492}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -108,7 +108,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.3
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02501d92e092a9a4a938b1454c3958df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JHY_Monster
-  moveSpeed: 2
+  moveSpeed: 3
   damage: 3
   attackCooldown: 1
   health: {fileID: -4795346000127264374}
