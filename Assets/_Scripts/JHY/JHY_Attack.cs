@@ -81,31 +81,29 @@ public class JHY_Attack : MonoBehaviour
     }
     private IEnumerator Start()
     {
-       
         canAct = false;
 
-       
         if (NKY_GameManager.instance != null && NKY_GameManager.instance.player != null)
         {
             player = NKY_GameManager.instance.player.transform;
             playerHealth = player.GetComponent<Health>();
+
+            if (bossMove != null) bossMove.SetPlayerTarget();
         }
 
-       
         StartCoroutine(SpiderWebRoutine());
 
-       
         yield return new WaitForSeconds(startDelay);
 
-       
         float sceneTime = Time.time;
 
+      
         lastAttackTime = sceneTime;
         lastSkillTime = sceneTime;
         lastJumpAttackTime = sceneTime;
-        lastSpearRainTime = sceneTime;  
+        lastSpearRainTime = sceneTime;
+        lastSummonTime = sceneTime; 
 
-      
         canAct = true;
     }
     private void OnDisable()
