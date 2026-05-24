@@ -37,11 +37,28 @@ public class KDH_CreditsController : MonoBehaviour
 
         yield return new WaitForSeconds(1.0f);
 
-        // 정적 주소만 비워줍니다.
+        // ★ [여기가 핵심] 메인 메뉴로 가기 직전, 무적으로 살아있던 애들을 수동으로 파괴합니다!
+        GameObject manager = GameObject.FindWithTag("GameManager"); // 또는 이름으로 찾기
+        if (manager != null) Destroy(manager);
+
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player != null) Destroy(player);
+
+        // UI Canvas도 태그나 이름으로 찾아서 파괴
+        GameObject ui = GameObject.Find("UI"); // 에디터상의 실제 UI 최상위 오브젝트 이름
+        if (ui != null) Destroy(ui);
+
+        GameObject eventSystem = GameObject.Find("EventSystem");
+        if (eventSystem != null) Destroy(eventSystem);
+
+        GameObject mainCamera = GameObject.FindWithTag("MainCamera");
+        if (mainCamera != null) Destroy(mainCamera);
+
+        // 정적 주소 초기화
         LSO_PlayerMovement.instance = null;
         NKY_GameManager.instance = null;
 
-        // ★ Single 모드로 메인 메뉴를 불러오면, 씬에 있던 모든 UI와 카메라는 유니티가 알아서 '소각'합니다.
+        PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 }

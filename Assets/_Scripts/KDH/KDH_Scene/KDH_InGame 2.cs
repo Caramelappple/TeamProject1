@@ -8,10 +8,6 @@ public class KDH_InGame2 : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (NKY_GameManager.instance != null)
-            {
-                NKY_GameManager.instance.SaveCurrentStatus();
-            }
 
             if (KDH_SceneFader.Instance != null)
             {
