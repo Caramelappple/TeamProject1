@@ -53,7 +53,6 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
             skuls.Clear();
             effects.Clear();
             GameObject[] _swords = new GameObject[swordCount];
-            
             for (int i = 0; i < swordCount; i++)
             {
                 _swords[i] = skulQueue.Dequeue();
@@ -65,8 +64,6 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
             if (playAnimName != null)
             {
                 Anim.Play(playAnimName);
-                
-                
                 if ((target.position - boss.position).x < 0)
                 {
                     boss.rotation = Quaternion.Euler(0, 180, 0);
@@ -88,8 +85,6 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
                 currentAngle = fireAngle;
                 skul.SetActive(true);
                 
-                NKY_SoundManager.Instance.PlaySFX("SkullThrow");//돌아갈때마다 오디오 실행
-                
                 StartCoroutine(PlaySequence(
                     ShowWarn(0, new Vector2(0.4f , skulDistance),
                         0.8f, () => Vector3.Lerp(skul.transform.position, to, 0.5f), currentAngle),
@@ -105,9 +100,6 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
                 effects.Add(effect);
             }
             Anim.Play("Attack1");
-            
-            NKY_SoundManager.Instance.PlaySFX("SkullAttack");//근접공격할떄 바닥 부서지는 소리
-            
             yield return PlaySequence(ShowWarn(attackCollider, 0.7f, () => spawnPoints.position),
                 WaitAnim("Attack1", 0.8f),
                 Attack(() =>
@@ -149,9 +141,6 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
             Animator effectAnim =  effect.GetComponent<Animator>();
             effect.transform.localScale = new Vector3(3f, 3f, 1f);
             effect.SetActive(true);
-            
-            NKY_SoundManager.Instance.PlaySFX("SkullExplode");
-            
             effectAnim.Play("BombEffectAnim");
             yield return WaitAnim(effectAnim, "BombEffectAnim", 0.9f);
             EnQueues(effect, effectQueue);

@@ -56,16 +56,6 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
             yield return StartCoroutine(MoveTo(transform, new Vector2(0, 0), 1));
         }
 
-        protected IEnumerator MoveTo(Transform from, Vector2 to, float duration,Ease ease)
-        {
-            from.DOMove(to, duration).SetEase(ease);
-            if (Vector3.Distance(from.position, to) < 0.01f)
-            {
-                from.position = to;
-                yield break;
-            }
-        }
-        
         protected IEnumerator MoveTo(Transform from, Vector2 to, float duration)
         {
             from.DOMove(to, duration);

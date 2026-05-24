@@ -1,16 +1,12 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using _Scripts.NKY._EnemyScript.BossPattern;
 using _Scripts.NKY.NKY_EnemyScript.NKY_Skills;
-using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class NKY_ReturnSwordAttack : NKY_BossSkill
 {
-    [Header("오디오")] 
-    [SerializeField] private NKY_SoundData throwSword;
-    
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private GameObject swordPrefab;
     [SerializeField] private Transform returnTarget;
@@ -41,7 +37,7 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
     {
         Vector3 pos = returnTarget.position; 
         Vector3 moveDir;
-        float distance;
+        float distance = 0;
         float fireAngle = 0;
         swords.Clear();
         GameObject[] _swords = new GameObject[swordCount];
@@ -87,8 +83,6 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
             }
             sword.SetActive(true);
             
-            NKY_SoundManager.Instance.PlaySFX(throwSword.soundName);//소환할때마다 오디오 실행
-            
             yield return PlaySequence(
                 ShowWarn(0, new Vector2(0.4f , distance),
                     0.8f, () => Vector3.Lerp(sword.transform.position, to, 0.5f), currentAngle),
@@ -116,9 +110,7 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
         yield return new WaitForSeconds(0.9f);
         foreach (GameObject sword in _swords)
         {
-            StartCoroutine(MoveTo(sword.transform, curPos, swordDuration * 0.5f,Ease.InBack));
-            
-            NKY_SoundManager.Instance.PlaySFX(throwSword.soundName);//돌아갈때마다 오디오 실행
+            StartCoroutine(MoveTo(sword.transform, curPos, swordDuration * 0.5f));
         }
         yield return new WaitForSeconds(3f);
         EnQueues(_swords, swordQueue);
