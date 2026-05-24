@@ -111,7 +111,7 @@ public class NKY_ChargeSlash : NKY_BossSkill
             particle.Play();
         }
         
-        yield return StartCoroutine(DoShake(obj, chargeDuration, 0.2f));
+        yield return StartCoroutine(DoShake(obj, chargeDuration, 1.1f));
         foreach (ParticleSystem particle in particles)
         {
             particle.Stop();

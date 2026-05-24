@@ -3103,6 +3103,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2719085284589024013, guid: f29f9c68cde12ee40b3ece26d597e163,
         type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7550196206973808602, guid: a49f42180dba7af43af1519494386a8d,
+        type: 3}
+    - target: {fileID: 2719085284589024013, guid: f29f9c68cde12ee40b3ece26d597e163,
+        type: 3}
       propertyPath: m_SortingOrder
       value: 7
       objectReference: {fileID: 0}
