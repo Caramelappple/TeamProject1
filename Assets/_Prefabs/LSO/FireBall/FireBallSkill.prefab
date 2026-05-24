@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LSO_FireBallSpawner
   fireballPrefab: {fileID: 3937254013632766617, guid: 4650a821d706d2647b339db7d593758d,
     type: 3}
-  _coolTime: 10
+  _coolTime: 1

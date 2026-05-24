@@ -407,7 +407,7 @@ MonoBehaviour:
     type: 3}
   projectilePrefab2: {fileID: 1664894272478871143, guid: 819b210b45effc043b16bfb8a55d4814,
     type: 3}
-  attackRange: 4
+  attackRange: 3
   attackCooldown: 1.2
   skillRange: 15
   skillCoolTime: 5
@@ -1606,10 +1606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40297269b71441a4781af22ccea8771e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_PlayerAttack
-  clip:
-  - {fileID: 8300000, guid: e4bd2b9f2efc0c544a777d132d35c973, type: 3}
-  - {fileID: 8300000, guid: 4604e8211ceabe846a9ef84bd5603bd2, type: 3}
-  - {fileID: 8300000, guid: 3e61f634acaf9b84ea3fb309061f5142, type: 3}
+  soundDatas: []
   sword: {fileID: 1747134747}
 --- !u!114 &1571487510
 MonoBehaviour:
@@ -2142,10 +2139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dba503ad84009741b266f19fead13b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Editor
-  clips:
-  - {fileID: 8300000, guid: 49a71e43a7454e145a2d8dbc8f588785, type: 3}
-  - {fileID: 8300000, guid: 7bced0a60b39bbc409bda01034c2e1e9, type: 3}
-  - {fileID: 8300000, guid: 1a1ffc6a66c96a94b944d6cfa7e67944, type: 3}
+  soundData: []
   postProcessVolume: {fileID: 0}
   colorGrading: {fileID: 0}
   bloom: {fileID: 0}

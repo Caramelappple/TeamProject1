@@ -46,6 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LSO_EnergyBall
   effect: {fileID: 5373473974996808387, guid: 17464d7228c092b498f4545d579421fb, type: 3}
   _speed: 5
-  _coolTime: 15
+  _coolTime: 1
   _recoilTime: 0.3
   _recoilSpeed: 1.8

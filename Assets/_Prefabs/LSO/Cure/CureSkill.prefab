@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   effect: {fileID: 7865111169201036416, guid: 3b297badef927fd40859837d9b59c9d2, type: 3}
-  _coolTime: 7
+  _coolTime: 1
   _healValue: 25
