@@ -11149,7 +11149,7 @@ MonoBehaviour:
   bossPatternEnd: {fileID: 0}
   phase2Effect: {fileID: 1993860080}
   phase3Effect: {fileID: 1454412139}
-  <Damage>k__BackingField: 15
+  <Damage>k__BackingField: 13
   deadSound: {fileID: 11400000, guid: aa9bec5758eee0b4aa175174ffb95d91, type: 2}
 --- !u!50 &553722394
 Rigidbody2D:

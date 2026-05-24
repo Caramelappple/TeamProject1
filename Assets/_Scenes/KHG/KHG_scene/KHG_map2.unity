@@ -6487,7 +6487,6 @@ MonoBehaviour:
     type: 3}
   maxRadius: 2.5
   growTime: 1.5
-  damage: 20
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -6581,7 +6580,7 @@ MonoBehaviour:
   spiderWebDuration: 6
   spearSpawner: {fileID: 1345346374}
   spearRainCoolTime: 20
-  meleeDamage: 4
+  meleeDamage: 8
   playerHealth: {fileID: 0}
   summonCoolTime: 40
   mobSummoner: {fileID: 1345346372}

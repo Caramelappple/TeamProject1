@@ -1386,7 +1386,7 @@ MonoBehaviour:
   bossPatternEnd: {fileID: 1802652897}
   phase2Effect: {fileID: 0}
   phase3Effect: {fileID: 0}
-  <Damage>k__BackingField: 7
+  <Damage>k__BackingField: 9
   deadSound: {fileID: 11400000, guid: c4a32372aca02704f891e66cc7cf8518, type: 2}
 --- !u!4 &340181431
 Transform:
@@ -1555,7 +1555,6 @@ MonoBehaviour:
     type: 3}
   bombCollieder: {fileID: 1700224332}
   attackCollider: {fileID: 1788933104}
-  spawnInterval: 0.3
   swordCount: 10
   skulDistance: 10
   skulDuration: 0.4
