@@ -1575,8 +1575,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 278560920}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1692,6 +1691,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 631020457}
+  - {fileID: 278560920}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4204,6 +4204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e549458ce04660bd42f5ab6ea853e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_Scripts.NKY._EnemyScript.BossPattern.NKY_BossPatternEnd
+  duration: 2
 --- !u!4 &1616213484
 Transform:
   m_ObjectHideFlags: 0
@@ -4276,12 +4277,17 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 674504602}
+    m_TransformParent: {fileID: 706258690}
     m_Modifications:
     - target: {fileID: 5427699281272864468, guid: b594ddf7fe3dee14fb5b861d836eab8f,
         type: 3}
       propertyPath: boss
       value: 
+      objectReference: {fileID: 1202624602}
+    - target: {fileID: 5427699281272864468, guid: b594ddf7fe3dee14fb5b861d836eab8f,
+        type: 3}
+      propertyPath: bossName
+      value: "\uC99D\uC624"
       objectReference: {fileID: 0}
     - target: {fileID: 8927698071244457517, guid: b594ddf7fe3dee14fb5b861d836eab8f,
         type: 3}
@@ -4351,17 +4357,17 @@ PrefabInstance:
     - target: {fileID: 9189167798248658793, guid: b594ddf7fe3dee14fb5b861d836eab8f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9189167798248658793, guid: b594ddf7fe3dee14fb5b861d836eab8f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9189167798248658793, guid: b594ddf7fe3dee14fb5b861d836eab8f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9189167798248658793, guid: b594ddf7fe3dee14fb5b861d836eab8f,
         type: 3}

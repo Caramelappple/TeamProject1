@@ -50,6 +50,8 @@ namespace _Scripts.NKY._EnemyScript
 
         private void Start()
         {
+            playerReference = NKY_GameManager.instance.player.GetComponent<LSO_PlayerMovement>();
+
             intro.gameObject.SetActive(false);
             if (_myHealth != null)
             {
