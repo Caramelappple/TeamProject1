@@ -1,24 +1,25 @@
-using System.Collections;
+ï»¿using System.Collections;
 using _Scripts.HealthSystem;
 using _Scripts.NKY._EnemyScript.BossPattern;
+using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace _Scripts.NKY._EnemyScript
 {
-    public class NKY_Enemy: NKY_BaseBoss
+    public class NKY_Enemy : NKY_BaseBoss
     {
         [SerializeField] private NKY_BossIntro intro;
-        [Header("º¸½ºÀÇ ½ºÅ³ ÆÐÅÏ ¼¼ÆÃ")]
-        [SerializeField] private  NKY_BossSkill[] skills;
+        [Header("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å³ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½")]
+        [SerializeField] private NKY_BossSkill[] skills;
         public LSO_PlayerMovement playerReference;
-        [SerializeField] private NKY_BossPatternEnd  bossPatternEnd = null;
+        [SerializeField] private NKY_BossPatternEnd bossPatternEnd = null;
 
-        [Header("º¸½º ÆäÀÌÁî È¿°ú")] 
+        [Header("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È¿ï¿½ï¿½")]
         [SerializeField] private NKY_PhaseEffect phase2Effect;
         [SerializeField] private NKY_PhaseEffect phase3Effect;
 
-        [Header("º¸½º ½ºÅÝ ¼¼ÆÃ")]
+        [Header("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½")]
         [field: SerializeField] public int Damage { get; private set; }
 
         private Health _myHealth;
@@ -29,9 +30,13 @@ namespace _Scripts.NKY._EnemyScript
         {
             _HitBoxController = GetComponent<NKY_HitBoxController>();
             Anim = GetComponent<Animator>();
+            if (Anim == null)
+            {
+                Anim = GetComponentInChildren<Animator>();
+            }
             _shadow = GetComponent<NKY_ShadowController>();
             _myHealth = gameObject.GetComponent<Health>();
-            playerReference = NKY_GameManager.instance.player.GetComponent<LSO_PlayerMovement>();
+            //playerReference = NKY_GameManager.instance.player.GetComponent<LSO_PlayerMovement>();
             _target = playerReference.gameObject;
 
             if (skills != null)
@@ -42,36 +47,40 @@ namespace _Scripts.NKY._EnemyScript
                 }
             }
         }
-        
+
         private void Start()
         {
-            //intro.gameObject.SetActive(true);//ÀÌ½Ã¿ÂÀÌ ²û
-            //StartCoroutine(intro.PlayIntro());//ÀÌ½Ã¿ÂÀÌ ²û
+            intro.gameObject.SetActive(false);
             if (_myHealth != null)
             {
                 _myHealth.OnHit += IsHit;
                 _myHealth.OnDamage += SetDamage;
             }
+            StartCoroutine(PlayBoss());
+        }
 
-            //StartCoroutine(BossMainRoutine());
+        private IEnumerator PlayBoss()
+        {
+            yield return StartCoroutine(intro.PlayIntro());
+            StartCoroutine(BossMainRoutine());
         }
 
         protected override IEnumerator BossMainRoutine()
         {
             while (!_isDead)
             {
-                if(bossPhase < 3)
+                if (bossPhase < 3)
                     yield return ExecutePattern(CentorMove());
 
                 if (_isDead) yield break;
-                
+
                 yield return new WaitUntil(ShouldInterruptIdle);
-                
+
                 if (_isDead || _isStunned) yield break;
-                
+
                 _nextSkill = PickNextSkill();
                 yield return ExecutePattern(_nextSkill);
-                if(bossPatternEnd != null)
+                if (bossPatternEnd != null)
                     yield return bossPatternEnd.BossPatternEnd(transform);
                 _lastSkillTime = Time.time;
             }
@@ -99,8 +108,8 @@ namespace _Scripts.NKY._EnemyScript
             _bossSkill = selectedSkill;
             return selectedSkill.Execute(transform, _target.transform);
         }
-        
-        
+
+
         public void ReceiveAnimationAttackEvent()
         {
             _HitBoxController?.ResetHit();
@@ -112,10 +121,10 @@ namespace _Scripts.NKY._EnemyScript
 
         private void PlayPhase2()
         {
-            if(bossPhase == 2 || phase2Effect == null) return;
+            if (bossPhase == 2 || phase2Effect == null) return;
             _isStunned = true;
             bossPhase = 2;
-            _skillCooldown *=  0.6f;
+            _skillCooldown *= 0.6f;
             Damage = (int)(Damage * 2f);
             StopAllCoroutines();
             StartCoroutine(Phase2ProcessRoutine());
@@ -123,7 +132,7 @@ namespace _Scripts.NKY._EnemyScript
 
         private IEnumerator Phase2ProcessRoutine()
         {
-            if(_bossSkill != null)
+            if (_bossSkill != null)
                 _bossSkill.EndSkill();
             _masterHandle = null;
             StartCoroutine(ShadowLock(false));
@@ -140,8 +149,8 @@ namespace _Scripts.NKY._EnemyScript
 
         private void PlayPhase3()
         {
-            if(bossPhase == 3 || phase3Effect == null) return;
-            
+            if (bossPhase == 3 || phase3Effect == null) return;
+
             _isStunned = true;
             if (_isDead)
             {
@@ -152,16 +161,16 @@ namespace _Scripts.NKY._EnemyScript
             }
             Anim.Play("Idle");
             bossPhase = 3;
-            _skillCooldown *=  0.5f;
+            _skillCooldown *= 0.5f;
             Damage = (int)(Damage * 1.5f);
-            
+
             StopAllCoroutines();
             StartCoroutine(Phase3ProcessRoutine());
         }
 
         private IEnumerator Phase3ProcessRoutine()
         {
-            if(_bossSkill != null)
+            if (_bossSkill != null)
                 _bossSkill.EndSkill();
             _masterHandle = null;
             StartCoroutine(ShadowLock(false));
@@ -178,19 +187,19 @@ namespace _Scripts.NKY._EnemyScript
         }
 
         //????? ?????? ????
-        private void IsHit(DamageData data) //Enemy?? ?????? ?¨ú?????
+        private void IsHit(DamageData data) //Enemy?? ?????? ?ï¿½ï¿½?????
         {
-            
+
         }
         private void SetDamage(DamageResultData args) //Enemy?? ???????? ???? ????? ???????
         {
-            //2ÆäÀÌÁî ¼¼ÆÃ
-            if (args.currentHealth < _myHealth.MaxValue / 2 && bossPhase < 2)
+            //2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            if (phase2Effect != null || (args.currentHealth < _myHealth.MaxValue / 2 && bossPhase < 2))
             {
                 PlayPhase2();
             }
-            
-            Debug.Log(bossPhase);
+
+
             if (_myHealth.IsDestroyed)
             {
                 _isDead = true;
@@ -201,25 +210,27 @@ namespace _Scripts.NKY._EnemyScript
         // ReSharper disable Unity.PerformanceAnalysis
         private void Die()
         {
-            if (bossPhase < 3)
+            if (phase3Effect != null || bossPhase < 3)
             {
                 PlayPhase3();
                 return;
             }
-            
-            if(_bossSkill != null)
+
+            if (_bossSkill != null)
                 _bossSkill.EndSkill();
             StopAllCoroutines();
             StopPattern();
-            StartCoroutine(phase3Effect.EndPhaseEffect());
-            if (Anim) Anim.Play("Dead");
+            if (phase3Effect != null)
+                StartCoroutine(phase3Effect.EndPhaseEffect());
+            Camera.main.DOShakePosition(0.5f, 2f);
+            Anim.Play("Dead");
 
             var col = GetComponent<Collider2D>();
             if (col) col.enabled = false;
         }
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.TryGetComponent(out Health health))
+            if (collision.gameObject.CompareTag("Player") && collision.gameObject.TryGetComponent(out Health health))
             {
                 DamageData data = DamageData.Create(_myHealth, Damage);
                 health.GetDamage(data);
