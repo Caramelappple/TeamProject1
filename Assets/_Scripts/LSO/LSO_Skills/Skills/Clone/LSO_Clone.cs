@@ -11,7 +11,7 @@ public class LSO_Clone : MonoBehaviour
     private bool _attackable = true;
     private readonly float _cooldown = 0.5f;
     private readonly float _attackTime = 0.2f;
-    private readonly float _liveTime = 7.8f;
+    [SerializeField] private readonly float _liveTime = 4f;
     [SerializeField] private readonly int _damage = 10;
     
     private bool _isAnimReady;
