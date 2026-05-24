@@ -39,7 +39,7 @@ public class KDH_KeyManager : MonoBehaviour
         _settingMenuUI.SetActive(true);
         StartCoroutine(PauseAfterDelay(0.01f));
     }
-    
+
     public void CloseMenu()
     {
         Time.timeScale = 1;

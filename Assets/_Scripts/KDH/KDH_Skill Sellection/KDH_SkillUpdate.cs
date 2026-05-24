@@ -6,7 +6,7 @@ using UnityEngine;
 public class KDH_SkillUpdate : MonoBehaviour
 {
     public List<KDH_SkillData> allSkills;      // AllSkills 칸
-    public List<KDH_SkillData> hadSkillData ;   // HadSkillData 칸
+    public List<KDH_SkillData> hadSkillData;   // HadSkillData 칸
     public KDH_SkillSystem skillSystem;
 
     public KDH_SkillCardUI skillCardUI1;       // SkillCard UI1 칸

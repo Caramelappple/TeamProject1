@@ -1,5 +1,4 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 //protected = 상속을 받은 얘만 가능
@@ -7,8 +6,8 @@ public abstract class KDH_DamageAbleResorce : MonoBehaviour
 {
     [SerializeField] private KDH_HealthSO _data;
 
-    [field : SerializeField] public int MaxValue {  get; private set; }
-    [field : SerializeField] public  int MinValue {  get; private set; }
+    [field: SerializeField] public int MaxValue { get; private set; }
+    [field: SerializeField] public int MinValue { get; private set; }
     public int Value
     {
         get
@@ -43,7 +42,7 @@ public abstract class KDH_DamageAbleResorce : MonoBehaviour
 
     private void OnValidate()
     {
-        Initalize();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+        Initalize();
     }
     public void Initalize()
     {
