@@ -5547,10 +5547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dba503ad84009741b266f19fead13b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Editor
-  clips:
-  - {fileID: 8300000, guid: 49a71e43a7454e145a2d8dbc8f588785, type: 3}
-  - {fileID: 8300000, guid: 7bced0a60b39bbc409bda01034c2e1e9, type: 3}
-  - {fileID: 8300000, guid: 1a1ffc6a66c96a94b944d6cfa7e67944, type: 3}
+  soundData: []
   postProcessVolume: {fileID: 0}
   colorGrading: {fileID: 0}
   bloom: {fileID: 0}
@@ -6755,7 +6752,6 @@ GameObject:
   - component: {fileID: 585463731}
   - component: {fileID: 585463746}
   - component: {fileID: 585463747}
-  - component: {fileID: 585463748}
   - component: {fileID: 585463749}
   m_Layer: 6
   m_Name: Player
@@ -6983,10 +6979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40297269b71441a4781af22ccea8771e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_PlayerAttack
-  clip:
-  - {fileID: 8300000, guid: e4bd2b9f2efc0c544a777d132d35c973, type: 3}
-  - {fileID: 8300000, guid: 4604e8211ceabe846a9ef84bd5603bd2, type: 3}
-  - {fileID: 8300000, guid: 3e61f634acaf9b84ea3fb309061f5142, type: 3}
+  soundDatas: []
   sword: {fileID: 1841610134}
 --- !u!114 &585463740
 MonoBehaviour:
@@ -7189,43 +7182,6 @@ CapsuleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.12}
   m_Size: {x: 0.4, y: 0.32}
-  m_Direction: 0
---- !u!70 &585463748
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 585463730}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.3, y: 0.6}
   m_Direction: 0
 --- !u!114 &585463749
 MonoBehaviour:
