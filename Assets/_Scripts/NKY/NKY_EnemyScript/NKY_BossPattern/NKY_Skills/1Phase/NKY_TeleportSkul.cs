@@ -26,7 +26,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
         private Queue<GameObject> effectQueue = new Queue<GameObject>();
         private List<GameObject> effects =  new List<GameObject>();
 
-        private int _damage;
+        //private int _damage;
 
         private void Start()
         {

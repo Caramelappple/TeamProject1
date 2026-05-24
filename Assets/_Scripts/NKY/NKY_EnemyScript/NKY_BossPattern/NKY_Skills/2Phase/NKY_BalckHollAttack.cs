@@ -26,7 +26,7 @@ public class NKY_BalckHollAttack : NKY_BossSkill
     
     [field: SerializeField] public override float DamageScale { get; protected set; } = 0.4f;
 
-    private int _damage;
+    //private int _damage;
 
     protected override void OnAwake()
     {
