@@ -24,10 +24,7 @@ public class NKY_GameManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        NKY_SoundManager.Instance.PlayBGM(soundData[Random.Range(0, soundData.Length)].soundName);
-    }
+    
 
     private void OnEnable() => SceneManager.sceneLoaded += OnSceneLoaded;
     private void OnDisable() => SceneManager.sceneLoaded -= OnSceneLoaded;
@@ -62,6 +59,12 @@ public class NKY_GameManager : MonoBehaviour
         if (spawnPoint != null && LSO_PlayerMovement.instance != null)
         {
             LSO_PlayerMovement.instance.transform.position = spawnPoint.transform.position;
+        }
+        
+        if (scene.name != "MainMenu" &&  scene.name != "KHG_tumap")
+        {
+            NKY_SoundManager.Instance.PlayBGM(soundData[Random.Range(0, soundData.Length)].soundName); 
+            Debug.Log("dfa");
         }
     }
 
