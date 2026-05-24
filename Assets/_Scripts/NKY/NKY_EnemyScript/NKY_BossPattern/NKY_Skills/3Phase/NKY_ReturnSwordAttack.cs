@@ -120,7 +120,7 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
             
             NKY_SoundManager.Instance.PlaySFX(throwSword.soundName);//??????????? ????? ????
         }
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(swordDuration);
         EnQueues(_swords, swordQueue);
     }
 

@@ -4,7 +4,8 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class LSO_Editor : MonoBehaviour
 {
-    [SerializeField] private AudioClip[] clips;
+    //[SerializeField] private AudioClip[] clips;
+    [SerializeField] private NKY_SoundData[] soundData; // 나강윤 추가
     
     public static LSO_Editor Instance;
     
@@ -45,7 +46,8 @@ public class LSO_Editor : MonoBehaviour
         {
             if (!health.gameObject.CompareTag("Player")) yield break;
         }
-        LSO_SoundManager.Instance.SfxPlay(clips[Random.Range(0, clips.Length)]);
+        //LSO_SoundManager.Instance.SfxPlay(clips[Random.Range(0, clips.Length)]);
+        NKY_SoundManager.Instance.PlaySFX(soundData[Random.Range(0, soundData.Length)].soundName); // 나강윤 추가
         
         vignette.color.value = new Color32(255, 170, 179, 255);
         CameraShake.instance.Shake(0.15f, 0.12f);
