@@ -6,19 +6,11 @@ public class KDH_SceneFader : MonoBehaviour
 {
     public static KDH_SceneFader Instance { get; private set; }
 
-    [SerializeField] private CanvasGroup fadeCanvasGroup;   // Sort Order 0 (배경용)
-    [SerializeField] private CanvasGroup blockerCanvasGroup; // Sort Order 2 (클릭 방지용)
-    [SerializeField] private float fadeDuration = 1.0f;     // 밝아지는 데 걸리는 시간
-    [SerializeField] private float darkHoldDuration = 3.0f; // 어두운 상태를 유지할 시간 (3초)
-    private void Start()
-    {
-        // 게임이 맨 처음 시작될 때도 까만 화면이라면 바로 밝아지도록 실행
-        if (fadeCanvasGroup != null)
-        {
-            fadeCanvasGroup.alpha = 1f; // 처음엔 까맣게 시작해서
-            StartCoroutine(FadeIn());   // 스르륵 밝아지게 만들기
-        }
-    }
+    [SerializeField] private CanvasGroup fadeCanvasGroup;
+    [SerializeField] private CanvasGroup blockerCanvasGroup;
+    [SerializeField] private float fadeDuration = 1.0f;
+    [SerializeField] private float darkHoldDuration = 3.0f;
+
     private void Awake()
     {
         if (Instance == null)
@@ -32,7 +24,45 @@ public class KDH_SceneFader : MonoBehaviour
         }
     }
 
-    // 외부에서 호출하는 함수 (예: SceneFader.Instance.FadeToScene("NextScene");)
+    private void Start()
+    {
+        // ★ [보정] 게임이 시작되자마자 내 자식 구조(Canvas/FadeCanvas)를 완벽히 찾아 조준합니다.
+        FindCanvasComponents();
+
+        if (fadeCanvasGroup != null)
+        {
+            fadeCanvasGroup.alpha = 1f;
+            StartCoroutine(FadeIn());
+        }
+    }
+
+    private void FindCanvasComponents()
+    {
+        // 하이어라키 구조가 SceneFaderManager -> Canvas -> FadeCanvas 이므로 경로를 정확히 지정합니다.
+        Transform fadeTransform = transform.Find("Canvas/FadeCanvas");
+        if (fadeTransform != null)
+        {
+            fadeCanvasGroup = fadeTransform.GetComponent<CanvasGroup>();
+        }
+
+        Transform blockerTransform = transform.Find("Canvas/BlockerCanvas");
+        if (blockerTransform != null)
+        {
+            blockerCanvasGroup = blockerTransform.GetComponent<CanvasGroup>();
+        }
+
+        // 혹시라도 위 경로로 못 찾았을 때를 대비한 2차 전체 자식 검색 안전장치
+        if (fadeCanvasGroup == null || blockerCanvasGroup == null)
+        {
+            CanvasGroup[] groups = GetComponentsInChildren<CanvasGroup>(true);
+            foreach (var cg in groups)
+            {
+                if (cg.gameObject.name == "FadeCanvas") fadeCanvasGroup = cg;
+                if (cg.gameObject.name == "BlockerCanvas") blockerCanvasGroup = cg;
+            }
+        }
+    }
+
     public void FadeToScene(string sceneName)
     {
         StartCoroutine(FadeOutAndLoad(sceneName));
@@ -40,26 +70,21 @@ public class KDH_SceneFader : MonoBehaviour
 
     private IEnumerator FadeOutAndLoad(string sceneName)
     {
-        SetBlocker(true); // 클릭 방지 켜기
+        SetBlocker(true);
         float timer = 0f;
 
-        // 1. 현재 씬에서 점점 어두워짐 (Fade Out)
         while (timer < fadeDuration)
         {
             timer += Time.deltaTime;
-            fadeCanvasGroup.alpha = timer / fadeDuration;
+            if (fadeCanvasGroup != null) fadeCanvasGroup.alpha = timer / fadeDuration;
             yield return null;
         }
-        fadeCanvasGroup.alpha = 1f; // 완전히 어두워짐
+        if (fadeCanvasGroup != null) fadeCanvasGroup.alpha = 1f;
 
-        // 2. 다음 씬을 비동기로 로드
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
-        while (!asyncLoad.isDone)
-        {
-            yield return null;
-        }
-        yield return new WaitForSeconds(darkHoldDuration);
+        while (!asyncLoad.isDone) yield return null;
 
+        yield return new WaitForSeconds(darkHoldDuration);
         yield return StartCoroutine(FadeIn());
     }
 
@@ -71,26 +96,16 @@ public class KDH_SceneFader : MonoBehaviour
         while (timer > 0f)
         {
             timer -= Time.deltaTime;
-            if (fadeCanvasGroup != null)
-            {
-                fadeCanvasGroup.alpha = timer / fadeDuration;
-            }
+            if (fadeCanvasGroup != null) fadeCanvasGroup.alpha = timer / fadeDuration;
             yield return null;
         }
 
-        if (fadeCanvasGroup != null)
-        {
-            fadeCanvasGroup.alpha = 0f;
-        }
+        if (fadeCanvasGroup != null) fadeCanvasGroup.alpha = 0f;
         SetBlocker(false);
     }
 
     private void SetBlocker(bool isBlocked)
     {
-        // blockerCanvasGroup이 Null이 아닐 때만 작동하도록 안전장치 추가
-        if (blockerCanvasGroup != null)
-        {
-            blockerCanvasGroup.blocksRaycasts = isBlocked;
-        }
+        if (blockerCanvasGroup != null) blockerCanvasGroup.blocksRaycasts = isBlocked;
     }
 }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LSO_BombingEffect : MonoBehaviour
 {
-    private int _damage = 200;
+    [SerializeField] private int _damage = 200;
     private Animator _animator;
 
     private void Awake()

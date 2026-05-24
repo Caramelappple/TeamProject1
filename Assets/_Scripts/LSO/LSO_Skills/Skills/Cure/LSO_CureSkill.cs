@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class LSO_CureSkill : MonoBehaviour,LSO_ISkill
 {
-    [SerializeField] private AudioClip clip;
     private LSO_PlayerMovement _playerMovement;
     private Animator _animator;
     [SerializeField]private GameObject effect;
     private GameObject _effectInstance;
     private GameObject _player;
     
-    private float _coolTime = 10f;
+    [SerializeField] private float _coolTime = 10f;
     private float _waitTime = 2.6f;
     private int _healValue = 40;
     
@@ -28,7 +27,7 @@ public class LSO_CureSkill : MonoBehaviour,LSO_ISkill
         _effectInstance.transform.SetParent(player.transform);
         _animator = _effectInstance.GetComponent<Animator>();
         
-        LSO_SoundManager.Instance.SfxPlay(clip);    
+        NKY_SoundManager.Instance.PlaySFX("CureExplode");
             
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
     }

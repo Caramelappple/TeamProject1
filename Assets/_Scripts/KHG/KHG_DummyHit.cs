@@ -5,7 +5,7 @@ public class KHG_DummyHit : MonoBehaviour
 {
     private Animator _animator;
 
-    private void Start()
+    private void Awake()
     {
         _animator = GetComponent<Animator>();
     }

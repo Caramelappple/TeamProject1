@@ -34,6 +34,7 @@ public class KDH_HealthBarUI : MonoBehaviour
                 hpBarImage.fillAmount = (float)healthResource.Value / healthResource.MaxValue;
             }
         }
+
     }
 
 

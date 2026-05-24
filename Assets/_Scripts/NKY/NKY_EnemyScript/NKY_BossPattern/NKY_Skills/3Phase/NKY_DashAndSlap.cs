@@ -32,6 +32,7 @@ public class NKY_DashAndSlap : NKY_BossSkill
             ShowWarn(0, new Vector2(2f, (target.position - boss.transform.position).magnitude + 2f), 2f, 
             () => Vector3.Lerp(boss.position, target.position, 0.5f), angle),
             WaitUntilOrTime(() => false, 0.7f),
+            PlaySound("Rush"),
             ConstantMoveTo(boss, target.position, dashSpeed),
             ShowWarn(col, 0.4f, () => _shadow.transform.position),
             MoveAnim(false, dir, boss),
@@ -43,6 +44,12 @@ public class NKY_DashAndSlap : NKY_BossSkill
             );
     }
 
+    private IEnumerator PlaySound(string soundName)
+    {
+        NKY_SoundManager.Instance.PlaySFX(soundName);
+        yield break;
+    }
+
     public override void EndSkill()
     {
         dustEffect.SetActive(false);
@@ -52,6 +59,7 @@ public class NKY_DashAndSlap : NKY_BossSkill
 
     private IEnumerator PlayDustEffect(GameObject effect, Transform pos)
     {
+        NKY_SoundManager.Instance.PlaySFX("Earthquake");
         Animator effectAnim =  effect.GetComponent<Animator>();
         effect.transform.position = pos.position;
         effect.SetActive(true);

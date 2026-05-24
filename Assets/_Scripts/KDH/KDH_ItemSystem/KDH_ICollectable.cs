@@ -1,6 +1,4 @@
 //Diagnostics : 진단, 검사
-using NUnit.Framework;
-using System;
 using UnityEngine;
 
 namespace KDH.ItemSystem

@@ -5,7 +5,6 @@ namespace _Scripts.LSO.LSO_Skills.Skills
 {
     public class LSO_FireWall :  MonoBehaviour,LSO_ISkill
     {
-        [SerializeField] private AudioClip clip;
         
         private GameObject _player;
         private LSO_PlayerMovement _playerMovement;
@@ -17,7 +16,7 @@ namespace _Scripts.LSO.LSO_Skills.Skills
         private GameObject _effectInstance;
     
         private float _waitTime = 0.1f;
-        private float _coolTime = 5f;
+        [SerializeField] private float _coolTime = 5f;
         private int _count = 5;
         private float _gap = 2.5f;
         public void UseSkill(GameObject player)
@@ -40,7 +39,7 @@ namespace _Scripts.LSO.LSO_Skills.Skills
 
             for (int i = 1; i <= _count; i++)
             {
-                LSO_SoundManager.Instance.SfxPlay(clip);
+                NKY_SoundManager.Instance.PlaySFX("FireWallExplode");
                 _effectInstance = Instantiate(effect, (Vector3)curDir * (i * _gap) + (Vector3)_tempVector2, Quaternion.identity);
                 _effectInstance.transform.SetParent(gameObject.transform);
                 

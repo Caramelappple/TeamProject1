@@ -2,11 +2,10 @@ using UnityEngine;
 
 public class KDH_OnTriggerMan : MonoBehaviour
 {
-    private GameObject endingBox;
+    [SerializeField] private GameObject endingBox;
 
     private void Start()
     {
-        endingBox = NKY_GameManager.instance.EndUI;
         endingBox.SetActive(false);
     }
 

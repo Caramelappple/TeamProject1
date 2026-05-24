@@ -503,12 +503,12 @@ PrefabInstance:
     - target: {fileID: 4564716421031664453, guid: da81ab15a07f2d643b9f2b036e289720,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.4025488
+      value: -3.04
       objectReference: {fileID: 0}
     - target: {fileID: 4564716421031664453, guid: da81ab15a07f2d643b9f2b036e289720,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.84
+      value: 1.83
       objectReference: {fileID: 0}
     - target: {fileID: 4564716421031664453, guid: da81ab15a07f2d643b9f2b036e289720,
         type: 3}
@@ -1464,6 +1464,7 @@ GameObject:
   - component: {fileID: 1683360421}
   - component: {fileID: 1683360426}
   - component: {fileID: 1683360425}
+  - component: {fileID: 1683360427}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -1803,6 +1804,53 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1683360427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683360420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 354cf5cd53ef7e64d82055204e8368d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NKY_SoundManager
+  initialPoolSize: 10
+  bgmSource: {fileID: 0}
+  registrySoundData:
+  - {fileID: 11400000, guid: 5b004b0795a05d347b5d9c073417e7c2, type: 2}
+  - {fileID: 11400000, guid: 7120155dd8c8aac448f5ecb1e5a18e65, type: 2}
+  - {fileID: 11400000, guid: 14770b12b8727ef48b251301d187237b, type: 2}
+  - {fileID: 11400000, guid: bf0ddf0d52325f749b59979b03a6c820, type: 2}
+  - {fileID: 11400000, guid: 8a09237cabb826a4483ea0ea1e43dce7, type: 2}
+  - {fileID: 11400000, guid: 652cc4a680a387a4cb51c0ec11d70271, type: 2}
+  - {fileID: 11400000, guid: 197d87c854ee58d459394fee24c5e4f8, type: 2}
+  - {fileID: 11400000, guid: 035fa875b88385a4bb86d76e378d4eea, type: 2}
+  - {fileID: 11400000, guid: ae42530d577a9f946988bf9179bc3bb9, type: 2}
+  - {fileID: 11400000, guid: 62540a51caa442341bca0c8738d9db90, type: 2}
+  - {fileID: 11400000, guid: 23d268d9d81669f4d93b1de65ebff39e, type: 2}
+  - {fileID: 11400000, guid: 9f178e815eaca724e940f31a75341ad0, type: 2}
+  - {fileID: 11400000, guid: 1ad9eb352f7096f4391a7439feb72dae, type: 2}
+  - {fileID: 11400000, guid: b0dfd73696dd99942863b8b31afb1127, type: 2}
+  - {fileID: 11400000, guid: 5fb23b65bda490246b15c40e15a7dc76, type: 2}
+  - {fileID: 11400000, guid: 5aee19299346fb6418b449cb28033884, type: 2}
+  - {fileID: 11400000, guid: 20bd1efc4346644478030cc26bd2bab8, type: 2}
+  - {fileID: 11400000, guid: aa98400d348e533419582828a006b3d0, type: 2}
+  - {fileID: 11400000, guid: dd989f4c2c5f49a4fab6c6ec247e2426, type: 2}
+  - {fileID: 11400000, guid: 4179b60dcd8577f4bb1565d074a72a0e, type: 2}
+  - {fileID: 11400000, guid: a2961b2e5c47dbd4fb0c291ee337aec8, type: 2}
+  - {fileID: 11400000, guid: f6b3a3b3cc390d94db75da62b177d317, type: 2}
+  - {fileID: 11400000, guid: d6a3944ef8a910f4a87f081b1cff4495, type: 2}
+  - {fileID: 11400000, guid: 5a64c2fe122aa0d428739a91a6fae1f3, type: 2}
+  - {fileID: 11400000, guid: 45c5c9f31a6a3744ea26fe8bdcbcea67, type: 2}
+  - {fileID: 11400000, guid: bef6f6910986fbc43b560d071c672a6b, type: 2}
+  - {fileID: 11400000, guid: 57ba2216be2d7254b8f2428a601c3c1d, type: 2}
+  - {fileID: 11400000, guid: 7495b92c6bec03e4c99c9750c25aa9ab, type: 2}
+  - {fileID: 11400000, guid: 327e4bbfb841e32498ae7b4f81d0b2d9, type: 2}
+  - {fileID: 11400000, guid: 563c855a4081ecc4abb95fa533e10caa, type: 2}
+  - {fileID: 11400000, guid: a581c3618a3ba994ab309c12bf1efd66, type: 2}
+  - {fileID: 11400000, guid: bf40a2ad6e148394a8e0b38c5758114a, type: 2}
 --- !u!1 &1817066022
 GameObject:
   m_ObjectHideFlags: 0

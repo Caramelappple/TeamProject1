@@ -36,7 +36,7 @@ namespace _Scripts.NKY._EnemyScript
             }
             _shadow = GetComponent<NKY_ShadowController>();
             _myHealth = gameObject.GetComponent<Health>();
-            //playerReference = NKY_GameManager.instance.player.GetComponent<LSO_PlayerMovement>();
+            playerReference = NKY_GameManager.instance.player.GetComponent<LSO_PlayerMovement>();
             _target = playerReference.gameObject;
 
             if (skills != null)
@@ -50,6 +50,8 @@ namespace _Scripts.NKY._EnemyScript
 
         private void Start()
         {
+            playerReference = NKY_GameManager.instance.player.GetComponent<LSO_PlayerMovement>();
+
             intro.gameObject.SetActive(false);
             if (_myHealth != null)
             {
@@ -132,6 +134,10 @@ namespace _Scripts.NKY._EnemyScript
 
         private IEnumerator Phase2ProcessRoutine()
         {
+            foreach (NKY_BossSkill skill in skills)
+            {
+                skill.ChangedDamage();
+            }
             if (_bossSkill != null)
                 _bossSkill.EndSkill();
             _masterHandle = null;
@@ -170,6 +176,10 @@ namespace _Scripts.NKY._EnemyScript
 
         private IEnumerator Phase3ProcessRoutine()
         {
+            foreach (NKY_BossSkill skill in skills)
+            {
+                skill.ChangedDamage();
+            }
             if (_bossSkill != null)
                 _bossSkill.EndSkill();
             _masterHandle = null;
@@ -194,7 +204,7 @@ namespace _Scripts.NKY._EnemyScript
         private void SetDamage(DamageResultData args) //Enemy?? ???????? ???? ????? ???????
         {
             //2������ ����
-            if (phase2Effect != null || (args.currentHealth < _myHealth.MaxValue / 2 && bossPhase < 2))
+            if (phase2Effect != null && (args.currentHealth < _myHealth.MaxValue / 2 && bossPhase < 2))
             {
                 PlayPhase2();
             }

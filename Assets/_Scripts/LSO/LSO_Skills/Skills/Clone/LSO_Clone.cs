@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class LSO_Clone : MonoBehaviour
 {
-    [SerializeField] private AudioClip clip;
     
     private static readonly int MoveY = Animator.StringToHash("MoveY");
     private static readonly int MoveX = Animator.StringToHash("MoveX");
@@ -13,7 +12,7 @@ public class LSO_Clone : MonoBehaviour
     private readonly float _cooldown = 0.5f;
     private readonly float _attackTime = 0.2f;
     private readonly float _liveTime = 7.8f;
-    private readonly int _damage = 10;
+    [SerializeField] private readonly int _damage = 10;
     
     private bool _isAnimReady;
 
@@ -56,8 +55,9 @@ public class LSO_Clone : MonoBehaviour
     {
         //_attackable = false;
         
-        LSO_SoundManager.Instance.SfxPlay(clip);
         sword.SetActive(true);
+        
+        NKY_SoundManager.Instance.PlaySFX("CloneAttack");
 
         Collider2D[] colliders = Physics2D.OverlapBoxAll(sword.transform.position, sword.transform.localScale / 2, 0);
         foreach (Collider2D collision in colliders)
