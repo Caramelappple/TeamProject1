@@ -1,5 +1,3 @@
-using System;
-using KDH.ItemSystem;
 using KHG.ItemSystem;
 using UnityEngine;
 

@@ -6,15 +6,15 @@ public class JHY_BossMove : MonoBehaviour
     [SerializeField] private Health playerHealth;
     private Rigidbody2D rb;
     private Animator ani;
-    [SerializeField] private float speed;
+    [SerializeField] private float speed = 2;
     [SerializeField] private Transform player;
     private SpriteRenderer sr;
-    [SerializeField] private float chaseRange = 5f;
-    [SerializeField] private float stopRange = 2f;
+    [SerializeField] private float chaseRange = 7f;
+    [SerializeField] private float stopRange = 4f;
     private bool isArrived = false;
     public bool isMoving;
 
-    [SerializeField] private float stunTime = 20f;
+    [SerializeField] private float stunTime = 15f;
     [SerializeField] private float stunDuration = 7f;
 
     public bool isStunned;
@@ -22,7 +22,7 @@ public class JHY_BossMove : MonoBehaviour
 
     [Header("Dash")]
     [SerializeField] private float dashRange = 10f;
-    [SerializeField] private float dashCooldown = 10f;
+    [SerializeField] private float dashCooldown = 8f;
     [SerializeField] private float dashSpeed = 12f;
     [SerializeField] private float dashDuration = 0.7f;
     private float dashTimer;
@@ -30,6 +30,8 @@ public class JHY_BossMove : MonoBehaviour
 
     private bool isSkillLocked;
 
+    private bool canAct = false;
+    [SerializeField] private float startDelay = 5f;
     void Awake()
     {
         ani = GetComponent<Animator>();
@@ -37,15 +39,19 @@ public class JHY_BossMove : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         timer = stunTime;
         dashTimer = dashCooldown;
-    }
 
-    private void Start()
-    {
         player = NKY_GameManager.instance.player.transform;
     }
 
+    private IEnumerator Start()
+    {
+        canAct = false;
+        yield return new WaitForSeconds(startDelay);
+        canAct = true;
+    }
     void Update()
     {
+        if (!canAct) return;
         if (playerHealth != null && playerHealth.IsDestroyed)
         {
             StopMoving();
@@ -123,6 +129,7 @@ public class JHY_BossMove : MonoBehaviour
         isMoving = true;
         dashTimer = dashCooldown;
 
+        //보스가 빠르게 돌진 소리
         Vector2 dashDirection = (player.position - transform.position).normalized;
         float elapsed = 0f;
 
@@ -150,9 +157,9 @@ public class JHY_BossMove : MonoBehaviour
         isMoving = false;
         ani.SetFloat("Speed", 0f);
         ani.SetTrigger("Stop");
-
+        //보스가 스턴 소리
         yield return new WaitForSeconds(stunDuration);
-
+        //보스가 정신을 차리고 다시 일어나는 짧은 효과음 재생
         timer = stunTime;
         isStunned = false;
     }
@@ -175,6 +182,7 @@ public class JHY_BossMove : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
         isMoving = true;
         ani.SetFloat("Speed", speed);
+        //보스 움직임소리
     }
 
     public void StopMoving()

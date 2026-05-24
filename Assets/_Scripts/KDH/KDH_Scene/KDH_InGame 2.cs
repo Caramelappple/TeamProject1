@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,8 +8,11 @@ public class KDH_InGame2 : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            KDH_SceneFader.Instance.FadeToScene("KHG_map2");
-            NKY_GameManager.instance.player.transform.position = new Vector3(0f, 0f, 0f); ;
+
+            if (KDH_SceneFader.Instance != null)
+            {
+                KDH_SceneFader.Instance.FadeToScene("KHG_map2");
+            }
         }
     }
 }

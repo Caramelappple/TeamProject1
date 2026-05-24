@@ -3,22 +3,28 @@ using UnityEngine;
 
 public class LSO_CameraMovement : MonoBehaviour
 {
-    [SerializeField]private Transform target;
+    [SerializeField] private Transform target;
     private Transform _originTarget;
-    [SerializeField]private Transform[] bossTargets;
-    
-    [SerializeField]private float speed = 1.2f;
+    [SerializeField] private Transform[] bossTargets;
+
+    [SerializeField] private float speed = 1.2f;
     private float _originSpeed;
 
     public bool test;
-    [SerializeField]private bool last;
+    [SerializeField] private bool last;
     private bool _isReturning;
 
     private void Start()
     {
+        if (LSO_PlayerMovement.instance != null)
+        {
+            target = LSO_PlayerMovement.instance.transform;
+        }
+
         _originTarget = target;
         _originSpeed = speed;
     }
+
     private void FixedUpdate()
     {
         if (test)
@@ -42,6 +48,8 @@ public class LSO_CameraMovement : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (target == null) return;
+
         Vector3 shakeOffset = CameraShake.instance != null
             ? CameraShake.instance.ShakeOffset
             : Vector3.zero;
@@ -61,6 +69,6 @@ public class LSO_CameraMovement : MonoBehaviour
         speed = _originSpeed;
         _isReturning = false;
     }
-    
+
     CameraShake _cameraShake;
 }

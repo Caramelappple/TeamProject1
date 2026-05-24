@@ -5,11 +5,11 @@ public class SpearSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject spearPrefab;
     [SerializeField] private GameObject warningCirclePrefab;
-    [SerializeField] private int spawnCount = 10;
+    [SerializeField] private int spawnCount = 20;
     [SerializeField] private float spawnDelay = 0.2f;
     [SerializeField] private float warningTime = 0.8f;
     [SerializeField] private float spawnHeightOffset = 3f;
-
+    [SerializeField] private Vector2 warningOffset = new Vector2(0f, -0.8f);
     public void SpawnSpears()
     {
         StartCoroutine(SpawnSpearsRoutine());
@@ -39,7 +39,8 @@ public class SpearSpawner : MonoBehaviour
 
         if (warningCirclePrefab != null)
         {
-            warning = Instantiate(warningCirclePrefab, targetPos, Quaternion.identity);
+            warning = Instantiate(warningCirclePrefab, targetPos + warningOffset, Quaternion.identity);
+            //창이 떨어지기 직전 경고 사운드? 소환 사운드? 재생
         }
 
         yield return new WaitForSeconds(warningTime);
