@@ -28,6 +28,8 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
     //private int _damage;
     protected void Start()
     {
+        returnTarget = NKY_GameManager.instance.player.transform;
+
         _damage = (int)(DamageScale * _bossBrain.Damage);
         for (int i = 0; i < swordCount; i++)
         {
@@ -120,7 +122,7 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
             
             NKY_SoundManager.Instance.PlaySFX(throwSword.soundName);//??????????? ????? ????
         }
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(swordDuration);
         EnQueues(_swords, swordQueue);
     }
 

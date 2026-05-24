@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7067c87e9e283418fd4da067c38591, type: 3}
   m_Name: KDH_Immune
   m_EditorClassIdentifier: Assembly-CSharp::KDH_SkillData
-  skillName: "\uBB34\uC801"
-  skillDescription: "\uC7A0\uAE50 \uBB34\uC801\uC774 \uB429\uB2C8\uB2E4."
+  skillName: "\uC608\uC5B8\uC790\uC758 \uCD08\uC2DC\uACC4"
+  skillDescription: "\uBA48\uCD94\uBA74\uC11C \uC544\uBB34\uB7F0 \uD53C\uD574\uB3C4
+    \uBC1B\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4"
   skillIcon: {fileID: 21300060, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
-  maxCooldownTime: 8
+  maxCooldownTime: 18
   skillPrefab: {fileID: 4154913620570664508, guid: 4b57262aaca925e41b630335c70f7620,
     type: 3}
   skillIConPrefabs: {fileID: 4590441206724951262, guid: ea6d1ded23b52da4a879a4f1e8bb7d3f,

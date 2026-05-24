@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: KDH_Udotan
   m_EditorClassIdentifier: Assembly-CSharp::KDH_SkillData
   skillName: "\uC694\uACA9\uC758 \uD0C4\uD658"
-  skillDescription: "\uC801\uC744 \uCD94\uC801\uD558\uB294 \uD0C4\uD658\uC744 \uC18C\uD658\uD569\uB2C8\uB2E4."
+  skillDescription: "\uC801\uC744 \uCD94\uC801\uD558\uB294 \uD0C4\uD658\uC744 \uC18C\uD658\uD569\uB2C8\uB2E4"
   skillIcon: {fileID: 21300082, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
   maxCooldownTime: 12
   skillPrefab: {fileID: 5281115400797012292, guid: 014bfa237dde4934e88344a1c31751cb,

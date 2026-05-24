@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7067c87e9e283418fd4da067c38591, type: 3}
   m_Name: KDH_Cure
   m_EditorClassIdentifier: Assembly-CSharp::KDH_SkillData
-  skillName: "\uD68C\uBCF5"
-  skillDescription: "\uC774 \uC2A4\uD0AC\uC744 \uC4F8 \uB54C\uB9C8\uB2E4 \uD68C\uBCF5\uC744
-    \uD569\uB2C8\uB2E4."
+  skillName: "HP\uD68C\uBCF5"
+  skillDescription: "\uC790\uC2E0\uC758 hp \uD68C\uBCF5\uC744 \uD569\uB2C8\uB2E4"
   skillIcon: {fileID: 21300012, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
   maxCooldownTime: 7
   skillPrefab: {fileID: 6967362451757263620, guid: 5003bc514ddabde4c81971e8dc517642,

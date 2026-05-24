@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3f37b44dc72c0c47a50acd835555be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  clip: {fileID: 8300000, guid: 1a1264312469c4c698bcb44131de251f, type: 3}
   effect: {fileID: 7865111169201036416, guid: 3b297badef927fd40859837d9b59c9d2, type: 3}
+  _coolTime: 7
+  _healValue: 25

@@ -49,6 +49,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 62540a51caa442341bca0c8738d9db90, type: 2}
   - {fileID: 11400000, guid: 23d268d9d81669f4d93b1de65ebff39e, type: 2}
   - {fileID: 11400000, guid: 9f178e815eaca724e940f31a75341ad0, type: 2}
-  _coolTime: 5
+  _coolTime: 11
   spreadAngle: 360
   effect: {fileID: 2327826971356343359, guid: 4ffecb439f262d940a4777d53f9dce56, type: 3}

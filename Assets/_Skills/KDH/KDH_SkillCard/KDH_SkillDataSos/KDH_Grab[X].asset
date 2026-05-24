@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba7067c87e9e283418fd4da067c38591, type: 3}
-  m_Name: KDH_Grab
+  m_Name: 'KDH_Grab[X]'
   m_EditorClassIdentifier: Assembly-CSharp::KDH_SkillData
   skillName: "\uADF8\uB7A9"
   skillDescription: "\uBCF4\uC2A4\uB97C \uAC00\uC838\uC635\uB2C8\uB2E4."

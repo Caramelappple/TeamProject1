@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7067c87e9e283418fd4da067c38591, type: 3}
   m_Name: KDH_EnergyBall
   m_EditorClassIdentifier: Assembly-CSharp::KDH_SkillData
-  skillName: "\uC5D0\uB108\uC9C0 \uBCFC"
-  skillDescription: "\uAC15\uB825\uD55C \uC5D0\uB108\uC9C0 \uBCFC\uC744 \uB0A0\uB9BD\uB2C8\uB2E4."
+  skillName: "\uD50C\uB77C\uC988\uB9C8 \uC784\uD329\uD2B8"
+  skillDescription: "\uBC14\uB77C \uBCF4\uB294 \uBC29\uD5A5\uC73C\uB85C \uAC15\uB825\uD55C
+    \uC5D0\uB108\uC9C0 \uBCFC\uC774 \uB098\uAC11\uB2C8\uB2E4"
   skillIcon: {fileID: 21300000, guid: 30b68346a3d4af44899dec2e3576004b, type: 3}
-  maxCooldownTime: 5
+  maxCooldownTime: 15
   skillPrefab: {fileID: 1695141421919165469, guid: 0922b9f72ac3c9747824eea0659da983,
     type: 3}
   skillIConPrefabs: {fileID: 4590441206724951262, guid: 2f4aa5882f7efdf43bcfb57d75bd85ce,

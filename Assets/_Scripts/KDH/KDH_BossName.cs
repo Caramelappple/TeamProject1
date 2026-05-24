@@ -8,6 +8,6 @@ public class KDH_BossName : MonoBehaviour
 
     private void Start()
     {
-        KDH_BossNameSingle.instance.title.text = bossName;
+        //KDH_BossNameSingle.instance.title.text = bossName;
     }
 }
