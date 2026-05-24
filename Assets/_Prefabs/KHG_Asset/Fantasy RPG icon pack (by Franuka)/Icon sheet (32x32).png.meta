@@ -1,0 +1,4771 @@
+fileFormatVersion: 2
+guid: fb6cf7e18c6c20545b455e9f1a256633
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8912747171581488928
+    second: Icon sheet (32x32)_0
+  - first:
+      213: -4699674049935890849
+    second: Icon sheet (32x32)_1
+  - first:
+      213: 5508324402833305565
+    second: Icon sheet (32x32)_2
+  - first:
+      213: 6053170827857556490
+    second: Icon sheet (32x32)_3
+  - first:
+      213: -6670220319607546934
+    second: Icon sheet (32x32)_4
+  - first:
+      213: 4650416014406119131
+    second: Icon sheet (32x32)_5
+  - first:
+      213: -6844403473276648554
+    second: Icon sheet (32x32)_6
+  - first:
+      213: -4907461379821242175
+    second: Icon sheet (32x32)_7
+  - first:
+      213: -3367340920947268502
+    second: Icon sheet (32x32)_8
+  - first:
+      213: -833047816887362989
+    second: Icon sheet (32x32)_9
+  - first:
+      213: 3209095225509088193
+    second: Icon sheet (32x32)_10
+  - first:
+      213: -1492931927076750449
+    second: Icon sheet (32x32)_11
+  - first:
+      213: -3261386551745709992
+    second: Icon sheet (32x32)_12
+  - first:
+      213: 3406065734847290877
+    second: Icon sheet (32x32)_13
+  - first:
+      213: 217723608600971806
+    second: Icon sheet (32x32)_14
+  - first:
+      213: 3997663308635528461
+    second: Icon sheet (32x32)_15
+  - first:
+      213: 4812401965663274645
+    second: Icon sheet (32x32)_16
+  - first:
+      213: -279342441856874011
+    second: Icon sheet (32x32)_17
+  - first:
+      213: 1356906362618251606
+    second: Icon sheet (32x32)_18
+  - first:
+      213: -7167644491120413438
+    second: Icon sheet (32x32)_19
+  - first:
+      213: 3603310197190872551
+    second: Icon sheet (32x32)_20
+  - first:
+      213: 280223306120592985
+    second: Icon sheet (32x32)_21
+  - first:
+      213: 6719939734736914578
+    second: Icon sheet (32x32)_22
+  - first:
+      213: -5216820406215608052
+    second: Icon sheet (32x32)_23
+  - first:
+      213: -5423695651360980717
+    second: Icon sheet (32x32)_24
+  - first:
+      213: -8798567590438484820
+    second: Icon sheet (32x32)_25
+  - first:
+      213: 1434411465283962774
+    second: Icon sheet (32x32)_26
+  - first:
+      213: 2497319266689417061
+    second: Icon sheet (32x32)_27
+  - first:
+      213: -4279903785370803889
+    second: Icon sheet (32x32)_28
+  - first:
+      213: 7535907664435963882
+    second: Icon sheet (32x32)_29
+  - first:
+      213: 2367921326180410864
+    second: Icon sheet (32x32)_30
+  - first:
+      213: 189055425095081905
+    second: Icon sheet (32x32)_31
+  - first:
+      213: 866854346692964707
+    second: Icon sheet (32x32)_32
+  - first:
+      213: 9092022150642375450
+    second: Icon sheet (32x32)_33
+  - first:
+      213: -1930711042579196941
+    second: Icon sheet (32x32)_34
+  - first:
+      213: 4454339468690815805
+    second: Icon sheet (32x32)_35
+  - first:
+      213: 377197860087358012
+    second: Icon sheet (32x32)_36
+  - first:
+      213: 2774339394170359256
+    second: Icon sheet (32x32)_37
+  - first:
+      213: 4152932226655840007
+    second: Icon sheet (32x32)_38
+  - first:
+      213: 5520796860047085814
+    second: Icon sheet (32x32)_39
+  - first:
+      213: -2564346245467713711
+    second: Icon sheet (32x32)_40
+  - first:
+      213: -5807144911986003400
+    second: Icon sheet (32x32)_41
+  - first:
+      213: -4057589885560023903
+    second: Icon sheet (32x32)_42
+  - first:
+      213: -5069218924371049544
+    second: Icon sheet (32x32)_43
+  - first:
+      213: -7415954141121073076
+    second: Icon sheet (32x32)_44
+  - first:
+      213: 4735743935550152400
+    second: Icon sheet (32x32)_45
+  - first:
+      213: 8867910101061853760
+    second: Icon sheet (32x32)_46
+  - first:
+      213: -3359014917884944898
+    second: Icon sheet (32x32)_47
+  - first:
+      213: -7234715657305391594
+    second: Icon sheet (32x32)_48
+  - first:
+      213: 7388937972562208007
+    second: Icon sheet (32x32)_49
+  - first:
+      213: -2098102728402703421
+    second: Icon sheet (32x32)_50
+  - first:
+      213: -2452973841463551451
+    second: Icon sheet (32x32)_51
+  - first:
+      213: -4889880657397088252
+    second: Icon sheet (32x32)_52
+  - first:
+      213: -1448724017821136592
+    second: Icon sheet (32x32)_53
+  - first:
+      213: 9005420031864373758
+    second: Icon sheet (32x32)_54
+  - first:
+      213: -5667059493339577341
+    second: Icon sheet (32x32)_55
+  - first:
+      213: 3673414316292367657
+    second: Icon sheet (32x32)_56
+  - first:
+      213: -6206409272117156934
+    second: Icon sheet (32x32)_57
+  - first:
+      213: -5768170183690225187
+    second: Icon sheet (32x32)_58
+  - first:
+      213: -7855630647129401300
+    second: Icon sheet (32x32)_59
+  - first:
+      213: 7258979812911543029
+    second: Icon sheet (32x32)_60
+  - first:
+      213: 8260389853199384029
+    second: Icon sheet (32x32)_61
+  - first:
+      213: -1536762822016944838
+    second: Icon sheet (32x32)_62
+  - first:
+      213: -6429578822752089204
+    second: Icon sheet (32x32)_63
+  - first:
+      213: -4459467871416245467
+    second: Icon sheet (32x32)_64
+  - first:
+      213: 2701509745295263224
+    second: Icon sheet (32x32)_65
+  - first:
+      213: 1840870397350872160
+    second: Icon sheet (32x32)_66
+  - first:
+      213: 5357913157687953821
+    second: Icon sheet (32x32)_67
+  - first:
+      213: 7832976729469963189
+    second: Icon sheet (32x32)_68
+  - first:
+      213: 6163824864049887566
+    second: Icon sheet (32x32)_69
+  - first:
+      213: 5441551408431759648
+    second: Icon sheet (32x32)_70
+  - first:
+      213: 8545666544075286491
+    second: Icon sheet (32x32)_71
+  - first:
+      213: -7109597211387999102
+    second: Icon sheet (32x32)_72
+  - first:
+      213: 6508597892826915405
+    second: Icon sheet (32x32)_73
+  - first:
+      213: 3487891591596894054
+    second: Icon sheet (32x32)_74
+  - first:
+      213: 6132226348104622879
+    second: Icon sheet (32x32)_75
+  - first:
+      213: -60758292275249366
+    second: Icon sheet (32x32)_76
+  - first:
+      213: 1221012611621678990
+    second: Icon sheet (32x32)_77
+  - first:
+      213: 6722333664113901602
+    second: Icon sheet (32x32)_78
+  - first:
+      213: -1058150402792451034
+    second: Icon sheet (32x32)_79
+  - first:
+      213: 5476724629027572070
+    second: Icon sheet (32x32)_80
+  - first:
+      213: -6518894631114305544
+    second: Icon sheet (32x32)_81
+  - first:
+      213: -1037712697456580398
+    second: Icon sheet (32x32)_82
+  - first:
+      213: -7026909535968752051
+    second: Icon sheet (32x32)_83
+  - first:
+      213: 5230453825059305234
+    second: Icon sheet (32x32)_84
+  - first:
+      213: 5792003023959587909
+    second: Icon sheet (32x32)_85
+  - first:
+      213: 8110797625833306609
+    second: Icon sheet (32x32)_86
+  - first:
+      213: 8075097987443685250
+    second: Icon sheet (32x32)_87
+  - first:
+      213: -8279795886123007692
+    second: Icon sheet (32x32)_88
+  - first:
+      213: -3138798722340739943
+    second: Icon sheet (32x32)_89
+  - first:
+      213: 3126148013494342416
+    second: Icon sheet (32x32)_90
+  - first:
+      213: -3614544645920737514
+    second: Icon sheet (32x32)_91
+  - first:
+      213: 1995393765880141213
+    second: Icon sheet (32x32)_92
+  - first:
+      213: 4839450763853015932
+    second: Icon sheet (32x32)_93
+  - first:
+      213: -3470901546877699471
+    second: Icon sheet (32x32)_94
+  - first:
+      213: 5569583966404233531
+    second: Icon sheet (32x32)_95
+  - first:
+      213: -7757324217375279744
+    second: Icon sheet (32x32)_96
+  - first:
+      213: 4313441653641955508
+    second: Icon sheet (32x32)_97
+  - first:
+      213: -6460421635458814284
+    second: Icon sheet (32x32)_98
+  - first:
+      213: 8459277320875242450
+    second: Icon sheet (32x32)_99
+  - first:
+      213: 115799090103039441
+    second: Icon sheet (32x32)_100
+  - first:
+      213: 5882392619153412113
+    second: Icon sheet (32x32)_101
+  - first:
+      213: 6256487755227190553
+    second: Icon sheet (32x32)_102
+  - first:
+      213: 9222421675856298899
+    second: Icon sheet (32x32)_103
+  - first:
+      213: 8175956863310821694
+    second: Icon sheet (32x32)_104
+  - first:
+      213: -5670023530170007805
+    second: Icon sheet (32x32)_105
+  - first:
+      213: 674011712647881478
+    second: Icon sheet (32x32)_106
+  - first:
+      213: 7716920079892219279
+    second: Icon sheet (32x32)_107
+  - first:
+      213: -2182091999076796767
+    second: Icon sheet (32x32)_108
+  - first:
+      213: -1938574344053914853
+    second: Icon sheet (32x32)_109
+  - first:
+      213: -1717514460142755179
+    second: Icon sheet (32x32)_110
+  - first:
+      213: 5198080843823662195
+    second: Icon sheet (32x32)_111
+  - first:
+      213: -5737859629846451080
+    second: Icon sheet (32x32)_112
+  - first:
+      213: 8749786878172512925
+    second: Icon sheet (32x32)_113
+  - first:
+      213: 8283938077715288743
+    second: Icon sheet (32x32)_114
+  - first:
+      213: -2688030823665153948
+    second: Icon sheet (32x32)_115
+  - first:
+      213: 8804175090870075121
+    second: Icon sheet (32x32)_116
+  - first:
+      213: 2391654582821190144
+    second: Icon sheet (32x32)_117
+  - first:
+      213: 1646546150606387509
+    second: Icon sheet (32x32)_118
+  - first:
+      213: 4224798691649826892
+    second: Icon sheet (32x32)_119
+  - first:
+      213: 1652051877997243703
+    second: Icon sheet (32x32)_120
+  - first:
+      213: 657056929023118485
+    second: Icon sheet (32x32)_121
+  - first:
+      213: 6229717381706104098
+    second: Icon sheet (32x32)_122
+  - first:
+      213: 2207542514069055423
+    second: Icon sheet (32x32)_123
+  - first:
+      213: 2118139682047918113
+    second: Icon sheet (32x32)_124
+  - first:
+      213: 4321939886183129695
+    second: Icon sheet (32x32)_125
+  - first:
+      213: -7060696456919394298
+    second: Icon sheet (32x32)_126
+  - first:
+      213: -6909234495019302872
+    second: Icon sheet (32x32)_127
+  - first:
+      213: -1933813960394267537
+    second: Icon sheet (32x32)_128
+  - first:
+      213: -571633227095885720
+    second: Icon sheet (32x32)_129
+  - first:
+      213: -7257928538381137994
+    second: Icon sheet (32x32)_130
+  - first:
+      213: 5319201942805746677
+    second: Icon sheet (32x32)_131
+  - first:
+      213: -8377254399499360695
+    second: Icon sheet (32x32)_132
+  - first:
+      213: 793324765227819264
+    second: Icon sheet (32x32)_133
+  - first:
+      213: 7050725868891236961
+    second: Icon sheet (32x32)_134
+  - first:
+      213: -472806723032198849
+    second: Icon sheet (32x32)_135
+  - first:
+      213: -1771538320141861313
+    second: Icon sheet (32x32)_136
+  - first:
+      213: -2500499007537187901
+    second: Icon sheet (32x32)_137
+  - first:
+      213: 5125375120163909971
+    second: Icon sheet (32x32)_138
+  - first:
+      213: 4630375001084825461
+    second: Icon sheet (32x32)_139
+  - first:
+      213: 6719956626367637752
+    second: Icon sheet (32x32)_140
+  - first:
+      213: -4382453446730857970
+    second: Icon sheet (32x32)_141
+  - first:
+      213: -4321239871594597317
+    second: Icon sheet (32x32)_142
+  - first:
+      213: -6774365328863045947
+    second: Icon sheet (32x32)_143
+  - first:
+      213: -6673078164757325261
+    second: Icon sheet (32x32)_144
+  - first:
+      213: -3892610840977898368
+    second: Icon sheet (32x32)_145
+  - first:
+      213: 5015563651600644115
+    second: Icon sheet (32x32)_146
+  - first:
+      213: 5991522142556750459
+    second: Icon sheet (32x32)_147
+  - first:
+      213: 7522772818876461211
+    second: Icon sheet (32x32)_148
+  - first:
+      213: -436282964444471120
+    second: Icon sheet (32x32)_149
+  - first:
+      213: 6599780186834516877
+    second: Icon sheet (32x32)_150
+  - first:
+      213: -7714780807254462932
+    second: Icon sheet (32x32)_151
+  - first:
+      213: -5173939236615488546
+    second: Icon sheet (32x32)_152
+  - first:
+      213: 7641268840575833355
+    second: Icon sheet (32x32)_153
+  - first:
+      213: 1498314736642289093
+    second: Icon sheet (32x32)_154
+  - first:
+      213: -7150085703431024611
+    second: Icon sheet (32x32)_155
+  - first:
+      213: 3571577275442732214
+    second: Icon sheet (32x32)_156
+  - first:
+      213: 7108074483798390390
+    second: Icon sheet (32x32)_157
+  - first:
+      213: -1240371721766171209
+    second: Icon sheet (32x32)_158
+  - first:
+      213: 319002490553626145
+    second: Icon sheet (32x32)_159
+  - first:
+      213: 4993585884168439639
+    second: Icon sheet (32x32)_160
+  - first:
+      213: -1657193303925806445
+    second: Icon sheet (32x32)_161
+  - first:
+      213: 8842527887338746362
+    second: Icon sheet (32x32)_162
+  - first:
+      213: 773980806683787788
+    second: Icon sheet (32x32)_163
+  - first:
+      213: 7703950326836192756
+    second: Icon sheet (32x32)_164
+  - first:
+      213: 1292411230017656662
+    second: Icon sheet (32x32)_165
+  - first:
+      213: -1803987495749316137
+    second: Icon sheet (32x32)_166
+  - first:
+      213: -8163738995211673527
+    second: Icon sheet (32x32)_167
+  - first:
+      213: 4567672429877500612
+    second: Icon sheet (32x32)_168
+  - first:
+      213: 2851609178348481511
+    second: Icon sheet (32x32)_169
+  - first:
+      213: 9143339021970284781
+    second: Icon sheet (32x32)_170
+  - first:
+      213: 4773174570436210500
+    second: Icon sheet (32x32)_171
+  - first:
+      213: 4162825764197513920
+    second: Icon sheet (32x32)_172
+  - first:
+      213: 5560348463286412306
+    second: Icon sheet (32x32)_173
+  - first:
+      213: 1458998917007116960
+    second: Icon sheet (32x32)_174
+  - first:
+      213: 5746711460562895136
+    second: Icon sheet (32x32)_175
+  - first:
+      213: 1928137978266278750
+    second: Icon sheet (32x32)_176
+  - first:
+      213: -345278563298739449
+    second: Icon sheet (32x32)_177
+  - first:
+      213: -3766664556003298695
+    second: Icon sheet (32x32)_178
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 833
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e094015baf8f4480800000000000000
+      internalID: -8912747171581488928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 831
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f56237df95767ceb0800000000000000
+      internalID: -4699674049935890849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_2
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 831
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddfae7a2cdf717c40800000000000000
+      internalID: 5508324402833305565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_3
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 767
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a04f43ffbce210450800000000000000
+      internalID: 6053170827857556490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_4
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 831
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acb133ca5fd9e63a0800000000000000
+      internalID: -6670220319607546934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_5
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 833
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdee674e9b8998040800000000000000
+      internalID: 4650416014406119131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_6
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 833
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69345e3ed4bc301a0800000000000000
+      internalID: -6844403473276648554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_7
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 831
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c87eca30e135ebb0800000000000000
+      internalID: -4907461379821242175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_8
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 833
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a642d49f54dc441d0800000000000000
+      internalID: -3367340920947268502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_9
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 833
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a93899c6b6074f0800000000000000
+      internalID: -833047816887362989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_10
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 801
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cb0fd6ea1ff88c20800000000000000
+      internalID: 3209095225509088193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_11
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 833
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8b30cc725a084be0800000000000000
+      internalID: -1492931927076750449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 801
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 858f5f3f53a3db2d0800000000000000
+      internalID: -3261386551745709992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_13
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 799
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfdd33f5db6c44f20800000000000000
+      internalID: 3406065734847290877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_14
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 767
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1a80ede772850300800000000000000
+      internalID: 217723608600971806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_15
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 801
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0d55d2499d8a7730800000000000000
+      internalID: 3997663308635528461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_16
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 801
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59640cf271619c240800000000000000
+      internalID: 4812401965663274645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_17
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 769
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e94e6677839f1cf0800000000000000
+      internalID: -279342441856874011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_18
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 799
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6590459c523b4d210800000000000000
+      internalID: 1356906362618251606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_19
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 767
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2057b76af49678c90800000000000000
+      internalID: -7167644491120413438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_20
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 801
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7edca1f7887810230800000000000000
+      internalID: 3603310197190872551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_21
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 769
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95e7a1bbc9d83e300800000000000000
+      internalID: 280223306120592985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_22
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 801
+        width: 33
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 298c601c595024d50800000000000000
+      internalID: 6719939734736914578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_23
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 769
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c09728efa712a97b0800000000000000
+      internalID: -5216820406215608052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_24
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 769
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3114cc28a892bb4b0800000000000000
+      internalID: -5423695651360980717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_25
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 769
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca446afa46535e580800000000000000
+      internalID: -8798567590438484820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_26
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 735
+        width: 77
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6978ff9b0ad08e310800000000000000
+      internalID: 1434411465283962774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_27
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 769
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56ff2c544a248a220800000000000000
+      internalID: 2497319266689417061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_28
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 739
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f41af10ee2aba94c0800000000000000
+      internalID: -4279903785370803889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_29
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 737
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae769d6081ce49860800000000000000
+      internalID: 7535907664435963882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_30
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 705
+        width: 34
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f52e0f76eb8cd020800000000000000
+      internalID: 2367921326180410864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_31
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 737
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bf17af48e8af9200800000000000000
+      internalID: 189055425095081905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_32
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 737
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36133ae7f6fa70c00800000000000000
+      internalID: 866854346692964707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_33
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 737
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1b950379f95d2e70800000000000000
+      internalID: 9092022150642375450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_34
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 737
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f3942f398cb435e0800000000000000
+      internalID: -1930711042579196941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_35
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 737
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3b715c852ef0dd30800000000000000
+      internalID: 4454339468690815805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_36
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 737
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c326b8c84731c3500800000000000000
+      internalID: 377197860087358012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_37
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 737
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dd85ebdafe608620800000000000000
+      internalID: 2774339394170359256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_38
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 737
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 707e7126bdd22a930800000000000000
+      internalID: 4152932226655840007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_39
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 737
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f0d2386e7fcd9c40800000000000000
+      internalID: 5520796860047085814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_40
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 705
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f4acd1dac996cd0800000000000000
+      internalID: -2564346245467713711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_41
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 705
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8327bd95870e86fa0800000000000000
+      internalID: -5807144911986003400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_42
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 707
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a41af24f7b80b7c0800000000000000
+      internalID: -4057589885560023903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_43
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 639
+        width: 34
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b30d240f3486a9b0800000000000000
+      internalID: -5069218924371049544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_44
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 705
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4034e3000d351990800000000000000
+      internalID: -7415954141121073076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_45
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 705
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0de5da1b40eb8b140800000000000000
+      internalID: 4735743935550152400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_46
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 705
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 042e3e1b045211b70800000000000000
+      internalID: 8867910101061853760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_47
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 705
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efdda30aab16261d0800000000000000
+      internalID: -3359014917884944898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_48
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 705
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61efa5bd070299b90800000000000000
+      internalID: -7234715657305391594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 639
+        width: 97
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70527f110f7ca8660800000000000000
+      internalID: 7388937972562208007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_50
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 673
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cb674b4faa02e2e0800000000000000
+      internalID: -2098102728402703421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_51
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 673
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a5d30a94945fdd0800000000000000
+      internalID: -2452973841463551451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_52
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 673
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4000bc52377a32cb0800000000000000
+      internalID: -4889880657397088252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_53
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 673
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 039c1347e2915ebe0800000000000000
+      internalID: -1448724017821136592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_54
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 639
+        width: 30
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef186746ecda9fc70800000000000000
+      internalID: 9005420031864373758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_55
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 673
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3044d7a8a6f8a51b0800000000000000
+      internalID: -5667059493339577341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_56
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 607
+        width: 97
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 925e07babd69af230800000000000000
+      internalID: 3673414316292367657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_57
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 641
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab324c466a76ed9a0800000000000000
+      internalID: -6206409272117156934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_58
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 641
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd9f42d67c753ffa0800000000000000
+      internalID: -5768170183690225187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_59
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 609
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c281e2f1c813bf290800000000000000
+      internalID: -7855630647129401300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_60
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 609
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f2f25c1ea31db460800000000000000
+      internalID: 7258979812911543029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_61
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 543
+        width: 64
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dddb03a5eccc2a270800000000000000
+      internalID: 8260389853199384029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_62
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 609
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3537a10b525caae0800000000000000
+      internalID: -1536762822016944838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_63
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 609
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8bcc76402c85c6a0800000000000000
+      internalID: -6429578822752089204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_64
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 609
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 523a7f42999cc12c0800000000000000
+      internalID: -4459467871416245467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_65
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 577
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f58495dcc0bd7520800000000000000
+      internalID: 2701509745295263224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_66
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 575
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06481af7fd51c8910800000000000000
+      internalID: 1840870397350872160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_67
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 609
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d99c16521a12b5a40800000000000000
+      internalID: 5357913157687953821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_68
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 609
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb45f5a5d254bc60800000000000000
+      internalID: 7832976729469963189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_69
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 577
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e49f9677e0e4a8550800000000000000
+      internalID: 6163824864049887566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_70
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 577
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0210a96ec26448b40800000000000000
+      internalID: 5441551408431759648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_71
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 511
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd72c88e17e489670800000000000000
+      internalID: 8545666544075286491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_72
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 577
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c4c172103a55d90800000000000000
+      internalID: -7109597211387999102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_73
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 577
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d42edcbac4f235a50800000000000000
+      internalID: 6508597892826915405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_74
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 577
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66764344cea776030800000000000000
+      internalID: 3487891591596894054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_75
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 577
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f132119af5b0a1550800000000000000
+      internalID: 6132226348104622879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_76
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 549
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f36c3b7a4282ff0800000000000000
+      internalID: -60758292275249366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_77
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 545
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8f6bf54088e1f010800000000000000
+      internalID: 1221012611621678990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_78
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 545
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 220c82fd9d68a4d50800000000000000
+      internalID: 6722333664113901602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_79
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 545
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6249e92a0d1b051f0800000000000000
+      internalID: -1058150402792451034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_80
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 545
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66942dd780c310c40800000000000000
+      internalID: 5476724629027572070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_81
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 545
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ff0b302fdb3885a0800000000000000
+      internalID: -6518894631114305544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_82
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 545
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d82039bccd4991f0800000000000000
+      internalID: -1037712697456580398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_83
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 511
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4e07c7d1076b7e90800000000000000
+      internalID: -7026909535968752051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_84
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 447
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2173eb0ba0e469840800000000000000
+      internalID: 5230453825059305234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_85
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 481
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54c791d1014516050800000000000000
+      internalID: 5792003023959587909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_86
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 513
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f930e4c7775f8070800000000000000
+      internalID: 8110797625833306609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_87
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 481
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2877d0cf5d2801070800000000000000
+      internalID: 8075097987443685250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_88
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 513
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 431c5e28281481d80800000000000000
+      internalID: -8279795886123007692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_89
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 513
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9942e6d213fb074d0800000000000000
+      internalID: -3138798722340739943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_90
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 513
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0139f932e0f426b20800000000000000
+      internalID: 3126148013494342416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_91
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 513
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 617ba139bce86ddc0800000000000000
+      internalID: -3614544645920737514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_92
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 479
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d95905ade0011bb10800000000000000
+      internalID: 1995393765880141213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_93
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 449
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7ba37744de292340800000000000000
+      internalID: 4839450763853015932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_94
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 447
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17a3008ce61e4dfc0800000000000000
+      internalID: -3470901546877699471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_95
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 447
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b394c38cb132b4d40800000000000000
+      internalID: 5569583966404233531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_96
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 447
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 085bfcf69b2785490800000000000000
+      internalID: -7757324217375279744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_97
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 481
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b8c3b4945c6cdb30800000000000000
+      internalID: 4313441653641955508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_98
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 481
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4beaa3750c8f756a0800000000000000
+      internalID: -6460421635458814284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_99
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 447
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d3794777e3656570800000000000000
+      internalID: 8459277320875242450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_100
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 481
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d5b7eea8a66b9100800000000000000
+      internalID: 115799090103039441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_101
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 447
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 110d40ebbe472a150800000000000000
+      internalID: 5882392619153412113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_102
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 481
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 915d5ef077283d650800000000000000
+      internalID: 6256487755227190553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_103
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 287
+        width: 225
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3930746d6af9cff70800000000000000
+      internalID: 9222421675856298899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_104
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 447
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e39fe88f275d67170800000000000000
+      internalID: 8175956863310821694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_105
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 415
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30f3c10f3a70051b0800000000000000
+      internalID: -5670023530170007805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_106
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 419
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60364d2e4129a5900800000000000000
+      internalID: 674011712647881478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_107
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 419
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f850e0a3de1081b60800000000000000
+      internalID: 7716920079892219279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_108
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 351
+        width: 97
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a63ec753e6a7b1e0800000000000000
+      internalID: -2182091999076796767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_109
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 393
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b130bf3b7ecc815e0800000000000000
+      internalID: -1938574344053914853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_110
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 403
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5922892c2b92a28e0800000000000000
+      internalID: -1717514460142755179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_111
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 403
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3744fd1acfa432840800000000000000
+      internalID: 5198080843823662195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_112
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 403
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87ca2ff21170f50b0800000000000000
+      internalID: -5737859629846451080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_113
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 341
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d92c8ddaecc7d6970800000000000000
+      internalID: 8749786878172512925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_114
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 325
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a25d8f9ac576f270800000000000000
+      internalID: 8283938077715288743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_115
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 341
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 468432a253232bad0800000000000000
+      internalID: -2688030823665153948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_116
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 335
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fe37af3996be2a70800000000000000
+      internalID: 8804175090870075121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_117
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 321
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00afd7aeb2dd03120800000000000000
+      internalID: 2391654582821190144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_118
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 335
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5393e2d0005b9d610800000000000000
+      internalID: 1646546150606387509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_119
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 321
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c40b25fa60081aa30800000000000000
+      internalID: 4224798691649826892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_120
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 335
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73dea8a1e644de610800000000000000
+      internalID: 1652051877997243703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_121
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 319
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59cc1a3bbc55e1900800000000000000
+      internalID: 657056929023118485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_122
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 289
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22d3ba3c3f6647650800000000000000
+      internalID: 6229717381706104098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_123
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 289
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb7a8a17834c2ae10800000000000000
+      internalID: 2207542514069055423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_124
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 289
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 120002581d4256d10800000000000000
+      internalID: 2118139682047918113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_125
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 257
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f52a9888d6d9afb30800000000000000
+      internalID: 4321939886183129695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 223
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 608d57a4bfd530e90800000000000000
+      internalID: -7060696456919394298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_127
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 257
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 820cf7e55d77d10a0800000000000000
+      internalID: -6909234495019302872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_128
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 223
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f642205e276b925e0800000000000000
+      internalID: -1933813960394267537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_129
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 257
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 868b32dcb962118f0800000000000000
+      internalID: -571633227095885720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_130
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 223
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b74f90d278a64b90800000000000000
+      internalID: -7257928538381137994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_131
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 257
+        width: 130
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f311811cf991d940800000000000000
+      internalID: 5319201942805746677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_132
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 255
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94623cc12830ebb80800000000000000
+      internalID: -8377254399499360695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_133
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 255
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 001ace6bba4720b00800000000000000
+      internalID: 793324765227819264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_134
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 255
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16a6be742d539d160800000000000000
+      internalID: 7050725868891236961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_135
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 225
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f31df3a5ac04079f0800000000000000
+      internalID: -472806723032198849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_136
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 225
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3eb3f9a84b3a67e0800000000000000
+      internalID: -1771538320141861313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_137
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 225
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c3778e96617c4dd0800000000000000
+      internalID: -2500499007537187901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_138
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 225
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 351bef1348df02740800000000000000
+      internalID: 5125375120163909971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_139
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 225
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57f828cd785624040800000000000000
+      internalID: 4630375001084825461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_140
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 225
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f8eca4a2f4124d50800000000000000
+      internalID: 6719956626367637752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_141
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 225
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e02cbe63fc56e23c0800000000000000
+      internalID: -4382453446730857970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_142
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 193
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3479505b3fd704c0800000000000000
+      internalID: -4321239871594597317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_143
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 193
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c6556220ae9cf1a0800000000000000
+      internalID: -6774365328863045947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_144
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 193
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33a593fb3c67463a0800000000000000
+      internalID: -6673078164757325261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_145
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 193
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0848da6601baaf9c0800000000000000
+      internalID: -3892610840977898368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_146
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 193
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 318740a419cda9540800000000000000
+      internalID: 5015563651600644115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_147
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 193
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b728bfae4a9262350800000000000000
+      internalID: 5991522142556750459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_148
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 193
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b90781b7502466860800000000000000
+      internalID: 7522772818876461211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_149
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 193
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b0abb294f202f9f0800000000000000
+      internalID: -436282964444471120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_150
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 193
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8bbeefdc11279b50800000000000000
+      internalID: 6599780186834516877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_151
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 193
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2ea89ffab79fe490800000000000000
+      internalID: -7714780807254462932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_152
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 63
+        width: 320
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edbf3105da97238b0800000000000000
+      internalID: -5173939236615488546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_153
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 161
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0598cb768d3b0a60800000000000000
+      internalID: 7641268840575833355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_154
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 161
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cdeb4780551bc410800000000000000
+      internalID: 1498314736642289093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_155
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 161
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d10156d7feac5cc90800000000000000
+      internalID: -7150085703431024611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_156
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 161
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bc1f96eb9ac09130800000000000000
+      internalID: 3571577275442732214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_157
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 161
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67632d33514f4a260800000000000000
+      internalID: 7108074483798390390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_158
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 161
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd00b6ad7059cee0800000000000000
+      internalID: -1240371721766171209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_159
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 161
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12ee9e333135d6400800000000000000
+      internalID: 319002490553626145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_160
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 161
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 757c34d87e7cc4540800000000000000
+      internalID: 4993585884168439639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_161
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 161
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39aa85368777009e0800000000000000
+      internalID: -1657193303925806445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_162
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 161
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af1bf498348f6ba70800000000000000
+      internalID: 8842527887338746362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_163
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 35
+        width: 65
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c028b55617bbdba00800000000000000
+      internalID: 773980806683787788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_164
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 31
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f56356410ee9ea60800000000000000
+      internalID: 7703950326836192756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_165
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 33
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6579dec8a219fe110800000000000000
+      internalID: 1292411230017656662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_166
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d19d983ee2f6f6e0800000000000000
+      internalID: -1803987495749316137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_167
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 31
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 940676f13a294be80800000000000000
+      internalID: -8163738995211673527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_168
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 33
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca9139dfd1a36f30800000000000000
+      internalID: 4567672429877500612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_169
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 33
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eb64b17073f29720800000000000000
+      internalID: 2851609178348481511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_170
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 33
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de0a181a56aa3ee70800000000000000
+      internalID: 9143339021970284781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_171
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 33
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44f27c18bf8bd3240800000000000000
+      internalID: 4773174570436210500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_172
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 97
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ca36d81af355c930800000000000000
+      internalID: 4162825764197513920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_173
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2146395a7735a2d40800000000000000
+      internalID: 5560348463286412306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_174
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 1
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aa83efe8c76f3410800000000000000
+      internalID: 1458998917007116960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_175
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 1
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 021848140ab60cf40800000000000000
+      internalID: 5746711460562895136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_176
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5b5088864f12ca10800000000000000
+      internalID: 1928137978266278750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_177
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70b750ed9f2553bf0800000000000000
+      internalID: -345278563298739449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon sheet (32x32)_178
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 0
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9727e5ffa8e1abbc0800000000000000
+      internalID: -3766664556003298695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Icon sheet (32x32)_0: -8912747171581488928
+      Icon sheet (32x32)_1: -4699674049935890849
+      Icon sheet (32x32)_10: 3209095225509088193
+      Icon sheet (32x32)_100: 115799090103039441
+      Icon sheet (32x32)_101: 5882392619153412113
+      Icon sheet (32x32)_102: 6256487755227190553
+      Icon sheet (32x32)_103: 9222421675856298899
+      Icon sheet (32x32)_104: 8175956863310821694
+      Icon sheet (32x32)_105: -5670023530170007805
+      Icon sheet (32x32)_106: 674011712647881478
+      Icon sheet (32x32)_107: 7716920079892219279
+      Icon sheet (32x32)_108: -2182091999076796767
+      Icon sheet (32x32)_109: -1938574344053914853
+      Icon sheet (32x32)_11: -1492931927076750449
+      Icon sheet (32x32)_110: -1717514460142755179
+      Icon sheet (32x32)_111: 5198080843823662195
+      Icon sheet (32x32)_112: -5737859629846451080
+      Icon sheet (32x32)_113: 8749786878172512925
+      Icon sheet (32x32)_114: 8283938077715288743
+      Icon sheet (32x32)_115: -2688030823665153948
+      Icon sheet (32x32)_116: 8804175090870075121
+      Icon sheet (32x32)_117: 2391654582821190144
+      Icon sheet (32x32)_118: 1646546150606387509
+      Icon sheet (32x32)_119: 4224798691649826892
+      Icon sheet (32x32)_12: -3261386551745709992
+      Icon sheet (32x32)_120: 1652051877997243703
+      Icon sheet (32x32)_121: 657056929023118485
+      Icon sheet (32x32)_122: 6229717381706104098
+      Icon sheet (32x32)_123: 2207542514069055423
+      Icon sheet (32x32)_124: 2118139682047918113
+      Icon sheet (32x32)_125: 4321939886183129695
+      Icon sheet (32x32)_126: -7060696456919394298
+      Icon sheet (32x32)_127: -6909234495019302872
+      Icon sheet (32x32)_128: -1933813960394267537
+      Icon sheet (32x32)_129: -571633227095885720
+      Icon sheet (32x32)_13: 3406065734847290877
+      Icon sheet (32x32)_130: -7257928538381137994
+      Icon sheet (32x32)_131: 5319201942805746677
+      Icon sheet (32x32)_132: -8377254399499360695
+      Icon sheet (32x32)_133: 793324765227819264
+      Icon sheet (32x32)_134: 7050725868891236961
+      Icon sheet (32x32)_135: -472806723032198849
+      Icon sheet (32x32)_136: -1771538320141861313
+      Icon sheet (32x32)_137: -2500499007537187901
+      Icon sheet (32x32)_138: 5125375120163909971
+      Icon sheet (32x32)_139: 4630375001084825461
+      Icon sheet (32x32)_14: 217723608600971806
+      Icon sheet (32x32)_140: 6719956626367637752
+      Icon sheet (32x32)_141: -4382453446730857970
+      Icon sheet (32x32)_142: -4321239871594597317
+      Icon sheet (32x32)_143: -6774365328863045947
+      Icon sheet (32x32)_144: -6673078164757325261
+      Icon sheet (32x32)_145: -3892610840977898368
+      Icon sheet (32x32)_146: 5015563651600644115
+      Icon sheet (32x32)_147: 5991522142556750459
+      Icon sheet (32x32)_148: 7522772818876461211
+      Icon sheet (32x32)_149: -436282964444471120
+      Icon sheet (32x32)_15: 3997663308635528461
+      Icon sheet (32x32)_150: 6599780186834516877
+      Icon sheet (32x32)_151: -7714780807254462932
+      Icon sheet (32x32)_152: -5173939236615488546
+      Icon sheet (32x32)_153: 7641268840575833355
+      Icon sheet (32x32)_154: 1498314736642289093
+      Icon sheet (32x32)_155: -7150085703431024611
+      Icon sheet (32x32)_156: 3571577275442732214
+      Icon sheet (32x32)_157: 7108074483798390390
+      Icon sheet (32x32)_158: -1240371721766171209
+      Icon sheet (32x32)_159: 319002490553626145
+      Icon sheet (32x32)_16: 4812401965663274645
+      Icon sheet (32x32)_160: 4993585884168439639
+      Icon sheet (32x32)_161: -1657193303925806445
+      Icon sheet (32x32)_162: 8842527887338746362
+      Icon sheet (32x32)_163: 773980806683787788
+      Icon sheet (32x32)_164: 7703950326836192756
+      Icon sheet (32x32)_165: 1292411230017656662
+      Icon sheet (32x32)_166: -1803987495749316137
+      Icon sheet (32x32)_167: -8163738995211673527
+      Icon sheet (32x32)_168: 4567672429877500612
+      Icon sheet (32x32)_169: 2851609178348481511
+      Icon sheet (32x32)_17: -279342441856874011
+      Icon sheet (32x32)_170: 9143339021970284781
+      Icon sheet (32x32)_171: 4773174570436210500
+      Icon sheet (32x32)_172: 4162825764197513920
+      Icon sheet (32x32)_173: 5560348463286412306
+      Icon sheet (32x32)_174: 1458998917007116960
+      Icon sheet (32x32)_175: 5746711460562895136
+      Icon sheet (32x32)_176: 1928137978266278750
+      Icon sheet (32x32)_177: -345278563298739449
+      Icon sheet (32x32)_178: -3766664556003298695
+      Icon sheet (32x32)_18: 1356906362618251606
+      Icon sheet (32x32)_19: -7167644491120413438
+      Icon sheet (32x32)_2: 5508324402833305565
+      Icon sheet (32x32)_20: 3603310197190872551
+      Icon sheet (32x32)_21: 280223306120592985
+      Icon sheet (32x32)_22: 6719939734736914578
+      Icon sheet (32x32)_23: -5216820406215608052
+      Icon sheet (32x32)_24: -5423695651360980717
+      Icon sheet (32x32)_25: -8798567590438484820
+      Icon sheet (32x32)_26: 1434411465283962774
+      Icon sheet (32x32)_27: 2497319266689417061
+      Icon sheet (32x32)_28: -4279903785370803889
+      Icon sheet (32x32)_29: 7535907664435963882
+      Icon sheet (32x32)_3: 6053170827857556490
+      Icon sheet (32x32)_30: 2367921326180410864
+      Icon sheet (32x32)_31: 189055425095081905
+      Icon sheet (32x32)_32: 866854346692964707
+      Icon sheet (32x32)_33: 9092022150642375450
+      Icon sheet (32x32)_34: -1930711042579196941
+      Icon sheet (32x32)_35: 4454339468690815805
+      Icon sheet (32x32)_36: 377197860087358012
+      Icon sheet (32x32)_37: 2774339394170359256
+      Icon sheet (32x32)_38: 4152932226655840007
+      Icon sheet (32x32)_39: 5520796860047085814
+      Icon sheet (32x32)_4: -6670220319607546934
+      Icon sheet (32x32)_40: -2564346245467713711
+      Icon sheet (32x32)_41: -5807144911986003400
+      Icon sheet (32x32)_42: -4057589885560023903
+      Icon sheet (32x32)_43: -5069218924371049544
+      Icon sheet (32x32)_44: -7415954141121073076
+      Icon sheet (32x32)_45: 4735743935550152400
+      Icon sheet (32x32)_46: 8867910101061853760
+      Icon sheet (32x32)_47: -3359014917884944898
+      Icon sheet (32x32)_48: -7234715657305391594
+      Icon sheet (32x32)_49: 7388937972562208007
+      Icon sheet (32x32)_5: 4650416014406119131
+      Icon sheet (32x32)_50: -2098102728402703421
+      Icon sheet (32x32)_51: -2452973841463551451
+      Icon sheet (32x32)_52: -4889880657397088252
+      Icon sheet (32x32)_53: -1448724017821136592
+      Icon sheet (32x32)_54: 9005420031864373758
+      Icon sheet (32x32)_55: -5667059493339577341
+      Icon sheet (32x32)_56: 3673414316292367657
+      Icon sheet (32x32)_57: -6206409272117156934
+      Icon sheet (32x32)_58: -5768170183690225187
+      Icon sheet (32x32)_59: -7855630647129401300
+      Icon sheet (32x32)_6: -6844403473276648554
+      Icon sheet (32x32)_60: 7258979812911543029
+      Icon sheet (32x32)_61: 8260389853199384029
+      Icon sheet (32x32)_62: -1536762822016944838
+      Icon sheet (32x32)_63: -6429578822752089204
+      Icon sheet (32x32)_64: -4459467871416245467
+      Icon sheet (32x32)_65: 2701509745295263224
+      Icon sheet (32x32)_66: 1840870397350872160
+      Icon sheet (32x32)_67: 5357913157687953821
+      Icon sheet (32x32)_68: 7832976729469963189
+      Icon sheet (32x32)_69: 6163824864049887566
+      Icon sheet (32x32)_7: -4907461379821242175
+      Icon sheet (32x32)_70: 5441551408431759648
+      Icon sheet (32x32)_71: 8545666544075286491
+      Icon sheet (32x32)_72: -7109597211387999102
+      Icon sheet (32x32)_73: 6508597892826915405
+      Icon sheet (32x32)_74: 3487891591596894054
+      Icon sheet (32x32)_75: 6132226348104622879
+      Icon sheet (32x32)_76: -60758292275249366
+      Icon sheet (32x32)_77: 1221012611621678990
+      Icon sheet (32x32)_78: 6722333664113901602
+      Icon sheet (32x32)_79: -1058150402792451034
+      Icon sheet (32x32)_8: -3367340920947268502
+      Icon sheet (32x32)_80: 5476724629027572070
+      Icon sheet (32x32)_81: -6518894631114305544
+      Icon sheet (32x32)_82: -1037712697456580398
+      Icon sheet (32x32)_83: -7026909535968752051
+      Icon sheet (32x32)_84: 5230453825059305234
+      Icon sheet (32x32)_85: 5792003023959587909
+      Icon sheet (32x32)_86: 8110797625833306609
+      Icon sheet (32x32)_87: 8075097987443685250
+      Icon sheet (32x32)_88: -8279795886123007692
+      Icon sheet (32x32)_89: -3138798722340739943
+      Icon sheet (32x32)_9: -833047816887362989
+      Icon sheet (32x32)_90: 3126148013494342416
+      Icon sheet (32x32)_91: -3614544645920737514
+      Icon sheet (32x32)_92: 1995393765880141213
+      Icon sheet (32x32)_93: 4839450763853015932
+      Icon sheet (32x32)_94: -3470901546877699471
+      Icon sheet (32x32)_95: 5569583966404233531
+      Icon sheet (32x32)_96: -7757324217375279744
+      Icon sheet (32x32)_97: 4313441653641955508
+      Icon sheet (32x32)_98: -6460421635458814284
+      Icon sheet (32x32)_99: 8459277320875242450
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

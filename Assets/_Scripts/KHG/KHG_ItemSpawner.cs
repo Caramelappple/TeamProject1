@@ -1,22 +1,37 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class KHG_ItemSpawner : MonoBehaviour
+public class ItemSpawner : MonoBehaviour
 {
-    private float _time;
-    [SerializeField] private GameObject item;
+    [SerializeField] private GameObject itemPrefab;
+
+    [SerializeField] private Transform[] spawnPoints;
+
+    [SerializeField] private float minSpawnTime = 1f;
+
+    [SerializeField] private float maxSpawnTime = 2f;
+
     private void Start()
     {
-        _time = Random.Range(20f, 61f);
-        StartCoroutine(itemspawn());
+        StartCoroutine(SpawnRoutine());
     }
-   
-    
-    IEnumerator itemspawn()
-    {
-        yield return  new WaitForSeconds(_time);
-        
-    }
-    
 
+    private IEnumerator SpawnRoutine()
+    {
+        while (true)
+        {
+            float randomTime = Random.Range(minSpawnTime, maxSpawnTime);
+            yield return new WaitForSeconds(randomTime);
+
+            SpawnItem();
+        }
+    }
+
+    private void SpawnItem()
+    {
+        int randomIndex = Random.Range(0, spawnPoints.Length);
+
+        Instantiate(itemPrefab, spawnPoints[randomIndex].position, Quaternion.identity);
+    }
 }
