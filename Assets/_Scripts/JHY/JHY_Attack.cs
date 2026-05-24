@@ -38,7 +38,7 @@ public class JHY_Attack : MonoBehaviour
     private float lastSpearRainTime;
 
     [Header("Damage")]
-    [SerializeField] private int meleeDamage = 7;
+    [SerializeField] private int meleeDamage = 15;
     [SerializeField] private Health playerHealth;
 
     [Header("Summon Skill")]

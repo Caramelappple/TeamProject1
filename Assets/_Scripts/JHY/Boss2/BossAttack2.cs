@@ -5,7 +5,7 @@ public class BossAttack2 : MonoBehaviour
     public Transform player;
     public float attackRange = 3.3f;
     public float attackCooldown = 3f;
-    public int damage = 8;
+    public int damage = 20;
     public float comboCooldown = 7f;
     public float comboRange = 3.3f;
     private float lastComboTime;

@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Monster
   moveSpeed: 2
-  damage: 5
+  damage: 10
   attackCooldown: 1
   health: {fileID: 831993428644657965}
   animator: {fileID: 0}

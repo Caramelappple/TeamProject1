@@ -379,7 +379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BossController
   speed: 2
   chaseRange: 7
-  stopRange: 4
+  stopRange: 2
   isArrived: 0
   isMoving: 0
   stunTime: 14
@@ -425,7 +425,7 @@ MonoBehaviour:
   spiderWebDuration: 6
   spearSpawner: {fileID: 566629621}
   spearRainCoolTime: 20
-  meleeDamage: 7
+  meleeDamage: 15
   playerHealth: {fileID: 1571487506}
   summonCoolTime: 40
   mobSummoner: {fileID: 566629623}

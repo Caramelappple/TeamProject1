@@ -9,7 +9,7 @@ public class Monster : MonoBehaviour
     private Rigidbody2D rb;
 
     [Header("Attack")]
-    [SerializeField] private int damage = 5;
+    [SerializeField] private int damage = 10;
     [SerializeField] private float attackCooldown = 1f;
     private float lastAttackTime;
 

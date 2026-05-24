@@ -13,7 +13,7 @@ public class JHY_BossMove : MonoBehaviour
     private Health playerHealth;
 
     [SerializeField] private float chaseRange = 7f;
-    [SerializeField] private float stopRange = 4f;
+    [SerializeField] private float stopRange = 2f;
     public bool isArrived = false;
     public bool isMoving;
 
