@@ -17,5 +17,5 @@ MonoBehaviour:
   mixerGroup: {fileID: -4496128942595586582, guid: 44e6620588154be43b389c0e82d9dffb,
     type: 2}
   volume: 1
-  minPitch: 0.95
-  maxPitch: 1.05
+  minPitch: 0.6
+  maxPitch: 2
