@@ -380,6 +380,7 @@ MonoBehaviour:
   speed: 2
   chaseRange: 7
   stopRange: 4
+  isArrived: 0
   isMoving: 0
   stunTime: 14
   stunDuration: 8
@@ -604,6 +605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0ad12e052c1e534c8362a278bb8ffb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NKY_GameManager
+  soundData: []
   <player>k__BackingField: {fileID: 1571487500}
 --- !u!4 &583915693
 Transform:
