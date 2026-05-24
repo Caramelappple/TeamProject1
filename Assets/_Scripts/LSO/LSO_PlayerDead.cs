@@ -10,6 +10,7 @@ public class LSO_PlayerDead : MonoBehaviour
     private Health _health;
     private SpriteRenderer _sprite;
     private Animator _animator;
+    private Rigidbody2D _rigid;
 
     [SerializeField] private KDH_MainMenuGo _menuGo;
 
@@ -23,6 +24,7 @@ public class LSO_PlayerDead : MonoBehaviour
         _attack = GetComponent<LSO_PlayerAttack>();
         _sprite = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
+        _rigid = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
@@ -40,7 +42,9 @@ public class LSO_PlayerDead : MonoBehaviour
 
         // 1. 애니메이션을 정상 실행 (컴포넌트를 바로 끄지 않음)
         LSO_SoundManager.Instance.SfxPlay(clip);
+        
         _animator.Play("DownIdle");
+        _rigid.simulated = false;
         DOVirtual.DelayedCall(0.02f, () => _animator.speed = 0f);
         health.Value = 0;
         health.SetDamageable(false);

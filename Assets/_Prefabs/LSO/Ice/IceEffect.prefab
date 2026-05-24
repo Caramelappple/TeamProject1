@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f45be14cf17db314aafb4b8a429a2442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_IceSpike
-  _damage: 8
+  _damage: 6
   _time: 1.8
 --- !u!70 &8265898498598690140
 CapsuleCollider2D:

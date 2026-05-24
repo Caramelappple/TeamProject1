@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4713d13fe8c7bb14aa4b4f937ef7ef6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Lightning
+  _damage: 4
 --- !u!70 &4946180283555382288
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
