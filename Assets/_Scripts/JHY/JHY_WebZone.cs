@@ -6,7 +6,6 @@ public class SpiderWebZone : MonoBehaviour
     [SerializeField] private float webRadius = 3f;          // 거미줄 범위
     private float originalDrag = -1f;
     private Rigidbody2D playerRb;
-    private bool playerInWeb = false;
 
     private void Update()
     {
@@ -37,7 +36,6 @@ public class SpiderWebZone : MonoBehaviour
             playerRb.linearDamping = originalDrag;
             originalDrag = -1f;    // 초기화
             playerRb = null;
-            playerInWeb = false;
         }
 
     }

@@ -12,7 +12,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
     
         private ContactFilter2D filter;
 
-        private void Awake()
+        protected override void OnAwake()
         {
             filter = new ContactFilter2D();
             filter.SetLayerMask(layerMask);

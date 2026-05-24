@@ -15,7 +15,6 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
         [SerializeField] private Collider2D attackCollider;
         
         [Header("보스 스킬 스텟 세팅")]
-        [SerializeField] private float spawnInterval = 0.3f;
         [SerializeField] private int swordCount = 6;
         [SerializeField] private float skulDistance = 30f;
         [SerializeField] private float skulDuration = 0.2f;

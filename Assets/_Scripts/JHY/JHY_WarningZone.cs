@@ -6,7 +6,6 @@ public class JHY_WarningZone : MonoBehaviour
     [SerializeField] private GameObject warningZonePrefab;
     [SerializeField] private float maxRadius = 2.5f;   // 실제 최종 반경
     [SerializeField] private float growTime = 1.5f;
-    [SerializeField] private int damage = 30;
     [SerializeField] private LayerMask playerLayer;
 
     public void Warning()
