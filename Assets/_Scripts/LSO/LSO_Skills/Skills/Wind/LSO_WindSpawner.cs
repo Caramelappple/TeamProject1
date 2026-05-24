@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class LSO_WindSpawner : MonoBehaviour,LSO_ISkill
 {
-    [SerializeField] private AudioClip clip;
     
     [SerializeField] private GameObject effect;
     private GameObject _effectInstance;
@@ -24,8 +23,7 @@ public class LSO_WindSpawner : MonoBehaviour,LSO_ISkill
         if (!_canUse) return;
         _canUse = false;
         
-        LSO_SoundManager.Instance.SfxPlay(clip);
-        
+        NKY_SoundManager.Instance.PlaySFX("Wind");        
         _effectInstance = Instantiate(effect, player.transform.position, Quaternion.identity);
         _effectInstance.GetComponent<LSO_Wind>().Init(player.GetComponent<Health>());
         _effectInstance.transform.SetParent(transform);

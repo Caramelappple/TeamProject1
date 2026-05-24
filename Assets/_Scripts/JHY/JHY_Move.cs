@@ -40,7 +40,7 @@ public class JHY_BossMove : MonoBehaviour
         timer = stunTime;
         dashTimer = dashCooldown;
 
-        player = NKY_GameManager.instance.player.transform;
+        //player = NKY_GameManager.instance.player.transform;
     }
 
     private IEnumerator Start()

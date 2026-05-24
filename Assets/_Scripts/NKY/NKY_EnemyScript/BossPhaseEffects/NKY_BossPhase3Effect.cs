@@ -21,7 +21,7 @@ namespace _Scripts.NKY._EnemyScript.BossPhaseEffects
         public override IEnumerator PlayPhaseEffect()
         {
             _bossAnimator.Play("Dead");
-            NKY_SoundManager.Instance.PlaySFX("Stun");
+            NKY_SoundManager.Instance.PlaySFX("StunClothes");
             NKY_SoundManager.Instance.PlaySFX("ClashGlass");
             yield return WaitAnim(_bossAnimator, "Dead", 0.6f);
             ImpactRingEffect();
