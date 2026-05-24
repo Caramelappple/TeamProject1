@@ -23,7 +23,7 @@ public class KHG_Healpack : MonoBehaviour, KHG_ICollectable
 
             OnCollected?.Invoke(this);
             
-            
+            Destroy(gameObject);
             
         }
         else

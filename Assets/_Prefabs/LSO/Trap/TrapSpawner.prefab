@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be04b1b21d30efe4ea002c7ebf4cbd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_BearTrapSpawner
-  coolTime: 7
+  coolTime: 1
   _trapCount: 4
   trapPrefab: {fileID: 8217472116318459907, guid: 515542048abc10c439732f4f285deebe,
     type: 3}

@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_WindSpawner
   effect: {fileID: 4444331399251687241, guid: 71163724ab95e5c4498dff0558cf1646, type: 3}
-  _coolTime: 14
+  _coolTime: 1
