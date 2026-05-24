@@ -204,7 +204,7 @@ namespace _Scripts.NKY._EnemyScript
         private void SetDamage(DamageResultData args) //Enemy?? ???????? ???? ????? ???????
         {
             //2������ ����
-            if (phase2Effect != null || (args.currentHealth < _myHealth.MaxValue / 2 && bossPhase < 2))
+            if (phase2Effect != null && (args.currentHealth < _myHealth.MaxValue / 2 && bossPhase < 2))
             {
                 PlayPhase2();
             }

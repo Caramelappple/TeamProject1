@@ -1,6 +1,7 @@
+using _Scripts.NKY._EnemyScript.BossPattern;
+using DG.Tweening.Core.Easing;
 using System.Collections;
 using System.Collections.Generic;
-using _Scripts.NKY._EnemyScript.BossPattern;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -99,18 +100,20 @@ public class NKY_BalckHollAttack : NKY_BossSkill
 
     private IEnumerator OffHoleEffect(GameObject effect)
     {
-        Vector2 effectScale = effect.transform.localScale * 0.1f;
-        NKY_SoundManager.Instance.PlaySFX("EndBlackHole");
+        Vector2 effectScale = effect.transform.localScale;
+        float curSize = 0;
         while (true)
         {
-            effect.transform.localScale = Vector2.Lerp(effectScale, effectScale * 0.1f, -Time.deltaTime);
-            yield return null;
-            if(effect.transform.localScale.x <= effectScale.x && effect.transform.localScale.y <= effectScale.y)
+            effect.transform.localScale = Vector2.Lerp(effectScale, effectScale * 0.1f, curSize);
+            if(Mathf.Abs(effect.transform.localScale.x - effectScale.x * 0.1f) <= 0.01f && Mathf.Abs(effect.transform.localScale.y - effectScale.y * 0.1f) <= 0.01f)
             {
                 effect.SetActive(false);
                 break;
             }
+            curSize += Time.deltaTime;
+            yield return null;
         }
+        effect.transform.localScale = effectScale;
     }
 
     private IEnumerator OnPull(GameObject target)
@@ -144,9 +147,9 @@ public class NKY_BalckHollAttack : NKY_BossSkill
             }
             oldIndex = pointIndex;
             slash = slashQueue.Dequeue();
-            slash.SetActive(true);
             slash.transform.position = point[pointIndex].position;
             slash.transform.rotation = Quaternion.Euler(0f, 0f, pointIndex * -90f);
+            slash.SetActive(true);
             slashs.Add(slash);
             
             yield return PlaySequence(
@@ -155,6 +158,7 @@ public class NKY_BalckHollAttack : NKY_BossSkill
                 SlashEffect(slash),
                 EnQueue(slash, slashQueue));
         }
+        NKY_SoundManager.Instance.PlaySFX("EndBlackHole");
     }
 
     private IEnumerator EnQueue(GameObject obj, Queue<GameObject> queue)
@@ -171,6 +175,7 @@ public class NKY_BalckHollAttack : NKY_BossSkill
         effect.SetActive(true);
         anim = effect.GetComponent<Animator>();
         anim.Play("SlashEffect");
+        NKY_SoundManager.Instance.PlaySFX("Swing");
         yield return StartCoroutine(WaitAnim(anim, "SlashEffect", 1f));
     }
     

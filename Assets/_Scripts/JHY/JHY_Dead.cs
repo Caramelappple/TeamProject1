@@ -28,17 +28,21 @@ public class JHY_Dead : MonoBehaviour
     private void HandleDamage(DamageResultData data)
     {
         if (isDead) return;
-
+       
         if (health.IsDestroyed)
         {
             Die();
+        }
+        else
+        {
+            //피격 사운드
         }
     }
 
     private void Die()
     {
         isDead = true;
-
+        //사망 효과음 재생
         JHY_Attack attack = GetComponent<JHY_Attack>();
         if (attack != null)
         {

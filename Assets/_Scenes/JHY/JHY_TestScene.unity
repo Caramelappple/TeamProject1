@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossController
   playerHealth: {fileID: 1571487506}
-  speed: 3
+  speed: 2
   player: {fileID: 1571487515}
   chaseRange: 7
   stopRange: 4
@@ -387,9 +387,10 @@ MonoBehaviour:
   stunDuration: 8
   isStunned: 0
   dashRange: 10
-  dashCooldown: 6
+  dashCooldown: 8
   dashSpeed: 12
   dashDuration: 0.7
+  startDelay: 5
 --- !u!114 &566629616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,7 +412,7 @@ MonoBehaviour:
   attackRange: 4
   attackCooldown: 1.2
   skillRange: 15
-  skillCoolTime: 3
+  skillCoolTime: 5
   jumpAttackCoolTime: 7
   projectileCount: 5
   spreadAngle: 60
@@ -438,6 +439,8 @@ MonoBehaviour:
     type: 3}
   phaseChangeDuration: 1.5
   warningZone: {fileID: 566629620}
+  canAct: 0
+  startDelay: 5
 --- !u!95 &566629617
 Animator:
   serializedVersion: 7
@@ -533,6 +536,7 @@ MonoBehaviour:
   spawnDelay: 0.2
   warningTime: 0.8
   spawnHeightOffset: 3
+  warningOffset: {x: 0, y: -0.8}
 --- !u!114 &566629622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -936,7 +940,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 761876236}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SwordAxis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1013,7 +1017,7 @@ GameObject:
   - component: {fileID: 1571487503}
   - component: {fileID: 1571487502}
   - component: {fileID: 1571487501}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player (1)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1485,7 +1489,7 @@ GameObject:
   - component: {fileID: 1747134750}
   - component: {fileID: 1747134749}
   - component: {fileID: 1747134748}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}

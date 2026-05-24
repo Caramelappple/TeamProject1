@@ -98,6 +98,7 @@ public class Monster : MonoBehaviour
         DamageData data = DamageData.Create(null, damage);
         playerHealth.GetDamage(data);
         lastAttackTime = Time.time;
+        //몬스터가 플레이어를 들이받거나 공격하는 소리 재생
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -114,7 +115,7 @@ public class Monster : MonoBehaviour
     {
         if (isDead) return;
         if (health == null) return;
-
+        //몬스터가 대미지를 입었을 때
         ApplyKnockback();
 
         if (health.IsDestroyed)
@@ -136,6 +137,7 @@ public class Monster : MonoBehaviour
     private void Die()
     {
         isDead = true;
+        //몬스터가 죽을 때
         rb.linearVelocity = Vector2.zero;
 
         if (animator != null)
