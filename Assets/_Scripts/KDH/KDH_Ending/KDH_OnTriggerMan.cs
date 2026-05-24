@@ -3,7 +3,6 @@ using UnityEngine;
 public class KDH_OnTriggerMan : MonoBehaviour
 {
     [SerializeField] private GameObject endingBox;
-
     private KDH_SkillSystem _skillSystem;
     private void Start()
     {
