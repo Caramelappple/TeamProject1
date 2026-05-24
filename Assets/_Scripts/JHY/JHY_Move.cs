@@ -3,261 +3,68 @@ using UnityEngine;
 
 public class JHY_BossMove : MonoBehaviour
 {
-     private Rigidbody2D rb;
-
-
-
+    private Rigidbody2D rb;
     private Animator ani;
-
-
-
     private SpriteRenderer sr;
-
-
-
-    private JHY_Attack bossAttack; // ◀ 공격 스크립트 참조 추가
-
-
-
-
-
-
+    private JHY_Attack bossAttack;
 
     [SerializeField] private float speed = 2;
-
-
-
     private Transform player;
-
-
-
-    private Health playerHealth; // ◀ 인스펙터에서 안 넣어도 자동으로 찾도록 수정
-
-
-
-
-
-
+    private Health playerHealth;
 
     [SerializeField] private float chaseRange = 7f;
-
-
-
     [SerializeField] private float stopRange = 4f;
-
-
-
     public bool isArrived = false;
-
-
-
     public bool isMoving;
 
-
-
-
-
-
-
     [SerializeField] private float stunTime = 15f;
-
-
-
     [SerializeField] private float stunDuration = 7f;
 
-
-
-
-
-
-
     public bool isStunned;
-
-
-
     private float timer;
 
-
-
-
-
-
-
     [Header("Dash")]
-
-
-
     [SerializeField] private float dashRange = 10f;
-
-
-
     [SerializeField] private float dashCooldown = 8f;
-
-
-
     [SerializeField] private float dashSpeed = 12f;
-
-
-
     [SerializeField] private float dashDuration = 0.7f;
 
-
-
-
-
-
-
     [Header("intro")]
-
-
-
     [SerializeField] private NKY_BossIntro bossIntro;
-
-
-
     private float dashTimer;
-
-
-
     private bool isDashing;
-
-
-
-
-
-
-
     private bool isSkillLocked;
 
-
-
-
-
-
-
     void Awake()
-
-
-
     {
-
-
-
         ani = GetComponent<Animator>();
-
-
-
         rb = GetComponent<Rigidbody2D>();
-
-
-
         sr = GetComponent<SpriteRenderer>();
-
-
-
-        bossAttack = GetComponent<JHY_Attack>(); // ◀ 컴포넌트 가져오기
-
-
-
-
-
-
+        bossAttack = GetComponent<JHY_Attack>();
 
         timer = stunTime;
-
-
-
         dashTimer = dashCooldown;
-
-
-
     }
-
-
-
-
-
-
 
     private void Start()
-
-
-
     {
-
-
-
         StartCoroutine(PlayBoss());
-
-
-
     }
-
-
-
-
-
-
 
     private IEnumerator PlayBoss()
-
-
-
     {
-
-
-
         yield return StartCoroutine(bossIntro.PlayIntro());
-
-
-
         SetPlayerTarget();
-
-
-
     }
-
-
-
-
-
-
 
     public void SetPlayerTarget()
-
-
-
     {
-
-
-
         if (NKY_GameManager.instance != null && NKY_GameManager.instance.player != null)
-
-
-
         {
-
-
-
             player = NKY_GameManager.instance.player.transform;
-
-
-
             playerHealth = player.GetComponent<Health>();
-
-
-
         }
-
-
-
     }
-
-
-
-
-
-
 
     void Update()
     {
@@ -317,7 +124,6 @@ public class JHY_BossMove : MonoBehaviour
             LookAtPlayer();
 
             float distance2 = Vector2.Distance(transform.position, player.position);
-
             dashTimer -= Time.deltaTime;
 
             if (distance2 <= dashRange && dashTimer <= 0f)
@@ -342,278 +148,92 @@ public class JHY_BossMove : MonoBehaviour
         }
     }
 
+
     void LookAtDirection(Vector2 dir)
     {
-        if (sr == null) return;
+        if (sr == null || dir.x == 0) return;
 
+        
         if (dir.x > 0)
-            sr.flipX = true;
-        else if (dir.x < 0)
             sr.flipX = false;
+        else if (dir.x < 0)
+            sr.flipX = true;
     }
 
-
-
-
-
-
-    IEnumerator DashToPlayer()
-
-
-
-    {
-
-
-
-        isDashing = true;
-
-
-
-        isMoving = true;
-
-
-
-        dashTimer = dashCooldown;
-
-
-
-
-
-
-
-        NKY_SoundManager.Instance.PlaySFX("Rush");
-
-
-
-        Vector2 dashDirection = (player.position - transform.position).normalized;
-
-
-
-        float elapsed = 0f;
-
-
-
-
-
-
-
-        while (elapsed < dashDuration)
-
-
-
-        {
-
-
-
-            if (isSkillLocked) break;
-
-
-
-
-
-
-
-            transform.position += (Vector3)(dashDirection * dashSpeed * Time.deltaTime);
-
-
-
-            ani.SetFloat("Speed", dashSpeed);
-
-
-
-            elapsed += Time.deltaTime;
-
-
-
-            yield return null;
-
-
-
-        }
-
-
-
-
-
-
-
-        isDashing = false;
-
-
-
-        isMoving = false;
-
-
-
-        ani.SetFloat("Speed", 0f);
-
-
-
-    }
-
-
-
-
-
-
-
-    IEnumerator Stun()
-
-
-
-    {
-
-
-
-        isStunned = true;
-
-
-
-        isMoving = false;
-
-
-
-        ani.SetFloat("Speed", 0f);
-
-
-
-        ani.SetTrigger("Stop");
-
-
-
-        NKY_SoundManager.Instance.PlaySFX("Stun");
-
-
-
-        yield return new WaitForSeconds(stunDuration);
-
-
-
-        timer = stunTime;
-
-
-
-        isStunned = false;
-
-
-
-    }
-
-
-
-
-
-
-
+  
     void LookAtPlayer()
     {
+        if (player == null || sr == null) return;
+
+       
         if (player.position.x > transform.position.x)
         {
-            sr.flipX = true;
+            sr.flipX = false;
         }
         else
         {
-            sr.flipX = false;
+            sr.flipX = true;
         }
     }
 
+    IEnumerator DashToPlayer()
+    {
+        isDashing = true;
+        isMoving = true;
+        dashTimer = dashCooldown;
 
+        NKY_SoundManager.Instance.PlaySFX("Rush");
+        Vector2 dashDirection = (player.position - transform.position).normalized;
+        float elapsed = 0f;
 
+        while (elapsed < dashDuration)
+        {
+            if (isSkillLocked) break;
 
+            transform.position += (Vector3)(dashDirection * dashSpeed * Time.deltaTime);
+            ani.SetFloat("Speed", dashSpeed);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
 
+        isDashing = false;
+        isMoving = false;
+        ani.SetFloat("Speed", 0f);
+    }
 
+    IEnumerator Stun()
+    {
+        isStunned = true;
+        isMoving = false;
+        ani.SetFloat("Speed", 0f);
+        ani.SetTrigger("Stop");
+        NKY_SoundManager.Instance.PlaySFX("Stun");
+        yield return new WaitForSeconds(stunDuration);
+        timer = stunTime;
+        isStunned = false;
+    }
 
     void MoveTowardsPlayer()
-
-
-
     {
-
-
-
         Vector2 targetPos = new Vector2(player.position.x, player.position.y);
-
-
-
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-
-
-
         isMoving = true;
-
-
-
         ani.SetFloat("Speed", speed);
-
-
-
     }
-
-
-
-
-
-
 
     public void StopMoving()
-
-
-
     {
-
-
-
         isMoving = false;
-
-
-
         ani.SetFloat("Speed", 0f);
-
-
-
     }
 
-
-
-
-
-
-
     public void SetSkillLock(bool value)
-
-
-
     {
-
-
-
         isSkillLocked = value;
-
-
-
-
-
-
-
         if (value)
-
-
-
         {
-
-
-
             isDashing = false;
-
-
-
             StopMoving();
-
-
-
         }
-
-
-
     }
 }
