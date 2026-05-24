@@ -3978,6 +3978,7 @@ MonoBehaviour:
   phase2Effect: {fileID: 0}
   phase3Effect: {fileID: 0}
   <Damage>k__BackingField: 5
+  deadSound: {fileID: 11400000, guid: c4a32372aca02704f891e66cc7cf8518, type: 2}
 --- !u!4 &1202624602
 Transform:
   m_ObjectHideFlags: 0
@@ -4718,6 +4719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8192304f921ff54889397dd0953fba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NKY_ReturnSwordAttack
+  throwSword: {fileID: 0}
   spawnPoints:
   - {fileID: 1202624602}
   swordPrefab: {fileID: 7601340347430588439, guid: 7bfb841379beb51489cd548e02e68d28,

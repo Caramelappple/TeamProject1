@@ -19278,7 +19278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NKY_SoundManager
   initialPoolSize: 10
-  bgmSource: {fileID: 707967878}
+  bgmSource: {fileID: 0}
   registrySoundData:
   - {fileID: 11400000, guid: 7452d0f76ad4c0f4d8266d610d6d951b, type: 2}
   - {fileID: 11400000, guid: 781cd327645b72642a8a81b09506351e, type: 2}
@@ -19346,6 +19346,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7120155dd8c8aac448f5ecb1e5a18e65, type: 2}
   - {fileID: 11400000, guid: 14770b12b8727ef48b251301d187237b, type: 2}
   - {fileID: 11400000, guid: a581c3618a3ba994ab309c12bf1efd66, type: 2}
+  - {fileID: 11400000, guid: 680805e57aff5ae40883ffb8ed133145, type: 2}
   - {fileID: 11400000, guid: 457a755f5e5009942af4321cbef427c6, type: 2}
   - {fileID: 11400000, guid: a296ae8953f0c9c479bf91ee31fe1929, type: 2}
   - {fileID: 11400000, guid: 98e75e72eff5f8a449cf1ae7db1aa570, type: 2}
