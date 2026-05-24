@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9fcb7c28e2de842a898afab6ce9da6, type: 3}
   m_Name: LSO_Clone2 1
   m_EditorClassIdentifier: Assembly-CSharp::NKY_SoundData
-  soundName: 
-  clip: {fileID: 0}
+  soundName: CloneAttack
+  clip: {fileID: 8300000, guid: 87e9fc04cbc5d4f638092101d70f4ee0, type: 3}
   mixerGroup: {fileID: -4496128942595586582, guid: 44e6620588154be43b389c0e82d9dffb,
     type: 2}
   volume: 1

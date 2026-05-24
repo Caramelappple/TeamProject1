@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class LSO_Immune : MonoBehaviour, LSO_ISkill
 {
-    [SerializeField] private AudioClip clip;
     
     private bool _canUse = true;
     
@@ -17,7 +16,7 @@ public class LSO_Immune : MonoBehaviour, LSO_ISkill
     {
         if (!_canUse) return;
 
-        LSO_SoundManager.Instance.SfxPlay(clip);    
+        NKY_SoundManager.Instance.PlaySFX("Immune");
         this._player = player;
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(3));
     }
