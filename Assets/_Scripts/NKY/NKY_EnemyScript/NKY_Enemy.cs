@@ -40,7 +40,6 @@ namespace _Scripts.NKY._EnemyScript
             }
             _shadow = GetComponent<NKY_ShadowController>();
             _myHealth = gameObject.GetComponent<Health>();
-            _target = playerReference.gameObject;
 
             if (skills != null)
             {
@@ -54,6 +53,7 @@ namespace _Scripts.NKY._EnemyScript
         private void Start()
         {
             playerReference = NKY_GameManager.instance.player.GetComponent<LSO_PlayerMovement>();
+            _target = playerReference.gameObject;
 
             intro.gameObject.SetActive(false);
             if (_myHealth != null)
