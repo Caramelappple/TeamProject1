@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class LSO_Bombing : MonoBehaviour,LSO_ISkill
 {
-    [SerializeField] private AudioClip clip;
     
     private static readonly int Explode = Animator.StringToHash("Explode");
     private Animator _animator;
@@ -20,8 +19,7 @@ public class LSO_Bombing : MonoBehaviour,LSO_ISkill
     public void UseSkill(GameObject player)
     {
         if (!_canUse) return;
-        
-        LSO_SoundManager.Instance.SfxPlay(clip); // 오디오 실행
+        NKY_SoundManager.Instance.PlaySFX("BombExplode");
         if (!_effectInstance || !_animator)
         {
             _effectInstance = Instantiate(effect, player.transform.position, transform.rotation);

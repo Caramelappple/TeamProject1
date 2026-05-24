@@ -45,5 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Blood
   clip: {fileID: 8300000, guid: 657ed399b484844c8aceb6a7489d6079, type: 3}
+  _coolTime: 9
+  _waitTime: 1
+  _damage: 35
+  _healValue: 30
   hEffect: {fileID: 7209271979582039876, guid: 3678edc21e25f034097f88fff7c2c196, type: 3}
   vEffect: {fileID: 8364555677630382504, guid: 41ef4ba765f23e149adf1cc115c4833b, type: 3}

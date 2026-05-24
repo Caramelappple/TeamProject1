@@ -44,17 +44,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa46ee7b754241cc8d0023e8342e7010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_Scripts.LSO.LSO_Skills.Skills.LSO_LightningSpawner
-  clips:
-  - {fileID: 8300000, guid: e23a86af9e9a74717b72ded08064d01a, type: 3}
-  - {fileID: 8300000, guid: 8b3982077b54a4dad8ea1fdfaed5a463, type: 3}
-  - {fileID: 8300000, guid: 8fc4b13ab672841f0be9d0d92f645f83, type: 3}
-  - {fileID: 8300000, guid: 3fc62d90e9aea4540ad0b23fa2ff6ce3, type: 3}
-  - {fileID: 8300000, guid: a715fd3b370414b28a2a40bc90b279f8, type: 3}
-  - {fileID: 8300000, guid: 4c70d944ea73740a58a9dc6a65d46397, type: 3}
-  - {fileID: 8300000, guid: 657b1c58f7a6c4cc682ea89b80d3e5e9, type: 3}
-  - {fileID: 8300000, guid: 1e459b8425d374fa9b680a3352fad484, type: 3}
-  - {fileID: 8300000, guid: f2c90c97a02424155a6e2ffd1f4ea5dd, type: 3}
-  - {fileID: 8300000, guid: 3665f122f5e8e444aa927abe881d59b0, type: 3}
-  - {fileID: 8300000, guid: fb85ea8e103994e81843cf91b49c9376, type: 3}
-  - {fileID: 8300000, guid: e759992620da9407c90d6fc2373b4b4e, type: 3}
+  SoundClip:
+  - {fileID: 11400000, guid: b0dfd73696dd99942863b8b31afb1127, type: 2}
+  - {fileID: 11400000, guid: 5fb23b65bda490246b15c40e15a7dc76, type: 2}
+  - {fileID: 11400000, guid: 5aee19299346fb6418b449cb28033884, type: 2}
+  - {fileID: 11400000, guid: 20bd1efc4346644478030cc26bd2bab8, type: 2}
+  - {fileID: 11400000, guid: aa98400d348e533419582828a006b3d0, type: 2}
+  - {fileID: 11400000, guid: dd989f4c2c5f49a4fab6c6ec247e2426, type: 2}
+  - {fileID: 11400000, guid: 4179b60dcd8577f4bb1565d074a72a0e, type: 2}
+  - {fileID: 11400000, guid: a2961b2e5c47dbd4fb0c291ee337aec8, type: 2}
+  - {fileID: 11400000, guid: f6b3a3b3cc390d94db75da62b177d317, type: 2}
+  - {fileID: 11400000, guid: d6a3944ef8a910f4a87f081b1cff4495, type: 2}
+  - {fileID: 11400000, guid: 5a64c2fe122aa0d428739a91a6fae1f3, type: 2}
+  - {fileID: 11400000, guid: 45c5c9f31a6a3744ea26fe8bdcbcea67, type: 2}
+  _coolTime: 5
   effect: {fileID: 4037454949488126040, guid: 4978844acbd7b4b4492d6322cc90a762, type: 3}

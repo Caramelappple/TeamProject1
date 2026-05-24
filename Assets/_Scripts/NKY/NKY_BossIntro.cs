@@ -53,6 +53,7 @@ public class NKY_BossIntro : MonoBehaviour
 
     public IEnumerator PlayIntro()
     {
+<<<<<<< HEAD
         _player = NKY_GameManager.instance.player;
         _health = _player.GetComponent<Health>();
         _movement = _player.GetComponent<LSO_PlayerMovement>();
@@ -65,7 +66,10 @@ public class NKY_BossIntro : MonoBehaviour
         if (_skillSystem != null) _skillSystem.SetCanUseSkill(false); // 김동휘거 떼옴
         
         yield return new WaitForSeconds(2.5f); // KDH가 추가함
+=======
+>>>>>>> base2
         gameObject.SetActive(true);
+        yield return new WaitForSeconds(2.5f); // KDH가 추가함
         _camera.transform.DOMove(new Vector3(boss.position.x, boss.position.y, _camera.transform.position.z), 2.5f).SetEase(Ease.OutQuint);
         top.DOSizeDelta(introSize, 2f).SetEase(Ease.OutQuint);
         bottom.DOSizeDelta(introSize, 2f).SetEase(Ease.OutQuint);

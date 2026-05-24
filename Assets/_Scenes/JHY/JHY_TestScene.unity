@@ -566,7 +566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JHY_MobSummoner
   mobPrefabs:
-  - {fileID: 7780400313367859899, guid: d5d6fd5d06b718348984fe2702c7d117, type: 3}
+  - {fileID: 166557234148260107, guid: 7d02f4c43947b6d4396146d4ebffe426, type: 3}
   summonPoints:
   - {fileID: 366704157}
   - {fileID: 708319930}
