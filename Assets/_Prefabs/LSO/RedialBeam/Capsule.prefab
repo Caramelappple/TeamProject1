@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4907d356f9216644ea4648c5bac7815f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_BeamBullet
+  _damage: 1
 --- !u!70 &3972710839904827431
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

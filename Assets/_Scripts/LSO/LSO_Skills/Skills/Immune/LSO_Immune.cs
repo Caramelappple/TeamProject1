@@ -29,6 +29,7 @@ public class LSO_Immune : MonoBehaviour, LSO_ISkill
         LSO_PlayerMovement movement = _player.GetComponent<LSO_PlayerMovement>();
         LSO_PlayerAttack attack = _player.GetComponent<LSO_PlayerAttack>();
         Health health = _player.GetComponent<Health>();
+        Rigidbody2D rigid = _player.GetComponent<Rigidbody2D>();
 
         KDH_SkillSystem skillSystem = FindFirstObjectByType<KDH_SkillSystem>(); // 김동휘가 건듦
 
@@ -40,6 +41,7 @@ public class LSO_Immune : MonoBehaviour, LSO_ISkill
         if (movement != null) movement.SetMove(false);
         if (attack != null) attack.SetCanAttack(false);
         if (skillSystem != null) skillSystem.SetCanUseSkill(false); // 김동휘가 건듦 무적상태일 때 스킬이 입력 안 되게
+        if (rigid != null) rigid.simulated = false;
 
         // 지속 시간 대기
         yield return new WaitForSeconds(waitTime);
@@ -50,6 +52,7 @@ public class LSO_Immune : MonoBehaviour, LSO_ISkill
         if (movement != null) movement.SetMove(true);   // 이동 허용
         if (attack != null) attack.SetCanAttack(true);     // 공격 허용
         if (skillSystem != null) skillSystem.SetCanUseSkill(true); // 김동휘가 건듦 무적상태가 끝나면 스킬 입력 가능
+        if (rigid != null) rigid.simulated = true;
 
         //[남은 쿨타임 대기]
         float remainingCool = coolTime - waitTime;
