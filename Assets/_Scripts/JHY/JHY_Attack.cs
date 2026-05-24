@@ -13,7 +13,7 @@ public class JHY_Attack : MonoBehaviour
     [SerializeField] private GameObject projectilePrefab2;
 
     [Header("Attack Settings")]
-    [SerializeField] private float attackRange = 4f;
+    [SerializeField] private float attackRange = 3f;
     [SerializeField] private float attackCooldown = 1.2f;
     [SerializeField] private float skillRange = 15f;
     [SerializeField] private float skillCoolTime = 5f;
