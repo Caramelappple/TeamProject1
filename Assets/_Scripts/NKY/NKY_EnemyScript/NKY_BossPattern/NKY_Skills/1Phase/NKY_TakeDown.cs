@@ -33,6 +33,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
             {
                 bossCol.isTrigger = true;
                 Anim.SetTrigger(Vanish);
+                NKY_SoundManager.Instance.PlaySFX("Teleport");
                 yield return StartCoroutine(WaitAnim("Vanish", 1f));
                 
                 targetPos = target.position;
@@ -51,7 +52,7 @@ namespace _Scripts.NKY.NKY_EnemyScript.NKY_Skills
                     WaitUntilOrTime(() => false, 0.15f),
                     MoveTo(boss, targetPos, 0.2f),
                     WaitUntilOrTime(() => false, 0.2f),
-                    ComboAttack("StationaryAttack",
+                    ComboAttack("StationaryAttack", "Lending",
                         () => _HitBoxController.Cast(slamHitbox[2], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage)),
                         () => _HitBoxController.Cast(slamHitbox[0], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage)),
                         () => _HitBoxController.Cast(slamHitbox[1], (hitTarget) => HitToDamage(boss.gameObject, hitTarget.gameObject, _damage))

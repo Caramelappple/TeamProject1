@@ -32,13 +32,14 @@ namespace _Scripts.NKY._EnemyScript.BossPattern
 
         public abstract void EndSkill();
         
-        protected IEnumerator ComboAttack(string animName, params System.Action[] attackLogics)
+        protected IEnumerator ComboAttack(string animName, string soundName, params System.Action[] attackLogics)
         {
             _bossBrain._attackEventQueue.Clear();
             _HitBoxController?.ResetHit();
             foreach (var logic in attackLogics) 
                 _bossBrain._attackEventQueue.Enqueue(logic);
             Anim.Play(animName);
+            NKY_SoundManager.Instance.PlaySFX(soundName);
             yield return StartCoroutine(WaitAnim(animName, 1.0f));
             _bossBrain._attackEventQueue.Clear();
         }
