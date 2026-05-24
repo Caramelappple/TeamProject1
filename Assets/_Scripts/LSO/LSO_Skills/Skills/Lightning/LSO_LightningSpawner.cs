@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class LSO_LightningSpawner : MonoBehaviour, LSO_ISkill
 {
-    [SerializeField] private AudioClip[] clips;
+    [SerializeField] private NKY_SoundData[] SoundClip;
 
     private GameObject _player;
     private bool _canUse = true;
@@ -53,8 +53,8 @@ public class LSO_LightningSpawner : MonoBehaviour, LSO_ISkill
             if (_isDestroyed) yield break; //삭제됐으면 중단
             if (!_target) break;
 
-            LSO_SoundManager.Instance.SfxPlay(clips[Random.Range(0, clips.Length)]);
-
+            NKY_SoundManager.Instance.PlaySFX(SoundClip[1].soundName);
+            
             _effectInstance = Instantiate(
                 effect,
                 _target.transform.position + new Vector3(

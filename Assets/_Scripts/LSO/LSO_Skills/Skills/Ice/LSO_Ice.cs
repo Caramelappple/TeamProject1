@@ -1,9 +1,10 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class LSO_Ice : MonoBehaviour,LSO_ISkill
 {
-    [SerializeField] private AudioClip[] clips;
+    [SerializeField] private NKY_SoundData[] soundClip;
     private int _clipIndex;
     
     private GameObject _player;
@@ -49,8 +50,8 @@ public class LSO_Ice : MonoBehaviour,LSO_ISkill
             float radian = currentAngle * Mathf.Deg2Rad;
             Vector2 direction = new Vector2(Mathf.Cos(radian), Mathf.Sin(radian));
             
-            LSO_SoundManager.Instance.SfxPlay(clips[_clipIndex]);
-            _clipIndex = (_clipIndex + 1) % clips.Length;
+            NKY_SoundManager.Instance.PlaySFX(soundClip[1].soundName);
+            _clipIndex = (_clipIndex + 1) % soundClip.Length;
             
             _effectInstance = Instantiate(effect, (Vector3)direction * _range + _tempTransform, Quaternion.identity);
             

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LSO_Blood : MonoBehaviour,LSO_ISkill
 {
-    [SerializeField] private AudioClip clip;
     
     private LSO_PlayerMovement _playerMovement;
     private GameObject _player;
@@ -42,8 +41,7 @@ public class LSO_Blood : MonoBehaviour,LSO_ISkill
         {
             _effectInstance = Instantiate(vEffect, player.transform.position, Quaternion.identity);
         }
-        LSO_SoundManager.Instance.SfxPlay(clip);
-        
+        NKY_SoundManager.Instance.PlaySFX("TrapExplode");
         Vector2 dir = new  Vector2(_effectInstance.transform.position.x+_lastDir.x * 2.4f, _effectInstance.transform.position.y + _lastDir.y + 0.5f);
         
         //보는 방향 맞춰서 뒤집어 주기

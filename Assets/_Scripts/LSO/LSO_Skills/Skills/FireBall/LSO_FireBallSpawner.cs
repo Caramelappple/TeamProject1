@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class LSO_FireBallSpawner : MonoBehaviour,LSO_ISkill
 {
-    [SerializeField] private AudioClip clip;
     
     private LSO_PlayerMovement _movement;
     private Vector3 _lastDir;
@@ -24,7 +23,7 @@ public class LSO_FireBallSpawner : MonoBehaviour,LSO_ISkill
        
         _fireball = Instantiate(fireballPrefab, player.transform.position, Quaternion.AngleAxis(angle+90, Vector3.forward));
         _fireball.GetComponent<LSO_FireBall>().Init(_lastDir);
-        LSO_SoundManager.Instance.SfxPlay(clip);
+        NKY_SoundManager.Instance.PlaySFX("FireBallExplode");
         
         player.GetComponent<MonoBehaviour>().StartCoroutine(CoolTime(_coolTime));
     }
