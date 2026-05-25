@@ -1515,6 +1515,7 @@ MonoBehaviour:
   - {fileID: 1280287572}
   minSpawnTime: 8
   maxSpawnTime: 23
+  boss: {fileID: 80858970}
 --- !u!1 &1202128696
 GameObject:
   m_ObjectHideFlags: 0
