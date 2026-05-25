@@ -10180,7 +10180,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2cb8112c38fd30c4db969d2d864021b5, type: 2}
   - {fileID: 11400000, guid: 6e329342d551a634895e4b0ae83ef162, type: 2}
   - {fileID: 11400000, guid: 987be2a5cfa90b74e8a75beef2b75911, type: 2}
-  - {fileID: 11400000, guid: 98c585bc5b76a4b408890cb4bc14e9b0, type: 2}
   - {fileID: 11400000, guid: 9715fba982226fd4983fd5d666268650, type: 2}
   - {fileID: 11400000, guid: 44a50522ce0053b459c0ebdc3c63a08f, type: 2}
   - {fileID: 11400000, guid: 8c01a85d743b08143acf0c9ce381ce46, type: 2}
@@ -19883,7 +19882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 354cf5cd53ef7e64d82055204e8368d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NKY_SoundManager
-  initialPoolSize: 10
+  initialPoolSize: 150
   bgmSource: {fileID: 0}
   registrySoundData:
   - {fileID: 11400000, guid: 7452d0f76ad4c0f4d8266d610d6d951b, type: 2}
@@ -19952,6 +19951,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7120155dd8c8aac448f5ecb1e5a18e65, type: 2}
   - {fileID: 11400000, guid: 14770b12b8727ef48b251301d187237b, type: 2}
   - {fileID: 11400000, guid: a581c3618a3ba994ab309c12bf1efd66, type: 2}
+  - {fileID: 11400000, guid: 680805e57aff5ae40883ffb8ed133145, type: 2}
   - {fileID: 11400000, guid: 457a755f5e5009942af4321cbef427c6, type: 2}
   - {fileID: 11400000, guid: a296ae8953f0c9c479bf91ee31fe1929, type: 2}
   - {fileID: 11400000, guid: 98e75e72eff5f8a449cf1ae7db1aa570, type: 2}

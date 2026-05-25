@@ -137,7 +137,6 @@ public class Monster : MonoBehaviour
     private void Die()
     {
         isDead = true;
-        NKY_SoundManager.Instance.PlaySFX("MobDead");
         rb.linearVelocity = Vector2.zero;
 
         if (animator != null)

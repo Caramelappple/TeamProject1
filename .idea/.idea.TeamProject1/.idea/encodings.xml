@@ -5,6 +5,7 @@
     <file url="file://$PROJECT_DIR$/Assets/_Scripts/KSY/HealthSystem/KSY_DamageableResource.cs" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/Assets/_Scripts/KSY/HealthSystem/KSY_Health.cs" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/Assets/_Scripts/NKY/NKY_EnemyScript/NKY_BossPattern/NKY_PatternCoroutine.cs" charset="EUC-KR" />
+    <file url="file://$PROJECT_DIR$/Assets/_Scripts/NKY/NKY_EnemyScript/NKY_BossPattern/NKY_Skills/1Phase/NKY_ChargeSlash.cs" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/Assets/_Scripts/NKY/NKY_EnemyScript/NKY_BossPattern/NKY_Skills/1Phase/NKY_SwordStorm.cs" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/Assets/_Scripts/NKY/NKY_EnemyScript/NKY_BossPattern/NKY_Skills/2Phase/NKY_SwordBomb.cs" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/Assets/_Scripts/NKY/NKY_EnemyScript/NKY_BossPattern/NKY_Skills/3Phase/NKY_DashAndSlap.cs" charset="EUC-KR" />
