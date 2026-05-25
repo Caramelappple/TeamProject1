@@ -83,7 +83,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 200
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 4cb539bde7cd04a2984fbffb36959350, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -193,6 +193,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02fab16851cf57a43980382c11fce35e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_FireBall
-  clip: {fileID: 8300000, guid: f5a962cf7a0c349e8a20af1cba03d5ed, type: 3}
   explosionPrefab: {fileID: 3967992238580947959, guid: d4c5507b5f8d96340b05ee57f02c912f,
     type: 3}

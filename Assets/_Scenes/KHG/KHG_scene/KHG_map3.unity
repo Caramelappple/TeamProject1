@@ -5726,7 +5726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_Scripts.NKY._EnemyScript.NKY_Enemy
   bossPhase: 4
-  _skillCooldown: 4
+  _skillCooldown: 1
   intro: {fileID: 278560921}
   skills:
   - {fileID: 962697248}
@@ -6486,9 +6486,9 @@ MonoBehaviour:
   returnTarget: {fileID: 0}
   playAnimName: Attack2
   bul: 1
-  spawnInterval: 0.1
+  spawnInterval: 0.03
   swordCount: 20
-  swordDuration: 2
+  swordDuration: 1.5
   <DamageScale>k__BackingField: 1
 --- !u!1 &2004229218
 GameObject:

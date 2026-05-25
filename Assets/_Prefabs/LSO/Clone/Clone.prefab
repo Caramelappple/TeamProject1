@@ -195,7 +195,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68ddf0cd2e8d7542a1b11f57993fef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Clone
-  clip: {fileID: 8300000, guid: 87e9fc04cbc5d4f638092101d70f4ee0, type: 3}
   sword: {fileID: 823444306591474005}
 --- !u!1 &823444306591474005
 GameObject:
