@@ -1793,7 +1793,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e48844800ddb16c4b8d69725fccedc1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemSpawner
-  itemPrefab: {fileID: 0}
+  itemPrefab: {fileID: 4817373737063454763, guid: db711dc565b79664792bd190533c8a93,
+    type: 3}
   spawnPoints:
   - {fileID: 1468765058}
   - {fileID: 16852309}
@@ -1801,6 +1802,7 @@ MonoBehaviour:
   - {fileID: 1110151680}
   minSpawnTime: 8
   maxSpawnTime: 23
+  boss: {fileID: 1202624594}
 --- !u!4 &919343649
 Transform:
   m_ObjectHideFlags: 0
@@ -3716,7 +3718,6 @@ MonoBehaviour:
     type: 3}
   bombCollieder: {fileID: 1898382668}
   attackCollider: {fileID: 1193190292}
-  spawnInterval: 0.3
   swordCount: 10
   skulDistance: 10
   skulDuration: 0.4

@@ -8725,7 +8725,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e48844800ddb16c4b8d69725fccedc1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemSpawner
-  itemPrefab: {fileID: 0}
+  itemPrefab: {fileID: 4817373737063454763, guid: db711dc565b79664792bd190533c8a93,
+    type: 3}
   spawnPoints:
   - {fileID: 1666899174}
   - {fileID: 424419808}
@@ -8733,6 +8734,7 @@ MonoBehaviour:
   - {fileID: 1200648213}
   minSpawnTime: 1
   maxSpawnTime: 2
+  boss: {fileID: 0}
 --- !u!4 &663617612
 Transform:
   m_ObjectHideFlags: 0
