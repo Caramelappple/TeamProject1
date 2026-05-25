@@ -10,6 +10,14 @@ public class SpearSpawner : MonoBehaviour
     [SerializeField] private float warningTime = 0.8f;
     [SerializeField] private float spawnHeightOffset = 3f;
     [SerializeField] private Vector2 warningOffset = new Vector2(0f, -0.8f);
+
+    [Header("맵 생성 범위 설정")]
+ 
+    [SerializeField] private float minX = -6.5f;
+    [SerializeField] private float maxX = 21.4f;
+    [SerializeField] private float minY = -11f;
+    [SerializeField] private float maxY = 8f;
+
     public void SpawnSpears()
     {
         StartCoroutine(SpawnSpearsRoutine());
@@ -19,13 +27,9 @@ public class SpearSpawner : MonoBehaviour
     {
         for (int i = 0; i < spawnCount; i++)
         {
-            // ★ 루프마다 카메라 위치 새로 계산
-            Camera cam = Camera.main;
-            Vector3 leftBottom = cam.ViewportToWorldPoint(new Vector3(0f, 0f, 0f));
-            Vector3 rightTop = cam.ViewportToWorldPoint(new Vector3(1f, 1f, 0f));
-
-            float targetX = Random.Range(leftBottom.x, rightTop.x);
-            float targetY = Random.Range(leftBottom.y, rightTop.y);
+           
+            float targetX = Random.Range(minX, maxX);
+            float targetY = Random.Range(minY, maxY);
             Vector2 targetPos = new Vector2(targetX, targetY);
 
             StartCoroutine(SpawnOneSpear(targetPos));
@@ -59,5 +63,20 @@ public class SpearSpawner : MonoBehaviour
         {
             Destroy(warning);
         }
+    }
+
+    
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.cyan;
+        Vector3 topLeft = new Vector3(minX, maxY, 0);
+        Vector3 topRight = new Vector3(maxX, maxY, 0);
+        Vector3 bottomLeft = new Vector3(minX, minY, 0);
+        Vector3 bottomRight = new Vector3(maxX, minY, 0);
+
+        Gizmos.DrawLine(topLeft, topRight);
+        Gizmos.DrawLine(topRight, bottomRight);
+        Gizmos.DrawLine(bottomRight, bottomLeft);
+        Gizmos.DrawLine(bottomLeft, topLeft);
     }
 }
