@@ -89,7 +89,7 @@ public class NKY_ReturnSwordAttack : NKY_BossSkill
             }
             sword.SetActive(true);
             
-            NKY_SoundManager.Instance.PlaySFX(throwSword.soundName);//?????????? ????? ????
+                NKY_SoundManager.Instance.PlaySFX(throwSword.soundName);//?????????? ????? ????
             
             yield return PlaySequence(
                 ShowWarn(0, new Vector2(0.4f , distance),

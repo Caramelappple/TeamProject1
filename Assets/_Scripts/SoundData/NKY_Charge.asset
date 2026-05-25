@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NKY_Charge
   m_EditorClassIdentifier: Assembly-CSharp::NKY_SoundData
   soundName: Charge
-  clip: {fileID: 8300000, guid: 27174897f77c4a143b207c68837abb8a, type: 3}
+  clip: {fileID: 8300000, guid: a22261f33d7334362b347384c79877d2, type: 3}
   mixerGroup: {fileID: -4496128942595586582, guid: 44e6620588154be43b389c0e82d9dffb,
     type: 2}
   volume: 1
