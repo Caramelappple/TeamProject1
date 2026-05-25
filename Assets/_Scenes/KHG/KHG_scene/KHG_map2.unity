@@ -6471,6 +6471,10 @@ MonoBehaviour:
   warningTime: 0.8
   spawnHeightOffset: 3
   warningOffset: {x: 0, y: -0.8}
+  minX: -6.5
+  maxX: 21.4
+  minY: -11
+  maxY: 8
 --- !u!114 &1345346375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7077,7 +7081,7 @@ MonoBehaviour:
   - {fileID: 664537900}
   minSpawnTime: 8
   maxSpawnTime: 23
-  boss: {fileID: 1345346371}
+  boss: {fileID: 0}
 --- !u!4 &1478749534
 Transform:
   m_ObjectHideFlags: 0
@@ -8707,6 +8711,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1460219637}
   - {fileID: 1345346384}
+  - {fileID: 1510935700}
   - {fileID: 155158995}
   - {fileID: 2087425299}
   - {fileID: 1495325661}
@@ -8715,4 +8720,3 @@ SceneRoots:
   - {fileID: 496986215}
   - {fileID: 664537900}
   - {fileID: 1478749534}
-  - {fileID: 1510935700}
