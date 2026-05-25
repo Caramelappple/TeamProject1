@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459a67cb5f5fef4469a45300b4511078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LSO_Punch
-  _damage: 5
+  _damage: 6
 --- !u!1 &6080948902421761921
 GameObject:
   m_ObjectHideFlags: 0
